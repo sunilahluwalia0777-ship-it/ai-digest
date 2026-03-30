@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI Infra Daily — Google Infrastructure PM Digest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --surface: #ffffff;
+    --surface2: #f0f1f4;
+    --border: rgba(0,0,0,0.08);
+    --border2: rgba(0,0,0,0.15);
+    --text: #111827;
+    --muted: #4b5563;
+    --accent: #0070f3;
+    --accent2: #0070f3;
+    --accent-bg: rgba(0,112,243,0.07);
+    --red: #dc2626;
+    --green: #059669;
+    --mono: 'Space Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; overflow-x: hidden; }
+
+  /* HEADER */
+  .masthead {
+    border-bottom: 1px solid var(--border2);
+    padding: 0 0.75rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 54px;
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .masthead-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; overflow: hidden; }
+  .logo { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.06em; white-space: nowrap; flex-shrink: 0; }
+  .edition-badge { display: none; }
+  .masthead-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .date-display { font-size: 11px; color: var(--muted); font-family: var(--mono); display: none; }
+  .refresh-btn {
+    background: var(--accent); color: #fff; font-family: var(--mono); font-size: 11px;
+    font-weight: 700; padding: 7px 13px; border: none; border-radius: 4px; cursor: pointer;
+    letter-spacing: 0.06em; min-height: 36px; white-space: nowrap;
+  }
+  .refresh-btn:active { opacity: 0.75; }
+  .refresh-btn:disabled { opacity: 0.4; }
+
+  /* LAYOUT */
+  .container { max-width: 720px; margin: 0 auto; padding: 0.75rem; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+
+  /* FILTER BAR — horizontal scroll on mobile */
+  .filter-bar {
+    display: flex; gap: 6px; margin-bottom: 1rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+    padding: 7px 14px; border-radius: 20px; border: 1px solid var(--border2);
+    background: var(--surface); color: var(--muted); cursor: pointer;
+    white-space: nowrap; flex-shrink: 0; min-height: 36px;
+  }
+  .filter-btn:active, .filter-btn.active {
+    border-color: var(--accent); color: var(--accent); background: var(--accent-bg);
+  }
+
+  /* ARTICLE CARDS */
+  .article-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
+    cursor: pointer; -webkit-user-select: none; user-select: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .article-card:active { background: var(--surface2); }
+  .card-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; flex-wrap: wrap; }
+  .cat-pill {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.05em;
+    padding: 3px 7px; border-radius: 4px; text-transform: uppercase; flex-shrink: 0;
+    font-weight: 700;
+  }
+  .cat-networking { background: #dbeafe; color: #1d4ed8; }
+  .cat-silicon { background: #fef3c7; color: #92400e; }
+  .cat-hyperscaler { background: #ede9fe; color: #5b21b6; }
+  .cat-storage { background: #d1fae5; color: #065f46; }
+  .cat-competition { background: #fee2e2; color: #991b1b; }
+  .cat-vendor { background: #fef9c3; color: #713f12; }
+
+  .source-tag { font-size: 11px; color: var(--muted); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 160px; }
+  .age-tag { font-size: 11px; color: var(--muted); margin-left: auto; font-family: var(--mono); white-space: nowrap; flex-shrink: 0; }
+  .card-title { font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 6px; color: var(--text); word-wrap: break-word; }
+  .card-summary { font-size: 15px; color: var(--muted); line-height: 1.65; word-wrap: break-word; }
+  .card-footer { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+  .impact-badge {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+    padding: 3px 8px; border-radius: 4px; font-weight: 700;
+  }
+  .impact-high { background: #fee2e2; color: #991b1b; }
+  .impact-medium { background: #fef3c7; color: #92400e; }
+  .impact-low { background: #f3f4f6; color: #6b7280; }
+  .read-more { font-size: 13px; font-family: var(--mono); color: var(--accent); margin-left: auto; }
+
+  /* AI SUMMARY PANEL */
+  .ai-panel {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .ai-panel-label {
+    font-family: var(--mono); font-size: 9px; color: var(--accent); letter-spacing: 0.08em;
+    margin-bottom: 10px; display: flex; align-items: center; gap: 6px; font-weight: 700;
+  }
+  .ai-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .ai-summary-text { font-size: 15px; color: var(--muted); line-height: 1.75; word-wrap: break-word; }
+
+  /* SIDEBAR SECTIONS */
+  .sidebar-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .sidebar-title { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 12px; font-weight: 700; }
+  .signal-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .signal-item:last-child { border-bottom: none; }
+  .signal-text { font-size: 14px; color: var(--muted); line-height: 1.6; word-wrap: break-word; }
+  .signal-text strong { color: var(--text); font-weight: 600; }
+
+  /* AI BRIEF MODAL — bottom sheet */
+  .brief-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5); z-index: 200;
+    align-items: flex-end; justify-content: center;
+    padding: 0;
+  }
+  .brief-overlay.open { display: flex; }
+  .brief-modal {
+    background: var(--surface); border-top: 1px solid var(--border2);
+    border-radius: 20px 20px 0 0; padding: 1.25rem 1.25rem 2.5rem;
+    width: 100%; max-width: 720px;
+    max-height: 88vh; overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .brief-handle {
+    width: 40px; height: 4px; background: var(--border2); border-radius: 2px;
+    margin: 0 auto 1.25rem; cursor: pointer;
+  }
+  .brief-modal h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; color: var(--text); }
+  .brief-source { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .brief-modal p { font-size: 20px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
+  .brief-close-btn {
+    background: var(--surface2); border: 1px solid var(--border2); color: var(--muted);
+    font-family: var(--mono); font-size: 13px; padding: 12px 16px; border-radius: 8px;
+    cursor: pointer; margin-top: 0.75rem; letter-spacing: 0.04em; width: 100%;
+    min-height: 48px; font-weight: 700;
+  }
+  .brief-close-btn:active { background: var(--accent-bg); color: var(--accent); }
+
+  /* PROMPT INPUT */
+  .ask-bar { display: flex; gap: 7px; margin-top: 0.9rem; }
+  .ask-input {
+    flex: 1; background: var(--surface2); border: 1px solid var(--border2);
+    color: var(--text); font-family: var(--sans); font-size: 16px;
+    padding: 10px 12px; border-radius: 8px; outline: none;
+    min-height: 46px; -webkit-appearance: none; min-width: 0;
+  }
+  .ask-input:focus { border-color: var(--accent); }
+  .ask-input::placeholder { color: #9ca3af; }
+  .ask-submit {
+    background: var(--accent); border: none; color: #fff;
+    font-family: var(--mono); font-size: 11px; padding: 10px 13px; border-radius: 8px;
+    cursor: pointer; letter-spacing: 0.04em; white-space: nowrap; min-height: 46px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .ask-submit:active { opacity: 0.8; }
+  .ask-submit:disabled { opacity: 0.4; }
+  .ask-response {
+    margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.75;
+    border-left: 3px solid var(--accent); padding-left: 12px; display: none;
+    word-wrap: break-word;
+  }
+  .ask-response.visible { display: block; }
+
+  /* TABS */
+  .tab-bar {
+    display: flex; gap: 0; margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border2);
+  }
+  .tab-btn {
+    font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 10px 16px; background: transparent; border: none; border-bottom: 2px solid transparent;
+    color: var(--muted); cursor: pointer; white-space: nowrap;
+    margin-bottom: -1px; transition: color 0.15s;
+  }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 8px;
+    margin-left: 5px; vertical-align: middle; font-family: var(--mono);
+  }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; }
+
+  /* READ CARD STATE */
+  .article-card.is-read { opacity: 0.55; }
+  .read-tag {
+    font-family: var(--mono); font-size: 9px; color: var(--muted);
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 2px 6px; border-radius: 3px; margin-left: auto; flex-shrink: 0;
+  }
+  .empty-state {
+    text-align: center; padding: 3rem 1rem;
+    color: var(--muted); font-size: 14px; line-height: 1.7;
+  }
+  .empty-state-icon { font-size: 32px; margin-bottom: 0.75rem; }
+  .empty-state-title { font-weight: 600; color: var(--text); margin-bottom: 0.4rem; font-size: 15px; }
+
+
+  /* CAPEX BARS */
+  .capex-row { margin-bottom: 13px; }
+  .capex-label-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+
+
+    .container { padding: 1rem; }
+    .masthead { padding: 0 1rem; }
+    .edition-badge {
+      display: block; font-family: var(--mono); font-size: 9px; color: var(--muted);
+      border: 1px solid var(--border2); padding: 2px 7px; border-radius: 2px;
+      letter-spacing: 0.05em; white-space: nowrap;
+    }
+  }
+  @media (min-width: 640px) {
+    .container { padding: 1.5rem; }
+    .date-display { display: block; }
+    .masthead { padding: 0 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-left">
+    <span class="logo">AI INFRA DAILY</span>
+    <span class="edition-badge">GOOGLE INFRA PM · NETWORKING & STORAGE</span>
+  </div>
+  <div class="masthead-right">
+    <span class="date-display" id="date-display">--</span>
+    <button class="refresh-btn" id="refresh-btn" onclick="loadDigest()">↻ REFRESH</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="grid">
+    <!-- MAIN FEED -->
+    <main>
+      <!-- AI BRIEF PANEL -->
+      <div class="ai-panel">
+        <div class="ai-panel-label"><div class="ai-dot"></div>AI EXECUTIVE BRIEF</div>
+        <div id="ai-brief-text" class="ai-summary-text">Generating today's executive summary...</div>
+        <div class="ask-bar">
+          <input class="ask-input" id="ask-input" placeholder="Ask about today's news... e.g. 'How does Broadcom TH6 affect our TPU networking plans?'" />
+          <button class="ask-submit" id="ask-btn" onclick="askClaude()">ASK →</button>
+        </div>
+        <div class="ask-response" id="ask-response"></div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tab-bar">
+        <button class="tab-btn active" id="tab-feed-btn" onclick="switchTab('feed', this)">FEED</button>
+        <button class="tab-btn" id="tab-read-btn" onclick="switchTab('read', this)">READ <span class="tab-badge" id="read-badge" style="display:none">0</span></button>
+      </div>
+
+      <!-- FEED TAB -->
+      <div class="tab-pane active" id="tab-feed">
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterArticles('all', this)">ALL</button>
+          <button class="filter-btn" onclick="filterArticles('networking', this)">NETWORKING</button>
+          <button class="filter-btn" onclick="filterArticles('silicon', this)">SILICON</button>
+          <button class="filter-btn" onclick="filterArticles('hyperscaler', this)">HYPERSCALER</button>
+          <button class="filter-btn" onclick="filterArticles('storage', this)">STORAGE</button>
+          <button class="filter-btn" onclick="filterArticles('competition', this)">COMPETITION</button>
+          <button class="filter-btn" onclick="filterArticles('vendor', this)">VENDORS</button>
+        </div>
+        <div id="articles-container"></div>
+      </div>
+
+      <!-- READ TAB -->
+      <div class="tab-pane" id="tab-read">
+        <div id="read-container"></div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- PM SIGNALS -->
+      <div class="sidebar-section">
+        <div class="sidebar-title">PM SIGNALS · NETWORKING & STORAGE</div>
+        <div id="pm-signals">
+          <div class="signal-item">
+            <div class="signal-text"><strong>Broadcom TH6 →</strong> 102.4 Tbps volume shipment creates new benchmark for TPU v7 cluster fabric.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-text"><strong>Ethernet vs IB →</strong> UEC Spec 1.0 and ESUN accelerating transition. Evaluate impact on TPU pod networking architecture.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-text"><strong>Storage crunch →</strong> HBM priority production squeezing NAND/DRAM supply. Budget pressure expected Q2-Q3.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-text"><strong>OCS scale →</strong> 10,000+ optical circuit switches needed for TPU v7 at full deployment. Vendor qualification urgent.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAPEX TRACKER -->
+      <div class="sidebar-section">
+        <div class="sidebar-title">2026 CAPEX TRACKER</div>
+        <div id="capex-bars"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- BRIEF MODAL — bottom sheet -->
+<div class="brief-overlay" id="brief-overlay" onclick="closeBrief(event)">
+  <div class="brief-modal" id="brief-modal">
+    <div class="brief-handle" onclick="document.getElementById('brief-overlay').classList.remove('open')"></div>
+    <div class="brief-modal-content"></div>
+    <button class="brief-close-btn" onclick="document.getElementById('brief-overlay').classList.remove('open')">CLOSE</button>
+  </div>
+</div>
+
+<script>
+const TODAY_DATE = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+document.getElementById('date-display').textContent = TODAY_DATE;
+
+const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+const STORAGE_KEY = 'aiinfra_read_articles';
+
+function getReadMap() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return {};
+    const map = JSON.parse(raw);
+    const now = Date.now();
+    let changed = false;
+    for (const id in map) {
+      if (now - map[id].readAt > SEVEN_DAYS_MS) { delete map[id]; changed = true; }
+    }
+    if (changed) localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    return map;
+  } catch(e) { return {}; }
+}
+
+function markAsRead(id, article) {
+  try {
+    const map = getReadMap();
+    if (!map[id]) {
+      map[id] = { readAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    }
+    updateReadBadge();
+    renderArticles();
+    renderReadTab();
+  } catch(e) {}
+}
+
+function updateReadBadge() {
+  const map = getReadMap();
+  const count = Object.keys(map).length;
+  const badge = document.getElementById('read-badge');
+  if (count > 0) { badge.textContent = count; badge.style.display = 'inline-block'; }
+  else { badge.style.display = 'none'; }
+}
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+  if (tab === 'read') renderReadTab();
+}
+
+// ARTICLES_START
+const ARTICLES = [
+  {
+    id: 1, cat: 'networking', impact: 'high',
+    title: 'Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch',
+    summary: 'Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.',
+    source: 'FinancialContent / Broadcom', age: '4 days ago',
+    detail: 'The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcom\'s networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIA\'s competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window. This reinforces Ethernet\'s growing dominance and challenges InfiniBand\'s historic HPC hegemony.',
+    url: 'https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch'
+  },
+  {
+    id: 2, cat: 'silicon', impact: 'high',
+    title: 'Google TPU v7 on track for 36,000 racks in 2026 — 10,000+ optical circuit switches required',
+    summary: 'Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs via optical circuit switches. Per-chip power runs 850–1,000W, putting rack TDP at 80–100kW.',
+    source: 'Investing.com / Fubon Research', age: '3 months ago',
+    detail: 'Fubon\'s supply chain analysis places total TPU v7 racks at ~36,000 units in 2026, with ~3.1–3.2M total TPU units constrained by advanced packaging capacity. OCS is described as a "key enabler for high-level data center networks," especially for long-duration training workloads. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic (committed to 1M units) and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.',
+    url: 'https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670'
+  },
+  {
+    id: 3, cat: 'networking', impact: 'high',
+    title: 'Arista targets $10B+ revenue at 20% growth; Ethernet declared "eventual winner" for AI',
+    summary: 'CEO Ullal says Ethernet has displaced InfiniBand in hyperscaler AI backends. Traffic patterns shifting from centralized training to distributed inference. Arista Q4 revenue up 29% YoY to $2.49B.',
+    source: 'Fierce Network / Network World', age: '3 months ago',
+    detail: 'Arista\'s AI networks and campus network segments are both growing 60%+ in 2026. The Ultra Ethernet Consortium Spec 1.0 and ESUN have redefined Ethernet for AI/HPC. Arista\'s R4 portfolio — 7020, 7280, 7800 chassis — targets AI-scale and distributed inference. However, NVIDIA Spectrum-X saw 760% YoY growth to $1.46B and scored Meta and Oracle as customers. Cisco also projects $3B+ AI revenue in fiscal 2026.',
+    url: 'https://www.fierce-network.com/cloud/aristas-ullal-ethernet-eventual-winner-and-equalizer-ai-networking'
+  },
+  {
+    id: 4, cat: 'competition', impact: 'high',
+    title: 'Meta in advanced TPU talks with Google; AMD inks $100B deal for 6GW AI capacity',
+    summary: 'Meta is negotiating Google TPU deployment from 2027, possibly leasing from Google Cloud as early as 2026 — adding to an existing $10B+ six-year Google Cloud deal. Separately, AMD commits $100B to supply 6GW to Meta using MI450-based Helios rack servers.',
+    source: 'Techzine / Data Center Knowledge', age: '4 months ago / 3 weeks ago',
+    detail: 'Meta\'s move to diversify away from NVIDIA is accelerating on two fronts. The Google TPU deal targets inference workloads where TPUs show significant TCO advantage (Midjourney reportedly cut inference costs 65% by migrating). The AMD Helios deal uses custom MI450 GPUs with AI-optimized EPYC CPUs. Meta also broke ground on a $10B, 1GW campus in Lebanon, Indiana, and its "Prometheus" Ohio supercluster (1GW) is expected online in 2026.',
+    url: 'https://www.techzine.eu/news/infrastructure/136700/meta-finds-google-as-nvidia-alternative-but-patience-is-required/'
+  },
+  {
+    id: 5, cat: 'hyperscaler', impact: 'high',
+    title: 'Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175–185B',
+    summary: 'Amazon projects $200B in 2026 (up from $131B), Google $175–185B (up from $91B), Meta $115–135B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.',
+    source: 'TechCrunch / Futurum Research', age: '1 month ago',
+    detail: 'Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Google is investing $2B in Turkey, $15B in America-India Connect. Meta\'s Louisiana "Hyperion" campus is a 2,250-acre, $27B joint venture delivering 2GW scaling to 5GW. Oracle\'s Stargate I in Abilene, Texas, plans 450,000+ NVIDIA GB200 GPUs. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.',
+    url: 'https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/'
+  },
+  {
+    id: 6, cat: 'vendor', impact: 'medium',
+    title: 'Arm launches AGI CPU — first Arm-designed data center chip, co-developed with Meta',
+    summary: 'Arm breaks from licensing-only model to produce its own silicon. The AGI CPU targets agentic AI workloads and delivers more than 2x performance per rack vs x86. Partners include Meta, Marvell, Micron, Google Cloud, NVIDIA, Cisco, Arista.',
+    source: 'Arm Newsroom', age: '3 days ago',
+    detail: 'Announced March 24, 2026, the Arm AGI CPU is the first production silicon Arm has designed in its 30+ year history. Backed by AWS (majority of 2025 compute additions were Graviton), the move signals Arm\'s intent to capture a slice of the hyperscale custom CPU market. The AGI CPU is paired with Micron memory and Marvell connectivity. Google Cloud, NVIDIA, Cisco, and Arista are all listed ecosystem partners.',
+    url: 'https://newsroom.arm.com/news/arm-agi-cpu-launch'
+  },
+  {
+    id: 7, cat: 'storage', impact: 'medium',
+    title: 'Storage supply crunch: HBM priority production squeezing NAND and conventional DRAM',
+    summary: 'Memory vendors are deprioritizing standard DRAM/NAND in favor of higher-margin HBM. Longer lead times for advanced substrates, optics, and high-speed networking components adding volatility. Storage prices rising sharply.',
+    source: 'Dell\'Oro Group', age: '3 months ago',
+    detail: 'As inference workloads scale, accelerated clusters require high-capacity SSDs and HBM alongside standard storage for checkpoint persistence and data pipelines. Storage I/O throughput is identified as a critical GPU utilization constraint — NVMe-backed storage with high sequential read speeds is essential to prevent data pipeline bottlenecks. Dell\'Oro projects global data center capex to exceed $1.7T by 2030, with storage price pressure persisting through at least mid-2026.',
+    url: 'https://www.delloro.com/2026-predictions-data-center-infrastructure/'
+  },
+  {
+    id: 8, cat: 'competition', impact: 'medium',
+    title: 'GTC 2026: NVIDIA extends reach from GPUs to full data center stack via NVLink Fusion',
+    summary: 'NVIDIA positioned NVLink as a broader system fabric that could displace PCIe-based x86 systems. Vera CPU targets agentic AI orchestration; STX platform targets KV cache-based context memory. Scale-up vs scale-out architecture debate intensifies.',
+    source: 'Dell\'Oro Group / GTC 2026', age: '5 days ago',
+    detail: 'NVIDIA is reducing reliance on PCIe-based x86 by positioning NVLink as an alternative interconnect. NVLink Fusion and the company\'s own CPU roadmap signal intent to compete beyond GPU compute. The Rubin architecture (named after Vera Rubin) is slated for H2 2026. LPUs (Groq) can deploy at meaningful density — a single Groq LPU rack can integrate hundreds of processors — and may complement or displace portions of GPU inference workloads. Connectivity is emerging as the primary constraint in next-gen AI infra.',
+    url: 'https://www.delloro.com/from-scale-to-optimization-gtc-2026-signals-the-next-phase-of-ai-infrastructure/'
+  },
+  {
+    id: 9, cat: 'hyperscaler', impact: 'medium',
+    title: 'Power crisis: US data centers consuming 4.4% of national electricity; AEP Ohio pauses new interconnects',
+    summary: 'Virginia data centers consume 1 in 5 kWh from the state\'s largest utility. Data center power demand growing 15–20% annually. NTT Global plans to double global capacity to 4GW as energy infrastructure becomes the primary bottleneck.',
+    source: 'Tech-Insider / Data Center Knowledge', age: '1 week ago',
+    detail: 'US data centers consume ~176 TWh annually as of early 2026. AEP Ohio has paused all new data center interconnections due to insufficient power. Liquid cooling (direct-to-chip, immersion) promises 30–50% water reduction but requires significant redesign. Google signed 150MW geothermal PPA in Nevada with Ormat Technologies and NV Energy. Meta\'s Louisiana Hyperion campus has a nuclear power arrangement. SMR projects in Texas face regulatory delays. Power availability, not demand, is now the binding constraint for hyperscalers like Microsoft with $80B in unfulfilled Azure backlog.',
+    url: 'https://tech-insider.org/ai-data-center-power-crisis-2026/'
+  },
+  {
+    id: 10, cat: 'networking', impact: 'medium',
+    title: 'Cisco raises AI infrastructure revenue guidance from $2B to $3B for fiscal 2026',
+    summary: 'Cisco\'s AI revenue is driven primarily by hyperscalers plus neocloud and enterprise customers, powered by Silicon One architecture and Acacia optics. Despite raised guidance, stock dropped on weaker-than-expected margins.',
+    source: 'Network World / Stocktwits', age: '4 weeks ago',
+    detail: 'Cisco\'s 2026 strategy centers on tightly integrated hardware and software, treating the network as a coordinated compute fabric. Silicon One G300 and Acacia optics form the core portfolio. However, Arista surpassed Cisco in data center switching market share, and Cisco\'s weak 66% margin forecast (vs expected 68.2%) spooked investors. Arista\'s concurrent blowout Q4 drove shares up 12.5%, signaling AI networking spend is concentrating in open-fabric vendors.',
+    url: 'https://stocktwits.com/news-articles/markets/equity/ai-networking-winner-arista-surges-after-blowout-quarter-outshining-cisco/cZR50agR4sf'
+  }
+];
+// ARTICLES_END
+
+const CAPEX_DATA = [
+  { name: 'AWS', value: 200, color: '#f59e0b' },
+  { name: 'Google', value: 182, color: '#0070f3' },
+  { name: 'Microsoft', value: 120, color: '#3b82f6' },
+  { name: 'Meta', value: 125, color: '#a78bfa' },
+  { name: 'Oracle', value: 50, color: '#f87171' },
+];
+
+function renderCapexBars() {
+  const max = Math.max(...CAPEX_DATA.map(d => d.value));
+  const container = document.getElementById('capex-bars');
+  container.innerHTML = CAPEX_DATA.map(d => `
+    <div class="capex-row">
+      <div class="capex-label-row">
+        <span style="font-size:14px; color:var(--text); font-weight:500;">${d.name}</span>
+        <span style="font-family:var(--mono); font-size:13px; color:var(--muted);">$${d.value}B</span>
+      </div>
+      <div style="height:5px; background:var(--surface2); border-radius:3px; overflow:hidden; border:1px solid var(--border);">
+        <div style="height:100%; width:${(d.value/max*100).toFixed(1)}%; background:${d.color}; border-radius:3px;"></div>
+      </div>
+    </div>
+  `).join('');
+}
+renderCapexBars();
+
+let currentFilter = 'all';
+function filterArticles(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArticles();
+}
+
+function cardHTML(a, showReadTag) {
+  const readAt = showReadTag ? getReadMap()[a.id]?.readAt : null;
+  const daysAgo = readAt ? Math.floor((Date.now() - readAt) / 86400000) : null;
+  const readLabel = daysAgo === 0 ? 'today' : daysAgo === 1 ? '1d ago' : daysAgo + 'd ago';
+  return `
+    <div class="article-card" onclick="openBrief(${a.id})">
+      <div class="card-meta">
+        <span class="cat-pill cat-${a.cat}">${a.cat}</span>
+        <span class="source-tag">${a.source}</span>
+        ${showReadTag ? `<span class="read-tag">read ${readLabel}</span>` : `<span class="age-tag">${a.age}</span>`}
+      </div>
+      <div class="card-title">${a.title}</div>
+      <div class="card-summary">${a.summary}</div>
+      <div class="card-footer">
+        <span class="impact-badge impact-${a.impact}">IMPACT: ${a.impact.toUpperCase()}</span>
+        <span class="read-more">${showReadTag ? 'VIEW AGAIN →' : 'READ BRIEF →'}</span>
+      </div>
+    </div>`;
+}
+
+function renderArticles() {
+  const readMap = getReadMap();
+  const unread = ARTICLES.filter(a => !readMap[a.id]);
+  const filtered = currentFilter === 'all' ? unread : unread.filter(a => a.cat === currentFilter);
+  const container = document.getElementById('articles-container');
+  if (!filtered.length) {
+    const allDone = unread.length === 0;
+    container.innerHTML = `<div class="empty-state">
+      <div class="empty-state-icon">${allDone ? '✓' : '○'}</div>
+      <div class="empty-state-title">${allDone ? 'All caught up!' : 'Nothing in this category'}</div>
+      <div>${allDone ? 'All stories are in your Read tab.' : 'Try a different filter.'}</div>
+    </div>`;
+    return;
+  }
+  container.innerHTML = filtered.map(a => cardHTML(a, false)).join('');
+}
+
+function renderReadTab() {
+  const readMap = getReadMap();
+  const container = document.getElementById('read-container');
+  const readIds = Object.keys(readMap).sort((a, b) => readMap[b].readAt - readMap[a].readAt);
+  if (!readIds.length) {
+    container.innerHTML = `<div class="empty-state">
+      <div class="empty-state-icon">○</div>
+      <div class="empty-state-title">Nothing read yet</div>
+      <div>Stories you open will appear here for 7 days.</div>
+    </div>`;
+    return;
+  }
+  container.innerHTML = readIds.map(id => {
+    const r = readMap[id];
+    const a = ARTICLES.find(x => x.id == id) || { ...r, id };
+    return cardHTML(a, true);
+  }).join('');
+}
+
+let currentOpenId = null;
+
+function openBrief(id) {
+  const a = ARTICLES.find(x => x.id === id) || (() => {
+    const r = getReadMap()[id]; return r ? { ...r, id } : null;
+  })();
+  if (!a) return;
+  currentOpenId = id;
+  document.querySelector('.brief-modal-content').innerHTML = `
+    <div class="cat-pill cat-${a.cat}" style="margin-bottom:10px;">${a.cat}</div>
+    <h3 style="margin-bottom:4px;">${a.title}</h3>
+    <div class="brief-source">${a.source} · ${a.age}</div>
+    <p>${a.detail}</p>
+    <a href="${a.url}" target="_blank" style="font-family:var(--mono); font-size:12px; color:var(--accent); text-decoration:none; letter-spacing:0.04em;">VIEW SOURCE →</a>
+  `;
+  document.getElementById('brief-overlay').classList.add('open');
+  markAsRead(id, a);
+}
+
+function closeBriefModal() {
+  document.getElementById('brief-overlay').classList.remove('open');
+  currentOpenId = null;
+}
+
+function closeBrief(e) {
+  if (e.target === document.getElementById('brief-overlay')) closeBriefModal();
+}
+
+const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. 
+Today's date: ${TODAY_DATE}.
+Key context: Google's vendors include Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI.
+Recent major news:
+- Broadcom TH6 (102.4Tbps) began volume shipments March 2026
+- Google TPU v7 targeting 36,000 racks in 2026, needs 10,000+ OCS
+- Arista hitting $10B+ revenue; Ethernet beating InfiniBand for AI
+- Meta negotiating Google TPU deals from 2027; also AMD $100B deal
+- Hyperscaler 2026 capex: AWS $200B, Google $175-185B, Meta $115-135B
+- NVIDIA NVLink Fusion extending beyond GPU into full DC stack
+- Power crisis: AEP Ohio paused new DC interconnects; liquid cooling urgent
+- Storage: HBM priority squeezing NAND/DRAM supply; prices rising
+- Cisco AI revenue guidance raised to $3B fiscal 2026
+- Arm launched AGI CPU targeting agentic AI data centers
+
+Be specific, actionable, and concise (2-4 sentences per response). Focus on implications for Google's networking and storage infrastructure decisions.`;
+
+async function generateBrief() {
+  const briefEl = document.getElementById('ai-brief-text');
+  briefEl.textContent = 'Generating executive brief...';
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: `Generate a crisp 3-sentence executive brief for today's AI infrastructure digest. Lead with the single most important development for a Google networking/storage PM, then the competitive signal, then the supply chain watch item. No bullet points — flowing prose only.` }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.map(c => c.text || '').join('');
+    briefEl.textContent = text || 'Could not generate brief. Check connection.';
+  } catch(e) {
+    briefEl.textContent = 'Broadcom\'s TH6 volume shipment this week marks the most significant networking milestone for TPU infrastructure planning — it validates Ethernet as the dominant fabric for million-XPU clusters and accelerates the OCS sourcing timeline Google needs for TPU v7. On the competitive front, Meta\'s dual hedging (Google TPU + AMD Helios) signals growing customer confidence in TPU inference economics, validating Google\'s external TPU strategy. Watch the HBM/NAND supply squeeze: rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.';
+  }
+}
+
+async function askClaude() {
+  const input = document.getElementById('ask-input');
+  const btn = document.getElementById('ask-btn');
+  const responseEl = document.getElementById('ask-response');
+  const question = input.value.trim();
+  if (!question) return;
+  btn.disabled = true; btn.textContent = '...';
+  responseEl.textContent = 'Analyzing...';
+  responseEl.classList.add('visible');
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: question }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.map(c => c.text || '').join('') || 'No response generated.';
+    responseEl.textContent = text;
+  } catch(e) {
+    responseEl.textContent = 'Error reaching AI API. Please try again.';
+  }
+  btn.disabled = false; btn.textContent = 'ASK →';
+}
+
+document.getElementById('ask-input').addEventListener('keydown', e => { if (e.key === 'Enter') askClaude(); });
+
+async function loadDigest() {
+  const btn = document.getElementById('refresh-btn');
+  btn.disabled = true; btn.textContent = 'LOADING...';
+  updateReadBadge();
+  renderArticles();
+  await generateBrief();
+  btn.disabled = false; btn.textContent = '↻ REFRESH';
+}
+
+loadDigest();
+</script>
+</body>
+</html>
