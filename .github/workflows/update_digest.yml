@@ -1,0 +1,42 @@
+name: Daily Digest Update
+ 
+on:
+  schedule:
+    # 7am PT = 15:00 UTC (14:00 UTC during daylight saving time)
+    # Using 14:00 UTC to target 7am PDT (Pacific Daylight Time, Mar-Nov)
+    # Change to 15:00 UTC in winter (PST = UTC-8)
+    - cron: '0 14 * * *'
+  workflow_dispatch:  # allow manual trigger from GitHub UI
+ 
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to commit back to the repo
+ 
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+ 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+ 
+      - name: Install dependencies
+        run: pip install requests
+ 
+      - name: Run update script
+        env:
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+        run: python update_digest.py
+ 
+      - name: Commit and push updated index.html
+        run: |
+          git config user.name "AI Infra Bot"
+          git config user.email "actions@github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Daily digest update — $(date +'%Y-%m-%d %H:%M UTC')"
+          git push
+ 
