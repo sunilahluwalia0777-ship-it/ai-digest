@@ -395,67 +395,67 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high",
-    title: "Global Cloud Market Projected to Hit $500B in 2026 as Hyperscalers Increase AI Investment",
-    summary: "Cloud spending is accelerating rapidly with the global market expected to reach a landmark $500 billion this year. Hyperscalers are driving growth through aggressive AI infrastructure investments.",
+    title: "Global Cloud Market Set to Hit $500B in 2026 as Hyperscalers Increase AI Investment",
+    summary: "The global cloud market reached $400 billion in 2025 and is projected to hit $500 billion this year. Hyperscalers are driving growth through aggressive AI infrastructure spending.",
     source: "TechRadar", age: "1 day ago",
-    detail: "This milestone represents approximately 25% growth from the $400 billion 2025 market, signaling sustained demand for cloud compute capacity. For Google Cloud, this validates continued investment in GPU and TPU infrastructure while intensifying competition with AWS and Azure for AI workloads. The spending surge directly impacts networking and storage teams as bandwidth and capacity requirements scale with AI training clusters. Expect continued pressure on high-speed interconnect solutions and distributed storage systems optimized for AI workflows.",
+    detail: "This 25% year-over-year growth trajectory signals continued massive capital expenditure from major cloud providers including AWS, Azure, and Google Cloud. For Google, this validates the ongoing investment thesis in AI-optimized infrastructure but also intensifies competitive pressure to differentiate on networking and storage performance. The acceleration suggests enterprise AI workloads are scaling faster than expected, which will stress both GPU interconnect fabrics and high-performance storage systems.",
     url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
   },
   {
     id: 2, cat: "silicon", impact: "high",
-    title: "South Korean AI Chip Startup Rebellions Raises $400M Pre-IPO to Challenge NVIDIA",
-    summary: "Rebellions secured $400 million in pre-IPO funding to scale its cloud-native AI inference chips. The startup is positioning itself as an alternative to NVIDIA and AMD in the inference accelerator market.",
+    title: "Korean AI Chip Startup Rebellions Raises $400M Pre-IPO to Challenge NVIDIA",
+    summary: "Rebellions Inc. secured $400 million in pre-IPO funding to accelerate competition against NVIDIA and AMD in AI inference chips. The company focuses on cloud-native inference accelerators.",
     source: "SiliconANGLE News", age: "1 day ago",
-    detail: "This represents one of the largest funding rounds for an NVIDIA competitor outside China, signaling investor appetite for GPU alternatives. Rebellions focuses specifically on inference workloads, which could appeal to hyperscalers seeking to diversify silicon suppliers and reduce NVIDIA dependency. Google should monitor Rebellions for potential TPU competitive positioning in inference-heavy deployments. The funding level suggests Rebellions may achieve meaningful production scale within 18-24 months, potentially impacting vendor negotiations with NVIDIA.",
+    detail: "This substantial funding round represents growing investor confidence in NVIDIA alternatives, particularly for inference workloads where specialized silicon can offer better price-performance. For Google, this development is strategically relevant as it validates the market opportunity TPUs address while potentially expanding the ecosystem of accelerators requiring interconnect and storage optimization. Rebellions success could pressure NVIDIA pricing and provide Google with additional vendor options for specific inference workloads.",
     url: "https://siliconangle.com/2026/03/30/rebellions-inc-lands-400m-funding-lead-south-korean-revolt-nvidia-chips/"
   },
   {
-    id: 3, cat: "silicon", impact: "medium",
-    title: "Data Center Chip Market Report Projects Growth Through 2034 Across All Segments",
-    summary: "New market analysis covers data center chip trends by chip type, facility size, and vertical through 2034. The report segments the market to identify growth drivers and regional dynamics.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "Long-range market projections help inform multi-year silicon roadmap planning and vendor relationship strategies. Understanding chip demand by data center size is particularly relevant as Google balances mega-scale AI facilities against distributed edge deployments. The vertical segmentation may reveal opportunities for specialized TPU configurations targeting specific workloads. This data supports capacity planning discussions with Broadcom and other silicon partners.",
-    url: "https://www.globenewswire.com/news-release/2026/03/30/3264345/28124/en/Data-Center-Chips-Market-Analysis-Trends-and-Growth-Outlook-by-Region-2026-2034.html"
-  },
-  {
-    id: 4, cat: "vendor", impact: "medium",
-    title: "Cisco Enterprise Agreement Integrates Nutanix for Simplified Hybrid Infrastructure",
-    summary: "Cisco announced that its Enterprise Agreement now includes Nutanix integration, offering predictable pricing and flexible expansion. The move simplifies procurement for hybrid and multi-cloud deployments.",
+    id: 3, cat: "vendor", impact: "medium",
+    title: "Cisco Launches Enterprise Agreement for Nutanix to Simplify Hybrid Infrastructure",
+    summary: "Cisco introduced a new Enterprise Agreement bundling Nutanix infrastructure with predictable pricing and flexible scaling. The partnership targets enterprises modernizing data center operations.",
     source: "Cisco.com", age: "1 day ago",
-    detail: "This partnership between two key vendors creates a more streamlined path for enterprises adopting hybrid infrastructure, potentially competing with hyperscaler private cloud offerings. For Google, this signals Cisco is deepening its software-defined infrastructure play, which could impact Anthos and hybrid cloud positioning. The bundled pricing model may make Cisco-Nutanix stacks more attractive for enterprises evaluating on-premises AI infrastructure alternatives. Network teams should assess how this affects interoperability with Google Cloud networking products.",
+    detail: "This Cisco-Nutanix alliance signals continued convergence in the enterprise infrastructure market between networking and storage vendors. For Google Cloud, this represents competitive positioning from Cisco to capture hybrid and on-premises AI workloads before they migrate to public cloud. The simplified purchasing model could slow cloud migration for certain enterprise segments, though it also validates the complexity customers face in managing modern AI infrastructure.",
     url: "https://blogs.cisco.com/news/when-buying-models-become-architecture-decisions"
   },
   {
-    id: 5, cat: "networking", impact: "medium",
-    title: "Self-Driving Networks Emerge as Solution for Managing Complex AI Infrastructure",
-    summary: "Autonomous network management systems are gaining traction as network complexity outpaces human operator capacity. AI-driven automation enables real-time optimization and incident response.",
+    id: 4, cat: "networking", impact: "medium",
+    title: "Self-Driving Networks Emerge as Answer to Unmanageable Infrastructure Complexity",
+    summary: "Autonomous network management systems are gaining traction as traditional manual operations cannot scale with modern infrastructure demands. AI-driven automation is becoming essential for large-scale deployments.",
     source: "The Register", age: "1 day ago",
-    detail: "As AI training clusters grow to tens of thousands of accelerators, traditional network operations cannot keep pace with fault detection and traffic optimization requirements. Self-driving network capabilities directly address operational challenges in GPU and TPU fabrics where microsecond-level latency variations impact training efficiency. Google should evaluate how these capabilities compare to internal network automation tools and whether vendor solutions from Arista or Cisco could supplement existing systems. This trend reinforces the importance of telemetry and observability in next-generation network designs.",
+    detail: "This trend directly impacts Google infrastructure strategy as GPU and TPU clusters require increasingly sophisticated network orchestration. Self-healing and self-optimizing network fabrics reduce operational burden while improving reliability for latency-sensitive AI training workloads. Google should evaluate how autonomous networking capabilities can be integrated into its datacenter fabric management, particularly for managing the complex traffic patterns of distributed training jobs.",
     url: "https://www.theregister.com/2026/03/30/explainer_selfdriving_networks/"
   },
   {
+    id: 5, cat: "silicon", impact: "medium",
+    title: "Data Center Chip Market Analysis Projects Strong Growth Through 2034 Across All Segments",
+    summary: "New market research forecasts sustained growth in data center chips segmented by chip type, facility size, and vertical through 2034. The report covers accelerators, networking silicon, and storage controllers.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "This long-term outlook validates continued investment in custom silicon development including TPUs and networking ASICs. The segmentation by data center size suggests differentiated requirements that Google can address with its vertically integrated approach. Understanding regional growth patterns will inform infrastructure expansion decisions and help prioritize which chip development programs warrant increased investment over the forecast period.",
+    url: "https://www.globenewswire.com/news-release/2026/03/30/3264345/28124/en/Data-Center-Chips-Market-Analysis-Trends-and-Growth-Outlook-by-Region-2026-2034.html"
+  },
+  {
     id: 6, cat: "competition", impact: "medium",
-    title: "Starcloud Reaches Unicorn Status After Launching First Orbital AI Data Center with NVIDIA GPUs",
-    summary: "Starcloud achieved $1B+ valuation just 17 months after Y Combinator demo day following its orbital data center launch. The facility uses NVIDIA GPUs and represents a novel approach to AI compute deployment.",
+    title: "Starcloud Reaches Unicorn Status with $170M Series A for Orbital AI Data Centers",
+    summary: "Starcloud became the fastest Y Combinator startup to achieve unicorn valuation after launching Starcloud-1 with NVIDIA GPUs. The company raised $170 million to expand space-based AI compute infrastructure.",
     source: "TechCrunch", age: "1 day ago",
-    detail: "While orbital data centers remain experimental, the rapid funding trajectory indicates investor interest in alternative infrastructure approaches that bypass terrestrial power and cooling constraints. This could eventually impact hyperscaler competitive dynamics if space-based compute proves viable for specific latency-insensitive AI workloads. The NVIDIA partnership suggests orbital deployments may initially target inference rather than training due to bandwidth limitations. Google should monitor whether this represents a credible long-term infrastructure alternative or remains a niche application.",
+    detail: "While orbital data centers remain nascent, this development represents creative approaches to AI infrastructure that bypass traditional constraints like power availability and cooling costs. For Google, this signals potential long-term disruption to the hyperscaler model if space-based compute achieves economic viability. The partnership with NVIDIA for orbital deployments also demonstrates GPU vendor flexibility in exploring unconventional deployment scenarios.",
     url: "https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space/"
   },
   {
-    id: 7, cat: "silicon", impact: "low",
-    title: "HFT Server Market to Reach $3.7B by 2030 Driven by FPGA and GPU Acceleration",
-    summary: "High-frequency trading infrastructure spending is projected to exceed $3.7 billion by 2030. Growth drivers include AI-driven strategies, 5G integration, and advances in FPGA and GPU acceleration.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "While HFT is a specialized segment, the acceleration trends mirror broader AI infrastructure patterns. FPGA and GPU advances developed for trading latency requirements often translate to data center applications. The 5G ultra-low latency requirements parallel edge AI deployment challenges Google faces. This market segment serves as a leading indicator for networking and silicon innovation that eventually reaches hyperscale deployments.",
-    url: "https://www.globenewswire.com/news-release/2026/03/30/3264348/28124/en/High-Frequency-Trading-HFT-Server-Market-Trends-and-Industry-Outlook-Report-2026-2030-A-3-7-Billion-Opportunity.html"
+    id: 7, cat: "competition", impact: "low",
+    title: "AWS Showcases Generative AI Solution for Volkswagen Marketing Asset Production",
+    summary: "AWS published a case study on building generative AI systems for Volkswagen that create photorealistic vehicle images with technical accuracy validation. The solution demonstrates enterprise AI deployment patterns.",
+    source: "Amazon.com", age: "1 day ago",
+    detail: "This AWS customer win illustrates how hyperscalers are competing on AI solution depth rather than just infrastructure. For Google Cloud, it highlights the importance of developing industry-specific AI solutions that showcase TPU and GPU capabilities in practical business contexts. The focus on accuracy validation suggests enterprises require robust pipelines that integrate AI inference with quality assurance workflows.",
+    url: "https://aws.amazon.com/blogs/machine-learning/reimagine-marketing-at-volkswagen-group-with-generative-ai/"
   },
   {
-    id: 8, cat: "competition", impact: "low",
-    title: "AWS Showcases Generative AI Solution for Volkswagen Marketing Asset Production",
-    summary: "AWS built a generative AI solution for Volkswagen Group that creates photorealistic vehicle images with brand compliance validation. The implementation demonstrates enterprise AI deployment patterns.",
-    source: "Amazon.com", age: "1 day ago",
-    detail: "This case study illustrates how AWS is positioning generative AI capabilities for enterprise customers with complex compliance requirements. The technical accuracy validation component is notable as it addresses a common barrier to enterprise AI adoption. For Google, this signals AWS continuing to build vertical-specific AI solutions that leverage their infrastructure. The approach of combining image generation with automated validation could inform similar Google Cloud customer engagements.",
-    url: "https://aws.amazon.com/blogs/machine-learning/reimagine-marketing-at-volkswagen-group-with-generative-ai/"
+    id: 8, cat: "networking", impact: "low",
+    title: "HFT Server Market Reaches $3.7B Opportunity Driven by FPGA and GPU Acceleration",
+    summary: "The high-frequency trading server market is projected to exceed $3.7 billion by 2030, driven by AI-powered strategies and ultra-low latency requirements. FPGA and GPU acceleration are key technology enablers.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "While HFT represents a specialized market segment, the extreme latency requirements drive networking and silicon innovation that eventually benefits broader AI infrastructure. The emphasis on 5G-enabled ultra-low latency suggests continued convergence between telecom and datacenter networking. Google can monitor this segment for networking technology advances applicable to distributed AI training where latency sensitivity impacts training efficiency.",
+    url: "https://www.globenewswire.com/news-release/2026/03/30/3264348/28124/en/High-Frequency-Trading-HFT-Server-Market-Trends-and-Industry-Outlook-Report-2026-2030-A-3-7-Billion-Opportunity.html"
   },
 ];
 // ARTICLES_END
