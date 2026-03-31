@@ -224,7 +224,23 @@
   .empty-state-title { font-weight: 600; color: var(--text); margin-bottom: 0.4rem; font-size: 15px; }
 
 
-  /* CAPEX BARS */
+  /* FAVORITE BUTTON */
+  .fav-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: 20px; line-height: 1; padding: 2px 4px;
+    color: #d1d5db; flex-shrink: 0; margin-left: auto;
+    transition: color 0.15s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .fav-btn.active { color: #f59e0b; }
+  .fav-btn:active { transform: scale(1.3); }
+  .fav-date {
+    font-family: var(--mono); font-size: 10px; color: var(--muted);
+    background: #fef3c7; color: #92400e;
+    padding: 2px 7px; border-radius: 4px; flex-shrink: 0;
+  }
+
+
   .capex-row { margin-bottom: 13px; }
   .capex-label-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
 
@@ -277,6 +293,7 @@
       <div class="tab-bar">
         <button class="tab-btn active" id="tab-feed-btn" onclick="switchTab('feed', this)">FEED</button>
         <button class="tab-btn" id="tab-read-btn" onclick="switchTab('read', this)">READ <span class="tab-badge" id="read-badge" style="display:none">0</span></button>
+        <button class="tab-btn" id="tab-fav-btn" onclick="switchTab('fav', this)">FAVORITES <span class="tab-badge" id="fav-badge" style="display:none;background:#f59e0b;">0</span></button>
       </div>
 
       <!-- FEED TAB -->
@@ -297,6 +314,11 @@
       <!-- READ TAB -->
       <div class="tab-pane" id="tab-read">
         <div id="read-container"></div>
+      </div>
+
+      <!-- FAVORITES TAB -->
+      <div class="tab-pane" id="tab-fav">
+        <div id="fav-container"></div>
       </div>
 
     </main>
@@ -336,7 +358,10 @@
   <div class="brief-modal" id="brief-modal">
     <div class="brief-handle" onclick="document.getElementById('brief-overlay').classList.remove('open')"></div>
     <div class="brief-modal-content"></div>
-    <button class="brief-close-btn" onclick="document.getElementById('brief-overlay').classList.remove('open')">CLOSE</button>
+    <div style="display:flex; gap:8px; margin-top:0.75rem;">
+      <button class="brief-close-btn" style="flex:1;" onclick="document.getElementById('brief-overlay').classList.remove('open')">CLOSE</button>
+      <button class="brief-close-btn" id="modal-fav-btn" style="flex:0 0 auto; padding:12px 18px; font-size:20px; border-color:#f59e0b;" onclick="toggleFavFromModal()">☆</button>
+    </div>
   </div>
 </div>
 
@@ -344,12 +369,15 @@
 const TODAY_DATE = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
 document.getElementById('date-display').textContent = TODAY_DATE;
 
-const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
-const STORAGE_KEY = 'aiinfra_read_articles';
+const SEVEN_DAYS_MS  = 7  * 24 * 60 * 60 * 1000;
+const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
+const READ_KEY = 'aiinfra_read_articles';
+const FAV_KEY  = 'aiinfra_fav_articles';
 
+// ---- READ MAP ----
 function getReadMap() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(READ_KEY);
     if (!raw) return {};
     const map = JSON.parse(raw);
     const now = Date.now();
@@ -357,7 +385,7 @@ function getReadMap() {
     for (const id in map) {
       if (now - map[id].readAt > SEVEN_DAYS_MS) { delete map[id]; changed = true; }
     }
-    if (changed) localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    if (changed) localStorage.setItem(READ_KEY, JSON.stringify(map));
     return map;
   } catch(e) { return {}; }
 }
@@ -367,7 +395,7 @@ function markAsRead(id, article) {
     const map = getReadMap();
     if (!map[id]) {
       map[id] = { readAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+      localStorage.setItem(READ_KEY, JSON.stringify(map));
     }
     updateReadBadge();
     renderArticles();
@@ -376,11 +404,68 @@ function markAsRead(id, article) {
 }
 
 function updateReadBadge() {
-  const map = getReadMap();
-  const count = Object.keys(map).length;
+  const count = Object.keys(getReadMap()).length;
   const badge = document.getElementById('read-badge');
   if (count > 0) { badge.textContent = count; badge.style.display = 'inline-block'; }
   else { badge.style.display = 'none'; }
+}
+
+// ---- FAVORITES MAP ----
+function getFavMap() {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    if (!raw) return {};
+    const map = JSON.parse(raw);
+    const now = Date.now();
+    let changed = false;
+    for (const id in map) {
+      if (now - map[id].favAt > THIRTY_DAYS_MS) { delete map[id]; changed = true; }
+    }
+    if (changed) localStorage.setItem(FAV_KEY, JSON.stringify(map));
+    return map;
+  } catch(e) { return {}; }
+}
+
+function toggleFav(id, article, e) {
+  if (e) e.stopPropagation();
+  try {
+    const map = getFavMap();
+    if (map[id]) {
+      delete map[id];
+    } else {
+      map[id] = { favAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
+    }
+    localStorage.setItem(FAV_KEY, JSON.stringify(map));
+    updateFavBadge();
+    renderArticles();
+    renderReadTab();
+    renderFavTab();
+    updateModalFavBtn();
+  } catch(e) {}
+}
+
+function toggleFavFromModal() {
+  const id = currentOpenId;
+  if (!id) return;
+  const a = ARTICLES.find(x => x.id === id) || (() => {
+    const r = getReadMap()[id]; return r ? { ...r, id } : null;
+  })();
+  if (a) toggleFav(id, a, null);
+}
+
+function updateFavBadge() {
+  const count = Object.keys(getFavMap()).length;
+  const badge = document.getElementById('fav-badge');
+  if (count > 0) { badge.textContent = count; badge.style.display = 'inline-block'; }
+  else { badge.style.display = 'none'; }
+}
+
+function updateModalFavBtn() {
+  const btn = document.getElementById('modal-fav-btn');
+  if (!btn || !currentOpenId) return;
+  const isFav = !!getFavMap()[currentOpenId];
+  btn.textContent = isFav ? '★' : '☆';
+  btn.style.color = isFav ? '#f59e0b' : '';
 }
 
 function switchTab(tab, btn) {
@@ -389,74 +474,91 @@ function switchTab(tab, btn) {
   btn.classList.add('active');
   document.getElementById('tab-' + tab).classList.add('active');
   if (tab === 'read') renderReadTab();
+  if (tab === 'fav') renderFavTab();
 }
 
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high",
-    title: "Global Cloud Market Set to Hit $500B in 2026 as Hyperscalers Increase AI Investment",
-    summary: "The global cloud market reached $400 billion in 2025 and is projected to hit $500 billion this year. Hyperscalers are driving growth through aggressive AI infrastructure spending.",
-    source: "TechRadar", age: "1 day ago",
-    detail: "This 25% year-over-year growth trajectory signals continued massive capital expenditure from major cloud providers including AWS, Azure, and Google Cloud. For Google, this validates the ongoing investment thesis in AI-optimized infrastructure but also intensifies competitive pressure to differentiate on networking and storage performance. The acceleration suggests enterprise AI workloads are scaling faster than expected, which will stress both GPU interconnect fabrics and high-performance storage systems.",
-    url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
+    id: 1, cat: 'networking', impact: 'high',
+    title: 'Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch',
+    summary: 'Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.',
+    source: 'FinancialContent / Broadcom', age: '4 days ago',
+    detail: 'The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcom\'s networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIA\'s competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window. This reinforces Ethernet\'s growing dominance and challenges InfiniBand\'s historic HPC hegemony.',
+    url: 'https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch'
   },
   {
-    id: 2, cat: "silicon", impact: "high",
-    title: "Korean AI Chip Startup Rebellions Raises $400M Pre-IPO to Challenge NVIDIA",
-    summary: "Rebellions Inc. secured $400 million in pre-IPO funding to accelerate competition against NVIDIA and AMD in AI inference chips. The company focuses on cloud-native inference accelerators.",
-    source: "SiliconANGLE News", age: "1 day ago",
-    detail: "This substantial funding round represents growing investor confidence in NVIDIA alternatives, particularly for inference workloads where specialized silicon can offer better price-performance. For Google, this development is strategically relevant as it validates the market opportunity TPUs address while potentially expanding the ecosystem of accelerators requiring interconnect and storage optimization. Rebellions success could pressure NVIDIA pricing and provide Google with additional vendor options for specific inference workloads.",
-    url: "https://siliconangle.com/2026/03/30/rebellions-inc-lands-400m-funding-lead-south-korean-revolt-nvidia-chips/"
+    id: 2, cat: 'silicon', impact: 'high',
+    title: 'Google TPU v7 on track for 36,000 racks in 2026 — 10,000+ optical circuit switches required',
+    summary: 'Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs via optical circuit switches. Per-chip power runs 850–1,000W, putting rack TDP at 80–100kW.',
+    source: 'Investing.com / Fubon Research', age: '3 months ago',
+    detail: 'Fubon\'s supply chain analysis places total TPU v7 racks at ~36,000 units in 2026, with ~3.1–3.2M total TPU units constrained by advanced packaging capacity. OCS is described as a "key enabler for high-level data center networks," especially for long-duration training workloads. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic (committed to 1M units) and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.',
+    url: 'https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670'
   },
   {
-    id: 3, cat: "vendor", impact: "medium",
-    title: "Cisco Launches Enterprise Agreement for Nutanix to Simplify Hybrid Infrastructure",
-    summary: "Cisco introduced a new Enterprise Agreement bundling Nutanix infrastructure with predictable pricing and flexible scaling. The partnership targets enterprises modernizing data center operations.",
-    source: "Cisco.com", age: "1 day ago",
-    detail: "This Cisco-Nutanix alliance signals continued convergence in the enterprise infrastructure market between networking and storage vendors. For Google Cloud, this represents competitive positioning from Cisco to capture hybrid and on-premises AI workloads before they migrate to public cloud. The simplified purchasing model could slow cloud migration for certain enterprise segments, though it also validates the complexity customers face in managing modern AI infrastructure.",
-    url: "https://blogs.cisco.com/news/when-buying-models-become-architecture-decisions"
+    id: 3, cat: 'networking', impact: 'high',
+    title: 'Arista targets $10B+ revenue at 20% growth; Ethernet declared "eventual winner" for AI',
+    summary: 'CEO Ullal says Ethernet has displaced InfiniBand in hyperscaler AI backends. Traffic patterns shifting from centralized training to distributed inference. Arista Q4 revenue up 29% YoY to $2.49B.',
+    source: 'Fierce Network / Network World', age: '3 months ago',
+    detail: 'Arista\'s AI networks and campus network segments are both growing 60%+ in 2026. The Ultra Ethernet Consortium Spec 1.0 and ESUN have redefined Ethernet for AI/HPC. Arista\'s R4 portfolio — 7020, 7280, 7800 chassis — targets AI-scale and distributed inference. However, NVIDIA Spectrum-X saw 760% YoY growth to $1.46B and scored Meta and Oracle as customers. Cisco also projects $3B+ AI revenue in fiscal 2026.',
+    url: 'https://www.fierce-network.com/cloud/aristas-ullal-ethernet-eventual-winner-and-equalizer-ai-networking'
   },
   {
-    id: 4, cat: "networking", impact: "medium",
-    title: "Self-Driving Networks Emerge as Answer to Unmanageable Infrastructure Complexity",
-    summary: "Autonomous network management systems are gaining traction as traditional manual operations cannot scale with modern infrastructure demands. AI-driven automation is becoming essential for large-scale deployments.",
-    source: "The Register", age: "1 day ago",
-    detail: "This trend directly impacts Google infrastructure strategy as GPU and TPU clusters require increasingly sophisticated network orchestration. Self-healing and self-optimizing network fabrics reduce operational burden while improving reliability for latency-sensitive AI training workloads. Google should evaluate how autonomous networking capabilities can be integrated into its datacenter fabric management, particularly for managing the complex traffic patterns of distributed training jobs.",
-    url: "https://www.theregister.com/2026/03/30/explainer_selfdriving_networks/"
+    id: 4, cat: 'competition', impact: 'high',
+    title: 'Meta in advanced TPU talks with Google; AMD inks $100B deal for 6GW AI capacity',
+    summary: 'Meta is negotiating Google TPU deployment from 2027, possibly leasing from Google Cloud as early as 2026 — adding to an existing $10B+ six-year Google Cloud deal. Separately, AMD commits $100B to supply 6GW to Meta using MI450-based Helios rack servers.',
+    source: 'Techzine / Data Center Knowledge', age: '4 months ago / 3 weeks ago',
+    detail: 'Meta\'s move to diversify away from NVIDIA is accelerating on two fronts. The Google TPU deal targets inference workloads where TPUs show significant TCO advantage (Midjourney reportedly cut inference costs 65% by migrating). The AMD Helios deal uses custom MI450 GPUs with AI-optimized EPYC CPUs. Meta also broke ground on a $10B, 1GW campus in Lebanon, Indiana, and its "Prometheus" Ohio supercluster (1GW) is expected online in 2026.',
+    url: 'https://www.techzine.eu/news/infrastructure/136700/meta-finds-google-as-nvidia-alternative-but-patience-is-required/'
   },
   {
-    id: 5, cat: "silicon", impact: "medium",
-    title: "Data Center Chip Market Analysis Projects Strong Growth Through 2034 Across All Segments",
-    summary: "New market research forecasts sustained growth in data center chips segmented by chip type, facility size, and vertical through 2034. The report covers accelerators, networking silicon, and storage controllers.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "This long-term outlook validates continued investment in custom silicon development including TPUs and networking ASICs. The segmentation by data center size suggests differentiated requirements that Google can address with its vertically integrated approach. Understanding regional growth patterns will inform infrastructure expansion decisions and help prioritize which chip development programs warrant increased investment over the forecast period.",
-    url: "https://www.globenewswire.com/news-release/2026/03/30/3264345/28124/en/Data-Center-Chips-Market-Analysis-Trends-and-Growth-Outlook-by-Region-2026-2034.html"
+    id: 5, cat: 'hyperscaler', impact: 'high',
+    title: 'Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175–185B',
+    summary: 'Amazon projects $200B in 2026 (up from $131B), Google $175–185B (up from $91B), Meta $115–135B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.',
+    source: 'TechCrunch / Futurum Research', age: '1 month ago',
+    detail: 'Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Google is investing $2B in Turkey, $15B in America-India Connect. Meta\'s Louisiana "Hyperion" campus is a 2,250-acre, $27B joint venture delivering 2GW scaling to 5GW. Oracle\'s Stargate I in Abilene, Texas, plans 450,000+ NVIDIA GB200 GPUs. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.',
+    url: 'https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/'
   },
   {
-    id: 6, cat: "competition", impact: "medium",
-    title: "Starcloud Reaches Unicorn Status with $170M Series A for Orbital AI Data Centers",
-    summary: "Starcloud became the fastest Y Combinator startup to achieve unicorn valuation after launching Starcloud-1 with NVIDIA GPUs. The company raised $170 million to expand space-based AI compute infrastructure.",
-    source: "TechCrunch", age: "1 day ago",
-    detail: "While orbital data centers remain nascent, this development represents creative approaches to AI infrastructure that bypass traditional constraints like power availability and cooling costs. For Google, this signals potential long-term disruption to the hyperscaler model if space-based compute achieves economic viability. The partnership with NVIDIA for orbital deployments also demonstrates GPU vendor flexibility in exploring unconventional deployment scenarios.",
-    url: "https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space/"
+    id: 6, cat: 'vendor', impact: 'medium',
+    title: 'Arm launches AGI CPU — first Arm-designed data center chip, co-developed with Meta',
+    summary: 'Arm breaks from licensing-only model to produce its own silicon. The AGI CPU targets agentic AI workloads and delivers more than 2x performance per rack vs x86. Partners include Meta, Marvell, Micron, Google Cloud, NVIDIA, Cisco, Arista.',
+    source: 'Arm Newsroom', age: '3 days ago',
+    detail: 'Announced March 24, 2026, the Arm AGI CPU is the first production silicon Arm has designed in its 30+ year history. Backed by AWS (majority of 2025 compute additions were Graviton), the move signals Arm\'s intent to capture a slice of the hyperscale custom CPU market. The AGI CPU is paired with Micron memory and Marvell connectivity. Google Cloud, NVIDIA, Cisco, and Arista are all listed ecosystem partners.',
+    url: 'https://newsroom.arm.com/news/arm-agi-cpu-launch'
   },
   {
-    id: 7, cat: "competition", impact: "low",
-    title: "AWS Showcases Generative AI Solution for Volkswagen Marketing Asset Production",
-    summary: "AWS published a case study on building generative AI systems for Volkswagen that create photorealistic vehicle images with technical accuracy validation. The solution demonstrates enterprise AI deployment patterns.",
-    source: "Amazon.com", age: "1 day ago",
-    detail: "This AWS customer win illustrates how hyperscalers are competing on AI solution depth rather than just infrastructure. For Google Cloud, it highlights the importance of developing industry-specific AI solutions that showcase TPU and GPU capabilities in practical business contexts. The focus on accuracy validation suggests enterprises require robust pipelines that integrate AI inference with quality assurance workflows.",
-    url: "https://aws.amazon.com/blogs/machine-learning/reimagine-marketing-at-volkswagen-group-with-generative-ai/"
+    id: 7, cat: 'storage', impact: 'medium',
+    title: 'Storage supply crunch: HBM priority production squeezing NAND and conventional DRAM',
+    summary: 'Memory vendors are deprioritizing standard DRAM/NAND in favor of higher-margin HBM. Longer lead times for advanced substrates, optics, and high-speed networking components adding volatility. Storage prices rising sharply.',
+    source: 'Dell\'Oro Group', age: '3 months ago',
+    detail: 'As inference workloads scale, accelerated clusters require high-capacity SSDs and HBM alongside standard storage for checkpoint persistence and data pipelines. Storage I/O throughput is identified as a critical GPU utilization constraint — NVMe-backed storage with high sequential read speeds is essential to prevent data pipeline bottlenecks. Dell\'Oro projects global data center capex to exceed $1.7T by 2030, with storage price pressure persisting through at least mid-2026.',
+    url: 'https://www.delloro.com/2026-predictions-data-center-infrastructure/'
   },
   {
-    id: 8, cat: "networking", impact: "low",
-    title: "HFT Server Market Reaches $3.7B Opportunity Driven by FPGA and GPU Acceleration",
-    summary: "The high-frequency trading server market is projected to exceed $3.7 billion by 2030, driven by AI-powered strategies and ultra-low latency requirements. FPGA and GPU acceleration are key technology enablers.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "While HFT represents a specialized market segment, the extreme latency requirements drive networking and silicon innovation that eventually benefits broader AI infrastructure. The emphasis on 5G-enabled ultra-low latency suggests continued convergence between telecom and datacenter networking. Google can monitor this segment for networking technology advances applicable to distributed AI training where latency sensitivity impacts training efficiency.",
-    url: "https://www.globenewswire.com/news-release/2026/03/30/3264348/28124/en/High-Frequency-Trading-HFT-Server-Market-Trends-and-Industry-Outlook-Report-2026-2030-A-3-7-Billion-Opportunity.html"
+    id: 8, cat: 'competition', impact: 'medium',
+    title: 'GTC 2026: NVIDIA extends reach from GPUs to full data center stack via NVLink Fusion',
+    summary: 'NVIDIA positioned NVLink as a broader system fabric that could displace PCIe-based x86 systems. Vera CPU targets agentic AI orchestration; STX platform targets KV cache-based context memory. Scale-up vs scale-out architecture debate intensifies.',
+    source: 'Dell\'Oro Group / GTC 2026', age: '5 days ago',
+    detail: 'NVIDIA is reducing reliance on PCIe-based x86 by positioning NVLink as an alternative interconnect. NVLink Fusion and the company\'s own CPU roadmap signal intent to compete beyond GPU compute. The Rubin architecture (named after Vera Rubin) is slated for H2 2026. LPUs (Groq) can deploy at meaningful density — a single Groq LPU rack can integrate hundreds of processors — and may complement or displace portions of GPU inference workloads. Connectivity is emerging as the primary constraint in next-gen AI infra.',
+    url: 'https://www.delloro.com/from-scale-to-optimization-gtc-2026-signals-the-next-phase-of-ai-infrastructure/'
   },
+  {
+    id: 9, cat: 'hyperscaler', impact: 'medium',
+    title: 'Power crisis: US data centers consuming 4.4% of national electricity; AEP Ohio pauses new interconnects',
+    summary: 'Virginia data centers consume 1 in 5 kWh from the state\'s largest utility. Data center power demand growing 15–20% annually. NTT Global plans to double global capacity to 4GW as energy infrastructure becomes the primary bottleneck.',
+    source: 'Tech-Insider / Data Center Knowledge', age: '1 week ago',
+    detail: 'US data centers consume ~176 TWh annually as of early 2026. AEP Ohio has paused all new data center interconnections due to insufficient power. Liquid cooling (direct-to-chip, immersion) promises 30–50% water reduction but requires significant redesign. Google signed 150MW geothermal PPA in Nevada with Ormat Technologies and NV Energy. Meta\'s Louisiana Hyperion campus has a nuclear power arrangement. SMR projects in Texas face regulatory delays. Power availability, not demand, is now the binding constraint for hyperscalers like Microsoft with $80B in unfulfilled Azure backlog.',
+    url: 'https://tech-insider.org/ai-data-center-power-crisis-2026/'
+  },
+  {
+    id: 10, cat: 'networking', impact: 'medium',
+    title: 'Cisco raises AI infrastructure revenue guidance from $2B to $3B for fiscal 2026',
+    summary: 'Cisco\'s AI revenue is driven primarily by hyperscalers plus neocloud and enterprise customers, powered by Silicon One architecture and Acacia optics. Despite raised guidance, stock dropped on weaker-than-expected margins.',
+    source: 'Network World / Stocktwits', age: '4 weeks ago',
+    detail: 'Cisco\'s 2026 strategy centers on tightly integrated hardware and software, treating the network as a coordinated compute fabric. Silicon One G300 and Acacia optics form the core portfolio. However, Arista surpassed Cisco in data center switching market share, and Cisco\'s weak 66% margin forecast (vs expected 68.2%) spooked investors. Arista\'s concurrent blowout Q4 drove shares up 12.5%, signaling AI networking spend is concentrating in open-fabric vendors.',
+    url: 'https://stocktwits.com/news-articles/markets/equity/ai-networking-winner-arista-surges-after-blowout-quarter-outshining-cisco/cZR50agR4sf'
+  }
 ];
 // ARTICLES_END
 
@@ -493,24 +595,56 @@ function filterArticles(cat, btn) {
   renderArticles();
 }
 
-function cardHTML(a, showReadTag) {
-  const readAt = showReadTag ? getReadMap()[a.id]?.readAt : null;
+function cardHTML(a, mode) {
+  // mode: 'feed' | 'read' | 'fav'
+  const readMap = getReadMap();
+  const favMap  = getFavMap();
+  const isFav   = !!favMap[a.id];
+  const readAt  = readMap[a.id]?.readAt;
+  const favAt   = favMap[a.id]?.favAt;
   const daysAgo = readAt ? Math.floor((Date.now() - readAt) / 86400000) : null;
-  const readLabel = daysAgo === 0 ? 'today' : daysAgo === 1 ? '1d ago' : daysAgo + 'd ago';
+  const readLabel = daysAgo === 0 ? 'today' : daysAgo === 1 ? '1d ago' : (daysAgo || '') + 'd ago';
+  const favDaysAgo = favAt ? Math.floor((Date.now() - favAt) / 86400000) : null;
+  const favLabel = favDaysAgo === 0 ? 'today' : favDaysAgo === 1 ? '1d ago' : (favDaysAgo || '') + 'd ago';
+
+  const metaRight = mode === 'read'
+    ? `<span class="read-tag">read ${readLabel}</span>`
+    : mode === 'fav'
+      ? `<span class="fav-date">saved ${favLabel}</span>`
+      : `<span class="age-tag">${a.age}</span>`;
+
+  const footerRight = mode === 'feed'
+    ? `<button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFav(${a.id}, ARTICLES.find(x=>x.id===${a.id}), event)" title="${isFav ? 'Unfavorite' : 'Favorite'}">${isFav ? '★' : '☆'}</button>`
+    : mode === 'read'
+      ? `<button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavFromCard(${a.id}, event)">${isFav ? '★' : '☆'}</button>`
+      : `<button class="fav-btn active" onclick="toggleFavFromCard(${a.id}, event)" title="Remove favorite">★</button>`;
+
+  const cta = mode === 'fav' ? 'VIEW BRIEF →' : mode === 'read' ? 'VIEW AGAIN →' : 'READ BRIEF →';
+
   return `
     <div class="article-card" onclick="openBrief(${a.id})">
       <div class="card-meta">
         <span class="cat-pill cat-${a.cat}">${a.cat}</span>
         <span class="source-tag">${a.source}</span>
-        ${showReadTag ? `<span class="read-tag">read ${readLabel}</span>` : `<span class="age-tag">${a.age}</span>`}
+        ${metaRight}
       </div>
       <div class="card-title">${a.title}</div>
       <div class="card-summary">${a.summary}</div>
       <div class="card-footer">
         <span class="impact-badge impact-${a.impact}">IMPACT: ${a.impact.toUpperCase()}</span>
-        <span class="read-more">${showReadTag ? 'VIEW AGAIN →' : 'READ BRIEF →'}</span>
+        <span class="read-more">${cta}</span>
+        ${footerRight}
       </div>
     </div>`;
+}
+
+function toggleFavFromCard(id, e) {
+  if (e) e.stopPropagation();
+  const map = getReadMap();
+  const favMap = getFavMap();
+  const r = map[id] || favMap[id];
+  const a = ARTICLES.find(x => x.id == id) || (r ? { ...r, id } : null);
+  if (a) toggleFav(id, a, null);
 }
 
 function renderArticles() {
@@ -527,7 +661,7 @@ function renderArticles() {
     </div>`;
     return;
   }
-  container.innerHTML = filtered.map(a => cardHTML(a, false)).join('');
+  container.innerHTML = filtered.map(a => cardHTML(a, 'feed')).join('');
 }
 
 function renderReadTab() {
@@ -545,7 +679,26 @@ function renderReadTab() {
   container.innerHTML = readIds.map(id => {
     const r = readMap[id];
     const a = ARTICLES.find(x => x.id == id) || { ...r, id };
-    return cardHTML(a, true);
+    return cardHTML(a, 'read');
+  }).join('');
+}
+
+function renderFavTab() {
+  const favMap = getFavMap();
+  const container = document.getElementById('fav-container');
+  const favIds = Object.keys(favMap).sort((a, b) => favMap[b].favAt - favMap[a].favAt);
+  if (!favIds.length) {
+    container.innerHTML = `<div class="empty-state">
+      <div class="empty-state-icon">☆</div>
+      <div class="empty-state-title">No favorites yet</div>
+      <div>Tap the star on any story to save it here for 30 days.</div>
+    </div>`;
+    return;
+  }
+  container.innerHTML = favIds.map(id => {
+    const r = favMap[id];
+    const a = ARTICLES.find(x => x.id == id) || { ...r, id };
+    return cardHTML(a, 'fav');
   }).join('');
 }
 
@@ -565,6 +718,7 @@ function openBrief(id) {
     <a href="${a.url}" target="_blank" style="font-family:var(--mono); font-size:12px; color:var(--accent); text-decoration:none; letter-spacing:0.04em;">VIEW SOURCE →</a>
   `;
   document.getElementById('brief-overlay').classList.add('open');
+  updateModalFavBtn();
   markAsRead(id, a);
 }
 
@@ -651,6 +805,7 @@ async function loadDigest() {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true; btn.textContent = 'LOADING...';
   updateReadBadge();
+  updateFavBadge();
   renderArticles();
   await generateBrief();
   btn.disabled = false; btn.textContent = '↻ REFRESH';
