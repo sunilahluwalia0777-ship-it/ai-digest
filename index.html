@@ -394,85 +394,69 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: 'networking', impact: 'high',
-    title: 'Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch',
-    summary: 'Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.',
-    source: 'FinancialContent / Broadcom', age: '4 days ago',
-    detail: 'The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcom\'s networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIA\'s competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window. This reinforces Ethernet\'s growing dominance and challenges InfiniBand\'s historic HPC hegemony.',
-    url: 'https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch'
+    id: 1, cat: "hyperscaler", impact: "high",
+    title: "Global Cloud Market Projected to Hit $500B in 2026 as Hyperscalers Increase AI Investment",
+    summary: "Cloud spending is accelerating rapidly with the global market expected to reach a landmark $500 billion this year. Hyperscalers are driving growth through aggressive AI infrastructure investments.",
+    source: "TechRadar", age: "1 day ago",
+    detail: "This milestone represents approximately 25% growth from the $400 billion 2025 market, signaling sustained demand for cloud compute capacity. For Google Cloud, this validates continued investment in GPU and TPU infrastructure while intensifying competition with AWS and Azure for AI workloads. The spending surge directly impacts networking and storage teams as bandwidth and capacity requirements scale with AI training clusters. Expect continued pressure on high-speed interconnect solutions and distributed storage systems optimized for AI workflows.",
+    url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
   },
   {
-    id: 2, cat: 'silicon', impact: 'high',
-    title: 'Google TPU v7 on track for 36,000 racks in 2026 — 10,000+ optical circuit switches required',
-    summary: 'Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs via optical circuit switches. Per-chip power runs 850–1,000W, putting rack TDP at 80–100kW.',
-    source: 'Investing.com / Fubon Research', age: '3 months ago',
-    detail: 'Fubon\'s supply chain analysis places total TPU v7 racks at ~36,000 units in 2026, with ~3.1–3.2M total TPU units constrained by advanced packaging capacity. OCS is described as a "key enabler for high-level data center networks," especially for long-duration training workloads. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic (committed to 1M units) and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.',
-    url: 'https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670'
+    id: 2, cat: "silicon", impact: "high",
+    title: "South Korean AI Chip Startup Rebellions Raises $400M Pre-IPO to Challenge NVIDIA",
+    summary: "Rebellions secured $400 million in pre-IPO funding to scale its cloud-native AI inference chips. The startup is positioning itself as an alternative to NVIDIA and AMD in the inference accelerator market.",
+    source: "SiliconANGLE News", age: "1 day ago",
+    detail: "This represents one of the largest funding rounds for an NVIDIA competitor outside China, signaling investor appetite for GPU alternatives. Rebellions focuses specifically on inference workloads, which could appeal to hyperscalers seeking to diversify silicon suppliers and reduce NVIDIA dependency. Google should monitor Rebellions for potential TPU competitive positioning in inference-heavy deployments. The funding level suggests Rebellions may achieve meaningful production scale within 18-24 months, potentially impacting vendor negotiations with NVIDIA.",
+    url: "https://siliconangle.com/2026/03/30/rebellions-inc-lands-400m-funding-lead-south-korean-revolt-nvidia-chips/"
   },
   {
-    id: 3, cat: 'networking', impact: 'high',
-    title: 'Arista targets $10B+ revenue at 20% growth; Ethernet declared "eventual winner" for AI',
-    summary: 'CEO Ullal says Ethernet has displaced InfiniBand in hyperscaler AI backends. Traffic patterns shifting from centralized training to distributed inference. Arista Q4 revenue up 29% YoY to $2.49B.',
-    source: 'Fierce Network / Network World', age: '3 months ago',
-    detail: 'Arista\'s AI networks and campus network segments are both growing 60%+ in 2026. The Ultra Ethernet Consortium Spec 1.0 and ESUN have redefined Ethernet for AI/HPC. Arista\'s R4 portfolio — 7020, 7280, 7800 chassis — targets AI-scale and distributed inference. However, NVIDIA Spectrum-X saw 760% YoY growth to $1.46B and scored Meta and Oracle as customers. Cisco also projects $3B+ AI revenue in fiscal 2026.',
-    url: 'https://www.fierce-network.com/cloud/aristas-ullal-ethernet-eventual-winner-and-equalizer-ai-networking'
+    id: 3, cat: "silicon", impact: "medium",
+    title: "Data Center Chip Market Report Projects Growth Through 2034 Across All Segments",
+    summary: "New market analysis covers data center chip trends by chip type, facility size, and vertical through 2034. The report segments the market to identify growth drivers and regional dynamics.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "Long-range market projections help inform multi-year silicon roadmap planning and vendor relationship strategies. Understanding chip demand by data center size is particularly relevant as Google balances mega-scale AI facilities against distributed edge deployments. The vertical segmentation may reveal opportunities for specialized TPU configurations targeting specific workloads. This data supports capacity planning discussions with Broadcom and other silicon partners.",
+    url: "https://www.globenewswire.com/news-release/2026/03/30/3264345/28124/en/Data-Center-Chips-Market-Analysis-Trends-and-Growth-Outlook-by-Region-2026-2034.html"
   },
   {
-    id: 4, cat: 'competition', impact: 'high',
-    title: 'Meta in advanced TPU talks with Google; AMD inks $100B deal for 6GW AI capacity',
-    summary: 'Meta is negotiating Google TPU deployment from 2027, possibly leasing from Google Cloud as early as 2026 — adding to an existing $10B+ six-year Google Cloud deal. Separately, AMD commits $100B to supply 6GW to Meta using MI450-based Helios rack servers.',
-    source: 'Techzine / Data Center Knowledge', age: '4 months ago / 3 weeks ago',
-    detail: 'Meta\'s move to diversify away from NVIDIA is accelerating on two fronts. The Google TPU deal targets inference workloads where TPUs show significant TCO advantage (Midjourney reportedly cut inference costs 65% by migrating). The AMD Helios deal uses custom MI450 GPUs with AI-optimized EPYC CPUs. Meta also broke ground on a $10B, 1GW campus in Lebanon, Indiana, and its "Prometheus" Ohio supercluster (1GW) is expected online in 2026.',
-    url: 'https://www.techzine.eu/news/infrastructure/136700/meta-finds-google-as-nvidia-alternative-but-patience-is-required/'
+    id: 4, cat: "vendor", impact: "medium",
+    title: "Cisco Enterprise Agreement Integrates Nutanix for Simplified Hybrid Infrastructure",
+    summary: "Cisco announced that its Enterprise Agreement now includes Nutanix integration, offering predictable pricing and flexible expansion. The move simplifies procurement for hybrid and multi-cloud deployments.",
+    source: "Cisco.com", age: "1 day ago",
+    detail: "This partnership between two key vendors creates a more streamlined path for enterprises adopting hybrid infrastructure, potentially competing with hyperscaler private cloud offerings. For Google, this signals Cisco is deepening its software-defined infrastructure play, which could impact Anthos and hybrid cloud positioning. The bundled pricing model may make Cisco-Nutanix stacks more attractive for enterprises evaluating on-premises AI infrastructure alternatives. Network teams should assess how this affects interoperability with Google Cloud networking products.",
+    url: "https://blogs.cisco.com/news/when-buying-models-become-architecture-decisions"
   },
   {
-    id: 5, cat: 'hyperscaler', impact: 'high',
-    title: 'Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175–185B',
-    summary: 'Amazon projects $200B in 2026 (up from $131B), Google $175–185B (up from $91B), Meta $115–135B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.',
-    source: 'TechCrunch / Futurum Research', age: '1 month ago',
-    detail: 'Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Google is investing $2B in Turkey, $15B in America-India Connect. Meta\'s Louisiana "Hyperion" campus is a 2,250-acre, $27B joint venture delivering 2GW scaling to 5GW. Oracle\'s Stargate I in Abilene, Texas, plans 450,000+ NVIDIA GB200 GPUs. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.',
-    url: 'https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/'
+    id: 5, cat: "networking", impact: "medium",
+    title: "Self-Driving Networks Emerge as Solution for Managing Complex AI Infrastructure",
+    summary: "Autonomous network management systems are gaining traction as network complexity outpaces human operator capacity. AI-driven automation enables real-time optimization and incident response.",
+    source: "The Register", age: "1 day ago",
+    detail: "As AI training clusters grow to tens of thousands of accelerators, traditional network operations cannot keep pace with fault detection and traffic optimization requirements. Self-driving network capabilities directly address operational challenges in GPU and TPU fabrics where microsecond-level latency variations impact training efficiency. Google should evaluate how these capabilities compare to internal network automation tools and whether vendor solutions from Arista or Cisco could supplement existing systems. This trend reinforces the importance of telemetry and observability in next-generation network designs.",
+    url: "https://www.theregister.com/2026/03/30/explainer_selfdriving_networks/"
   },
   {
-    id: 6, cat: 'vendor', impact: 'medium',
-    title: 'Arm launches AGI CPU — first Arm-designed data center chip, co-developed with Meta',
-    summary: 'Arm breaks from licensing-only model to produce its own silicon. The AGI CPU targets agentic AI workloads and delivers more than 2x performance per rack vs x86. Partners include Meta, Marvell, Micron, Google Cloud, NVIDIA, Cisco, Arista.',
-    source: 'Arm Newsroom', age: '3 days ago',
-    detail: 'Announced March 24, 2026, the Arm AGI CPU is the first production silicon Arm has designed in its 30+ year history. Backed by AWS (majority of 2025 compute additions were Graviton), the move signals Arm\'s intent to capture a slice of the hyperscale custom CPU market. The AGI CPU is paired with Micron memory and Marvell connectivity. Google Cloud, NVIDIA, Cisco, and Arista are all listed ecosystem partners.',
-    url: 'https://newsroom.arm.com/news/arm-agi-cpu-launch'
+    id: 6, cat: "competition", impact: "medium",
+    title: "Starcloud Reaches Unicorn Status After Launching First Orbital AI Data Center with NVIDIA GPUs",
+    summary: "Starcloud achieved $1B+ valuation just 17 months after Y Combinator demo day following its orbital data center launch. The facility uses NVIDIA GPUs and represents a novel approach to AI compute deployment.",
+    source: "TechCrunch", age: "1 day ago",
+    detail: "While orbital data centers remain experimental, the rapid funding trajectory indicates investor interest in alternative infrastructure approaches that bypass terrestrial power and cooling constraints. This could eventually impact hyperscaler competitive dynamics if space-based compute proves viable for specific latency-insensitive AI workloads. The NVIDIA partnership suggests orbital deployments may initially target inference rather than training due to bandwidth limitations. Google should monitor whether this represents a credible long-term infrastructure alternative or remains a niche application.",
+    url: "https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space/"
   },
   {
-    id: 7, cat: 'storage', impact: 'medium',
-    title: 'Storage supply crunch: HBM priority production squeezing NAND and conventional DRAM',
-    summary: 'Memory vendors are deprioritizing standard DRAM/NAND in favor of higher-margin HBM. Longer lead times for advanced substrates, optics, and high-speed networking components adding volatility. Storage prices rising sharply.',
-    source: 'Dell\'Oro Group', age: '3 months ago',
-    detail: 'As inference workloads scale, accelerated clusters require high-capacity SSDs and HBM alongside standard storage for checkpoint persistence and data pipelines. Storage I/O throughput is identified as a critical GPU utilization constraint — NVMe-backed storage with high sequential read speeds is essential to prevent data pipeline bottlenecks. Dell\'Oro projects global data center capex to exceed $1.7T by 2030, with storage price pressure persisting through at least mid-2026.',
-    url: 'https://www.delloro.com/2026-predictions-data-center-infrastructure/'
+    id: 7, cat: "silicon", impact: "low",
+    title: "HFT Server Market to Reach $3.7B by 2030 Driven by FPGA and GPU Acceleration",
+    summary: "High-frequency trading infrastructure spending is projected to exceed $3.7 billion by 2030. Growth drivers include AI-driven strategies, 5G integration, and advances in FPGA and GPU acceleration.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "While HFT is a specialized segment, the acceleration trends mirror broader AI infrastructure patterns. FPGA and GPU advances developed for trading latency requirements often translate to data center applications. The 5G ultra-low latency requirements parallel edge AI deployment challenges Google faces. This market segment serves as a leading indicator for networking and silicon innovation that eventually reaches hyperscale deployments.",
+    url: "https://www.globenewswire.com/news-release/2026/03/30/3264348/28124/en/High-Frequency-Trading-HFT-Server-Market-Trends-and-Industry-Outlook-Report-2026-2030-A-3-7-Billion-Opportunity.html"
   },
   {
-    id: 8, cat: 'competition', impact: 'medium',
-    title: 'GTC 2026: NVIDIA extends reach from GPUs to full data center stack via NVLink Fusion',
-    summary: 'NVIDIA positioned NVLink as a broader system fabric that could displace PCIe-based x86 systems. Vera CPU targets agentic AI orchestration; STX platform targets KV cache-based context memory. Scale-up vs scale-out architecture debate intensifies.',
-    source: 'Dell\'Oro Group / GTC 2026', age: '5 days ago',
-    detail: 'NVIDIA is reducing reliance on PCIe-based x86 by positioning NVLink as an alternative interconnect. NVLink Fusion and the company\'s own CPU roadmap signal intent to compete beyond GPU compute. The Rubin architecture (named after Vera Rubin) is slated for H2 2026. LPUs (Groq) can deploy at meaningful density — a single Groq LPU rack can integrate hundreds of processors — and may complement or displace portions of GPU inference workloads. Connectivity is emerging as the primary constraint in next-gen AI infra.',
-    url: 'https://www.delloro.com/from-scale-to-optimization-gtc-2026-signals-the-next-phase-of-ai-infrastructure/'
+    id: 8, cat: "competition", impact: "low",
+    title: "AWS Showcases Generative AI Solution for Volkswagen Marketing Asset Production",
+    summary: "AWS built a generative AI solution for Volkswagen Group that creates photorealistic vehicle images with brand compliance validation. The implementation demonstrates enterprise AI deployment patterns.",
+    source: "Amazon.com", age: "1 day ago",
+    detail: "This case study illustrates how AWS is positioning generative AI capabilities for enterprise customers with complex compliance requirements. The technical accuracy validation component is notable as it addresses a common barrier to enterprise AI adoption. For Google, this signals AWS continuing to build vertical-specific AI solutions that leverage their infrastructure. The approach of combining image generation with automated validation could inform similar Google Cloud customer engagements.",
+    url: "https://aws.amazon.com/blogs/machine-learning/reimagine-marketing-at-volkswagen-group-with-generative-ai/"
   },
-  {
-    id: 9, cat: 'hyperscaler', impact: 'medium',
-    title: 'Power crisis: US data centers consuming 4.4% of national electricity; AEP Ohio pauses new interconnects',
-    summary: 'Virginia data centers consume 1 in 5 kWh from the state\'s largest utility. Data center power demand growing 15–20% annually. NTT Global plans to double global capacity to 4GW as energy infrastructure becomes the primary bottleneck.',
-    source: 'Tech-Insider / Data Center Knowledge', age: '1 week ago',
-    detail: 'US data centers consume ~176 TWh annually as of early 2026. AEP Ohio has paused all new data center interconnections due to insufficient power. Liquid cooling (direct-to-chip, immersion) promises 30–50% water reduction but requires significant redesign. Google signed 150MW geothermal PPA in Nevada with Ormat Technologies and NV Energy. Meta\'s Louisiana Hyperion campus has a nuclear power arrangement. SMR projects in Texas face regulatory delays. Power availability, not demand, is now the binding constraint for hyperscalers like Microsoft with $80B in unfulfilled Azure backlog.',
-    url: 'https://tech-insider.org/ai-data-center-power-crisis-2026/'
-  },
-  {
-    id: 10, cat: 'networking', impact: 'medium',
-    title: 'Cisco raises AI infrastructure revenue guidance from $2B to $3B for fiscal 2026',
-    summary: 'Cisco\'s AI revenue is driven primarily by hyperscalers plus neocloud and enterprise customers, powered by Silicon One architecture and Acacia optics. Despite raised guidance, stock dropped on weaker-than-expected margins.',
-    source: 'Network World / Stocktwits', age: '4 weeks ago',
-    detail: 'Cisco\'s 2026 strategy centers on tightly integrated hardware and software, treating the network as a coordinated compute fabric. Silicon One G300 and Acacia optics form the core portfolio. However, Arista surpassed Cisco in data center switching market share, and Cisco\'s weak 66% margin forecast (vs expected 68.2%) spooked investors. Arista\'s concurrent blowout Q4 drove shares up 12.5%, signaling AI networking spend is concentrating in open-fabric vendors.',
-    url: 'https://stocktwits.com/news-articles/markets/equity/ai-networking-winner-arista-surges-after-blowout-quarter-outshining-cisco/cZR50agR4sf'
-  }
 ];
 // ARTICLES_END
 
