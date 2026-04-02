@@ -25,7 +25,6 @@ jobs:
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: python update_digest.py
 
       - name: Commit and push
