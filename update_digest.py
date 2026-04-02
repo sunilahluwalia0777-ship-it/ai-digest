@@ -1,51 +1,68 @@
 #!/usr/bin/env python3
-"""
-AI Infra Daily — daily update script (Phase 1+2)
-- Fetches fresh AI infra news via NewsAPI
-- Deduplicates against seen_urls.json (never shows same article twice)
-- Summarizes/categorizes with Claude
-- Injects articles into index.html
-- Saves daily archive for weekly report
-- Commits everything back to the repo
-"""
+# AI Infra Daily - daily update script
+# Sources: vendor/hyperscaler RSS blogs + NewsAPI
+# Features: deduplication, daily archive, Claude summarization
 
-import os, re, json, time, datetime, sys, base64, requests
+import os, re, json, time, datetime, sys, requests
+import xml.etree.ElementTree as ET
+from html import unescape as html_unescape
 
 NEWSAPI_KEY   = os.environ.get("NEWSAPI_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_KEY", "")
-GH_PAT        = os.environ.get("GH_PAT", "")
 HTML_FILE     = "index.html"
 SEEN_FILE     = "data/seen_urls.json"
 ARCHIVE_DIR   = "data"
 
+# ---- NewsAPI keyword queries ----
 QUERIES = [
     "Broadcom AI networking switch data center",
     "NVIDIA GPU TPU data center infrastructure",
     "Google TPU cloud AI chip",
     "Arista networking AI hyperscaler",
     "Cisco AI data center silicon",
-    "AWS Azure Google Cloud AI infrastructure investment",
-    "Meta Oracle OCI AI data center",
+    "AWS Azure Google Cloud AI infrastructure",
+    "Meta Oracle OCI AI data center capex",
     "AI data center storage HBM NVMe",
     "Ethernet InfiniBand AI cluster networking",
-    "AI infrastructure supply chain chips 2026",
+    "AI infrastructure supply chain chips",
+]
+
+# ---- Vendor / hyperscaler RSS feeds ----
+RSS_FEEDS = [
+    ("Google Cloud Blog",      "https://cloudblog.withgoogle.com/rss"),
+    ("Google Cloud Infra",     "https://cloud.google.com/blog/products/infrastructure/rss"),
+    ("AWS News Blog",          "https://aws.amazon.com/blogs/aws/feed/"),
+    ("AWS Networking",         "https://aws.amazon.com/blogs/networking-and-content-delivery/feed/"),
+    ("AWS Storage",            "https://aws.amazon.com/blogs/storage/feed/"),
+    ("Azure Blog",             "https://azure.microsoft.com/en-us/blog/feed/"),
+    ("Azure Updates",          "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"),
+    ("Meta Engineering",       "https://engineering.fb.com/feed/"),
+    ("Oracle Cloud Infra",     "https://blogs.oracle.com/cloud-infrastructure/rss"),
+    ("NVIDIA Blog",            "https://feeds.feedburner.com/nvidiablog"),
+    ("NVIDIA Newsroom",        "https://nvidianews.nvidia.com/releases.xml"),
+    ("NVIDIA Developer Blog",  "https://developer.nvidia.com/blog/feed"),
+    ("Broadcom Blog",          "https://www.broadcom.com/blog/rss"),
+    ("Arista Blog",            "https://blogs.arista.com/blog/rss.xml"),
+    ("Cisco Networking Blog",  "https://blogs.cisco.com/networking/feed"),
+    ("Cisco Data Center Blog", "https://blogs.cisco.com/datacenter/feed"),
 ]
 
 def check_env():
-    if not NEWSAPI_KEY: print("ERROR: NEWSAPI_KEY missing"); sys.exit(1)
-    if not ANTHROPIC_KEY: print("ERROR: ANTHROPIC_KEY missing"); sys.exit(1)
-    if not GH_PAT: print("WARNING: GH_PAT not set — cross-device sync will be disabled")
-    print(f"Keys OK: NEWS={NEWSAPI_KEY[:6]}... ANTHROPIC={ANTHROPIC_KEY[:6]}... GH_PAT={'set' if GH_PAT else 'NOT SET'}")
+    if not NEWSAPI_KEY:
+        print("ERROR: NEWSAPI_KEY missing"); sys.exit(1)
+    if not ANTHROPIC_KEY:
+        print("ERROR: ANTHROPIC_KEY missing"); sys.exit(1)
+    print(f"Keys OK: NEWS={NEWSAPI_KEY[:6]}... ANTHROPIC={ANTHROPIC_KEY[:6]}...")
 
 def load_seen_urls():
-    if not os.path.exists(SEEN_FILE): return set()
+    if not os.path.exists(SEEN_FILE):
+        return set()
     with open(SEEN_FILE) as f:
         data = json.load(f)
-    # Prune URLs older than 90 days
     cutoff = (datetime.date.today() - datetime.timedelta(days=90)).isoformat()
     return {url for url, date in data.items() if date >= cutoff}
 
-def save_seen_urls(existing_seen, new_urls):
+def save_seen_urls(seen, new_urls):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = datetime.date.today().isoformat()
     data = {}
@@ -54,35 +71,98 @@ def save_seen_urls(existing_seen, new_urls):
             data = json.load(f)
     for url in new_urls:
         data[url] = today
-    # Prune old entries
     cutoff = (datetime.date.today() - datetime.timedelta(days=90)).isoformat()
-    data = {url: date for url, date in data.items() if date >= cutoff}
+    data = {url: d for url, d in data.items() if d >= cutoff}
     with open(SEEN_FILE, 'w') as f:
         json.dump(data, f, indent=2)
-    print(f"seen_urls.json updated: {len(data)} total URLs tracked")
+    print(f"seen_urls.json: {len(data)} total URLs tracked")
 
-def fetch_news():
-    seen = load_seen_urls()
-    print(f"Loaded {len(seen)} previously seen URLs")
-    from_date = (datetime.date.today() - datetime.timedelta(days=3)).isoformat()
+def clean(s):
+    if not s:
+        return ""
+    s = re.sub(r"<[^>]+>", " ", str(s))
+    s = html_unescape(s)
+    return " ".join(s.split())[:500]
+
+def fetch_rss(seen, seen_in_run):
     raw = []
-    seen_in_run = set()
+    for name, url in RSS_FEEDS:
+        try:
+            r = requests.get(url, timeout=12, headers={"User-Agent": "AIInfraDigest/1.0"})
+            print(f"  RSS [{name}]: HTTP {r.status_code}")
+            if r.status_code != 200:
+                continue
+            root = ET.fromstring(r.content)
+            ns = {"atom": "http://www.w3.org/2005/Atom"}
+            items = root.findall(".//item") or root.findall(".//atom:entry", ns)
+            count = 0
+            for item in items[:15]:
+                # URL
+                link_el = item.find("link")
+                item_url = ""
+                if link_el is not None:
+                    item_url = (link_el.text or link_el.get("href") or "").strip()
+                if not item_url:
+                    guid_el = item.find("guid")
+                    if guid_el is not None:
+                        item_url = (guid_el.text or "").strip()
+                if not item_url or item_url in seen or item_url in seen_in_run:
+                    continue
+                # Title
+                title_el = item.find("title")
+                title = clean(title_el.text if title_el is not None else "")
+                if not title or "[Removed]" in title:
+                    continue
+                # Description
+                desc = ""
+                for tag in ["description", "summary",
+                            "{http://www.w3.org/2005/Atom}summary",
+                            "{http://purl.org/rss/1.0/modules/content/}encoded"]:
+                    el = item.find(tag)
+                    if el is not None and el.text:
+                        desc = clean(el.text)
+                        break
+                if not desc:
+                    desc = title
+                # Pub date
+                pub_el = item.find("pubDate") or item.find("published") or \
+                         item.find("{http://www.w3.org/2005/Atom}published")
+                pub = (pub_el.text or "").strip() if pub_el is not None else ""
+
+                seen_in_run.add(item_url)
+                raw.append({
+                    "title": title, "description": desc[:400],
+                    "source": name, "url": item_url, "publishedAt": pub
+                })
+                count += 1
+            print(f"    {count} new items")
+        except Exception as e:
+            print(f"  RSS error [{name}]: {e}")
+        time.sleep(0.3)
+    return raw
+
+def fetch_newsapi(seen, seen_in_run):
+    raw = []
+    from_date = (datetime.date.today() - datetime.timedelta(days=3)).isoformat()
     for q in QUERIES:
         try:
             r = requests.get("https://newsapi.org/v2/everything", params={
                 "q": q, "language": "en", "sortBy": "publishedAt",
                 "pageSize": 8, "from": from_date, "apiKey": NEWSAPI_KEY
             }, timeout=15)
-            print(f"  '{q}': HTTP {r.status_code}")
-            if r.status_code != 200: continue
+            print(f"  NewsAPI '{q[:40]}': HTTP {r.status_code}")
+            if r.status_code != 200:
+                continue
             for a in r.json().get("articles", []):
                 url = a.get("url", "")
-                title = a.get("title", "") or ""
-                desc  = a.get("description", "") or ""
-                if not url or not title or not desc: continue
-                if "[Removed]" in title: continue
-                if url in seen: continue          # already shown before
-                if url in seen_in_run: continue   # duplicate within this run
+                title = (a.get("title") or "")
+                desc  = (a.get("description") or "")
+                if not url or not title or not desc:
+                    continue
+                if "[Removed]" in title:
+                    continue
+                if url in seen or url in seen_in_run:
+                    continue
                 seen_in_run.add(url)
                 raw.append({
                     "title": title, "description": desc[:400],
@@ -90,44 +170,73 @@ def fetch_news():
                     "url": url, "publishedAt": a.get("publishedAt", "")
                 })
         except Exception as e:
-            print(f"  Error: {e}")
+            print(f"  NewsAPI error: {e}")
         time.sleep(0.4)
-    print(f"Found {len(raw)} new unseen articles")
-    return raw, seen
+    return raw
+
+def fetch_news():
+    seen = load_seen_urls()
+    print(f"Previously seen URLs: {len(seen)}")
+    seen_in_run = set()
+
+    print("\n-- RSS blogs --")
+    rss = fetch_rss(seen, seen_in_run)
+    print(f"RSS subtotal: {len(rss)}")
+
+    print("\n-- NewsAPI --")
+    napi = fetch_newsapi(seen, seen_in_run)
+    print(f"NewsAPI subtotal: {len(napi)}")
+
+    combined = rss + napi
+    print(f"\nTotal new articles: {len(combined)}")
+    return combined, seen
 
 def call_claude(system, user_msg, max_tokens=4000):
-    headers = {"Content-Type":"application/json","x-api-key":ANTHROPIC_KEY,"anthropic-version":"2023-06-01"}
-    body = {"model":"claude-opus-4-5","max_tokens":max_tokens,"system":system,"messages":[{"role":"user","content":user_msg}]}
-    print(f"  Calling Claude ({max_tokens} tokens)...")
-    r = requests.post("https://api.anthropic.com/v1/messages", headers=headers, json=body, timeout=90)
+    headers = {
+        "Content-Type": "application/json",
+        "x-api-key": ANTHROPIC_KEY,
+        "anthropic-version": "2023-06-01"
+    }
+    body = {
+        "model": "claude-opus-4-5",
+        "max_tokens": max_tokens,
+        "system": system,
+        "messages": [{"role": "user", "content": user_msg}]
+    }
+    print(f"  Claude API ({max_tokens} tokens)...")
+    r = requests.post("https://api.anthropic.com/v1/messages",
+                      headers=headers, json=body, timeout=90)
     print(f"  HTTP {r.status_code}")
     if r.status_code != 200:
         print(f"  Error: {r.text[:300]}")
         r.raise_for_status()
     return r.json()["content"][0]["text"].strip()
 
-SYSTEM_PROMPT = """You are an AI infrastructure analyst for a Google PM owning Networking and Storage for GPU/TPU infrastructure.
-Vendors: Broadcom, NVIDIA, Cisco, Arista, Marvell. Competitors: AWS, Azure, Meta, OCI, Oracle.
-
-Select the 8-10 most relevant articles and return a JSON array. Each object:
-  id        - integer from 1
-  cat       - one of: networking, silicon, hyperscaler, storage, competition, vendor
-  impact    - one of: high, medium, low
-  title     - rewritten headline max 90 chars
-  summary   - 2 sentences plain text no apostrophes
-  detail    - 3-5 sentences analysis plain text no apostrophes no markdown
-  source    - publication name from input
-  age       - one of: today, 1 day ago, 2 days ago, 3 days ago
-  url       - original URL unchanged
-
-Return ONLY valid JSON array. No preamble. No markdown fences. No apostrophes anywhere."""
+SYSTEM_PROMPT = (
+    "You are an AI infrastructure analyst for a Google PM owning Networking and Storage "
+    "for GPU/TPU infrastructure. "
+    "Vendors: Broadcom, NVIDIA, Cisco, Arista, Marvell. "
+    "Competitors: AWS, Azure, Meta, OCI, Oracle. "
+    "Select the 8-10 most relevant articles and return a JSON array. Each object: "
+    "id (integer from 1), "
+    "cat (one of: networking silicon hyperscaler storage competition vendor), "
+    "impact (one of: high medium low), "
+    "title (rewritten headline max 90 chars no apostrophes), "
+    "summary (2 sentences plain text no apostrophes), "
+    "detail (3-5 sentences analysis plain text no apostrophes no markdown), "
+    "source (publication name from input), "
+    "age (one of: today / 1 day ago / 2 days ago / 3 days ago), "
+    "url (original URL unchanged). "
+    "Return ONLY valid JSON array. No preamble. No markdown fences. No apostrophes anywhere."
+)
 
 def select_and_summarize(raw):
     today = datetime.date.today().isoformat()
-    user_msg = f"Today is {today}. Select best 8-10:\n\n{json.dumps(raw[:40], indent=2)}"
+    # Send RSS articles first (higher quality), cap at 60 total
+    user_msg = f"Today is {today}. Select best 8-10:\n\n{json.dumps(raw[:60], indent=2)}"
     text = call_claude(SYSTEM_PROMPT, user_msg, 4000)
     text = re.sub(r"^```json\s*", "", text, flags=re.MULTILINE)
-    text = re.sub(r"^```\s*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"^```\s*",     "", text, flags=re.MULTILINE)
     text = text.strip()
     try:
         articles = json.loads(text)
@@ -138,13 +247,21 @@ def select_and_summarize(raw):
         raise
 
 def generate_brief(articles):
-    summaries = "\n".join(f"- [{a['cat'].upper()}] {a['title']}: {a['summary']}" for a in articles)
-    system = "Concise AI infra analyst for Google PM owning Networking and Storage for GPU/TPU. No apostrophes in output."
-    user = f"Stories:\n{summaries}\n\nWrite 3-sentence executive brief. Lead with most important for Google networking/storage PM, then competitive signal, then supply chain watch. No bullets. No apostrophes."
+    summaries = "\n".join(
+        f"- [{a['cat'].upper()}] {a['title']}: {a['summary']}"
+        for a in articles
+    )
+    system = ("Concise AI infra analyst for Google PM owning Networking and Storage "
+              "for GPU/TPU. No apostrophes in output.")
+    user = (f"Stories:\n{summaries}\n\n"
+            "Write 3-sentence executive brief. Lead with most important for "
+            "Google networking/storage PM, then competitive signal, then supply chain watch. "
+            "No bullets. No apostrophes.")
     return call_claude(system, user, 300)
 
 def escape_js(s):
-    s = str(s).replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").replace("\r", "")
+    s = str(s).replace("\\", "\\\\").replace('"', '\\"')
+    s = s.replace("\n", " ").replace("\r", "")
     return s
 
 def build_articles_js(articles):
@@ -169,17 +286,17 @@ def inject_html(articles, brief):
         html = f.read()
     if "// ARTICLES_START" not in html:
         print("ERROR: ARTICLES_START sentinel missing"); sys.exit(1)
-    # Inject articles
-    html = re.sub(r"// ARTICLES_START\s*\nconst ARTICLES = \[.*?\];\s*\n// ARTICLES_END",
-                  build_articles_js(articles), html, flags=re.DOTALL)
-    # Inject brief
+    html = re.sub(
+        r"// ARTICLES_START\s*\nconst ARTICLES = \[.*?\];\s*\n// ARTICLES_END",
+        build_articles_js(articles), html, flags=re.DOTALL)
     escaped = escape_js(brief)
-    html = re.sub(r"// BRIEF_START\s*\nconst STATIC_BRIEF = \".*?\";\s*\n// BRIEF_END",
-                  f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END',
-                  html, flags=re.DOTALL)
+    html = re.sub(
+        r"// BRIEF_START\s*\nconst STATIC_BRIEF = \".*?\";\s*\n// BRIEF_END",
+        f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END',
+        html, flags=re.DOTALL)
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"Injected {len(articles)} articles")
+    print(f"Injected {len(articles)} articles into {HTML_FILE}")
 
 def save_daily_archive(articles):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
@@ -187,18 +304,19 @@ def save_daily_archive(articles):
     path = f"{ARCHIVE_DIR}/articles_{today}.json"
     with open(path, "w") as f:
         json.dump({"date": today, "articles": articles}, f, indent=2)
-    print(f"Saved daily archive: {path}")
+    print(f"Saved archive: {path}")
 
 def main():
     print(f"\n=== AI Infra Daily — {datetime.date.today()} ===\n")
     check_env()
 
-    print("\nStep 1: Fetching news...")
+    print("\nStep 1: Fetching from RSS blogs + NewsAPI...")
     raw, seen = fetch_news()
     if not raw:
-        print("No new articles — keeping existing content"); sys.exit(0)
+        print("No new articles — keeping existing content")
+        sys.exit(0)
 
-    print(f"\nStep 2: Summarizing {len(raw)} articles with Claude...")
+    print(f"\nStep 2: Claude selecting + summarizing {len(raw)} candidates...")
     articles = select_and_summarize(raw)
 
     print("\nStep 3: Generating executive brief...")
@@ -209,8 +327,7 @@ def main():
     inject_html(articles, brief)
 
     print("\nStep 5: Updating seen_urls.json...")
-    new_urls = [a["url"] for a in articles]
-    save_seen_urls(seen, new_urls)
+    save_seen_urls(seen, [a["url"] for a in articles])
 
     print("\nStep 6: Saving daily archive...")
     save_daily_archive(articles)
