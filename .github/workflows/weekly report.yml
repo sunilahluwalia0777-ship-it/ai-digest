@@ -1,0 +1,35 @@
+name: Weekly Report
+
+on:
+  schedule:
+    - cron: '5 14 * * 0'  # 7:05am PDT Sunday (14:05 UTC)
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate weekly report
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+        run: python weekly_report.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "AI Infra Bot"
+          git config user.email "actions@github.com"
+          git add data/weekly_report.json
+          git diff --staged --quiet || git commit -m "Weekly report — $(date +'%Y-%m-%d')"
+          git push
