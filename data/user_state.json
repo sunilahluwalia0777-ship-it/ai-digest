@@ -76,6 +76,17 @@
       "detail": "Broad-based component inflation affects data center hardware costs beyond just accelerators and memory. PCB and packaging cost increases will flow through to networking equipment storage systems and server platforms. Google procurement should anticipate higher infrastructure costs across the board and evaluate longer-term supply agreements to lock in pricing. This inflation environment may also affect vendor margins for Broadcom Cisco and Arista potentially impacting their product roadmaps and pricing strategies.",
       "url": "https://www.tomshardware.com/tech-industry/pc-makers-report-surging-prices-across-different-components-increasing-costs-are-going-beyond-memory-chip-and-processors-now-affecting-pcbs-plastic-materials-and-more",
       "age": "1 day ago"
+    },
+    "8": {
+      "readAt": 1775159507106,
+      "title": "South Korea Turns to Russian Naphtha as Chip Supply Chain Faces Hormuz Disruption",
+      "cat": "silicon",
+      "source": "The Next Web",
+      "impact": "medium",
+      "summary": "The effective closure of the Strait of Hormuz by Iran in late February disrupted global energy flows forcing South Korea to source Russian naphtha. The chip supply chain is feeling downstream effects from energy market disruption.",
+      "detail": "Geopolitical energy disruptions create second-order effects on semiconductor manufacturing through petrochemical feedstock availability. South Korean fabs including Samsung and SK Hynix produce critical memory and advanced packaging components. This supply chain vulnerability affects HBM availability for GPU and TPU systems as well as advanced packaging capacity. Google infrastructure planning should factor in potential extended lead times and consider strategic inventory positions for memory-intensive accelerator deployments.",
+      "url": "https://thenextweb.com/news/south-korea-russian-naphtha-chip-supply-squeeze/",
+      "age": "2 days ago"
     }
   },
   "favorites": {
