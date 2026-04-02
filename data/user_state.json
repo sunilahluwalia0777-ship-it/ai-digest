@@ -21,6 +21,17 @@
       "detail": "This 25% year-over-year growth projection validates continued aggressive capital expenditure in GPU and TPU infrastructure. The market expansion creates both opportunity and competitive pressure as AWS Azure and Oracle scale their AI offerings. Google Cloud must ensure networking and storage infrastructure can scale proportionally to capture share of this expanding market. Capacity planning for interconnect bandwidth and high-performance storage should factor in sustained double-digit demand growth through the forecast period.",
       "url": "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026",
       "age": "3 days ago"
+    },
+    "3": {
+      "readAt": 1775159240995,
+      "title": "Chinese AI Models Surge to 30% of Global Workloads with Qwen at 700M Downloads",
+      "cat": "competition",
+      "source": "War on the Rocks",
+      "impact": "high",
+      "summary": "Chinese AI models grew from 1% of global workloads in late 2024 to 30% by end of 2025. Alibabas Qwen family has reached over 700 million downloads becoming the worlds largest open-source AI system provider.",
+      "detail": "This dramatic shift represents a significant competitive threat from Chinese hyperscalers and raises infrastructure implications. Alibaba and other Chinese cloud providers are clearly scaling inference infrastructure at unprecedented rates which could affect global demand for networking equipment and accelerators. For Google, this creates both competitive pressure in international markets and potential supply chain complications if Chinese demand constrains component availability. Security concerns around Chinese AI systems may also drive enterprise customers toward US hyperscalers creating differentiation opportunities.",
+      "url": "https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/",
+      "age": "1 day ago"
     }
   },
   "favorites": {}
