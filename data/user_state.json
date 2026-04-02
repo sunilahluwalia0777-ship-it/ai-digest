@@ -98,6 +98,17 @@
       "detail": "Intels recovery trajectory is relevant for Googles supply chain diversification strategy. A stronger Intel foundry business could provide alternatives to TSMC for advanced node manufacturing reducing concentration risk. Intel AI processor improvements may also offer procurement leverage against Nvidia though performance gaps remain significant. Google should continue monitoring Intel foundry progress for potential TPU manufacturing diversification and evaluate Gaudi accelerators as supplementary capacity options.",
       "url": "https://www.ibtimes.com.au/intel-stock-surges-965-4839-april-1-turnaround-hopes-fuel-massive-rally-1865169",
       "age": "1 day ago"
+    },
+    "10": {
+      "readAt": 1775160964308,
+      "title": "Amazon EBS Node-Local Volumes Enhance Kubernetes Pod Data Access Performance",
+      "cat": "storage",
+      "source": "AWS Storage",
+      "impact": "low",
+      "summary": "AWS introduces EBS Node-Local volumes to improve data access for co-located Kubernetes pods on the same node. The feature targets ML inference data analytics and HPC workloads requiring shared dataset access.",
+      "detail": "Node-local volume optimization addresses a common pattern where multiple inference pods need access to the same model weights or datasets. This capability competes with GKE local SSD and ephemeral storage options for high-performance Kubernetes workloads. The focus on ML inference and HPC use cases indicates AWS targeting the same AI infrastructure segment that Google emphasizes with TPU and GPU pod configurations.",
+      "url": "https://aws.amazon.com/blogs/storage/enhancing-co-located-kubernetes-pod-data-access-with-amazon-ebs-node-local-volumes/",
+      "age": "1 day ago"
     }
   },
   "favorites": {
