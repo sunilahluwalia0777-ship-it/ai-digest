@@ -177,13 +177,6 @@ def inject_html(articles, brief):
     html = re.sub(r"// BRIEF_START\s*\nconst STATIC_BRIEF = \".*?\";\s*\n// BRIEF_END",
                   f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END',
                   html, flags=re.DOTALL)
-    # Inject GH_PAT so cross-device sync works
-    if GH_PAT:
-        html = re.sub(r"const GITHUB_PAT\s*=\s*'[^']*';",
-                      f"const GITHUB_PAT = '{GH_PAT}';", html)
-        print("Injected GH_PAT into HTML")
-    else:
-        print("WARNING: GH_PAT not set — PAT placeholder left in HTML")
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"Injected {len(articles)} articles")
