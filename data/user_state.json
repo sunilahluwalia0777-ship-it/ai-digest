@@ -32,6 +32,17 @@
       "detail": "This dramatic shift represents a significant competitive threat from Chinese hyperscalers and raises infrastructure implications. Alibaba and other Chinese cloud providers are clearly scaling inference infrastructure at unprecedented rates which could affect global demand for networking equipment and accelerators. For Google, this creates both competitive pressure in international markets and potential supply chain complications if Chinese demand constrains component availability. Security concerns around Chinese AI systems may also drive enterprise customers toward US hyperscalers creating differentiation opportunities.",
       "url": "https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/",
       "age": "1 day ago"
+    },
+    "4": {
+      "readAt": 1775159287324,
+      "title": "OpenAI Secures $122B Funding at $852B Valuation Amid Geopolitical Uncertainty",
+      "cat": "competition",
+      "source": "Theregister.com",
+      "impact": "high",
+      "summary": "OpenAI has raised an additional $122 billion reaching an $852 billion valuation the highest for any pre-IPO tech company. This massive capital injection comes despite ongoing geopolitical tensions and market volatility.",
+      "detail": "This unprecedented funding round signals that AI infrastructure demand will remain robust regardless of macroeconomic conditions. OpenAI operates primarily on Microsoft Azure infrastructure meaning this capital will flow into Azure GPU capacity expansion. Google faces intensified competition for both AI model leadership and cloud infrastructure market share as Microsoft-OpenAI partnership deepens. The valuation also sets expectations for AI infrastructure returns that could influence investor pressure on all hyperscalers to accelerate capex even further.",
+      "url": "https://www.theregister.com/2026/04/01/openai_122_billion/",
+      "age": "1 day ago"
     }
   },
   "favorites": {}
