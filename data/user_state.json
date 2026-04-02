@@ -65,6 +65,17 @@
       "detail": "This technical content reveals Nvidias increasing focus on software and services to maximize infrastructure efficiency in large-scale deployments. The emphasis on token production economics validates the critical importance of networking fabric performance in AI training and inference clusters. For Google infrastructure teams this highlights competitive pressure to demonstrate superior utilization metrics. Storage and networking latency directly impact the token throughput economics Nvidia is now marketing making these systems increasingly strategic.",
       "url": "https://developer.nvidia.com/blog/accelerate-token-production-in-ai-factories-using-unified-services-and-real-time-ai/",
       "age": "3 days ago"
+    },
+    "7": {
+      "readAt": 1775159490723,
+      "title": "PC Component Prices Surge Beyond Memory Affecting PCBs Plastics and Packaging",
+      "cat": "storage",
+      "source": "Tom's Hardware UK",
+      "impact": "medium",
+      "summary": "PC manufacturers report cost increases spreading from memory chips and processors to PCBs plastic materials and packaging. The price pressure is affecting the entire electronics supply chain.",
+      "detail": "Broad-based component inflation affects data center hardware costs beyond just accelerators and memory. PCB and packaging cost increases will flow through to networking equipment storage systems and server platforms. Google procurement should anticipate higher infrastructure costs across the board and evaluate longer-term supply agreements to lock in pricing. This inflation environment may also affect vendor margins for Broadcom Cisco and Arista potentially impacting their product roadmaps and pricing strategies.",
+      "url": "https://www.tomshardware.com/tech-industry/pc-makers-report-surging-prices-across-different-components-increasing-costs-are-going-beyond-memory-chip-and-processors-now-affecting-pcbs-plastic-materials-and-more",
+      "age": "1 day ago"
     }
   },
   "favorites": {
