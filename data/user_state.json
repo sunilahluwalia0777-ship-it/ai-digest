@@ -10,6 +10,17 @@
       "detail": "This investment fundamentally reshapes the competitive landscape for custom silicon and interconnect solutions. For Google, this Nvidia-Marvell alliance strengthens a key competitor in the custom ASIC space where Marvell has been a potential partner for hyperscaler-specific designs. The NVLink Fusion integration suggests Nvidia is building a broader ecosystem to lock in networking protocols around its proprietary interconnect standard. Google should evaluate whether this partnership affects Marvell pricing and availability for TPU-related custom silicon work and accelerate assessment of alternative vendors or in-house capabilities.",
       "url": "https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-to-deepen-nvlink-fusion-partnership",
       "age": "2 days ago"
+    },
+    "2": {
+      "readAt": 1775159232436,
+      "title": "Cloud Spending Could Hit $500B in 2026 as Hyperscalers Increase AI Investment",
+      "cat": "hyperscaler",
+      "source": "TechRadar",
+      "impact": "high",
+      "summary": "The global cloud market reached approximately $400 billion in 2025 and analysts project it could hit the $500 billion milestone in 2026. Hyperscaler AI infrastructure investments are the primary driver of this acceleration.",
+      "detail": "This 25% year-over-year growth projection validates continued aggressive capital expenditure in GPU and TPU infrastructure. The market expansion creates both opportunity and competitive pressure as AWS Azure and Oracle scale their AI offerings. Google Cloud must ensure networking and storage infrastructure can scale proportionally to capture share of this expanding market. Capacity planning for interconnect bandwidth and high-performance storage should factor in sustained double-digit demand growth through the forecast period.",
+      "url": "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026",
+      "age": "3 days ago"
     }
   },
   "favorites": {}
