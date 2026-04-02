@@ -13,6 +13,7 @@ import os, re, json, time, datetime, sys, base64, requests
 
 NEWSAPI_KEY   = os.environ.get("NEWSAPI_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_KEY", "")
+GH_PAT        = os.environ.get("GH_PAT", "")
 HTML_FILE     = "index.html"
 SEEN_FILE     = "data/seen_urls.json"
 ARCHIVE_DIR   = "data"
@@ -33,7 +34,8 @@ QUERIES = [
 def check_env():
     if not NEWSAPI_KEY: print("ERROR: NEWSAPI_KEY missing"); sys.exit(1)
     if not ANTHROPIC_KEY: print("ERROR: ANTHROPIC_KEY missing"); sys.exit(1)
-    print(f"Keys OK: NEWS={NEWSAPI_KEY[:6]}... ANTHROPIC={ANTHROPIC_KEY[:6]}...")
+    if not GH_PAT: print("WARNING: GH_PAT not set — cross-device sync will be disabled")
+    print(f"Keys OK: NEWS={NEWSAPI_KEY[:6]}... ANTHROPIC={ANTHROPIC_KEY[:6]}... GH_PAT={'set' if GH_PAT else 'NOT SET'}")
 
 def load_seen_urls():
     if not os.path.exists(SEEN_FILE): return set()
@@ -167,12 +169,21 @@ def inject_html(articles, brief):
         html = f.read()
     if "// ARTICLES_START" not in html:
         print("ERROR: ARTICLES_START sentinel missing"); sys.exit(1)
+    # Inject articles
     html = re.sub(r"// ARTICLES_START\s*\nconst ARTICLES = \[.*?\];\s*\n// ARTICLES_END",
                   build_articles_js(articles), html, flags=re.DOTALL)
+    # Inject brief
     escaped = escape_js(brief)
     html = re.sub(r"// BRIEF_START\s*\nconst STATIC_BRIEF = \".*?\";\s*\n// BRIEF_END",
                   f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END',
                   html, flags=re.DOTALL)
+    # Inject GH_PAT so cross-device sync works
+    if GH_PAT:
+        html = re.sub(r"const GITHUB_PAT\s*=\s*'[^']*';",
+                      f"const GITHUB_PAT = '{GH_PAT}';", html)
+        print("Injected GH_PAT into HTML")
+    else:
+        print("WARNING: GH_PAT not set — PAT placeholder left in HTML")
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"Injected {len(articles)} articles")
