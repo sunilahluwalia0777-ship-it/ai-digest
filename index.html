@@ -212,7 +212,41 @@
   .sync-dot.syncing { background: #f59e0b; animation: pulse 1s infinite; }
   .sync-dot.error { background: #ef4444; }
 
-  @media (min-width: 480px) {
+  /* PAT SETUP MODAL */
+  .pat-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6); z-index: 300;
+    align-items: center; justify-content: center; padding: 1.5rem;
+  }
+  .pat-overlay.open { display: flex; }
+  .pat-modal {
+    background: var(--surface); border-radius: 16px;
+    padding: 1.5rem; width: 100%; max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+  .pat-modal h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+  .pat-modal p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+  .pat-input {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border2);
+    color: var(--text); font-family: var(--mono); font-size: 13px;
+    padding: 10px 12px; border-radius: 8px; outline: none;
+    min-height: 44px; -webkit-appearance: none; margin-bottom: 10px;
+  }
+  .pat-input:focus { border-color: var(--accent); }
+  .pat-save-btn {
+    width: 100%; background: var(--accent); color: #fff; border: none;
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    padding: 12px; border-radius: 8px; cursor: pointer; min-height: 46px;
+    margin-bottom: 8px;
+  }
+  .pat-skip-btn {
+    width: 100%; background: transparent; color: var(--muted); border: none;
+    font-family: var(--mono); font-size: 11px; padding: 8px; cursor: pointer;
+  }
+  .pat-steps { font-size: 12px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; background: var(--surface2); padding: 10px 12px; border-radius: 8px; }
+  .pat-steps a { color: var(--accent); }
+
+
     .container { padding: 1rem; }
     .masthead { padding: 0 1rem; }
     .edition-badge { display: block; font-family: var(--mono); font-size: 9px; color: var(--muted); border: 1px solid var(--border2); padding: 2px 7px; border-radius: 2px; letter-spacing: 0.05em; white-space: nowrap; }
@@ -302,6 +336,23 @@
   </div>
 </div>
 
+<!-- PAT SETUP MODAL -->
+<div class="pat-overlay" id="pat-overlay">
+  <div class="pat-modal">
+    <h3>Enable Cross-Device Sync</h3>
+    <p>Paste a GitHub Personal Access Token to sync your read history and favorites across iPhone and your work computer. You only need to do this once per device.</p>
+    <div class="pat-steps">
+      1. Go to <a href="https://github.com/settings/tokens" target="_blank">github.com/settings/tokens</a><br>
+      2. Generate new token (classic)<br>
+      3. Check <strong>repo</strong> scope only<br>
+      4. Copy and paste below
+    </div>
+    <input class="pat-input" id="pat-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+    <button class="pat-save-btn" onclick="savePAT()">SAVE & ENABLE SYNC</button>
+    <button class="pat-skip-btn" onclick="skipPAT()">Skip for now — use this device only</button>
+  </div>
+</div>
+
 <!-- BRIEF MODAL -->
 <div class="brief-overlay" id="brief-overlay" onclick="closeBrief(event)">
   <div class="brief-modal" id="brief-modal">
@@ -316,13 +367,47 @@
 
 <script>
 // ============================================================
-// CONFIG — replace YOUR_PAT_HERE with your GitHub Personal Access Token
+// CONFIG
 // ============================================================
-const GITHUB_PAT    = 'YOUR_PAT_HERE';
 const GITHUB_OWNER  = 'sunilahluwalia0777-ship-it';
 const GITHUB_REPO   = 'ai-digest';
 const STATE_FILE    = 'data/user_state.json';
 const WEEKLY_FILE   = 'data/weekly_report.json';
+const PAT_KEY       = 'aiinfra_gh_pat';
+
+function getStoredPAT() {
+  return localStorage.getItem(PAT_KEY) || '';
+}
+
+function savePAT() {
+  const val = document.getElementById('pat-input').value.trim();
+  if (!val || !val.startsWith('ghp_')) {
+    alert('Please enter a valid GitHub token starting with ghp_');
+    return;
+  }
+  localStorage.setItem(PAT_KEY, val);
+  document.getElementById('pat-overlay').classList.remove('open');
+  setSyncStatus('syncing', 'Connecting...');
+  loadState();
+}
+
+function skipPAT() {
+  localStorage.setItem(PAT_KEY, 'skipped');
+  document.getElementById('pat-overlay').classList.remove('open');
+  setSyncStatus('error', 'Sync disabled — device only');
+}
+
+function showPATSetup() {
+  document.getElementById('pat-overlay').classList.add('open');
+}
+
+function checkPATOnLoad() {
+  const pat = getStoredPAT();
+  if (!pat) {
+    // First visit — show setup after a short delay
+    setTimeout(() => document.getElementById('pat-overlay').classList.add('open'), 800);
+  }
+}
 
 // ============================================================
 // INIT
@@ -350,16 +435,23 @@ function setSyncStatus(status, msg) {
 }
 
 async function loadState() {
-  if (!GITHUB_PAT || GITHUB_PAT === 'YOUR_PAT_HERE') {
-    setSyncStatus('error', 'PAT not set — state is local only');
+  const pat = getStoredPAT();
+  if (!pat || pat === 'skipped') {
+    setSyncStatus('error', pat === 'skipped' ? 'Sync disabled' : 'PAT not set');
     loadLocalFallback();
     return;
   }
   setSyncStatus('syncing', 'Syncing...');
   try {
     const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${STATE_FILE}`, {
-      headers: { 'Authorization': `token ${GITHUB_PAT}`, 'Accept': 'application/vnd.github.v3+json' }
+      headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github.v3+json' }
     });
+    if (res.status === 401) {
+      setSyncStatus('error', 'PAT invalid — tap to fix');
+      document.getElementById('sync-pill').onclick = showPATSetup;
+      loadLocalFallback();
+      return;
+    }
     if (res.status === 404) {
       STATE = { read: {}, favorites: {} };
       STATE_SHA = null;
@@ -378,10 +470,9 @@ async function loadState() {
 }
 
 async function saveState() {
-  if (!GITHUB_PAT || GITHUB_PAT === 'YOUR_PAT_HERE') {
-    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
-    return;
-  }
+  const pat = getStoredPAT();
+  localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
+  if (!pat || pat === 'skipped') return;
   setSyncStatus('syncing', 'Saving...');
   try {
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(STATE, null, 2))));
@@ -389,16 +480,14 @@ async function saveState() {
     if (STATE_SHA) body.sha = STATE_SHA;
     const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${STATE_FILE}`, {
       method: 'PUT',
-      headers: { 'Authorization': `token ${GITHUB_PAT}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      headers: { 'Authorization': `token ${pat}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify(body)
     });
     const data = await res.json();
     if (data.content) STATE_SHA = data.content.sha;
     setSyncStatus('ok', 'Saved ' + new Date().toLocaleTimeString());
-    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
   } catch(e) {
-    setSyncStatus('error', 'Save failed');
-    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
+    setSyncStatus('error', 'Save failed — stored locally');
   }
 }
 
@@ -724,6 +813,7 @@ async function loadDigest() {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true; btn.textContent = 'LOADING...';
   renderCapexBars();
+  checkPATOnLoad();
   await loadState();
   updateBadges();
   renderArticles();
