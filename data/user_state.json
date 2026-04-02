@@ -87,6 +87,17 @@
       "detail": "Geopolitical energy disruptions create second-order effects on semiconductor manufacturing through petrochemical feedstock availability. South Korean fabs including Samsung and SK Hynix produce critical memory and advanced packaging components. This supply chain vulnerability affects HBM availability for GPU and TPU systems as well as advanced packaging capacity. Google infrastructure planning should factor in potential extended lead times and consider strategic inventory positions for memory-intensive accelerator deployments.",
       "url": "https://thenextweb.com/news/south-korea-russian-naphtha-chip-supply-squeeze/",
       "age": "2 days ago"
+    },
+    "9": {
+      "readAt": 1775159532172,
+      "title": "Intel Stock Surges 9.6% to $48 as Turnaround and Foundry Ambitions Gain Traction",
+      "cat": "silicon",
+      "source": "Ibtimes.com.au",
+      "impact": "low",
+      "summary": "Intel shares jumped over 9% extending a rally that has doubled the stock over the past year. Investors are betting on foundry ambitions and AI processor developments driving the recovery.",
+      "detail": "Intels recovery trajectory is relevant for Googles supply chain diversification strategy. A stronger Intel foundry business could provide alternatives to TSMC for advanced node manufacturing reducing concentration risk. Intel AI processor improvements may also offer procurement leverage against Nvidia though performance gaps remain significant. Google should continue monitoring Intel foundry progress for potential TPU manufacturing diversification and evaluate Gaudi accelerators as supplementary capacity options.",
+      "url": "https://www.ibtimes.com.au/intel-stock-surges-965-4839-april-1-turnaround-hopes-fuel-massive-rally-1865169",
+      "age": "1 day ago"
     }
   },
   "favorites": {
