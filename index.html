@@ -481,66 +481,74 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "vendor", impact: "high",
-    title: "NVIDIA Invests $2B in Marvell to Expand NVLink Fusion Partnership",
-    summary: "NVIDIA announced a $2 billion investment in Marvell Technology, deepening their collaboration on NVLink Fusion connectivity. The deal connects Marvell to NVIDIA AI factory and AI-RAN ecosystems.",
-    source: "Tom's Hardware UK", age: "1 day ago",
-    detail: "This investment signals NVIDIA is serious about ecosystem lock-in through NVLink Fusion, which could complicate Google custom silicon strategies that rely on open interconnects. Marvell supplies networking silicon to multiple hyperscalers including Google, so this partnership may influence future chiplet and interconnect roadmaps. The AI-RAN component suggests edge and telecom infrastructure integration is accelerating. Google networking teams should assess whether this changes Marvell component availability or pricing, and evaluate alternative suppliers like Broadcom for critical path items.",
+    title: "NVIDIA Invests $2B in Marvell to Expand NVLink Fusion Interconnect Partnership",
+    summary: "NVIDIA announced a $2 billion investment in Marvell Technology alongside a partnership connecting Marvell to NVLink Fusion and AI-RAN ecosystems. The deal spans multiple segments of the chip market including custom silicon and networking.",
+    source: "Tom's Hardware UK", age: "2 days ago",
+    detail: "This investment signals NVIDIAs strategic move to strengthen its interconnect ecosystem through partnerships with custom silicon vendors. For Google, this deepens the Marvell-NVIDIA alliance which could affect Marvell capacity and pricing for TPU-related custom silicon work. The NVLink Fusion integration suggests NVIDIA is building a broader ecosystem that competes more directly with proprietary interconnects. Google should evaluate whether this affects Marvell roadmap commitments and consider the implications for future custom networking ASIC partnerships.",
     url: "https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-to-deepen-nvlink-fusion-partnership"
   },
   {
     id: 2, cat: "networking", impact: "high",
-    title: "Cisco Advocates Unified AI Fabrics for Neoclouds Running Mixed Workloads",
-    summary: "Cisco argues that neoclouds should deploy unified network fabrics capable of running training and inference concurrently. The approach aims to boost gross margins by eliminating separate network infrastructures.",
-    source: "Cisco.com", age: "1 day ago",
-    detail: "This positioning piece from a key Google vendor reveals Cisco strategic direction on converged AI networking. The unified fabric argument directly addresses the architectural tension between training clusters requiring high-bandwidth RDMA and inference workloads needing low-latency switching. For Google, this validates internal debates about network segmentation versus convergence. The neocloud focus suggests Cisco sees opportunity in the mid-market, but the technical patterns apply equally to hyperscale deployments. Worth engaging Cisco on specific latency and congestion tradeoffs in mixed workload scenarios.",
-    url: "https://blogs.cisco.com/?p=488739"
+    title: "NVIDIA-Marvell Deal Focuses on Interconnect Technology for AI Infrastructure",
+    summary: "The $2B NVIDIA investment in Marvell centers on interconnect technology partnerships spanning AI factory and wireless infrastructure. Marvell will integrate with NVIDIAs networking stack across multiple product lines.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "This SiliconANGLE report provides additional technical context on the interconnect focus of the partnership. Marvell is a key Google vendor for networking silicon and this deal could redirect engineering resources toward NVIDIA-specific integrations. The AI-RAN component suggests expansion into telco edge infrastructure where Google Cloud competes. Google networking teams should assess potential conflicts of interest in Marvell roadmaps and evaluate alternative vendors for critical path networking components.",
+    url: "https://siliconangle.com/2026/03/31/nvidia-invests-2b-marvell-part-new-interconnect-partnership/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high",
-    title: "Global Cloud Market Expected to Reach $500B in 2026 as AI Investment Surges",
-    summary: "The global cloud market reached approximately $400 billion in 2025 and analysts project it will hit $500 billion in 2026. Hyperscaler AI infrastructure investment is driving the acceleration.",
-    source: "TechRadar", age: "2 days ago",
-    detail: "A 25% year-over-year growth rate indicates AI workloads are fundamentally reshaping cloud economics. This validates continued capital expenditure on GPU and TPU infrastructure but also increases competitive pressure from AWS and Azure. Google Cloud must demonstrate differentiated AI infrastructure capabilities to capture share of this expanding market. The rapid growth also implies potential supply chain constraints on networking equipment, storage, and power infrastructure that procurement teams should model into capacity planning.",
+    title: "Global Cloud Market Approaching $500B Milestone as Hyperscalers Increase AI CapEx",
+    summary: "Cloud infrastructure spending reached approximately $400 billion in 2025 and is projected to hit $500 billion in 2026. Hyperscaler AI investments are driving the acceleration in spending.",
+    source: "TechRadar", age: "3 days ago",
+    detail: "This growth trajectory validates continued aggressive infrastructure investment but also intensifies competition for capacity and talent. AWS, Azure, and Oracle are all expanding AI infrastructure rapidly alongside Google. The spending surge suggests supply chain constraints will persist for GPUs, networking equipment, and datacenter capacity. Google should monitor competitor CapEx guidance closely and ensure infrastructure roadmaps account for component lead time pressures across the hyperscaler ecosystem.",
     url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
   },
   {
     id: 4, cat: "competition", impact: "medium",
-    title: "Wall Street Pours Billions Into AI Data Center Financing, Apollo and KKR Lead",
-    summary: "Major financial institutions including Apollo, JPMorgan, and KKR are aggressively funding AI data center construction. The debt financing boom is accelerating new capacity buildouts across the industry.",
-    source: "Business Insider", age: "1 day ago",
-    detail: "Cheap capital flowing to competitors and emerging players changes the competitive landscape for Google infrastructure. Well-funded startups and regional providers can now build GPU clusters that would have been capital-prohibitive two years ago. This democratization of AI infrastructure means Google differentiation must come from software stack, interconnect performance, and operational efficiency rather than raw compute availability. The financing trend also suggests real estate and power constraints may become binding factors before capital does.",
-    url: "https://www.businessinsider.com/power-players-data-center-debt-boom-goldman-apollo-smbc-kkr-2026-3"
+    title: "Chinese AI Models Surge to 30 Percent of Global Workloads in One Year",
+    summary: "Chinese AI models grew from 1 percent to 30 percent of global AI workloads between late 2024 and end of 2025. Alibaba Qwen family has surpassed 700 million downloads globally.",
+    source: "War on the Rocks", age: "1 day ago",
+    detail: "This rapid adoption of Chinese AI infrastructure presents both competitive and security considerations for Google. Alibaba Cloud is emerging as a formidable competitor in regions where geopolitical concerns are less acute. The security implications noted in the article may create opportunities for Google to differentiate on trust and compliance. However, the efficiency gains demonstrated by Chinese models could pressure Google to accelerate TPU optimization efforts to maintain cost competitiveness.",
+    url: "https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/"
   },
   {
-    id: 5, cat: "networking", impact: "medium",
-    title: "Self-Driving Networks Emerge as Complexity Overwhelms Manual Operations",
-    summary: "Network automation is evolving toward autonomous systems as infrastructure scale exceeds human operational capacity. AI-driven network management promises to handle alerts, optimization, and remediation without manual intervention.",
-    source: "Theregister.com", age: "2 days ago",
-    detail: "This trend has direct implications for Google network operations tooling and staffing models. As AI cluster sizes grow to hundreds of thousands of accelerators, traditional NOC approaches become untenable. Google should evaluate whether internal automation efforts are keeping pace with vendor offerings from Arista, Cisco, and others. The self-driving network paradigm also creates new failure modes around AI decision-making that SRE teams need to understand and design safeguards for.",
-    url: "https://www.theregister.com/2026/03/30/explainer_selfdriving_networks/"
-  },
-  {
-    id: 6, cat: "silicon", impact: "medium",
-    title: "Data Center Chip Market Report Projects Growth Through 2034 Across All Segments",
-    summary: "A new market analysis forecasts sustained growth in data center chips across GPU, CPU, and custom silicon segments through 2034. Regional variations and vertical-specific demand patterns are emerging.",
-    source: "GlobeNewswire", age: "2 days ago",
-    detail: "Long-term chip market projections support continued TPU investment but also highlight the competitive intensity Google faces from NVIDIA and custom silicon efforts at AWS and Meta. The vertical-specific demand analysis may reveal opportunities for specialized TPU configurations targeting specific workload types. Regional growth patterns could inform data center location strategy, particularly as sovereignty requirements drive localized AI infrastructure deployment.",
-    url: "https://www.globenewswire.com/news-release/2026/03/30/3264345/28124/en/Data-Center-Chips-Market-Analysis-Trends-and-Growth-Outlook-by-Region-2026-2034.html"
-  },
-  {
-    id: 7, cat: "storage", impact: "medium",
-    title: "ScaleOps Raises $130M for Autonomous Cloud and AI Infrastructure Management",
-    summary: "ScaleOps closed a $130M Series C led by Insight Partners after growing revenue more than 350% year-over-year. Enterprise customers including Adobe, Wiz, and Salesforce use the platform for infrastructure optimization.",
-    source: "The Next Web", age: "2 days ago",
-    detail: "This funding validates market demand for AI infrastructure management tooling that Google competes with through internal platforms. The customer list suggests enterprises are adopting third-party solutions rather than building in-house, which could influence Google Cloud product strategy. The autonomous management angle aligns with broader self-driving infrastructure trends. Google should assess whether ScaleOps capabilities could complement or compete with internal tooling for TPU and GPU cluster management.",
+    id: 5, cat: "storage", impact: "medium",
+    title: "ScaleOps Raises $130M to Automate Cloud and AI Infrastructure Management",
+    summary: "ScaleOps secured Series C funding to expand autonomous cloud infrastructure management with customers including Adobe, Wiz, and Salesforce. The company has grown over 350 percent year-over-year.",
+    source: "The Next Web", age: "3 days ago",
+    detail: "ScaleOps addresses a key pain point in managing GPU and AI workloads efficiently across cloud environments. Their growth signals strong enterprise demand for infrastructure optimization tooling that could complement or compete with Google Cloud native capabilities. The Run:ai engineering heritage suggests expertise in GPU orchestration relevant to TPU workload management. Google should evaluate partnership or acquisition opportunities given alignment with infrastructure efficiency goals.",
     url: "https://thenextweb.com/news/scaleops-130m-series-c/"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "low",
-    title: "NVIDIA Details Token Production Optimization in AI Factory Environments",
-    summary: "NVIDIA published guidance on maximizing GPU utilization in large-scale AI deployments through unified services and real-time monitoring. The company frames even 1% GPU time loss as having million-dollar implications.",
-    source: "Nvidia.com", age: "2 days ago",
-    detail: "While this is vendor marketing content, the framing around token production economics is instructive for TPU infrastructure planning. NVIDIA positioning AI clusters as factories with production metrics suggests customers are increasingly focused on utilization efficiency. Google should ensure TPU offerings have comparable observability and optimization tooling to remain competitive on operational economics, not just raw performance benchmarks.",
+    id: 6, cat: "hyperscaler", impact: "medium",
+    title: "Middle East Datacenter Capacity Expected to Triple by 2030 Amid AI Demand",
+    summary: "Government investments and AI demand are driving rapid datacenter expansion across the Middle East region. The area is positioning itself as a global digital hub with strategic infrastructure investments.",
+    source: "ComputerWeekly.com", age: "1 day ago",
+    detail: "Regional datacenter expansion represents both opportunity and competitive pressure for Google Cloud. AWS, Azure, and Oracle are all investing heavily in Middle East presence. The AI-driven demand creates potential for TPU deployment in new regions but requires careful evaluation of networking infrastructure quality and latency requirements. Google should assess whether existing Middle East strategy adequately addresses the tripling capacity trajectory and sovereign cloud requirements emerging in the region.",
+    url: "https://www.computerweekly.com/feature/Middle-East-datacentre-capacity-set-to-triple-by-2030"
+  },
+  {
+    id: 7, cat: "silicon", impact: "medium",
+    title: "AI Chip Market Forecast to Exceed $1.35 Trillion by 2035",
+    summary: "Market analysis projects AI chip market growing to over $1.35 trillion by 2035 across various chip types and functions. Growth spans multiple technology segments and end-user categories.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "This long-term forecast reinforces the strategic importance of Googles TPU investments and custom silicon strategy. The market size projection suggests sustained demand that justifies continued R&D investment in proprietary accelerators. However, the breadth of technology segments indicates increased competition from specialized chip designers beyond NVIDIA. Google should ensure TPU roadmaps address emerging workload patterns identified in market segmentation analysis.",
+    url: "https://www.globenewswire.com/news-release/2026/04/01/3266343/0/en/AI-Chip-Market-Size-to-Exceed-USD-1354-35-Billion-by-2035-SNS-Insider.html"
+  },
+  {
+    id: 8, cat: "networking", impact: "low",
+    title: "UK Awards 80M Pounds for Open Networks 5G Supply Chain Diversification",
+    summary: "The UK government funded projects supporting 5G supply chain diversification through an Open Networks Ecosystem competition. Awards totaled approximately 80.5 million pounds.",
+    source: "Www.gov.uk", age: "1 day ago",
+    detail: "Open RAN and network disaggregation initiatives create potential opportunities for Google Cloud edge infrastructure. Government-backed supply chain diversification could benefit vendors like Marvell that participate in open ecosystem standards. For Google networking strategy, this signals continued momentum toward vendor-neutral network architectures that could align with cloud-native network function deployments. However, near-term impact on GPU and TPU infrastructure is limited.",
+    url: "https://www.gov.uk/government/case-studies/open-networks-ecosystem-competition"
+  },
+  {
+    id: 9, cat: "silicon", impact: "low",
+    title: "NVIDIA Details AI Factory Token Production Optimization with Unified Services",
+    summary: "NVIDIA published technical guidance on maximizing GPU utilization in AI factory deployments. The blog emphasizes that even 1 percent GPU utilization drops have significant economic impact.",
+    source: "Nvidia.com", age: "3 days ago",
+    detail: "This NVIDIA content provides benchmarking context for TPU infrastructure efficiency comparisons. The framing of AI infrastructure as token production factories with economic optimization metrics aligns with how Google should position TPU value propositions. Understanding NVIDIA recommended architectures helps identify differentiation opportunities for Google Cloud AI infrastructure. The real-time AI monitoring approaches described may inform Google observability tooling for TPU clusters.",
     url: "https://developer.nvidia.com/blog/accelerate-token-production-in-ai-factories-using-unified-services-and-real-time-ai/"
   },
 ];
