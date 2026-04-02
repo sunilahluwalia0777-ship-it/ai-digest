@@ -1,0 +1,16 @@
+{
+  "read": {
+    "1": {
+      "readAt": 1775159137604,
+      "title": "Nvidia Invests $2B in Marvell to Deepen NVLink Fusion Partnership",
+      "cat": "vendor",
+      "source": "Tom's Hardware UK",
+      "impact": "high",
+      "summary": "Nvidia has made a $2 billion strategic investment in Marvell Technology and established a partnership connecting Marvell to Nvidias AI factory and AI-RAN ecosystem through NVLink Fusion. This represents a significant consolidation move between two major silicon vendors.",
+      "detail": "This investment fundamentally reshapes the competitive landscape for custom silicon and interconnect solutions. For Google, this Nvidia-Marvell alliance strengthens a key competitor in the custom ASIC space where Marvell has been a potential partner for hyperscaler-specific designs. The NVLink Fusion integration suggests Nvidia is building a broader ecosystem to lock in networking protocols around its proprietary interconnect standard. Google should evaluate whether this partnership affects Marvell pricing and availability for TPU-related custom silicon work and accelerate assessment of alternative vendors or in-house capabilities.",
+      "url": "https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-to-deepen-nvlink-fusion-partnership",
+      "age": "2 days ago"
+    }
+  },
+  "favorites": {}
+}
