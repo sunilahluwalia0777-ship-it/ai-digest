@@ -43,6 +43,17 @@
       "detail": "This unprecedented funding round signals that AI infrastructure demand will remain robust regardless of macroeconomic conditions. OpenAI operates primarily on Microsoft Azure infrastructure meaning this capital will flow into Azure GPU capacity expansion. Google faces intensified competition for both AI model leadership and cloud infrastructure market share as Microsoft-OpenAI partnership deepens. The valuation also sets expectations for AI infrastructure returns that could influence investor pressure on all hyperscalers to accelerate capex even further.",
       "url": "https://www.theregister.com/2026/04/01/openai_122_billion/",
       "age": "1 day ago"
+    },
+    "5": {
+      "readAt": 1775159299268,
+      "title": "Nvidia Stock Rises 3% on AI Demand Strength and Blackwell Momentum",
+      "cat": "silicon",
+      "source": "Ibtimes.com.au",
+      "impact": "medium",
+      "summary": "Nvidia shares climbed over 3% as investors saw potential de-escalation in US-Iran tensions and continued strong demand for AI accelerators. Blackwell architecture momentum remains a key driver of investor confidence.",
+      "detail": "Sustained Nvidia strength indicates the GPU supply situation remains tight with strong Blackwell demand from hyperscalers and enterprises. For Google infrastructure planning this suggests continued premium pricing for Nvidia hardware and potential allocation challenges. The geopolitical sensitivity of the stock also highlights supply chain risks that affect all accelerator procurement. Google should monitor Blackwell availability closely and ensure TPU roadmap provides credible alternatives for internal workloads.",
+      "url": "https://www.ibtimes.com.au/nvidia-stock-surges-3-ai-demand-eases-geopolitical-fears-amid-strong-blackwell-momentum-1865109",
+      "age": "2 days ago"
     }
   },
   "favorites": {}
