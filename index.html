@@ -630,29 +630,77 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "networking", impact: "high",
-    title: "Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch",
-    summary: "Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.",
-    source: "FinancialContent / Broadcom", age: "4 days ago",
-    detail: "The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcoms networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIAs competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window.",
-    url: "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch"
+    id: 1, cat: "vendor", impact: "high",
+    title: "Nvidia Invests $2B in Marvell to Deepen NVLink Fusion Partnership",
+    summary: "Nvidia has made a $2 billion strategic investment in Marvell Technology and established a partnership connecting Marvell to Nvidias AI factory and AI-RAN ecosystem through NVLink Fusion. This represents a significant consolidation move between two major silicon vendors.",
+    source: "Tom's Hardware UK", age: "2 days ago",
+    detail: "This investment fundamentally reshapes the competitive landscape for custom silicon and interconnect solutions. For Google, this Nvidia-Marvell alliance strengthens a key competitor in the custom ASIC space where Marvell has been a potential partner for hyperscaler-specific designs. The NVLink Fusion integration suggests Nvidia is building a broader ecosystem to lock in networking protocols around its proprietary interconnect standard. Google should evaluate whether this partnership affects Marvell pricing and availability for TPU-related custom silicon work and accelerate assessment of alternative vendors or in-house capabilities.",
+    url: "https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-to-deepen-nvlink-fusion-partnership"
   },
   {
-    id: 2, cat: "silicon", impact: "high",
-    title: "Google TPU v7 on track for 36,000 racks — 10,000+ optical circuit switches required",
-    summary: "Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs. Per-chip power runs 850-1,000W putting rack TDP at 80-100kW.",
-    source: "Investing.com / Fubon Research", age: "3 months ago",
-    detail: "Fubon supply chain analysis places total TPU v7 racks at ~36,000 units in 2026 with ~3.1-3.2M total TPU units constrained by advanced packaging capacity. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.",
-    url: "https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670"
+    id: 2, cat: "hyperscaler", impact: "high",
+    title: "Cloud Spending Could Hit $500B in 2026 as Hyperscalers Increase AI Investment",
+    summary: "The global cloud market reached approximately $400 billion in 2025 and analysts project it could hit the $500 billion milestone in 2026. Hyperscaler AI infrastructure investments are the primary driver of this acceleration.",
+    source: "TechRadar", age: "3 days ago",
+    detail: "This 25% year-over-year growth projection validates continued aggressive capital expenditure in GPU and TPU infrastructure. The market expansion creates both opportunity and competitive pressure as AWS Azure and Oracle scale their AI offerings. Google Cloud must ensure networking and storage infrastructure can scale proportionally to capture share of this expanding market. Capacity planning for interconnect bandwidth and high-performance storage should factor in sustained double-digit demand growth through the forecast period.",
+    url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
   },
   {
-    id: 3, cat: "hyperscaler", impact: "high",
-    title: "Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175-185B",
-    summary: "Amazon projects $200B in 2026 up from $131B. Google $175-185B up from $91B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.",
-    source: "TechCrunch / Futurum Research", age: "1 month ago",
-    detail: "Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Meta Louisiana Hyperion campus is a 2,250-acre $27B joint venture delivering 2GW scaling to 5GW. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.",
-    url: "https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/"
-  }
+    id: 3, cat: "competition", impact: "high",
+    title: "Chinese AI Models Surge to 30% of Global Workloads with Qwen at 700M Downloads",
+    summary: "Chinese AI models grew from 1% of global workloads in late 2024 to 30% by end of 2025. Alibabas Qwen family has reached over 700 million downloads becoming the worlds largest open-source AI system provider.",
+    source: "War on the Rocks", age: "1 day ago",
+    detail: "This dramatic shift represents a significant competitive threat from Chinese hyperscalers and raises infrastructure implications. Alibaba and other Chinese cloud providers are clearly scaling inference infrastructure at unprecedented rates which could affect global demand for networking equipment and accelerators. For Google, this creates both competitive pressure in international markets and potential supply chain complications if Chinese demand constrains component availability. Security concerns around Chinese AI systems may also drive enterprise customers toward US hyperscalers creating differentiation opportunities.",
+    url: "https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/"
+  },
+  {
+    id: 4, cat: "competition", impact: "high",
+    title: "OpenAI Secures $122B Funding at $852B Valuation Amid Geopolitical Uncertainty",
+    summary: "OpenAI has raised an additional $122 billion reaching an $852 billion valuation the highest for any pre-IPO tech company. This massive capital injection comes despite ongoing geopolitical tensions and market volatility.",
+    source: "Theregister.com", age: "1 day ago",
+    detail: "This unprecedented funding round signals that AI infrastructure demand will remain robust regardless of macroeconomic conditions. OpenAI operates primarily on Microsoft Azure infrastructure meaning this capital will flow into Azure GPU capacity expansion. Google faces intensified competition for both AI model leadership and cloud infrastructure market share as Microsoft-OpenAI partnership deepens. The valuation also sets expectations for AI infrastructure returns that could influence investor pressure on all hyperscalers to accelerate capex even further.",
+    url: "https://www.theregister.com/2026/04/01/openai_122_billion/"
+  },
+  {
+    id: 5, cat: "silicon", impact: "medium",
+    title: "Nvidia Stock Rises 3% on AI Demand Strength and Blackwell Momentum",
+    summary: "Nvidia shares climbed over 3% as investors saw potential de-escalation in US-Iran tensions and continued strong demand for AI accelerators. Blackwell architecture momentum remains a key driver of investor confidence.",
+    source: "Ibtimes.com.au", age: "2 days ago",
+    detail: "Sustained Nvidia strength indicates the GPU supply situation remains tight with strong Blackwell demand from hyperscalers and enterprises. For Google infrastructure planning this suggests continued premium pricing for Nvidia hardware and potential allocation challenges. The geopolitical sensitivity of the stock also highlights supply chain risks that affect all accelerator procurement. Google should monitor Blackwell availability closely and ensure TPU roadmap provides credible alternatives for internal workloads.",
+    url: "https://www.ibtimes.com.au/nvidia-stock-surges-3-ai-demand-eases-geopolitical-fears-amid-strong-blackwell-momentum-1865109"
+  },
+  {
+    id: 6, cat: "networking", impact: "medium",
+    title: "Nvidia Details AI Factory Optimization for Token Production and Real-Time Services",
+    summary: "Nvidia published technical guidance on maximizing GPU utilization in AI factory environments emphasizing that even 1% drops in usable GPU time translate to millions in lost value. The focus is on unified services and real-time AI optimization.",
+    source: "Nvidia.com", age: "3 days ago",
+    detail: "This technical content reveals Nvidias increasing focus on software and services to maximize infrastructure efficiency in large-scale deployments. The emphasis on token production economics validates the critical importance of networking fabric performance in AI training and inference clusters. For Google infrastructure teams this highlights competitive pressure to demonstrate superior utilization metrics. Storage and networking latency directly impact the token throughput economics Nvidia is now marketing making these systems increasingly strategic.",
+    url: "https://developer.nvidia.com/blog/accelerate-token-production-in-ai-factories-using-unified-services-and-real-time-ai/"
+  },
+  {
+    id: 7, cat: "storage", impact: "medium",
+    title: "PC Component Prices Surge Beyond Memory Affecting PCBs Plastics and Packaging",
+    summary: "PC manufacturers report cost increases spreading from memory chips and processors to PCBs plastic materials and packaging. The price pressure is affecting the entire electronics supply chain.",
+    source: "Tom's Hardware UK", age: "1 day ago",
+    detail: "Broad-based component inflation affects data center hardware costs beyond just accelerators and memory. PCB and packaging cost increases will flow through to networking equipment storage systems and server platforms. Google procurement should anticipate higher infrastructure costs across the board and evaluate longer-term supply agreements to lock in pricing. This inflation environment may also affect vendor margins for Broadcom Cisco and Arista potentially impacting their product roadmaps and pricing strategies.",
+    url: "https://www.tomshardware.com/tech-industry/pc-makers-report-surging-prices-across-different-components-increasing-costs-are-going-beyond-memory-chip-and-processors-now-affecting-pcbs-plastic-materials-and-more"
+  },
+  {
+    id: 8, cat: "silicon", impact: "medium",
+    title: "South Korea Turns to Russian Naphtha as Chip Supply Chain Faces Hormuz Disruption",
+    summary: "The effective closure of the Strait of Hormuz by Iran in late February disrupted global energy flows forcing South Korea to source Russian naphtha. The chip supply chain is feeling downstream effects from energy market disruption.",
+    source: "The Next Web", age: "2 days ago",
+    detail: "Geopolitical energy disruptions create second-order effects on semiconductor manufacturing through petrochemical feedstock availability. South Korean fabs including Samsung and SK Hynix produce critical memory and advanced packaging components. This supply chain vulnerability affects HBM availability for GPU and TPU systems as well as advanced packaging capacity. Google infrastructure planning should factor in potential extended lead times and consider strategic inventory positions for memory-intensive accelerator deployments.",
+    url: "https://thenextweb.com/news/south-korea-russian-naphtha-chip-supply-squeeze/"
+  },
+  {
+    id: 9, cat: "silicon", impact: "low",
+    title: "Intel Stock Surges 9.6% to $48 as Turnaround and Foundry Ambitions Gain Traction",
+    summary: "Intel shares jumped over 9% extending a rally that has doubled the stock over the past year. Investors are betting on foundry ambitions and AI processor developments driving the recovery.",
+    source: "Ibtimes.com.au", age: "1 day ago",
+    detail: "Intels recovery trajectory is relevant for Googles supply chain diversification strategy. A stronger Intel foundry business could provide alternatives to TSMC for advanced node manufacturing reducing concentration risk. Intel AI processor improvements may also offer procurement leverage against Nvidia though performance gaps remain significant. Google should continue monitoring Intel foundry progress for potential TPU manufacturing diversification and evaluate Gaudi accelerators as supplementary capacity options.",
+    url: "https://www.ibtimes.com.au/intel-stock-surges-965-4839-april-1-turnaround-hopes-fuel-massive-rally-1865169"
+  },
 ];
 // ARTICLES_END
 
@@ -774,7 +822,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Broadcom TH6 volume shipment validates Ethernet as the dominant fabric for million-XPU clusters and accelerates OCS sourcing for TPU v7. Meta dual hedging with Google TPU and AMD Helios signals growing customer confidence in TPU inference economics. Watch the HBM and NAND supply squeeze as rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.";
+const STATIC_BRIEF = "Nvidias $2B investment in Marvell to deepen NVLink Fusion integration signals accelerating vertical consolidation in AI networking silicon, directly challenging Googles ability to maintain differentiated interconnect advantages for TPU clusters and potentially limiting future custom networking options. The surge of Chinese AI models to 30% of global workloads led by Alibabas Qwen creates dual pressure as these models may drive alternative infrastructure standards while OpenAIs $122B raise at $852B valuation ensures Western competitors have massive capital for infrastructure buildout. Supply chain stress is spreading beyond memory to PCBs and packaging components while Strait of Hormuz disruptions force South Korean suppliers to pivot energy sources, warranting close monitoring of component lead times across networking and storage hardware programs.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
