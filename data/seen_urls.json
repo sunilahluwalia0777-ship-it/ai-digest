@@ -7,5 +7,15 @@
   "https://developer.nvidia.com/blog/accelerate-token-production-in-ai-factories-using-unified-services-and-real-time-ai/": "2026-04-02",
   "https://www.tomshardware.com/tech-industry/pc-makers-report-surging-prices-across-different-components-increasing-costs-are-going-beyond-memory-chip-and-processors-now-affecting-pcbs-plastic-materials-and-more": "2026-04-02",
   "https://thenextweb.com/news/south-korea-russian-naphtha-chip-supply-squeeze/": "2026-04-02",
-  "https://www.ibtimes.com.au/intel-stock-surges-965-4839-april-1-turnaround-hopes-fuel-massive-rally-1865169": "2026-04-02"
+  "https://www.ibtimes.com.au/intel-stock-surges-965-4839-april-1-turnaround-hopes-fuel-massive-rally-1865169": "2026-04-02",
+  "https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/": "2026-04-02",
+  "https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/": "2026-04-02",
+  "https://aws.amazon.com/blogs/storage/how-tavily-reduced-ai-search-caching-costs-by-95-with-amazon-s3-express-one-zone/": "2026-04-02",
+  "https://aws.amazon.com/blogs/storage/optimize-agent-tool-selection-using-s3-vectors-and-bedrock-knowledge-bases/": "2026-04-02",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/aws-load-balancer-controller-adds-general-availability-support-for-kubernetes-gateway-api/": "2026-04-02",
+  "https://cloud.google.com/blog/products/containers-kubernetes/unifying-real-time-and-async-inference-with-gke-inference-gateway/": "2026-04-02",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-cloudwatch-metrics-for-aws-direct-connect-virtual-interface-bgp-health-and-prefix-count/": "2026-04-02",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-nvidia-nemotron-3-super-on-amazon-bedrock-nova-forge-sdk-amazon-corretto-26-and-more-march-23-2026/": "2026-04-02",
+  "https://aws.amazon.com/blogs/storage/improve-your-application-resiliency-with-larger-and-faster-gp3-volumes/": "2026-04-02",
+  "https://aws.amazon.com/blogs/storage/enhancing-co-located-kubernetes-pod-data-access-with-amazon-ebs-node-local-volumes/": "2026-04-02"
 }
