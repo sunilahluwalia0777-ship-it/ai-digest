@@ -8,41 +8,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f5f6f8;
-    --surface: #ffffff;
-    --surface2: #f0f1f4;
-    --border: rgba(0,0,0,0.08);
-    --border2: rgba(0,0,0,0.15);
-    --text: #111827;
-    --muted: #4b5563;
-    --accent: #0070f3;
-    --accent2: #0070f3;
+    --bg: #f5f6f8; --surface: #ffffff; --surface2: #f0f1f4;
+    --border: rgba(0,0,0,0.08); --border2: rgba(0,0,0,0.15);
+    --text: #111827; --muted: #4b5563; --accent: #0070f3;
     --accent-bg: rgba(0,112,243,0.07);
-    --red: #dc2626;
-    --green: #059669;
-    --mono: 'Space Mono', monospace;
-    --sans: 'DM Sans', sans-serif;
+    --mono: 'Space Mono', monospace; --sans: 'DM Sans', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html { -webkit-text-size-adjust: 100%; }
   body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; overflow-x: hidden; }
 
-  /* HEADER */
   .masthead {
-    border-bottom: 1px solid var(--border2);
-    padding: 0 0.75rem;
+    border-bottom: 1px solid var(--border2); padding: 0 0.75rem;
     display: flex; align-items: center; justify-content: space-between;
-    height: 54px;
-    position: sticky; top: 0; z-index: 100;
+    height: 54px; position: sticky; top: 0; z-index: 100;
     background: rgba(255,255,255,0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   }
   .masthead-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; overflow: hidden; }
   .logo { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.06em; white-space: nowrap; flex-shrink: 0; }
   .edition-badge { display: none; }
   .masthead-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
   .date-display { font-size: 11px; color: var(--muted); font-family: var(--mono); display: none; }
+  .sync-status { font-size: 10px; color: var(--muted); font-family: var(--mono); display: none; }
   .refresh-btn {
     background: var(--accent); color: #fff; font-family: var(--mono); font-size: 11px;
     font-weight: 700; padding: 7px 13px; border: none; border-radius: 4px; cursor: pointer;
@@ -51,15 +39,34 @@
   .refresh-btn:active { opacity: 0.75; }
   .refresh-btn:disabled { opacity: 0.4; }
 
-  /* LAYOUT */
   .container { max-width: 720px; margin: 0 auto; padding: 0.75rem; }
-  .grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .grid { display: grid; grid-template-columns: 1fr; }
 
-  /* FILTER BAR — horizontal scroll on mobile */
+  /* TABS */
+  .tab-bar {
+    display: flex; gap: 0; margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border2);
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 10px 14px; background: transparent; border: none; border-bottom: 2px solid transparent;
+    color: var(--muted); cursor: pointer; white-space: nowrap; margin-bottom: -1px; flex-shrink: 0;
+  }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 8px;
+    margin-left: 4px; vertical-align: middle; font-family: var(--mono);
+  }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; }
+
+  /* FILTER BAR */
   .filter-bar {
     display: flex; gap: 6px; margin-bottom: 1rem;
-    overflow-x: auto; -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; padding-bottom: 2px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px;
   }
   .filter-bar::-webkit-scrollbar { display: none; }
   .filter-btn {
@@ -72,20 +79,18 @@
     border-color: var(--accent); color: var(--accent); background: var(--accent-bg);
   }
 
-  /* ARTICLE CARDS */
+  /* CARDS */
   .article-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
     cursor: pointer; -webkit-user-select: none; user-select: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;
   }
   .article-card:active { background: var(--surface2); }
   .card-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; flex-wrap: wrap; }
   .cat-pill {
     font-family: var(--mono); font-size: 9px; letter-spacing: 0.05em;
-    padding: 3px 7px; border-radius: 4px; text-transform: uppercase; flex-shrink: 0;
-    font-weight: 700;
+    padding: 3px 7px; border-radius: 4px; text-transform: uppercase; flex-shrink: 0; font-weight: 700;
   }
   .cat-networking { background: #dbeafe; color: #1d4ed8; }
   .cat-silicon { background: #fef3c7; color: #92400e; }
@@ -93,165 +98,125 @@
   .cat-storage { background: #d1fae5; color: #065f46; }
   .cat-competition { background: #fee2e2; color: #991b1b; }
   .cat-vendor { background: #fef9c3; color: #713f12; }
-
-  .source-tag { font-size: 11px; color: var(--muted); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 160px; }
+  .source-tag { font-size: 11px; color: var(--muted); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; }
   .age-tag { font-size: 11px; color: var(--muted); margin-left: auto; font-family: var(--mono); white-space: nowrap; flex-shrink: 0; }
+  .read-tag { font-family: var(--mono); font-size: 10px; color: var(--muted); background: var(--surface2); border: 1px solid var(--border); padding: 2px 6px; border-radius: 3px; margin-left: auto; flex-shrink: 0; }
+  .fav-date { font-family: var(--mono); font-size: 10px; background: #fef3c7; color: #92400e; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; margin-left: auto; }
   .card-title { font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 6px; color: var(--text); word-wrap: break-word; }
   .card-summary { font-size: 15px; color: var(--muted); line-height: 1.65; word-wrap: break-word; }
   .card-footer { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
-  .impact-badge {
-    font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
-    padding: 3px 8px; border-radius: 4px; font-weight: 700;
-  }
+  .impact-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
   .impact-high { background: #fee2e2; color: #991b1b; }
   .impact-medium { background: #fef3c7; color: #92400e; }
   .impact-low { background: #f3f4f6; color: #6b7280; }
-  .read-more { font-size: 13px; font-family: var(--mono); color: var(--accent); margin-left: auto; }
+  .read-more { font-size: 13px; font-family: var(--mono); color: var(--accent); }
+  .fav-btn {
+    background: none; border: none; cursor: pointer; font-size: 20px; line-height: 1;
+    padding: 2px 4px; color: #d1d5db; flex-shrink: 0; margin-left: auto;
+    -webkit-tap-highlight-color: transparent; transition: transform 0.1s;
+  }
+  .fav-btn.active { color: #f59e0b; }
+  .fav-btn:active { transform: scale(1.3); }
 
-  /* AI SUMMARY PANEL */
+  /* AI PANEL */
   .ai-panel {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
+    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   }
-  .ai-panel-label {
-    font-family: var(--mono); font-size: 9px; color: var(--accent); letter-spacing: 0.08em;
-    margin-bottom: 10px; display: flex; align-items: center; gap: 6px; font-weight: 700;
-  }
+  .ai-panel-label { font-family: var(--mono); font-size: 9px; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
   .ai-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
   .ai-summary-text { font-size: 15px; color: var(--muted); line-height: 1.75; word-wrap: break-word; }
-
-  /* SIDEBAR SECTIONS */
-  .sidebar-section {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  .ask-bar { display: flex; gap: 7px; margin-top: 0.9rem; }
+  .ask-input {
+    flex: 1; background: var(--surface2); border: 1px solid var(--border2);
+    color: var(--text); font-family: var(--sans); font-size: 16px;
+    padding: 10px 12px; border-radius: 8px; outline: none; min-height: 46px;
+    -webkit-appearance: none; min-width: 0;
   }
+  .ask-input:focus { border-color: var(--accent); }
+  .ask-input::placeholder { color: #9ca3af; }
+  .ask-submit {
+    background: var(--accent); border: none; color: #fff; font-family: var(--mono);
+    font-size: 11px; padding: 10px 13px; border-radius: 8px; cursor: pointer;
+    white-space: nowrap; min-height: 46px; font-weight: 700; flex-shrink: 0;
+  }
+  .ask-submit:active { opacity: 0.8; }
+  .ask-submit:disabled { opacity: 0.4; }
+  .ask-response { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.75; border-left: 3px solid var(--accent); padding-left: 12px; display: none; word-wrap: break-word; }
+  .ask-response.visible { display: block; }
+
+  /* SIDEBAR */
+  .sidebar-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .sidebar-title { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 12px; font-weight: 700; }
   .signal-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
   .signal-item:last-child { border-bottom: none; }
   .signal-text { font-size: 14px; color: var(--muted); line-height: 1.6; word-wrap: break-word; }
   .signal-text strong { color: var(--text); font-weight: 600; }
+  .capex-row { margin-bottom: 13px; }
+  .capex-label-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
 
-  /* AI BRIEF MODAL — bottom sheet */
+  /* WEEKLY REPORT */
+  .weekly-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .weekly-section-title { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.08em; font-weight: 700; margin-bottom: 8px; }
+  .weekly-text { font-size: 15px; color: var(--muted); line-height: 1.75; word-wrap: break-word; }
+  .weekly-story { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .weekly-story:last-child { border-bottom: none; }
+  .weekly-story-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .weekly-story-why { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* BRIEF MODAL */
   .brief-overlay {
     display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5); z-index: 200;
-    align-items: flex-end; justify-content: center;
-    padding: 0;
+    background: rgba(0,0,0,0.5); z-index: 200; align-items: flex-end; justify-content: center;
   }
   .brief-overlay.open { display: flex; }
   .brief-modal {
     background: var(--surface); border-top: 1px solid var(--border2);
     border-radius: 20px 20px 0 0; padding: 1.25rem 1.25rem 2.5rem;
-    width: 100%; max-width: 720px;
-    max-height: 88vh; overflow-y: auto;
+    width: 100%; max-width: 720px; max-height: 88vh; overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .brief-handle {
-    width: 40px; height: 4px; background: var(--border2); border-radius: 2px;
-    margin: 0 auto 1.25rem; cursor: pointer;
-  }
+  .brief-handle { width: 40px; height: 4px; background: var(--border2); border-radius: 2px; margin: 0 auto 1.25rem; cursor: pointer; }
   .brief-modal h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; color: var(--text); }
-  .brief-source { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-bottom: 18px; }
-  .brief-modal p { font-size: 20px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
+  .brief-source { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 14px; }
+  .brief-modal p { font-size: 20px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
+  .brief-modal-actions { display: flex; gap: 8px; margin-top: 0.75rem; }
   .brief-close-btn {
     background: var(--surface2); border: 1px solid var(--border2); color: var(--muted);
     font-family: var(--mono); font-size: 13px; padding: 12px 16px; border-radius: 8px;
-    cursor: pointer; margin-top: 0.75rem; letter-spacing: 0.04em; width: 100%;
-    min-height: 48px; font-weight: 700;
+    cursor: pointer; letter-spacing: 0.04em; min-height: 48px; font-weight: 700;
   }
   .brief-close-btn:active { background: var(--accent-bg); color: var(--accent); }
+  .brief-fav-btn {
+    background: var(--surface2); border: 1px solid #f59e0b; color: #9ca3af;
+    font-size: 22px; padding: 12px 16px; border-radius: 8px; cursor: pointer;
+    min-height: 48px; flex-shrink: 0;
+  }
+  .brief-fav-btn.active { color: #f59e0b; background: #fef3c7; }
 
-  /* PROMPT INPUT */
-  .ask-bar { display: flex; gap: 7px; margin-top: 0.9rem; }
-  .ask-input {
-    flex: 1; background: var(--surface2); border: 1px solid var(--border2);
-    color: var(--text); font-family: var(--sans); font-size: 16px;
-    padding: 10px 12px; border-radius: 8px; outline: none;
-    min-height: 46px; -webkit-appearance: none; min-width: 0;
-  }
-  .ask-input:focus { border-color: var(--accent); }
-  .ask-input::placeholder { color: #9ca3af; }
-  .ask-submit {
-    background: var(--accent); border: none; color: #fff;
-    font-family: var(--mono); font-size: 11px; padding: 10px 13px; border-radius: 8px;
-    cursor: pointer; letter-spacing: 0.04em; white-space: nowrap; min-height: 46px; font-weight: 700;
-    flex-shrink: 0;
-  }
-  .ask-submit:active { opacity: 0.8; }
-  .ask-submit:disabled { opacity: 0.4; }
-  .ask-response {
-    margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.75;
-    border-left: 3px solid var(--accent); padding-left: 12px; display: none;
-    word-wrap: break-word;
-  }
-  .ask-response.visible { display: block; }
-
-  /* TABS */
-  .tab-bar {
-    display: flex; gap: 0; margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border2);
-  }
-  .tab-btn {
-    font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
-    padding: 10px 16px; background: transparent; border: none; border-bottom: 2px solid transparent;
-    color: var(--muted); cursor: pointer; white-space: nowrap;
-    margin-bottom: -1px; transition: color 0.15s;
-  }
-  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .tab-badge {
-    display: inline-block; background: var(--accent); color: #fff;
-    font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 8px;
-    margin-left: 5px; vertical-align: middle; font-family: var(--mono);
-  }
-  .tab-pane { display: none; }
-  .tab-pane.active { display: block; }
-
-  /* READ CARD STATE */
-  .article-card.is-read { opacity: 0.55; }
-  .read-tag {
-    font-family: var(--mono); font-size: 9px; color: var(--muted);
-    background: var(--surface2); border: 1px solid var(--border);
-    padding: 2px 6px; border-radius: 3px; margin-left: auto; flex-shrink: 0;
-  }
-  .empty-state {
-    text-align: center; padding: 3rem 1rem;
-    color: var(--muted); font-size: 14px; line-height: 1.7;
-  }
+  /* EMPTY STATE */
+  .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: 14px; line-height: 1.7; }
   .empty-state-icon { font-size: 32px; margin-bottom: 0.75rem; }
   .empty-state-title { font-weight: 600; color: var(--text); margin-bottom: 0.4rem; font-size: 15px; }
 
-
-  /* FAVORITE BUTTON */
-  .fav-btn {
-    background: none; border: none; cursor: pointer;
-    font-size: 20px; line-height: 1; padding: 2px 4px;
-    color: #d1d5db; flex-shrink: 0; margin-left: auto;
-    transition: color 0.15s, transform 0.1s;
-    -webkit-tap-highlight-color: transparent;
+  /* SYNC INDICATOR */
+  .sync-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--mono); font-size: 9px; color: var(--muted);
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 3px 8px; border-radius: 10px; margin-bottom: 10px;
   }
-  .fav-btn.active { color: #f59e0b; }
-  .fav-btn:active { transform: scale(1.3); }
-  .fav-date {
-    font-family: var(--mono); font-size: 10px; color: var(--muted);
-    background: #fef3c7; color: #92400e;
-    padding: 2px 7px; border-radius: 4px; flex-shrink: 0;
-  }
+  .sync-dot { width: 5px; height: 5px; border-radius: 50%; background: #10b981; flex-shrink: 0; }
+  .sync-dot.syncing { background: #f59e0b; animation: pulse 1s infinite; }
+  .sync-dot.error { background: #ef4444; }
 
-
-  .capex-row { margin-bottom: 13px; }
-  .capex-label-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
-
-
+  @media (min-width: 480px) {
     .container { padding: 1rem; }
     .masthead { padding: 0 1rem; }
-    .edition-badge {
-      display: block; font-family: var(--mono); font-size: 9px; color: var(--muted);
-      border: 1px solid var(--border2); padding: 2px 7px; border-radius: 2px;
-      letter-spacing: 0.05em; white-space: nowrap;
-    }
+    .edition-badge { display: block; font-family: var(--mono); font-size: 9px; color: var(--muted); border: 1px solid var(--border2); padding: 2px 7px; border-radius: 2px; letter-spacing: 0.05em; white-space: nowrap; }
+    .sync-status { display: block; }
   }
   @media (min-width: 640px) {
     .container { padding: 1.5rem; }
@@ -274,31 +239,34 @@
 </header>
 
 <div class="container">
-
   <div class="grid">
-    <!-- MAIN FEED -->
     <main>
       <!-- AI BRIEF PANEL -->
       <div class="ai-panel">
         <div class="ai-panel-label"><div class="ai-dot"></div>AI EXECUTIVE BRIEF</div>
-        <div id="ai-brief-text" class="ai-summary-text">Generating today's executive summary...</div>
+        <div id="ai-brief-text" class="ai-summary-text">Loading today's executive summary...</div>
         <div class="ask-bar">
-          <input class="ask-input" id="ask-input" placeholder="Ask about today's news... e.g. 'How does Broadcom TH6 affect our TPU networking plans?'" />
+          <input class="ask-input" id="ask-input" placeholder="Ask about today's news..." />
           <button class="ask-submit" id="ask-btn" onclick="askClaude()">ASK →</button>
         </div>
         <div class="ask-response" id="ask-response"></div>
       </div>
 
-      <!-- TABS -->
-      <div class="tab-bar">
-        <button class="tab-btn active" id="tab-feed-btn" onclick="switchTab('feed', this)">FEED</button>
-        <button class="tab-btn" id="tab-read-btn" onclick="switchTab('read', this)">READ <span class="tab-badge" id="read-badge" style="display:none">0</span></button>
-        <button class="tab-btn" id="tab-fav-btn" onclick="switchTab('fav', this)">FAVORITES <span class="tab-badge" id="fav-badge" style="display:none;background:#f59e0b;">0</span></button>
+      <!-- SYNC STATUS -->
+      <div class="sync-pill" id="sync-pill">
+        <div class="sync-dot" id="sync-dot"></div>
+        <span id="sync-text">Loading state...</span>
       </div>
 
-      <!-- FEED TAB -->
+      <!-- TABS -->
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('feed', this)">FEED</button>
+        <button class="tab-btn" onclick="switchTab('read', this)">READ <span class="tab-badge" id="read-badge" style="display:none">0</span></button>
+        <button class="tab-btn" onclick="switchTab('fav', this)">FAVORITES <span class="tab-badge" id="fav-badge" style="display:none;background:#f59e0b;">0</span></button>
+        <button class="tab-btn" onclick="switchTab('weekly', this)">WEEKLY</button>
+      </div>
+
       <div class="tab-pane active" id="tab-feed">
-        <!-- FILTER BAR -->
         <div class="filter-bar">
           <button class="filter-btn active" onclick="filterArticles('all', this)">ALL</button>
           <button class="filter-btn" onclick="filterArticles('networking', this)">NETWORKING</button>
@@ -311,40 +279,21 @@
         <div id="articles-container"></div>
       </div>
 
-      <!-- READ TAB -->
-      <div class="tab-pane" id="tab-read">
-        <div id="read-container"></div>
-      </div>
-
-      <!-- FAVORITES TAB -->
-      <div class="tab-pane" id="tab-fav">
-        <div id="fav-container"></div>
-      </div>
-
+      <div class="tab-pane" id="tab-read"><div id="read-container"></div></div>
+      <div class="tab-pane" id="tab-fav"><div id="fav-container"></div></div>
+      <div class="tab-pane" id="tab-weekly"><div id="weekly-container"></div></div>
     </main>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <!-- PM SIGNALS -->
+    <aside>
       <div class="sidebar-section">
         <div class="sidebar-title">PM SIGNALS · NETWORKING & STORAGE</div>
         <div id="pm-signals">
-          <div class="signal-item">
-            <div class="signal-text"><strong>Broadcom TH6 →</strong> 102.4 Tbps volume shipment creates new benchmark for TPU v7 cluster fabric.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-text"><strong>Ethernet vs IB →</strong> UEC Spec 1.0 and ESUN accelerating transition. Evaluate impact on TPU pod networking architecture.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-text"><strong>Storage crunch →</strong> HBM priority production squeezing NAND/DRAM supply. Budget pressure expected Q2-Q3.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-text"><strong>OCS scale →</strong> 10,000+ optical circuit switches needed for TPU v7 at full deployment. Vendor qualification urgent.</div>
-          </div>
+          <div class="signal-item"><div class="signal-text"><strong>Broadcom TH6 →</strong> 102.4 Tbps volume shipment creates new benchmark for TPU v7 cluster fabric.</div></div>
+          <div class="signal-item"><div class="signal-text"><strong>Ethernet vs IB →</strong> UEC Spec 1.0 and ESUN accelerating transition. Evaluate impact on TPU pod networking.</div></div>
+          <div class="signal-item"><div class="signal-text"><strong>Storage crunch →</strong> HBM priority squeezing NAND/DRAM supply. Budget pressure expected Q2-Q3.</div></div>
+          <div class="signal-item"><div class="signal-text"><strong>OCS scale →</strong> 10,000+ optical circuit switches needed for TPU v7 at full deployment.</div></div>
         </div>
       </div>
-
-      <!-- CAPEX TRACKER -->
       <div class="sidebar-section">
         <div class="sidebar-title">2026 CAPEX TRACKER</div>
         <div id="capex-bars"></div>
@@ -353,121 +302,229 @@
   </div>
 </div>
 
-<!-- BRIEF MODAL — bottom sheet -->
+<!-- BRIEF MODAL -->
 <div class="brief-overlay" id="brief-overlay" onclick="closeBrief(event)">
   <div class="brief-modal" id="brief-modal">
-    <div class="brief-handle" onclick="document.getElementById('brief-overlay').classList.remove('open')"></div>
+    <div class="brief-handle" onclick="closeBriefModal()"></div>
     <div class="brief-modal-content"></div>
-    <div style="display:flex; gap:8px; margin-top:0.75rem;">
-      <button class="brief-close-btn" style="flex:1;" onclick="document.getElementById('brief-overlay').classList.remove('open')">CLOSE</button>
-      <button class="brief-close-btn" id="modal-fav-btn" style="flex:0 0 auto; padding:12px 18px; font-size:20px; border-color:#f59e0b;" onclick="toggleFavFromModal()">☆</button>
+    <div class="brief-modal-actions">
+      <button class="brief-close-btn" style="flex:1;" onclick="closeBriefModal()">CLOSE</button>
+      <button class="brief-fav-btn" id="modal-fav-btn" onclick="toggleFavFromModal()">☆</button>
     </div>
   </div>
 </div>
 
 <script>
+// ============================================================
+// CONFIG — replace YOUR_PAT_HERE with your GitHub Personal Access Token
+// ============================================================
+const GITHUB_PAT    = 'YOUR_PAT_HERE';
+const GITHUB_OWNER  = 'sunilahluwalia0777-ship-it';
+const GITHUB_REPO   = 'ai-digest';
+const STATE_FILE    = 'data/user_state.json';
+const WEEKLY_FILE   = 'data/weekly_report.json';
+
+// ============================================================
+// INIT
+// ============================================================
 const TODAY_DATE = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
 document.getElementById('date-display').textContent = TODAY_DATE;
 
-const SEVEN_DAYS_MS  = 7  * 24 * 60 * 60 * 1000;
 const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
-const READ_KEY = 'aiinfra_read_articles';
-const FAV_KEY  = 'aiinfra_fav_articles';
+const SEVEN_DAYS_MS  =  7 * 24 * 60 * 60 * 1000;
 
-// ---- READ MAP ----
-function getReadMap() {
-  try {
-    const raw = localStorage.getItem(READ_KEY);
-    if (!raw) return {};
-    const map = JSON.parse(raw);
-    const now = Date.now();
-    let changed = false;
-    for (const id in map) {
-      if (now - map[id].readAt > SEVEN_DAYS_MS) { delete map[id]; changed = true; }
-    }
-    if (changed) localStorage.setItem(READ_KEY, JSON.stringify(map));
-    return map;
-  } catch(e) { return {}; }
+// In-memory state — synced from/to GitHub
+let STATE = { read: {}, favorites: {} };
+let STATE_SHA = null; // GitHub file SHA needed for updates
+let currentOpenId = null;
+let currentFilter = 'all';
+
+// ============================================================
+// GITHUB STATE SYNC
+// ============================================================
+function setSyncStatus(status, msg) {
+  const dot = document.getElementById('sync-dot');
+  const txt = document.getElementById('sync-text');
+  dot.className = 'sync-dot' + (status === 'syncing' ? ' syncing' : status === 'error' ? ' error' : '');
+  txt.textContent = msg;
 }
 
-function markAsRead(id, article) {
+async function loadState() {
+  if (!GITHUB_PAT || GITHUB_PAT === 'YOUR_PAT_HERE') {
+    setSyncStatus('error', 'PAT not set — state is local only');
+    loadLocalFallback();
+    return;
+  }
+  setSyncStatus('syncing', 'Syncing...');
   try {
-    const map = getReadMap();
-    if (!map[id]) {
-      map[id] = { readAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
-      localStorage.setItem(READ_KEY, JSON.stringify(map));
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${STATE_FILE}`, {
+      headers: { 'Authorization': `token ${GITHUB_PAT}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (res.status === 404) {
+      STATE = { read: {}, favorites: {} };
+      STATE_SHA = null;
+      setSyncStatus('ok', 'Synced — fresh start');
+      return;
     }
-    updateReadBadge();
-    renderArticles();
-    renderReadTab();
+    const data = await res.json();
+    STATE_SHA = data.sha;
+    STATE = JSON.parse(atob(data.content.replace(/\n/g, '')));
+    pruneExpired();
+    setSyncStatus('ok', 'Synced ' + new Date().toLocaleTimeString());
+  } catch(e) {
+    setSyncStatus('error', 'Sync failed — using local');
+    loadLocalFallback();
+  }
+}
+
+async function saveState() {
+  if (!GITHUB_PAT || GITHUB_PAT === 'YOUR_PAT_HERE') {
+    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
+    return;
+  }
+  setSyncStatus('syncing', 'Saving...');
+  try {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(STATE, null, 2))));
+    const body = { message: 'Update user state', content, committer: { name: 'AI Infra App', email: 'app@aiinfra.local' } };
+    if (STATE_SHA) body.sha = STATE_SHA;
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${STATE_FILE}`, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${GITHUB_PAT}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (data.content) STATE_SHA = data.content.sha;
+    setSyncStatus('ok', 'Saved ' + new Date().toLocaleTimeString());
+    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
+  } catch(e) {
+    setSyncStatus('error', 'Save failed');
+    localStorage.setItem('aiinfra_state', JSON.stringify(STATE));
+  }
+}
+
+function loadLocalFallback() {
+  try {
+    const raw = localStorage.getItem('aiinfra_state');
+    if (raw) STATE = JSON.parse(raw);
   } catch(e) {}
 }
 
-function updateReadBadge() {
-  const count = Object.keys(getReadMap()).length;
-  const badge = document.getElementById('read-badge');
-  if (count > 0) { badge.textContent = count; badge.style.display = 'inline-block'; }
-  else { badge.style.display = 'none'; }
+function pruneExpired() {
+  const now = Date.now();
+  for (const id in STATE.read)      { if (now - STATE.read[id].readAt > SEVEN_DAYS_MS)   delete STATE.read[id]; }
+  for (const id in STATE.favorites) { if (now - STATE.favorites[id].savedAt > THIRTY_DAYS_MS) delete STATE.favorites[id]; }
 }
 
-// ---- FAVORITES MAP ----
-function getFavMap() {
+// ============================================================
+// WEEKLY REPORT
+// ============================================================
+async function loadWeeklyReport() {
+  const container = document.getElementById('weekly-container');
+  container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">○</div><div class="empty-state-title">Loading...</div></div>';
   try {
-    const raw = localStorage.getItem(FAV_KEY);
-    if (!raw) return {};
-    const map = JSON.parse(raw);
-    const now = Date.now();
-    let changed = false;
-    for (const id in map) {
-      if (now - map[id].favAt > THIRTY_DAYS_MS) { delete map[id]; changed = true; }
-    }
-    if (changed) localStorage.setItem(FAV_KEY, JSON.stringify(map));
-    return map;
-  } catch(e) { return {}; }
+    const res = await fetch(`https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${WEEKLY_FILE}?t=${Date.now()}`);
+    if (!res.ok) throw new Error('not found');
+    const report = await res.json();
+    renderWeeklyReport(report);
+  } catch(e) {
+    container.innerHTML = `<div class="empty-state">
+      <div class="empty-state-icon">📋</div>
+      <div class="empty-state-title">No weekly report yet</div>
+      <div>Your first weekly report will be generated on Sunday at 7am.</div>
+    </div>`;
+  }
+}
+
+function renderWeeklyReport(r) {
+  const container = document.getElementById('weekly-container');
+  const stories = (r.top_stories || []).map(s => `
+    <div class="weekly-story">
+      <div class="weekly-story-title">${s.title}</div>
+      <div class="weekly-story-why">${s.why_it_matters}</div>
+    </div>`).join('');
+
+  container.innerHTML = `
+    <div class="weekly-section">
+      <div class="weekly-section-title">WEEK OF ${r.week_of || ''}</div>
+      <div class="weekly-text">${r.summary || ''}</div>
+    </div>
+    <div class="weekly-section">
+      <div class="weekly-section-title">TOP STORIES</div>
+      ${stories}
+    </div>
+    <div class="weekly-section">
+      <div class="weekly-section-title">KEY THEMES</div>
+      <div class="weekly-text">${(r.key_themes || []).join(' · ')}</div>
+    </div>
+    <div class="weekly-section">
+      <div class="weekly-section-title">WHAT TO WATCH NEXT WEEK</div>
+      <div class="weekly-text">${r.watch_next || ''}</div>
+    </div>`;
+}
+
+// ============================================================
+// BADGES
+// ============================================================
+function updateBadges() {
+  const rc = Object.keys(STATE.read).length;
+  const fc = Object.keys(STATE.favorites).length;
+  const rb = document.getElementById('read-badge');
+  const fb = document.getElementById('fav-badge');
+  rb.textContent = rc; rb.style.display = rc > 0 ? 'inline-block' : 'none';
+  fb.textContent = fc; fb.style.display = fc > 0 ? 'inline-block' : 'none';
+}
+
+// ============================================================
+// READ / FAVORITE ACTIONS
+// ============================================================
+function markAsRead(id, article) {
+  if (STATE.read[id]) return;
+  STATE.read[id] = { readAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
+  updateBadges();
+  renderArticles();
+  renderReadTab();
+  saveState();
 }
 
 function toggleFav(id, article, e) {
   if (e) e.stopPropagation();
-  try {
-    const map = getFavMap();
-    if (map[id]) {
-      delete map[id];
-    } else {
-      map[id] = { favAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
-    }
-    localStorage.setItem(FAV_KEY, JSON.stringify(map));
-    updateFavBadge();
-    renderArticles();
-    renderReadTab();
-    renderFavTab();
-    updateModalFavBtn();
-  } catch(e) {}
+  if (STATE.favorites[id]) {
+    delete STATE.favorites[id];
+  } else {
+    STATE.favorites[id] = { savedAt: Date.now(), title: article.title, cat: article.cat, source: article.source, impact: article.impact, summary: article.summary, detail: article.detail, url: article.url, age: article.age };
+  }
+  updateBadges();
+  renderArticles();
+  renderReadTab();
+  renderFavTab();
+  updateModalFavBtn();
+  saveState();
 }
 
 function toggleFavFromModal() {
+  if (!currentOpenId) return;
   const id = currentOpenId;
-  if (!id) return;
-  const a = ARTICLES.find(x => x.id === id) || (() => {
-    const r = getReadMap()[id]; return r ? { ...r, id } : null;
-  })();
-  if (a) toggleFav(id, a, null);
+  const a = ARTICLES.find(x => x.id === id) || STATE.read[id] || STATE.favorites[id];
+  if (a) toggleFav(id, { ...a, id }, null);
 }
 
-function updateFavBadge() {
-  const count = Object.keys(getFavMap()).length;
-  const badge = document.getElementById('fav-badge');
-  if (count > 0) { badge.textContent = count; badge.style.display = 'inline-block'; }
-  else { badge.style.display = 'none'; }
+function toggleFavFromCard(id, e) {
+  if (e) e.stopPropagation();
+  const a = ARTICLES.find(x => x.id == id) || STATE.read[id] || STATE.favorites[id];
+  if (a) toggleFav(id, { ...a, id }, null);
 }
 
 function updateModalFavBtn() {
   const btn = document.getElementById('modal-fav-btn');
   if (!btn || !currentOpenId) return;
-  const isFav = !!getFavMap()[currentOpenId];
+  const isFav = !!STATE.favorites[currentOpenId];
   btn.textContent = isFav ? '★' : '☆';
-  btn.style.color = isFav ? '#f59e0b' : '';
+  btn.className = 'brief-fav-btn' + (isFav ? ' active' : '');
 }
 
+// ============================================================
+// TAB SWITCHING
+// ============================================================
 function switchTab(tab, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
@@ -475,142 +532,58 @@ function switchTab(tab, btn) {
   document.getElementById('tab-' + tab).classList.add('active');
   if (tab === 'read') renderReadTab();
   if (tab === 'fav') renderFavTab();
+  if (tab === 'weekly') loadWeeklyReport();
 }
 
+// ============================================================
+// ARTICLES (injected daily by update_digest.py)
+// ============================================================
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "vendor", impact: "high",
-    title: "NVIDIA Invests $2B in Marvell to Expand NVLink Fusion Interconnect Partnership",
-    summary: "NVIDIA announced a $2 billion investment in Marvell Technology alongside a partnership connecting Marvell to NVLink Fusion and AI-RAN ecosystems. The deal spans multiple segments of the chip market including custom silicon and networking.",
-    source: "Tom's Hardware UK", age: "2 days ago",
-    detail: "This investment signals NVIDIAs strategic move to strengthen its interconnect ecosystem through partnerships with custom silicon vendors. For Google, this deepens the Marvell-NVIDIA alliance which could affect Marvell capacity and pricing for TPU-related custom silicon work. The NVLink Fusion integration suggests NVIDIA is building a broader ecosystem that competes more directly with proprietary interconnects. Google should evaluate whether this affects Marvell roadmap commitments and consider the implications for future custom networking ASIC partnerships.",
-    url: "https://www.tomshardware.com/tech-industry/nvidia-invests-2-billion-in-marvell-to-deepen-nvlink-fusion-partnership"
+    id: 1, cat: "networking", impact: "high",
+    title: "Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch",
+    summary: "Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.",
+    source: "FinancialContent / Broadcom", age: "4 days ago",
+    detail: "The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcoms networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIAs competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window.",
+    url: "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch"
   },
   {
-    id: 2, cat: "networking", impact: "high",
-    title: "NVIDIA-Marvell Deal Focuses on Interconnect Technology for AI Infrastructure",
-    summary: "The $2B NVIDIA investment in Marvell centers on interconnect technology partnerships spanning AI factory and wireless infrastructure. Marvell will integrate with NVIDIAs networking stack across multiple product lines.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "This SiliconANGLE report provides additional technical context on the interconnect focus of the partnership. Marvell is a key Google vendor for networking silicon and this deal could redirect engineering resources toward NVIDIA-specific integrations. The AI-RAN component suggests expansion into telco edge infrastructure where Google Cloud competes. Google networking teams should assess potential conflicts of interest in Marvell roadmaps and evaluate alternative vendors for critical path networking components.",
-    url: "https://siliconangle.com/2026/03/31/nvidia-invests-2b-marvell-part-new-interconnect-partnership/"
+    id: 2, cat: "silicon", impact: "high",
+    title: "Google TPU v7 on track for 36,000 racks — 10,000+ optical circuit switches required",
+    summary: "Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs. Per-chip power runs 850-1,000W putting rack TDP at 80-100kW.",
+    source: "Investing.com / Fubon Research", age: "3 months ago",
+    detail: "Fubon supply chain analysis places total TPU v7 racks at ~36,000 units in 2026 with ~3.1-3.2M total TPU units constrained by advanced packaging capacity. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.",
+    url: "https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high",
-    title: "Global Cloud Market Approaching $500B Milestone as Hyperscalers Increase AI CapEx",
-    summary: "Cloud infrastructure spending reached approximately $400 billion in 2025 and is projected to hit $500 billion in 2026. Hyperscaler AI investments are driving the acceleration in spending.",
-    source: "TechRadar", age: "3 days ago",
-    detail: "This growth trajectory validates continued aggressive infrastructure investment but also intensifies competition for capacity and talent. AWS, Azure, and Oracle are all expanding AI infrastructure rapidly alongside Google. The spending surge suggests supply chain constraints will persist for GPUs, networking equipment, and datacenter capacity. Google should monitor competitor CapEx guidance closely and ensure infrastructure roadmaps account for component lead time pressures across the hyperscaler ecosystem.",
-    url: "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026"
-  },
-  {
-    id: 4, cat: "competition", impact: "medium",
-    title: "Chinese AI Models Surge to 30 Percent of Global Workloads in One Year",
-    summary: "Chinese AI models grew from 1 percent to 30 percent of global AI workloads between late 2024 and end of 2025. Alibaba Qwen family has surpassed 700 million downloads globally.",
-    source: "War on the Rocks", age: "1 day ago",
-    detail: "This rapid adoption of Chinese AI infrastructure presents both competitive and security considerations for Google. Alibaba Cloud is emerging as a formidable competitor in regions where geopolitical concerns are less acute. The security implications noted in the article may create opportunities for Google to differentiate on trust and compliance. However, the efficiency gains demonstrated by Chinese models could pressure Google to accelerate TPU optimization efforts to maintain cost competitiveness.",
-    url: "https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/"
-  },
-  {
-    id: 5, cat: "storage", impact: "medium",
-    title: "ScaleOps Raises $130M to Automate Cloud and AI Infrastructure Management",
-    summary: "ScaleOps secured Series C funding to expand autonomous cloud infrastructure management with customers including Adobe, Wiz, and Salesforce. The company has grown over 350 percent year-over-year.",
-    source: "The Next Web", age: "3 days ago",
-    detail: "ScaleOps addresses a key pain point in managing GPU and AI workloads efficiently across cloud environments. Their growth signals strong enterprise demand for infrastructure optimization tooling that could complement or compete with Google Cloud native capabilities. The Run:ai engineering heritage suggests expertise in GPU orchestration relevant to TPU workload management. Google should evaluate partnership or acquisition opportunities given alignment with infrastructure efficiency goals.",
-    url: "https://thenextweb.com/news/scaleops-130m-series-c/"
-  },
-  {
-    id: 6, cat: "hyperscaler", impact: "medium",
-    title: "Middle East Datacenter Capacity Expected to Triple by 2030 Amid AI Demand",
-    summary: "Government investments and AI demand are driving rapid datacenter expansion across the Middle East region. The area is positioning itself as a global digital hub with strategic infrastructure investments.",
-    source: "ComputerWeekly.com", age: "1 day ago",
-    detail: "Regional datacenter expansion represents both opportunity and competitive pressure for Google Cloud. AWS, Azure, and Oracle are all investing heavily in Middle East presence. The AI-driven demand creates potential for TPU deployment in new regions but requires careful evaluation of networking infrastructure quality and latency requirements. Google should assess whether existing Middle East strategy adequately addresses the tripling capacity trajectory and sovereign cloud requirements emerging in the region.",
-    url: "https://www.computerweekly.com/feature/Middle-East-datacentre-capacity-set-to-triple-by-2030"
-  },
-  {
-    id: 7, cat: "silicon", impact: "medium",
-    title: "AI Chip Market Forecast to Exceed $1.35 Trillion by 2035",
-    summary: "Market analysis projects AI chip market growing to over $1.35 trillion by 2035 across various chip types and functions. Growth spans multiple technology segments and end-user categories.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "This long-term forecast reinforces the strategic importance of Googles TPU investments and custom silicon strategy. The market size projection suggests sustained demand that justifies continued R&D investment in proprietary accelerators. However, the breadth of technology segments indicates increased competition from specialized chip designers beyond NVIDIA. Google should ensure TPU roadmaps address emerging workload patterns identified in market segmentation analysis.",
-    url: "https://www.globenewswire.com/news-release/2026/04/01/3266343/0/en/AI-Chip-Market-Size-to-Exceed-USD-1354-35-Billion-by-2035-SNS-Insider.html"
-  },
-  {
-    id: 8, cat: "networking", impact: "low",
-    title: "UK Awards 80M Pounds for Open Networks 5G Supply Chain Diversification",
-    summary: "The UK government funded projects supporting 5G supply chain diversification through an Open Networks Ecosystem competition. Awards totaled approximately 80.5 million pounds.",
-    source: "Www.gov.uk", age: "1 day ago",
-    detail: "Open RAN and network disaggregation initiatives create potential opportunities for Google Cloud edge infrastructure. Government-backed supply chain diversification could benefit vendors like Marvell that participate in open ecosystem standards. For Google networking strategy, this signals continued momentum toward vendor-neutral network architectures that could align with cloud-native network function deployments. However, near-term impact on GPU and TPU infrastructure is limited.",
-    url: "https://www.gov.uk/government/case-studies/open-networks-ecosystem-competition"
-  },
-  {
-    id: 9, cat: "silicon", impact: "low",
-    title: "NVIDIA Details AI Factory Token Production Optimization with Unified Services",
-    summary: "NVIDIA published technical guidance on maximizing GPU utilization in AI factory deployments. The blog emphasizes that even 1 percent GPU utilization drops have significant economic impact.",
-    source: "Nvidia.com", age: "3 days ago",
-    detail: "This NVIDIA content provides benchmarking context for TPU infrastructure efficiency comparisons. The framing of AI infrastructure as token production factories with economic optimization metrics aligns with how Google should position TPU value propositions. Understanding NVIDIA recommended architectures helps identify differentiation opportunities for Google Cloud AI infrastructure. The real-time AI monitoring approaches described may inform Google observability tooling for TPU clusters.",
-    url: "https://developer.nvidia.com/blog/accelerate-token-production-in-ai-factories-using-unified-services-and-real-time-ai/"
-  },
+    title: "Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175-185B",
+    summary: "Amazon projects $200B in 2026 up from $131B. Google $175-185B up from $91B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.",
+    source: "TechCrunch / Futurum Research", age: "1 month ago",
+    detail: "Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Meta Louisiana Hyperion campus is a 2,250-acre $27B joint venture delivering 2GW scaling to 5GW. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.",
+    url: "https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/"
+  }
 ];
 // ARTICLES_END
 
-const CAPEX_DATA = [
-  { name: 'AWS', value: 200, color: '#f59e0b' },
-  { name: 'Google', value: 182, color: '#0070f3' },
-  { name: 'Microsoft', value: 120, color: '#3b82f6' },
-  { name: 'Meta', value: 125, color: '#a78bfa' },
-  { name: 'Oracle', value: 50, color: '#f87171' },
-];
-
-function renderCapexBars() {
-  const max = Math.max(...CAPEX_DATA.map(d => d.value));
-  const container = document.getElementById('capex-bars');
-  container.innerHTML = CAPEX_DATA.map(d => `
-    <div class="capex-row">
-      <div class="capex-label-row">
-        <span style="font-size:14px; color:var(--text); font-weight:500;">${d.name}</span>
-        <span style="font-family:var(--mono); font-size:13px; color:var(--muted);">$${d.value}B</span>
-      </div>
-      <div style="height:5px; background:var(--surface2); border-radius:3px; overflow:hidden; border:1px solid var(--border);">
-        <div style="height:100%; width:${(d.value/max*100).toFixed(1)}%; background:${d.color}; border-radius:3px;"></div>
-      </div>
-    </div>
-  `).join('');
-}
-renderCapexBars();
-
-let currentFilter = 'all';
-function filterArticles(cat, btn) {
-  currentFilter = cat;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderArticles();
-}
-
+// ============================================================
+// CARD RENDERING
+// ============================================================
 function cardHTML(a, mode) {
-  // mode: 'feed' | 'read' | 'fav'
-  const readMap = getReadMap();
-  const favMap  = getFavMap();
-  const isFav   = !!favMap[a.id];
-  const readAt  = readMap[a.id]?.readAt;
-  const favAt   = favMap[a.id]?.favAt;
-  const daysAgo = readAt ? Math.floor((Date.now() - readAt) / 86400000) : null;
-  const readLabel = daysAgo === 0 ? 'today' : daysAgo === 1 ? '1d ago' : (daysAgo || '') + 'd ago';
-  const favDaysAgo = favAt ? Math.floor((Date.now() - favAt) / 86400000) : null;
-  const favLabel = favDaysAgo === 0 ? 'today' : favDaysAgo === 1 ? '1d ago' : (favDaysAgo || '') + 'd ago';
+  const isFav  = !!STATE.favorites[a.id];
+  const readAt = STATE.read[a.id]?.readAt;
+  const favAt  = STATE.favorites[a.id]?.savedAt;
+  const daysAgo    = readAt ? Math.floor((Date.now() - readAt) / 86400000) : 0;
+  const favDaysAgo = favAt  ? Math.floor((Date.now() - favAt)  / 86400000) : 0;
+  const readLabel  = daysAgo === 0 ? 'today' : daysAgo === 1 ? '1d ago' : daysAgo + 'd ago';
+  const favLabel   = favDaysAgo === 0 ? 'today' : favDaysAgo === 1 ? '1d ago' : favDaysAgo + 'd ago';
 
-  const metaRight = mode === 'read'
-    ? `<span class="read-tag">read ${readLabel}</span>`
-    : mode === 'fav'
-      ? `<span class="fav-date">saved ${favLabel}</span>`
-      : `<span class="age-tag">${a.age}</span>`;
+  const metaRight = mode === 'read' ? `<span class="read-tag">read ${readLabel}</span>`
+    : mode === 'fav' ? `<span class="fav-date">saved ${favLabel}</span>`
+    : `<span class="age-tag">${a.age}</span>`;
 
-  const footerRight = mode === 'feed'
-    ? `<button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFav(${a.id}, ARTICLES.find(x=>x.id===${a.id}), event)" title="${isFav ? 'Unfavorite' : 'Favorite'}">${isFav ? '★' : '☆'}</button>`
-    : mode === 'read'
-      ? `<button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavFromCard(${a.id}, event)">${isFav ? '★' : '☆'}</button>`
-      : `<button class="fav-btn active" onclick="toggleFavFromCard(${a.id}, event)" title="Remove favorite">★</button>`;
-
+  const starBtn = `<button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavFromCard(${a.id}, event)">${isFav ? '★' : '☆'}</button>`;
   const cta = mode === 'fav' ? 'VIEW BRIEF →' : mode === 'read' ? 'VIEW AGAIN →' : 'READ BRIEF →';
 
   return `
@@ -625,181 +598,136 @@ function cardHTML(a, mode) {
       <div class="card-footer">
         <span class="impact-badge impact-${a.impact}">IMPACT: ${a.impact.toUpperCase()}</span>
         <span class="read-more">${cta}</span>
-        ${footerRight}
+        ${starBtn}
       </div>
     </div>`;
 }
 
-function toggleFavFromCard(id, e) {
-  if (e) e.stopPropagation();
-  const map = getReadMap();
-  const favMap = getFavMap();
-  const r = map[id] || favMap[id];
-  const a = ARTICLES.find(x => x.id == id) || (r ? { ...r, id } : null);
-  if (a) toggleFav(id, a, null);
+function filterArticles(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArticles();
 }
 
 function renderArticles() {
-  const readMap = getReadMap();
-  const unread = ARTICLES.filter(a => !readMap[a.id]);
+  const unread = ARTICLES.filter(a => !STATE.read[a.id]);
   const filtered = currentFilter === 'all' ? unread : unread.filter(a => a.cat === currentFilter);
-  const container = document.getElementById('articles-container');
+  const c = document.getElementById('articles-container');
   if (!filtered.length) {
     const allDone = unread.length === 0;
-    container.innerHTML = `<div class="empty-state">
-      <div class="empty-state-icon">${allDone ? '✓' : '○'}</div>
-      <div class="empty-state-title">${allDone ? 'All caught up!' : 'Nothing in this category'}</div>
-      <div>${allDone ? 'All stories are in your Read tab.' : 'Try a different filter.'}</div>
-    </div>`;
+    c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">${allDone ? '✓' : '○'}</div><div class="empty-state-title">${allDone ? 'All caught up!' : 'Nothing in this category'}</div><div>${allDone ? 'All stories are in your Read tab.' : 'Try a different filter.'}</div></div>`;
     return;
   }
-  container.innerHTML = filtered.map(a => cardHTML(a, 'feed')).join('');
+  c.innerHTML = filtered.map(a => cardHTML(a, 'feed')).join('');
 }
 
 function renderReadTab() {
-  const readMap = getReadMap();
-  const container = document.getElementById('read-container');
-  const readIds = Object.keys(readMap).sort((a, b) => readMap[b].readAt - readMap[a].readAt);
-  if (!readIds.length) {
-    container.innerHTML = `<div class="empty-state">
-      <div class="empty-state-icon">○</div>
-      <div class="empty-state-title">Nothing read yet</div>
-      <div>Stories you open will appear here for 7 days.</div>
-    </div>`;
-    return;
-  }
-  container.innerHTML = readIds.map(id => {
-    const r = readMap[id];
-    const a = ARTICLES.find(x => x.id == id) || { ...r, id };
-    return cardHTML(a, 'read');
-  }).join('');
+  const c = document.getElementById('read-container');
+  const ids = Object.keys(STATE.read).sort((a,b) => STATE.read[b].readAt - STATE.read[a].readAt);
+  if (!ids.length) { c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">○</div><div class="empty-state-title">Nothing read yet</div><div>Stories you open will appear here for 7 days.</div></div>`; return; }
+  c.innerHTML = ids.map(id => { const r = STATE.read[id]; const a = ARTICLES.find(x => x.id == id) || { ...r, id }; return cardHTML(a, 'read'); }).join('');
 }
 
 function renderFavTab() {
-  const favMap = getFavMap();
-  const container = document.getElementById('fav-container');
-  const favIds = Object.keys(favMap).sort((a, b) => favMap[b].favAt - favMap[a].favAt);
-  if (!favIds.length) {
-    container.innerHTML = `<div class="empty-state">
-      <div class="empty-state-icon">☆</div>
-      <div class="empty-state-title">No favorites yet</div>
-      <div>Tap the star on any story to save it here for 30 days.</div>
-    </div>`;
-    return;
-  }
-  container.innerHTML = favIds.map(id => {
-    const r = favMap[id];
-    const a = ARTICLES.find(x => x.id == id) || { ...r, id };
-    return cardHTML(a, 'fav');
-  }).join('');
+  const c = document.getElementById('fav-container');
+  const ids = Object.keys(STATE.favorites).sort((a,b) => STATE.favorites[b].savedAt - STATE.favorites[a].savedAt);
+  if (!ids.length) { c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">☆</div><div class="empty-state-title">No favorites yet</div><div>Tap the star on any story to save it here for 30 days.</div></div>`; return; }
+  c.innerHTML = ids.map(id => { const r = STATE.favorites[id]; const a = ARTICLES.find(x => x.id == id) || { ...r, id }; return cardHTML(a, 'fav'); }).join('');
 }
 
-let currentOpenId = null;
-
+// ============================================================
+// BRIEF MODAL
+// ============================================================
 function openBrief(id) {
-  const a = ARTICLES.find(x => x.id === id) || (() => {
-    const r = getReadMap()[id]; return r ? { ...r, id } : null;
-  })();
+  const a = ARTICLES.find(x => x.id === id) || STATE.read[id] || STATE.favorites[id];
   if (!a) return;
   currentOpenId = id;
   document.querySelector('.brief-modal-content').innerHTML = `
     <div class="cat-pill cat-${a.cat}" style="margin-bottom:10px;">${a.cat}</div>
-    <h3 style="margin-bottom:4px;">${a.title}</h3>
+    <h3>${a.title}</h3>
     <div class="brief-source">${a.source} · ${a.age}</div>
     <p>${a.detail}</p>
-    <a href="${a.url}" target="_blank" style="font-family:var(--mono); font-size:12px; color:var(--accent); text-decoration:none; letter-spacing:0.04em;">VIEW SOURCE →</a>
-  `;
+    <a href="${a.url}" target="_blank" style="font-family:var(--mono);font-size:12px;color:var(--accent);text-decoration:none;">VIEW SOURCE →</a>`;
   document.getElementById('brief-overlay').classList.add('open');
   updateModalFavBtn();
   markAsRead(id, a);
 }
 
-function closeBriefModal() {
-  document.getElementById('brief-overlay').classList.remove('open');
-  currentOpenId = null;
+function closeBriefModal() { document.getElementById('brief-overlay').classList.remove('open'); currentOpenId = null; }
+function closeBrief(e) { if (e.target === document.getElementById('brief-overlay')) closeBriefModal(); }
+
+// ============================================================
+// CAPEX BARS
+// ============================================================
+const CAPEX_DATA = [
+  { name: 'AWS', value: 200, color: '#f59e0b' },
+  { name: 'Google', value: 182, color: '#0070f3' },
+  { name: 'Microsoft', value: 120, color: '#3b82f6' },
+  { name: 'Meta', value: 125, color: '#a78bfa' },
+  { name: 'Oracle', value: 50, color: '#f87171' },
+];
+function renderCapexBars() {
+  const max = Math.max(...CAPEX_DATA.map(d => d.value));
+  document.getElementById('capex-bars').innerHTML = CAPEX_DATA.map(d => `
+    <div class="capex-row">
+      <div class="capex-label-row">
+        <span style="font-size:14px;color:var(--text);font-weight:500;">${d.name}</span>
+        <span style="font-family:var(--mono);font-size:13px;color:var(--muted);">$${d.value}B</span>
+      </div>
+      <div style="height:5px;background:var(--surface2);border-radius:3px;overflow:hidden;border:1px solid var(--border);">
+        <div style="height:100%;width:${(d.value/max*100).toFixed(1)}%;background:${d.color};border-radius:3px;"></div>
+      </div>
+    </div>`).join('');
 }
 
-function closeBrief(e) {
-  if (e.target === document.getElementById('brief-overlay')) closeBriefModal();
-}
+// ============================================================
+// AI BRIEF + ASK
+// ============================================================
+// BRIEF_START
+const STATIC_BRIEF = "Broadcom TH6 volume shipment validates Ethernet as the dominant fabric for million-XPU clusters and accelerates OCS sourcing for TPU v7. Meta dual hedging with Google TPU and AMD Helios signals growing customer confidence in TPU inference economics. Watch the HBM and NAND supply squeeze as rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.";
+// BRIEF_END
 
-const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. 
-Today's date: ${TODAY_DATE}.
-Key context: Google's vendors include Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI.
-Recent major news:
-- Broadcom TH6 (102.4Tbps) began volume shipments March 2026
-- Google TPU v7 targeting 36,000 racks in 2026, needs 10,000+ OCS
-- Arista hitting $10B+ revenue; Ethernet beating InfiniBand for AI
-- Meta negotiating Google TPU deals from 2027; also AMD $100B deal
-- Hyperscaler 2026 capex: AWS $200B, Google $175-185B, Meta $115-135B
-- NVIDIA NVLink Fusion extending beyond GPU into full DC stack
-- Power crisis: AEP Ohio paused new DC interconnects; liquid cooling urgent
-- Storage: HBM priority squeezing NAND/DRAM supply; prices rising
-- Cisco AI revenue guidance raised to $3B fiscal 2026
-- Arm launched AGI CPU targeting agentic AI data centers
-
-Be specific, actionable, and concise (2-4 sentences per response). Focus on implications for Google's networking and storage infrastructure decisions.`;
+const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
 
 async function generateBrief() {
-  const briefEl = document.getElementById('ai-brief-text');
-  briefEl.textContent = 'Generating executive brief...';
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: `Generate a crisp 3-sentence executive brief for today's AI infrastructure digest. Lead with the single most important development for a Google networking/storage PM, then the competitive signal, then the supply chain watch item. No bullet points — flowing prose only.` }]
-      })
-    });
-    const data = await res.json();
-    const text = data.content?.map(c => c.text || '').join('');
-    briefEl.textContent = text || 'Could not generate brief. Check connection.';
-  } catch(e) {
-    briefEl.textContent = 'Broadcom\'s TH6 volume shipment this week marks the most significant networking milestone for TPU infrastructure planning — it validates Ethernet as the dominant fabric for million-XPU clusters and accelerates the OCS sourcing timeline Google needs for TPU v7. On the competitive front, Meta\'s dual hedging (Google TPU + AMD Helios) signals growing customer confidence in TPU inference economics, validating Google\'s external TPU strategy. Watch the HBM/NAND supply squeeze: rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.';
-  }
+  const el = document.getElementById('ai-brief-text');
+  el.textContent = STATIC_BRIEF;
 }
 
 async function askClaude() {
   const input = document.getElementById('ask-input');
   const btn = document.getElementById('ask-btn');
-  const responseEl = document.getElementById('ask-response');
-  const question = input.value.trim();
-  if (!question) return;
+  const resp = document.getElementById('ask-response');
+  const q = input.value.trim();
+  if (!q) return;
   btn.disabled = true; btn.textContent = '...';
-  responseEl.textContent = 'Analyzing...';
-  responseEl.classList.add('visible');
+  resp.textContent = 'Analyzing...'; resp.classList.add('visible');
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: question }]
-      })
+      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 500, system: SYSTEM_PROMPT, messages: [{ role: 'user', content: q }] })
     });
     const data = await res.json();
-    const text = data.content?.map(c => c.text || '').join('') || 'No response generated.';
-    responseEl.textContent = text;
-  } catch(e) {
-    responseEl.textContent = 'Error reaching AI API. Please try again.';
-  }
+    resp.textContent = data.content?.map(c => c.text||'').join('') || 'No response.';
+  } catch(e) { resp.textContent = 'Error reaching AI API.'; }
   btn.disabled = false; btn.textContent = 'ASK →';
 }
 
 document.getElementById('ask-input').addEventListener('keydown', e => { if (e.key === 'Enter') askClaude(); });
 
+// ============================================================
+// BOOT
+// ============================================================
 async function loadDigest() {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true; btn.textContent = 'LOADING...';
-  updateReadBadge();
-  updateFavBadge();
+  renderCapexBars();
+  await loadState();
+  updateBadges();
   renderArticles();
-  await generateBrief();
+  generateBrief();
   btn.disabled = false; btn.textContent = '↻ REFRESH';
 }
 
