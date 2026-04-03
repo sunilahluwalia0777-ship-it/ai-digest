@@ -284,19 +284,46 @@ def inject_html(articles, brief):
         print(f"ERROR: {HTML_FILE} not found. Files: {os.listdir('.')}"); sys.exit(1)
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
-    if "// ARTICLES_START" not in html:
-        print("ERROR: ARTICLES_START sentinel missing"); sys.exit(1)
-    html = re.sub(
-        r"// ARTICLES_START\s*\nconst ARTICLES = \[.*?\];\s*\n// ARTICLES_END",
-        build_articles_js(articles), html, flags=re.DOTALL)
-    escaped = escape_js(brief)
-    html = re.sub(
-        r"// BRIEF_START\s*\nconst STATIC_BRIEF = \".*?\";\s*\n// BRIEF_END",
-        f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END',
-        html, flags=re.DOTALL)
+
+    # Diagnose sentinel presence
+    has_start = "// ARTICLES_START" in html
+    has_end   = "// ARTICLES_END" in html
+    print(f"Sentinel check: ARTICLES_START={has_start}, ARTICLES_END={has_end}")
+    if not has_start or not has_end:
+        print("ERROR: sentinels missing — cannot inject"); sys.exit(1)
+
+    # Show what we're about to replace
+    start_idx = html.index("// ARTICLES_START")
+    end_idx   = html.index("// ARTICLES_END") + len("// ARTICLES_END")
+    old_block = html[start_idx:end_idx]
+    print(f"Old block length: {len(old_block)} chars")
+    print(f"Old block first 120: {repr(old_block[:120])}")
+
+    new_js = build_articles_js(articles)
+    html_new = html[:start_idx] + new_js + html[end_idx:]
+
+    changed = html_new != html
+    print(f"HTML changed: {changed} (old={len(html)} chars, new={len(html_new)} chars)")
+    if not changed:
+        print("WARNING: HTML unchanged after injection — check sentinels match exactly")
+
+    # Inject brief
+    has_brief_start = "// BRIEF_START" in html_new
+    has_brief_end   = "// BRIEF_END" in html_new
+    print(f"Brief sentinel check: BRIEF_START={has_brief_start}, BRIEF_END={has_brief_end}")
+    if has_brief_start and has_brief_end:
+        escaped = escape_js(brief)
+        bs = html_new.index("// BRIEF_START")
+        be = html_new.index("// BRIEF_END") + len("// BRIEF_END")
+        html_new = html_new[:bs] + f'// BRIEF_START\nconst STATIC_BRIEF = "{escaped}";\n// BRIEF_END' + html_new[be:]
+        print("Brief injected")
+    else:
+        print("WARNING: Brief sentinels missing — skipping brief injection")
+
     with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"Injected {len(articles)} articles into {HTML_FILE}")
+        f.write(html_new)
+    print(f"Wrote {len(html_new)} chars to {HTML_FILE}")
+    print(f"First article title: {articles[0]['title'] if articles else 'none'}")
 
 def save_daily_archive(articles):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
