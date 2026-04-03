@@ -27,5 +27,15 @@
   "https://aws.amazon.com/blogs/storage/optimize-data-management-on-s3-tables-with-intelligent-tiering/": "2026-04-03",
   "https://aws.amazon.com/blogs/storage/attaching-block-storage-with-aws-fargate-and-amazon-ebs-volumes/": "2026-04-03",
   "https://cloud.google.com/blog/products/ai-machine-learning/gemma-4-available-on-google-cloud/": "2026-04-03",
-  "https://cloud.google.com/blog/products/containers-kubernetes/new-gke-active-buffer-minimizes-scale-out-latency/": "2026-04-03"
+  "https://cloud.google.com/blog/products/containers-kubernetes/new-gke-active-buffer-minimizes-scale-out-latency/": "2026-04-03",
+  "https://cloud.google.com/blog/products/networking/the-case-for-envoy-networking-in-the-agentic-ai-era/": "2026-04-03",
+  "https://cloud.google.com/blog/products/infrastructure/your-guide-to-infrastructure-and-gke-sessions-at-cloud-next26/": "2026-04-03",
+  "https://cloud.google.com/blog/products/databases/spanners-multi-model-advantage-for-agentic-ai/": "2026-04-03",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/": "2026-04-03",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-partnership-aws-elemental-inference-strands-labs-and-more-march-2-2026/": "2026-04-03",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/lexisnexis-risk-solutions-success-story-enhancing-global-connectivity-with-aws-cloud-wan/": "2026-04-03",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/": "2026-04-03",
+  "https://azure.microsoft.com/updates?id=559767": "2026-04-03",
+  "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/": "2026-04-03",
+  "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/": "2026-04-03"
 }

@@ -633,28 +633,84 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "networking", impact: "high",
-    title: "Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch",
-    summary: "Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.",
-    source: "FinancialContent / Broadcom", age: "4 days ago",
-    detail: "The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcoms networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIAs competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window.",
-    url: "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch"
+    title: "Envoy Positioned as Foundation for Agentic AI Networking in Google Cloud",
+    summary: "Google Cloud advocates for Envoy as the networking layer for agentic AI environments where networks handle model calls tool invocations and agent-to-agent interactions. The blog discusses how traditional network responsibilities are expanding to include policy decisions in AI-native architectures.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This represents a strategic positioning of Envoy as critical infrastructure for next-generation AI workloads. For GPU/TPU infrastructure the networking layer becomes increasingly important as agentic systems require low-latency high-bandwidth communication between distributed AI components. This could influence network architecture decisions for AI training and inference clusters. The focus on policy decisions within the network layer suggests tighter integration between networking and AI orchestration systems.",
+    url: "https://cloud.google.com/blog/products/networking/the-case-for-envoy-networking-in-the-agentic-ai-era/"
   },
   {
-    id: 2, cat: "silicon", impact: "high",
-    title: "Google TPU v7 on track for 36,000 racks — 10,000+ optical circuit switches required",
-    summary: "Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs. Per-chip power runs 850-1,000W putting rack TDP at 80-100kW.",
-    source: "Investing.com / Fubon Research", age: "3 months ago",
-    detail: "Fubon supply chain analysis places total TPU v7 racks at ~36,000 units in 2026 with ~3.1-3.2M total TPU units constrained by advanced packaging capacity. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.",
-    url: "https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670"
+    id: 2, cat: "hyperscaler", impact: "medium",
+    title: "Google Cloud Next 26 to Feature AI and Computing Infrastructure Spotlight Sessions",
+    summary: "Google Cloud announces infrastructure and GKE sessions for Cloud Next 26 with VP Mark Lohmeyer presenting on the future of AI and compute ecosystem. The event will detail Googles AI and compute infrastructure roadmap.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This preview indicates Google is preparing significant announcements around AI infrastructure. Mark Lohmeyers spotlight on AI and computing infrastructure suggests potential updates to TPU offerings networking capabilities or GPU cluster management. Competitors AWS and Azure will be watching closely for any infrastructure differentiation announcements. This could reveal Googles response to NVIDIA partnerships and custom silicon strategies from other hyperscalers.",
+    url: "https://cloud.google.com/blog/products/infrastructure/your-guide-to-infrastructure-and-gke-sessions-at-cloud-next26/"
   },
   {
-    id: 3, cat: "hyperscaler", impact: "high",
-    title: "Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175-185B",
-    summary: "Amazon projects $200B in 2026 up from $131B. Google $175-185B up from $91B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.",
-    source: "TechCrunch / Futurum Research", age: "1 month ago",
-    detail: "Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Meta Louisiana Hyperion campus is a 2,250-acre $27B joint venture delivering 2GW scaling to 5GW. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.",
-    url: "https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/"
-  }
+    id: 3, cat: "storage", impact: "medium",
+    title: "Google Cloud Spanner Evolves as Multi-Model Database for Agentic AI Workloads",
+    summary: "Google positions Spanner as an intelligent active context hub for grounding AI foundation models and driving agentic workflows. The database is evolving from passive storage to a reasoning engine supporting AI-driven actions.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This storage evolution is relevant for AI infrastructure as databases must now support real-time context retrieval for AI agents. Spanners multi-model capabilities could reduce data movement overhead for AI workloads running on TPU and GPU clusters. The emphasis on reasoning engine functionality suggests deeper integration between storage and compute layers. This positions Google against AWS Aurora and Azure Cosmos DB in the AI-optimized database space.",
+    url: "https://cloud.google.com/blog/products/databases/spanners-multi-model-advantage-for-agentic-ai/"
+  },
+  {
+    id: 4, cat: "competition", impact: "high",
+    title: "AWS Celebrates 20 Years of Cloud Computing with AI and ML Education Initiative",
+    summary: "AWS marks 20 years in cloud computing and launches a 2026 AI and ML Scholars program targeting 100000 learners worldwide. The initiative includes foundational generative AI skills training in a multi-phase program.",
+    source: "AWS News Blog", age: "today",
+    detail: "AWS leveraging its 20-year anniversary to push AI education represents a talent pipeline strategy that could impact long-term cloud market share. The scale of 100000 learners indicates significant investment in building AWS-native AI developer community. This competitive move aims to lock in the next generation of AI practitioners on AWS infrastructure. Google Cloud should monitor this as developer mindshare directly impacts infrastructure adoption decisions.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/"
+  },
+  {
+    id: 5, cat: "competition", impact: "medium",
+    title: "AWS Weekly Roundup Highlights OpenAI Partnership and Elemental Inference Launch",
+    summary: "AWS announces partnership with OpenAI and launches AWS Elemental Inference alongside Strands Labs developments. The roundup covers AI-Driven Lifecycle workshops helping customers implement AI use cases.",
+    source: "AWS News Blog", age: "1 day ago",
+    detail: "The OpenAI partnership is a significant competitive development as it brings leading AI models to AWS infrastructure. AWS Elemental Inference suggests new hardware or software optimization for inference workloads potentially competing with Google TPU inference capabilities. This partnership strategy differs from Googles approach of developing proprietary models like Gemini. The AI-DLC framework indicates AWS is systematizing enterprise AI adoption which could accelerate infrastructure consumption.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-partnership-aws-elemental-inference-strands-labs-and-more-march-2-2026/"
+  },
+  {
+    id: 6, cat: "networking", impact: "medium",
+    title: "LexisNexis Migrates from Transit VPC to AWS Cloud WAN for Global Backbone",
+    summary: "LexisNexis Risk Solutions modernized their AWS network by migrating from legacy Transit VPC architecture to AWS Cloud WAN for a highly resilient global backbone. The case study demonstrates streamlined network management at enterprise scale.",
+    source: "AWS Networking", age: "today",
+    detail: "This migration pattern is relevant for understanding how large enterprises architect global networks on hyperscaler infrastructure. Cloud WAN adoption for mission-critical financial services workloads validates AWS networking capabilities for demanding use cases. The move from Transit VPC to Cloud WAN reflects industry shift toward software-defined global networking. Google Cloud should note this as competitive intelligence for Cloud Interconnect and Network Connectivity Center positioning.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/lexisnexis-risk-solutions-success-story-enhancing-global-connectivity-with-aws-cloud-wan/"
+  },
+  {
+    id: 7, cat: "storage", impact: "medium",
+    title: "AWS S3 Turns 20 with Over Exabyte-Scale Storage Foundation for Cloud Infrastructure",
+    summary: "Amazon S3 celebrates 20 years since its March 14 2006 launch having grown from simple object storage to storing more than exabytes of data. The service is credited as the foundational storage service that defined cloud infrastructure.",
+    source: "AWS News Blog", age: "2 days ago",
+    detail: "S3s 20-year milestone and massive scale demonstrates AWS storage dominance that Google Cloud Storage competes against. The exabyte-scale reference provides competitive benchmarking context for cloud storage market positioning. Object storage remains foundational for AI training data pipelines making S3s maturity a competitive advantage. Google Cloud should consider how to position GCS capabilities and differentiation against this established competitor.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/"
+  },
+  {
+    id: 8, cat: "storage", impact: "medium",
+    title: "Azure Data Box Adds Support for Azure Files Provisioned v2 Storage Accounts",
+    summary: "Azure Data Box now supports data ingestion into Azure Files Provisioned v2 storage accounts with configurable capacity IOPS and throughput values. This billing model gives customers flexibility to provision specific performance characteristics.",
+    source: "Azure Updates", age: "today",
+    detail: "Azures storage provisioning model with discrete IOPS and throughput configuration represents a different approach than Google Clouds storage tiers. This granular control could appeal to enterprises with predictable workload patterns including AI training jobs. The Data Box integration addresses hybrid and migration scenarios where large datasets must move to cloud storage. Understanding Azures storage strategy helps position Google Cloud Storage and Filestore competitive offerings.",
+    url: "https://azure.microsoft.com/updates?id=559767"
+  },
+  {
+    id: 9, cat: "competition", impact: "high",
+    title: "Microsoft and Armada Launch Azure Local for Sovereign AI at Edge Datacenters",
+    summary: "Microsoft partners with Armada to deliver Azure Local on Galleon modular datacenters enabling sovereign AI workloads in disconnected and regulated environments. The solution targets secure resilient AI deployment at the edge.",
+    source: "Azure Blog", age: "today",
+    detail: "This sovereign AI edge computing initiative directly competes with Google Distributed Cloud for government and regulated industry customers. Modular datacenter deployment addresses data residency requirements that increasingly affect AI infrastructure decisions. The Armada partnership gives Azure physical infrastructure reach that differs from traditional cloud deployment models. Google should evaluate how GDC Edge competes against this sovereign AI positioning especially for defense and critical infrastructure customers.",
+    url: "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/"
+  },
+  {
+    id: 10, cat: "vendor", impact: "medium",
+    title: "Microsoft and NVIDIA Announce AI for Nuclear Energy Collaboration",
+    summary: "Microsoft announces AI for nuclear collaboration with NVIDIA to provide end-to-end tools for permitting design acceleration and operations optimization across the nuclear industry. The partnership aims to break infrastructure bottlenecks in nuclear energy.",
+    source: "Azure Blog", age: "1 day ago",
+    detail: "This NVIDIA partnership extends beyond traditional cloud infrastructure into energy sector vertical solutions. Nuclear energy expansion directly relates to datacenter power demands for AI training clusters making this strategically relevant. The collaboration indicates NVIDIA is becoming a broader infrastructure partner beyond GPU supply relationships. Google should monitor how NVIDIA partnerships with competitors extend into adjacent markets that affect long-term AI infrastructure economics.",
+    url: "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/"
+  },
 ];
 // ARTICLES_END
 
@@ -776,7 +832,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Broadcom TH6 volume shipment validates Ethernet as the dominant fabric for million-XPU clusters and accelerates OCS sourcing for TPU v7. Meta dual hedging with Google TPU and AMD Helios signals growing customer confidence in TPU inference economics. Watch the HBM and NAND supply squeeze as rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.";
+const STATIC_BRIEF = "Google is advancing its AI infrastructure positioning on two fronts: Envoy as the foundational networking layer for agentic AI environments handling model calls and agent-to-agent interactions, while Spanner evolves from passive storage into an active reasoning engine for grounding foundation models and driving agentic workflows. AWS marks 20 years of cloud dominance with S3 now at exabyte-scale and a new OpenAI partnership alongside Elemental Inference launch, while Microsoft pushes sovereign AI at the edge through its Armada partnership for Azure Local on modular datacenters. The Microsoft-NVIDIA nuclear energy collaboration signals growing hyperscaler focus on power infrastructure bottlenecks, suggesting compute capacity constraints remain a strategic concern across the industry.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
