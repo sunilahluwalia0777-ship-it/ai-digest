@@ -630,84 +630,84 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "storage", impact: "high",
-    title: "Twenty Years of Amazon S3: New Features Including S3 Tables Vectors and Metadata",
-    summary: "Amazon S3 celebrates its 20th anniversary with reflections on innovations including S3 Tables S3 Vectors and S3 Metadata capabilities. The service now stores more data than ever as AWS continues expanding its foundational storage platform.",
-    source: "AWS News Blog", age: "2 days ago",
-    detail: "This milestone announcement highlights AWS continued investment in object storage as the foundation for AI and analytics workloads. S3 Vectors represents a direct competitive offering against specialized vector databases increasingly important for AI inference and RAG applications. S3 Tables and Metadata capabilities position AWS to compete more effectively in the data lakehouse market. For Google Cloud Storage and related services this signals intensifying competition in AI-optimized storage tiers.",
-    url: "https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/"
+    id: 1, cat: "competition", impact: "high",
+    title: "Microsoft and NVIDIA Announce AI Infrastructure Partnership at GTC for Azure Foundry",
+    summary: "Microsoft announced deep collaboration with NVIDIA at GTC to integrate accelerated computing with Azure cloud scale for AI breakthroughs. The partnership spans Microsoft Foundry, Azure AI infrastructure, and Physical AI capabilities.",
+    source: "Azure Blog", age: "2 days ago",
+    detail: "This partnership strengthens the Azure-NVIDIA alliance and positions Microsoft as a formidable competitor in AI infrastructure. The integration of NVIDIA hardware with Azure cloud engineering directly challenges Google Clouds TPU and GPU offerings. Physical AI capabilities suggest robotics and embodied AI workloads that could drive significant GPU demand. Google Cloud PM should monitor how this affects enterprise customer decisions on AI infrastructure providers.",
+    url: "https://blogs.microsoft.com/blog/2026/03/16/microsoft-at-nvidia-gtc-new-solutions-for-microsoft-foundry-azure-ai-infrastructure-and-physical-ai/"
   },
   {
-    id: 2, cat: "storage", impact: "medium",
-    title: "AWS Introduces Account Regional Namespaces for S3 General Purpose Buckets",
-    summary: "AWS launches a new S3 feature allowing general purpose buckets to be created within account regional namespaces. This simplifies bucket creation and management as data storage needs scale in size and scope.",
-    source: "AWS News Blog", age: "2 days ago",
-    detail: "This architectural change addresses a longstanding S3 limitation around global bucket naming uniqueness which has been a friction point for large enterprises. The regional namespace approach aligns with how Google Cloud Storage has always handled bucket naming within projects. This improvement reduces a competitive disadvantage AWS had versus GCS for organizations managing thousands of buckets across multiple accounts and regions.",
-    url: "https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/"
+    id: 2, cat: "competition", impact: "medium",
+    title: "Azure IaaS Touts Built-in Resiliency at Scale for Compute Storage and Networking",
+    summary: "Microsoft Azure highlighted foundational IaaS capabilities across compute, storage, and networking designed to maintain application resilience. The announcement emphasizes enterprise-grade reliability for critical workloads.",
+    source: "Azure Blog", age: "3 days ago",
+    detail: "Azure is positioning its core infrastructure services as enterprise-ready with built-in resiliency features. This messaging directly competes with Google Clouds infrastructure reliability story. For networking and storage PM responsibilities, understanding Azures specific resiliency mechanisms helps identify gaps or advantages in Google Cloud offerings. Enterprise customers evaluating multi-cloud strategies will compare these capabilities closely.",
+    url: "https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/"
   },
   {
-    id: 3, cat: "storage", impact: "medium",
-    title: "Tavily Reduces AI Search Caching Costs 95 Percent Using S3 Express One Zone",
-    summary: "AI infrastructure company Tavily achieved 95 percent cost reduction for caching by migrating to S3 Express One Zone. The company provides APIs enabling real-time structured retrieval from the web for AI agents and LLMs.",
-    source: "AWS Storage", age: "1 day ago",
-    detail: "This case study demonstrates AWS positioning S3 Express One Zone as high-performance storage for AI inference workloads requiring low latency access. The dramatic cost reduction validates the storage tier for caching use cases that would traditionally require more expensive block storage or in-memory solutions. Google Cloud should monitor adoption patterns as Express One Zone increasingly targets AI workloads that compete with Cloud Storage and Filestore offerings.",
-    url: "https://aws.amazon.com/blogs/storage/how-tavily-reduced-ai-search-caching-costs-by-95-with-amazon-s3-express-one-zone/"
+    id: 3, cat: "networking", impact: "medium",
+    title: "AWS Gateway API Support Streamlines EKS Deployments with Load Balancer and VPC Lattice",
+    summary: "AWS announced Gateway API support in AWS Load Balancer Controller enabling unified architecture with VPC Lattice through a single API specification. This simplifies Kubernetes networking operations while maintaining service flexibility.",
+    source: "AWS Networking", age: "3 days ago",
+    detail: "AWS is consolidating its Kubernetes networking story around the Gateway API standard which is becoming the de facto successor to Ingress. The integration between ALB Controller and VPC Lattice through a unified API reduces operational complexity for EKS customers. Google Cloud should evaluate how GKE Gateway Controller and service mesh offerings compare in terms of operational simplicity. This development indicates AWS is serious about enterprise Kubernetes networking standardization.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/streamline-your-amazon-eks-deployments-with-gateway-api-support-for-aws-load-balancer-controller-and-amazon-vpc-lattice/"
   },
   {
-    id: 4, cat: "storage", impact: "medium",
-    title: "AWS Launches S3 Vectors Integration with Bedrock Knowledge Bases for Agent Tools",
-    summary: "AWS introduces optimization for AI agent tool selection using S3 Vectors combined with Amazon Bedrock Knowledge Bases. Semantic search enables agents to select appropriate tools from expanding toolkits more effectively.",
-    source: "AWS Storage", age: "1 day ago",
-    detail: "This integration positions S3 Vectors as purpose-built storage for agentic AI workloads directly competing with vector database offerings. The tight coupling between S3 Vectors and Bedrock creates a vertically integrated stack for RAG and agent architectures. Google Cloud should evaluate how Spanner vector capabilities and AlloyDB compete against this unified storage and AI service integration approach.",
-    url: "https://aws.amazon.com/blogs/storage/optimize-agent-tool-selection-using-s3-vectors-and-bedrock-knowledge-bases/"
+    id: 4, cat: "networking", impact: "medium",
+    title: "NGINX Ingress Retirement in March 2026 Forces Kubernetes Migration Planning on AWS",
+    summary: "Kubernetes SIG Network announced NGINX Ingress retirement affecting approximately half of all Kubernetes deployments. AWS published migration guidance for EKS customers transitioning to alternative ingress solutions.",
+    source: "AWS Networking", age: "3 days ago",
+    detail: "The NGINX Ingress deprecation represents a significant forcing function for Kubernetes networking modernization across all cloud providers. With roughly 50 percent market share, this impacts massive enterprise workloads. AWS is proactively positioning its Gateway API and ALB Controller as migration targets. Google Cloud should ensure GKE migration paths are equally well documented and that Gateway Controller adoption is accelerated to capture migrating workloads.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/navigating-the-nginx-ingress-retirement-a-practical-guide-to-migration-on-aws/"
   },
   {
-    id: 5, cat: "networking", impact: "medium",
-    title: "AWS Load Balancer Controller Adds GA Support for Kubernetes Gateway API",
-    summary: "AWS announces general availability of Load Balancer Controller support for Kubernetes Gateway API. Users can now define AWS load balancer configurations using the standardized Gateway API specification.",
-    source: "AWS Networking", age: "2 days ago",
-    detail: "Gateway API adoption represents a significant shift in Kubernetes networking standards away from Ingress resources. AWS achieving GA status for this capability ensures EKS remains competitive with GKE which has strong Gateway API support. For GKE Inference Gateway and related Google networking products this validates the industry direction toward Gateway API as the standard for service mesh and load balancing configuration.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/aws-load-balancer-controller-adds-general-availability-support-for-kubernetes-gateway-api/"
+    id: 5, cat: "networking", impact: "low",
+    title: "AWS Publishes Guide to Optimizing Network Load Balancer Data Transfer Costs",
+    summary: "AWS detailed architectural patterns to optimize inter-zone data transfer costs when using Network Load Balancers. The guidance focuses on reducing expenses from cross-Availability Zone traffic flows.",
+    source: "AWS Networking", age: "3 days ago",
+    detail: "Cross-zone data transfer costs remain a significant concern for customers running distributed workloads across availability zones. AWS acknowledging this cost optimization challenge validates that networking costs are a competitive differentiator. Google Cloud should evaluate how its cross-zone pricing compares and whether similar optimization guidance would benefit customers. This is particularly relevant for GPU cluster deployments where data movement between zones can be substantial.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/optimizing-data-transfer-costs-when-using-aws-network-load-balancer/"
   },
   {
-    id: 6, cat: "competition", impact: "high",
-    title: "GKE Inference Gateway Unifies Real-Time and Async Inference on Same Infrastructure",
-    summary: "Google Cloud introduces GKE Inference Gateway to run both real-time and asynchronous inference workloads on shared infrastructure. This addresses the utilization gap enterprises face when building separate systems for different inference patterns.",
+    id: 6, cat: "storage", impact: "medium",
+    title: "AWS S3 Access Points Bridge Legacy File Systems with Modern Cloud Native Applications",
+    summary: "AWS introduced S3 Access Points for Amazon FSx enabling unified access to file storage from both traditional and cloud native applications. This solves challenges of organizations running legacy and modern workloads on shared data.",
+    source: "AWS Storage", age: "3 days ago",
+    detail: "This capability addresses a real enterprise pain point where organizations want to modernize applications without rewriting legacy file-based systems. By providing S3 API access to FSx file systems, AWS enables incremental modernization strategies. For Google Cloud storage PM, this highlights the importance of flexible access patterns and the value of unifying file and object storage paradigms. Cloud Filestore and GCS integration strategies should be evaluated in comparison.",
+    url: "https://aws.amazon.com/blogs/storage/bridge-legacy-and-modern-applications-with-amazon-s3-access-points-for-amazon-fsx/"
+  },
+  {
+    id: 7, cat: "storage", impact: "medium",
+    title: "AWS S3 Tables Adds Intelligent Tiering for Iceberg Data Lake Optimization",
+    summary: "AWS launched Intelligent Tiering for S3 Tables to automatically optimize Apache Iceberg dataset storage costs over time. The feature addresses challenges of managing petabyte-scale Iceberg datasets efficiently.",
+    source: "AWS Storage", age: "3 days ago",
+    detail: "Apache Iceberg adoption is accelerating for data lake workloads and automated tiering reduces operational overhead for large datasets. This enhancement makes S3 Tables more competitive for analytics and AI training data storage use cases. Google Cloud BigLake and Cloud Storage tiering should be evaluated against this offering. For AI infrastructure, efficient data lake storage is critical as training datasets continue to grow exponentially.",
+    url: "https://aws.amazon.com/blogs/storage/optimize-data-management-on-s3-tables-with-intelligent-tiering/"
+  },
+  {
+    id: 8, cat: "storage", impact: "medium",
+    title: "AWS Fargate Now Supports Persistent Block Storage with Amazon EBS Volumes",
+    summary: "AWS enabled EBS volume attachments for Fargate containers supporting stateful workloads like content management and retail applications. This eliminates a key limitation preventing certain workloads from running on serverless containers.",
+    source: "AWS Storage", age: "3 days ago",
+    detail: "Persistent storage for serverless containers addresses a significant gap for stateful applications. Workloads requiring block storage such as databases and CMS systems can now leverage Fargate without server management overhead. Google Cloud Run does not currently support persistent block storage attachments which represents a competitive gap. For AI inference workloads requiring model caching or checkpoint storage, this capability could be relevant.",
+    url: "https://aws.amazon.com/blogs/storage/attaching-block-storage-with-aws-fargate-and-amazon-ebs-volumes/"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium",
+    title: "Google Cloud Releases Gemma 4 Open Models with 256K Context and Native Vision Audio",
+    summary: "Google Cloud released Gemma 4 as the most capable open model family with 256K context windows, native vision and audio processing, and Apache 2.0 licensing. The models support 140 plus languages and complex reasoning tasks.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This capability directly targets the GPU utilization efficiency problem that plagues AI infrastructure deployments. By enabling dynamic workload mixing on the same accelerator pools GKE can achieve higher effective utilization than competitors requiring separate clusters. The inference gateway approach differentiates GKE for AI workloads and could influence enterprise decisions on where to deploy GPU-intensive inference services versus AWS or Azure alternatives.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/unifying-real-time-and-async-inference-with-gke-inference-gateway/"
+    detail: "Gemma 4 represents a significant open-source AI release that could drive GPU and TPU demand on Google Cloud. The 256K context window and multimodal capabilities position these models for enterprise agentic AI workloads. Open licensing encourages deployment across Google Cloud infrastructure while Apache 2.0 enables commercial use. This release strengthens Google Clouds position in the open model ecosystem against Meta Llama and other competitors.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/gemma-4-available-on-google-cloud/"
   },
   {
-    id: 7, cat: "networking", impact: "medium",
-    title: "AWS Direct Connect Adds CloudWatch Metrics for BGP Health and Prefix Monitoring",
-    summary: "AWS announces three new CloudWatch metrics for Direct Connect virtual interface BGP session monitoring. The metrics enable detection of BGP failures and prefix limit violations without custom Lambda functions.",
-    source: "AWS Networking", age: "2 days ago",
-    detail: "Enhanced BGP monitoring capabilities strengthen AWS hybrid connectivity offerings that compete with Google Cloud Interconnect. Native CloudWatch integration eliminates operational overhead previously required for comprehensive BGP health visibility. For enterprises evaluating hybrid cloud connectivity options these monitoring improvements reduce operational complexity that was previously an AWS weakness relative to more mature on-premises networking vendors.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-cloudwatch-metrics-for-aws-direct-connect-virtual-interface-bgp-health-and-prefix-count/"
-  },
-  {
-    id: 8, cat: "competition", impact: "medium",
-    title: "AWS Weekly Roundup Highlights NVIDIA Nemotron 3 Super on Amazon Bedrock",
-    summary: "AWS weekly summary features NVIDIA Nemotron 3 Super availability on Amazon Bedrock along with Nova Forge SDK and Amazon Corretto 26. The partnership brings additional NVIDIA model options to AWS managed AI services.",
-    source: "AWS News Blog", age: "2 days ago",
-    detail: "NVIDIA Nemotron availability on Bedrock demonstrates the continued importance of the AWS-NVIDIA partnership for AI model serving. This competes directly with Google Cloud offering NVIDIA models through Vertex AI and Model Garden. The Nova Forge SDK suggests AWS continues investing in proprietary model development to reduce NVIDIA dependency similar to Googles approach with Gemini and TPU optimization.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-nvidia-nemotron-3-super-on-amazon-bedrock-nova-forge-sdk-amazon-corretto-26-and-more-march-23-2026/"
-  },
-  {
-    id: 9, cat: "storage", impact: "medium",
-    title: "Amazon EBS GP3 Volumes Get Larger Capacity and Faster Performance for Resiliency",
-    summary: "AWS announces improvements to EBS GP3 volumes with increased capacity limits and enhanced performance characteristics. The enhancements help customers improve application resiliency while maintaining cost efficiency.",
-    source: "AWS Storage", age: "1 day ago",
-    detail: "GP3 volume improvements directly compete with Google Persistent Disk offerings for block storage attached to compute instances. Enhanced performance characteristics are particularly relevant for AI training workloads requiring high throughput storage. As GPU instance density increases storage performance becomes a more critical bottleneck making these improvements strategically important for AI infrastructure competitiveness.",
-    url: "https://aws.amazon.com/blogs/storage/improve-your-application-resiliency-with-larger-and-faster-gp3-volumes/"
-  },
-  {
-    id: 10, cat: "storage", impact: "low",
-    title: "Amazon EBS Node-Local Volumes Enhance Kubernetes Pod Data Access Performance",
-    summary: "AWS introduces EBS Node-Local volumes to improve data access for co-located Kubernetes pods on the same node. The feature targets ML inference data analytics and HPC workloads requiring shared dataset access.",
-    source: "AWS Storage", age: "1 day ago",
-    detail: "Node-local volume optimization addresses a common pattern where multiple inference pods need access to the same model weights or datasets. This capability competes with GKE local SSD and ephemeral storage options for high-performance Kubernetes workloads. The focus on ML inference and HPC use cases indicates AWS targeting the same AI infrastructure segment that Google emphasizes with TPU and GPU pod configurations.",
-    url: "https://aws.amazon.com/blogs/storage/enhancing-co-located-kubernetes-pod-data-access-with-amazon-ebs-node-local-volumes/"
+    id: 10, cat: "hyperscaler", impact: "low",
+    title: "GKE Active Buffer Minimizes Scale Out Latency for Dynamic Workload Scaling",
+    summary: "Google Cloud introduced GKE Active Buffer to provide immediately available compute capacity for rapid workload scaling. The feature targets retail flash sales and gaming peak activity scenarios.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Pre-provisioned compute capacity reduces scaling latency which is critical for bursty AI inference workloads and real-time applications. This feature improves GKE competitiveness against EKS Karpenter and Azure autoscaling solutions. For GPU infrastructure, fast scaling is essential when AI inference demand spikes. The active buffer approach trades some cost efficiency for improved responsiveness which aligns with enterprise SLA requirements.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/new-gke-active-buffer-minimizes-scale-out-latency/"
   },
 ];
 // ARTICLES_END
@@ -830,7 +830,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AWS is aggressively expanding S3 into AI-native territory with S3 Vectors integration into Bedrock Knowledge Bases and S3 Tables, directly challenging Google Cloud Storage differentiation while Tavily demonstrates 95 percent cost reduction using S3 Express One Zone for AI search caching. The GKE Inference Gateway launch positions Google well against AWS fragmented inference approach, but AWS EBS Node-Local volumes for Kubernetes ML inference and HPC workloads represent a storage-compute convergence play that warrants monitoring. NVIDIA Nemotron 3 Super availability on Bedrock signals continued AWS-NVIDIA partnership deepening, reinforcing the competitive dynamics around model hosting infrastructure where Google TPU alternatives must demonstrate clear cost and performance advantages.";
+const STATIC_BRIEF = "The AWS S3 Tables Intelligent Tiering for Iceberg and S3 Access Points for FSx represent meaningful storage innovation that Google Cloud should monitor, as these features address real enterprise pain points around data lake cost optimization and hybrid file access that GCP storage offerings must match. Microsoft deepening its NVIDIA partnership through Azure Foundry while emphasizing built-in IaaS resiliency signals intensifying competitive pressure on Google Cloud infrastructure positioning, particularly as Azure markets itself as the premium enterprise-grade AI platform. The NGINX Ingress retirement affecting half of Kubernetes deployments creates both risk and opportunity for GKE networking differentiation, and AWS Gateway API unification with VPC Lattice shows competitors moving quickly to simplify Kubernetes networking stacks.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
