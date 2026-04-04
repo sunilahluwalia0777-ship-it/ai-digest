@@ -37,5 +37,14 @@
   "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/": "2026-04-03",
   "https://azure.microsoft.com/updates?id=559767": "2026-04-03",
   "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/": "2026-04-03",
-  "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/": "2026-04-03"
+  "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/": "2026-04-03",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/announcing-aws-global-accelerator-support-in-aws-load-balancer-controller-for-kubernetes/": "2026-04-04",
+  "https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/": "2026-04-04",
+  "https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/": "2026-04-04",
+  "https://aws.amazon.com/blogs/storage/applying-amazon-s3-object-lock-at-scale-for-petabytes-of-existing-data/": "2026-04-04",
+  "https://azure.microsoft.com/updates?id=559504": "2026-04-04",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/deploy-vpc-block-public-access-across-aws-organizations/": "2026-04-04",
+  "https://azure.microsoft.com/updates?id=559406": "2026-04-04",
+  "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/": "2026-04-04",
+  "https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/": "2026-04-04"
 }
