@@ -120,6 +120,17 @@
       "detail": "Effective storage monitoring is foundational for AI workloads that depend on file system performance for training data access. EFS monitoring best practices apply to any shared file storage supporting distributed AI training. This operational guidance helps teams maintain storage performance as AI workloads scale.",
       "url": "https://aws.amazon.com/blogs/storage/monitoring-amazon-efs-kpis-using-aws-cloudwatch-metrics/",
       "age": "today"
+    },
+    "12": {
+      "readAt": 1775410587541,
+      "title": "Google Cloud Spanner Multi-Model Database Drives Customer Success Across Use Cases",
+      "cat": "hyperscaler",
+      "source": "Google Cloud Blog",
+      "impact": "low",
+      "summary": "Google Cloud highlights customer success stories using Spanner as a fully interoperable multi-model database foundation for generative AI applications. The post covers four common use cases where customers chose Spanner for AI workloads.",
+      "detail": "Multi-model database capabilities reduce data pipeline complexity for AI applications that need relational graph and document data access. Spanner positioning for gen AI foundations reflects the importance of flexible data layers for AI applications. Customer proof points help validate Spanner for AI-adjacent database requirements.",
+      "url": "https://cloud.google.com/blog/products/databases/customers-see-real-world-success-with-multi-model-spanner/",
+      "age": "today"
     }
   },
   "favorites": {}
