@@ -109,6 +109,17 @@
       "detail": "Node-local volume optimization addresses a common pattern where multiple inference pods need access to the same model weights or datasets. This capability competes with GKE local SSD and ephemeral storage options for high-performance Kubernetes workloads. The focus on ML inference and HPC use cases indicates AWS targeting the same AI infrastructure segment that Google emphasizes with TPU and GPU pod configurations.",
       "url": "https://aws.amazon.com/blogs/storage/enhancing-co-located-kubernetes-pod-data-access-with-amazon-ebs-node-local-volumes/",
       "age": "1 day ago"
+    },
+    "11": {
+      "readAt": 1775410566051,
+      "title": "Monitoring Amazon EFS Performance with CloudWatch Metrics Best Practices",
+      "cat": "storage",
+      "source": "AWS Storage",
+      "impact": "low",
+      "summary": "AWS provides guidance on monitoring Amazon EFS key performance indicators using CloudWatch metrics for operational excellence. The approach tracks throughput patterns IOPS utilization and storage distribution in real-time.",
+      "detail": "Effective storage monitoring is foundational for AI workloads that depend on file system performance for training data access. EFS monitoring best practices apply to any shared file storage supporting distributed AI training. This operational guidance helps teams maintain storage performance as AI workloads scale.",
+      "url": "https://aws.amazon.com/blogs/storage/monitoring-amazon-efs-kpis-using-aws-cloudwatch-metrics/",
+      "age": "today"
     }
   },
   "favorites": {}
