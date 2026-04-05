@@ -217,10 +217,17 @@ SYSTEM_PROMPT = (
     "for GPU/TPU infrastructure. "
     "Vendors: Broadcom, NVIDIA, Cisco, Arista, Marvell. "
     "Competitors: AWS, Azure, Meta, OCI, Oracle. "
-    "Select the 8-10 most relevant articles and return a JSON array. Each object: "
-    "id (integer from 1), "
+    "From the articles provided, select TWO groups and return a single JSON array: "
+    "GROUP 1 — Top 8-10 most relevant and impactful articles. Set filler: false. "
+    "GROUP 2 — 5 additional articles that are loosely related to AI infrastructure, "
+    "networking, storage, or cloud — less critical but still broadly relevant. "
+    "These ensure there is always fresh content even on slow news days. Set filler: true. "
+    "Do not overlap between groups. "
+    "Each object must have: "
+    "id (integer from 1, sequential across both groups), "
     "cat (one of: networking silicon hyperscaler storage competition vendor), "
     "impact (one of: high medium low), "
+    "filler (boolean true or false), "
     "title (rewritten headline max 90 chars no apostrophes), "
     "summary (2 sentences plain text no apostrophes), "
     "detail (3-5 sentences analysis plain text no apostrophes no markdown), "
@@ -232,15 +239,19 @@ SYSTEM_PROMPT = (
 
 def select_and_summarize(raw):
     today = datetime.date.today().isoformat()
-    # Send RSS articles first (higher quality), cap at 60 total
-    user_msg = f"Today is {today}. Select best 8-10:\n\n{json.dumps(raw[:60], indent=2)}"
+    user_msg = f"Today is {today}. Select top 8-10 plus 5 filler:\n\n{json.dumps(raw[:60], indent=2)}"
     text = call_claude(SYSTEM_PROMPT, user_msg, 4000)
     text = re.sub(r"^```json\s*", "", text, flags=re.MULTILINE)
     text = re.sub(r"^```\s*",     "", text, flags=re.MULTILINE)
     text = text.strip()
     try:
         articles = json.loads(text)
-        print(f"Claude selected {len(articles)} articles")
+        top    = [a for a in articles if not a.get("filler")]
+        filler = [a for a in articles if a.get("filler")]
+        print(f"Claude selected {len(top)} top + {len(filler)} filler = {len(articles)} total")
+        # Ensure filler flag is always present
+        for a in articles:
+            a.setdefault("filler", False)
         return articles
     except json.JSONDecodeError as e:
         print(f"JSON error: {e}\nRaw: {text[:400]}")
@@ -267,8 +278,9 @@ def escape_js(s):
 def build_articles_js(articles):
     lines = ["// ARTICLES_START", "const ARTICLES = ["]
     for a in articles:
+        filler_val = "true" if a.get("filler") else "false"
         lines.append("  {")
-        lines.append(f'    id: {a["id"]}, cat: "{a["cat"]}", impact: "{a["impact"]}",')
+        lines.append(f'    id: {a["id"]}, cat: "{a["cat"]}", impact: "{a["impact"]}", filler: {filler_val},')
         lines.append(f'    title: "{escape_js(a["title"])}",')
         lines.append(f'    summary: "{escape_js(a["summary"])}",')
         lines.append(f'    source: "{escape_js(a["source"])}", age: "{escape_js(a["age"])}",')
