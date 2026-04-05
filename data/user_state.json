@@ -131,6 +131,17 @@
       "detail": "Multi-model database capabilities reduce data pipeline complexity for AI applications that need relational graph and document data access. Spanner positioning for gen AI foundations reflects the importance of flexible data layers for AI applications. Customer proof points help validate Spanner for AI-adjacent database requirements.",
       "url": "https://cloud.google.com/blog/products/databases/customers-see-real-world-success-with-multi-model-spanner/",
       "age": "today"
+    },
+    "13": {
+      "readAt": 1775410592090,
+      "title": "Azure Event Grid Adds MQTT Message Ordering and Cross-Tenant Webhook Delivery",
+      "cat": "hyperscaler",
+      "source": "Azure Updates",
+      "impact": "low",
+      "summary": "Azure Event Grid announces new features including MQTT message ordering for in-order message delivery and cross-tenant webhook delivery for secure multi-tenant architectures. These capabilities help manage large-scale distributed systems.",
+      "detail": "Event-driven architectures underpin many AI inference and data pipeline systems where message ordering matters. Cross-tenant capabilities support complex enterprise deployments with multiple organizational boundaries. These foundational platform improvements benefit AI workloads that depend on reliable event processing.",
+      "url": "https://azure.microsoft.com/updates?id=492542",
+      "age": "today"
     }
   },
   "favorites": {}
