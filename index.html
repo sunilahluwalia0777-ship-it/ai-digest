@@ -632,76 +632,84 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "networking", impact: "medium",
-    title: "AWS Global Accelerator Now Integrated with Kubernetes Load Balancer Controller",
-    summary: "AWS Load Balancer Controller now supports AWS Global Accelerator through a declarative Kubernetes API. This integration can improve application performance by up to 60 percent for global users without leaving Kubernetes workflows.",
-    source: "AWS Networking", age: "3 days ago",
-    detail: "This enhancement brings AWS global network infrastructure directly into Kubernetes environments enabling simplified multi-region deployments. For GPU and TPU infrastructure teams this matters because AI inference workloads often require low-latency global distribution. The declarative API approach reduces operational complexity for teams managing distributed AI serving infrastructure. This positions AWS competitively against Google Clouds global load balancing capabilities for AI workloads.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/announcing-aws-global-accelerator-support-in-aws-load-balancer-controller-for-kubernetes/"
+    id: 1, cat: "competition", impact: "high",
+    title: "AWS Celebrates 20 Years of Cloud Innovation and AI Technology Leadership",
+    summary: "AWS marked its 20th anniversary highlighting two decades of ML and AI innovation that enabled developers to accomplish previously impossible tasks. The milestone reflects AWS position as the pioneering cloud provider since 2006.",
+    source: "AWS News Blog", age: "today",
+    detail: "This anniversary underscores AWS sustained competitive advantage through early market entry and continuous innovation. For Google Cloud the 20-year head start represents significant enterprise relationship depth and institutional knowledge that competitors must overcome. The celebration also signals AWS intent to leverage its historical leadership narrative in ongoing hyperscaler competition for AI workloads.",
+    url: "https://aws.amazon.com/blogs/aws/20-years-in-the-aws-cloud-how-time-flies/"
   },
   {
-    id: 2, cat: "competition", impact: "high",
-    title: "Meta KernelEvolve Agent Autonomously Optimizes AI Infrastructure Performance",
-    summary: "Meta unveiled KernelEvolve as part of their Ranking Engineer Agent system that autonomously optimizes low-level AI infrastructure. The system automatically improves kernel performance for ranking models without manual engineering intervention.",
-    source: "Meta Engineering", age: "2 days ago",
-    detail: "This represents a significant advancement in automated AI infrastructure optimization from a major hyperscaler competitor. KernelEvolve targets the same compute efficiency challenges that Google faces with TPU and GPU workloads. Meta is using AI agents to accelerate their own AI infrastructure development creating a compounding advantage. This autonomous optimization approach could reduce Metas infrastructure costs and time-to-deployment for new model architectures. Google should monitor this capability as it may influence customer expectations for automated infrastructure tuning.",
-    url: "https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/"
+    id: 2, cat: "networking", impact: "medium",
+    title: "AWS Launches VMware Network Integration for Amazon Elastic VMware Service",
+    summary: "AWS introduced networking guidance for running VMware Cloud Foundation directly within customer VPCs without application refactoring. The approach enables lift-and-shift VMware workload migration while leveraging modern AWS networking capabilities.",
+    source: "AWS Networking", age: "today",
+    detail: "This development is significant for enterprise customers evaluating cloud migration paths for virtualized workloads. AWS is making it easier for VMware-dependent organizations to migrate without major architectural changes which could accelerate competitive wins against Google Cloud VMware Engine. The networking integration reduces friction for large enterprise migrations where VMware investments are substantial.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/building-a-modern-network-for-your-vmware-workloads-using-amazon-elastic-vmware-service/"
   },
   {
-    id: 3, cat: "competition", impact: "high",
-    title: "Meta Scales Ads Models to LLM-Scale with Adaptive Ranking Architecture",
-    summary: "Meta introduced Adaptive Ranking Model architecture to serve LLM-scale recommendation models for ads while managing inference costs. The approach bends the inference scaling curve to make massive models economically viable.",
-    source: "Meta Engineering", age: "today",
-    detail: "Meta is pushing recommendation systems to LLM-scale complexity which has significant infrastructure implications. This requires substantial GPU compute capacity and efficient serving infrastructure that competes directly with cloud provider AI offerings. The adaptive architecture suggests sophisticated model serving optimizations that reduce cost per inference. This signals Metas continued heavy investment in custom AI infrastructure rather than relying on cloud providers. Understanding these techniques is valuable for Google Cloud as enterprise customers may seek similar capabilities.",
-    url: "https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/"
+    id: 3, cat: "networking", impact: "medium",
+    title: "Betsson Elevates Hybrid Connectivity Using AWS Cloud WAN Architecture",
+    summary: "Global gaming operator Betsson implemented AWS Cloud WAN to enhance hybrid connectivity across its multi-region infrastructure. The case study demonstrates enterprise-scale network transformation for latency-sensitive gaming workloads.",
+    source: "AWS Networking", age: "today",
+    detail: "This customer win showcases AWS ability to serve demanding real-time workloads requiring sophisticated hybrid networking. For Google Cloud networking teams this represents competitive intelligence on how AWS positions Cloud WAN for latency-critical applications. The gaming and betting vertical requires similar low-latency characteristics as AI inference workloads making these architectural patterns relevant.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-betsson-services-limited-elevated-aws-hybrid-connectivity-to-new-heights-with-aws-cloud-wan/"
   },
   {
     id: 4, cat: "storage", impact: "medium",
-    title: "AWS S3 Object Lock Now Scalable to Petabytes for Existing Data Protection",
-    summary: "AWS published guidance for applying immutable WORM storage protections to petabytes of existing S3 data. The approach addresses regulatory compliance and cyber resilience requirements at enterprise scale.",
-    source: "AWS Storage", age: "3 days ago",
-    detail: "This storage capability is increasingly relevant as AI training datasets grow to petabyte scale requiring data integrity guarantees. Organizations storing model weights checkpoints and training data need immutable storage for reproducibility and compliance. The ability to retroactively apply protection to existing data addresses a common customer pain point. This positions S3 strongly against Google Cloud Storage for regulated AI workloads in financial services and healthcare. Google should ensure comparable capabilities exist for large-scale immutable storage scenarios.",
-    url: "https://aws.amazon.com/blogs/storage/applying-amazon-s3-object-lock-at-scale-for-petabytes-of-existing-data/"
+    title: "AWS Storage Professional Reflects on 20 Years of Amazon S3 Evolution",
+    summary: "An AWS Hero chronicled the evolution of storage technology alongside Amazon S3 from its 2006 launch to current enterprise capabilities. The perspective highlights how cloud object storage transformed from novel concept to foundational infrastructure.",
+    source: "AWS Storage", age: "today",
+    detail: "S3 remains the gold standard for cloud object storage and this retrospective reinforces its market position. The emphasis on storage technology maturation from spinning disk to SSD and capacity growth from gigabytes to terabytes provides context for understanding enterprise storage requirements. Google Cloud Storage competes directly with S3 and understanding customer loyalty drivers is essential for competitive positioning.",
+    url: "https://aws.amazon.com/blogs/storage/20-years-of-amazon-s3-a-storage-professionals-journey-to-aws-hero/"
   },
   {
     id: 5, cat: "storage", impact: "medium",
-    title: "Azure NetApp Files Preview Adds QoS Enhancement for Hot and Cool Storage Tiers",
-    summary: "Azure NetApp Files is previewing automatic QoS adjustments for workloads using cool access on Premium and Ultra service levels. Throughput automatically adjusts as data moves between hot and cool storage tiers.",
-    source: "Azure Updates", age: "3 days ago",
-    detail: "This tiered storage optimization is relevant for AI workloads with mixed access patterns such as training data and archived model checkpoints. The automatic QoS adjustment reduces manual tuning overhead for storage administrators. Premium and Ultra tiers suggest high-performance NFS workloads that compete with Google Filestore for AI and HPC use cases. Azure continues to enhance enterprise file storage capabilities that appeal to customers migrating from on-premises NetApp infrastructure. This incremental improvement maintains Azures competitive position in high-performance file storage.",
-    url: "https://azure.microsoft.com/updates?id=559504"
+    title: "AWS Introduces Automated Malware Scanning for FSx Windows File Server",
+    summary: "Amazon combined FSx for Windows File Server with GuardDuty S3 protection to enable automated malware scanning for enterprise file storage. The integration addresses critical security requirements for Windows-based file sharing in cloud environments.",
+    source: "AWS Storage", age: "today",
+    detail: "This security enhancement makes AWS file storage more attractive for enterprises with strict compliance requirements. The native integration between storage and security services reduces operational complexity compared to third-party solutions. For Google Cloud Filestore this represents a competitive feature gap that security-conscious enterprises may factor into platform decisions.",
+    url: "https://aws.amazon.com/blogs/storage/automated-malware-scanning-for-amazon-fsx-for-windows-file-server-with-guardduty-protection-for-amazon-s3/"
   },
   {
-    id: 6, cat: "networking", impact: "medium",
-    title: "AWS VPC Block Public Access Deployment Now Spans Full AWS Organizations",
-    summary: "AWS released guidance for centrally deploying VPC Block Public Access across entire AWS Organizations. The approach addresses enterprise security challenges of managing consistent network policies across hundreds of accounts.",
-    source: "AWS Networking", age: "3 days ago",
-    detail: "Centralized network security controls are critical for enterprises running distributed AI infrastructure across multiple accounts. This capability simplifies compliance enforcement for organizations with strict data governance requirements around AI workloads. The multi-account approach reflects how large enterprises structure cloud deployments for GPU clusters and training infrastructure. Google Cloud should ensure comparable organizational policy capabilities exist for VPC security controls. This enhancement reduces operational overhead for security teams managing large cloud footprints.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/deploy-vpc-block-public-access-across-aws-organizations/"
+    id: 6, cat: "storage", impact: "low",
+    title: "AWS Launches Automatic S3 File Decompression Using Step Functions",
+    summary: "AWS released guidance for automatically decompressing compressed files in S3 using Step Functions orchestration. The solution addresses scenarios where organizations process thousands of compressed files daily from partners.",
+    source: "AWS Storage", age: "today",
+    detail: "While not directly infrastructure-related this automation pattern reflects AWS focus on reducing operational overhead for data-intensive workloads. The ability to efficiently process compressed datasets at scale supports AI and ML pipelines that depend on large data ingestion. Similar automation capabilities in Google Cloud Storage workflows could improve competitive positioning.",
+    url: "https://aws.amazon.com/blogs/storage/automatically-decompress-files-in-amazon-s3-using-aws-step-functions/"
   },
   {
-    id: 7, cat: "hyperscaler", impact: "low",
-    title: "Microsoft Opens Denmark Cloud Region for Local Data Residency and Low Latency",
-    summary: "Microsoft Azure launched a new cloud region in Denmark East to serve Nordic customers with local data residency. The region supports digital transformation and AI innovation with reduced latency for Danish enterprises.",
-    source: "Azure Updates", age: "3 days ago",
-    detail: "Regional expansion continues across hyperscalers as data sovereignty requirements drive local infrastructure investments. Denmark adds to Azures European footprint which is relevant for AI workloads requiring GDPR-compliant data processing. The focus on AI innovation suggests GPU and accelerator availability in the new region. Google Cloud should monitor regional competitive dynamics in Nordic markets where Azure is establishing presence. Local regions reduce latency for inference workloads serving European customers.",
-    url: "https://azure.microsoft.com/updates?id=559406"
+    id: 7, cat: "hyperscaler", impact: "medium",
+    title: "Azure Advances Agentic AI Integration Across Microsoft Database Portfolio",
+    summary: "Microsoft announced deeper AI integration across Azure SQL and its broader database estate to support agentic AI workloads. The unified data platform approach brings AI capabilities directly into database experiences.",
+    source: "Azure Blog", age: "2 days ago",
+    detail: "This strategic move positions Azure databases as AI-native infrastructure rather than separate compute and storage tiers. The agentic AI focus signals Microsoft belief that autonomous AI agents will drive next-generation workloads requiring tight database integration. Google Cloud must consider similar unified approaches for Spanner and other database services to remain competitive in AI-driven application architectures.",
+    url: "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/"
   },
   {
-    id: 8, cat: "competition", impact: "medium",
-    title: "Microsoft Advances Kubernetes Leadership at KubeCon Europe with New Announcements",
-    summary: "Microsoft announced Kubernetes and open-source enhancements at KubeCon CloudNativeCon Europe 2026 in Amsterdam. The updates bring operational maturity improvements for modern workload demands.",
-    source: "Azure Blog", age: "1 day ago",
-    detail: "Kubernetes remains the dominant orchestration platform for AI infrastructure including GPU scheduling and distributed training. Microsofts continued investment in AKS and open-source tooling maintains their competitive position for containerized AI workloads. The focus on operational maturity addresses enterprise concerns about running production AI systems. Google Cloud originated Kubernetes but must continue innovating on GKE to maintain leadership. These announcements likely include features relevant to machine learning workload management.",
-    url: "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/"
+    id: 8, cat: "storage", impact: "medium",
+    title: "Azure Data Box Now Provides Automatic NIST-Compliant Secure Erasure Certificates",
+    summary: "Azure Data Box added automatic generation of downloadable Secure Erasure Certificates for completed orders verifying NIST 800-88 Rev 2 compliance. The feature addresses enterprise data governance requirements for physical data transfer devices.",
+    source: "Azure Updates", age: "today",
+    detail: "This compliance enhancement is significant for regulated industries requiring auditable data destruction documentation. Physical data transfer services like Data Box remain important for large-scale migrations where network transfer is impractical. Google Transfer Appliance competes in this space and automatic compliance documentation could be a differentiating feature for enterprise customers.",
+    url: "https://azure.microsoft.com/updates?id=559772"
   },
   {
-    id: 9, cat: "competition", impact: "medium",
-    title: "Meta Ranking Engineer Agent Autonomously Manages Full ML Experiment Lifecycle",
-    summary: "Meta detailed how their Ranking Engineer Agent autonomously generates hypotheses launches training jobs and debugs failures for ads models. The system reduces manual intervention across the end-to-end ML lifecycle.",
-    source: "Meta Engineering", age: "3 days ago",
-    detail: "This autonomous ML experimentation capability represents significant automation of traditionally manual ML engineering tasks. The system handles hypothesis generation training execution and failure debugging without human intervention. For infrastructure teams this means higher utilization of GPU clusters as experiments run continuously. Meta is building internal tooling that surpasses what most cloud providers offer for ML workflow automation. This capability could influence enterprise expectations for managed ML platform features from Google Cloud.",
-    url: "https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/"
+    id: 9, cat: "vendor", impact: "medium",
+    title: "Meta Continues AI-Driven Cement and Concrete Optimization Research",
+    summary: "Meta released a new Bayesian Optimization AI model for designing concrete mixes with focus on sustainability and US-produced materials. The announcement coincides with the 2026 American Concrete Institute Spring Convention.",
+    source: "Meta Engineering", age: "1 day ago",
+    detail: "While focused on construction materials this demonstrates Metas continued investment in AI for physical infrastructure optimization. The emphasis on US-produced materials aligns with domestic manufacturing priorities and could influence data center construction approaches. Meta as a major hyperscaler customer and competitor drives significant infrastructure demand making their construction research relevant to Google infrastructure planning.",
+    url: "https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/"
+  },
+  {
+    id: 10, cat: "vendor", impact: "high",
+    title: "NVIDIA Accelerates Google Gemma 4 for Local Agentic AI on RTX Hardware",
+    summary: "NVIDIA announced optimizations enabling Google Gemma 4 models to run efficiently on local RTX hardware for on-device agentic AI applications. The collaboration extends AI innovation from cloud to edge devices.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This partnership between Google and NVIDIA for Gemma 4 optimization demonstrates continued strategic alignment on AI model deployment. The focus on small fast omni-capable models for local execution addresses the growing demand for edge AI inference. For Google Cloud this validates the Gemma model family strategy while NVIDIA RTX optimization ensures broad hardware compatibility beyond data center GPUs.",
+    url: "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/"
   },
 ];
 // ARTICLES_END
@@ -824,7 +832,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AWS Global Accelerator integration with Kubernetes Load Balancer Controller represents a direct competitive threat to Google Cloud networking, offering 60 percent performance improvements through declarative APIs that match the developer experience Google has championed with GKE. Meta is aggressively automating AI infrastructure optimization through KernelEvolve and Ranking Engineer Agent, autonomously tuning kernel performance and managing full ML experiment lifecycles for ads models at LLM scale, signaling a shift toward self-optimizing infrastructure that reduces engineering overhead. No significant supply chain developments emerged this cycle, though Azure NetApp Files QoS enhancements for tiered storage and AWS S3 petabyte-scale object lock indicate continued hyperscaler investment in enterprise storage features that could influence customer expectations for Google Cloud Storage capabilities.";
+const STATIC_BRIEF = "AWS networking momentum warrants attention as the VMware VPC integration enables frictionless lift-and-shift migrations without refactoring, while the Betsson Cloud WAN case study demonstrates enterprise validation for latency-sensitive workloads that could compete directly with Google Cloud networking solutions. Microsoft is positioning Azure databases as the unified foundation for agentic AI workloads, signaling a strategic bet that data proximity will be the key differentiator for next-generation AI applications rather than standalone compute or storage services. NVIDIA optimization of Google Gemma 4 for local RTX hardware represents a positive ecosystem signal, extending Googles model reach to edge deployments while reinforcing the cloud-to-edge AI infrastructure pipeline that benefits hyperscaler training and inference demand.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
