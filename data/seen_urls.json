@@ -56,5 +56,19 @@
   "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/": "2026-04-05",
   "https://azure.microsoft.com/updates?id=559772": "2026-04-05",
   "https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/": "2026-04-05",
-  "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/": "2026-04-05"
+  "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/": "2026-04-05",
+  "https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/": "2026-04-05",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-flat-rate-pricing-plans-new-features-and-expanded-capabilities/": "2026-04-05",
+  "https://aws.amazon.com/blogs/storage/secure-sftp-file-sharing-with-aws-transfer-family-amazon-fsx-for-netapp-ontap-and-s3-access-points/": "2026-04-05",
+  "https://blogs.nvidia.com/blog/nvidia-at-kubecon-2026/": "2026-04-05",
+  "https://blogs.nvidia.com/blog/secure-autonomous-ai-agents-openshell/": "2026-04-05",
+  "https://blogs.nvidia.com/blog/telecom-ai-grids-inference/": "2026-04-05",
+  "https://azure.microsoft.com/updates?id=559535": "2026-04-05",
+  "https://cloud.google.com/blog/products/ai-machine-learning/veo-3-1-lite-and-a-new-veo-upscaling-capability-on-vertex-ai/": "2026-04-05",
+  "https://blogs.nvidia.com/blog/energy-efficiency-ai-factories-grid/": "2026-04-05",
+  "https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/": "2026-04-05",
+  "https://aws.amazon.com/blogs/storage/monitoring-amazon-efs-kpis-using-aws-cloudwatch-metrics/": "2026-04-05",
+  "https://cloud.google.com/blog/products/databases/customers-see-real-world-success-with-multi-model-spanner/": "2026-04-05",
+  "https://azure.microsoft.com/updates?id=492542": "2026-04-05",
+  "https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/": "2026-04-05"
 }
