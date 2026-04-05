@@ -166,7 +166,22 @@
   .weekly-story-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
   .weekly-story-why { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-  /* BRIEF MODAL */
+  /* FILLER ARTICLES */
+  .filler-divider {
+    display: flex; align-items: center; gap: 8px;
+    margin: 16px 0 10px;
+  }
+  .filler-divider-line { flex: 1; height: 1px; background: var(--border); }
+  .filler-divider-label {
+    font-family: var(--mono); font-size: 9px; color: var(--muted);
+    letter-spacing: 0.1em; white-space: nowrap;
+  }
+  .article-card.is-filler {
+    opacity: 0.75;
+    border-style: dashed;
+  }
+
+
   .brief-overlay {
     display: none; position: fixed; inset: 0;
     background: rgba(0,0,0,0.5); z-index: 200; align-items: flex-end; justify-content: center;
@@ -632,85 +647,29 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high",
-    title: "AWS Celebrates 20 Years of Cloud Innovation and AI Technology Leadership",
-    summary: "AWS marked its 20th anniversary highlighting two decades of ML and AI innovation that enabled developers to accomplish previously impossible tasks. The milestone reflects AWS position as the pioneering cloud provider since 2006.",
-    source: "AWS News Blog", age: "today",
-    detail: "This anniversary underscores AWS sustained competitive advantage through early market entry and continuous innovation. For Google Cloud the 20-year head start represents significant enterprise relationship depth and institutional knowledge that competitors must overcome. The celebration also signals AWS intent to leverage its historical leadership narrative in ongoing hyperscaler competition for AI workloads.",
-    url: "https://aws.amazon.com/blogs/aws/20-years-in-the-aws-cloud-how-time-flies/"
+    id: 1, cat: "networking", impact: "high",
+    title: "Broadcom begins volume shipments of 102.4 Tbps Tomahawk 6 AI switch",
+    summary: "Broadcom beat competitors by at least two quarters in the 100T era, enabling interconnection of up to 1M AI accelerators. Ethernet gaining decisive edge over InfiniBand in hyperscaler backends.",
+    source: "FinancialContent / Broadcom", age: "4 days ago",
+    detail: "The Tomahawk 6 (TH6) doubles the throughput of prior-gen hardware and is essential for training next-gen LLMs. Broadcoms networking division now accounts for nearly 40% of total revenue. AI-related backlog exceeds $73B. NVIDIAs competing Spectrum-X1600 Ethernet switch is not expected until H2 2026, giving Broadcom a critical window.",
+    url: "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-26-the-great-ethernet-pivot-broadcom-begins-volume-shipments-of-industry-first-1024-tbps-ai-switch"
   },
   {
-    id: 2, cat: "networking", impact: "medium",
-    title: "AWS Launches VMware Network Integration for Amazon Elastic VMware Service",
-    summary: "AWS introduced networking guidance for running VMware Cloud Foundation directly within customer VPCs without application refactoring. The approach enables lift-and-shift VMware workload migration while leveraging modern AWS networking capabilities.",
-    source: "AWS Networking", age: "today",
-    detail: "This development is significant for enterprise customers evaluating cloud migration paths for virtualized workloads. AWS is making it easier for VMware-dependent organizations to migrate without major architectural changes which could accelerate competitive wins against Google Cloud VMware Engine. The networking integration reduces friction for large enterprise migrations where VMware investments are substantial.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/building-a-modern-network-for-your-vmware-workloads-using-amazon-elastic-vmware-service/"
+    id: 2, cat: "silicon", impact: "high",
+    title: "Google TPU v7 on track for 36,000 racks — 10,000+ optical circuit switches required",
+    summary: "Each TPU v7 rack holds 64 chips and clusters of 144 racks can synchronously operate 9,216 TPUs. Per-chip power runs 850-1,000W putting rack TDP at 80-100kW.",
+    source: "Investing.com / Fubon Research", age: "3 months ago",
+    detail: "Fubon supply chain analysis places total TPU v7 racks at ~36,000 units in 2026 with ~3.1-3.2M total TPU units constrained by advanced packaging capacity. Google may need 10,000+ OCS units. TPU v7 is being sold externally including to Anthropic and Meta. Volumes expected to rise sharply in 2027 if packaging capacity expands.",
+    url: "https://www.investing.com/news/stock-market-news/2026-tpu-server-outlook-google-takes-swing-at-the-king-4423670"
   },
   {
-    id: 3, cat: "networking", impact: "medium",
-    title: "Betsson Elevates Hybrid Connectivity Using AWS Cloud WAN Architecture",
-    summary: "Global gaming operator Betsson implemented AWS Cloud WAN to enhance hybrid connectivity across its multi-region infrastructure. The case study demonstrates enterprise-scale network transformation for latency-sensitive gaming workloads.",
-    source: "AWS Networking", age: "today",
-    detail: "This customer win showcases AWS ability to serve demanding real-time workloads requiring sophisticated hybrid networking. For Google Cloud networking teams this represents competitive intelligence on how AWS positions Cloud WAN for latency-critical applications. The gaming and betting vertical requires similar low-latency characteristics as AI inference workloads making these architectural patterns relevant.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-betsson-services-limited-elevated-aws-hybrid-connectivity-to-new-heights-with-aws-cloud-wan/"
-  },
-  {
-    id: 4, cat: "storage", impact: "medium",
-    title: "AWS Storage Professional Reflects on 20 Years of Amazon S3 Evolution",
-    summary: "An AWS Hero chronicled the evolution of storage technology alongside Amazon S3 from its 2006 launch to current enterprise capabilities. The perspective highlights how cloud object storage transformed from novel concept to foundational infrastructure.",
-    source: "AWS Storage", age: "today",
-    detail: "S3 remains the gold standard for cloud object storage and this retrospective reinforces its market position. The emphasis on storage technology maturation from spinning disk to SSD and capacity growth from gigabytes to terabytes provides context for understanding enterprise storage requirements. Google Cloud Storage competes directly with S3 and understanding customer loyalty drivers is essential for competitive positioning.",
-    url: "https://aws.amazon.com/blogs/storage/20-years-of-amazon-s3-a-storage-professionals-journey-to-aws-hero/"
-  },
-  {
-    id: 5, cat: "storage", impact: "medium",
-    title: "AWS Introduces Automated Malware Scanning for FSx Windows File Server",
-    summary: "Amazon combined FSx for Windows File Server with GuardDuty S3 protection to enable automated malware scanning for enterprise file storage. The integration addresses critical security requirements for Windows-based file sharing in cloud environments.",
-    source: "AWS Storage", age: "today",
-    detail: "This security enhancement makes AWS file storage more attractive for enterprises with strict compliance requirements. The native integration between storage and security services reduces operational complexity compared to third-party solutions. For Google Cloud Filestore this represents a competitive feature gap that security-conscious enterprises may factor into platform decisions.",
-    url: "https://aws.amazon.com/blogs/storage/automated-malware-scanning-for-amazon-fsx-for-windows-file-server-with-guardduty-protection-for-amazon-s3/"
-  },
-  {
-    id: 6, cat: "storage", impact: "low",
-    title: "AWS Launches Automatic S3 File Decompression Using Step Functions",
-    summary: "AWS released guidance for automatically decompressing compressed files in S3 using Step Functions orchestration. The solution addresses scenarios where organizations process thousands of compressed files daily from partners.",
-    source: "AWS Storage", age: "today",
-    detail: "While not directly infrastructure-related this automation pattern reflects AWS focus on reducing operational overhead for data-intensive workloads. The ability to efficiently process compressed datasets at scale supports AI and ML pipelines that depend on large data ingestion. Similar automation capabilities in Google Cloud Storage workflows could improve competitive positioning.",
-    url: "https://aws.amazon.com/blogs/storage/automatically-decompress-files-in-amazon-s3-using-aws-step-functions/"
-  },
-  {
-    id: 7, cat: "hyperscaler", impact: "medium",
-    title: "Azure Advances Agentic AI Integration Across Microsoft Database Portfolio",
-    summary: "Microsoft announced deeper AI integration across Azure SQL and its broader database estate to support agentic AI workloads. The unified data platform approach brings AI capabilities directly into database experiences.",
-    source: "Azure Blog", age: "2 days ago",
-    detail: "This strategic move positions Azure databases as AI-native infrastructure rather than separate compute and storage tiers. The agentic AI focus signals Microsoft belief that autonomous AI agents will drive next-generation workloads requiring tight database integration. Google Cloud must consider similar unified approaches for Spanner and other database services to remain competitive in AI-driven application architectures.",
-    url: "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/"
-  },
-  {
-    id: 8, cat: "storage", impact: "medium",
-    title: "Azure Data Box Now Provides Automatic NIST-Compliant Secure Erasure Certificates",
-    summary: "Azure Data Box added automatic generation of downloadable Secure Erasure Certificates for completed orders verifying NIST 800-88 Rev 2 compliance. The feature addresses enterprise data governance requirements for physical data transfer devices.",
-    source: "Azure Updates", age: "today",
-    detail: "This compliance enhancement is significant for regulated industries requiring auditable data destruction documentation. Physical data transfer services like Data Box remain important for large-scale migrations where network transfer is impractical. Google Transfer Appliance competes in this space and automatic compliance documentation could be a differentiating feature for enterprise customers.",
-    url: "https://azure.microsoft.com/updates?id=559772"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium",
-    title: "Meta Continues AI-Driven Cement and Concrete Optimization Research",
-    summary: "Meta released a new Bayesian Optimization AI model for designing concrete mixes with focus on sustainability and US-produced materials. The announcement coincides with the 2026 American Concrete Institute Spring Convention.",
-    source: "Meta Engineering", age: "1 day ago",
-    detail: "While focused on construction materials this demonstrates Metas continued investment in AI for physical infrastructure optimization. The emphasis on US-produced materials aligns with domestic manufacturing priorities and could influence data center construction approaches. Meta as a major hyperscaler customer and competitor drives significant infrastructure demand making their construction research relevant to Google infrastructure planning.",
-    url: "https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/"
-  },
-  {
-    id: 10, cat: "vendor", impact: "high",
-    title: "NVIDIA Accelerates Google Gemma 4 for Local Agentic AI on RTX Hardware",
-    summary: "NVIDIA announced optimizations enabling Google Gemma 4 models to run efficiently on local RTX hardware for on-device agentic AI applications. The collaboration extends AI innovation from cloud to edge devices.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This partnership between Google and NVIDIA for Gemma 4 optimization demonstrates continued strategic alignment on AI model deployment. The focus on small fast omni-capable models for local execution addresses the growing demand for edge AI inference. For Google Cloud this validates the Gemma model family strategy while NVIDIA RTX optimization ensures broad hardware compatibility beyond data center GPUs.",
-    url: "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/"
-  },
+    id: 3, cat: "hyperscaler", impact: "high",
+    title: "Hyperscaler 2026 capex races past $700B — AWS leads at $200B, Google at $175-185B",
+    summary: "Amazon projects $200B in 2026 up from $131B. Google $175-185B up from $91B. Microsoft reached $80B in unfulfilled Azure backlog due to power constraints alone.",
+    source: "TechCrunch / Futurum Research", age: "1 month ago",
+    detail: "Roughly 75% of $600B+ hyperscaler capex is directly tied to AI infrastructure. AWS is quadrupling US capacity from 3GW to 12GW. Meta Louisiana Hyperion campus is a 2,250-acre $27B joint venture delivering 2GW scaling to 5GW. Hyperscalers collectively issued $100B in bonds in 2026 to fund AI capex.",
+    url: "https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/"
+  }
 ];
 // ARTICLES_END
 
@@ -734,7 +693,7 @@ function cardHTML(a, mode) {
   const cta = mode === 'fav' ? 'VIEW BRIEF →' : mode === 'read' ? 'VIEW AGAIN →' : 'READ BRIEF →';
 
   return `
-    <div class="article-card" onclick="openBrief(${a.id})">
+    <div class="article-card${a.filler ? ' is-filler' : ''}" onclick="openBrief(${a.id})">
       <div class="card-meta">
         <span class="cat-pill cat-${a.cat}">${a.cat}</span>
         <span class="source-tag">${a.source}</span>
@@ -758,15 +717,40 @@ function filterArticles(cat, btn) {
 }
 
 function renderArticles() {
-  const unread = ARTICLES.filter(a => !STATE.read[a.id]);
-  const filtered = currentFilter === 'all' ? unread : unread.filter(a => a.cat === currentFilter);
+  const readMap = STATE.read || {};
+  const allUnread = ARTICLES.filter(a => !readMap[a.id]);
+  const top    = allUnread.filter(a => !a.filler);
+  const filler = allUnread.filter(a => a.filler);
+
+  // Apply category filter to top articles only
+  const filteredTop = currentFilter === 'all' ? top : top.filter(a => a.cat === currentFilter);
+
   const c = document.getElementById('articles-container');
-  if (!filtered.length) {
-    const allDone = unread.length === 0;
-    c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">${allDone ? '✓' : '○'}</div><div class="empty-state-title">${allDone ? 'All caught up!' : 'Nothing in this category'}</div><div>${allDone ? 'All stories are in your Read tab.' : 'Try a different filter.'}</div></div>`;
+
+  if (!filteredTop.length && !filler.length) {
+    c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">✓</div><div class="empty-state-title">All caught up!</div><div>All stories are in your Read tab.</div></div>`;
     return;
   }
-  c.innerHTML = filtered.map(a => cardHTML(a, 'feed')).join('');
+
+  if (!filteredTop.length && currentFilter !== 'all') {
+    c.innerHTML = `<div class="empty-state"><div class="empty-state-icon">○</div><div class="empty-state-title">Nothing in this category</div><div>Try a different filter.</div></div>`;
+    return;
+  }
+
+  let html = filteredTop.map(a => cardHTML(a, 'feed')).join('');
+
+  // Always show filler in ALL view, at the bottom after a divider
+  if (filler.length && currentFilter === 'all') {
+    html += `
+      <div class="filler-divider">
+        <div class="filler-divider-line"></div>
+        <span class="filler-divider-label">ALSO TODAY</span>
+        <div class="filler-divider-line"></div>
+      </div>`;
+    html += filler.map(a => cardHTML(a, 'feed')).join('');
+  }
+
+  c.innerHTML = html;
 }
 
 function renderReadTab() {
@@ -832,7 +816,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AWS networking momentum warrants attention as the VMware VPC integration enables frictionless lift-and-shift migrations without refactoring, while the Betsson Cloud WAN case study demonstrates enterprise validation for latency-sensitive workloads that could compete directly with Google Cloud networking solutions. Microsoft is positioning Azure databases as the unified foundation for agentic AI workloads, signaling a strategic bet that data proximity will be the key differentiator for next-generation AI applications rather than standalone compute or storage services. NVIDIA optimization of Google Gemma 4 for local RTX hardware represents a positive ecosystem signal, extending Googles model reach to edge deployments while reinforcing the cloud-to-edge AI infrastructure pipeline that benefits hyperscaler training and inference demand.";
+const STATIC_BRIEF = "Broadcom TH6 volume shipment validates Ethernet as the dominant fabric for million-XPU clusters and accelerates OCS sourcing for TPU v7. Meta dual hedging with Google TPU and AMD Helios signals growing customer confidence in TPU inference economics. Watch the HBM and NAND supply squeeze as rising storage prices could pressure Q2-Q3 TPU system BOM and checkpoint storage budgets.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
