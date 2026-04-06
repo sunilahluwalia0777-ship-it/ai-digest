@@ -258,9 +258,11 @@ def select_and_summarize(raw):
         raise
 
 def generate_brief(articles):
+    # Only use top (non-filler) articles for the brief
+    top = [a for a in articles if not a.get("filler")]
     summaries = "\n".join(
-        f"- [{a['cat'].upper()}] {a['title']}: {a['summary']}"
-        for a in articles
+        f"- [{a.get('cat','').upper()}] {a.get('title','')}: {a.get('summary','')}"
+        for a in top
     )
     system = ("Concise AI infra analyst for Google PM owning Networking and Storage "
               "for GPU/TPU. No apostrophes in output.")
@@ -280,12 +282,12 @@ def build_articles_js(articles):
     for a in articles:
         filler_val = "true" if a.get("filler") else "false"
         lines.append("  {")
-        lines.append(f'    id: {a["id"]}, cat: "{a["cat"]}", impact: "{a["impact"]}", filler: {filler_val},')
-        lines.append(f'    title: "{escape_js(a["title"])}",')
-        lines.append(f'    summary: "{escape_js(a["summary"])}",')
-        lines.append(f'    source: "{escape_js(a["source"])}", age: "{escape_js(a["age"])}",')
-        lines.append(f'    detail: "{escape_js(a["detail"])}",')
-        lines.append(f'    url: "{escape_js(a["url"])}"')
+        lines.append(f'    id: {a.get("id",0)}, cat: "{a.get("cat","vendor")}", impact: "{a.get("impact","low")}", filler: {filler_val},')
+        lines.append(f'    title: "{escape_js(a.get("title",""))}",')
+        lines.append(f'    summary: "{escape_js(a.get("summary",""))}",')
+        lines.append(f'    source: "{escape_js(a.get("source",""))}", age: "{escape_js(a.get("age","today"))}",')
+        lines.append(f'    detail: "{escape_js(a.get("detail", a.get("summary","")))}",')
+        lines.append(f'    url: "{escape_js(a.get("url",""))}"')
         lines.append("  },")
     lines.append("];")
     lines.append("// ARTICLES_END")
