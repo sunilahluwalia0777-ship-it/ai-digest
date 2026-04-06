@@ -70,5 +70,19 @@
   "https://aws.amazon.com/blogs/storage/monitoring-amazon-efs-kpis-using-aws-cloudwatch-metrics/": "2026-04-05",
   "https://cloud.google.com/blog/products/databases/customers-see-real-world-success-with-multi-model-spanner/": "2026-04-05",
   "https://azure.microsoft.com/updates?id=492542": "2026-04-05",
-  "https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/": "2026-04-05"
+  "https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/": "2026-04-05",
+  "https://cloud.google.com/blog/topics/systems/ironwood-tpus-deliver-37x-carbon-efficiency-gains/": "2026-04-06",
+  "https://nvidianews.nvidia.com/news/nvidia-ai-ecosystem-expands-as-marvell-joins-forces-through-nvlink-fusion": "2026-04-06",
+  "https://blogs.arista.com/blog/arista-extends-dc-ai-leadership-with-new-platforms-higher-speed": "2026-04-06",
+  "https://blogs.arista.com/blog/powering-ai-centers-with-ai-spines": "2026-04-06",
+  "https://blogs.arista.com/blog/ai-datacenters-are-reshaping-the-optics-industry": "2026-04-06",
+  "https://nvidianews.nvidia.com/news/nvidia-and-emerald-ai-join-leading-energy-companies-to-pioneer-flexible-ai-factories-as-grid-assets": "2026-04-06",
+  "https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/": "2026-04-06",
+  "https://azure.microsoft.com/updates?id=559899": "2026-04-06",
+  "https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/": "2026-04-06",
+  "https://aws.amazon.com/blogs/storage/aws-storage-at-reinvent-2025/": "2026-04-06",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/migrate-amazon-cloudfront-public-origins-to-private-vpc-origins/": "2026-04-06",
+  "https://azure.microsoft.com/updates?id=537234": "2026-04-06",
+  "https://blogs.nvidia.com/blog/national-robotics-week-2026/": "2026-04-06",
+  "https://cloud.google.com/blog/topics/developers-practitioners/activating-your-data-layer-for-production-ready-ai/": "2026-04-06"
 }
