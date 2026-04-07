@@ -647,116 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Ironwood TPUs Deliver 3.7x Carbon Efficiency Gains Over Previous Generation",
-    summary: "Google released updated environmental metrics for its seventh-generation Ironwood TPU showing approximately 3.7x improvement in Compute Carbon Intensity compared to earlier chips. The company continues its transparency initiative on lifetime emissions from manufacturing through data center operations.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This announcement is significant for Google Cloud infrastructure strategy as it demonstrates measurable sustainability improvements in custom AI silicon. The 3.7x CCI improvement positions Ironwood competitively against NVIDIA GPUs on environmental metrics which increasingly matter for enterprise procurement decisions. For a PM owning TPU infrastructure this validates the investment thesis in custom accelerators and provides differentiation against hyperscaler competitors who rely primarily on third-party silicon. The transparency on lifetime emissions could become a competitive lever as sustainability reporting requirements tighten globally.",
-    url: "https://cloud.google.com/blog/topics/systems/ironwood-tpus-deliver-37x-carbon-efficiency-gains/"
+    id: 1, cat: "networking", impact: "high", filler: false,
+    title: "Arista Details Scale-Up Ethernet Strategy for AI Infrastructure",
+    summary: "Arista has published technical details on its scale-up Ethernet approach designed specifically for AI cluster connectivity. The architecture addresses the unique requirements of GPU-to-GPU communication in large training environments.",
+    source: "Arista Blog", age: "2 days ago",
+    detail: "This announcement signals Aristas aggressive positioning against InfiniBand in the AI networking space. Scale-up Ethernet directly competes with NVIDIAs preferred InfiniBand interconnect for tightly-coupled GPU clusters. The timing aligns with growing enterprise interest in Ethernet-based alternatives that leverage existing network operations expertise. For Google infrastructure teams this represents both a competitive threat and potential opportunity for differentiated offerings.",
+    url: "https://blogs.arista.com/blog/the-sun-rises-on-scale-up-ethernet"
   },
   {
     id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA and Marvell Partner on NVLink Fusion to Expand AI Factory Ecosystem",
-    summary: "NVIDIA and Marvell announced a strategic partnership connecting Marvell to NVIDIA AI factory and AI-RAN ecosystems through NVLink Fusion technology. The collaboration offers customers building on NVIDIA architectures greater choice and flexibility in developing next-generation infrastructure.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This partnership directly impacts Google Cloud competitive positioning as Marvell gains deeper integration into the NVIDIA ecosystem that powers competing hyperscalers. NVLink Fusion enables tighter coupling between Marvell networking silicon and NVIDIA compute which could accelerate adoption at AWS Azure and other clouds. For Google the question becomes whether similar partnerships or TPU-native networking alternatives can match this integration depth. This also signals NVIDIAs strategy to create a more open ecosystem while maintaining control of the compute layer potentially complicating Googles differentiated TPU approach.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-ai-ecosystem-expands-as-marvell-joins-forces-through-nvlink-fusion"
+    title: "Cisco Unveils Nexus Hyperfabric AI-Ready Platform at NVIDIA GTC",
+    summary: "Cisco launched Nexus Hyperfabric at NVIDIA GTC as a cloud-managed platform unifying compute networking and storage for AI workloads. The solution targets organizations scaling AI from pilot to production deployments.",
+    source: "Cisco Data Center Blog", age: "1 day ago",
+    detail: "Ciscos Hyperfabric represents a significant competitive move combining their networking dominance with NVIDIA partnership. The cloud-managed approach directly challenges hyperscaler managed offerings by bringing similar simplicity to on-premises AI infrastructure. This integrated stack approach could appeal to enterprises preferring single-vendor solutions over hyperscaler lock-in. Google should monitor adoption rates among enterprises evaluating hybrid AI deployment options.",
+    url: "https://blogs.cisco.com/datacenter/accelerating-ai-innovation-with-cisco-nexus-hyperfabric-solutions/"
   },
   {
-    id: 3, cat: "networking", impact: "high", filler: false,
-    title: "Arista Launches R4 Platform Family with 3.2 Tbps Port Speeds for AI Data Centers",
-    summary: "Arista announced its next-generation R4 product family featuring platforms with port speeds up to 3.2 Tbps anchored by its EOS operating system. The launch addresses growing demand for high bandwidth infrastructure driven by cloud services and generative AI expansion.",
-    source: "Arista Blog", age: "today",
-    detail: "The R4 platform represents a significant leap in network capacity that directly addresses AI cluster interconnect requirements. At 3.2 Tbps port speeds Arista is positioning to support the scale-out networking demands of large GPU and TPU deployments where east-west bandwidth is critical for distributed training workloads. For Google Cloud infrastructure planning this sets the bar for what enterprise customers will expect from networking vendors. The timing suggests Arista is targeting the next wave of AI data center buildouts and Google must evaluate whether its internal networking solutions or Arista partnership paths align with these capabilities.",
-    url: "https://blogs.arista.com/blog/arista-extends-dc-ai-leadership-with-new-platforms-higher-speed"
+    id: 3, cat: "vendor", impact: "high", filler: false,
+    title: "Cisco Integrates NVIDIA BlueField DPUs for AI Infrastructure Security",
+    summary: "Cisco announced hardware-accelerated stateful segmentation for AI servers using NVIDIA BlueField DPUs. The solution delivers security without impacting GPU or CPU utilization in AI clusters.",
+    source: "Cisco Data Center Blog", age: "1 day ago",
+    detail: "This integration addresses a critical pain point in AI infrastructure where security overhead traditionally competes with compute resources. By offloading security functions to BlueField DPUs Cisco enables zero-trust microsegmentation at line rate. The partnership deepens Ciscos relationship with NVIDIA and positions them as the security layer for GPU-accelerated data centers. This could influence enterprise decisions when comparing hyperscaler AI security versus on-premises options.",
+    url: "https://blogs.cisco.com/datacenter/cisco-secures-ai-infrastructure-with-nvidia-bluefield-dpus/"
   },
   {
-    id: 4, cat: "networking", impact: "medium", filler: false,
-    title: "Arista Details AI Spine Architecture for Large-Scale AI Center Deployments",
-    summary: "Arista published technical details on its Universal AI Spine architecture built around the 7800 chassis platform. The design emphasizes massive scale predictable performance lossless fabric and high availability for AI workloads.",
+    id: 4, cat: "networking", impact: "high", filler: false,
+    title: "Arista Publishes AI Networking Observability Blueprint for Modern Workloads",
+    summary: "Arista released a comprehensive observability framework addressing network monitoring challenges in AI infrastructure. The blueprint targets GPU utilization optimization and bottleneck identification in training clusters.",
     source: "Arista Blog", age: "today",
-    detail: "The AI Spine architecture documentation provides insight into how Arista views the networking layer for large-scale AI infrastructure. The emphasis on lossless fabric is particularly relevant for RDMA-based training workloads where packet loss can severely impact distributed training performance. Google Cloud competes with this through its Jupiter network architecture and the comparison between leaf-spine versus Googles custom approaches will influence enterprise customer decisions. Understanding Aristas positioning helps inform whether partnership or competitive differentiation is the better strategy for Google networking infrastructure.",
-    url: "https://blogs.arista.com/blog/powering-ai-centers-with-ai-spines"
+    detail: "Network observability becomes critical as AI workloads scale and a single misconfigured link can idle millions of dollars in GPU resources. Aristas blueprint positions their CloudVision platform as essential for AI operations teams. The focus on real-time telemetry and automated remediation aligns with enterprise requirements for production AI deployments. This capability gap in cloud provider tooling could drive enterprises toward hybrid architectures using Arista equipment.",
+    url: "https://blogs.arista.com/blog/ai-networking-the-observability-blueprint-for-modern-ai-workloads"
   },
   {
     id: 5, cat: "networking", impact: "medium", filler: false,
-    title: "Arista Addresses AI Datacenter Optics Evolution with OSFP Specification Leadership",
-    summary: "Arista discussed how AI datacenters are reshaping the optics industry building on its leadership role in the OSFP specification established in 2016. The post highlights the growing importance of optical interconnects for high-bandwidth AI workloads.",
-    source: "Arista Blog", age: "today",
-    detail: "Optical interconnect technology is becoming a critical bottleneck for AI infrastructure scaling as electrical signaling hits physical limits at higher speeds. Aristas involvement in OSFP standardization positions them well for the transition to 800G and beyond which is essential for AI cluster scale-out. For Google Cloud this underscores the importance of optics partnerships and potentially in-house development to avoid supply chain dependencies. The shift toward co-packaged optics and silicon photonics could create opportunities for differentiation if Google can leverage its custom silicon expertise.",
-    url: "https://blogs.arista.com/blog/ai-datacenters-are-reshaping-the-optics-industry"
+    title: "Arista Emphasizes Reliability Engineering for AI and Cloud Networking",
+    summary: "Arista detailed its reliability approach for AI data center infrastructure addressing power thermal and signal integrity challenges. The company positions reliability as a key differentiator for large-scale AI deployments.",
+    source: "Arista Blog", age: "2 days ago",
+    detail: "As AI clusters scale to hundreds of thousands of GPUs reliability engineering becomes paramount. Aristas focus on thermal management and signal integrity acknowledges the unique challenges of 800G networking in dense GPU environments. This messaging targets enterprises concerned about operational resilience in AI infrastructure investments. The emphasis on proven reliability could influence procurement decisions between hyperscaler offerings and on-premises solutions.",
+    url: "https://blogs.arista.com/blog/delivering-reliable-ai-and-cloud-networking"
   },
   {
     id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "NVIDIA Partners with Energy Companies to Develop Flexible AI Factories as Grid Assets",
-    summary: "NVIDIA and Emerald AI announced partnerships with major energy companies including AES Constellation and NextEra to develop AI factories that can operate as flexible grid assets. The initiative aims to enable faster grid connections while generating AI tokens and intelligence.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "Power availability has become the primary constraint for AI infrastructure expansion and this partnership directly addresses that bottleneck. By positioning AI factories as grid-flexible assets NVIDIA is helping customers navigate utility interconnection challenges that can delay deployments by years. For Google Cloud this represents both competitive pressure and potential partnership opportunity as all hyperscalers face similar power constraints. The concept of AI factories as dispatchable load could reshape how data center capacity is planned and procured creating new operational complexity for infrastructure teams.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-and-emerald-ai-join-leading-energy-companies-to-pioneer-flexible-ai-factories-as-grid-assets"
+    title: "NVIDIA Advocates for Both Open and Proprietary AI Model Ecosystem",
+    summary: "NVIDIA published a position paper arguing the AI future requires both open and proprietary models across diverse use cases. The company frames model diversity as essential for global AI infrastructure development.",
+    source: "NVIDIA Blog", age: "1 day ago",
+    detail: "This strategic messaging from NVIDIA supports their hardware-agnostic revenue model where they benefit regardless of which models dominate. The statement implicitly pushes back against hyperscaler efforts to promote proprietary model ecosystems. For Google this reinforces the importance of supporting open model deployment alongside Gemini to maintain infrastructure relevance. NVIDIAs positioning as neutral infrastructure provider continues to strengthen their market position.",
+    url: "https://blogs.nvidia.com/blog/ai-future-open-and-proprietary/"
   },
   {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "AWS Announces Aurora PostgreSQL Serverless Database Creation in Seconds with Free Tier",
-    summary: "AWS launched express configuration for Amazon Aurora PostgreSQL enabling database creation in seconds with preconfigured defaults. Aurora PostgreSQL is now available with AWS Free Tier expanding accessibility for developers.",
-    source: "AWS News Blog", age: "today",
-    detail: "While not directly AI infrastructure focused this announcement demonstrates AWS continuing to reduce friction for database workloads that support AI applications. The free tier availability and instant provisioning lower barriers to entry for developers who might otherwise consider Google Cloud SQL or AlloyDB. For Google Cloud the competitive response should focus on similar ease-of-use improvements and highlighting AlloyDBs AI-native capabilities like vector search. Database selection often precedes broader cloud platform commitment making this an important competitive front.",
-    url: "https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/"
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "NVIDIA Proposes Power-Flexible AI Factories to Stabilize Energy Grids",
+    summary: "NVIDIA outlined how AI data centers could provide grid stabilization services through dynamic power management. The concept positions AI factories as assets rather than liabilities for power infrastructure.",
+    source: "NVIDIA Blog", age: "2 days ago",
+    detail: "Power availability remains the primary constraint on AI infrastructure expansion globally. NVIDIAs proposal to treat AI factories as flexible grid resources could unlock new deployment locations and reduce utility resistance. This approach aligns with hyperscaler sustainability commitments while addressing practical power procurement challenges. Google infrastructure teams should evaluate how power flexibility could differentiate TPU and GPU offerings in power-constrained markets.",
+    url: "https://blogs.nvidia.com/blog/power-flexible-ai-factories-energy-grid/"
   },
   {
     id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "Azure Announces Network Security Perimeter GA and Rule Impact Analysis Preview",
-    summary: "Microsoft Azure launched Network Security Perimeter for Azure Service Bus as generally available and introduced rule impact analysis preview in Network Watcher. These features enable logical network boundaries around PaaS resources and security rule validation before deployment.",
-    source: "Azure Updates", age: "today",
-    detail: "Network security tooling improvements at Azure reflect the broader enterprise demand for zero-trust architectures in cloud deployments. The rule impact analysis feature addresses a common pain point where security policy changes can inadvertently break connectivity. For Google Cloud infrastructure this highlights the need for comparable security posture management capabilities particularly as enterprises deploy AI workloads with sensitive data. Competitive feature parity in network security tooling influences enterprise cloud selection decisions.",
-    url: "https://azure.microsoft.com/updates?id=559899"
+    title: "Cisco Targets Neoclouds with Unified Network Fabric for Full AI Lifecycle",
+    summary: "Cisco argues neoclouds are losing high-margin inference revenue due to fragmented network architectures. The company positions unified fabric as essential for capturing both training and inference workloads.",
+    source: "Cisco Data Center Blog", age: "1 day ago",
+    detail: "This messaging directly targets emerging AI cloud competitors like CoreWeave Lambda and Crusoe who initially focused on training infrastructure. Ciscos argument that inference requires different network characteristics than training creates an upselling opportunity for their equipment. The focus on neoclouds rather than hyperscalers suggests Cisco sees more opportunity in the challenger segment. Google should monitor whether unified fabric messaging resonates with enterprise AI buyers.",
+    url: "https://blogs.cisco.com/datacenter/the-multimillion-dollar-fabric-decision-why-neoclouds-need-unified-networks/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Meta Engineering Details AI-Powered Tribal Knowledge Mapping for Data Pipeline Migration",
-    summary: "Meta published technical details on using AI agents to understand and modify large-scale data processing pipelines spanning multiple repositories and languages. The approach addresses the challenge of tribal knowledge that exists only in code and team context.",
-    source: "Meta Engineering", age: "today",
-    detail: "This engineering post reveals Metas approach to AI-assisted infrastructure modernization which has implications for competitive intelligence. The ability to use AI to understand and modify complex distributed systems could accelerate Metas infrastructure evolution relative to competitors. For Google Cloud the techniques described could inform internal tooling development and potentially productization opportunities for customers facing similar legacy modernization challenges. The focus on multi-repository multi-language understanding reflects real enterprise complexity.",
-    url: "https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/"
+    id: 9, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco Red Hat and NVIDIA Partner to Industrialize Enterprise AI Stack",
+    summary: "Cisco announced support for both Red Hat AI Enterprise and NVIDIA AI Enterprise on its Secure AI Factory platform. The partnership targets production-ready agentic AI deployments from core to edge.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "This three-way partnership creates a formidable enterprise AI stack combining Cisco infrastructure Red Hat operations and NVIDIA acceleration. The explicit focus on agentic AI workloads reflects market direction toward autonomous AI systems. Supporting both software stacks gives enterprises deployment flexibility while maintaining hardware standardization. This integrated approach competes directly with hyperscaler managed AI services for enterprise workloads.",
+    url: "https://blogs.cisco.com/datacenter/accelerate-enterprise-ai-with-cisco-red-hat-and-nvidia/"
   },
   {
-    id: 10, cat: "storage", impact: "low", filler: true,
-    title: "AWS Storage Team Publishes Comprehensive re:Invent 2025 Session Guide by Topic",
-    summary: "AWS published an organized guide to all storage-related sessions from re:Invent 2025 covering topics across their storage portfolio. The guide helps customers navigate recorded content for training and planning purposes.",
-    source: "AWS Storage", age: "today",
-    detail: "While primarily marketing content this resource provides insight into AWS storage strategy and customer education priorities. The breadth of sessions indicates continued investment in storage services that compete with Google Cloud Storage and related offerings. Infrastructure teams can use this as competitive intelligence on AWS messaging and feature emphasis.",
-    url: "https://aws.amazon.com/blogs/storage/aws-storage-at-reinvent-2025/"
+    id: 10, cat: "networking", impact: "low", filler: true,
+    title: "Arista Details Generative and Agentic AI Networking Requirements",
+    summary: "Arista published analysis of how generative and agentic AI workloads are redefining enterprise network requirements. The company positions its portfolio as purpose-built for emerging AI traffic patterns.",
+    source: "Arista Blog", age: "3 days ago",
+    detail: "The distinction between generative and agentic AI networking requirements reflects evolving workload characteristics as AI moves beyond chatbots. Agentic AI creates more unpredictable network traffic patterns requiring adaptive infrastructure. Aristas messaging prepares enterprises for infrastructure upgrades as AI deployments mature. This thought leadership positions Arista as an AI networking authority for enterprise buyers.",
+    url: "https://blogs.arista.com/blog/generative-and-agentic-ai-networking-revolution"
   },
   {
     id: 11, cat: "networking", impact: "low", filler: true,
-    title: "AWS Details Migration Path from CloudFront Public Origins to Private VPC Origins",
-    summary: "AWS published guidance on migrating CloudFront public origins to VPC origins including cross-account architectures for security-first designs. The post covers centralized and distributed network architecture models for content delivery.",
-    source: "AWS Networking", age: "today",
-    detail: "This technical guidance reflects AWS efforts to improve security posture for CDN deployments by moving origins into private VPCs. The cross-account support addresses enterprise requirements for network segmentation. While not directly AI-related CDN architecture decisions can impact AI model serving and inference endpoint deployments.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/migrate-amazon-cloudfront-public-origins-to-private-vpc-origins/"
+    title: "Cisco Explains Why Traditional Networks Face New Limits in AI Era",
+    summary: "Cisco published analysis of how AI workloads expose limitations in traditional network architectures. The company argues network assurance and architecture must evolve to support AI at scale.",
+    source: "Cisco Networking Blog", age: "1 day ago",
+    detail: "This content marketing positions Ciscos AI networking solutions as essential upgrades for enterprises deploying AI. The focus on subtle performance issues undermining AI outcomes creates urgency for network modernization. Cisco frames existing infrastructure as inadequate for AI requirements driving replacement cycles. The messaging aligns with broader vendor narratives around AI-driven infrastructure refresh.",
+    url: "https://blogs.cisco.com/networking/why-networks-face-new-limits-in-the-age-of-ai/"
   },
   {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "Azure Introduces Client-Side Configuration at CDN Scale with Front Door Integration",
-    summary: "Azure announced integration between App Configuration and Front Door enabling dynamic configuration delivery to client applications at CDN scale. The preview feature addresses requirements for modern distributed applications.",
-    source: "Azure Updates", age: "today",
-    detail: "This feature demonstrates Azure continuing to build out edge computing capabilities that could support distributed AI inference scenarios. The ability to push configuration to edge locations aligns with trends toward edge AI deployment. For Google Cloud this represents incremental competitive feature development in the edge and CDN space.",
-    url: "https://azure.microsoft.com/updates?id=537234"
+    id: 12, cat: "storage", impact: "low", filler: true,
+    title: "AWS Demonstrates NTFS Permission Management at Scale on FSx for NetApp ONTAP",
+    summary: "AWS published guidance on managing NTFS permissions across millions of files using ONTAP security policies. The approach reduces remediation time from hours to minutes for large file systems.",
+    source: "AWS Storage", age: "2 days ago",
+    detail: "Enterprise storage management at scale remains a persistent challenge especially during cloud migrations. This AWS guidance addresses a common pain point for organizations moving Windows workloads to cloud storage. The partnership with NetApp demonstrates AWS commitment to supporting enterprise storage requirements. File permission management improvements could accelerate enterprise cloud adoption.",
+    url: "https://aws.amazon.com/blogs/storage/manage-ntfs-permissions-at-scale-on-amazon-fsx-for-netapp-ontap/"
   },
   {
-    id: 13, cat: "vendor", impact: "low", filler: true,
-    title: "NVIDIA Highlights Physical AI Research Progress During National Robotics Week",
-    summary: "NVIDIA published a roundup of physical AI and robotics research breakthroughs during National Robotics Week. The post covers advances in robot learning simulation and foundation models across agricultural manufacturing and energy applications.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "While focused on robotics rather than data center infrastructure this content signals NVIDIAs expanding scope beyond traditional AI compute into physical AI applications. The simulation and foundation model work could eventually create new compute demands for cloud infrastructure providers.",
-    url: "https://blogs.nvidia.com/blog/national-robotics-week-2026/"
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "AWS Explains VPC Peering Charges with New Billing Visibility Tools",
+    summary: "AWS published detailed guidance on analyzing newly separated intra-region VPC peering charges. The documentation covers Cost Explorer Data Exports and billing console analysis methods.",
+    source: "AWS Networking", age: "2 days ago",
+    detail: "Network cost visibility improvements help enterprises optimize cloud spending on data transfer. VPC peering charges can represent significant costs for organizations with complex multi-VPC architectures. Better cost attribution enables more accurate chargeback and architecture optimization decisions. This transparency improvement addresses common enterprise complaints about cloud billing complexity.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/demystifying-amazon-vpc-peering-charges/"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Activating Data Layer for Production-Ready AI Applications",
-    summary: "Google Cloud published guidance on preparing database infrastructure for production AI applications emphasizing the role of data as the backbone for AI-driven systems. The post covers database selection and configuration for AI workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This developer-focused content reinforces Google Clouds positioning around data infrastructure for AI applications. While not announcing new capabilities it demonstrates continued emphasis on the data layer as a differentiation point. The content supports AlloyDB and related database product positioning.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/activating-your-data-layer-for-production-ready-ai/"
+    id: 14, cat: "competition", impact: "low", filler: true,
+    title: "Azure Highlights PostgreSQL Enterprise Capabilities with New HorizonDB Offering",
+    summary: "Microsoft detailed its mission to make PostgreSQL the most enterprise-ready open database platform on Azure. The announcement includes the new Azure HorizonDB alongside existing Azure Database for PostgreSQL.",
+    source: "Azure Blog", age: "3 days ago",
+    detail: "Microsofts PostgreSQL investment reflects the databases growing importance for cloud-native and AI workloads. Competing for PostgreSQL workloads is strategic as enterprises prefer open database options over proprietary alternatives. The HorizonDB naming suggests differentiated enterprise features beyond standard managed PostgreSQL. Google Cloud should evaluate competitive positioning of Cloud SQL and AlloyDB against Azures expanded offerings.",
+    url: "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Arista is aggressively positioning for AI datacenter dominance with its R4 platform family delivering 3.2 Tbps port speeds and Universal AI Spine architecture for large-scale deployments, representing both a competitive threat and potential partnership consideration for Google Cloud networking infrastructure. The NVIDIA-Marvell NVLink Fusion partnership expands the AI factory ecosystem beyond NVIDIAs traditional boundaries, which could influence Googles TPU interconnect strategy and vendor relationships as customers gain more flexibility in building heterogeneous AI infrastructure. Google Ironwoods 3.7x carbon efficiency improvement provides a differentiated sustainability narrative against NVIDIA-based alternatives, though the NVIDIA-energy company partnerships for flexible AI factories signal intensifying competition for datacenter power access and grid integration.";
+const STATIC_BRIEF = "Arista is aggressively positioning scale-up Ethernet with dedicated observability and reliability frameworks as a viable alternative to InfiniBand for large AI clusters, which directly challenges NVIDIAs networking dominance and validates Googles investment in open Ethernet-based interconnects for TPU and GPU infrastructure. Cisco is making coordinated moves across the AI stack through Nexus Hyperfabric, BlueField DPU integration, and partnerships with Red Hat and NVIDIA, specifically targeting neoclouds with a unified fabric pitch that frames fragmented networks as the barrier to capturing inference revenue alongside training workloads. NVIDIAs proposals for power-flexible AI factories and model ecosystem diversity signal the company is positioning itself as essential infrastructure beyond chips, potentially expanding its influence into data center power management and software licensing domains that could affect hyperscaler operational flexibility.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

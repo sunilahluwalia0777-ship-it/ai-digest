@@ -84,5 +84,19 @@
   "https://aws.amazon.com/blogs/networking-and-content-delivery/migrate-amazon-cloudfront-public-origins-to-private-vpc-origins/": "2026-04-06",
   "https://azure.microsoft.com/updates?id=537234": "2026-04-06",
   "https://blogs.nvidia.com/blog/national-robotics-week-2026/": "2026-04-06",
-  "https://cloud.google.com/blog/topics/developers-practitioners/activating-your-data-layer-for-production-ready-ai/": "2026-04-06"
+  "https://cloud.google.com/blog/topics/developers-practitioners/activating-your-data-layer-for-production-ready-ai/": "2026-04-06",
+  "https://blogs.arista.com/blog/the-sun-rises-on-scale-up-ethernet": "2026-04-07",
+  "https://blogs.cisco.com/datacenter/accelerating-ai-innovation-with-cisco-nexus-hyperfabric-solutions/": "2026-04-07",
+  "https://blogs.cisco.com/datacenter/cisco-secures-ai-infrastructure-with-nvidia-bluefield-dpus/": "2026-04-07",
+  "https://blogs.arista.com/blog/ai-networking-the-observability-blueprint-for-modern-ai-workloads": "2026-04-07",
+  "https://blogs.arista.com/blog/delivering-reliable-ai-and-cloud-networking": "2026-04-07",
+  "https://blogs.nvidia.com/blog/ai-future-open-and-proprietary/": "2026-04-07",
+  "https://blogs.nvidia.com/blog/power-flexible-ai-factories-energy-grid/": "2026-04-07",
+  "https://blogs.cisco.com/datacenter/the-multimillion-dollar-fabric-decision-why-neoclouds-need-unified-networks/": "2026-04-07",
+  "https://blogs.cisco.com/datacenter/accelerate-enterprise-ai-with-cisco-red-hat-and-nvidia/": "2026-04-07",
+  "https://blogs.arista.com/blog/generative-and-agentic-ai-networking-revolution": "2026-04-07",
+  "https://blogs.cisco.com/networking/why-networks-face-new-limits-in-the-age-of-ai/": "2026-04-07",
+  "https://aws.amazon.com/blogs/storage/manage-ntfs-permissions-at-scale-on-amazon-fsx-for-netapp-ontap/": "2026-04-07",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/demystifying-amazon-vpc-peering-charges/": "2026-04-07",
+  "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/": "2026-04-07"
 }
