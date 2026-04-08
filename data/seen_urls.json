@@ -98,5 +98,20 @@
   "https://blogs.cisco.com/networking/why-networks-face-new-limits-in-the-age-of-ai/": "2026-04-07",
   "https://aws.amazon.com/blogs/storage/manage-ntfs-permissions-at-scale-on-amazon-fsx-for-netapp-ontap/": "2026-04-07",
   "https://aws.amazon.com/blogs/networking-and-content-delivery/demystifying-amazon-vpc-peering-charges/": "2026-04-07",
-  "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/": "2026-04-07"
+  "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/": "2026-04-07",
+  "https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/": "2026-04-08",
+  "https://cloud.google.com/blog/products/containers-kubernetes/optimize-aiml-workloads-with-gke-cloud-storage-fuse-profiles/": "2026-04-08",
+  "https://cloud.google.com/blog/topics/developers-practitioners/experimenting-with-gpus-gke-managed-dranet-and-inference-gateway-ai-deployment/": "2026-04-08",
+  "https://azure.microsoft.com/updates?id=559547": "2026-04-08",
+  "https://cloud.google.com/blog/products/data-analytics/improved-interoperability-for-your-apache-iceberg-lakehouse/": "2026-04-08",
+  "https://cloud.google.com/blog/products/ai-machine-learning/claude-mythos-preview-on-vertex-ai/": "2026-04-08",
+  "https://blogs.nvidia.com/blog/gtc-2026-virtual-worlds-physical-ai/": "2026-04-08",
+  "https://blogs.arista.com/blog/cognitive-campus-blueprint": "2026-04-08",
+  "https://blogs.cisco.com/datacenter/the-next-chapter-of-cisco-and-nutanix-building-flexible-infrastructure-for-the-modern-era/": "2026-04-08",
+  "https://cloud.google.com/blog/products/identity-security/a-leader-in-forrester-wave-sovereign-cloud-platform-2026/": "2026-04-08",
+  "https://cloud.google.com/blog/products/identity-security/see-beyond-the-ip-and-secure-urls-with-google-cloud-ngfw/": "2026-04-08",
+  "https://azure.microsoft.com/updates?id=559876": "2026-04-08",
+  "https://azure.microsoft.com/updates?id=557907": "2026-04-08",
+  "https://aws.amazon.com/blogs/storage/how-allcargo-migrated-vdi-workload-to-amazon-fsx-using-aws-datasync/": "2026-04-08",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/how-lseg-connects-the-world-of-finance-using-aws-cross-region-privatelink-to-transform-global-market-data-access/": "2026-04-08"
 }
