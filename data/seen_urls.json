@@ -113,5 +113,19 @@
   "https://azure.microsoft.com/updates?id=559876": "2026-04-08",
   "https://azure.microsoft.com/updates?id=557907": "2026-04-08",
   "https://aws.amazon.com/blogs/storage/how-allcargo-migrated-vdi-workload-to-amazon-fsx-using-aws-datasync/": "2026-04-08",
-  "https://aws.amazon.com/blogs/networking-and-content-delivery/how-lseg-connects-the-world-of-finance-using-aws-cross-region-privatelink-to-transform-global-market-data-access/": "2026-04-08"
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/how-lseg-connects-the-world-of-finance-using-aws-cross-region-privatelink-to-transform-global-market-data-access/": "2026-04-08",
+  "http://nvidianews.nvidia.com/news/nvidia-ai-ecosystem-expands-as-marvell-joins-forces-through-nvlink-fusion": "2026-04-09",
+  "https://thenextweb.com/news/anthropic-google-broadcom-compute-deal/": "2026-04-09",
+  "https://siliconangle.com/2026/04/06/resolight-ai-launches-change-ai-interconnect-game/": "2026-04-09",
+  "http://nvidianews.nvidia.com/news/nvidia-and-emerald-ai-join-leading-energy-companies-to-pioneer-flexible-ai-factories-as-grid-assets": "2026-04-09",
+  "https://blogs.arista.com/blog/arista-and-palo-alto-networks-strengthen-partnership-in-the-new-age-of-ai-security": "2026-04-09",
+  "https://blogs.cisco.com/datacenter/cisco-gives-its-secure-ai-factory-with-nvidia-a-secure-multi-agent-edge-up/": "2026-04-09",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/automating-aws-application-load-balancer-capacity-unit-reservation/": "2026-04-09",
+  "https://aws.amazon.com/blogs/storage/from-hours-to-minutes-rethinking-oracle-databases-operations-with-amazon-fsx-for-openzfs/": "2026-04-09",
+  "https://www.coindesk.com/tech/2026/04/07/bitcoin-miners-face-a-new-rival-for-cheap-power-as-anthropic-signs-multi-gigawatt-compute-deal": "2026-04-09",
+  "https://cloud.google.com/blog/products/serverless/cloud-run-worker-pools-at-estee-lauder-companies/": "2026-04-09",
+  "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/": "2026-04-09",
+  "https://blogs.cisco.com/networking/why-full-stack-post-quantum-cryptography-cannot-wait/": "2026-04-09",
+  "https://azure.microsoft.com/updates?id=560025": "2026-04-09",
+  "https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/": "2026-04-09"
 }
