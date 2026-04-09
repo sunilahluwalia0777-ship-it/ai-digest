@@ -153,6 +153,17 @@
       "detail": "Memory allocation performance directly impacts AI training and inference efficiency especially at Meta scale. jemalloc improvements benefit the broader open source community including cloud providers running similar workloads. This signals continued Meta investment in foundational infrastructure software that supports AI systems.",
       "url": "https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/",
       "age": "1 day ago"
+    },
+    "15": {
+      "readAt": 1775711123547,
+      "title": "AWS Cross-Region PrivateLink Enables LSEG Global Market Data Distribution",
+      "cat": "networking",
+      "source": "AWS Networking",
+      "impact": "low",
+      "summary": "",
+      "detail": "This implementation showcases advanced private networking patterns for latency-sensitive data distribution at global scale. The financial services use case demonstrates networking architectures that are applicable to distributed AI inference serving real-time predictions. The cross-region PrivateLink capability addresses data locality and performance requirements similar to those in AI infrastructure deployments.",
+      "url": "https://aws.amazon.com/blogs/networking-and-content-delivery/how-lseg-connects-the-world-of-finance-using-aws-cross-region-privatelink-to-transform-global-market-data-access/",
+      "age": "today"
     }
   },
   "favorites": {}
