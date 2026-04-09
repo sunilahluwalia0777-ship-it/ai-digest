@@ -166,5 +166,17 @@
       "age": "today"
     }
   },
-  "favorites": {}
+  "favorites": {
+    "15": {
+      "savedAt": 1775711140748,
+      "title": "AWS Cross-Region PrivateLink Enables LSEG Global Market Data Distribution",
+      "cat": "networking",
+      "source": "AWS Networking",
+      "impact": "low",
+      "summary": "",
+      "detail": "This implementation showcases advanced private networking patterns for latency-sensitive data distribution at global scale. The financial services use case demonstrates networking architectures that are applicable to distributed AI inference serving real-time predictions. The cross-region PrivateLink capability addresses data locality and performance requirements similar to those in AI infrastructure deployments.",
+      "url": "https://aws.amazon.com/blogs/networking-and-content-delivery/how-lseg-connects-the-world-of-finance-using-aws-cross-region-privatelink-to-transform-global-market-data-access/",
+      "age": "today"
+    }
+  }
 }
