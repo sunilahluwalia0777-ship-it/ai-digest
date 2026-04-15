@@ -648,115 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "NVIDIA Launches Ising Open AI Models to Accelerate Path to Useful Quantum Computers",
-    summary: "NVIDIA announced the worlds first family of open source quantum AI models called NVIDIA Ising. The models are designed to help researchers and enterprises build quantum processors capable of running useful applications.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This release signals NVIDIAs strategic expansion beyond classical GPU compute into the quantum-classical hybrid space. For Google Cloud infrastructure planning the Ising models could influence future TPU roadmaps as quantum workloads may require specialized accelerator integration. The open source nature means hyperscalers including Google AWS and Azure will likely integrate these models into their quantum computing offerings. This positions NVIDIA as a potential standards-setter in quantum AI tooling which has infrastructure implications for networking and storage architectures that must bridge classical and quantum systems.",
-    url: "http://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers"
+    title: "AWS Interconnect Now GA With New Last-Mile Connectivity Option for Multicloud",
+    summary: "AWS launches managed private connectivity service linking Amazon VPCs directly to other cloud providers. New last-mile capability simplifies high-speed private connections to AWS from enterprise locations.",
+    source: "AWS News Blog", age: "today",
+    detail: "This GA release represents a significant shift in AWS multicloud strategy by offering native managed interconnects to competing clouds. For Google Cloud the competitive pressure intensifies as enterprises gain easier hybrid and multicloud options through AWS. The last-mile addition with Lumen partnership reduces friction for enterprises currently using direct connect alternatives. Network teams evaluating cross-cloud GPU cluster deployments now have another viable path that bypasses public internet latency concerns.",
+    url: "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/"
   },
   {
-    id: 2, cat: "competition", impact: "high", filler: false,
-    title: "Azure Storage Mover Now Available in Azure Government for Large-Scale Data Migration",
-    summary: "Microsoft Azure Storage Mover is now generally available in Azure Government enabling secure large-scale file data migration for US government customers. The fully managed service targets federal and partner workloads moving to Azure Government cloud.",
+    id: 2, cat: "networking", impact: "high", filler: false,
+    title: "AWS and Lumen Partner to Dissolve Cloud-Network Boundary With Interconnect Service",
+    summary: "AWS and Lumen jointly announce integrated last-mile connectivity eliminating traditional barriers between enterprise networks and cloud. Partnership streamlines high-bandwidth private connections for AI workloads.",
+    source: "AWS Networking", age: "today",
+    detail: "The Lumen partnership signals AWS commitment to owning the full connectivity stack from enterprise premises to cloud. For AI infrastructure this matters because distributed training and inference workloads demand predictable low-latency paths. Google Cloud must evaluate whether similar carrier partnerships or expanded Cross-Cloud Interconnect offerings are needed to remain competitive. The joint approach could accelerate enterprise adoption of hybrid AI architectures requiring seamless data movement between on-prem GPU clusters and cloud TPU or GPU resources.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/dissolving-the-boundary-between-cloud-and-network/"
+  },
+  {
+    id: 3, cat: "vendor", impact: "high", filler: false,
+    title: "Marvell Positioned as Must-Buy AI Stock Following Google TPU Partnership Discussions",
+    summary: "Analyst coverage highlights Marvell Technology as key beneficiary of hyperscaler custom silicon demand. Google TPU-related business drives renewed investor interest in the networking and storage chip vendor.",
+    source: "24/7 Wall St.", age: "1 day ago",
+    detail: "Marvell remains a critical vendor for Google TPU interconnect and storage controller silicon making this coverage directly relevant to infrastructure planning. The stock momentum reflects broader market confidence in custom ASIC demand from hyperscalers over merchant GPU approaches. For procurement and roadmap discussions Marvell relationship health directly impacts TPU fabric evolution and next-generation storage acceleration timelines. Competitive dynamics with Broadcom for hyperscaler custom silicon contracts continue intensifying.",
+    url: "https://247wallst.com/investing/2026/04/14/why-googles-tpu-talks-just-made-marvell-technology-a-must-buy-ai-stock/"
+  },
+  {
+    id: 4, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Reframes AI Economics Around Cost Per Token as Primary Infrastructure Metric",
+    summary: "NVIDIA positions data centers as AI token factories where cost per token becomes the defining efficiency measure. Shift reflects inference workload dominance over training in production deployments.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This framing directly challenges hyperscaler TCO narratives around custom silicon like TPUs by anchoring value discussion to token economics. For Google the implication is clear pressure to publish comparable cost-per-token benchmarks for TPU inference workloads. The token factory metaphor also signals NVIDIA pivot toward inference optimization where Blackwell architecture competes head-to-head with TPU v5 and v6. Infrastructure planning must now account for vendor marketing narratives shaping customer expectations around AI deployment costs.",
+    url: "https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories/"
+  },
+  {
+    id: 5, cat: "storage", impact: "medium", filler: false,
+    title: "Azure Enables Cross-Tenant Customer Managed Keys for Premium SSD v2 and Ultra Disks",
+    summary: "Microsoft announces GA of cross-tenant encryption for high-performance storage tiers using customer-managed keys. Capability addresses enterprise multi-tenant security requirements for AI workloads.",
     source: "Azure Updates", age: "today",
-    detail: "This GA release directly competes with Google Clouds Transfer Service and represents Azures push to capture sensitive government workloads requiring FedRAMP compliance. For Google the competitive pressure in public sector storage services intensifies as Azure expands its migration tooling footprint. Government contracts often involve massive data volumes making efficient migration services a key differentiator. The Storage Mover expansion could influence procurement decisions where ease of data onboarding determines cloud selection particularly for agencies with existing Microsoft relationships.",
-    url: "https://azure.microsoft.com/updates?id=560198"
+    detail: "Cross-tenant CMK support removes a friction point for enterprises running shared AI infrastructure across organizational boundaries. For competitive positioning Google Cloud persistent disk offerings need equivalent cross-tenant key management for parity. The feature particularly matters for regulated industries deploying large-scale training datasets requiring strict encryption key isolation. Storage roadmap should evaluate whether similar capabilities exist or need prioritization for enterprise AI customers.",
+    url: "https://azure.microsoft.com/updates?id=559761"
   },
   {
-    id: 3, cat: "storage", impact: "high", filler: false,
-    title: "Azure Files Launches Granular Encryption Controls for SMB and NFS Protocols",
-    summary: "Azure Files now supports independent encryption-in-transit configuration for SMB and NFS protocols at the storage account level. Customers can define protocol-specific security policies enabling precise control over encryption requirements.",
+    id: 6, cat: "storage", impact: "medium", filler: false,
+    title: "Azure Smart Tier Reaches GA for Blob and Data Lake Storage Automatic Tiering",
+    summary: "Microsoft launches intelligent automatic tiering for Azure storage optimizing costs across hot cool cold and archive tiers. Feature targets AI data pipeline cost optimization without manual intervention.",
     source: "Azure Updates", age: "today",
-    detail: "This feature addresses a common enterprise pain point where mixed protocol environments require different security postures. For Google Cloud this sets a competitive benchmark as customers running hybrid NFS and SMB workloads may expect similar granular controls from Filestore and Cloud Storage. The ability to independently configure encryption per protocol is particularly relevant for AI training pipelines where NFS performance requirements may conflict with blanket encryption policies. Google infrastructure teams should evaluate whether similar flexibility exists or needs to be prioritized in the storage roadmap.",
-    url: "https://azure.microsoft.com/updates?id=560001"
+    detail: "Smart tiering automation directly addresses AI workload storage economics where training data access patterns vary dramatically over project lifecycles. Google Cloud Storage already offers similar autoclass functionality but Azure GA puts competitive pressure on feature maturity and pricing. For AI infrastructure teams managing petabyte-scale datasets the tiering efficiency gains compound significantly over time. Evaluating whether Google autoclass matches Azure smart tier intelligence levels becomes a valid competitive analysis point.",
+    url: "https://azure.microsoft.com/updates?id=559746"
   },
   {
-    id: 4, cat: "storage", impact: "medium", filler: false,
-    title: "Converged Data Architecture Positioned as Missing Foundation for Enterprise AI",
-    summary: "A new analysis argues fragmented AI infrastructure fails in production environments. Converged data architecture with unified governance offers the most reliable path to scalable enterprise AI deployments.",
-    source: "Techtarget.com", age: "today",
-    detail: "This perspective directly impacts how enterprises evaluate storage and data management for AI workloads. Google BigQuery and Spanner positioning around unified analytics aligns with this converged architecture thesis. The analysis suggests that vendors offering tightly integrated storage compute and governance will win enterprise AI deals over best-of-breed approaches. For Google PM planning this reinforces investment in unified data platforms that reduce pipeline complexity. Competitors like Snowflake and Databricks face similar architectural questions about fragmentation versus convergence.",
-    url: "https://www.techtarget.com/searchdatamanagement/opinion/Converged-architecture-is-enterprise-AIs-missing-foundation"
-  },
-  {
-    id: 5, cat: "vendor", impact: "medium", filler: false,
-    title: "AI Agents Expanding Role in IT Infrastructure Operations and Incident Response",
-    summary: "AI agents are transitioning from passive monitoring to active infrastructure operators handling incidents and optimization tasks. Organizations must redesign platforms for autonomous workflows as agent capabilities mature.",
-    source: "Techtarget.com", age: "today",
-    detail: "This trend has significant implications for infrastructure vendors like Cisco and Arista whose management planes will need to accommodate agentic operations. For Google Cloud the shift toward autonomous infrastructure management could influence Anthos and GKE development priorities. Networking and storage systems that expose well-designed APIs and telemetry will become more valuable as AI agents require programmatic interfaces for decision-making. The competitive landscape may favor vendors who embrace agent-native architectures over those requiring human-in-the-loop operations.",
-    url: "https://www.techtarget.com/searchapparchitecture/tip/AI-Agents-role-in-IT-infrastructure-is-expanding"
-  },
-  {
-    id: 6, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco Highlights Five Essential Infrastructure Management Capabilities for AI Workloads",
-    summary: "Cisco argues AI demands a shift from manual tools to unified platforms for infrastructure management. The company details five essential IT capabilities including automation flexibility and integration via Cisco Intersight.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This vendor positioning reflects the broader infrastructure management consolidation trend as AI workloads stress traditional siloed approaches. Ciscos Intersight push competes with VMware and Nutanix while also challenging cloud-native management tools from hyperscalers. For Google Cloud this signals that enterprise customers may prefer unified management spanning on-premises and cloud infrastructure. The networking and compute management integration Cisco promotes could influence how Google positions Anthos and its hardware partnership ecosystem.",
-    url: "https://blogs.cisco.com/datacenter/can-your-infrastructure-management-tools-do-that/"
-  },
-  {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "SK Hynix Reportedly in Talks with Microsoft and Google Over Memory Supply Agreements",
-    summary: "Industry reports indicate SK Hynix is in discussions with both Microsoft and Google regarding memory supply arrangements. The talks come amid broader MLCC shortages affecting the semiconductor supply chain.",
-    source: "Digitimes", age: "today",
-    detail: "Memory supply negotiations with HBM and high-capacity DRAM implications directly impact GPU and TPU infrastructure planning. Google securing favorable SK Hynix terms would strengthen its AI accelerator roadmap while Microsoft Azure gaining preferential access could shift competitive dynamics. The reported MLCC shortages spreading through the supply chain add urgency to these discussions as component availability constrains AI infrastructure buildout. This situation highlights the strategic importance of supply chain relationships for hyperscaler infrastructure teams.",
-    url: "https://www.digitimes.com/news/a20260413VL201/digitimes-asia-weekly-news-roundup-mlcc-sk-hynix-google-microsoft-2026.html"
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "AWS Introduces Logically Air-Gapped Vault for Ransomware-Protected Primary Backup",
+    summary: "AWS launches ransomware protection feature enabling air-gapped backup without maintaining separate data copies. Solution reduces storage costs while meeting strict security requirements.",
+    source: "AWS Storage", age: "today",
+    detail: "Ransomware protection for AI training data and model weights represents an emerging enterprise requirement that hyperscalers must address. The logical air-gap approach innovates on traditional backup architectures by eliminating duplicate storage overhead. Google Cloud backup and DR offerings should be evaluated for equivalent ransomware isolation capabilities. As AI models become high-value enterprise assets the protection of training artifacts and checkpoints gains strategic importance.",
+    url: "https://aws.amazon.com/blogs/storage/streamline-ransomware-protection-while-reducing-cost-with-logically-air-gapped-vault-primary-backup/"
   },
   {
     id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Intel Stock Rallies on AI Packaging Deals and Foundry Turnaround Ahead of Q1 Earnings",
-    summary: "Intel shares climbed nearly 3 percent as investors bet on accelerating foundry momentum and potential billion-dollar advanced packaging wins with hyperscalers. The rally comes ahead of Q1 earnings amid broader turnaround efforts.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "Intels advanced packaging capabilities are increasingly relevant for AI accelerator integration where chiplet architectures require sophisticated interconnects. Hyperscaler packaging deals would position Intel as a key supplier for custom silicon programs at Google AWS and Azure. For Google infrastructure planning Intels foundry recovery could provide an alternative to TSMC for certain workloads reducing supply chain concentration risk. The packaging technology specifically enables higher-bandwidth connections between compute dies and HBM memory stacks critical for AI training performance.",
-    url: "https://www.ibtimes.com.au/intel-stock-climbs-29-ai-packaging-deals-foundry-turnaround-spark-rally-ahead-q1-earnings-1866404"
+    title: "Azure Retiring HBv2 HC-Series and NP-Series HPC VMs in Batch Pools by May 2027",
+    summary: "Microsoft announces retirement of older HPC VM families including InfiniBand-equipped instances from Azure Batch. Retirement affects high-performance computing workloads using AMD EPYC and Intel Xeon processors.",
+    source: "Azure Updates", age: "today",
+    detail: "The retirement signals Azure shift toward newer HPC instance families likely featuring updated interconnect and accelerator options. For competitive analysis this indicates Azure HPC refresh cycle and potential new GPU or accelerator VM announcements. Customers migrating from these instances may evaluate Google Cloud HPC offerings as alternatives. The NP-series retirement specifically impacts FPGA workloads suggesting Azure deprioritization of that accelerator class.",
+    url: "https://azure.microsoft.com/updates?id=559751"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Stratechery Analyzes Compute Constraints and Aggregation Theory in AI Era",
-    summary: "Strategic analysis examines whether Aggregation Theory survives in a world of constrained compute resources. The piece argues controlling demand will give power over supply in the AI infrastructure landscape.",
-    source: "Stratechery.com", age: "today",
-    detail: "This framework is directly relevant to hyperscaler infrastructure strategy as compute scarcity reshapes competitive dynamics. Google controlling AI model demand through Gemini and Vertex AI could translate to supply chain leverage with NVIDIA Broadcom and memory vendors. The analysis suggests that unlike previous internet eras where distribution was commoditized AI infrastructure scarcity creates different aggregation patterns. For infrastructure planning this implies that owning the model layer may be as strategically important as owning the physical compute layer.",
-    url: "https://stratechery.com/2026/mythos-muse-and-the-opportunity-cost-of-compute/"
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "Oracle Stock Analysis Shows 50-60% Upside Potential as AI Cloud Business Accelerates",
+    summary: "Analyst coverage projects strong Oracle growth driven by AI cloud infrastructure expansion despite 2026 volatility. OCI positioned as emerging hyperscaler competitor in AI workload market.",
+    source: "Ibtimes.com.au", age: "1 day ago",
+    detail: "Oracle continues aggressive AI infrastructure expansion representing a competitive threat that warrants monitoring beyond traditional AWS and Azure focus. The analyst optimism reflects OCI success winning AI workloads from enterprises seeking alternatives to dominant hyperscalers. For Google Cloud competitive strategy OCI momentum in sovereign cloud and enterprise AI deployments creates additional market pressure. The valuation discussion also indicates investor confidence in multi-hyperscaler AI infrastructure market growth.",
+    url: "https://www.ibtimes.com.au/oracle-stock-buy-sell-2026-analysts-see-50-60-upside-ai-cloud-boom-offsets-volatile-start-1866573"
   },
   {
-    id: 10, cat: "storage", impact: "low", filler: true,
-    title: "BigQuery Graph Preview Unlocks Hidden Relationships in Enterprise Data at Scale",
-    summary: "Google Cloud announced BigQuery Graph is now available in preview offering scalable graph analytics for data engineers and AI developers. The solution enables modeling analyzing and visualizing massive-scale relationships in enterprise data.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "While primarily a data analytics feature BigQuery Graph has infrastructure implications for how AI training pipelines access relational data. Graph workloads can be compute-intensive potentially driving demand for specialized accelerators. The integration with existing BigQuery infrastructure simplifies deployment but may require storage architecture considerations for graph-structured datasets. This release positions Google competitively against Neo4j and other graph database vendors in enterprise analytics.",
-    url: "https://cloud.google.com/blog/products/data-analytics/introducing-bigquery-graph/"
+    id: 10, cat: "networking", impact: "medium", filler: false,
+    title: "Cisco Wi-Fi Report Highlights AI Bandwidth Strain and IT Talent Gap Challenges",
+    summary: "Cisco State of Wireless 2026 report reveals tension between AI workload demands and enterprise network capacity. Report identifies expanding attack surfaces and skills shortages as key obstacles.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "The findings validate enterprise networking challenges that affect AI deployment readiness across hybrid and on-premises environments. For Google Cloud the report supports positioning around managed AI services that reduce enterprise infrastructure burden. Understanding customer Wi-Fi and campus network constraints helps inform edge AI and hybrid deployment strategies. The talent gap observation also supports investment in simplified AI infrastructure management tools.",
+    url: "https://blogs.cisco.com/networking/lean-it-future-ready-why-wi-fi-is-your-ai-growth-strategy/"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Monitor Adds OpenTelemetry Support for AKS Application Monitoring in Preview",
-    summary: "Azure Monitor now supports monitoring applications running on Azure Kubernetes Service using OpenTelemetry for instrumentation. The feature enables autoinstrumentation to deploy Azure Monitor OpenTelemetry distro to AKS workloads.",
-    source: "Azure Updates", age: "today",
-    detail: "OpenTelemetry standardization in Kubernetes monitoring creates interoperability between cloud providers which could reduce switching costs for customers. For Google Cloud this pressures GKE monitoring to maintain OpenTelemetry parity. The autoinstrumentation capability specifically reduces operational overhead for AI workloads running on Kubernetes clusters where observability is critical for debugging training jobs.",
-    url: "https://azure.microsoft.com/updates?id=560119"
+    title: "Multi-Tenant Data Center Market Projected to Reach 99 Billion by 2030",
+    summary: "Market analysis forecasts strong colocation growth driven by hybrid cloud and data security requirements. Liquid cooling and regulatory compliance identified as key technology trends.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "The colocation market expansion reflects enterprise preference for hybrid infrastructure that complements hyperscaler cloud deployments. For Google Cloud this validates continued investment in interconnect options to colocation facilities. The liquid cooling trend aligns with AI accelerator thermal requirements driving facility modernization across the industry.",
+    url: "https://www.globenewswire.com/news-release/2026/04/14/3273667/28124/en/Multi-tenant-Data-Center-Market-Analysis-Report-2026-99-35-Bn-Opportunities-Trends-Competitive-Landscape-Strategies-and-Forecasts-2020-2025-2025-2030F-2035F.html"
   },
   {
-    id: 12, cat: "networking", impact: "low", filler: true,
-    title: "AWS Announces Flexibility and Control Commitments for UK Cloud Customers",
-    summary: "AWS published commitments regarding customer flexibility and control for UK deployments emphasizing freedom to choose technologies. The statement addresses concerns about cloud provider lock-in and workload portability.",
-    source: "AWS Networking", age: "today",
-    detail: "This regulatory positioning reflects growing scrutiny of hyperscaler practices in European markets. For Google Cloud similar commitments may be necessary to compete for UK enterprise and government workloads. The networking implications include ensuring data residency controls and interconnect options that satisfy sovereignty requirements.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/continuing-to-support-flexibility-and-control-for-uk-customers/"
+    id: 12, cat: "silicon", impact: "low", filler: true,
+    title: "AI Data Center GPU Market Report Projects 32 Billion Opportunity Through 2035",
+    summary: "Market analysis highlights generative AI and sovereign infrastructure as primary GPU demand drivers. Energy efficiency and scalable architectures identified as key competitive differentiators.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "The market sizing reinforces the scale of GPU infrastructure opportunity that hyperscalers compete for with custom silicon alternatives. Sovereign AI trends support Google Cloud regional expansion strategies. Energy efficiency emphasis validates TPU power consumption advantages in competitive positioning.",
+    url: "https://www.globenewswire.com/news-release/2026/04/14/3273676/28124/en/AI-Data-Center-Graphics-Processing-Units-GPUs-Market-Report-2026-32-3-Bn-Opportunities-Trends-Competitive-Landscape-Strategies-and-Forecasts-2020-2025-2025-2030F-2035F.html"
   },
   {
-    id: 13, cat: "vendor", impact: "low", filler: true,
-    title: "Cisco Details Wireless Trends Shaping Retail IT Infrastructure in 2026",
-    summary: "Cisco outlined five key wireless trends that retail IT teams cannot ignore including supporting more locations and devices without adding staff. The analysis addresses business-critical application requirements for retail environments.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Retail wireless infrastructure trends indicate broader enterprise networking patterns that affect cloud connectivity requirements. Ciscos positioning in retail Wi-Fi could influence edge computing architectures that connect to Google Cloud services. The staff efficiency theme aligns with AI-driven network management approaches being adopted across industries.",
-    url: "https://blogs.cisco.com/networking/5-wireless-trends-retail-it-teams-cant-ignore-in-2026/"
+    id: 13, cat: "silicon", impact: "low", filler: true,
+    title: "Supermicro JumpStart Review Evaluates H14 Platform With AMD Instinct MI350X Accelerators",
+    summary: "Storage Review tests Supermicro bare-metal evaluation program featuring latest AMD AI accelerator platform. JumpStart provides pre-purchase testing for enterprise AI infrastructure decisions.",
+    source: "Storagereview.com", age: "2 days ago",
+    detail: "The review provides competitive intelligence on AMD Instinct MI350X performance characteristics versus NVIDIA and Google TPU options. Supermicro server platforms remain common deployment targets for hyperscaler and enterprise AI infrastructure. Understanding AMD accelerator ecosystem maturity informs competitive positioning discussions.",
+    url: "https://www.storagereview.com/review/supermicro-jumpstart-review-h14-with-amd-instinct-mi350x"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "NVIDIA GeForce NOW Adds 90 FPS Virtual Reality Streaming Support",
-    summary: "NVIDIA GeForce NOW now supports streaming at 90 frames per second for supported VR headsets. The update improves virtual reality gaming experience through cloud streaming technology.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "While consumer-focused this VR streaming advancement demonstrates NVIDIAs continued investment in low-latency high-bandwidth streaming infrastructure. The technology has potential enterprise applications for remote visualization and collaborative design workloads. Cloud VR streaming requirements stress networking infrastructure in ways that inform broader AI inference serving architectures.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-virtual-reality-update/"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "ARM Partners With SK Telecom and Rebellions for Sovereign AI Infrastructure",
+    summary: "ARM AGI CPU powers new telco-focused AI infrastructure through partnership with Korean chipmaker Rebellions. Collaboration targets agentic AI workloads for telecommunications applications.",
+    source: "Wccftech", age: "1 day ago",
+    detail: "The ARM ecosystem expansion into sovereign AI infrastructure represents alternative accelerator approaches beyond NVIDIA and hyperscaler custom silicon. Telco vertical focus indicates specialized AI deployment opportunities outside traditional cloud markets. Partnership signals growing demand for regionally controlled AI compute capabilities.",
+    url: "https://wccftech.com/arm-sk-telecom-rebellions-power-agentic-ai-telcom-with-its-agi-cpu/"
+  },
+  {
+    id: 15, cat: "competition", impact: "low", filler: true,
+    title: "Bromine Supply Chain Risk From Middle East Conflict Threatens Memory Chip Production",
+    summary: "Analysis reveals semiconductor memory production vulnerability from bromine supply concentration in conflict-affected regions. Qatar facility disruption could impact global DRAM and NAND manufacturing.",
+    source: "War on the Rocks", age: "1 day ago",
+    detail: "Supply chain risk for memory components affects AI infrastructure availability across all hyperscalers equally. The analysis highlights often-overlooked material dependencies in semiconductor manufacturing. For infrastructure planning awareness of potential memory supply constraints informs capacity reservation strategies.",
+    url: "https://warontherocks.com/the-bromine-chokepoint-how-strife-in-the-middle-east-could-halt-production-of-the-worlds-memory-chips/"
   },
 ];
 // ARTICLES_END
@@ -904,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The SK Hynix discussions with Google and Microsoft on memory supply agreements warrant direct attention as memory availability increasingly constrains AI infrastructure scaling and these negotiations could shape TPU roadmap dependencies. Azure Files introducing granular encryption controls for SMB and NFS protocols represents a competitive feature gap worth monitoring as enterprise customers increasingly demand protocol-specific security configurations that Google Cloud Storage may need to match. Intel rally on advanced packaging deals with hyperscalers signals potential shifts in backend infrastructure supply chains that could affect both networking silicon availability and alternative compute packaging options beyond current suppliers.";
+const STATIC_BRIEF = "AWS Interconnect reaching GA with Lumen partnership for last-mile connectivity directly challenges Googles Cross-Cloud Interconnect positioning and signals AWS is aggressively simplifying multicloud networking for enterprise AI workloads. Oracle analyst projections of 50-60% upside based on AI cloud acceleration alongside NVIDIAs reframing around cost-per-token economics indicate infrastructure efficiency metrics are becoming the competitive battleground where Google must demonstrate TPU advantage. Marvell emerging as a must-buy stock tied to Google TPU partnership discussions validates your custom silicon strategy but also highlights supply chain concentration risk as hyperscaler demand intensifies for specialized networking and storage chips.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
