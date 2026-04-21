@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "vendor", impact: "high", filler: false,
-    title: "Google in Talks With Marvell to Build Custom AI Inference Chips Beyond Broadcom",
-    summary: "Google is negotiating with Marvell Technology to develop two new AI chips including a memory processing unit and an inference-optimized TPU. The discussions mark a significant diversification of Googles custom silicon supply chain beyond its primary partner Broadcom.",
-    source: "The Next Web", age: "1 day ago",
-    detail: "This development signals a strategic shift in Googles AI infrastructure sourcing strategy. Adding Marvell as a third design partner alongside Broadcom and MediaTek reduces single-vendor dependency risk and increases negotiating leverage. The focus on inference-optimized TPUs suggests Google is preparing for the next phase of AI deployment where inference workloads will dominate over training. The memory processing unit component indicates Google is addressing the memory bandwidth bottleneck that constrains AI accelerator performance.",
-    url: "https://thenextweb.com/news/google-marvell-ai-chips-inference-tpu-broadcom/"
+    title: "Google Splits TPUv8 Into Two Chips With Broadcom Handling Training and MediaTek on Inference",
+    summary: "Google is preparing two separate TPUv8 chips with distinct purposes - one optimized for training workloads and another for inference. The strategic split assigns Broadcom to training silicon while MediaTek handles inference duties.",
+    source: "Wccftech", age: "1 day ago",
+    detail: "This architectural bifurcation represents a significant shift in Googles custom silicon strategy. By specializing chips for training versus inference Google can optimize power efficiency and performance for each workload type rather than compromising on a general purpose design. The decision to split vendor responsibilities between Broadcom and MediaTek diversifies supply chain risk while leveraging each vendors core competencies. This move directly impacts TPU infrastructure planning and could influence how Google prices and allocates AI compute resources across its cloud platform.",
+    url: "https://wccftech.com/google-splits-tpuv8-strategy-two-chips-broadcom-training-mediatek-inference-duties/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "AWS Interconnect Reaches GA With Multicloud Private Connectivity and Last-Mile Option",
-    summary: "AWS Interconnect has reached general availability offering multicloud private connectivity alongside a new last-mile connectivity option. The release also includes Claude Opus 4.7 in Amazon Bedrock and post-quantum TLS for Secrets Manager.",
-    source: "AWS News Blog", age: "today",
-    detail: "AWS Interconnect GA represents a significant competitive response to Googles Cross-Cloud Interconnect and Azures multicloud networking offerings. The multicloud private connectivity feature directly addresses enterprise hybrid and multicloud architecture requirements. The last-mile option suggests AWS is targeting edge connectivity scenarios relevant to distributed AI inference deployments. This positions AWS more competitively against Google Cloud for enterprises requiring seamless connectivity across cloud providers.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-7-in-amazon-bedrock-aws-interconnect-ga-and-more-april-20-2026/"
+    id: 2, cat: "vendor", impact: "high", filler: false,
+    title: "Google in Talks With Marvell to Develop New AI Chips Including Memory Processing Unit",
+    summary: "Google is negotiating with Marvell Technology to co-develop two new chips designed for more efficient AI model execution. One chip will be a memory processing unit to complement TPUs while the other is a new TPU variant.",
+    source: "The Times of India", age: "1 day ago",
+    detail: "The potential Marvell partnership signals Googles intent to address memory bandwidth bottlenecks that constrain AI inference performance. Memory processing units could offload data movement tasks from TPUs enabling higher effective throughput for large language models. This represents another vendor diversification move beyond Broadcoms traditional TPU design role. For infrastructure planning this suggests Google is preparing for memory-intensive workloads that current architectures struggle to handle efficiently at scale.",
+    url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/google-in-talks-with-marvell-to-build-new-ai-chips-the-information/articleshow/130381363.cms"
   },
   {
-    id: 3, cat: "networking", impact: "medium", filler: false,
-    title: "Google Cloud Evolves Media CDN for Demanding Broadcast and Streaming Workloads",
-    summary: "Google Cloud details enhancements to Media CDN targeting high-demand broadcast and streaming applications. The updates address evolving audience expectations for flawless content delivery at scale.",
+    id: 3, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Claude Opus 4.7 Now Generally Available on Google Cloud Vertex AI Platform",
+    summary: "Anthropics newest Opus model is now generally available on Vertex AI with improved performance for coding and long-running agents. Opus 4.7 features better ambiguity handling and more precise instruction following than its predecessor.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Media CDN improvements reflect Googles push to capture more enterprise media workloads from competitors. The focus on broadcast-grade reliability indicates targeting of traditional media companies migrating from legacy CDN providers. These enhancements leverage Googles global network infrastructure and could drive increased networking revenue. For AI infrastructure the streaming optimizations may also benefit model distribution and inference result delivery at scale.",
-    url: "https://cloud.google.com/blog/products/networking/media-cdn-and-trends-in-content-delivery/"
+    detail: "The GA release of Claude Opus 4.7 on Vertex AI strengthens Googles position in offering third-party foundation models alongside its own Gemini family. This multi-model strategy gives enterprise customers flexibility while keeping compute spend within Google Cloud. The emphasis on long-running agents aligns with Googles broader agentic AI push announced at Next. Infrastructure teams should anticipate increased demand for persistent inference workloads that require sustained GPU or TPU allocation rather than burst compute patterns.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/claude-opus-4-7-on-vertex-ai/"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Multi-Region Endpoints for Claude on Vertex AI Now Available in Preview",
-    summary: "Google Cloud announces US and EU multi-region endpoints for Claude models on Vertex AI in public preview. The endpoints dynamically route requests across regions to improve reliability while maintaining data residency compliance.",
+    id: 4, cat: "competition", impact: "medium", filler: false,
+    title: "Azure Databricks Launches Anthropic Claude Opus 4.7 Matching Google Cloud Availability",
+    summary: "Azure Databricks now supports Claude Opus 4.7 through AI Model Serving for complex extraction and agentic reasoning tasks. The release matches Googles same-day availability of the model on Vertex AI.",
+    source: "Azure Updates", age: "today",
+    detail: "Microsofts simultaneous launch of Claude Opus 4.7 demonstrates the intensifying competition among hyperscalers to offer identical third-party model portfolios. Neither cloud provider can claim differentiation through model exclusivity forcing competition on infrastructure performance pricing and integration quality. This parity race benefits customers but compresses margins for cloud providers. The Databricks integration path differs from Googles native Vertex approach potentially affecting latency and operational complexity for enterprises choosing between platforms.",
+    url: "https://azure.microsoft.com/updates?id=560590"
+  },
+  {
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "Hyperscalers Carving Up AI Agent Market With Distinct Winning Strategies Emerging",
+    summary: "Major cloud providers are competing aggressively for AI startup partnerships across every layer of the technology stack. Analysis reveals differentiated positioning as each hyperscaler pulls ahead in specific agent market segments.",
+    source: "Cbinsights.com", age: "1 day ago",
+    detail: "The competitive landscape for AI agent infrastructure is fragmenting rather than consolidating with AWS Google and Microsoft each cultivating distinct startup ecosystems. This segmentation suggests enterprises may face vendor lock-in decisions earlier in the agent development lifecycle. For Google Cloud the strategic question is whether TPU and Vertex AI advantages translate to agent deployment wins or if competitors networking and enterprise integration strengths prove more decisive. Infrastructure teams should monitor which platforms emerging agent frameworks standardize on.",
+    url: "https://www.cbinsights.com/research/hyperscalers-are-carving-up-the-ai-agent-market/"
+  },
+  {
+    id: 6, cat: "networking", impact: "medium", filler: false,
+    title: "Data Center Networking Market Research Shows AI and ML Workloads Driving High Speed Demand",
+    summary: "New industry research highlights rising demand for high-speed data exchange driven by AI and ML workloads as a primary market opportunity. Hybrid cloud architectures and hyperscale data center expansion are identified as key growth drivers through 2031.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "The research validates infrastructure investment priorities for GPU and TPU clusters where network bandwidth often constrains effective utilization. High-speed interconnect demand directly benefits vendors like Arista Cisco and Broadcom who supply switching and optical components for AI data centers. The hybrid cloud trend creates complexity for networking teams managing traffic flows between on-premises training clusters and cloud inference endpoints. Google must ensure its Cloud Networking products can compete as enterprises evaluate multi-cloud AI deployment architectures.",
+    url: "https://www.globenewswire.com/news-release/2026/04/20/3277147/28124/en/Data-Center-Networking-Industry-Research-2026-Global-Market-Trends-Opportunities-and-Forecasts-2021-2025-2026-2031.html"
+  },
+  {
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Cloud Expands Public Sector AI Foundation With Partner Ecosystem Strategy",
+    summary: "Google Cloud is addressing public sector AI adoption barriers including compliance requirements and legacy environment limitations through partner ecosystem expansion. The initiative aims to improve mission outcomes and streamline government operations.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Multi-region endpoints represent critical infrastructure for enterprise AI deployments requiring both high availability and regulatory compliance. Dynamic routing across regions addresses the capacity constraints that can occur with single-region deployments during demand spikes. This feature positions Vertex AI competitively against AWS Bedrock for enterprises with strict data sovereignty requirements. The focus on Claude specifically indicates strong partnership momentum with Anthropic across Googles AI platform.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/multi-region-endpoints-for-claude-available-on-vertex-ai/"
-  },
-  {
-    id: 5, cat: "storage", impact: "medium", filler: false,
-    title: "AWS Analytics Accelerator Library Boosts Apache Hadoop and Iceberg on S3",
-    summary: "AWS releases the Analytics Accelerator Library to improve read performance for Apache Hadoop and Apache Iceberg workloads on Amazon S3. The library addresses data access bottlenecks that cause longer processing times and higher compute costs.",
-    source: "AWS Storage", age: "today",
-    detail: "Storage performance optimization for analytics workloads is increasingly important as AI training pipelines depend on efficient data access patterns. The focus on Iceberg compatibility reflects the growing adoption of open table formats for AI and ML data lakes. Improved S3 read performance directly impacts training data throughput and checkpoint operations for large-scale AI workloads. This competes with Googles BigLake and Azure Synapse optimizations for similar analytical storage scenarios.",
-    url: "https://aws.amazon.com/blogs/storage/accelerate-apache-hadoop-and-apache-iceberg-on-amazon-s3-with-the-analytics-accelerator-library/"
-  },
-  {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Data Center Switch Market Projected to Reach $29.98 Billion by 2032",
-    summary: "The global data center switch market is forecast to grow significantly through 2032 driven by AI infrastructure demand. Key opportunities include programmable hardware and modular designs with regional regulatory adaptation.",
-    source: "GlobeNewswire", age: "3 days ago",
-    detail: "This market forecast validates the strategic importance of networking infrastructure investments for AI data centers. The emphasis on programmable hardware aligns with trends toward SmartNICs and DPUs for AI workload acceleration. Supply chain diversification noted in the report reflects ongoing concerns about semiconductor availability affecting hyperscaler buildouts. The growth trajectory benefits key vendors including Arista Cisco and Broadcom who supply Googles networking infrastructure.",
-    url: "https://www.globenewswire.com/news-release/2026/04/17/3276275/28124/en/29-98-Bn-Data-Center-Switch-Global-Market-Forecasts-2026-2032-by-Switch-Type-Port-Speed-Topology-End-User-and-Applications.html"
-  },
-  {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "Arista Fabrinet Ciena Named Top Data Center Stock Picks This Earnings Season",
-    summary: "Wall Street analysts identify Arista Networks Fabrinet and Ciena as top data center infrastructure investments. Pricing strength and infrastructure scaling are cited as key drivers for the sector.",
-    source: "Barchart.com", age: "2 days ago",
-    detail: "Analyst bullishness on these networking and optical component companies reflects confidence in continued AI infrastructure buildout. Arista directly competes for Google Cloud data center switch deployments alongside Cisco. Ciena provides optical networking equipment critical for data center interconnects and AI cluster fabrics. Strong performance from these vendors could indicate healthy demand signals for Googles own infrastructure expansion plans and potential pricing pressures on equipment procurement.",
-    url: "https://www.barchart.com/story/news/1383984/anet-fn-cien-why-these-3-data-center-stocks-are-top-buys-this-earnings-season"
+    detail: "Public sector represents a significant growth opportunity for Google Cloud but requires specialized compliance certifications and partner relationships that differ from commercial markets. The partner ecosystem approach allows Google to scale government reach without building all capabilities internally. For infrastructure teams this means ensuring FedRAMP and similar compliance for TPU and networking services. AWS and Azure have established public sector presences so Googles ecosystem investment attempts to close competitive gaps in this regulated market segment.",
+    url: "https://cloud.google.com/blog/topics/public-sector/building-the-foundation-for-ai-across-the-public-sector-through-our-partner-ecosystem/"
   },
   {
     id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Agentic AI Era Forces Enterprise Architecture Reset for Google Cloud",
-    summary: "Analysis suggests the agentic AI era is fundamentally changing enterprise architecture requirements. Agents operating continuously at machine scale introduce new infrastructure demands beyond traditional data analytics.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "This strategic perspective highlights the infrastructure implications of moving from AI assistants to autonomous agents. Agentic workloads require different compute networking and storage patterns than batch training or simple inference. Google Clouds investment in Vertex AI Agent Builder positions it for this architectural shift. The analysis suggests enterprises will need to rethink their cloud infrastructure strategies creating opportunities for platform differentiation.",
-    url: "https://siliconangle.com/2026/04/18/ai-powers-google-whats-next-google-cloud/"
+    title: "AirTrunk Acquires Lumina CloudInfra to Enter India With 600MW Planned Data Center Capacity",
+    summary: "Blackstone consolidates its data center portfolio by folding Lumina CloudInfra into AirTrunk enabling expansion into India with 600MW of planned capacity. The internal restructuring strengthens AirTrunks Asia-Pacific presence.",
+    source: "The Next Web", age: "1 day ago",
+    detail: "The 600MW India expansion represents significant colocation capacity that hyperscalers including Google Cloud will evaluate for regional AI infrastructure deployment. Blackstones consolidation strategy creates a stronger competitor to established data center operators in Asia-Pacific markets. For Google the question is whether to lease capacity from operators like AirTrunk or continue building owned facilities for TPU clusters. India represents a growing market for AI services making infrastructure availability in region strategically important for latency-sensitive workloads.",
+    url: "https://thenextweb.com/news/airtrunk-lumina-cloudinfra-india-data-centre-acquisition/"
   },
   {
-    id: 9, cat: "silicon", impact: "high", filler: false,
-    title: "NVIDIA CEO Warns DeepSeek on Huawei Chips Would Be Horrible Outcome for US",
-    summary: "Jensen Huang warned that DeepSeek optimizing AI models for Huawei Ascend chips instead of American hardware would be a horrible outcome for the United States. The comments come as DeepSeek prepares to launch its V4 model.",
-    source: "The Next Web", age: "2 days ago",
-    detail: "Huangs remarks underscore the geopolitical stakes in AI chip competition and export control effectiveness. If DeepSeek successfully optimizes for Huawei silicon it would validate Chinas domestic AI chip capabilities and reduce dependency on NVIDIA. This scenario would impact Googles competitive position as Chinese hyperscalers could access capable domestic alternatives. The development also raises questions about the long-term effectiveness of US semiconductor export restrictions on Chinese AI advancement.",
-    url: "https://thenextweb.com/news/nvidia-huang-deepseek-huawei-chips-horrible-outcome/"
+    id: 9, cat: "storage", impact: "medium", filler: false,
+    title: "AWS Introduces EBS Volume Clones to Accelerate Development Workflows and Data Refresh",
+    summary: "Amazon EBS Volume Clones enable rapid provisioning of production data copies for developers testers and disaster recovery teams. The feature addresses operational challenges around daily database refreshes and troubleshooting sessions.",
+    source: "AWS Storage", age: "today",
+    detail: "EBS Volume Clones represent an incremental storage capability that improves developer velocity for data-intensive workflows. While not directly AI-focused the feature benefits ML training pipelines that require frequent dataset snapshots and version management. Google Cloud Persistent Disk offerings should be evaluated for competitive feature parity. Storage performance and flexibility increasingly influence where enterprises choose to run AI workloads making these capabilities relevant to broader infrastructure competition.",
+    url: "https://aws.amazon.com/blogs/storage/accelerate-development-workflows-with-amazon-ebs-volume-clones/"
   },
   {
-    id: 10, cat: "competition", impact: "medium", filler: false,
-    title: "Permitting and Labor Shortages Put 40 Percent of US Data Center Projects at Risk",
-    summary: "Nearly 40 percent of US data center projects face schedule delays due to permitting hurdles and labor shortages according to SynMax analysis. The study found 60 percent of projects show signs of construction slowdowns.",
-    source: "pymnts.com", age: "3 days ago",
-    detail: "Infrastructure buildout constraints affect all hyperscalers competing for AI capacity expansion. Permitting delays create competitive advantages for providers with existing data center footprint and established local relationships. Labor shortages may drive increased automation and modular construction adoption across the industry. These constraints could impact Googles ability to rapidly scale GPU and TPU capacity to meet enterprise AI demand.",
-    url: "https://www.pymnts.com/artificial-intelligence-2/2026/permitting-hurdles-and-labor-shortages-threaten-ai-data-center-timelines/"
+    id: 10, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Site Recovery Adds Support for Windows VMs With NVMe Disk Controllers",
+    summary: "Azure Site Recovery now supports replication and disaster recovery for Windows Azure VMs running on NVMe-enabled Generation 2 VM families. This enhancement covers Da Ea Fa v6-series and Ebsv5 Ebdsv5 instances in Azure-to-Azure scenarios.",
+    source: "Azure Updates", age: "today",
+    detail: "NVMe support for disaster recovery addresses a gap that prevented enterprises from using newer high-performance VM families in business continuity architectures. While not directly AI-related NVMe storage performance matters for data preprocessing and model checkpoint operations. The feature demonstrates Azures continued investment in enterprise resilience capabilities that compete with Google Clouds disaster recovery offerings.",
+    url: "https://azure.microsoft.com/updates?id=560241"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "EU Awards 180 Million Euro Sovereign Cloud Contract to Four European Providers",
-    summary: "The European Commission awarded its sovereign cloud framework contract to consortiums including Post Telecom StackIT Scaleway and Proximus with S3NS. The six-year contract addresses EU data sovereignty requirements.",
-    source: "The Next Web", age: "3 days ago",
-    detail: "The inclusion of S3NS a Thales and Google Cloud joint venture indicates Google maintains a pathway into EU sovereign cloud opportunities despite not winning directly. This contract structure reflects ongoing European concerns about US cloud provider data access. The sovereign cloud segment represents a growing market segment where hyperscalers must adapt their offerings to meet local regulatory requirements.",
-    url: "https://thenextweb.com/news/eu-sovereign-cloud-180-million-awarded/"
+    title: "Azure File Sync Expands to Belgium Central Malaysia West and Indonesia Central Regions",
+    summary: "Azure File Sync is now generally available in three new regions enabling hybrid data tiering between on-premises Windows Servers and Azure Files. The expansion supports hybrid use cases and simplified migration scenarios.",
+    source: "Azure Updates", age: "today",
+    detail: "Regional expansion of storage services reflects ongoing hyperscaler competition for global enterprise footprint. New Azure regions in Southeast Asia and Europe provide alternatives to Google Cloud regional availability. For hybrid AI deployments file sync capabilities can simplify data movement between edge training and cloud inference though dedicated data transfer services typically handle large-scale ML workflows.",
+    url: "https://azure.microsoft.com/updates?id=557828"
   },
   {
-    id: 12, cat: "networking", impact: "low", filler: true,
-    title: "Cisco Details AI-Powered Radio Resource Management for Enterprise Wireless",
-    summary: "Cisco explains how its AI-RRM technology boosts network performance and simplifies wireless configuration. The feature targets mission-critical Wi-Fi deployments requiring automated optimization.",
+    id: 12, cat: "competition", impact: "low", filler: true,
+    title: "European Commission Awards 180 Million Euro Sovereign Cloud Contract to Four EU Vendors",
+    summary: "The European Commission allocated sovereign cloud contracts to four European firms to increase EU digital autonomy. The investment reflects ongoing regulatory pressure for data sovereignty in cloud infrastructure.",
+    source: "Verdict", age: "1 day ago",
+    detail: "EU sovereign cloud initiatives create both challenges and opportunities for US hyperscalers operating in European markets. Google Cloud must navigate data residency requirements while competing against locally preferred vendors. The 180 million euro allocation signals continued government investment in alternatives to AWS Azure and Google Cloud for sensitive workloads though scale limitations may restrict competitiveness for large AI deployments.",
+    url: "https://www.verdict.co.uk/ec-sovereign-cloud-contracts/"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Cloud Cost Optimization Principles Adapt for AI Era Workload Management",
+    summary: "Microsoft guidance addresses how cloud cost optimization practices must adapt as AI workloads become dominant spend categories. Best practices focus on managing spend improving efficiency and maximizing value in AI deployments.",
+    source: "Azure Blog", age: "today",
+    detail: "Cost optimization guidance acknowledges that AI infrastructure spending patterns differ fundamentally from traditional cloud workloads with GPU and TPU costs dominating bills. Enterprises evaluating Google Cloud versus Azure will compare cost management tools and committed use discount structures. Effective FinOps for AI requires understanding utilization patterns for training versus inference which this guidance attempts to address.",
+    url: "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/"
+  },
+  {
+    id: 14, cat: "silicon", impact: "low", filler: true,
+    title: "Intel Stock Falls 3.78 Percent Ahead of Q1 Earnings Amid Foundry Business Concerns",
+    summary: "Intel shares dropped ahead of first quarter earnings as investors weighed foundry business challenges against turnaround potential. Wall Street prepared for updates on the chipmakers strategic direction.",
+    source: "Ibtimes.com.au", age: "1 day ago",
+    detail: "Intels foundry struggles have indirect implications for AI infrastructure as the company competes for custom chip manufacturing contracts that could include cloud provider accelerators. Googles TPU supply chain decisions consider foundry alternatives to TSMC including potential Intel capacity. Continued Intel weakness may consolidate manufacturing options further limiting supply chain diversification for hyperscaler custom silicon programs.",
+    url: "https://www.ibtimes.com.au/intel-stock-drops-378-ahead-q1-earnings-investors-brace-turnaround-update-1867097"
+  },
+  {
+    id: 15, cat: "networking", impact: "low", filler: true,
+    title: "Cisco Shares Tips for Scaling Global On-Premises Operations With Catalyst Center",
+    summary: "Cisco provides guidance on simplifying on-premises deployments at scale using Catalyst Center Global Manager. The tips address visibility challenges when operations span multiple sites and regions.",
     source: "Cisco Networking Blog", age: "today",
-    detail: "AI-driven network management represents an emerging capability area where vendors differentiate their enterprise offerings. Ciscos investment in wireless AI optimization could influence enterprise networking decisions that affect hybrid cloud connectivity. The technology demonstrates broader industry trends toward autonomous network operations relevant to data center and campus infrastructure.",
-    url: "https://blogs.cisco.com/networking/how-cisco-built-an-ai-rrm-that-maximizes-your-wireless-solution/"
-  },
-  {
-    id: 13, cat: "storage", impact: "low", filler: true,
-    title: "Azure NetApp Files Adds User and Group Quota Reporting in Preview",
-    summary: "Azure NetApp Files introduces quota reporting for individual users and groups on NFS SMB and dual-protocol volumes. The feature provides visibility into quota limits and capacity usage metrics.",
-    source: "Azure Updates", age: "today",
-    detail: "Enterprise storage management features like quota reporting address operational requirements for shared file storage in cloud environments. Azure NetApp Files competes with Google Cloud Filestore and AWS FSx for enterprise file storage workloads. Enhanced management capabilities help Azure compete for enterprises with complex storage governance requirements.",
-    url: "https://azure.microsoft.com/updates?id=558483"
-  },
-  {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Announces Minimum Billable Object Size for Cool Cold and Archive Tiers",
-    summary: "Azure introduces a 128KiB minimum billable object size for cool cold and archive storage tiers. Objects smaller than 128KiB will be billed as 128KiB affecting storage cost calculations.",
-    source: "Azure Updates", age: "today",
-    detail: "This pricing change affects cost optimization strategies for customers using Azure tiered storage. Small object storage patterns common in some AI training datasets may see cost increases. The change reflects Azure adjusting economics for cold storage tiers and could influence multicloud storage architecture decisions.",
-    url: "https://azure.microsoft.com/updates?id=559756"
-  },
-  {
-    id: 15, cat: "vendor", impact: "low", filler: true,
-    title: "NVIDIA and Adobe Showcase AI-Accelerated Video Editing Features at NAB 2026",
-    summary: "NVIDIA highlights GPU acceleration for new Adobe Premiere color grading capabilities at NAB Show 2026. The partnership targets video editors livestreamers and professional content creators.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "Media and entertainment workflows increasingly leverage GPU acceleration for AI-enhanced features. While not directly AI infrastructure related this demonstrates NVIDIAs ecosystem expansion beyond data center compute. Strong creative professional adoption reinforces NVIDIAs platform position across multiple market segments.",
-    url: "https://blogs.nvidia.com/blog/rtx-ai-garage-nab-adobe-premiere-color-mode/"
+    detail: "Enterprise networking management tools from Cisco remain relevant as organizations maintain hybrid infrastructure alongside cloud deployments. For Google Cloud the on-premises networking layer often connects to cloud-based AI services creating integration points where Cisco equipment dominates. Understanding enterprise network management trends helps inform Cloud Interconnect and hybrid connectivity product strategy.",
+    url: "https://blogs.cisco.com/networking/5-tips-to-automate-on-premises-operations-with-catalyst-center-global-manager/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The Marvell negotiations for custom inference TPUs and memory processing units represent the most significant near-term development, as diversifying beyond Broadcom directly impacts your silicon roadmap and requires networking and storage architecture planning for potentially different interconnect and memory bandwidth characteristics. AWS releasing the Analytics Accelerator Library for Hadoop and Iceberg on S3 signals competitive pressure on BigQuery and GCS performance positioning, while the 40 percent of US data center projects facing delays from permitting and labor shortages could constrain your infrastructure expansion timeline regardless of chip availability. The DeepSeek optimization warning from Jensen Huang warrants monitoring as any shift toward Huawei Ascend chips would reshape the competitive landscape for inference workloads and potentially affect your multi-vendor silicon strategy with Marvell.";
+const STATIC_BRIEF = "The TPUv8 split between Broadcom for training and MediaTek for inference combined with Marvell discussions for a memory processing unit signals a major architectural shift that will require close coordination between your networking and storage teams to ensure interconnect and memory subsystems align with this multi-vendor silicon strategy. Azure Databricks matching Google Cloud on same-day Claude Opus 4.7 availability demonstrates that model access is no longer a competitive differentiator, pushing the battleground toward infrastructure performance and integration depth where networking and storage optimization become critical moats. Industry research confirming AI and ML workloads as the primary driver for high-speed data center networking through 2031 validates continued investment in your interconnect roadmap, though the multi-vendor TPU approach introduces supply chain complexity that warrants monitoring for potential timeline risks.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
