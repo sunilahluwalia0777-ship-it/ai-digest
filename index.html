@@ -648,115 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Unveils TPU v8 Strategy With Separate Training and Inference Chips",
-    summary: "Google announced its eighth-generation TPUs at Cloud Next shipping two distinct chip designs for the first time in the programs decade-long history. The split architecture delivers specialized silicon for training and inference workloads targeting million-strong clusters.",
-    source: "Tom's Hardware UK", age: "1 day ago",
-    detail: "Google breaking its TPU line into dedicated TPU 8t for training and TPU 8i for inference represents a major architectural pivot that mirrors how hyperscale AI workloads have diverged. The training variant likely emphasizes memory bandwidth and interconnect while inference focuses on latency and power efficiency. This specialization directly challenges NVIDIA which still uses unified architectures across both workload types. For infrastructure planning the split means Google Cloud customers must now consider chip selection based on workload mix rather than defaulting to a single accelerator type.",
-    url: "https://www.tomshardware.com/tech-industry/semiconductors/google-splits-its-tpu-into-two-chips-for-the-first-time-with-training-and-inference-variants"
+    title: "OpenAI Models Now Available on AWS Bedrock Ending Microsoft Azure Exclusivity",
+    summary: "Amazon Web Services announced it will sell OpenAI models to cloud customers one day after Microsoft ended its exclusive reselling arrangement. This marks the first time OpenAI technology is available outside Azure since the original partnership began.",
+    source: "The Next Web", age: "today",
+    detail: "This is a seismic shift in the hyperscaler AI landscape. AWS gaining access to OpenAI models removes a key competitive moat Azure held for years. For Google Cloud this creates both threat and opportunity as customers can now access GPT models without Azure lock-in but AWS becomes more formidable. The move suggests OpenAI is prioritizing distribution scale over exclusivity revenue which could pressure all hyperscalers to differentiate on infrastructure and pricing rather than model access alone.",
+    url: "https://thenextweb.com/news/amazon-aws-openai-models-microsoft-exclusivity-ends/"
   },
   {
-    id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "Broadcom Hits 2 Trillion Valuation on AI Chip Surge and Hyperscaler Deals",
-    summary: "Broadcom market capitalization surged past 2 trillion dollars fueled by soaring demand for custom AI chips and cloud networking infrastructure. The companys AI semiconductor sales more than doubled with significant partnerships with Google and Meta solidified.",
-    source: "The Times of India", age: "1 day ago",
-    detail: "Broadcoms valuation milestone reflects its dominant position in custom AI accelerators where it designs ASICs for Google Meta and other hyperscalers. The doubling of AI semiconductor revenue indicates accelerating adoption of custom silicon over merchant GPUs for specific inference workloads. For Google this validates the strategy of partnering with Broadcom on networking chips while developing TPUs internally. The networking infrastructure demand driven by AI cluster buildouts also benefits Broadcoms Memory business substantially.",
-    url: "https://economictimes.indiatimes.com/news/international/us/broadcom-hits-2-trillion-valuation-how-ai-chip-surge-google-and-meta-deals-and-etf-buzz-is-driving-avgo-rally/articleshow/130554545.cms"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Hyperscalers Face Wall Street After Iran Conflict Drives Up Energy and AI Costs",
+    summary: "Big tech companies face Q1 earnings scrutiny as the US-Iran conflict has sent oil prices soaring affecting data center operational costs. Wall Street remains cautiously optimistic about data center construction plans despite memory shortages and rising energy prices.",
+    source: "CNBC", age: "today",
+    detail: "Energy cost volatility directly impacts GPU and TPU infrastructure economics. Rising oil prices increase both direct power costs and cooling expenses for AI data centers. Memory shortages compound the challenge by constraining accelerator supply chains. Google must demonstrate cost management discipline while maintaining AI infrastructure expansion pace. This earnings cycle will reveal how hyperscalers are absorbing or passing through these cost pressures to enterprise customers.",
+    url: "https://www.cnbc.com/2026/04/28/tech-hyperscalers-q1-earnings-after-iran-war-lifts-energy-ai-prices.html"
   },
   {
-    id: 3, cat: "networking silicon", impact: "high", filler: false,
-    title: "Co-Packaged Optics Market to Explode at 142 Percent CAGR as AI Clusters Scale",
-    summary: "The CPO market is projected to grow at 142 percent CAGR from 2026 to 2030 as AI clusters scale and 3.2T data rates push copper to its limits. NVIDIA and Broadcom have both started deploying CPO in switch platforms marking a paradigm shift in data center connectivity.",
-    source: "Digitimes", age: "1 day ago",
-    detail: "Co-packaged optics represents the most significant networking architecture change in a decade moving optical transceivers directly onto switch ASICs to reduce power and latency. At 3.2T per port the electrical losses in traditional pluggable optics become prohibitive making CPO essential for next-generation AI fabrics. Both NVIDIA and Broadcom deploying CPO validates that this technology is production-ready not experimental. For Google infrastructure this accelerates the timeline for evaluating CPO-based spine switches and potentially changes the vendor landscape as optical expertise becomes critical.",
-    url: "https://www.digitimes.com/reports/item.php?id=20260427RS400"
+    id: 3, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Cloud Next 2026 Declares End of AI Pilot Era as Agent Management Takes Center Stage",
+    summary: "Google Cloud Next 26 opened with Thomas Kurian declaring the end of the AI pilot era and Sundar Pichai noting the shift from can we build an agent to how do we manage thousands. The event focused on enterprise-scale agent orchestration and production deployment.",
+    source: "Forrester.com", age: "today",
+    detail: "This positioning directly addresses enterprise readiness concerns that have slowed AI adoption. The shift from experimentation to production deployment signals maturing infrastructure requirements including networking for agent-to-agent communication and storage for persistent agent state. Google is attempting to capture the enterprise market at the inflection point between proof-of-concept and scaled deployment. The agent management narrative creates differentiation opportunity around Googles Vertex AI platform capabilities.",
+    url: "https://www.forrester.com/blogs/google-cloud-next-2026-the-end-of-the-ai-pilot-era/"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Cloud Launches 50 Plus Managed MCP Servers for AI Agent Connectivity",
-    summary: "Google Cloud announced more than 50 Google-managed Model Context Protocol servers are generally available or in preview with more on the way. MCP servers provide critical connectivity for AI agents to access real-world data and solve complex problems autonomously.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The Model Context Protocol standardizes how AI agents connect to external data sources and tools addressing a key bottleneck in agentic AI deployments. Googles investment in 50 plus managed servers signals serious commitment to the agentic infrastructure layer. This creates significant demand for low-latency networking between agent compute and data services. The infrastructure implications include potential changes to how storage systems expose APIs and how network policies must adapt for agent-to-agent communication patterns.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/google-managed-mcp-servers-are-available-for-everyone/"
+    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Sam Altman and AWS CEO Discuss Bedrock Managed Agents Partnership Details",
+    summary: "OpenAI CEO Sam Altman and AWS CEO Matt Garman discussed their new partnership including Bedrock managed agents integration. The interview explores implications for OpenAI and Microsofts revised deal structure.",
+    source: "Stratechery.com", age: "today",
+    detail: "This interview reveals strategic thinking behind the AWS-OpenAI partnership. Managed agents on Bedrock suggests deep integration beyond simple model hosting requiring networking infrastructure for agent orchestration. For Google this signals AWS is building a complete agentic stack that competes directly with Vertex AI Agent Builder. Understanding the technical depth of this integration helps assess competitive positioning for enterprise AI workloads.",
+    url: "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Cloud TPU 8 Generation Built for Million-Strong Clusters and Agentic AI",
-    summary: "TPU 8t and 8i promise significant performance improvements and million-strong clusters to power agentic AI at scale. The eighth generation marks Googles most ambitious infrastructure commitment for AI workloads.",
-    source: "TechRadar", age: "1 day ago",
-    detail: "The million-chip cluster target represents an order of magnitude increase from current TPU pod configurations requiring massive advances in interconnect fabric and failure tolerance. This scale necessitates innovations in network topology likely involving custom optical interconnects and novel routing protocols. The agentic AI focus suggests workload patterns will shift from batch training to more interactive inference with different latency and bandwidth requirements. Infrastructure teams must plan for both the raw scale and the changing traffic patterns these clusters will generate.",
-    url: "https://www.techradar.com/pro/google-cloud-unveils-eighth-generation-tpus-built-to-support-an-agentic-era"
+    id: 5, cat: "networking", impact: "medium", filler: false,
+    title: "Cisco Universal Quantum Switch Signals Rise of Quantum Networking Fabric",
+    summary: "Ciscos new Universal Quantum Switch demonstrates the networks critical importance in scaling quantum computing infrastructure. IT leaders should note quantum is shifting from isolated computing to networked fabric architectures.",
+    source: "SiliconANGLE News", age: "today",
+    detail: "Ciscos quantum switch investment signals networking vendors preparing for post-classical computing infrastructure. Quantum networking will require fundamentally different approaches to latency timing and error correction compared to classical networks. For hyperscalers this represents both infrastructure opportunity and potential disruption to current data center architectures. Google should monitor how quantum networking intersects with AI infrastructure given its own quantum computing investments.",
+    url: "https://siliconangle.com/2026/04/27/ciscos-universal-quantum-switch-rise-quantum-fabric/"
   },
   {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "AWS Launches Amazon Quick AI Assistant and Expands OpenAI Partnership on Bedrock",
-    summary: "AWS launched Amazon Quick an AI assistant for work with desktop app and expanded integrations at its Whats Next 2026 event. AWS also extended its partnership with OpenAI bringing models like GPT-5.5 and Codex to Amazon Bedrock in limited preview.",
-    source: "AWS News Blog", age: "today",
-    detail: "AWS deepening its OpenAI partnership while Google pushes its own Gemini models creates interesting competitive dynamics in the enterprise AI platform market. The Bedrock integration of GPT-5.5 gives AWS customers model optionality that Google Cloud must counter with Gemini differentiation. The agentic AI solutions for supply chain hiring customer experience and healthcare signal AWS targeting the same enterprise use cases as Googles agent platform. Infrastructure implications include potential shifts in customer workload placement based on model availability.",
-    url: "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/"
+    id: 6, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco SD-WAN 26.1.1 Adds AI-Ready Networking and Enhanced Security Features",
+    summary: "Cisco Catalyst SD-WAN version 26.1.1 introduces AI-ready networking capabilities alongside security and resilience enhancements. The update focuses on simplifying operations while enabling AI workload support.",
+    source: "Cisco.com", age: "today",
+    detail: "Ciscos AI-ready networking positioning in SD-WAN reflects enterprise demand for networks optimized for AI traffic patterns. This matters for hybrid cloud deployments where AI workloads span on-premises and cloud infrastructure. Enhanced security features address concerns about AI model and data protection in transit. Google Cloud customers using hybrid architectures will evaluate how Cisco SD-WAN integrates with Google Cloud networking services.",
+    url: "https://blogs.cisco.com/?p=489622"
   },
   {
     id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Launches Nemotron 3 Nano Omni Model Unifying Vision Audio and Language",
-    summary: "NVIDIA unveiled Nemotron 3 Nano Omni an open multimodal model that brings vision speech and language capabilities together into one system. The unified model enables agents to deliver faster smarter responses with up to 9x more efficiency.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "NVIDIAs push into multimodal models directly competes with Googles Gemini on the software layer while reinforcing GPU hardware demand. The 9x efficiency claim for unified versus separate models has significant infrastructure implications reducing the compute footprint for multimodal agent workloads. As an open model it may influence how Google positions Gemini licensing and deployment options. The consolidation of modalities into single inference calls also changes network traffic patterns potentially reducing cross-service latency bottlenecks.",
-    url: "https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/"
+    title: "Cisco Identifies Five Signs Data Centers Are Blocking AI Strategy Execution",
+    summary: "Cisco outlines infrastructure barriers that prevent AI readiness noting the biggest obstacles are existing problems many IT teams already face. The analysis helps identify whether legacy data center designs are constraining AI initiatives.",
+    source: "Cisco.com", age: "today",
+    detail: "This vendor perspective validates that infrastructure modernization is prerequisite for AI deployment at scale. Legacy networking and storage architectures often cannot support the bandwidth and latency requirements of distributed AI training. For Google Cloud this creates opportunity to position cloud infrastructure as the path around on-premises limitations. Understanding customer infrastructure pain points helps frame cloud migration narratives around AI enablement.",
+    url: "https://blogs.cisco.com/?p=490180"
   },
   {
-    id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "Azure Foundry Agent Service Now Supports Bring Your Own AI Gateway Integration",
-    summary: "Foundry Agent Service now supports bring-your-own-model scenarios allowing agents to use AI models deployed outside of Foundry including those behind enterprise AI gateways. This enables organizations to leverage existing model investments with Azure agent infrastructure.",
-    source: "Azure Updates", age: "today",
-    detail: "Microsofts BYOM approach for agent services creates flexibility that could attract enterprises with existing model deployments on other platforms. The API Management gateway integration addresses enterprise requirements around model governance and traffic management. This positions Azure as a meta-platform for agent orchestration regardless of underlying model provider. Google may need to consider similar openness in its agent platform to avoid losing enterprises with multi-cloud model strategies.",
-    url: "https://azure.microsoft.com/updates?id=561002"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco Identifies Five Signs Data Centers Are Holding Back AI Strategy",
-    summary: "Cisco outlines the biggest barriers to AI readiness highlighting infrastructure problems many IT teams are already dealing with today. The focus is on identifying data center limitations that prevent successful AI deployments.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "Ciscos positioning around AI readiness assessments reflects vendor efforts to capture infrastructure upgrade spending driven by AI workloads. The framing of existing infrastructure as a blocker creates sales opportunities for network and compute refreshes. For Google this represents both competitive pressure as Cisco targets enterprise data centers and partnership opportunity in hybrid cloud scenarios. Understanding customer pain points around power density cooling and network bandwidth helps inform Google Cloud positioning.",
-    url: "https://blogs.cisco.com/datacenter/5-signs-your-data-center-is-holding-your-ai-strategy-back/"
-  },
-  {
-    id: 10, cat: "storage", impact: "low", filler: true,
-    title: "Google Cloud Converges Operational and Analytical Data for AI Transformation",
-    summary: "Google Cloud addresses the architectural separation between operational and analytical data that breaks AI reasoning loops. The unified approach enables AI agents to understand complete real-time context for immediate action.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Breaking down the wall between OLTP and OLAP systems has been a database industry goal for decades but AI agents create new urgency. The requirement for agents to reason across both historical and live data implies new storage architectures with different consistency and latency tradeoffs. This convergence will drive demand for unified storage systems and faster interconnects between database tiers. Google positioning this as foundational for agentic AI could influence how customers architect their data layer.",
-    url: "https://cloud.google.com/blog/products/databases/unify-analytical-and-operational-data-for-ai/"
-  },
-  {
-    id: 11, cat: "competition", impact: "low", filler: true,
-    title: "Iran Conflict Creates Helium Supply Chain Crisis for Semiconductor Manufacturing",
-    summary: "The Iran war is choking off helium supplies which serve as a critical input for chipmaking and AI infrastructure. Strait of Hormuz disruptions are creating price spikes and availability concerns for semiconductor fabs.",
-    source: "Foreign Policy", age: "1 day ago",
-    detail: "Helium is essential for chip manufacturing processes including cooling and leak detection in fabrication equipment. Supply disruptions could slow semiconductor production affecting availability of GPUs TPUs and networking ASICs. This geopolitical risk adds another variable to AI infrastructure capacity planning beyond traditional lead times. The concentration of helium supply through conflict zones highlights supply chain vulnerabilities in the AI hardware ecosystem.",
-    url: "http://foreignpolicy.com/2026/04/27/iran-war-hormuz-strait-helium-semiconductors-chips-supply-chain-prices/"
-  },
-  {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "Azure Cross-Region IPAM Pool Association Now Generally Available",
-    summary: "Azure Virtual Network Manager now supports associating a single IPAM pool with virtual networks across multiple Azure regions. This helps organizations scale IP address management and reduce configuration errors.",
-    source: "Azure Updates", age: "today",
-    detail: "Cross-region IP address management simplifies multi-region deployments which are increasingly common for distributed AI training and inference workloads. Reducing IP management complexity lowers operational overhead for enterprises running large-scale cloud infrastructure. This feature represents incremental improvement in Azure networking capabilities that Google Cloud networking teams should monitor for competitive parity.",
-    url: "https://azure.microsoft.com/updates?id=561067"
-  },
-  {
-    id: 13, cat: "storage", impact: "low", filler: true,
-    title: "AWS S3 Access Troubleshooting Now Supported by Kiro CLI Tool",
-    summary: "AWS addresses the challenge of managing data access across multiple permission layers in S3 storage. The Kiro CLI helps troubleshoot access denied errors caused by IAM policies bucket configurations and VPC endpoint policies.",
+    id: 8, cat: "storage", impact: "medium", filler: false,
+    title: "AWS FSx for Lustre Intelligent-Tiering Enables Low Cost High Performance SAS Grid Migration",
+    summary: "Amazon FSx for Lustre Intelligent-Tiering delivers cost-effective high-performance storage for migrating SAS Grid analytics workloads to cloud. The solution addresses storage requirements for healthcare drug discovery and financial services analytics.",
     source: "AWS Storage", age: "today",
-    detail: "Storage access management complexity increases with AI workloads that require data access across multiple services and accounts. Tooling improvements for debugging permission issues reduce time to resolution for data pipeline failures. This incremental improvement in AWS storage operations reflects ongoing investment in enterprise-grade storage management that competes with Google Cloud Storage capabilities.",
-    url: "https://aws.amazon.com/blogs/storage/troubleshooting-amazon-s3-access-denied-errors-using-kiro-cli/"
+    detail: "This AWS storage solution targets compute-intensive analytics workloads that have traditionally required expensive on-premises storage infrastructure. Lustre parallel file system performance is critical for workloads with high IOPS and throughput requirements similar to AI training data pipelines. Google Cloud competes in this space with Filestore and Parallelstore offerings. The intelligent tiering approach to cost optimization is a pattern applicable to AI training data management.",
+    url: "https://aws.amazon.com/blogs/storage/migrating-sas-grid-to-the-cloud-how-amazon-fsx-for-lustre-intelligent-tiering-delivers-the-lowest-cost-high-performance-storage/"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Intel Boosts Revenue by Selling Lower Quality CPUs Amid Overwhelming Demand",
-    summary: "Intel confirmed customers are purchasing lower-quality chips that would normally be classified as scrap or low-expectation products. Overwhelming CPU demand is driving customers to accept lesser chips bringing tangible revenue for the company.",
-    source: "Tom's Hardware UK", age: "2 days ago",
-    detail: "The willingness of customers to accept lower-bin CPUs indicates severe supply constraints in the processor market. This demand pressure extends across data center workloads where even suboptimal chips can provide useful compute capacity. For AI infrastructure planning this suggests that chip availability will remain constrained and procurement strategies should account for flexible specifications. The trend may also influence how hyperscalers think about chip binning for their own custom silicon programs.",
-    url: "https://www.tomshardware.com/pc-components/cpus/intel-reportedly-says-it-boosted-yields-by-selling-what-would-normally-be-scrap-or-low-expectation-cpus-customers-more-willing-to-accept-lesser-chips-due-to-overwhelming-cpu-demand"
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Announces 15 Billion Dollar Data Center in Vizag to Create Major AI Hub in India",
+    summary: "Google is establishing a 15 billion dollar AI data center in Visakhapatnam India according to Union Minister Vaishnaw. The project aims to strengthen Indias digital infrastructure and boost electronics manufacturing.",
+    source: "The Times of India", age: "today",
+    detail: "This represents significant Google infrastructure investment in the Asia Pacific region. India offers both large market opportunity and favorable power economics for data center operations. The 15 billion dollar scale indicates major GPU and TPU deployment for AI workloads serving regional customers. This expansion directly competes with AWS and Azure India region investments and strengthens Googles position in a critical growth market.",
+    url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/15-billion-google-data-centre-to-transform-vizag-into-ai-hub-union-minister-vaishnaw/articleshow/130579826.cms"
+  },
+  {
+    id: 10, cat: "competition", impact: "medium", filler: false,
+    title: "Google Employees Urge Pichai to Refuse Classified Military AI Work for Pentagon",
+    summary: "Over 580 Google employees including senior directors and VPs signed a letter urging CEO Sundar Pichai to refuse classified military AI contracts. The internal pressure highlights tensions between AI development priorities and defense applications.",
+    source: "The Next Web", age: "2 days ago",
+    detail: "Internal employee resistance to military contracts could affect Googles competitive positioning in government cloud markets. AWS and Azure have embraced defense contracts as significant revenue streams. This tension between workforce values and market opportunity is unique to Google among hyperscalers. Resolution either direction has implications for government AI infrastructure procurement and Googles federal cloud strategy.",
+    url: "https://thenextweb.com/news/google-employees-classified-military-ai-pentagon/"
+  },
+  {
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Container Network Insights Agent Launches for Kubernetes Troubleshooting",
+    summary: "Azure launched a Container Network Insights Agent providing lightweight web-based troubleshooting for Kubernetes networking issues. The tool helps engineers correlate signals during incidents without switching between multiple diagnostic tools.",
+    source: "Azure Updates", age: "today",
+    detail: "Kubernetes networking troubleshooting remains a pain point for containerized AI workloads. This Azure capability addresses operational challenges that affect all hyperscalers running large Kubernetes deployments. Google Kubernetes Engine competes directly in this space and should evaluate similar integrated diagnostic capabilities for customer experience parity.",
+    url: "https://azure.microsoft.com/updates?id=561020"
+  },
+  {
+    id: 12, cat: "storage", impact: "low", filler: true,
+    title: "Azure Elastic SAN Now Supports Windows VM Connectivity via Portal Extension",
+    summary: "Azure Elastic SAN enables volume connectivity for Windows Virtual Machines using a VM extension directly from the Azure Portal. This simplifies storage attachment during virtual machine deployment for enterprise workloads.",
+    source: "Azure Updates", age: "today",
+    detail: "Elastic SAN connectivity improvements reflect ongoing hyperscaler focus on simplifying storage provisioning. Block storage performance and ease of use matters for AI workloads requiring fast persistent storage. Google Cloud Hyperdisk competes in this enterprise block storage segment.",
+    url: "https://azure.microsoft.com/updates?id=560914"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Foundry Agent Service Adds Hosted Agents with Isolated Execution Sandboxes",
+    summary: "Azure Foundry Agent Service preview introduces hosted agents running in isolated execution sandboxes with dedicated secure runtime per session. Sessions start clean with no shared state ensuring strong compute boundaries between agent instances.",
+    source: "Azure Updates", age: "today",
+    detail: "Isolated agent execution addresses security concerns for enterprise AI deployments. This architectural approach to agent sandboxing reflects maturing requirements for production agentic systems. Google Agent Builder should evaluate similar isolation guarantees for competitive positioning.",
+    url: "https://azure.microsoft.com/updates?id=560997"
+  },
+  {
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "NVIDIA Manufacturing Simulation-First Era Arrives with Omniverse Platform",
+    summary: "NVIDIA declares manufacturings traditional design-build-test cycle is being replaced by simulation-first approaches. The Omniverse platform enables comprehensive digital testing before physical prototyping.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "NVIDIAs simulation platform extends GPU value beyond AI training into industrial digital twin applications. This creates additional demand for GPU infrastructure in manufacturing verticals. Understanding Omniverse adoption patterns helps forecast GPU infrastructure requirements.",
+    url: "https://blogs.nvidia.com/blog/manufacturing-simulation-first/"
+  },
+  {
+    id: 15, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Understanding Disaggregated GenAI Model Serving with Open Source llm-d Project",
+    summary: "The llm-d open source project manages high-scale high-performance Large Language Model deployments through disaggregated serving architecture. The solution addresses challenges of simple LLM deployment at enterprise scale.",
+    source: "Ubuntu.com", age: "2 days ago",
+    detail: "Disaggregated LLM serving separates compute and memory resources for better utilization and scaling. This architectural pattern is relevant to hyperscaler AI infrastructure design decisions. Open source solutions in this space could influence how enterprises deploy models across cloud providers.",
+    url: "https://ubuntu.com/blog/understanding-disaggregated-genai-model-serving-with-llm-d"
   },
 ];
 // ARTICLES_END
@@ -904,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The TPU v8 split architecture into dedicated training and inference chips represents a fundamental shift in your infrastructure roadmap requiring network fabrics optimized for two distinct traffic patterns and potentially different storage I/O profiles across million-node clusters. AWS expanding OpenAI access on Bedrock while Azure enables bring-your-own-gateway for agents signals competitors are prioritizing model portability and enterprise flexibility which could pressure Google Cloud to differentiate on integrated TPU-native performance rather than model ecosystem breadth. Broadcom hitting 2 trillion valuation on hyperscaler AI chip deals combined with CPO market projections of 142 percent CAGR validates your networking silicon investments but also signals increasing vendor leverage in custom chip negotiations and potential supply constraints as 3.2T optical transitions accelerate.";
+const STATIC_BRIEF = "The AWS FSx for Lustre Intelligent-Tiering launch directly challenges Google Cloud Storage positioning for high-performance analytics workloads in healthcare and financial services, requiring competitive response on cost-performance benchmarking for SAS Grid migration scenarios. The OpenAI-AWS Bedrock partnership fundamentally reshapes the competitive landscape as OpenAI models become available outside Azure exclusivity, signaling that Google Cloud must accelerate differentiation through Gemini integration and the agent orchestration capabilities announced at Next 26. Rising energy costs from geopolitical tensions combined with ongoing memory shortages create supply chain headwinds for data center expansion plans, making the $15 billion Vizag investment timeline potentially vulnerable to cost escalation pressures.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
