@@ -389,5 +389,20 @@
   "https://azure.microsoft.com/updates?id=560957": "2026-05-05",
   "https://azure.microsoft.com/updates?id=560992": "2026-05-05",
   "https://www.computerweekly.com/feature/How-a-cloud-native-architecture-handles-persistent-storage": "2026-05-05",
-  "https://cloud.google.com/blog/products/data-analytics/managed-apache-airflow-scaling-data-and-ai-workloads/": "2026-05-05"
+  "https://cloud.google.com/blog/products/data-analytics/managed-apache-airflow-scaling-data-and-ai-workloads/": "2026-05-05",
+  "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/": "2026-05-07",
+  "https://nvidianews.nvidia.com/news/nvidia-and-corning-announce-long-term-partnership-to-strengthen-us-manufacturing-for-ai-infrastructure": "2026-05-07",
+  "https://cloud.google.com/blog/products/databases/scaling-real-time-performance-with-bigtable-in-memory-tier/": "2026-05-07",
+  "https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/": "2026-05-07",
+  "https://www.globenewswire.com/news-release/2026/05/05/3288282/0/en/AMD-Reports-First-Quarter-2026-Financial-Results.html": "2026-05-07",
+  "https://blogs.cisco.com/datacenter/benchmarking-scale-out-ai-fabrics-with-cisco-n9000-amd-pensando-pollara-400-nics/": "2026-05-07",
+  "https://azure.microsoft.com/updates?id=560899": "2026-05-07",
+  "https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/": "2026-05-07",
+  "https://cloud.google.com/blog/topics/developers-practitioners/6x-faster-migration-from-tensorflow-to-jax/": "2026-05-07",
+  "https://blogs.cisco.com/?p=490881": "2026-05-07",
+  "https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/": "2026-05-07",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/selecting-the-right-aws-vpn-solution-a-decision-framework/": "2026-05-07",
+  "https://cryptobriefing.com/openai-anthropic-drive-us-cloud-demand-boost-google-stock-outlook-for-april/": "2026-05-07",
+  "https://azure.microsoft.com/updates?id=560668": "2026-05-07",
+  "https://www.ibtimes.com.au/digitalocean-docn-soars-36-massive-q1-earnings-beat-ai-cloud-momentum-1868237": "2026-05-07"
 }
