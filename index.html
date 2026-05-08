@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "networking silicon", impact: "high", filler: false,
-    title: "NVIDIA Spectrum-X Ethernet Fabric Sets Gigascale AI Standard With MRC Technology",
-    summary: "NVIDIA announced Spectrum-X Ethernet scale-out infrastructure with Multi-Rail Connectivity for AI factories. The technology is positioned as the most advanced AI networking available for hyperscale deployments.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "Spectrum-X represents NVIDIAs push to dominate AI networking with an open Ethernet-based fabric that competes directly with InfiniBand alternatives. The addition of MRC enables more resilient and higher-performance connectivity for large-scale GPU clusters. For Google infrastructure teams this signals continued competitive pressure from NVIDIA in the networking silicon space. The technology is being adopted by major hyperscalers who cannot compromise on AI training performance which may influence Googles own networking roadmap for TPU clusters.",
-    url: "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/"
+    title: "NVIDIA MRC Redefines Ethernet for Gigascale AI Infrastructure Requirements",
+    summary: "NVIDIA has unveiled networking innovations that position Ethernet as more than generic plumbing for AI factories. The MRC architecture addresses unique demands of gigascale AI workloads that standard Ethernet cannot meet.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "NVIDIAs MRC represents a significant evolution in how Ethernet is deployed for AI infrastructure at scale. The technology acknowledges that traditional Ethernet approaches fall short when supporting the massive data movement requirements of modern AI training clusters. This directly impacts hyperscaler networking strategies and validates the need for specialized networking silicon. For Google Cloud this signals continued pressure to ensure TPU clusters have competitive interconnect capabilities against NVIDIA-centric deployments.",
+    url: "https://siliconangle.com/2026/05/06/nvidias-mrc-just-ethernet-isnt-enough-gigascale-ai/"
   },
   {
     id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA and Corning Partner to Expand US Optical Connectivity Manufacturing for AI",
-    summary: "NVIDIA and Corning announced a multiyear partnership to expand US manufacturing of optical connectivity for AI infrastructure. The deal aims to strengthen domestic supply chains for next-generation AI data centers.",
+    title: "NVIDIA and IREN Partner on 5 Gigawatt AI Infrastructure Deployment",
+    summary: "NVIDIA and IREN have announced a strategic partnership to accelerate deployment of up to 5 gigawatts of next-generation AI infrastructure. The deal signals NVIDIAs deepening involvement in the power and datacenter capacity supply chain.",
     source: "NVIDIA Newsroom", age: "today",
-    detail: "This strategic partnership addresses supply chain concerns for critical AI infrastructure components including fiber optics and high-speed interconnects. Corning is a key supplier for optical solutions used in hyperscale data centers globally. The partnership signals NVIDIAs vertical integration strategy extending beyond GPUs into the physical layer of AI networking. For Google this represents potential supply chain dynamics to monitor as optical connectivity becomes a bottleneck for scaling AI clusters.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-and-corning-announce-long-term-partnership-to-strengthen-us-manufacturing-for-ai-infrastructure"
+    detail: "This partnership represents a massive infrastructure commitment equivalent to powering millions of homes worth of compute capacity. NVIDIA is increasingly vertical integrating into the infrastructure layer beyond just chips and networking. The 5GW target suggests NVIDIA expects sustained demand requiring dedicated power infrastructure partnerships. This creates competitive pressure for hyperscalers who must secure similar power capacity for their own AI infrastructure buildouts. Google Cloud should monitor how such partnerships affect GPU supply allocation and datacenter capacity in key regions.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure"
   },
   {
-    id: 3, cat: "storage", impact: "high", filler: false,
-    title: "Google Bigtable In-Memory Tier Delivers Sub-Millisecond Latency and 10x Throughput",
-    summary: "Google Cloud announced Bigtable in-memory tier with sub-millisecond read latency and 10x higher throughput per dollar. The tier also provides hotspot resistance for time-sensitive workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This storage enhancement directly benefits AI inference workloads that require ultra-low latency access to feature stores and model serving data. The 10x throughput improvement per dollar significantly improves TCO for real-time AI applications. Hotspot resistance is critical for AI workloads with unpredictable access patterns common in recommendation systems and LLM serving. This positions Google Cloud storage competitively against AWS DynamoDB and Azure Cosmos DB for AI-adjacent workloads.",
-    url: "https://cloud.google.com/blog/products/databases/scaling-real-time-performance-with-bigtable-in-memory-tier/"
+    id: 3, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco and AMD Pensando Benchmark Scale-Out AI Fabric Performance",
+    summary: "Cisco N9000 switches paired with AMD Pensando Pollara 400 NICs deliver MLPerf-validated AI fabric performance. The solution targets GPU underutilization problems in enterprise AI training workloads.",
+    source: "Cisco.com", age: "today",
+    detail: "This benchmark collaboration between Cisco and AMD positions a credible alternative to NVIDIA-centric networking stacks for AI infrastructure. The MLPerf validation provides enterprises with standardized performance data for procurement decisions. Pensando Pollara 400 NICs represent AMDs push into AI networking silicon competing with NVIDIAs ConnectX line. For Google Cloud infrastructure planning this signals that enterprise customers may have more vendor optionality for AI fabric deployments reducing lock-in concerns.",
+    url: "https://blogs.cisco.com/?p=491204"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Azure Open-Sources Integrated HSM Design for Hardware-Level AI Security",
-    summary: "Microsoft open-sourced the Azure Integrated HSM bringing hardware-enforced key protection for agentic AI workloads. The design extends cryptographic trust from silicon to services with verifiable transparency.",
+    id: 4, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA and ServiceNow Partner on Autonomous Enterprise AI Agents",
+    summary: "NVIDIA and ServiceNow are collaborating to bring autonomous AI agents into enterprise environments. The partnership focuses on agents that can operate with enterprise-grade security and compliance requirements.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This partnership signals the enterprise AI agent market is maturing beyond experimental deployments toward production-ready autonomous systems. ServiceNow brings workflow automation expertise while NVIDIA provides the inference infrastructure. The emphasis on security and compliance acknowledges that enterprise agent deployments require different guardrails than consumer applications. Google Cloud competes directly in this space with Gemini Enterprise Agent Platform and should track how NVIDIA-powered agent solutions gain enterprise traction.",
+    url: "https://blogs.nvidia.com/blog/servicenow-autonomous-ai-agents-enterprises/"
+  },
+  {
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "Azure Expands European Cloud and AI Infrastructure Commitment",
+    summary: "Microsoft Azure is expanding infrastructure across Europe to deliver scalable resilient AI infrastructure supporting compliance and performance requirements. The expansion addresses growing demand for sovereign cloud capabilities.",
     source: "Azure Blog", age: "today",
-    detail: "This move signals Azures strategic focus on security differentiation for enterprise AI deployments handling sensitive data. Open-sourcing the HSM design could accelerate industry adoption and establish Azure security patterns as standards. For Google this represents competitive pressure on security posture for AI infrastructure especially for regulated industries. The emphasis on agentic workloads suggests Azure is preparing infrastructure for autonomous AI systems that require hardware-rooted trust.",
-    url: "https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/"
+    detail: "Microsofts European expansion directly competes with Google Clouds regional infrastructure investments. The emphasis on compliance and sovereignty reflects regulatory pressures driving infrastructure localization requirements. Azure is positioning itself as the trusted provider for European enterprises with strict data residency needs. This expansion likely includes significant GPU capacity buildout to support Azure AI services. Google Cloud must ensure competitive regional coverage in key European markets to avoid ceding enterprise AI workloads to Azure.",
+    url: "https://azure.microsoft.com/en-us/blog/scaling-cloud-and-ai-microsoft-azures-commitment-to-europes-digital-future/"
   },
   {
-    id: 5, cat: "competition", impact: "medium", filler: false,
-    title: "AMD Q1 2026 Revenue Hits 10.3 Billion as AI Chip Demand Drives 15 Percent Stock Surge",
-    summary: "AMD reported Q1 2026 revenue of 10.3 billion dollars with stock jumping over 15 percent on strong AI chip demand. The company raised expectations for continued growth driven by data center GPU sales.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "AMDs strong earnings demonstrate the broader AI infrastructure demand that benefits all silicon vendors in the ecosystem. The results validate continued enterprise investment in AI training and inference hardware despite economic uncertainty. For Google this signals healthy market conditions for negotiating with GPU vendors and potential leverage with NVIDIA. AMD MI300 series adoption by hyperscalers provides competitive alternatives to NVIDIA for AI workloads.",
-    url: "https://www.globenewswire.com/news-release/2026/05/05/3288282/0/en/AMD-Reports-First-Quarter-2026-Financial-Results.html"
-  },
-  {
-    id: 6, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco N9000 and AMD Pensando Pollara 400 NICs Validated in MLPerf AI Fabric Benchmarks",
-    summary: "Cisco demonstrated MLPerf-validated performance for N9000 switches paired with AMD Pensando Pollara 400 NICs for AI fabrics. The solution targets GPU underutilization issues in enterprise AI training.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This benchmark validation is significant for enterprises evaluating non-NVIDIA networking options for AI clusters. The Cisco and AMD partnership provides an alternative to NVIDIAs vertically integrated networking stack. MLPerf validation gives customers confidence in real-world AI training performance. For Google this represents vendor ecosystem developments that could influence enterprise customer expectations for AI infrastructure performance.",
-    url: "https://blogs.cisco.com/datacenter/benchmarking-scale-out-ai-fabrics-with-cisco-n9000-amd-pensando-pollara-400-nics/"
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Cloud Launches Gemini 3.1 Flash-Lite for High-Volume AI Workloads",
+    summary: "Gemini 3.1 Flash-Lite is now generally available offering ultra-low latency and cost-efficiency for high-volume tasks. The model targets scale-out applications requiring fast iterative inference.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Flash-Lite fills a critical gap in the Gemini model portfolio for cost-sensitive high-throughput use cases. Ultra-low latency positioning suggests optimization for agent-style applications requiring rapid response times. This release directly supports the broader Gemini Enterprise Agent Platform strategy announced at Cloud Next. The model competes with similar lightweight offerings from OpenAI and Anthropic for agentic workloads. Infrastructure teams should anticipate increased inference demand patterns from Flash-Lite adoption.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available/"
   },
   {
     id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Elastic SAN Adds Single Volume Snapshots and AV64 SKU Support",
-    summary: "Azure Elastic SAN now supports single volume snapshots for incremental point-in-time backups and AV64 SKU compatibility. The updates enable higher-scale storage options for Azure VMware Solution deployments.",
+    title: "Azure Premium SSD v2 Now Available Across All Japan West Availability Zones",
+    summary: "Azure Premium SSD v2 disk storage is now generally available in all three availability zones in Japan West. The offering provides sub-millisecond latencies for virtual machine workloads.",
     source: "Azure Updates", age: "today",
-    detail: "These enhancements improve Azures competitive position in enterprise storage for hybrid cloud and VMware workloads. Single volume snapshots reduce backup complexity and storage costs for large-scale deployments. AV64 SKU support addresses high-performance storage requirements for compute-intensive workloads including AI training data. Google Cloud storage teams should monitor Azure Elastic SAN developments as competitive benchmarks for managed storage services.",
-    url: "https://azure.microsoft.com/updates?id=560899"
+    detail: "Storage expansion in Japan West strengthens Azures position in a key Asia-Pacific market for enterprise workloads. Sub-millisecond latency positioning targets latency-sensitive applications including AI inference serving. Full availability zone coverage improves disaster recovery and high availability options for regional deployments. Google Cloud should ensure competitive storage performance and availability in the Japan region to maintain enterprise customer retention.",
+    url: "https://azure.microsoft.com/updates?id=561814"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AWS MCP Server Now Generally Available for AI Agent Cloud Access",
-    summary: "AWS announced general availability of the AWS MCP Server providing AI agents secure authenticated access to all AWS services. The server is part of the Agent Toolkit helping coding assistants build on AWS.",
-    source: "AWS News Blog", age: "today",
-    detail: "This release demonstrates AWS commitment to the Model Context Protocol standard for AI agent development. The managed MCP server reduces friction for enterprises deploying AI agents that need cloud service access. For Google this represents competitive pressure on agentic AI infrastructure capabilities. The Agent Toolkit positioning suggests AWS is building comprehensive developer tooling for autonomous AI systems.",
-    url: "https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/"
+    id: 8, cat: "storage", impact: "medium", filler: false,
+    title: "Azure Elastic SAN Adds Support for AVS Gen2 and AV64 SKU Configurations",
+    summary: "Azure Elastic SAN now supports AVS Gen2 Private Cloud with simplified connectivity and improved performance. AV64 SKU support enables higher-scale storage options for VMware Solution deployments.",
+    source: "Azure Updates", age: "today",
+    detail: "Elastic SAN improvements target the lucrative VMware migration market where enterprises seek cloud alternatives to on-premises vSAN. Eliminating ExpressRoute gateway requirements significantly reduces complexity and cost for hybrid deployments. The AV64 SKU support addresses large-scale enterprise workloads requiring substantial storage performance. This positions Azure favorably against Google Cloud VMware Engine for enterprises evaluating cloud migration paths.",
+    url: "https://azure.microsoft.com/updates?id=560909"
   },
   {
     id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Achieves 6x Faster Code Migration Using AI Agents for TensorFlow to JAX",
-    summary: "Google demonstrated AI-assisted code migration achieving 6x faster conversion from TensorFlow to JAX across massive codebases. The approach extends AI coding agents beyond localized tasks to systemic migrations.",
+    title: "BASF Deploys AlphaEvolve for Supply Chain Decision Optimization at Scale",
+    summary: "BASF Agricultural Solutions uses AlphaEvolve agentic algorithms to manage thousands of daily supply chain decisions across 180 production sites. The system helps planners understand how local decisions ripple through complex global networks.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This internal capability showcases Googles AI infrastructure being used to accelerate its own platform evolution. The TensorFlow to JAX migration is strategically important as JAX becomes the preferred framework for TPU workloads. Successfully scaling AI agents for codebase-wide changes demonstrates maturity in agentic AI applications. This capability could become a differentiator for Google Cloud customers undertaking large-scale modernization projects.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/6x-faster-migration-from-tensorflow-to-jax/"
+    detail: "This enterprise deployment showcases Google Cloud AI capabilities in complex industrial optimization use cases. The two-year planning horizon for agricultural supply chains presents unique challenges that benefit from advanced AI reasoning. AlphaEvolve deployment at this scale validates the technology for mission-critical enterprise applications. The case study provides competitive evidence when positioning against AWS and Azure for manufacturing and supply chain customers.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/how-basf-manages-thousands-of-supply-chain-decisions-with-alphaevolve/"
   },
   {
-    id: 10, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco Nexus Dashboard 4.2 Adds AI-Driven Operations and Live Protect Security",
-    summary: "Cisco released Nexus Dashboard 4.2 with AI-driven operations and enhanced security through Live Protect capabilities. The update provides unified management across physical virtual and cloud environments.",
-    source: "Cisco.com", age: "1 day ago",
-    detail: "Nexus Dashboard modernization reflects Ciscos strategy to compete in hybrid cloud networking management. AI-driven operations reduce manual network troubleshooting which is relevant for large-scale data center deployments. Live Protect security features address zero-trust requirements increasingly demanded by enterprises. For Google Cloud networking this represents competitive feature parity expectations from enterprise customers evaluating network management tools.",
-    url: "https://blogs.cisco.com/?p=490881"
+    id: 10, cat: "silicon", impact: "medium", filler: false,
+    title: "AI Chip Market Forecast to Reach $565 Billion by 2032 at 15.7% CAGR",
+    summary: "The AI chip market is projected to grow from $203 billion in 2025 to $565 billion by 2032. Growth drivers include NPUs for smartphones and AI PCs plus rising ASIC adoption.",
+    source: "GlobeNewswire", age: "today",
+    detail: "This market sizing reinforces the strategic importance of custom silicon investments for hyperscalers. The 15.7% CAGR suggests sustained infrastructure buildout requirements through the decade. NPU growth in edge devices will drive inference demand patterns that complement cloud training workloads. Rising ASIC adoption validates Google TPU strategy against general-purpose GPU approaches. The forecast supports continued capital investment in custom AI accelerator development.",
+    url: "https://www.globenewswire.com/news-release/2026/05/07/3289730/28124/en/Al-Chip-Market-Research-and-Global-Forecast-Report-2025-2030-Lucrative-Opportunities-in-AI-Driven-Diagnostics-Expansion-Cloud-Infrastructure-Expansion-and-Rising-Adoption-of-ASIC-T.html"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS WorkSpaces Enables AI Agents to Operate Legacy Desktop Applications",
-    summary: "Amazon WorkSpaces now lets AI agents securely operate legacy desktop applications without APIs using computer vision. The preview feature supports MCP and IAM authentication within existing security frameworks.",
-    source: "AWS News Blog", age: "today",
-    detail: "This capability addresses a gap in AI automation for enterprises with legacy applications that lack modern APIs. Computer vision-based interaction enables AI agents to work with any desktop application. The approach is relevant for regulated industries where legacy systems cannot be easily modernized. This represents AWS exploring novel AI agent deployment patterns beyond cloud-native applications.",
-    url: "https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/"
+    title: "Google Cloud Introduces Agent Gateway ISV Ecosystem for Governance",
+    summary: "Agent Gateway provides secure governed connectivity for user-to-agent and agent-to-agent interactions. The ISV ecosystem expands third-party integration options for enterprise agent deployments.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Agent Gateway addresses growing enterprise concerns about AI agent security and auditability. The ISV ecosystem approach leverages partner capabilities rather than building all governance features internally. This announcement complements the broader Gemini Enterprise Agent Platform positioning. Security-focused features will be critical differentiators as enterprises scale agent deployments beyond pilots.",
+    url: "https://cloud.google.com/blog/products/identity-security/introducing-agent-gateway-isv-ecosystem-for-security-and-governance/"
   },
   {
-    id: 12, cat: "networking", impact: "low", filler: true,
-    title: "AWS Releases VPN Solution Decision Framework for Network Architects",
-    summary: "AWS published a decision framework to help networking engineers select appropriate VPN solutions. The guide covers VPC VGW and TGW options for organizations implementing secure connectivity.",
-    source: "AWS Networking", age: "today",
-    detail: "This documentation helps enterprises navigate AWS networking options which indirectly affects hybrid cloud connectivity strategies. VPN selection impacts latency and bandwidth for workloads spanning on-premises and cloud infrastructure. The framework reflects continued enterprise demand for hybrid connectivity patterns.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/selecting-the-right-aws-vpn-solution-a-decision-framework/"
-  },
-  {
-    id: 13, cat: "competition", impact: "low", filler: true,
-    title: "OpenAI and Anthropic Drive US Cloud Demand Boosting Google Stock Outlook",
-    summary: "Rising demand from OpenAI and Anthropic for US cloud services is positively impacting Google stock outlook. The trend underscores AI strategic importance in maintaining technological dominance.",
-    source: "Crypto Briefing", age: "today",
-    detail: "AI startup demand for cloud infrastructure benefits all major hyperscalers including Google Cloud. The partnership dynamics between AI labs and cloud providers continue evolving as workload scale increases. This market signal validates continued investment in AI infrastructure capacity expansion.",
-    url: "https://cryptobriefing.com/openai-anthropic-drive-us-cloud-demand-boost-google-stock-outlook-for-april/"
-  },
-  {
-    id: 14, cat: "storage", impact: "low", filler: true,
-    title: "Azure NetApp Files Now Enables Backup by Default for New Volumes",
-    summary: "Azure NetApp Files automatically provisions backups during volume creation reducing setup effort. Customers retain customization options while benefiting from secure default data protection.",
+    id: 12, cat: "competition", impact: "low", filler: true,
+    title: "Azure Announces Dl D E v7 VMs with Intel Xeon 6 Granite Rapids Processors",
+    summary: "Azure general-purpose and memory-optimized v7 VMs deliver up to 20% better compute performance using Intel Xeon 6 processors. The new VM series targets diverse workload requirements.",
     source: "Azure Updates", age: "today",
-    detail: "Default backup enablement reflects cloud storage best practices reducing data loss risk for enterprise customers. The feature simplifies compliance for workloads requiring data protection guarantees. This represents incremental improvement in Azure managed storage services.",
-    url: "https://azure.microsoft.com/updates?id=560668"
+    detail: "Intel Granite Rapids deployment shows Azure maintaining x86 options alongside growing GPU and custom silicon investments. The 20% performance improvement provides upgrade incentives for existing Azure VM customers. This refresh competes with Google Clouds comparable Compute Engine instance updates. Memory-optimized variants may support AI inference workloads not requiring dedicated accelerators.",
+    url: "https://azure.microsoft.com/updates?id=560734"
   },
   {
-    id: 15, cat: "competition", impact: "low", filler: true,
-    title: "DigitalOcean Surges 36 Percent on Q1 Beat Driven by AI Cloud Momentum",
-    summary: "DigitalOcean shares jumped 36 percent after Q1 2026 results exceeded expectations on AI cloud demand. The results highlight growing SMB market interest in AI infrastructure services.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "DigitalOcean success in the AI cloud market demonstrates demand extending beyond hyperscaler customers to smaller enterprises. This validates the broad market opportunity for simplified AI infrastructure offerings. The results may influence Google Cloud strategy for developer and SMB segments.",
-    url: "https://www.ibtimes.com.au/digitalocean-docn-soars-36-massive-q1-earnings-beat-ai-cloud-momentum-1868237"
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Google Cloud Named Leader in Gartner Magic Quadrant for Cyberthreat Intelligence",
+    summary: "Google received Leader positioning in the 2026 Gartner Magic Quadrant for Cyberthreat Intelligence Technologies. The recognition highlights Gemini-powered agentic defense capabilities.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Security leadership positioning supports enterprise cloud adoption decisions where threat intelligence is a key evaluation criterion. Agentic defense capabilities represent a differentiated approach to autonomous threat response. This recognition complements infrastructure investments by addressing enterprise security concerns that can block cloud migration.",
+    url: "https://cloud.google.com/blog/products/identity-security/google-named-a-leader-in-the-2026-gartner-magic-quadrant-for-cyberthreat-intelligence-technologies/"
+  },
+  {
+    id: 14, cat: "competition", impact: "low", filler: true,
+    title: "Nutanix CEO Outlines Agentic AI Strategy and VMware Migration Opportunity",
+    summary: "Nutanix is targeting VMware customers seeking alternatives following Broadcom acquisition changes. The company is developing agentic AI capabilities and sovereign cloud offerings.",
+    source: "ComputerWeekly.com", age: "today",
+    detail: "Nutanix positioning as VMware alternative creates indirect competition for hyperscaler VMware migration services. Sovereign cloud emphasis aligns with European regulatory trends affecting all major cloud providers. Agentic AI strategy from infrastructure vendors signals the technology is becoming table stakes across the enterprise stack.",
+    url: "https://www.computerweekly.com/news/366642824/Nutanix-CEO-maps-out-agentic-AI-strategy-targets-VMware-defectors"
+  },
+  {
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "Arm Reports Strong Q4 Results Driven by AI and Datacenter Growth",
+    summary: "Arm delivered strong fourth quarter and fiscal year 2026 results driven by datacenter and AI momentum. The results validate Arm architecture adoption in high-performance computing segments.",
+    source: "Techpowerup.com", age: "2 days ago",
+    detail: "Arm architecture growth in datacenter directly affects hyperscaler CPU strategy and custom silicon roadmaps. Strong results suggest continued ecosystem momentum for Arm-based server deployments. Google Cloud uses Arm-based instances and should track Arm ecosystem health for long-term infrastructure planning. Competition with x86 alternatives from Intel and AMD continues to intensify.",
+    url: "https://www.techpowerup.com/348836/arm-reports-results-for-the-fourth-quarter-and-fiscal-year-ended-2026"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Bigtable in-memory tier delivering sub-millisecond latency and 10x throughput per dollar strengthens the competitive position against Azure Elastic SAN and positions Cloud storage favorably for latency-sensitive AI inference workloads. NVIDIA Spectrum-X with Multi-Rail Connectivity and the Cisco-AMD Pensando MLPerf validation signal accelerating Ethernet fabric competition for AI training, requiring Google to evaluate differentiation strategy for Cloud networking against validated third-party solutions targeting GPU underutilization. The NVIDIA-Corning partnership to expand US optical connectivity manufacturing warrants monitoring as domestic supply chain investments could affect procurement timelines and pricing for hyperscale AI data center buildouts.";
+const STATIC_BRIEF = "NVIDIAs MRC architecture represents a direct challenge to commodity Ethernet by positioning purpose-built AI networking silicon as essential for gigascale training, which could pressure Google to articulate a clearer differentiation story for Cloud networking offerings against vertically integrated NVIDIA stacks. The Cisco-AMD Pensando partnership delivering MLPerf-validated AI fabric performance creates a credible enterprise alternative that bypasses both NVIDIA and hyperscaler networking, signaling enterprise buyers may increasingly seek best-of-breed components over integrated solutions. The NVIDIA-IREN 5 gigawatt infrastructure partnership demonstrates NVIDIAs aggressive move to control datacenter capacity supply chains, a strategic shift that could constrain power and facility availability for competitors pursuing similar AI infrastructure buildouts.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
