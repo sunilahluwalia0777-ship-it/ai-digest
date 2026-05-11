@@ -434,5 +434,20 @@
   "https://azure.microsoft.com/updates?id=558403": "2026-05-09",
   "https://azure.microsoft.com/en-us/blog/azure-iaas-defense-in-depth-built-on-secure-by-design-principles/": "2026-05-09",
   "https://aws.amazon.com/blogs/storage/implement-single-exchange-tokens-for-short-lived-amazon-s3-presigned-urls-with-terraform/": "2026-05-09",
-  "https://azure.microsoft.com/updates?id=561162": "2026-05-09"
+  "https://azure.microsoft.com/updates?id=561162": "2026-05-09",
+  "https://fortune.com/2026/05/10/ai-alphabet-stock-market-capitalization-nvidia-google-gemini/": "2026-05-11",
+  "https://economictimes.indiatimes.com/tech/technology/sk-hynix-flooded-with-unprecedented-offers-from-big-tech-firms-to-secure-chip-supplies/articleshow/130992487.cms": "2026-05-11",
+  "https://www.storagereview.com/news/anthropic-signs-spacex-colossus-1-deal-for-major-claude-compute-expansion": "2026-05-11",
+  "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html": "2026-05-11",
+  "https://economictimes.indiatimes.com/news/international/us/micron-stock-jumps-14-to-all-time-high-of-742-15-skyrocketing-690-in-one-year-is-ai-demand-transforming-mu-stock-into-the-heart-of-the-semiconductor-revolution/articleshow/130965475.cms": "2026-05-11",
+  "https://www.thestreet.com/investing/stocks/analysts-turn-heads-with-amd-stock-forecast-after-massive-rally": "2026-05-11",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agentcore-payments-agent-toolkit-for-aws-and-more-may-11-2026/": "2026-05-11",
+  "https://cloud.google.com/blog/topics/developers-practitioners/five-guides-to-building-and-scaling-production-ready-ai-agents/": "2026-05-11",
+  "https://cloud.google.com/blog/products/databases/postgres-18-and-extended-support-for-legacy-versions-in-alloydb/": "2026-05-11",
+  "https://blogs.cisco.com/networking/lean-it-future-ready-how-to-save-time-and-simplify-wireless-management-with-ai/": "2026-05-11",
+  "https://cloud.google.com/blog/products/identity-security/whats-new-in-iam-security-governance-and-runtime-defense/": "2026-05-11",
+  "https://azure.microsoft.com/updates?id=561167": "2026-05-11",
+  "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/": "2026-05-11",
+  "https://blogs.nvidia.com/blog/your-career-starts-at-the-beginning-of-the-ai-revolution-nvidia-ceo-tells-graduates/": "2026-05-11",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/manage-caches-with-precision-using-amazon-cloudfront-invalidation-by-cache-tag/": "2026-05-11"
 }

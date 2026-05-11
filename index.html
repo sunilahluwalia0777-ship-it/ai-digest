@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "GKE Node Startup Now 4x Faster Eliminating Cold Start Latency for AI Workloads",
-    summary: "Google Kubernetes Engine has rolled out up to 4x faster node startup times for qualifying nodes with no configuration changes required. This improvement allows customers to provision GPU and TPU nodes more efficiently for AI workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Faster node provisioning directly impacts AI infrastructure economics by reducing idle time when scaling GPU and TPU clusters. For burst AI training and inference workloads this eliminates a major pain point where cold start delays could waste expensive accelerator capacity. The automatic rollout without configuration changes suggests Google is optimizing the underlying infrastructure layer. This positions GKE more competitively against EKS and AKS for latency-sensitive AI deployments.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/gke-node-startup-gets-faster/"
+    title: "Alphabet Approaches Worlds Largest Company Status on AI Momentum",
+    summary: "Google parent Alphabet closed Friday with a market capitalization of 4.8 trillion dollars driven by AI wins. The company is closing the gap with NVIDIA which stands at 5.2 trillion after a three-day rally.",
+    source: "Fortune", age: "1 day ago",
+    detail: "This valuation surge reflects market confidence in Googles AI infrastructure investments and Gemini platform adoption. The competition between Alphabet and NVIDIA for top market cap position underscores how AI infrastructure leadership now defines corporate value. For Google Cloud the momentum validates continued investment in TPU development and AI services that differentiate against AWS and Azure.",
+    url: "https://fortune.com/2026/05/10/ai-alphabet-stock-market-capitalization-nvidia-google-gemini/"
   },
   {
-    id: 2, cat: "competition", impact: "high", filler: false,
-    title: "Enterprise GPU Utilization Crisis at 5 Percent Creates $401 Billion Infrastructure Problem",
-    summary: "Enterprises that locked in GPU capacity during the AI scramble now face severe underutilization averaging just 5 percent. The data reveals a significant market correction may be coming as companies reassess their AI infrastructure investments.",
-    source: "VentureBeat", age: "1 day ago",
-    detail: "This utilization crisis directly affects all major cloud providers and GPU vendors including NVIDIA. Enterprises overprovisioned during the capacity scramble and now face stranded assets. This could slow new GPU purchases and shift demand toward more efficient scheduling and orchestration solutions. For hyperscalers the opportunity lies in offering better utilization tools and consumption-based pricing. The $401 billion figure underscores the scale of potential market disruption ahead.",
-    url: "https://venturebeat.com/infrastructure/5-gpu-utilization-the-401-billion-ai-infrastructure-problem-enterprises-cant-keep-ignoring"
+    id: 2, cat: "vendor", impact: "high", filler: false,
+    title: "SK Hynix Receives Unprecedented Big Tech Offers to Secure AI Memory Chip Supplies",
+    summary: "Global tech giants are making unprecedented investment offers to SK Hynix for new production lines and equipment purchases. The surge in demand is driven by artificial intelligence infrastructure requirements for high bandwidth memory.",
+    source: "The Times of India", age: "1 day ago",
+    detail: "This signals intensifying competition for HBM capacity critical to GPU and TPU performance. Tech companies are moving beyond traditional procurement to directly fund manufacturing capacity expansion. For Google this represents both opportunity to secure supply and risk if competitors lock up capacity. The memory supply chain remains a key bottleneck for AI infrastructure scaling across all hyperscalers.",
+    url: "https://economictimes.indiatimes.com/tech/technology/sk-hynix-flooded-with-unprecedented-offers-from-big-tech-firms-to-secure-chip-supplies/articleshow/130992487.cms"
   },
   {
-    id: 3, cat: "silicon", impact: "high", filler: false,
-    title: "Global AI Chip Market Projected to Reach $670 Billion by 2036 Amid GenAI Boom",
-    summary: "Research forecasts the global AI chip market will soar to $670.2 billion by 2036 driven by generative AI demand. The growth trajectory validates continued massive investments in AI silicon from NVIDIA Broadcom and custom chip efforts.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "This market projection reinforces the strategic importance of AI silicon for hyperscalers and their vendor relationships. NVIDIA and Broadcom remain primary beneficiaries but the forecast also supports custom silicon investments by Google AWS and Meta. The generative AI boom is creating sustained demand that justifies current capacity buildouts. For Google PM planning this validates long-term infrastructure investments in both commercial and custom accelerator strategies.",
-    url: "https://www.globenewswire.com/news-release/2026/05/08/3291168/28124/en/Global-AI-Chip-Market-to-Soar-to-670-2-Billion-by-2036-Amid-Generative-AI-Boom.html"
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "Anthropic Signs SpaceX Colossus Deal Adding 220K NVIDIA GPUs to Claude Compute",
+    summary: "Anthropic secured access to all compute capacity at SpaceX Colossus 1 data center adding over 300 megawatts and 220000 NVIDIA GPUs. The deal significantly expands Anthropics AI training and inference capacity within the month.",
+    source: "Storagereview.com", age: "3 days ago",
+    detail: "This represents a major competitive shift as Anthropic gains GPU capacity rivaling hyperscaler deployments. The unconventional partnership with SpaceX demonstrates how AI companies are bypassing traditional cloud providers for compute access. For Google Cloud this intensifies competition in the AI model hosting market and validates the importance of maintaining GPU and TPU capacity advantages.",
+    url: "https://www.storagereview.com/news/anthropic-signs-spacex-colossus-1-deal-for-major-claude-compute-expansion"
   },
   {
-    id: 4, cat: "networking", impact: "high", filler: false,
-    title: "Data Center Networking Market to Hit $139 Billion by 2031 Driven by AI and GPU Demands",
-    summary: "The data center networking market is projected to reach $139 billion by 2031 growing at 16.5 percent CAGR. AI and GPU-driven workloads are the primary growth drivers reshaping network infrastructure requirements.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "This forecast directly impacts networking vendors Cisco Arista Broadcom and Marvell who supply Google infrastructure. GPU cluster networking requirements are fundamentally different from traditional data center traffic patterns requiring higher bandwidth and lower latency. The growth rate suggests sustained investment cycles in spine-leaf architectures high-speed interconnects and InfiniBand alternatives. Google infrastructure planning must account for these networking investments scaling alongside compute buildouts.",
-    url: "https://www.globenewswire.com/news-release/2026/05/08/3291141/28124/en/Data-Center-Networking-Market-to-Reach-USD-139-08-Billion-by-2031-at-a-16-5-CAGR-AI-and-GPU-Driven-Demands-Propel-Growth.html"
-  },
-  {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "Anthropic Signs Massive Deal to Use SpaceX Colossus Data Center GPU Capacity",
-    summary: "Anthropic has signed a major deal with SpaceX to utilize all computing capacity at the Colossus data center despite previous tensions with Elon Musk. The partnership highlights the scramble for GPU capacity among leading AI labs.",
-    source: "Fortune", age: "2 days ago",
-    detail: "This deal represents significant competitive pressure as Anthropic secures substantial GPU capacity outside traditional hyperscaler relationships. SpaceX Colossus becoming an AI compute provider creates a new competitor to AWS Azure and GCP for high-value AI workloads. The irony of Musk calling Anthropic evil months before this deal underscores how capacity constraints override competitive tensions. Google must consider how alternative infrastructure providers are capturing AI training workloads.",
-    url: "https://fortune.com/2026/05/07/spacex-anthropic-deal-elon-musk-ai-landlord-evil/"
-  },
-  {
-    id: 6, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA GB200 NVL72 Block Scheduling Optimizes Rack-Scale GPU Cluster Efficiency",
-    summary: "NVIDIA details Slurm block scheduling techniques for GB200 NVL72 which extends NVLink coherence across entire racks. The approach enables peak system and workload efficiency for large-scale AI training deployments.",
-    source: "Nvidia.com", age: "2 days ago",
-    detail: "The GB200 NVL72 architecture represents NVIDIAs next-generation approach to rack-scale GPU computing with full NVLink coherence. Block scheduling through Slurm addresses the utilization crisis by enabling more efficient workload placement across 72-GPU domains. This directly impacts how Google and other hyperscalers must architect their GPU infrastructure and scheduling systems. The technical guidance suggests NVIDIA is actively addressing customer concerns about maximizing expensive accelerator investments.",
-    url: "https://developer.nvidia.com/blog/achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling/"
-  },
-  {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "Broadcom Stock Rated Strong Buy as AI Revenue Explodes 106 Percent Year Over Year",
-    summary: "Broadcom sees overwhelming bullish analyst ratings as AI semiconductor revenue grows 106 percent driven by custom chip and networking demand. Strong execution across networking and custom silicon positions Broadcom as key AI infrastructure beneficiary.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "Broadcoms AI revenue surge reflects its dual role supplying custom AI accelerators to hyperscalers and networking silicon for GPU clusters. The 106 percent growth validates the strategic importance of vendors beyond NVIDIA in the AI infrastructure stack. For Google this reinforces Broadcoms position as a critical supplier for both TPU-related work and networking components. The stock performance indicates market confidence in sustained AI infrastructure spending.",
-    url: "https://www.ibtimes.com.au/broadcom-stock-strong-buy-2026-ai-revenue-explodes-106-analysts-see-further-upside-1868404"
-  },
-  {
-    id: 8, cat: "competition", impact: "high", filler: false,
-    title: "AWS Suffers Major US-East-1 Outage as Data Center Overheating Disrupts EC2 Services",
-    summary: "AWS experienced a significant outage in its busiest US-East-1 region due to data center overheating affecting EC2 instances and EBS volumes. The incident disrupted thousands of customers and raises questions about infrastructure resilience.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "Data center thermal management failures at AWS scale highlight the operational challenges all hyperscalers face with power-dense AI infrastructure. Overheating incidents become more likely as GPU density increases in AI-focused data centers. This outage provides competitive ammunition for Google and Azure while underscoring the need for robust cooling solutions. For infrastructure planning this incident validates investments in liquid cooling and thermal monitoring for high-density GPU deployments.",
-    url: "https://www.ibtimes.com.au/aws-down-today-aws-suffers-major-outage-us-east-1-data-center-overheating-disrupts-ec2-1868428"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA and Corning Partnership to Revitalize American Manufacturing for AI Infrastructure",
-    summary: "NVIDIA CEO Jensen Huang highlighted the partnership with Corning as an opportunity to reinvest in American manufacturing for AI infrastructure. The collaboration focuses on domestic production capabilities for critical AI components.",
+    id: 4, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Surpasses 40 Billion in AI Equity Investments Across Infrastructure Stack",
+    summary: "NVIDIA is investing billions of dollars at a time into companies across the AI infrastructure stack while signing commercial deals. The company has exceeded 40 billion in equity bets in 2026 alone.",
     source: "CNBC", age: "2 days ago",
-    detail: "The NVIDIA-Corning partnership addresses supply chain concerns and domestic manufacturing priorities for AI infrastructure. Corning likely contributes optical interconnect or glass substrate technologies relevant to high-speed data center connectivity. This aligns with broader reshoring trends and may influence Google infrastructure sourcing decisions. The manufacturing emphasis suggests long-term capacity planning beyond immediate chip supply concerns.",
-    url: "https://www.cnbc.com/2026/05/07/nvidia-ceo-ai-partnership-corning-revitalize-american-manufacturing.html"
+    detail: "NVIDIAs investment strategy creates deep commercial relationships that could influence infrastructure purchasing decisions across the ecosystem. These investments span networking storage and AI software companies that compete with or complement hyperscaler offerings. For Google this means NVIDIA is not just a vendor but an increasingly influential ecosystem player shaping AI infrastructure market dynamics.",
+    url: "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html"
+  },
+  {
+    id: 5, cat: "silicon", impact: "high", filler: false,
+    title: "Micron Stock Surges 14 Percent to Record High on AI Memory Demand Transformation",
+    summary: "Micron shares jumped 14 percent to an all-time high of 742 dollars reflecting a 690 percent gain over one year. AI data centers now consume the majority of high-performance memory production driving the surge.",
+    source: "The Times of India", age: "3 days ago",
+    detail: "The dramatic valuation increase reflects how AI infrastructure has fundamentally shifted semiconductor economics. Memory bandwidth and capacity are now primary constraints for AI workloads making Micron a critical supply chain partner. For TPU and GPU infrastructure planning this validates continued investment in memory technology partnerships and highlights supply security as a strategic priority.",
+    url: "https://economictimes.indiatimes.com/news/international/us/micron-stock-jumps-14-to-all-time-high-of-742-15-skyrocketing-690-in-one-year-is-ai-demand-transforming-mu-stock-into-the-heart-of-the-semiconductor-revolution/articleshow/130965475.cms"
+  },
+  {
+    id: 6, cat: "vendor", impact: "medium", filler: false,
+    title: "AMD Stock Soars 112 Percent Year to Date Amid AI Chip Competition Intensification",
+    summary: "AMD shares have gained 112.5 percent year to date with most gains achieved in recent weeks. Analysts are adjusting forecasts as AMD captures growing share of AI accelerator demand.",
+    source: "TheStreet", age: "2 days ago",
+    detail: "AMDs rally reflects market confidence in its MI300 series competing with NVIDIA for AI workloads. This creates additional options for hyperscalers seeking to diversify GPU suppliers and negotiate better terms. For Google the strengthening AMD position provides procurement leverage while also validating the broader AI accelerator market expansion that benefits TPU differentiation strategies.",
+    url: "https://www.thestreet.com/investing/stocks/analysts-turn-heads-with-amd-stock-forecast-after-massive-rally"
+  },
+  {
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Previews Bedrock AgentCore Payments Enabling Autonomous AI Agent Transactions",
+    summary: "Amazon Bedrock AgentCore now offers managed payment capabilities for AI agents to autonomously access and pay for APIs and services. The feature was built in partnership with Coinbase and Stripe to handle billing and credentials.",
+    source: "AWS News Blog", age: "today",
+    detail: "AWS is pushing ahead with agentic AI infrastructure that could create new competitive dynamics in cloud services. Autonomous payment capabilities enable AI agents to operate with greater independence potentially reducing human oversight requirements. For Google Cloud this signals the need to accelerate Gemini Enterprise Agent Platform capabilities to maintain competitive parity in the emerging agentic enterprise market.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agentcore-payments-agent-toolkit-for-aws-and-more-may-11-2026/"
+  },
+  {
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Cloud Introduces Five Production Guides for Gemini Enterprise Agent Platform",
+    summary: "Google Cloud released comprehensive guides for deploying AI agents at scale using Gemini Enterprise Agent Platform. The documentation covers state management security governance and complex workflow orchestration.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "These guides address the critical gap between AI agent prototypes and production deployments that enterprises face. The focus on governance and security reflects enterprise requirements for autonomous AI systems handling sensitive operations. This positions Google Cloud to capture enterprise agentic AI workloads by reducing deployment friction and demonstrating production readiness.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/five-guides-to-building-and-scaling-production-ready-ai-agents/"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Cloud Announces AlloyDB PostgreSQL 18 and Extended Support for Legacy Versions",
+    summary: "Google Cloud made PostgreSQL 18 generally available in AlloyDB while introducing Extended Support for legacy database versions. The updates help enterprises balance innovation adoption with operational stability requirements.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Database infrastructure remains foundational for AI workloads requiring persistent storage and data management capabilities. Extended support addresses enterprise concerns about upgrade timelines while PostgreSQL 18 brings performance improvements relevant to AI application backends. This strengthens Googles managed database positioning against AWS RDS and Azure Database services.",
+    url: "https://cloud.google.com/blog/products/databases/postgres-18-and-extended-support-for-legacy-versions-in-alloydb/"
   },
   {
     id: 10, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco AI Assistant Gets Galaxy Mode Showcasing AgenticOps Network Automation Capabilities",
-    summary: "Cisco launched Galaxy Mode for its AI Assistant demonstrating network troubleshooting and workflow automation capabilities. The limited-time experience highlights Ciscos AgenticOps approach to AI-driven network management.",
+    title: "Cisco Highlights AI-Driven Wireless Management for Simplified Network Operations",
+    summary: "Cisco emphasizes that AI-driven network management automates manual tasks and simplifies operations for IT teams. The capability is positioned as essential for supporting AI hybrid work and cloud access requirements.",
     source: "Cisco Networking Blog", age: "today",
-    detail: "Ciscos investment in AI-assisted network operations reflects the broader trend of applying AI to infrastructure management at scale. AgenticOps capabilities could reduce operational overhead for managing complex GPU cluster networks. For Google infrastructure teams this signals Cisco is positioning AI automation as a competitive differentiator against Arista. The network automation space is becoming increasingly important as AI cluster complexity grows.",
-    url: "https://blogs.cisco.com/networking/galaxy-mode-is-live-a-limited-time-look-at-what-your-cisco-ai-assistant-and-agenticops-can-already-do/"
+    detail: "Network infrastructure automation becomes increasingly important as AI workloads demand consistent low-latency connectivity. Ciscos AI-driven management tools compete with Arista and other networking vendors for data center and campus deployments. For Google Cloud customers this affects how enterprises architect hybrid connectivity to cloud AI services.",
+    url: "https://blogs.cisco.com/networking/lean-it-future-ready-how-to-save-time-and-simplify-wireless-management-with-ai/"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Elastic SAN Now Supports AV64 SKUs for Higher Scale VMware Deployments",
-    summary: "Azure Elastic SAN datastores now support AV64 SKUs enabling higher-scale storage options for Azure VMware Solution deployments. This expands enterprise storage options for virtualized workloads on Azure.",
-    source: "Azure Updates", age: "today",
-    detail: "The AV64 SKU support extends Azure storage capabilities for VMware workloads though this is tangential to core AI infrastructure. It demonstrates Microsofts continued investment in enterprise storage integration. For competitive analysis this shows Azure expanding hybrid cloud storage options.",
-    url: "https://azure.microsoft.com/updates?id=560894"
+    title: "Google Cloud Updates IAM Security for Autonomous AI Agent Governance",
+    summary: "Google Cloud announced new IAM advancements designed specifically for securing autonomous AI agents operating at machine speed. The controls address the unique security challenges of agentic enterprise deployments.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Traditional identity controls were not designed for AI agents that interact with sensitive data autonomously. These IAM updates provide runtime defense capabilities essential for enterprise AI agent adoption. The security focus differentiates Google Cloud for regulated industries deploying agentic AI systems.",
+    url: "https://cloud.google.com/blog/products/identity-security/whats-new-in-iam-security-governance-and-runtime-defense/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Application Gateway for Containers Now Works with AKS Automatic Mode",
-    summary: "Azure Application Gateway for Containers managed add-on now supports AKS Automatic removing a previous limitation. This simplifies networking configuration for Kubernetes deployments on Azure.",
+    id: 12, cat: "competition", impact: "low", filler: true,
+    title: "Azure Cosmos DB Adds Spherical Quantization for Enhanced Vector Search Performance",
+    summary: "Azure Cosmos DB launched spherical quantization in public preview to improve vector indexing speed and search accuracy at scale. The feature uses advanced compression techniques to preserve search quality.",
     source: "Azure Updates", age: "today",
-    detail: "The AKS integration improvement streamlines Azure Kubernetes networking though less directly relevant to GPU infrastructure. It shows Microsoft addressing Kubernetes usability gaps. This could simplify inference endpoint deployments for AI workloads.",
-    url: "https://azure.microsoft.com/updates?id=558403"
+    detail: "Vector database capabilities are essential for AI applications requiring semantic search and retrieval augmented generation. Microsofts enhancement to Cosmos DB strengthens Azure positioning for AI workloads competing directly with Google Cloud Spanner and BigQuery vector features. This reflects how database services are evolving to meet AI-specific requirements.",
+    url: "https://azure.microsoft.com/updates?id=561167"
   },
   {
     id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure IaaS Defense in Depth Addresses Multi-Vector Security Threats",
-    summary: "Microsoft details defense in depth security principles for Azure IaaS addressing identity software supply chain and network threats simultaneously. The approach reflects modern security requirements for cloud infrastructure.",
+    title: "Microsoft Recognized as Leader in IDC API Management Assessment for 2026",
+    summary: "Azure API Management was named a leader in the IDC MarketScape for worldwide API management. The platform provides unified governance for traditional APIs and AI models tools and agents.",
     source: "Azure Blog", age: "today",
-    detail: "Security architecture for cloud infrastructure remains foundational for AI workload deployment. While not AI-specific the multi-layer defense approach applies to protecting GPU clusters and training data. This demonstrates Azure investment in enterprise security positioning.",
-    url: "https://azure.microsoft.com/en-us/blog/azure-iaas-defense-in-depth-built-on-secure-by-design-principles/"
+    detail: "API management becomes increasingly important as enterprises deploy AI services that need consistent governance and monitoring. Microsofts recognition validates Azure capabilities that compete with Google Cloud API Gateway and Apigee. The convergence of API and AI governance reflects enterprise requirements for unified control planes.",
+    url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/"
   },
   {
-    id: 14, cat: "storage", impact: "low", filler: true,
-    title: "AWS Introduces Single-Exchange Tokens for Secure Short-Lived S3 Presigned URLs",
-    summary: "AWS now supports single-exchange tokens for S3 presigned URLs preventing URL reuse and improving security for temporary access. The Terraform implementation simplifies deployment of this security enhancement.",
-    source: "AWS Storage", age: "today",
-    detail: "Enhanced S3 security through single-use tokens addresses data protection requirements for AI training datasets and model artifacts. While incremental this improves the security posture for sensitive AI workloads. The Terraform support indicates focus on infrastructure-as-code workflows.",
-    url: "https://aws.amazon.com/blogs/storage/implement-single-exchange-tokens-for-short-lived-amazon-s3-presigned-urls-with-terraform/"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "NVIDIA CEO Delivers Commencement Address on AI Revolution Career Opportunities",
+    summary: "Jensen Huang told Carnegie Mellon graduates they are entering the workforce at an extraordinary moment as AI creates a new industry. He emphasized that a new era of science and discovery is beginning.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "Huangs public statements about AI industry growth reinforce NVIDIAs market positioning and talent recruitment messaging. The emphasis on AI as a new industrial era aligns with NVIDIAs infrastructure investment thesis. For ecosystem partners this signals continued NVIDIA commitment to expanding AI compute capacity.",
+    url: "https://blogs.nvidia.com/blog/your-career-starts-at-the-beginning-of-the-ai-revolution-nvidia-ceo-tells-graduates/"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Cosmos DB Shell Preview Adds Agentic Capabilities via Model Context Protocol",
-    summary: "Azure Cosmos DB Shell enters public preview with AI-powered query and management capabilities using Model Context Protocol. The command-line tool enables more efficient data workflows for developers.",
-    source: "Azure Updates", age: "today",
-    detail: "The MCP integration in database tooling reflects broader trends of AI assistance across infrastructure management. While focused on application databases rather than AI infrastructure it shows Microsoft embedding AI into developer workflows. This could eventually extend to infrastructure management scenarios.",
-    url: "https://azure.microsoft.com/updates?id=561162"
+    id: 15, cat: "networking", impact: "low", filler: true,
+    title: "AWS CloudFront Launches Cache Tag Invalidation for Precise Content Management",
+    summary: "Amazon CloudFront introduced invalidation by cache tag enabling developers to invalidate groups of related cached objects with a single request. The feature works regardless of URL structure for more efficient cache management.",
+    source: "AWS Networking", age: "today",
+    detail: "Content delivery optimization affects AI application performance particularly for distributed inference and model serving scenarios. This CloudFront enhancement simplifies cache operations that support AI workloads requiring frequent content updates. The feature represents incremental networking improvements that enhance overall cloud platform capabilities.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/manage-caches-with-precision-using-amazon-cloudfront-invalidation-by-cache-tag/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The 4x faster GKE node startup directly addresses a critical pain point for your GPU/TPU customers by eliminating cold start latency, and this improvement pairs strategically with the projected $139 billion data center networking market growth driven by AI workloads through 2031. The AWS US-East-1 overheating outage creates a competitive opening to emphasize GCP reliability messaging, while the 5 percent enterprise GPU utilization crisis signals potential demand softening that could affect infrastructure purchasing cycles. Broadcom AI revenue surging 106 percent and the NVIDIA-Corning domestic manufacturing partnership indicate sustained vendor momentum, though supply chain concentration in custom silicon and networking components warrants monitoring as AI chip demand scales toward the projected $670 billion market.";
+const STATIC_BRIEF = "The AlloyDB PostgreSQL 18 release and Gemini Enterprise Agent Platform guides strengthen your storage and AI platform positioning, but the Anthropic-SpaceX Colossus deal adding 220K NVIDIA GPUs represents a massive competitive compute expansion that could pressure Google Cloud AI workload capture rates. AWS Bedrock AgentCore payments preview signals Amazon is moving faster on agentic commerce infrastructure, creating urgency for Google to accelerate similar capabilities in your networking and API management stack. SK Hynix receiving unprecedented big tech offers for HBM production lines alongside Micron hitting record highs on 690 percent annual gains confirms memory remains the critical bottleneck, warranting close monitoring of your TPU and GPU memory supply agreements.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
