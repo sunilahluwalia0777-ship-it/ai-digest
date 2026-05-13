@@ -449,5 +449,20 @@
   "https://azure.microsoft.com/updates?id=561167": "2026-05-11",
   "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/": "2026-05-11",
   "https://blogs.nvidia.com/blog/your-career-starts-at-the-beginning-of-the-ai-revolution-nvidia-ceo-tells-graduates/": "2026-05-11",
-  "https://aws.amazon.com/blogs/networking-and-content-delivery/manage-caches-with-precision-using-amazon-cloudfront-invalidation-by-cache-tag/": "2026-05-11"
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/manage-caches-with-precision-using-amazon-cloudfront-invalidation-by-cache-tag/": "2026-05-11",
+  "https://cloud.google.com/blog/products/storage-data-transfer/cloud-storage-rapid-turbocharges-object-storage-for-ai-analytics/": "2026-05-13",
+  "https://cloud.google.com/blog/products/compute/cluster-reliability-for-trillion-parameter-models-on-tpus/": "2026-05-13",
+  "https://cloud.google.com/blog/products/infrastructure/how-imgix-processes-8-billion-images-daily-with-g4-vms-powered-by-nvidia-blackwell/": "2026-05-13",
+  "https://blogs.arista.com/blog/the-many-facets-of-ai-fabrics": "2026-05-13",
+  "https://blogs.nvidia.com/blog/ineffable-intelligence-reinforcement-learning-infrastructure/": "2026-05-13",
+  "https://blogs.nvidia.com/blog/sap-specialized-agents/": "2026-05-13",
+  "https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/": "2026-05-13",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/network-connectivity-patterns-for-agents-deployed-on-amazon-bedrock-agentcore-runtime/": "2026-05-13",
+  "https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/": "2026-05-13",
+  "https://blogs.cisco.com/datacenter/cisco-at-onug-dallas-2026-securing-the-ai-data-center-in-the-agentic-era/": "2026-05-13",
+  "https://cloud.google.com/blog/products/data-analytics/more-than-100x-faster-and-cheaper-llm-powered-sql-queries-with-proxy-models/": "2026-05-13",
+  "https://cloud.google.com/blog/products/databases/database-center-improvements-from-next26/": "2026-05-13",
+  "https://aws.amazon.com/blogs/storage/scalable-cross-cloud-data-migration-to-amazon-s3-with-distributed-rclone/": "2026-05-13",
+  "https://financialpost.com/technology/ai-alphabet-become-worlds-biggest-company": "2026-05-13",
+  "https://m.economictimes.com/markets/us-stocks/news/cisco-earnings-watch-can-ai-momentum-drive-another-rally/cisco-q3-earnings/slideshow/131029505.cms": "2026-05-13"
 }
