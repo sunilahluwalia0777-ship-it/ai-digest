@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google TPU Capacity Sold Out Forces Internal Researchers to Queue for Compute",
-    summary: "Alphabet has sold so much TPU capacity to third parties like Anthropic and Meta that its own researchers now compete for remaining resources. The success of external cloud deals has made internal compute access a competitive resource within the company.",
+    title: "Google and Blackstone Form $5B AI Cloud Joint Venture With TPU-Based Compute Services",
+    summary: "Blackstone will invest $5 billion equity in a joint venture with Google to build US-based AI compute-as-a-service infrastructure targeting 500 MW capacity by 2027. The deal valued at $25 billion including leverage will deliver Google TPU access through a managed service model.",
     source: "The Next Web", age: "1 day ago",
-    detail: "This report reveals a critical inflection point in Googles cloud AI strategy where commercial success is creating internal resource constraints. The TPU allocation tension between external revenue and internal research priorities represents a strategic challenge for the PM team. This validates the massive demand for custom AI silicon while highlighting capacity planning challenges. The situation may accelerate investment in next-generation TPU production and could influence pricing strategies for external customers.",
-    url: "https://thenextweb.com/news/google-tpu-compute-internal-researchers-anthropic/"
+    detail: "This joint venture represents a significant shift in how hyperscalers monetize custom silicon investments. By partnering with Blackstone Google can accelerate TPU infrastructure buildout without bearing full capital expenditure burden while Blackstone gains exposure to AI compute demand. The 500 MW target suggests roughly 100000 TPU chips equivalent capacity. This model could pressure AWS and Azure to consider similar financial partnerships for their custom silicon programs. For the networking team this means planning for massive scale-out TPU pod connectivity requirements.",
+    url: "https://thenextweb.com/news/google-blackstone-tpu-cloud-joint-venture-5bn/"
   },
   {
     id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA CEO Huang at Dell World Says Demand Is Going Parabolic for AI Infrastructure",
-    summary: "Jensen Huang announced that agentic AI inference runs at one-tenth the cost per token with NVIDIA Vera Rubin NVL72 systems. Over 5000 enterprises including Lilly Samsung and Honeywell are now running AI workloads on Dell AI Factories.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This keynote demonstrates NVIDIAs continued market dominance and the rapid enterprise adoption of AI infrastructure through Dell partnerships. The 10x cost reduction claim for agentic inference is significant for TCO calculations when evaluating competitive infrastructure options. The Vera CPU positioning for agent sandboxes running 50 percent faster than traditional CPUs directly impacts workload placement decisions. The 5000 enterprise customer milestone validates the Dell channel strategy that Google Cloud competes against.",
-    url: "https://blogs.nvidia.com/blog/dell-technologies-agent-enterprise-ai/"
+    title: "Morgan Stanley Says NVIDIA Blackwell Worth 2x Premium Over Google and Amazon Custom AI Chips",
+    summary: "Morgan Stanley analysis finds NVIDIA Blackwell GPUs cost twice as much as hyperscaler custom ASICs but deliver superior compute efficiency that justifies the premium. The investment bank maintains bullish stance on NVIDIA despite aggressive TPU and Trainium competition.",
+    source: "Wccftech", age: "2 days ago",
+    detail: "This analysis directly impacts GPU versus TPU infrastructure planning decisions. Morgan Stanleys endorsement of Blackwell efficiency provides cover for continued NVIDIA investment even as Google and AWS scale custom silicon. The 2x cost differential is significant for large deployments but efficiency gains in training throughput and inference latency may offset TCO concerns. Google PM teams should monitor whether this efficiency gap narrows with TPU v6 and future generations. The competitive dynamic between merchant silicon and custom ASICs will define infrastructure strategy for the next 3-5 years.",
+    url: "https://wccftech.com/nvidia-blackwell-costs-twice-as-much-as-google-and-amazons-custom-ai-chips-yet-morgan-stanley-says-its-worth-it/"
   },
   {
-    id: 3, cat: "silicon", impact: "high", filler: false,
-    title: "NVIDIA Vera CPUs Delivered to Anthropic OpenAI SpaceXAI and Oracle Cloud",
-    summary: "The first NVIDIA Vera CPUs arrived at Anthropic OpenAI and SpaceXAI followed by delivery to Oracle Cloud Infrastructure. NVIDIA VP Ian Buck personally delivered the processors to these leading AI labs.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This delivery marks NVIDIAs entry into the CPU market with immediate validation from the most important AI customers in the industry. The inclusion of Oracle Cloud as an early recipient signals OCI as a serious competitor in AI infrastructure alongside the pure AI labs. For Google this represents both a competitive threat from NVIDIA expanding its silicon portfolio and validation that hyperscalers need differentiated CPU options. The Vera CPU complements NVIDIAs GPU dominance and could influence server architecture decisions across the industry.",
-    url: "https://blogs.nvidia.com/blog/vera-cpu-delivery/"
-  },
-  {
-    id: 4, cat: "vendor", impact: "high", filler: false,
-    title: "AMD Invests 6.5 Million Dollars in Marvell Stock as Both Companies Surge",
-    summary: "Advanced Micro Devices has purchased 6.5 million dollars of Marvell stock while AMD shares have gained approximately 98 percent year to date. The investment signals strengthening ties between the two semiconductor companies.",
-    source: "TheStreet", age: "2 days ago",
-    detail: "This strategic investment between AMD and Marvell suggests potential deeper collaboration in the AI infrastructure space where both compete with NVIDIA and Broadcom. Marvell is a key networking silicon vendor for data center interconnects which complements AMDs GPU and CPU offerings. For Google this relationship could affect the competitive dynamics of custom silicon partnerships and networking component sourcing. The investment may signal future integration or joint development efforts that could impact infrastructure vendor selection.",
-    url: "https://www.thestreet.com/investing/stocks/amd-buys-6-5-million-of-marvell-stock"
-  },
-  {
-    id: 5, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Rubin Platform Expected to Drive AI Server Growth in Second Half of 2026",
-    summary: "NVIDIAs Rubin platform is projected to reshape AI infrastructure and intensify competition while impacting global tech supply chains. The platform launch is expected to drive significant AI server growth in the latter half of 2026.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "The Rubin platform represents NVIDIAs next generation architecture following Blackwell which will set new performance benchmarks for AI training and inference. This timeline creates planning implications for infrastructure procurement cycles and competitive positioning against NVIDIA-based cloud offerings. The supply chain impact mentioned suggests continued constraints that affect all hyperscalers capacity planning. Google must evaluate how Rubin capabilities compare to TPU roadmaps for customer workload decisions.",
-    url: "https://cryptobriefing.com/nvidia-rubin-platform-ai-server-growth-2026/"
-  },
-  {
-    id: 6, cat: "networking", impact: "medium", filler: false,
-    title: "Cisco N9000 Dominates EANTC 2026 VXLAN EVPN and Secure Timing Tests",
-    summary: "Cisco N9000 switches led 12-vendor validation tests at EANTC 2026 including VXLAN EVPN and secure PTP MACsec testing. The results validate Ciscos open AI-ready architecture as an industry standard for multivendor integration.",
+    id: 3, cat: "networking", impact: "high", filler: false,
+    title: "Cisco Intelligent Packet Flow Delivers Faster AI Job Completion and Higher GPU Utilization",
+    summary: "Cisco announces Intelligent Packet Flow technology that adapts network behavior to AI traffic patterns in real time improving job completion times and GPU efficiency. The capability targets large AI fabrics requiring consistent performance across distributed training workloads.",
     source: "Cisco Data Center Blog", age: "today",
-    detail: "These independent test results are important for validating network infrastructure choices in AI data centers where VXLAN EVPN is commonly used for fabric connectivity. The secure PTP and MACsec capabilities are increasingly relevant for AI cluster synchronization and security requirements. Cisco remains a significant vendor in the competitive landscape alongside Arista for data center networking. The multivendor interoperability validation supports hybrid infrastructure strategies that many enterprises require.",
-    url: "https://blogs.cisco.com/datacenter/cisco-n9000-excels-in-eantc-2026-vxlan-evpn-and-timing-tests/"
+    detail: "This networking innovation addresses a critical pain point for AI infrastructure where network congestion and load imbalancing can leave expensive GPUs idle. Intelligent Packet Flow likely uses telemetry-driven traffic engineering to optimize ECMP hashing and congestion avoidance for AI collective operations. For Google networking teams this represents competitive pressure from Cisco in the AI fabric space. The technology could influence procurement decisions for on-prem AI clusters and partner deployments. Understanding how this compares to Google internal fabric optimizations is essential for competitive positioning.",
+    url: "https://blogs.cisco.com/datacenter/ai-network-performance-with-cisco-intelligent-packet-flow/"
   },
   {
-    id: 7, cat: "networking", impact: "medium", filler: false,
-    title: "Azure Front Door WebSocket Support Now Generally Available",
-    summary: "Azure Front Door Standard and Premium now support WebSocket in general availability with no additional configuration required. WebSocket enables full-duplex communication over single long-lived TCP connections for real-time applications.",
+    id: 4, cat: "networking", impact: "medium", filler: false,
+    title: "Cisco N9000 Dominates EANTC 2026 Multivendor Tests for VXLAN EVPN and Timing",
+    summary: "Cisco Nexus 9000 switches achieved top results in EANTC 2026 validation testing across 12 vendors for VXLAN EVPN interoperability and secure PTP with MACsec. Results demonstrate Cisco open architecture readiness for AI datacenter deployments.",
+    source: "Cisco.com", age: "1 day ago",
+    detail: "EANTC independent testing provides valuable benchmarking data for network equipment selection. Cisco strong showing in VXLAN EVPN and timing tests validates their multivendor interoperability claims which matters for hybrid deployments mixing Cisco with Arista or other vendors. The secure PTP with MACsec capability is increasingly important for AI clusters requiring precise synchronization. Google networking teams should review these results when evaluating Cisco equipment for partner or edge deployments where multivendor environments are common.",
+    url: "https://blogs.cisco.com/?p=491281"
+  },
+  {
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "Broadcom Surges as Wells Fargo Says Wall Street Underestimates AI Power Requirements",
+    summary: "Wells Fargo analyst Aaron Rakers issued bullish note on Broadcom arguing the street significantly underestimates scale of AI infrastructure power demands. The analysis suggests datacenter buildout will exceed current market expectations.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "This analyst call has direct implications for infrastructure planning across all hyperscalers. If AI power requirements exceed consensus estimates it validates aggressive capacity expansion and benefits custom ASIC suppliers like Broadcom alongside NVIDIA. Broadcom networking ASICs and custom compute chips for hyperscalers position them as major beneficiary of AI infrastructure spending. For Google the implication is that TPU and networking infrastructure investment levels may need revision upward. Power availability will increasingly constrain AI deployment timelines making the Blackstone JV power capacity even more strategic.",
+    url: "https://finance.yahoo.com/markets/stocks/articles/broadcom-surges-data-center-framework-123105306.html"
+  },
+  {
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google IO 2026 Delivers New AI Models and Cloud Innovations for Enterprise Customers",
+    summary: "Google IO unveiled new AI innovations including model updates that will be available to Google Cloud customers immediately. The announcements build on Next 26 reveals of eighth-generation TPUs and Gemini Enterprise Agent Platform.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The IO announcements reinforce Googles full-stack AI strategy from custom silicon through models to agent platforms. Eighth-generation TPU references confirm continued aggressive investment in custom accelerators competing with NVIDIA and internal AWS Trainium efforts. For infrastructure teams the model improvements drive demand for both training and inference capacity. The Gemini Enterprise Agent Platform creates new workload patterns requiring optimized networking for agent-to-agent and agent-to-data communication patterns that differ from traditional request-response architectures.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud/"
+  },
+  {
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "Azure Storage Mover Now Supports Blob-to-Blob Migration Across Regions and Subscriptions",
+    summary: "Microsoft Azure Storage Mover reaches general availability for blob container to blob container transfers enabling seamless data movement across regions subscriptions and accounts. The fully managed service simplifies large-scale storage migrations.",
     source: "Azure Updates", age: "today",
-    detail: "WebSocket support in Azure Front Door addresses a key networking requirement for real-time AI applications and agentic workloads that require persistent connections. This GA release closes a capability gap that could influence customer decisions between Azure and Google Cloud for latency-sensitive AI deployments. The default enablement without configuration reduces operational complexity for customers building real-time inference endpoints. This is a competitive feature that Google Cloud networking products should match or exceed.",
-    url: "https://azure.microsoft.com/updates?id=562548"
+    detail: "This Azure capability addresses a common enterprise pain point when reorganizing cloud storage infrastructure. Cross-region and cross-subscription blob migration is particularly relevant for AI workloads where training data may need repositioning closer to GPU clusters. For competitive analysis Google Cloud Storage Transfer Service capabilities should be benchmarked against this new Azure offering. The managed approach reduces operational burden compared to custom migration scripts and could influence enterprise storage platform decisions.",
+    url: "https://azure.microsoft.com/updates?id=562753"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AWS Weekly Roundup Highlights Transform Service at One Year and EC2 M3 Ultra Mac",
-    summary: "AWS Transform for NET Mainframe and VMware workloads celebrates one year as the first agentic AI service for enterprise application modernization. AWS also announced Claude Platform availability and new EC2 M3 Ultra Mac instances.",
-    source: "AWS News Blog", age: "1 day ago",
-    detail: "The AWS Transform anniversary highlights Amazons early mover advantage in agentic AI services for enterprise modernization workloads. The Claude Platform on AWS represents deepening Anthropic partnership that competes directly with Google Clouds AI offerings. The M3 Ultra Mac instances signal continued investment in specialized compute options that enterprises evaluate when choosing cloud providers. These announcements collectively show AWS maintaining aggressive pace in AI infrastructure and services.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/"
+    id: 8, cat: "networking", impact: "medium", filler: false,
+    title: "Azure Increases Default NSG and Route Table Limits for Large Scale Deployments",
+    summary: "Azure Virtual Network raised default limits to 2000 security rules per NSG and 1000 routes per route table addressing scale requirements for enterprise deployments. The increases reduce need for limit exception requests.",
+    source: "Azure Updates", age: "today",
+    detail: "These limit increases reflect growing complexity of cloud network deployments particularly for AI infrastructure with many endpoints. The new defaults of 2000 security rules and 1000 routes per table better accommodate large Kubernetes clusters and distributed training environments. Google Cloud VPC has similar considerations and competitive parity on these limits matters for enterprise workload portability. Network architects designing AI infrastructure should verify current limits across all target cloud platforms.",
+    url: "https://azure.microsoft.com/updates?id=562695"
   },
   {
     id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Surprise AI Bills Leave AWS and Google Cloud Users Facing Tens of Thousands in Charges",
-    summary: "Cloud users are reporting unexpected AI bills reaching tens of thousands of dollars from AWS and Google Cloud services. The billing surprises highlight the cost management challenges of AI workloads at scale.",
-    source: "Theregister.com", age: "2 days ago",
-    detail: "This reporting reveals a significant customer experience issue affecting both AWS and Google Cloud that could impact customer retention and acquisition. Unpredictable AI costs undermine the value proposition of cloud elasticity and create budget planning challenges for enterprises. For the PM team this signals a need for better cost visibility tooling and spending controls specifically designed for AI workloads. Addressing this customer pain point could be a competitive differentiator in enterprise sales conversations.",
-    url: "https://www.theregister.com/ai-ml/2026/05/18/surprise-ai-bills-leave-aws-and-google-cloud-users-aghast/5241348"
+    title: "NVIDIA and Google Cloud Accelerate 100K Developer Community With Joint AI Training Programs",
+    summary: "NVIDIA and Google Cloud joint developer community surpasses 100000 members receiving curated learning paths and hands-on labs for building on NVIDIA AI platform within Google Cloud. The partnership launched at IO last year continues expanding.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The 100K developer milestone demonstrates strong ecosystem momentum for NVIDIA on Google Cloud despite Googles TPU investments. This partnership acknowledges that many AI workloads will continue using NVIDIA GPUs even as TPU capacity grows. For infrastructure planning the developer community size suggests sustained GPU demand on Google Cloud requiring continued investment in A100 H100 and Blackwell cluster capacity. The dual-track strategy of supporting both NVIDIA and TPU workloads adds complexity but addresses diverse customer requirements.",
+    url: "https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/"
   },
   {
-    id: 10, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Storage Actions Mock Runs Now Generally Available for Safe Validation",
-    summary: "Azure Storage Actions now supports mock runs to simulate task execution at full scale without modifying any data. The feature helps organizations validate automation before executing changes on production storage.",
-    source: "Azure Updates", age: "today",
-    detail: "Mock runs for storage automation address a critical operational safety requirement when managing large-scale data in AI pipelines. This capability reduces risk when implementing storage lifecycle policies that affect training data or model artifacts. The feature represents a storage management improvement that Google Cloud Storage should evaluate for competitive parity. Safe validation of storage operations becomes more important as AI workloads involve increasingly large and valuable datasets.",
-    url: "https://azure.microsoft.com/updates?id=559494"
+    id: 10, cat: "silicon", impact: "medium", filler: false,
+    title: "TPU vs GPU Analysis Shows Why Google Competes Directly With NVIDIA on AI Hardware",
+    summary: "Technical analysis examines Google TPU versus NVIDIA GPU architectures explaining strategic rationale for custom silicon investment. The comparison highlights differentiated approaches to AI acceleration and cloud service models.",
+    source: "C-sharpcorner.com", age: "1 day ago",
+    detail: "This explainer provides useful framing for the custom silicon versus merchant GPU debate. Googles TPU strategy enables differentiated cloud offerings and reduces NVIDIA dependency but requires sustained R&D investment. The architecture differences between systolic array TPUs and CUDA-based GPUs create distinct performance profiles for different workload types. Infrastructure teams should understand these tradeoffs when recommending deployment targets for various AI workloads. The Blackstone JV suggests Google is doubling down on TPU as a competitive differentiator.",
+    url: "https://www.c-sharpcorner.com/article/tpu-vs-gpu-explained-why-google-wants-to-compete-with-nvidia/"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Blog Details Five Scenarios for Building Agentic Data Layer Architecture",
-    summary: "Google Cloud published guidance on routing fragmented data from SaaS IoT and legacy sources into secure scalable endpoints for AI agents. The architectural shift requires managing security costs and semantic access beyond simple LLM database connections.",
+    title: "Google Cloud Introduces Agent Executor Runtime for Long-Running AI Workflow Management",
+    summary: "Google releases Agent Executor as open-source runtime standard for managing agent workflows that run for hours or days. The distributed runtime addresses reliability challenges in production agent deployments.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This Google Cloud blog provides architectural patterns relevant to understanding how the platform positions itself for agentic AI workloads. The emphasis on security and cost management aligns with enterprise concerns highlighted in other reporting about surprise AI bills. The content helps contextualize internal product strategy for data analytics and AI integration services.",
-    url: "https://cloud.google.com/blog/products/data-analytics/building-an-agentic-data-layer-on-google-cloud-5-key-scenarios/"
+    detail: "As AI agents take on complex multi-step tasks the underlying infrastructure must handle long-running processes reliably. Agent Executor provides checkpointing and recovery mechanisms essential for production agent systems. This has networking implications for persistent connections and state synchronization across distributed agent instances. The open-source approach may drive standardization benefiting the broader ecosystem.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/agent-executor-googles-distributed-agent-runtime/"
   },
   {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "US Considers Project Spire for Secure AI Base in Israels Negev Desert",
-    summary: "The establishment of secure AI bases like Project Spire could reshape global tech alliances and intensify US-China tech rivalry. The project may impact supply chains and create new infrastructure deployment patterns.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Geopolitical AI infrastructure projects represent longer-term competitive dynamics that could influence where hyperscalers build capacity. Secure sovereign AI deployments may require specialized infrastructure offerings that differ from standard cloud regions. This trend is worth monitoring for potential impacts on international cloud strategy.",
-    url: "https://cryptobriefing.com/us-project-spire-ai-base-israel-negev/"
+    id: 12, cat: "storage", impact: "low", filler: true,
+    title: "Azure NetApp Files Cache Volumes Now Generally Available for Edge Data Access",
+    summary: "Azure NetApp Files introduces cache volumes providing cloud-based caching of external origin volumes containing only actively accessed data. The capability improves performance for distributed file access scenarios.",
+    source: "Azure Updates", age: "today",
+    detail: "Cache volumes address latency challenges when accessing data across geographic boundaries relevant for distributed AI training scenarios. The intelligent caching of hot data reduces bandwidth requirements and improves read performance. This competes with Google Cloud Filestore and similar NFS-based storage offerings. Storage architecture for AI workloads increasingly requires tiered caching strategies.",
+    url: "https://azure.microsoft.com/updates?id=562259"
   },
   {
-    id: 13, cat: "competition", impact: "low", filler: true,
-    title: "Philippines Joins Pax Silica Initiative for 4000-Acre AI Hub Development",
-    summary: "The Philippines is advancing plans for a 4000-acre AI and supply chain hub in New Clark City through the Pax Silica initiative. The project deepens US-Philippines ties and could reshape regional tech dynamics.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Large-scale AI hub developments in Southeast Asia represent infrastructure expansion opportunities and competitive positioning for cloud providers. The scale of this project suggests significant data center and connectivity requirements that hyperscalers will compete to serve. Regional AI infrastructure investments are reshaping the global competitive landscape for cloud services.",
-    url: "https://cryptobriefing.com/philippines-pax-silica-ai-hub/"
+    id: 13, cat: "networking", impact: "low", filler: true,
+    title: "Azure Network Watcher Rule Impact Analyzer GA Enables Pre-Change Traffic Assessment",
+    summary: "Azure Network Watcher rule impact analyzer reaches general availability allowing assessment of NSG and security rule changes against live traffic before deployment. The capability reduces risk of network disruptions from policy changes.",
+    source: "Azure Updates", age: "today",
+    detail: "Pre-change impact analysis is valuable for maintaining network stability in production AI environments where connectivity interruptions can waste expensive GPU time. This DevOps-oriented feature helps network teams validate changes safely. Google Cloud equivalent capabilities should be evaluated for competitive parity in enterprise networking tools.",
+    url: "https://azure.microsoft.com/updates?id=562690"
   },
   {
-    id: 14, cat: "vendor", impact: "low", filler: true,
-    title: "Tata-ASML Deal Signals Indias Semiconductor Manufacturing Ambitions",
-    summary: "The Tata-ASML agreement reflects Indias ambition to enter semiconductor manufacturing currently dominated by a handful of global powers. The deal could reshape supply chain dynamics for chip production.",
-    source: "Al Jazeera English", age: "today",
-    detail: "Semiconductor supply chain diversification efforts like this Tata-ASML partnership have long-term implications for chip availability and pricing. New manufacturing capacity outside traditional hubs could eventually affect infrastructure component sourcing strategies. This development is relevant background for understanding evolving global semiconductor dynamics.",
-    url: "https://www.aljazeera.com/news/2026/5/18/tata-asml-deal-how-significant-is-it-for-indias-semiconductor-push"
+    id: 14, cat: "competition", impact: "low", filler: true,
+    title: "Baidu CFO Says GPU Rentals Structurally Higher Margin Than CPU Cloud Services",
+    summary: "Baidu CFO publicly states that GPU cloud rental business generates structurally higher margins than traditional CPU cloud computing. The admission highlights profitability dynamics driving cloud AI infrastructure investment.",
+    source: "Theregister.com", age: "1 day ago",
+    detail: "This candid assessment from a major cloud provider confirms the economic incentive for aggressive AI infrastructure buildout. Higher GPU margins justify premium pricing and sustained capex investment. The comment also suggests barriers to entry as smaller players cannot afford the infrastructure investment to compete. Google and other hyperscalers benefit from this dynamic in their AI cloud businesses.",
+    url: "https://www.theregister.com/off-prem/2026/05/19/baidu-says-the-quiet-part-out-loud-you-cant-build-ai-infrastructure-so-clouds-can-cash-in/5242344"
   },
   {
     id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Cloudflare and Stripe Enable AI Agents to Autonomously Create Accounts and Deploy Code",
-    summary: "Cloudflare and Stripe launched a protocol allowing AI agents to autonomously create cloud accounts register domains and deploy to production. Stripe handles identity and payment with a 100 dollar monthly default spending cap.",
-    source: "InfoQ.com", age: "today",
-    detail: "This agentic commerce capability represents an emerging pattern where AI agents can provision and manage infrastructure autonomously. The protocol could influence how enterprises think about AI agent permissions and financial controls in cloud environments. While focused on Cloudflare this pattern may extend to other cloud providers including Google Cloud.",
-    url: "https://www.infoq.com/news/2026/05/cloudflare-stripe-agent-commerce/"
+    title: "GKE Agent Sandbox Generally Available With Preview of Agent Substrate Platform",
+    summary: "Google Kubernetes Engine Agent Sandbox reaches general availability providing secure compute environments for autonomous AI agents. Agent Substrate preview offers additional infrastructure primitives for agent workloads.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Agent-specific infrastructure reflects the shift from simple inference endpoints to autonomous systems requiring isolated execution environments. The security model for agents differs from traditional containers given their ability to execute code and access external resources. This GKE capability positions Google Cloud for emerging agent deployment patterns requiring specialized infrastructure support.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The TPU capacity sellout story demands immediate attention as networking and storage infrastructure must now support increasingly constrained internal research workloads while maintaining premium service levels for external customers like Anthropic and Meta who are driving revenue. NVIDIA delivering Vera CPUs directly to Anthropic and OpenAI signals aggressive competitive positioning where NVIDIA is building direct relationships with your largest TPU cloud customers, potentially threatening future contract renewals. The Rubin platform timeline targeting second half 2026 for major AI server growth creates a planning window for networking and storage capacity decisions, while the Azure Storage Actions mock run feature represents a capability gap worth monitoring for GCS automation parity.";
+const STATIC_BRIEF = "The Blackstone joint venture creating 500 MW of TPU-based compute capacity by 2027 represents a massive infrastructure buildout that will require significant networking fabric investment and storage architecture planning for your teams to support at scale. Ciscos Intelligent Packet Flow announcement directly targets AI training workloads with adaptive network behavior, signaling intensifying competition for GPU cluster connectivity where Google Cloud networking must demonstrate equivalent or superior performance for TPU fabrics. Wells Fargos analysis suggesting datacenter power demands will exceed market expectations reinforces the need for aggressive capacity planning across networking and storage infrastructure to support accelerating AI compute deployment.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
