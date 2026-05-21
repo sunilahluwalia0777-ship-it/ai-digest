@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google and Blackstone Form $5B AI Cloud Joint Venture With TPU-Based Compute Services",
-    summary: "Blackstone will invest $5 billion equity in a joint venture with Google to build US-based AI compute-as-a-service infrastructure targeting 500 MW capacity by 2027. The deal valued at $25 billion including leverage will deliver Google TPU access through a managed service model.",
-    source: "The Next Web", age: "1 day ago",
-    detail: "This joint venture represents a significant shift in how hyperscalers monetize custom silicon investments. By partnering with Blackstone Google can accelerate TPU infrastructure buildout without bearing full capital expenditure burden while Blackstone gains exposure to AI compute demand. The 500 MW target suggests roughly 100000 TPU chips equivalent capacity. This model could pressure AWS and Azure to consider similar financial partnerships for their custom silicon programs. For the networking team this means planning for massive scale-out TPU pod connectivity requirements.",
-    url: "https://thenextweb.com/news/google-blackstone-tpu-cloud-joint-venture-5bn/"
+    title: "NVIDIA Posts Record Q1 Revenue of $81.6B Up 85 Percent Year Over Year",
+    summary: "NVIDIA reported first quarter fiscal 2027 revenue of $81.6 billion representing 20 percent sequential growth and 85 percent year-over-year increase. The record results underscore continued hyperscaler demand for AI compute infrastructure.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "NVIDIAs Q1 results exceeded Wall Street expectations of $78.75 billion demonstrating sustained momentum in data center GPU demand. The 85 percent year-over-year growth reflects massive ongoing investment from hyperscalers in AI infrastructure buildout. For Google Cloud infrastructure planning these results confirm NVIDIA remains the dominant supplier while also validating the strategic importance of TPU alternatives and custom silicon initiatives to reduce supplier concentration risk.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
   },
   {
-    id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "Morgan Stanley Says NVIDIA Blackwell Worth 2x Premium Over Google and Amazon Custom AI Chips",
-    summary: "Morgan Stanley analysis finds NVIDIA Blackwell GPUs cost twice as much as hyperscaler custom ASICs but deliver superior compute efficiency that justifies the premium. The investment bank maintains bullish stance on NVIDIA despite aggressive TPU and Trainium competition.",
-    source: "Wccftech", age: "2 days ago",
-    detail: "This analysis directly impacts GPU versus TPU infrastructure planning decisions. Morgan Stanleys endorsement of Blackwell efficiency provides cover for continued NVIDIA investment even as Google and AWS scale custom silicon. The 2x cost differential is significant for large deployments but efficiency gains in training throughput and inference latency may offset TCO concerns. Google PM teams should monitor whether this efficiency gap narrows with TPU v6 and future generations. The competitive dynamic between merchant silicon and custom ASICs will define infrastructure strategy for the next 3-5 years.",
-    url: "https://wccftech.com/nvidia-blackwell-costs-twice-as-much-as-google-and-amazons-custom-ai-chips-yet-morgan-stanley-says-its-worth-it/"
+    id: 2, cat: "competition", impact: "high", filler: false,
+    title: "Google and Blackstone Launch $5B Joint Venture for TPU Compute as a Service",
+    summary: "Google and Blackstone announced a joint venture providing TPU-based compute-as-a-service for AI workloads with initial $5 billion funding. The partnership positions Google TPUs as a direct alternative to NVIDIA GPU infrastructure.",
+    source: "SiliconANGLE News", age: "1 day ago",
+    detail: "This strategic move directly challenges NVIDIAs dominance in AI compute by offering enterprise customers TPU access through a dedicated infrastructure platform. The Blackstone partnership brings significant capital deployment capability for rapid scaling of TPU capacity. For Google Cloud this represents a major competitive differentiation enabling customers to access custom silicon without NVIDIA dependency while generating new revenue streams from TPU infrastructure investment.",
+    url: "https://siliconangle.com/2026/05/19/google-blackstone-launch-ai-infrastructure-joint-venture/"
   },
   {
     id: 3, cat: "networking", impact: "high", filler: false,
-    title: "Cisco Intelligent Packet Flow Delivers Faster AI Job Completion and Higher GPU Utilization",
-    summary: "Cisco announces Intelligent Packet Flow technology that adapts network behavior to AI traffic patterns in real time improving job completion times and GPU efficiency. The capability targets large AI fabrics requiring consistent performance across distributed training workloads.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This networking innovation addresses a critical pain point for AI infrastructure where network congestion and load imbalancing can leave expensive GPUs idle. Intelligent Packet Flow likely uses telemetry-driven traffic engineering to optimize ECMP hashing and congestion avoidance for AI collective operations. For Google networking teams this represents competitive pressure from Cisco in the AI fabric space. The technology could influence procurement decisions for on-prem AI clusters and partner deployments. Understanding how this compares to Google internal fabric optimizations is essential for competitive positioning.",
-    url: "https://blogs.cisco.com/datacenter/ai-network-performance-with-cisco-intelligent-packet-flow/"
+    title: "Cisco Intelligent Packet Flow Delivers Real-Time AI Traffic Optimization",
+    summary: "Cisco announced Intelligent Packet Flow technology that adapts network behavior to AI traffic patterns in real time improving GPU efficiency. The solution targets faster job completion and operational consistency across large AI fabrics.",
+    source: "Cisco.com", age: "today",
+    detail: "This represents a significant advancement in AI-aware networking infrastructure that directly addresses congestion and load balancing challenges in GPU clusters. Real-time traffic adaptation can meaningfully improve GPU utilization rates which directly impacts total cost of ownership for AI infrastructure. Google should evaluate how this compares to internal network optimization capabilities and assess competitive positioning implications for Cloud Networking offerings.",
+    url: "https://blogs.cisco.com/?p=491342"
   },
   {
-    id: 4, cat: "networking", impact: "medium", filler: false,
-    title: "Cisco N9000 Dominates EANTC 2026 Multivendor Tests for VXLAN EVPN and Timing",
-    summary: "Cisco Nexus 9000 switches achieved top results in EANTC 2026 validation testing across 12 vendors for VXLAN EVPN interoperability and secure PTP with MACsec. Results demonstrate Cisco open architecture readiness for AI datacenter deployments.",
-    source: "Cisco.com", age: "1 day ago",
-    detail: "EANTC independent testing provides valuable benchmarking data for network equipment selection. Cisco strong showing in VXLAN EVPN and timing tests validates their multivendor interoperability claims which matters for hybrid deployments mixing Cisco with Arista or other vendors. The secure PTP with MACsec capability is increasingly important for AI clusters requiring precise synchronization. Google networking teams should review these results when evaluating Cisco equipment for partner or edge deployments where multivendor environments are common.",
-    url: "https://blogs.cisco.com/?p=491281"
+    id: 4, cat: "competition", impact: "high", filler: false,
+    title: "Evercore Warns NVIDIA Losing Ground as Hyperscalers Shift Toward Custom ASICs",
+    summary: "Evercore ISI analysts report AI engineers are increasingly unimpressed with NVIDIA chips as cooling and power costs drive hyperscalers toward custom ASICs. The analysis suggests total cost of ownership advantages for custom silicon are gaining recognition.",
+    source: "Wccftech", age: "today",
+    detail: "This analyst perspective validates Googles long-term TPU strategy and suggests market sentiment is shifting toward custom silicon solutions. Power and cooling costs have become critical factors in hyperscale AI infrastructure economics making purpose-built accelerators more attractive. The report strengthens the business case for continued TPU investment and the Google-Blackstone joint venture positioning TPUs as viable NVIDIA alternatives for enterprise customers.",
+    url: "https://wccftech.com/nvidia-loses-ground-with-ai-engineers-as-cooling-and-power-costs-push-hyperscalers-toward-custom-asics-evercore-warns/"
   },
   {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "Broadcom Surges as Wells Fargo Says Wall Street Underestimates AI Power Requirements",
-    summary: "Wells Fargo analyst Aaron Rakers issued bullish note on Broadcom arguing the street significantly underestimates scale of AI infrastructure power demands. The analysis suggests datacenter buildout will exceed current market expectations.",
-    source: "Yahoo Entertainment", age: "2 days ago",
-    detail: "This analyst call has direct implications for infrastructure planning across all hyperscalers. If AI power requirements exceed consensus estimates it validates aggressive capacity expansion and benefits custom ASIC suppliers like Broadcom alongside NVIDIA. Broadcom networking ASICs and custom compute chips for hyperscalers position them as major beneficiary of AI infrastructure spending. For Google the implication is that TPU and networking infrastructure investment levels may need revision upward. Power availability will increasingly constrain AI deployment timelines making the Blackstone JV power capacity even more strategic.",
-    url: "https://finance.yahoo.com/markets/stocks/articles/broadcom-surges-data-center-framework-123105306.html"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Azure IaaS Takes System-Level Approach for High-Performance AI Workloads",
+    summary: "Microsoft Azure announced a system-level architecture approach integrating compute storage and networking for consistent scalable AI performance. The strategy targets enterprise AI cloud-native and business-critical workload optimization.",
+    source: "Azure Blog", age: "today",
+    detail: "Azures emphasis on holistic infrastructure optimization signals competitive pressure on hyperscalers to deliver integrated AI infrastructure stacks rather than component-level services. This approach mirrors Googles TPU ecosystem strategy where tight integration between accelerators and infrastructure drives performance advantages. Google Cloud should monitor Azure positioning and ensure TPU infrastructure messaging emphasizes similar system-level optimization capabilities.",
+    url: "https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google IO 2026 Delivers New AI Models and Cloud Innovations for Enterprise Customers",
-    summary: "Google IO unveiled new AI innovations including model updates that will be available to Google Cloud customers immediately. The announcements build on Next 26 reveals of eighth-generation TPUs and Gemini Enterprise Agent Platform.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The IO announcements reinforce Googles full-stack AI strategy from custom silicon through models to agent platforms. Eighth-generation TPU references confirm continued aggressive investment in custom accelerators competing with NVIDIA and internal AWS Trainium efforts. For infrastructure teams the model improvements drive demand for both training and inference capacity. The Gemini Enterprise Agent Platform creates new workload patterns requiring optimized networking for agent-to-agent and agent-to-data communication patterns that differ from traditional request-response architectures.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud/"
-  },
-  {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Storage Mover Now Supports Blob-to-Blob Migration Across Regions and Subscriptions",
-    summary: "Microsoft Azure Storage Mover reaches general availability for blob container to blob container transfers enabling seamless data movement across regions subscriptions and accounts. The fully managed service simplifies large-scale storage migrations.",
+    id: 6, cat: "networking", impact: "medium", filler: false,
+    title: "Azure Launches Summarized Gateway Prefix Advertisement for Route Optimization",
+    summary: "Azure released public preview of summarized advertised gateway prefixes enabling ExpressRoute and VPN gateways to advertise condensed routing information. The feature simplifies on-premises network integration and reduces routing table overhead.",
     source: "Azure Updates", age: "today",
-    detail: "This Azure capability addresses a common enterprise pain point when reorganizing cloud storage infrastructure. Cross-region and cross-subscription blob migration is particularly relevant for AI workloads where training data may need repositioning closer to GPU clusters. For competitive analysis Google Cloud Storage Transfer Service capabilities should be benchmarked against this new Azure offering. The managed approach reduces operational burden compared to custom migration scripts and could influence enterprise storage platform decisions.",
-    url: "https://azure.microsoft.com/updates?id=562753"
+    detail: "This networking enhancement addresses scalability challenges in hybrid cloud deployments where large prefix counts can overwhelm on-premises routing infrastructure. Summarized prefix advertisement is a standard practice in large-scale network design that Azure is now exposing as a managed capability. Google Cloud Networking should assess feature parity for Cloud Interconnect and VPN gateway services to maintain competitive positioning in enterprise hybrid scenarios.",
+    url: "https://azure.microsoft.com/updates?id=562813"
   },
   {
-    id: 8, cat: "networking", impact: "medium", filler: false,
-    title: "Azure Increases Default NSG and Route Table Limits for Large Scale Deployments",
-    summary: "Azure Virtual Network raised default limits to 2000 security rules per NSG and 1000 routes per route table addressing scale requirements for enterprise deployments. The increases reduce need for limit exception requests.",
+    id: 7, cat: "competition", impact: "high", filler: false,
+    title: "French AION Consortium Bids $10B for EU AI Gigafactory Site",
+    summary: "A Scaleway-led consortium including Iliad GENCI Inria and Hugging Face submitted a $10 billion bid for one of five planned EU AI gigafactory sites. The single-country French proposal competes against multi-state bids from Spain Germany and Netherlands.",
+    source: "The Next Web", age: "today",
+    detail: "The EU AI gigafactory initiative represents significant sovereign infrastructure investment that could reshape European AI compute landscape. French consolidation of major AI players including Mistral-adjacent partners signals strategic national positioning in AI infrastructure. Google should monitor EU AI infrastructure developments for partnership opportunities and assess potential competitive dynamics as European hyperscale capacity expands.",
+    url: "https://thenextweb.com/news/french-companies-bid-10bn-eu-ai-gigafactory-aion/"
+  },
+  {
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "DriveNets Fabric Scheduled Ethernet Now Available on Dell AI Factory",
+    summary: "DriveNets announced its high-performance AI networking solution is now available through Dell AI Factory expanding customer deployment options. The Fabric Scheduled Ethernet solution targets large-scale AI infrastructure deployments.",
+    source: "PRNewswire", age: "1 day ago",
+    detail: "DriveNets integration with Dell AI Factory creates an alternative AI networking stack outside traditional Cisco and Arista offerings. Scheduled Ethernet approaches address congestion challenges in AI training clusters through deterministic traffic handling. Google should evaluate DriveNets technology for potential integration with Cloud infrastructure or as competitive intelligence on emerging AI networking architectures.",
+    url: "https://www.prnewswire.com/news-releases/drivenets-high-performance-ai-networking-available-on-the-dell-ai-factory-302775497.html"
+  },
+  {
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "Lambda Wins Cloud Deal with Hudson River Trading for NVIDIA GPU Access",
+    summary: "IPO-bound GPU cloud startup Lambda signed infrastructure deal with quantitative trading firm Hudson River Trading adding to customers including Microsoft and NVIDIA. The deal demonstrates enterprise demand for alternative GPU cloud providers.",
+    source: "The Next Web", age: "today",
+    detail: "Lambdas continued customer wins in high-value segments like quantitative finance validate the GPU cloud market opportunity beyond hyperscaler offerings. Hudson River Trading represents sophisticated infrastructure buyers who could also be Google Cloud prospects. This signals competitive pressure from specialized GPU cloud providers and reinforces importance of differentiated TPU offerings and flexible GPU access options.",
+    url: "https://thenextweb.com/news/lambda-hudson-river-trading-cloud-deal-nvidia-chips/"
+  },
+  {
+    id: 10, cat: "storage", impact: "medium", filler: false,
+    title: "Azure Storage Mover Adds Scheduled One-Time and Recurring Migration Jobs",
+    summary: "Azure Storage Mover now supports built-in job scheduling for one-time or recurring data migrations into Azure. The feature provides automated control over migration timing and repeatable data transfer workflows.",
     source: "Azure Updates", age: "today",
-    detail: "These limit increases reflect growing complexity of cloud network deployments particularly for AI infrastructure with many endpoints. The new defaults of 2000 security rules and 1000 routes per table better accommodate large Kubernetes clusters and distributed training environments. Google Cloud VPC has similar considerations and competitive parity on these limits matters for enterprise workload portability. Network architects designing AI infrastructure should verify current limits across all target cloud platforms.",
-    url: "https://azure.microsoft.com/updates?id=562695"
-  },
-  {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "NVIDIA and Google Cloud Accelerate 100K Developer Community With Joint AI Training Programs",
-    summary: "NVIDIA and Google Cloud joint developer community surpasses 100000 members receiving curated learning paths and hands-on labs for building on NVIDIA AI platform within Google Cloud. The partnership launched at IO last year continues expanding.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The 100K developer milestone demonstrates strong ecosystem momentum for NVIDIA on Google Cloud despite Googles TPU investments. This partnership acknowledges that many AI workloads will continue using NVIDIA GPUs even as TPU capacity grows. For infrastructure planning the developer community size suggests sustained GPU demand on Google Cloud requiring continued investment in A100 H100 and Blackwell cluster capacity. The dual-track strategy of supporting both NVIDIA and TPU workloads adds complexity but addresses diverse customer requirements.",
-    url: "https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/"
-  },
-  {
-    id: 10, cat: "silicon", impact: "medium", filler: false,
-    title: "TPU vs GPU Analysis Shows Why Google Competes Directly With NVIDIA on AI Hardware",
-    summary: "Technical analysis examines Google TPU versus NVIDIA GPU architectures explaining strategic rationale for custom silicon investment. The comparison highlights differentiated approaches to AI acceleration and cloud service models.",
-    source: "C-sharpcorner.com", age: "1 day ago",
-    detail: "This explainer provides useful framing for the custom silicon versus merchant GPU debate. Googles TPU strategy enables differentiated cloud offerings and reduces NVIDIA dependency but requires sustained R&D investment. The architecture differences between systolic array TPUs and CUDA-based GPUs create distinct performance profiles for different workload types. Infrastructure teams should understand these tradeoffs when recommending deployment targets for various AI workloads. The Blackstone JV suggests Google is doubling down on TPU as a competitive differentiator.",
-    url: "https://www.c-sharpcorner.com/article/tpu-vs-gpu-explained-why-google-wants-to-compete-with-nvidia/"
+    detail: "Scheduled migration capabilities address enterprise requirements for controlled data movement during maintenance windows or off-peak periods. This enhancement makes Azure storage migration more operationally mature and reduces manual intervention requirements. Google Cloud should ensure Cloud Storage Transfer Service maintains feature parity for enterprise migration scenarios.",
+    url: "https://azure.microsoft.com/updates?id=562622"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Introduces Agent Executor Runtime for Long-Running AI Workflow Management",
-    summary: "Google releases Agent Executor as open-source runtime standard for managing agent workflows that run for hours or days. The distributed runtime addresses reliability challenges in production agent deployments.",
+    title: "Google AI Studio Enables Full-Stack App Deployment Without Credit Card",
+    summary: "Google announced AI Studio integration with Cloud Run Firebase and Cloud SQL allowing deployment of two full-stack apps without billing account. The expansion includes Firestore and Cloud SQL database options with Workspace integration.",
     source: "Google Cloud Blog", age: "today",
-    detail: "As AI agents take on complex multi-step tasks the underlying infrastructure must handle long-running processes reliably. Agent Executor provides checkpointing and recovery mechanisms essential for production agent systems. This has networking implications for persistent connections and state synchronization across distributed agent instances. The open-source approach may drive standardization benefiting the broader ecosystem.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/agent-executor-googles-distributed-agent-runtime/"
+    detail: "This developer experience improvement lowers barriers to Google Cloud adoption for AI application builders. While not directly infrastructure focused the initiative drives developer ecosystem growth which generates downstream compute and storage demand. The no-credit-card requirement addresses common friction points in cloud platform adoption.",
+    url: "https://cloud.google.com/blog/products/databases/vibe-coded-ai-studio-apps-with-firestore-firebase-cloud-sql/"
   },
   {
-    id: 12, cat: "storage", impact: "low", filler: true,
-    title: "Azure NetApp Files Cache Volumes Now Generally Available for Edge Data Access",
-    summary: "Azure NetApp Files introduces cache volumes providing cloud-based caching of external origin volumes containing only actively accessed data. The capability improves performance for distributed file access scenarios.",
-    source: "Azure Updates", age: "today",
-    detail: "Cache volumes address latency challenges when accessing data across geographic boundaries relevant for distributed AI training scenarios. The intelligent caching of hot data reduces bandwidth requirements and improves read performance. This competes with Google Cloud Filestore and similar NFS-based storage offerings. Storage architecture for AI workloads increasingly requires tiered caching strategies.",
-    url: "https://azure.microsoft.com/updates?id=562259"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Google IO 2026 Announces Gemini 3.5 Flash and AI Search Era Updates",
+    summary: "Google IO 2026 keynote featured Gemini 3.5 Flash debut and announcements signaling full transition to agentic AI era. The company emphasized building AI-native products rather than adding AI features to existing services.",
+    source: "Hot Hardware", age: "today",
+    detail: "The strategic shift toward agentic AI has infrastructure implications as agent workloads require different compute patterns than traditional inference. Gemini model updates drive continued TPU infrastructure demand and optimization requirements. These announcements set context for Google Cloud AI platform evolution.",
+    url: "https://hothardware.com/news/google-io-2026-gemini-35-flash-ai-search-and-more"
   },
   {
     id: 13, cat: "networking", impact: "low", filler: true,
-    title: "Azure Network Watcher Rule Impact Analyzer GA Enables Pre-Change Traffic Assessment",
-    summary: "Azure Network Watcher rule impact analyzer reaches general availability allowing assessment of NSG and security rule changes against live traffic before deployment. The capability reduces risk of network disruptions from policy changes.",
+    title: "Azure Site-to-Site VPN Now Supports Certificate-Based Authentication",
+    summary: "Azure announced general availability of site-to-site VPN connections using digital certificate authentication as alternative to pre-shared keys. The asymmetric trust model provides enhanced security for hybrid connectivity.",
     source: "Azure Updates", age: "today",
-    detail: "Pre-change impact analysis is valuable for maintaining network stability in production AI environments where connectivity interruptions can waste expensive GPU time. This DevOps-oriented feature helps network teams validate changes safely. Google Cloud equivalent capabilities should be evaluated for competitive parity in enterprise networking tools.",
-    url: "https://azure.microsoft.com/updates?id=562690"
+    detail: "Certificate-based VPN authentication represents security best practice for enterprise hybrid deployments replacing symmetric PSK approaches. This feature addresses compliance requirements in regulated industries. Google Cloud VPN should ensure comparable certificate authentication options are available.",
+    url: "https://azure.microsoft.com/updates?id=562705"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "Baidu CFO Says GPU Rentals Structurally Higher Margin Than CPU Cloud Services",
-    summary: "Baidu CFO publicly states that GPU cloud rental business generates structurally higher margins than traditional CPU cloud computing. The admission highlights profitability dynamics driving cloud AI infrastructure investment.",
-    source: "Theregister.com", age: "1 day ago",
-    detail: "This candid assessment from a major cloud provider confirms the economic incentive for aggressive AI infrastructure buildout. Higher GPU margins justify premium pricing and sustained capex investment. The comment also suggests barriers to entry as smaller players cannot afford the infrastructure investment to compete. Google and other hyperscalers benefit from this dynamic in their AI cloud businesses.",
-    url: "https://www.theregister.com/off-prem/2026/05/19/baidu-says-the-quiet-part-out-loud-you-cant-build-ai-infrastructure-so-clouds-can-cash-in/5242344"
+    id: 14, cat: "storage", impact: "low", filler: true,
+    title: "Azure Files Announces General Availability of Entra-Only Identity Authentication",
+    summary: "Azure Files SMB now supports cloud-native-only Microsoft Entra ID authentication for identity-based file share access. The feature enables organizations to use pure cloud identities without on-premises directory dependencies.",
+    source: "Azure Blog", age: "today",
+    detail: "Entra-only authentication simplifies identity management for cloud-native organizations eliminating hybrid Active Directory requirements for file storage access. This positions Azure Files competitively for modern enterprise deployments. Google Cloud Filestore identity integration should be evaluated for similar cloud-native authentication capabilities.",
+    url: "https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "GKE Agent Sandbox Generally Available With Preview of Agent Substrate Platform",
-    summary: "Google Kubernetes Engine Agent Sandbox reaches general availability providing secure compute environments for autonomous AI agents. Agent Substrate preview offers additional infrastructure primitives for agent workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Agent-specific infrastructure reflects the shift from simple inference endpoints to autonomous systems requiring isolated execution environments. The security model for agents differs from traditional containers given their ability to execute code and access external resources. This GKE capability positions Google Cloud for emerging agent deployment patterns requiring specialized infrastructure support.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate/"
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "Samsung Reaches Last-Minute Deal with Union to Avoid Chip Manufacturing Strike",
+    summary: "Samsung Electronics reached tentative agreement with its labor union averting a potentially crippling strike at semiconductor facilities. The deal prevents disruption to global chip supply chains dependent on Samsung manufacturing.",
+    source: "Financial Post", age: "today",
+    detail: "A Samsung strike would have significant ripple effects across memory and logic chip supply chains affecting infrastructure component availability. The resolution maintains supply stability but highlights ongoing labor dynamics in semiconductor manufacturing. Infrastructure planners should continue monitoring supplier concentration risks in critical components.",
+    url: "https://financialpost.com/technology/tech-news/samsung-reaches-deal-with-union-avoid-strike"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The Blackstone joint venture creating 500 MW of TPU-based compute capacity by 2027 represents a massive infrastructure buildout that will require significant networking fabric investment and storage architecture planning for your teams to support at scale. Ciscos Intelligent Packet Flow announcement directly targets AI training workloads with adaptive network behavior, signaling intensifying competition for GPU cluster connectivity where Google Cloud networking must demonstrate equivalent or superior performance for TPU fabrics. Wells Fargos analysis suggesting datacenter power demands will exceed market expectations reinforces the need for aggressive capacity planning across networking and storage infrastructure to support accelerating AI compute deployment.";
+const STATIC_BRIEF = "The Google-Blackstone $5B TPU compute-as-a-service joint venture represents a major strategic shift positioning TPU infrastructure as a direct NVIDIA alternative, requiring networking and storage teams to prepare for scaled multi-tenant workloads with enterprise-grade performance guarantees. Evercore analyst warnings about hyperscaler ASIC momentum combined with Azure system-level architecture announcements signal intensifying competition where integrated compute-storage-networking solutions will differentiate cloud AI platforms. NVIDIA record $81.6B quarterly revenue demonstrates sustained GPU demand that validates continued investment in high-bandwidth networking and storage infrastructure regardless of custom silicon timelines.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
