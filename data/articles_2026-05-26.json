@@ -1,0 +1,173 @@
+{
+  "date": "2026-05-26",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "networking",
+      "impact": "high",
+      "filler": false,
+      "title": "Google Details How It Evolved Global and Data Center Networks for the AI Era",
+      "summary": "Google has published a deep dive into how its network architecture has transformed over 25 years to meet AI workload demands. The company describes AI as a fourth major architectural era requiring fundamentally different network capabilities.",
+      "detail": "This is a landmark disclosure from Google revealing how AI workloads impose novel and demanding requirements on both compute and networking infrastructure. The article likely covers the evolution from consumer internet through streaming and cloud to current AI training and inference patterns. For infrastructure planning this provides direct insight into how Google is architecting networks to handle massive data movement between GPU and TPU clusters. Understanding Googles approach helps benchmark against AWS and Azure strategies and informs vendor conversations with Arista Cisco and Broadcom about next-generation switching and interconnect needs.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/networking/data-center-and-global-networks-built-for-ai-era/"
+    },
+    {
+      "id": 2,
+      "cat": "vendor",
+      "impact": "high",
+      "filler": false,
+      "title": "NVIDIA CFO Reveals GPU Demand Signals That Should Alarm AI Infrastructure Planners",
+      "summary": "NVIDIAs CFO has disclosed critical information about GPU demand patterns that defies typical technology supply cycle expectations. The revelation suggests supply constraints will persist longer than many anticipated.",
+      "detail": "This is essential intelligence for capacity planning and vendor negotiations. If NVIDIA is signaling continued demand pressure it affects procurement timelines for both Googles own infrastructure and competitive positioning against AWS Azure and Oracle who all compete for the same GPU allocation. The statement may also hint at Blackwell ramp challenges or unexpectedly strong inference demand. Understanding NVIDIAs supply outlook directly impacts decisions about alternative accelerator investments including TPU expansion and potential AMD MI300 consideration.",
+      "source": "24/7 Wall St.",
+      "age": "2 days ago",
+      "url": "https://247wallst.com/investing/2026/05/24/what-nvidias-cfo-just-revealed-about-gpu-demand-should-have-every-ai-investor-paying-attention/"
+    },
+    {
+      "id": 3,
+      "cat": "silicon",
+      "impact": "high",
+      "filler": false,
+      "title": "Intel Foundry Rio Rancho to Lead Mass Production of Next-Gen Glass Substrates",
+      "summary": "Intel Foundry is positioning its Rio Rancho New Mexico facility as the worlds first mass production site for glass substrates. Glass substrates represent a critical advancement for next-generation semiconductor packaging.",
+      "detail": "Glass substrates enable higher density interconnects and better thermal performance compared to traditional organic substrates which is crucial for advanced AI accelerators. If Intel succeeds this could strengthen their foundry competitiveness and potentially benefit Google if pursuing custom silicon manufacturing partnerships. This technology is relevant to future TPU packaging decisions and could influence the competitive landscape between Intel Foundry and TSMC. The timing matters as advanced packaging becomes the bottleneck for AI chip performance scaling.",
+      "source": "Wccftech",
+      "age": "1 day ago",
+      "url": "https://wccftech.com/intel-foundry-rio-rancho-facility-crown-jewel-in-production-of-glass-substrates/"
+    },
+    {
+      "id": 4,
+      "cat": "silicon",
+      "impact": "high",
+      "filler": false,
+      "title": "TSMC Employees Threaten Strikes Over Bonus Cuts Despite 58 Percent Profit Jump",
+      "summary": "TSMC workers are threatening Samsung-style labor action over rumored bonus reductions even as the company posted a 58 percent profit increase. Any disruption at TSMC would cascade through the entire AI semiconductor supply chain.",
+      "detail": "This is a critical supply chain risk signal. TSMC manufactures the vast majority of advanced AI chips including NVIDIA GPUs AMD accelerators and potentially Google TPU components. Labor unrest at TSMC could delay chip deliveries across the industry and exacerbate existing supply constraints. Google infrastructure planning must account for this geopolitical and labor risk when forecasting accelerator availability. The situation also strengthens the strategic case for diversifying manufacturing across Intel Foundry and Samsung though both have their own challenges.",
+      "source": "TweakTown",
+      "age": "2 days ago",
+      "url": "https://www.tweaktown.com/news/111793/tsmc-employees-threaten-samsung-style-strikes-over-bonus-cut-rumors-despite-a-58-percent-profit-jump/index.html"
+    },
+    {
+      "id": 5,
+      "cat": "competition",
+      "impact": "medium",
+      "filler": false,
+      "title": "Intel Shares Rise on AI Server Demand and Foundry Progress in Q1 2026",
+      "summary": "Intel reported a 7 percent revenue increase in Q1 2026 driven by AI and data center growth amid ongoing restructuring. The results suggest Intels turnaround strategy may be gaining traction.",
+      "detail": "Intels improved performance in AI and data center segments is relevant for assessing them as both a competitor and potential partner. Stronger Intel foundry execution could provide Google with manufacturing alternatives for custom silicon reducing TSMC dependency. The data center growth also indicates Intel Xeon and Gaudi accelerators may be gaining some traction which affects competitive dynamics with AWS and Azure who have Intel partnerships. Monitoring Intels foundry progress is strategically important for long-term TPU manufacturing decisions.",
+      "source": "Ibtimes.com.au",
+      "age": "1 day ago",
+      "url": "https://www.ibtimes.com.au/intel-2026-q1-results-ai-data-center-growth-1869431"
+    },
+    {
+      "id": 6,
+      "cat": "silicon",
+      "impact": "medium",
+      "filler": false,
+      "title": "IBM Spins Off First Pure-Play Quantum Chip Foundry With Federal Backing",
+      "summary": "IBM is creating the first dedicated quantum chip foundry backed by a 2 billion dollar CHIPS Act investment. The facility will focus on 300mm superconducting silicon for quantum computing.",
+      "detail": "While quantum computing remains pre-commercial this represents significant US government commitment to domestic advanced semiconductor manufacturing. The investment signals policy direction that could benefit other domestic chip production including AI accelerators. For Google which has its own quantum computing program this creates both a potential manufacturing partner and competitive dynamic. The broader CHIPS Act ecosystem strengthens US semiconductor sovereignty which has infrastructure planning implications for supply chain resilience.",
+      "source": "Futurumgroup.com",
+      "age": "1 day ago",
+      "url": "https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon/"
+    },
+    {
+      "id": 7,
+      "cat": "vendor",
+      "impact": "medium",
+      "filler": false,
+      "title": "Arista Details Cognitive Campus Center Journey Toward Unified Network Architecture",
+      "summary": "Arista has published details on its Cognitive Campus vision built on a single Extensible Operating System foundation. The approach aims to replace fragmented legacy campus network designs with unified architecture.",
+      "detail": "Arista is a key networking vendor for Google cloud infrastructure and understanding their product direction matters for enterprise networking decisions. The Cognitive Campus concept addresses campus and edge networking which complements data center spine-leaf architectures. While not directly AI infrastructure related this signals Aristas continued investment in software-defined networking and operational simplification. Evaluating how Arista competes with Cisco in the campus space informs broader vendor relationship strategy.",
+      "source": "Arista Blog",
+      "age": "today",
+      "url": "https://blogs.arista.com/blog/the-cognitive-campus-center-journey"
+    },
+    {
+      "id": 8,
+      "cat": "vendor",
+      "impact": "medium",
+      "filler": false,
+      "title": "Cisco Introduces Full-Stack Post-Quantum Cryptography for Campus and Branch Networks",
+      "summary": "Cisco is implementing post-quantum cryptography across the entire network stack from device boot to data transport. The move addresses harvest now decrypt later attack strategies enabled by future quantum computers.",
+      "detail": "Post-quantum cryptography is becoming a critical infrastructure requirement as quantum computing advances threaten current encryption. Ciscos full-stack approach covering both device security and data in transit is relevant for enterprise network procurement decisions. Google must evaluate PQC readiness across all networking vendors including Cisco Arista and Broadcom to ensure long-term security posture. This also matters for competitive positioning as hyperscalers race to offer quantum-safe cloud services.",
+      "source": "Cisco Networking Blog",
+      "age": "today",
+      "url": "https://blogs.cisco.com/networking/securing-campus-and-branch-networks-from-boot-to-transport-with-full-stack-pqc/"
+    },
+    {
+      "id": 9,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "NVIDIA and Energy Secretary Discuss AI Infrastructure Power Requirements at SCSP Expo",
+      "summary": "US Energy Secretary Chris Wright and NVIDIA VP Ian Buck discussed how AI will help build the energy infrastructure it requires. The conversation focused on powering American AI leadership through the next century.",
+      "detail": "Power availability is becoming the primary constraint for AI infrastructure expansion. This high-level discussion between government and NVIDIAs hyperscale leadership signals policy attention to data center energy challenges. Google competes with AWS Azure and others for power capacity in key regions making energy policy developments strategically important. Understanding NVIDIAs public positioning on power and their relationship with federal energy policy helps anticipate industry direction and potential regulatory changes affecting data center siting.",
+      "source": "NVIDIA Blog",
+      "age": "today",
+      "url": "https://blogs.nvidia.com/blog/energy-secretary-chris-wright-ian-buck/"
+    },
+    {
+      "id": 10,
+      "cat": "competition",
+      "impact": "low",
+      "filler": true,
+      "title": "AWS Weekly Roundup Features Istanbul Local Zones and Open-Source ExtendDB Launch",
+      "summary": "AWS announced new Local Zones in Istanbul along with open-source ExtendDB and Kiro Web updates. The expansion continues AWS strategy of bringing compute closer to end users globally.",
+      "detail": "AWS Local Zone expansion in Istanbul represents continued investment in edge infrastructure that competes with Google Cloud regional presence. While not AI-specific monitoring AWS infrastructure expansion provides competitive intelligence on their global footprint strategy. The open-source ExtendDB announcement may have implications for database workloads but requires further investigation to assess relevance to AI infrastructure storage patterns.",
+      "source": "AWS News Blog",
+      "age": "1 day ago",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-local-zones-in-istanbul-open-source-extenddb-kiro-web-and-more-may-25-2026/"
+    },
+    {
+      "id": 11,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "Indias AI Infrastructure Ambitions Constrained by State-Level Power Availability",
+      "summary": "India faces significant constraints in AI infrastructure development due to power availability variations across states. The country must balance ambitious data center goals with energy realities.",
+      "detail": "Indias AI infrastructure challenges reflect global patterns where power becomes the limiting factor for data center expansion. For hyperscalers including Google evaluating India as a growth market understanding state-level power dynamics is essential for site selection. This also affects competitive positioning as AWS Azure and Oracle pursue Indian market share with their own power procurement strategies.",
+      "source": "BusinessLine",
+      "age": "1 day ago",
+      "url": "https://www.thehindubusinessline.com/opinion/indias-ai-options-are-linked-to-energy-costs/article71022203.ece"
+    },
+    {
+      "id": 12,
+      "cat": "competition",
+      "impact": "low",
+      "filler": true,
+      "title": "India Semiconductor Policy Criticized for Focus on Assembly Over Manufacturing",
+      "summary": "Analysis suggests Indias semiconductor strategy focuses too heavily on assembly testing and packaging rather than actual chip fabrication. Critics warn this creates dependency rather than self-sufficiency.",
+      "detail": "Indias semiconductor policy direction affects the global supply chain landscape that hyperscalers depend upon. If India primarily develops OSAT capabilities rather than leading-edge fabs the fundamental supply concentration in Taiwan and increasingly US remains. This has limited near-term impact on Google infrastructure but informs long-term geopolitical risk assessment for semiconductor sourcing strategies.",
+      "source": "BusinessLine",
+      "age": "2 days ago",
+      "url": "https://www.thehindubusinessline.com/opinion/creating-semicon-dependency/article71018454.ece"
+    },
+    {
+      "id": 13,
+      "cat": "vendor",
+      "impact": "low",
+      "filler": true,
+      "title": "NVIDIA Explains OpenClaw Agents and Their Implications for Enterprise Organizations",
+      "summary": "NVIDIAs Nemotron Labs published analysis of the OpenClaw open-source agent project which crossed 100000 GitHub stars in early 2026. The article explores what agentic AI means for enterprise adoption.",
+      "detail": "While focused on software agents rather than infrastructure this signals NVIDIAs broader AI ecosystem strategy beyond hardware. Understanding how NVIDIA positions its software stack helps anticipate their competitive moves against cloud providers proprietary AI platforms. The open-source angle may influence enterprise decisions about building on NVIDIA versus cloud-native AI services.",
+      "source": "NVIDIA Blog",
+      "age": "today",
+      "url": "https://blogs.nvidia.com/blog/what-openclaw-agents-mean-for-every-organization/"
+    },
+    {
+      "id": 14,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "Azure Event Grid Expands MQTT Capabilities for IoT and Real-Time Solutions",
+      "summary": "Azure Event Grid namespaces are adding MQTT V5 capabilities to support more connected and scalable real-time solutions. The updates simplify backend integration for device experiences.",
+      "detail": "Azures continued investment in IoT and messaging infrastructure represents competitive development in edge and real-time data handling. While not directly AI infrastructure related these capabilities support the data pipelines that feed AI training and inference systems. Monitoring Azure platform evolution helps assess competitive feature parity for Google Cloud offerings.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=562240"
+    }
+  ]
+}
