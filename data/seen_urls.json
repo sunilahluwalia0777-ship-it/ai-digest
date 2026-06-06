@@ -672,5 +672,20 @@
   "https://aws.amazon.com/blogs/storage/automate-ebs-gp2-to-gp3-migration-at-scale-with-aws-step-functions-and-aws-lambda/": "2026-05-29",
   "https://azure.microsoft.com/updates?id=564714": "2026-05-29",
   "https://azure.microsoft.com/updates?id=564644": "2026-05-29",
-  "https://thenextweb.com/news/atlasedge-12bn-loan-european-data-centers/": "2026-05-29"
+  "https://thenextweb.com/news/atlasedge-12bn-loan-european-data-centers/": "2026-05-29",
+  "https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/": "2026-06-06",
+  "https://azure.microsoft.com/updates?id=564981": "2026-06-06",
+  "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/": "2026-06-06",
+  "https://cloud.google.com/blog/topics/developers-practitioners/build-ai-agents-faster-with-gcs-google-cloud-storage-mcp-server/": "2026-06-06",
+  "https://cloud.google.com/blog/topics/developers-practitioners/experimenting-with-tpus-gke-managed-dranet-and-multi-cluster-inference-gateway/": "2026-06-06",
+  "https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/": "2026-06-06",
+  "https://blogs.nvidia.com/blog/microsoft-build-windows-local-cloud-devices/": "2026-06-06",
+  "https://cloud.google.com/blog/products/data-analytics/optimize-iceberg-and-spark-workloads-with-gcs-analytics-core/": "2026-06-06",
+  "https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/": "2026-06-06",
+  "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/": "2026-06-06",
+  "https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/": "2026-06-06",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/private-connectivity-patterns-for-amazon-bedrock-agentcore-gateway-targets/": "2026-06-06",
+  "https://aws.amazon.com/blogs/storage/amazon-s3-audit-logging-part-3-analyzing-s3-metadata-journal-tables-for-object-lifecycle-tracking/": "2026-06-06",
+  "https://cloud.google.com/blog/products/containers-kubernetes/gke-standby-buffers-speed-up-autoscaling-for-less-spend/": "2026-06-06",
+  "https://azure.microsoft.com/updates?id=563516": "2026-06-06"
 }
