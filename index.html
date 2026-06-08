@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "AWS Launches OpenAI GPT-5.5 and Codex on Amazon Bedrock with Pay-Per-Token Pricing",
-    summary: "",
-    source: "AWS News Blog", age: "today",
-    detail: "This represents a major competitive shift as AWS now offers OpenAI models directly competing with Azures traditional OpenAI exclusivity. The pay-per-token model on Bedrocks inference engine creates pricing pressure across hyperscalers. For Google Cloud this intensifies the multi-model platform race and validates the strategy of offering diverse foundation models. Enterprise customers gain flexibility to run OpenAI workloads on AWS infrastructure with native security controls.",
-    url: "https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/"
+    id: 1, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA and SK hynix Forge Multiyear Partnership to Advance Memory for AI Factories",
+    summary: "NVIDIA and SK hynix announced a multiyear technology partnership to develop next-generation memory solutions for global AI factory buildouts. The collaboration will also accelerate semiconductor design and manufacturing processes.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "This partnership directly addresses the memory bandwidth bottleneck that constrains AI accelerator performance. SK hynix is a critical HBM supplier for NVIDIA GPUs and this deal ensures supply chain stability and co-development of future memory technologies. For Google the implications are significant as TPU roadmaps also depend heavily on HBM innovation and pricing. Any exclusive arrangements between NVIDIA and memory vendors could impact Googles negotiating position for custom silicon memory needs.",
+    url: "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory"
   },
   {
-    id: 2, cat: "networking", impact: "high", filler: false,
-    title: "Azure Announces Guest RDMA Preview on Azure Boost for Ultra-Low Latency AI Networking",
-    summary: "",
-    source: "Azure Updates", age: "today",
-    detail: "Guest RDMA is critical infrastructure for distributed AI training where network latency directly impacts GPU utilization and training efficiency. By enabling RDMA in guest OS through Azure Boost Azure addresses a key pain point for large-scale AI workloads. This competes directly with NVIDIAs InfiniBand offerings and Googles proprietary interconnects. The UK South initial deployment suggests enterprise AI customers in Europe will see benefits first with broader rollout expected.",
-    url: "https://azure.microsoft.com/updates?id=564981"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "SK Telecom and NVIDIA Building Gigawatt-Scale AI Cloud Using DSX Platform in Korea",
+    summary: "SK Telecom plans to build a gigawatt-scale AI Cloud in Korea using NVIDIAs DSX platform with the first AI factory coming online in 2027. This represents one of the largest sovereign AI infrastructure commitments in Asia.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "The gigawatt-scale commitment signals the massive power requirements emerging for next-generation AI infrastructure. NVIDIAs DSX platform becoming the default for sovereign AI builds positions them as the turnkey solution provider for national AI initiatives. Google Cloud faces competitive pressure as sovereign cloud deals increasingly bundle compute networking and power management. The 2027 timeline suggests NVIDIA is securing multi-year commitments that could lock out alternative silicon providers.",
+    url: "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure"
   },
   {
     id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Expands AI Cloud Ecosystem Globally to Meet Exploding Agentic AI Compute Demand",
-    summary: "",
-    source: "NVIDIA Blog", age: "today",
-    detail: "NVIDIAs ecosystem expansion signals massive demand growth that hyperscalers must accommodate in their own GPU infrastructure planning. The focus on agentic AI compute suggests workload patterns are shifting toward more inference-heavy continuous reasoning tasks. This creates both partnership opportunities and competitive pressure for Google Cloud networking and storage teams supporting GPU clusters. The global buildout also indicates regional sovereignty requirements are driving distributed AI factory deployment.",
-    url: "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/"
+    title: "Cisco Introduces Job-ID Segmentation for Scaling Shared AI Clusters in Nexus One",
+    summary: "Cisco announced job-ID-based segmentation capabilities in Nexus One to optimize backend AI fabrics for demanding ML workloads. The approach moves beyond tenant-aware networking to job-aware segmentation for shared AI clusters.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "This feature addresses a critical pain point in multi-tenant AI infrastructure where training jobs compete for network resources. Job-level segmentation enables more granular QoS policies and isolation which is essential for cloud providers running diverse AI workloads. For Google this represents Cisco positioning itself as an alternative to custom networking solutions in AI data centers. The capability could influence enterprises choosing between hyperscaler AI services and on-premises deployments with Cisco infrastructure.",
+    url: "https://blogs.cisco.com/datacenter/from-tenant-aware-to-job-aware-scaling-shared-ai-clusters-with-cisco-nexus-one/"
   },
   {
-    id: 4, cat: "storage", impact: "high", filler: false,
-    title: "Google Cloud Storage MCP Servers Enable AI Agents to Access Unstructured Data at Scale",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This positions Google Cloud Storage as smart storage infrastructure purpose-built for agentic AI workflows rather than passive object storage. The MCP standard adoption indicates Google is aligning with emerging agent interoperability protocols. For enterprises deploying production agents the critical challenge shifts from model capability to secure context access. This storage-native approach could differentiate GCS from competitors still treating storage as disconnected from AI pipelines.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/build-ai-agents-faster-with-gcs-google-cloud-storage-mcp-server/"
+    id: 4, cat: "networking", impact: "high", filler: false,
+    title: "Cisco Launches End-to-End AI Networking Bridging Kubernetes and Network Fabric",
+    summary: "Cisco unveiled an integrated AI networking approach that bridges Kubernetes orchestration with physical network fabric for inferencing workloads. The solution provides visibility and integrated security across the full AI infrastructure stack.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "Ciscos Kubernetes integration addresses the operational complexity of managing AI workloads across containerized environments and physical networks. This is particularly relevant for inference deployments which are distributed across edge and cloud unlike centralized training clusters. Google benefits from tight GKE integration with its networking stack but Ciscos enterprise presence could sway hybrid deployments. The focus on inferencing signals market recognition that inference infrastructure will eventually dwarf training infrastructure in scale.",
+    url: "https://blogs.cisco.com/datacenter/end-to-end-ai-networking-ciscos-answer-to-the-inferencing-era/"
   },
   {
-    id: 5, cat: "networking", impact: "high", filler: false,
-    title: "GKE Managed DRANET and Multi-Cluster Inference Gateway Enable TPU Workload Resilience",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Multi-cluster inference with automatic failover addresses a critical production AI deployment challenge where TPU or GPU availability in one region cannot disrupt service. DRANET integration with GKE signals maturation of Kubernetes for AI-native resource management beyond traditional compute. This architecture pattern will influence how enterprises design resilient AI serving infrastructure. The combination positions Google ahead on orchestrating specialized AI accelerators across distributed clusters.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/experimenting-with-tpus-gke-managed-dranet-and-multi-cluster-inference-gateway/"
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "Microsoft Build 2026 Showcases Agentic Apps with Fabric and Database Integration",
+    summary: "Microsoft highlighted advancements in agentic application development with Microsoft Fabric and database services at Build 2026. The announcements emphasize a unified data and AI platform approach for scalable enterprise applications.",
+    source: "Azure Blog", age: "1 day ago",
+    detail: "Microsofts agentic AI push with tight Fabric integration creates a compelling narrative for enterprises already invested in Azure data services. The unified platform approach mirrors Googles Agentic Data Cloud strategy announced with Dataproc rebranding. This competition intensifies pressure on Google to demonstrate superior integration between BigQuery Spanner and AI services. Enterprises evaluating AI platforms will increasingly weigh data platform maturity alongside raw compute capabilities.",
+    url: "https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Azure Cobalt 200 VMs Deliver 50 Percent Performance Boost for Agentic AI Workloads",
-    summary: "",
-    source: "Azure Blog", age: "today",
-    detail: "Microsofts custom Arm silicon investment directly competes with AWS Graviton and signals hyperscaler commitment to purpose-built AI inference processors beyond GPU reliance. The 50 percent improvement claim for agentic workloads suggests architectural optimizations for the sustained compute patterns agents require. This creates competitive pressure on Google to demonstrate similar efficiency gains on its custom TPU and Axion offerings. The Linux focus indicates enterprise AI deployments remain predominantly non-Windows.",
-    url: "https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/"
-  },
-  {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA and Microsoft Partner on Unified Agentic AI Stack Spanning Windows to Azure Cloud",
-    summary: "",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This deep integration between NVIDIA and Microsoft creates a vertically optimized path that could influence enterprise procurement decisions. The emphasis on secure runtimes and responsive data layers acknowledges that agentic AI requires more than model capability. Google must counter with equivalent TPU-to-cloud integration stories. The Windows device inclusion expands the agentic AI footprint beyond datacenter potentially capturing edge and client workloads.",
-    url: "https://blogs.nvidia.com/blog/microsoft-build-windows-local-cloud-devices/"
-  },
-  {
-    id: 8, cat: "storage", impact: "medium", filler: false,
-    title: "Google Releases gcs-analytics-core Library to Optimize Apache Iceberg and Spark on GCS",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Data lake performance optimization is critical for AI training pipelines that must efficiently access large datasets stored in object storage. By open-sourcing this library Google encourages ecosystem adoption while demonstrating GCS performance leadership for analytics workloads. The Iceberg focus aligns with industry movement toward open table formats for AI and ML data management. This investment signals Google recognizes storage I/O as a potential bottleneck for AI data preparation workflows.",
-    url: "https://cloud.google.com/blog/products/data-analytics/optimize-iceberg-and-spark-workloads-with-gcs-analytics-core/"
-  },
-  {
-    id: 9, cat: "competition", impact: "medium", filler: false,
-    title: "Meta Engineering Details Instant Power Loss Validation for AI Data Center Resilience",
-    summary: "",
-    source: "Meta Engineering", age: "3 days ago",
-    detail: "Metas infrastructure resilience testing provides insights into the operational maturity required for AI-scale data centers. The instant power loss scenario is particularly relevant for GPU clusters where training job state preservation is critical. This level of infrastructure hardening raises the bar for all hyperscalers competing for enterprise AI workloads. Google networking and storage teams should note the emphasis on validating readiness rather than simply designing for failure tolerance.",
-    url: "https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/"
-  },
-  {
-    id: 10, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Taiwan Partners Ship Over 1 Million Vera Rubin MGX Rack Components",
-    summary: "",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The scale of Taiwan manufacturing for NVIDIA AI infrastructure highlights supply chain concentration risk and capacity constraints facing all GPU consumers. Vera Rubin production ramp indicates next-generation AI factory buildouts are imminent. Google must secure adequate allocation from this ecosystem while potentially diversifying supply chain dependencies. The 25 factory sites suggest significant manufacturing complexity that could create bottlenecks during demand surges.",
-    url: "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/"
-  },
-  {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Bedrock Console Redesigned with Anthropic and OpenAI Compatible API Support",
-    summary: "",
-    source: "AWS News Blog", age: "today",
-    detail: "Console improvements indicate AWS is investing in developer experience to reduce friction for multi-model AI development. The OpenAI-compatible API support simplifies migration paths for developers already using OpenAI tooling. While not infrastructure-critical this signals continued platform maturation that enterprise customers evaluate when selecting cloud providers for AI workloads.",
-    url: "https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/"
-  },
-  {
-    id: 12, cat: "networking", impact: "low", filler: true,
-    title: "AWS Introduces Private Connectivity Patterns for Bedrock AgentCore Gateway Targets",
-    summary: "",
-    source: "AWS Networking", age: "today",
-    detail: "Private connectivity for agentic AI workloads addresses enterprise security requirements that often gate production deployments. The multi-environment support spanning VPC cross-account and on-premises reflects hybrid reality for many organizations. This infrastructure capability enables regulated industries to adopt AI agents while maintaining network isolation requirements.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/private-connectivity-patterns-for-amazon-bedrock-agentcore-gateway-targets/"
-  },
-  {
-    id: 13, cat: "storage", impact: "low", filler: true,
-    title: "AWS S3 Metadata Journal Tables Enable Object Lifecycle Tracking for Cost Management",
-    summary: "",
+    id: 6, cat: "storage", impact: "medium", filler: false,
+    title: "AWS Introduces S3 Vectors for Building Persistent Memory in Multi-Agent AI Systems",
+    summary: "AWS announced Amazon S3 Vectors for creating persistent memory layers in multi-agent AI systems. The capability addresses agent coordination challenges including duplicate work and contradictory decisions across sessions.",
     source: "AWS Storage", age: "today",
-    detail: "Storage cost management becomes increasingly important as AI workloads generate massive datasets for training and inference. Metadata journal capabilities help organizations understand data lifecycle patterns and implement appropriate tiering strategies. This observability improvement supports FinOps practices essential for controlling AI infrastructure spend.",
-    url: "https://aws.amazon.com/blogs/storage/amazon-s3-audit-logging-part-3-analyzing-s3-metadata-journal-tables-for-object-lifecycle-tracking/"
+    detail: "S3 Vectors positions AWS to capture the emerging market for agent memory and coordination infrastructure. This directly competes with Googles AlloyDB and vector search capabilities in their agentic AI stack. The focus on multi-agent systems indicates AWS recognizes that enterprise AI will involve orchestrated agent fleets rather than single models. Google needs to ensure its storage and database offerings provide comparable agent memory primitives to remain competitive.",
+    url: "https://aws.amazon.com/blogs/storage/building-persistent-memory-for-multi-agent-ai-systems-with-amazon-s3-vectors/"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "GKE Standby Buffers Balance Fast Node Startup Times Against Infrastructure Costs",
-    summary: "",
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Announces Remote MCP Server for AlloyDB Now Generally Available",
+    summary: "Google Cloud announced general availability of the Remote Model Context Protocol Server for AlloyDB enabling AI agents to securely access operational database context. The capability addresses the challenge of agents accessing enterprise data locked in databases.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Kubernetes autoscaling efficiency directly impacts AI workload economics where GPU nodes are expensive and cold start delays waste compute resources. Standby buffers provide a middle ground between always-on capacity and pure on-demand provisioning. This capability helps enterprises optimize the cost-performance tradeoff for variable AI inference workloads.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/gke-standby-buffers-speed-up-autoscaling-for-less-spend/"
+    detail: "MCP server GA positions AlloyDB as an agent-ready database which is a key differentiator as enterprises adopt agentic architectures. This aligns with the broader industry trend of making databases first-class participants in AI workflows rather than passive data stores. The secure access model addresses enterprise concerns about AI agents accessing sensitive operational data. Google should leverage this lead time before competitors offer equivalent MCP integrations.",
+    url: "https://cloud.google.com/blog/products/data-analytics/alloydb-remote-mcp-server-ga-secure-ai-agent-access-to-your-data/"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Private Connectivity Now Generally Available for AI Search and Foundry Knowledge Bases",
-    summary: "",
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA and LG Group Building AI Factory for Robotics Autonomous Driving and GPU Cloud",
+    summary: "NVIDIA and LG Group are constructing an AI factory to accelerate AI-driven businesses spanning robotics autonomous driving and data center technologies. The facility will provide infrastructure for training simulating and deploying AI applications.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "LG Groups AI factory investment demonstrates how NVIDIA is capturing value across the full AI value chain from silicon to turnkey infrastructure. The robotics and autonomous driving focus aligns with NVIDIAs physical AI push which requires different infrastructure than language model training. For Google this highlights the need to offer comparable end-to-end solutions for enterprise AI deployments. The GPU cloud services component suggests LG may become a regional cloud competitor using NVIDIA infrastructure.",
+    url: "https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/"
+  },
+  {
+    id: 9, cat: "networking", impact: "medium", filler: false,
+    title: "Cisco Unveils Multicloud Fabric in Cloud Control for Unified AI Era Networking",
+    summary: "Cisco announced Multicloud Fabric providing a unified secure and on-demand global fabric connecting sites and clouds through a single platform. The solution simplifies networking complexity for organizations operating across multiple cloud environments.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "Multicloud Fabric directly addresses enterprise pain points in managing network connectivity across hybrid and multi-cloud AI deployments. This positions Cisco as the neutral networking layer that can span Google Cloud AWS and Azure environments. For Google this represents both a threat to Cloud Interconnect revenues and an opportunity to partner on joint enterprise solutions. The unified control plane approach could simplify enterprise adoption of multi-cloud AI strategies.",
+    url: "https://blogs.cisco.com/networking/cisco-unveils-multicloud-fabric-in-cloud-control-network-ready-for-the-ai-era/"
+  },
+  {
+    id: 10, cat: "competition", impact: "medium", filler: false,
+    title: "Microsoft Foundry IQ Launches Unified Knowledge Layer for Smarter Agent Development",
+    summary: "Microsoft announced Foundry IQ providing a unified knowledge layer that combines enterprise and external data for serverless retrieval. The capability promises faster higher-quality answers for agent-based applications.",
+    source: "Azure Blog", age: "today",
+    detail: "Foundry IQ represents Microsofts answer to the RAG infrastructure challenge that all hyperscalers are racing to solve. The serverless retrieval approach reduces operational complexity for enterprises building agent applications. Google must ensure Vertex AI Search and similar offerings provide comparable ease of use and performance. The unified knowledge layer concept could become a key battleground for enterprise AI platform selection.",
+    url: "https://devblogs.microsoft.com/foundry/build-smarter-agents-faster-with-foundry-iq/"
+  },
+  {
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Google Cloud Launches Spanner Graph Algorithms with Research-Grade Intelligence",
+    summary: "Google Cloud announced preview of graph algorithms in Spanner Graph bringing state-of-the-art graph mining capabilities to the database. The feature enables enterprises to derive insights from connected data at scale.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Graph algorithms in Spanner address use cases like fraud detection and recommendation systems that require relationship analysis. This differentiates Spanner from competitors lacking native graph capabilities. The Google Research backing suggests production-grade performance for enterprise workloads.",
+    url: "https://cloud.google.com/blog/products/databases/introducing-spanner-graph-algorithms/"
+  },
+  {
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "AWS Cognito Adds Multi-Region Replication for Improved Application Resilience",
+    summary: "Amazon Cognito now offers multi-Region replication that automatically synchronizes user data and credentials to secondary regions. The feature enables uninterrupted authentication during regional failovers without forced password resets.",
+    source: "AWS News Blog", age: "today",
+    detail: "Multi-region authentication resilience is increasingly important as AI applications require high availability across global deployments. This infrastructure improvement supports enterprise requirements for disaster recovery in mission-critical AI services. Google Identity Platform should offer comparable multi-region capabilities.",
+    url: "https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Site Recovery Now Supports Linux VMs with NVMe Disk Controllers",
+    summary: "Azure Site Recovery added support for replication and disaster recovery of Linux VMs running on NVMe-enabled Generation 2 VM families. Support includes Da Ea Fa v6-series and Ebsv5 Ebdsv5 configurations.",
     source: "Azure Updates", age: "today",
-    detail: "Private connectivity for knowledge retrieval pipelines enables enterprises to deploy RAG architectures while maintaining strict network security policies. The GA status indicates production readiness for regulated industry AI deployments. This infrastructure capability removes a common blocker for enterprise AI agent adoption in security-sensitive environments.",
-    url: "https://azure.microsoft.com/updates?id=563516"
+    detail: "NVMe support in disaster recovery is essential as AI workloads increasingly use high-performance storage configurations. This closes a gap that could have prevented enterprises from using latest VM families for production AI deployments. Google Compute Engine DR capabilities should ensure parity with NVMe-based instances.",
+    url: "https://azure.microsoft.com/updates?id=565103"
+  },
+  {
+    id: 14, cat: "networking", impact: "low", filler: true,
+    title: "Three Energy-Driven Networking Trends Emerging in AI Data Center Era",
+    summary: "Analysis of how AI growth is pushing data centers to energy limits and driving networking innovation. Ciscos Energy Networking Systems offers a three-pillar approach to manage power cooling and costs.",
+    source: "Techtarget.com", age: "3 days ago",
+    detail: "Energy management is becoming a first-class networking concern as AI infrastructure power demands exceed traditional data center designs. This trend affects all hyperscalers as they compete for power capacity and cooling efficiency. Google TPU efficiency claims become more relevant as energy costs factor into total cost of ownership calculations.",
+    url: "https://www.techtarget.com/searchnetworking/feature/Energy-driven-networking-trends-emerging-in-the-AI-era"
+  },
+  {
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "NVIDIA Jetson Brings Agentic AI Capabilities to Edge with JetPack 7.2",
+    summary: "NVIDIA announced JetPack 7.2 and NemoClaw support on Jetson bringing agentic AI skills to edge devices. Updates include CUDA 13 support performance gains and Multi-Instance GPU support on Thor.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "Edge AI capabilities on Jetson enable distributed AI architectures that complement cloud-based training and inference. This expands NVIDIAs addressable market beyond data center GPUs into IoT and robotics applications. Google Edge TPU offerings compete in this space and should track Jetson feature development.",
+    url: "https://blogs.nvidia.com/blog/jetson-agentic-ai-physical-world/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "**Executive Brief: AI Infrastructure Weekly Intelligence**  Googles dual announcements on GKE Managed DRANET with Multi-Cluster Inference Gateway for TPU resilience and the GCS MCP Servers enabling AI agents to access unstructured data represent significant platform plays that strengthen both your networking and storage portfolios for agentic AI workloads. Azures Guest RDMA Preview on Azure Boost poses a direct competitive threat to your networking differentiation by bringing ultra-low latency AI networking capabilities to their infrastructure stack, while their Cobalt 200 VMs claiming 50 percent performance gains for agentic workloads signals aggressive custom silicon positioning against TPU. NVIDIAs Taiwan partners shipping over 1 million Vera Rubin MGX rack components indicates the next-generation GPU supply chain is scaling rapidly, which will drive demand for your high-performance networking and storage infrastructure to support these deployments.";
+const STATIC_BRIEF = "The AWS S3 Vectors announcement directly challenges Google Cloud Storage positioning for agentic AI workloads by providing native persistent memory for multi-agent coordination, representing a significant competitive threat that demands a GCS response for the emerging agent orchestration market. Microsoft Build 2026 reinforced Fabric and Foundry IQ as unified data-plus-AI platforms with agentic capabilities, intensifying pressure on Google Cloud to articulate a cohesive cross-product story spanning AlloyDB, BigQuery, and GCS for enterprise AI developers. The NVIDIA-SK hynix multiyear memory partnership signals continued HBM supply consolidation that will influence TPU roadmap planning and may require Google to deepen its own memory vendor relationships to secure capacity for next-generation accelerators.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

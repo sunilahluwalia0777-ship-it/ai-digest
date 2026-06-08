@@ -687,5 +687,20 @@
   "https://aws.amazon.com/blogs/networking-and-content-delivery/private-connectivity-patterns-for-amazon-bedrock-agentcore-gateway-targets/": "2026-06-06",
   "https://aws.amazon.com/blogs/storage/amazon-s3-audit-logging-part-3-analyzing-s3-metadata-journal-tables-for-object-lifecycle-tracking/": "2026-06-06",
   "https://cloud.google.com/blog/products/containers-kubernetes/gke-standby-buffers-speed-up-autoscaling-for-less-spend/": "2026-06-06",
-  "https://azure.microsoft.com/updates?id=563516": "2026-06-06"
+  "https://azure.microsoft.com/updates?id=563516": "2026-06-06",
+  "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory": "2026-06-08",
+  "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure": "2026-06-08",
+  "https://blogs.cisco.com/datacenter/from-tenant-aware-to-job-aware-scaling-shared-ai-clusters-with-cisco-nexus-one/": "2026-06-08",
+  "https://blogs.cisco.com/datacenter/end-to-end-ai-networking-ciscos-answer-to-the-inferencing-era/": "2026-06-08",
+  "https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/": "2026-06-08",
+  "https://aws.amazon.com/blogs/storage/building-persistent-memory-for-multi-agent-ai-systems-with-amazon-s3-vectors/": "2026-06-08",
+  "https://cloud.google.com/blog/products/data-analytics/alloydb-remote-mcp-server-ga-secure-ai-agent-access-to-your-data/": "2026-06-08",
+  "https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/": "2026-06-08",
+  "https://blogs.cisco.com/networking/cisco-unveils-multicloud-fabric-in-cloud-control-network-ready-for-the-ai-era/": "2026-06-08",
+  "https://devblogs.microsoft.com/foundry/build-smarter-agents-faster-with-foundry-iq/": "2026-06-08",
+  "https://cloud.google.com/blog/products/databases/introducing-spanner-graph-algorithms/": "2026-06-08",
+  "https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/": "2026-06-08",
+  "https://azure.microsoft.com/updates?id=565103": "2026-06-08",
+  "https://www.techtarget.com/searchnetworking/feature/Energy-driven-networking-trends-emerging-in-the-AI-era": "2026-06-08",
+  "https://blogs.nvidia.com/blog/jetson-agentic-ai-physical-world/": "2026-06-08"
 }
