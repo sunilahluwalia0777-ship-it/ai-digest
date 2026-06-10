@@ -647,124 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "networking", impact: "high", filler: false,
-    title: "GKE Inference Gateway Delivers Up to 92 Percent Faster AI Responses via Prefix Caching",
-    summary: "Google reports its GKE Inference Gateway can accelerate generative AI inference by up to 92 percent through intelligent workload routing based on real-time model server metrics. The system leverages prefix caching to minimize costly accelerator idle time in production AI environments.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This is a significant infrastructure optimization for Google Cloud competing directly with AWS and Azure inference offerings. The 92 percent improvement claim positions GKE as a compelling platform for enterprises scaling generative AI from pilots to production. Intelligent routing based on model server metrics addresses a key pain point in GPU utilization efficiency. For a PM owning networking and GPU infrastructure this validates the importance of software-defined routing layers in maximizing accelerator ROI. The prefix caching approach could become a differentiator against hyperscaler competitors.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/gke-inference-gateway-prefix-caching-accelerates-ai-inference/"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "AWS Launches Graviton5-Powered EC2 M9g Instances With 25 Percent Performance Boost",
+    summary: "",
+    source: "AWS News Blog", age: "today",
+    detail: "This launch represents a significant competitive move in the custom silicon race against Google TPUs and Azure Cobalt. Graviton5 instances will likely be positioned for AI inference workloads given the efficiency gains. The M9g family targets general-purpose compute but performance improvements cascade across AI training data pipelines and preprocessing tasks. Google Cloud PM teams should monitor pricing and benchmark comparisons as customers evaluate cross-cloud TCO for AI infrastructure.",
+    url: "https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors/"
   },
   {
-    id: 2, cat: "storage", impact: "high", filler: false,
-    title: "Google Storage Insights Datasets Enable Org-Wide Discovery With Activity Analytics",
-    summary: "Google Cloud launches Storage Insights datasets to help enterprises manage billions of objects and AI workload data at scale. The feature addresses the shift of storage from passive repository to active data platform foundation for AI applications and agentic workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This storage enhancement directly supports AI infrastructure requirements as unstructured model data and session logs explode in volume. The focus on activity insights rather than just capacity metrics reflects the operational complexity of modern AI data pipelines. For Google this strengthens their position against AWS S3 and Azure Blob storage intelligence offerings. Platform engineers managing AI training data will find org-wide discovery capabilities essential for governance and cost optimization. This signals Googles recognition that storage observability is now critical infrastructure for AI operations.",
-    url: "https://cloud.google.com/blog/products/storage-data-transfer/analyze-cloud-storage-estates-with-storage-insights-datasets/"
+    id: 2, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Confidential Computing Expands Apple Private Cloud Compute to Google Cloud",
+    summary: "",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This is a major win for Google Cloud infrastructure positioning as it hosts privacy-critical Apple AI workloads. NVIDIA confidential computing capabilities address enterprise concerns about data security in multi-tenant GPU environments. The collaboration validates Google Clouds security posture and could attract similar privacy-focused enterprise AI deployments. This partnership strengthens the NVIDIA-Google relationship while creating differentiation against AWS and Azure for sensitive inference workloads.",
+    url: "https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/"
   },
   {
     id: 3, cat: "networking", impact: "high", filler: false,
-    title: "Arista Shares Three Genius Ideas for Building Large-Scale AI Fabrics",
-    summary: "Arista draws on experience building some of the largest scale-out AI fabrics to share key architectural insights for AI network design. The post highlights clever solutions encountered while working with leading AI companies on fabric deployments.",
-    source: "Arista Blog", age: "today",
-    detail: "Arista is a critical networking vendor for hyperscale AI infrastructure and this knowledge sharing reinforces their position against Cisco and emerging competitors. The emphasis on scale-out fabrics aligns with the industry shift toward massive GPU clusters requiring low-latency high-bandwidth interconnects. For Google PM teams this provides competitive intelligence on best practices that enterprises and competitors may adopt. Aristas willingness to publish these insights suggests confidence in their technical leadership while building ecosystem mindshare. Understanding these architectural patterns is essential for anyone designing or evaluating AI cluster networking.",
-    url: "https://blogs.arista.com/blog/three-genius-ideas-for-ai-fabrics"
+    title: "Cisco Advances AI Infrastructure Operations With New Data Center Services at Cisco Live",
+    summary: "",
+    source: "Techtarget.com", age: "today",
+    detail: "Ciscos messaging shift toward AI infrastructure operations reflects market maturity beyond GPU procurement. The Cisco Cloud Control platform targets hybrid environments where enterprises run AI workloads across on-premises and cloud. For Google Cloud networking partnerships this signals opportunity to integrate Cisco management tooling with GCP AI infrastructure. Enterprises struggling with AI cluster operations represent a growing segment seeking unified visibility across vendors.",
+    url: "https://www.techtarget.com/searchnetworking/opinion/Cisco-advances-AI-infrastructure-services-at-Cisco-Live"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "NAVER Expands Sovereign AI Infrastructure to Gigawatt Scale Using NVIDIA DSX Platform",
-    summary: "NAVER announces plans to expand sovereign AI infrastructure from 55 megawatts to gigawatt scale using NVIDIAs DSX platform for full-stack AI deployments. The expansion aims to serve surging global AI demand for enterprises industries and government customers.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This represents massive AI infrastructure investment in Asia Pacific directly relevant to Google Cloud competitive positioning in the region. The gigawatt-scale ambition signals serious long-term commitment that will require extensive networking and storage infrastructure. NAVERs choice of NVIDIA DSX platform over hyperscaler offerings indicates continued strength in NVIDIAs enterprise positioning. For Google this is both competitive pressure and potential partnership opportunity in the Korean market. The sovereign AI focus reflects growing geopolitical considerations that all hyperscalers must address in their infrastructure strategies.",
-    url: "https://nvidianews.nvidia.com/news/naver-ai-infrastructure"
+    id: 4, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco Blog Details Operational Challenges in AI Infrastructure Deployment",
+    summary: "",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "This perspective aligns with feedback from enterprise customers struggling to achieve ROI on AI investments. Cisco is positioning its networking and security stack as essential for reducing time-to-value on GPU clusters. Google Cloud should note the emphasis on automation and security as key differentiators in infrastructure sales cycles. The messaging suggests enterprises are moving past initial AI enthusiasm into practical deployment concerns where networking and storage become critical.",
+    url: "https://blogs.cisco.com/datacenter/ai-infrastructure-has-entered-its-operational-era/"
   },
   {
-    id: 5, cat: "vendor", impact: "high", filler: false,
-    title: "Cisco Introduces AI-Ready Branch Architecture With AgenticOps and Quantum Security",
-    summary: "Cisco unveils new branch and WAN architecture for the AI era at Cisco Live 2026 featuring AgenticOps autonomous operations and quantum-resilient security. The announcement includes the expanded Cisco 8000 Series Secure Routers family for simplified operations.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Ciscos positioning of AgenticOps for branch networks signals enterprise AI workloads extending beyond data centers to edge locations. The quantum-resilient security focus addresses emerging concerns that will affect long-term infrastructure planning across all vendors. For Google this represents Cisco defending their enterprise networking position while potentially enabling distributed AI inference architectures. The expanded router family suggests Cisco sees significant refresh opportunity as enterprises upgrade for AI workloads. This competitive move requires attention from any team building hybrid cloud AI solutions.",
-    url: "https://blogs.cisco.com/networking/powering-the-ai-ready-branch-with-agentic-operations-and-quantum-era-security/"
+    id: 5, cat: "networking", impact: "medium", filler: false,
+    title: "Ubuntu Explains RDMA over Converged Ethernet for AI Network Infrastructure",
+    summary: "",
+    source: "Ubuntu.com", age: "1 day ago",
+    detail: "RoCE adoption is accelerating as enterprises deploy multi-node GPU clusters requiring low-latency fabric connectivity. This educational content signals growing enterprise interest in understanding network requirements for AI infrastructure. Google Clouds networking team should track RoCE ecosystem developments as customers evaluate backend fabric options. The storage and networking convergence theme reinforces importance of integrated infrastructure approaches for AI workloads.",
+    url: "https://ubuntu.com/blog/what-is-rdma-over-converged-ethernet-roce"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Azure NC RTX PRO 6000 Blackwell VMs Now Generally Available in Southeast Asia and West US",
-    summary: "Microsoft announces general availability of NCv6-series virtual machines powered by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs with 96GB memory per GPU. The VMs are available in Azure Southeast Asia and West US 2 regions.",
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Azure Announces AI Pipeline Capabilities in HorizonDB for Declarative Data Workflows",
+    summary: "",
     source: "Azure Updates", age: "today",
-    detail: "Azures Blackwell GPU availability represents direct competition to Google Clouds TPU and GPU offerings in key enterprise regions. The 96GB per GPU configuration targets demanding AI workloads requiring large model memory footprints. Southeast Asia regional availability is strategically important for APAC enterprise customers evaluating hyperscaler AI platforms. For Google this accelerates the need to expand Blackwell-based offerings to maintain competitive parity. The choice of West US 2 suggests Microsoft is prioritizing tech-heavy regions with strong AI adoption.",
-    url: "https://azure.microsoft.com/updates?id=565271"
+    detail: "This positions Azure to capture AI data preparation workloads with database-native pipeline orchestration. The declarative SQL approach lowers barriers for data engineers building RAG and embedding pipelines without specialized ML tooling. Google Cloud should evaluate competitive responses in AlloyDB and BigQuery for similar integrated AI data workflows. The trend toward database-embedded AI processing reflects customer demand for simplified architecture.",
+    url: "https://azure.microsoft.com/updates?id=565182"
   },
   {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Premium SSD v2 Now Supports Non-Zonal Single-Instance Virtual Machines",
-    summary: "Azure Premium SSD v2 disks extend support to non-zonal single-instance virtual machines in select regions with Availability Zones. Customers can now deploy high-performance storage without requiring specific zone selection.",
-    source: "Azure Updates", age: "today",
-    detail: "This storage flexibility enhancement addresses a common friction point for enterprises deploying AI workloads that dont require zone-level redundancy. Premium SSD v2 performance characteristics are important for AI training and inference data pipelines. For Google Cloud this represents Azure continuing to refine their storage offering competitively. The change simplifies deployment models which could accelerate Azure adoption for certain AI use cases. Storage teams should monitor whether this drives meaningful workload migration patterns.",
-    url: "https://azure.microsoft.com/updates?id=565359"
-  },
-  {
-    id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "Active Optical Cable Market to Reach 7.8 Billion USD by 2030 Driven by AI Data Centers",
-    summary: "Strategic Market Research projects the global active optical cable market will grow from 3.6 billion USD in 2024 to 7.8 billion USD by 2030. Growth is driven by data centers telecom operators and HPC environments shifting to low-latency high-bandwidth optical interconnects.",
-    source: "PRNewswire", age: "1 day ago",
-    detail: "This market projection validates the massive infrastructure investment required for AI data center buildouts across all hyperscalers. Active optical cables are critical components for GPU cluster interconnects where Broadcom and Marvell compete. The doubling of market size reflects accelerating AI infrastructure deployment that benefits networking silicon vendors. For Google this reinforces the strategic importance of optical interconnect partnerships and supply chain security. Understanding this growth trajectory helps inform long-term infrastructure planning and vendor negotiations.",
-    url: "https://www.prnewswire.com/news-releases/active-optical-cable-market-fueled-by-ai-data-center-traffic-says-strategic-market-research-302793996.html"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco AgenticOps Transforms Network Operations With AI-Driven Autonomous Workflows",
-    summary: "Cisco details how AgenticOps combines AI-driven agents with human oversight to deliver autonomous IT workflows that detect diagnose remediate and validate network issues. The system aims to ensure seamless user experience through trusted and accountable automation.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Ciscos AgenticOps represents their answer to the operational complexity of modern AI-era networks. The emphasis on human oversight and accountability addresses enterprise concerns about fully autonomous network management. This positions Cisco to compete with cloud-native network automation offerings from hyperscalers. For Google the approach validates investment in similar AI-driven operations capabilities for Cloud networking. The detect-diagnose-remediate-validate workflow mirrors patterns emerging across infrastructure management tools.",
-    url: "https://blogs.cisco.com/networking/from-signal-to-action-the-next-step-in-cisco-agenticops/"
-  },
-  {
-    id: 10, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Factory Operations Blueprint Enables Autonomous Factory Manager AI Systems",
-    summary: "NVIDIA announces the Factory Operations Blueprint FOX as a reference design for building autonomous factory manager systems at GTC Taipei. The blueprint connects live machine signals quality systems work instructions and operational alerts into a unified AI decision layer.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "NVIDIAs expansion into industrial AI factory management extends their platform beyond training and inference into operational technology. This creates new adjacencies for GPU infrastructure deployment in manufacturing environments. For Google Cloud this represents potential competition or partnership opportunity in industrial AI verticals. The blueprint approach lowers barriers for enterprises to deploy physical AI systems at scale. Understanding NVIDIAs industrial strategy helps inform competitive positioning for manufacturing sector customers.",
-    url: "https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain/"
-  },
-  {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Extends DevOps Agent Network Investigations With S3 Logs and Custom MCP",
-    summary: "AWS demonstrates how to extend DevOps Agent investigations beyond API-level failures by connecting to S3 logs using custom MCP on Amazon Bedrock AgentCore. The solution helps on-call engineers troubleshoot 502 errors when standard diagnostics show no issues.",
+    id: 7, cat: "networking", impact: "medium", filler: false,
+    title: "AWS Details SD-WAN Segmentation Integration With Cloud WAN in Two-Part Guide",
+    summary: "",
     source: "AWS Networking", age: "today",
-    detail: "This AWS networking blog post shows continued investment in AI-assisted operations tooling. The integration of S3 logs with agent-based investigation reflects growing complexity in cloud debugging workflows. For Google this represents competitive feature development in the observability and operations space.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-aws-devops-agent-network-investigations-with-s3-logs-and-custom-mcp-on-amazon-bedrock-agentcore/"
+    detail: "Enterprise customers operating segmented networks face complexity connecting SD-WAN fabrics to cloud infrastructure. AWS is addressing this gap with reference architectures that maintain segmentation policies across hybrid environments. This is relevant for AI workloads requiring network isolation between training environments or customer data planes. Google Cloud networking should evaluate similar integration patterns with major SD-WAN vendors like Cisco and VMware.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-sd-wan-segmentation-into-aws-cloud-wan-part-1/"
+  },
+  {
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA Unveils Physical AI Agent Skills for Autonomous Vehicles and Robotics at CVPR",
+    summary: "",
+    source: "NVIDIA Blog", age: "today",
+    detail: "NVIDIAs expansion into physical AI development tooling extends their platform beyond training infrastructure into simulation and deployment. The agent skills framework could influence how customers architect robotics and AV workloads across cloud providers. Google Cloud should monitor integration opportunities with NVIDIA tooling for customers building physical AI applications. This reinforces NVIDIAs strategy to capture value across the entire AI development lifecycle not just compute.",
+    url: "https://blogs.nvidia.com/blog/cvpr-physical-ai-research-agent-skills/"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Google Cloud Announces Claude Fable 5 Availability on Agent Platform",
+    summary: "",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Multi-model availability remains a key competitive differentiator as enterprises avoid vendor lock-in on specific foundation models. Google Clouds Agent Platform positioning benefits from access to both internal Gemini models and external options like Claude. AWS simultaneously announced Claude Fable 5 availability on Bedrock indicating coordinated Anthropic rollout across hyperscalers. The focus on safety guardrails reflects enterprise requirements for responsible AI deployment.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/cloud-fable-5-on-google-cloud/"
+  },
+  {
+    id: 10, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Google Cloud Details GKE Autopilot Deployment Guide for AI Agent Development Kit",
+    summary: "",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This documentation supports the growing developer community building AI agents on Google Cloud infrastructure. GKE Autopilot simplifies Kubernetes operations for teams without dedicated platform engineering resources. The tutorial addresses a common friction point where developers struggle transitioning AI prototypes to production deployments. This content reinforces Google Clouds positioning as developer-friendly platform for AI agent development.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/scaling-ai-agents-a-step-by-step-guide-to-deploying-adk-on-gke-autopilot/"
+  },
+  {
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Google Data Cloud Updates Highlight NoSQL Capabilities for AI Agent Workloads",
+    summary: "",
+    source: "Google Cloud Blog", age: "today",
+    detail: "AI agents require fast state persistence and retrieval capabilities that NoSQL databases can provide efficiently. These updates position Google Clouds database portfolio for the emerging agent infrastructure market. Memory management for long-running AI agents represents a new workload pattern driving storage innovation across hyperscalers.",
+    url: "https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud/"
   },
   {
     id: 12, cat: "storage", impact: "low", filler: true,
-    title: "AWS GuardDuty Malware Protection for Backup Enables Automated Response at Scale",
-    summary: "AWS introduces orchestrated automated response for GuardDuty Malware Protection for AWS Backup to address dormant ransomware in backup data. The solution helps organizations ensure backups remain clean recovery points rather than preserved threats.",
-    source: "AWS Storage", age: "today",
-    detail: "This storage security enhancement addresses a real enterprise concern about backup integrity in ransomware scenarios. The automation aspect reflects broader trends toward security operations at machine speed. Relevant for understanding AWS storage security capabilities versus Google Cloud offerings.",
-    url: "https://aws.amazon.com/blogs/storage/orchestrate-automated-response-for-amazon-guardduty-malware-protection-for-aws-backup-at-scale/"
+    title: "Azure Database for PostgreSQL Gets Enhanced Maintenance Control Features",
+    summary: "",
+    source: "Azure Updates", age: "today",
+    detail: "Database maintenance windows impact AI workload availability particularly for training pipelines with strict scheduling requirements. These controls help enterprises minimize disruption during critical AI processing periods. The feature parity race in managed PostgreSQL continues across hyperscalers.",
+    url: "https://azure.microsoft.com/updates?id=563756"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Microsoft Build Announces Discovery Platform GA for Agentic AI Workflow Governance",
-    summary: "Microsoft announces general availability of Microsoft Discovery platform at Build for building and governing agentic AI workflows. The platform provides comprehensive capabilities for organizations deploying AI agents at scale.",
-    source: "Azure Blog", age: "today",
-    detail: "Microsofts agentic AI governance platform signals the maturation of enterprise AI agent deployments. The focus on governance reflects growing enterprise requirements for AI oversight and compliance. This represents competitive positioning against Google Cloud AI platform capabilities.",
-    url: "https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/"
+    id: 13, cat: "competition", impact: "low", filler: true,
+    title: "Hybrid Cloud Market Projected to Reach 653 Billion by 2035 on Data Sovereignty Demand",
+    summary: "",
+    source: "GlobeNewswire", age: "2 days ago",
+    detail: "Data localization requirements are reshaping cloud architecture decisions particularly for AI workloads processing sensitive data. This trend supports investment in regional AI infrastructure and edge computing capabilities. Hyperscalers must balance global scale advantages with local compliance requirements.",
+    url: "https://www.globenewswire.com/news-release/2026/06/08/3307807/0/en/Hybrid-Cloud-Market-Size-to-Surpass-USD-653-45-Billion-by-2035-as-Data-Sovereignty-Laws-Accelerate-Enterprise-Adoption-Worldwide-SNS-Insider.html"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "Computex 2026 Dominated by AI Across Every Product Category",
-    summary: "A systems editor reports that Computex 2026 was completely dominated by AI announcements across all hardware categories. The show demonstrated that every major technology exhibition has become an AI-focused event.",
-    source: "Theregister.com", age: "2 days ago",
-    detail: "This industry observation confirms the pervasive impact of AI on hardware development and marketing. The trend affects component vendors networking equipment and storage systems equally. Useful context for understanding the competitive landscape and vendor positioning across the AI infrastructure ecosystem.",
-    url: "https://www.theregister.com/systems/2026/06/08/our-systems-editor-flew-all-the-way-to-taiwan-and-still-couldnt-get-away-from-ai/5251877"
-  },
-  {
-    id: 15, cat: "vendor", impact: "low", filler: true,
-    title: "Cisco Delivers Machine-Speed Trust for Campus Networks in AI Era",
-    summary: "Cisco outlines how campus networks must evolve as people agents devices and autonomous systems interact in real time. The company promotes AgenticOps and AI-ready infrastructure for secure and efficient scaling.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Ciscos campus network positioning reflects enterprise demand for AI-capable infrastructure beyond data centers. The machine-speed trust concept addresses security concerns in environments with autonomous agents. Provides insight into Cisco enterprise strategy relevant for competitive analysis.",
-    url: "https://blogs.cisco.com/networking/trust-at-machine-speed-building-secure-campus-networks-for-the-ai-era/"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "NVIDIA Partners With Doosan Group to Advance Physical AI and Robotics Infrastructure",
+    summary: "",
+    source: "NVIDIA Blog", age: "today",
+    detail: "Industrial automation represents a growing market for AI infrastructure beyond traditional cloud workloads. Partnerships with manufacturing conglomerates demonstrate NVIDIAs expansion into operational technology environments. These deployments often require specialized networking and storage configurations for edge AI processing.",
+    url: "https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The GKE Inference Gateway achieving 92 percent faster AI responses through prefix caching and intelligent routing represents a significant competitive differentiator for Google Cloud, directly reducing accelerator idle time which addresses customer cost concerns around GPU utilization. Cisco is aggressively positioning for the AI infrastructure era with its AgenticOps autonomous operations framework and quantum-resilient security, signaling that network vendors are moving beyond hardware into AI-driven operational platforms that could compete with hyperscaler managed services. The active optical cable market projection to reach 7.8 billion USD by 2030, more than doubling from current levels, indicates sustained demand pressure on low-latency interconnects critical for GPU and TPU cluster scaling.";
+const STATIC_BRIEF = "**Executive Brief: AI Infrastructure Week of June 16, 2025**  Ciscos new AI infrastructure services and the Ubuntu RDMA over Converged Ethernet technical guidance signal intensifying focus on network operational complexity for GPU clusters, directly relevant to how Google positions its networking stack differentiation for TPU and GPU workloads. Azures HorizonDB AI pipeline announcement represents competitive pressure on declarative data workflows that could influence enterprise storage and compute integration expectations across hyperscalers. AWS Graviton5 launch with 25 percent performance gains warrants monitoring as ARM-based compute alternatives continue maturing, potentially affecting customer workload placement decisions between general compute and accelerator-optimized instances.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
