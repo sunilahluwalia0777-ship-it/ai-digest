@@ -722,7 +722,7 @@
   "https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/": "2026-06-10",
   "https://www.techtarget.com/searchnetworking/opinion/Cisco-advances-AI-infrastructure-services-at-Cisco-Live": "2026-06-10",
   "https://blogs.cisco.com/datacenter/ai-infrastructure-has-entered-its-operational-era/": "2026-06-10",
-  "https://ubuntu.com/blog/what-is-rdma-over-converged-ethernet-roce": "2026-06-10",
+  "https://ubuntu.com/blog/what-is-rdma-over-converged-ethernet-roce": "2026-06-11",
   "https://azure.microsoft.com/updates?id=565182": "2026-06-10",
   "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-sd-wan-segmentation-into-aws-cloud-wan-part-1/": "2026-06-10",
   "https://blogs.nvidia.com/blog/cvpr-physical-ai-research-agent-skills/": "2026-06-10",
@@ -731,5 +731,18 @@
   "https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud/": "2026-06-10",
   "https://azure.microsoft.com/updates?id=563756": "2026-06-10",
   "https://www.globenewswire.com/news-release/2026/06/08/3307807/0/en/Hybrid-Cloud-Market-Size-to-Surpass-USD-653-45-Billion-by-2035-as-Data-Sovereignty-Laws-Accelerate-Enterprise-Adoption-Worldwide-SNS-Insider.html": "2026-06-10",
-  "https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/": "2026-06-10"
+  "https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/": "2026-06-10",
+  "https://www.bloomberg.com/news/articles/2026-06-09/google-s-backstops-underpin-35-billion-chip-deal-for-anthropic": "2026-06-11",
+  "https://siliconangle.com/2026/06/09/ai-supersystem-shift-aristas-1-6t-announcement-ethernet-inflection-point/": "2026-06-11",
+  "https://siliconangle.com/2026/06/09/broadcom-production-ai-modernprivatecloud/": "2026-06-11",
+  "https://cryptobriefing.com/aws-recruits-meta-laid-off-talent/": "2026-06-11",
+  "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/": "2026-06-11",
+  "https://azure.microsoft.com/en-us/blog/claude-fable-5-is-now-available-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/": "2026-06-11",
+  "https://cloud.google.com/blog/products/data-analytics/lighting-engine-for-apache-spark-performance-deep-dive/": "2026-06-11",
+  "https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/": "2026-06-11",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/vpc-resource-gateways-implementation-patterns-and-use-cases/": "2026-06-11",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-sd-wan-segmentation-into-aws-cloud-wan-part-2/": "2026-06-11",
+  "https://aws.amazon.com/blogs/storage/secure-shared-storage-with-cifs-share-level-access-controls-on-amazon-fsx-for-netapp-ontap/": "2026-06-11",
+  "https://www.prnewswire.com/news-releases/zilliz-launches-vector-lakebase-extending-the-worlds-most-adopted-vector-database-into-a-unified-data-platform-for-ai-302796419.html": "2026-06-11",
+  "https://www.storagereview.com/news/synology-extends-activeprotect-to-aws-azure-proxmox-and-nutanix-with-apm-2-0-at-computex-2026": "2026-06-11"
 }
