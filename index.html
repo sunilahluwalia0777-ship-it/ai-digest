@@ -647,116 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Backstops $35 Billion Chip Deal Enabling Anthropic AI Infrastructure Expansion",
-    summary: "Google agreed to guarantee lease payments for Anthropic data centers in a deal worth up to $35 billion for AI chip infrastructure. The arrangement effectively provides Anthropic with massive financing for GPU and TPU compute capacity.",
-    source: "Bloomberg", age: "1 day ago",
-    detail: "This deal represents one of the largest AI infrastructure financing arrangements to date and signals Googles strategic commitment to the Anthropic partnership. By backstopping lease payments Google is effectively underwriting Anthropics compute buildout while maintaining its position as a key AI model provider. The structure allows Anthropic to access capital markets at favorable rates while Google gains influence over a major competitor to OpenAI. This has significant implications for hyperscaler competition as it blurs the line between cloud provider and AI company partnerships.",
-    url: "https://www.bloomberg.com/news/articles/2026-06-09/google-s-backstops-underpin-35-billion-chip-deal-for-anthropic"
+    id: 1, cat: "vendor", impact: "high", filler: false,
+    title: "Google TPU Orders Split Between MediaTek Marvell and Broadcom as Competition Heats Up",
+    summary: "Broadcom has acknowledged it will not capture all of Googles TPU orders as tensor processing units become a competitive arena for multiple chipmakers. The shift signals intensifying competition for cloud AI silicon supply and manufacturing capacity.",
+    source: "Digitimes", age: "1 day ago",
+    detail: "This development represents a significant strategic shift for Google Cloud infrastructure. By diversifying TPU suppliers across Broadcom MediaTek and Marvell Google reduces single-vendor dependency while potentially driving better pricing and innovation. For infrastructure planning this means evaluating multiple silicon roadmaps and their performance characteristics. The competitive dynamics could accelerate TPU development cycles and improve price-performance ratios for AI workloads.",
+    url: "https://www.digitimes.com/news/a20260612PD200/google-tpu-broadcom-mediatek-marvell.html"
   },
   {
-    id: 2, cat: "networking", impact: "high", filler: false,
-    title: "Arista 1.6T Announcement Marks Ethernet Inflection Point for AI Supersystems",
-    summary: "Aristas 1.6T networking announcement represents a critical shift in the InfiniBand versus Ethernet debate for AI infrastructure. The move signals Ethernet is now viable for large-scale AI training workloads that previously required InfiniBand.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "This is a significant development for AI infrastructure networking strategy as Ethernet gains ground in the high-performance computing space traditionally dominated by InfiniBand. The 1.6T capability addresses the bandwidth requirements of modern AI clusters while offering the operational simplicity and ecosystem breadth of Ethernet. For hyperscalers this could influence build decisions and reduce dependence on NVIDIA InfiniBand solutions. The timing aligns with industry push toward Ultra Ethernet Consortium standards and could accelerate Ethernet adoption in next-generation AI data centers.",
-    url: "https://siliconangle.com/2026/06/09/ai-supersystem-shift-aristas-1-6t-announcement-ethernet-inflection-point/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Cloud Partners with Apple on Expanded Private Cloud Compute for Confidential AI",
+    summary: "Google Cloud announced collaboration with Apple on expanded Private Cloud Compute systems for confidential AI workloads. The partnership demonstrates Googles commitment to providing secure infrastructure for demanding AI applications.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This partnership positions Google Cloud as a trusted infrastructure provider for highly sensitive AI workloads from major technology companies. The confidential computing capabilities address enterprise concerns about data privacy during AI inference and training. For the networking and storage teams this means potential increased demand for secure enclave-capable infrastructure and encrypted data paths. Competing with AWS and Azure for privacy-focused enterprise AI workloads becomes a key differentiator.",
+    url: "https://cloud.google.com/blog/products/identity-security/powering-the-next-era-of-confidential-ai/"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "Broadcom Makes Case for Private Cloud as Production AI Infrastructure Choice",
-    summary: "Broadcom argues production AI workloads are driving enterprises back to private cloud infrastructure for cost control and data governance. VMware positions itself as the platform for running AI closer to enterprise data.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "This represents Broadcoms strategic counter-narrative to public cloud AI dominance and reflects real enterprise concerns about AI workload costs at scale. The argument centers on total cost of ownership security and the need to keep sensitive training data on-premises. For Google this creates competitive pressure as enterprises evaluate hybrid approaches rather than pure cloud AI strategies. The positioning also validates VMwares continued relevance in the AI era despite questions about its role in GPU-centric architectures.",
-    url: "https://siliconangle.com/2026/06/09/broadcom-production-ai-modernprivatecloud/"
+    id: 3, cat: "hyperscaler", impact: "high", filler: false,
+    title: "NVIDIA Blackwell Leads First Agentic AI Infrastructure Benchmark with 20x Efficiency Gains",
+    summary: "NVIDIAs Blackwell Ultra NVL72 platform achieved leading performance on AgentPerf the industrys first agentic AI benchmark. The platform delivers 20x more agents per megawatt than previous generations.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This benchmark establishes a new performance baseline for agentic AI infrastructure that directly impacts GPU procurement decisions. The 20x efficiency improvement per megawatt has significant implications for data center power budgets and cooling requirements. Infrastructure teams should evaluate how Blackwell architecture aligns with emerging agentic workload patterns. The benchmark results will likely influence competitive positioning against AMD and custom silicon from hyperscalers.",
+    url: "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/"
   },
   {
-    id: 4, cat: "networking", impact: "medium", filler: false,
-    title: "Ubuntu Deep Dive Explains RDMA over Converged Ethernet for AI Networking",
-    summary: "Canonical published technical analysis of RoCE as data movement becomes the primary bottleneck in AI infrastructure. The article positions RoCE as a practical alternative to InfiniBand for RDMA workloads.",
-    source: "Ubuntu.com", age: "2 days ago",
-    detail: "This educational content reflects growing industry interest in Ethernet-based RDMA solutions for AI clusters. RoCE enables high-performance low-latency data transfer without the specialized InfiniBand hardware stack. The focus on data movement as the bottleneck rather than compute aligns with modern AI training challenges where GPU utilization depends heavily on network performance. This is relevant context for networking strategy decisions in AI infrastructure buildouts.",
-    url: "https://ubuntu.com/blog/what-is-rdma-over-converged-ethernet-roce"
+    id: 4, cat: "competition", impact: "high", filler: false,
+    title: "Google Backstops Enable 45 Billion Dollar Chip Deal for Anthropic AI Development",
+    summary: "Google has provided financial guarantees underpinning a 45 billion dollar chip procurement deal for Anthropic. The arrangement highlights the scale of compute infrastructure required for frontier AI development.",
+    source: "The Straits Times", age: "3 days ago",
+    detail: "This massive chip deal underscores the capital intensity of competing in frontier AI model development. Googles financial backing of Anthropics compute needs strengthens its position in the AI ecosystem while ensuring capacity utilization. The deal size of 45 billion dollars represents a significant portion of annual GPU production capacity globally. This arrangement may pressure AWS and Azure to secure similar long-term capacity commitments for their AI partners.",
+    url: "https://www.straitstimes.com/business/googles-backstops-underpin-45-billion-chip-deal-for-anthropic"
   },
   {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "AWS Aggressively Recruiting Metas Laid-Off AI Talent for 160 Open Roles",
-    summary: "Amazon Web Services is strategically targeting Meta employees affected by layoffs to fill AI-related positions. The recruitment push could enhance AWS competitive position in AI services.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "This talent acquisition strategy reflects the intense competition for AI expertise among hyperscalers. Metas recent workforce reductions create an opportunity for AWS to quickly onboard experienced AI engineers and researchers. The 160 open roles suggest significant investment in AI capabilities that could translate to improved services competing with Google Cloud and Azure. This is a notable competitive move that could impact the AI talent landscape and service development timelines across cloud providers.",
-    url: "https://cryptobriefing.com/aws-recruits-meta-laid-off-talent/"
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Releases Graviton5 CPU Enhancing Performance for AI and Cloud Workloads",
+    summary: "Amazon Web Services launched Graviton5 its latest custom ARM-based processor designed to improve CPU performance for AI workloads. The chip could redefine cloud economics and pressure rivals to innovate in custom silicon.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "Graviton5 continues AWS strategy of vertical integration in cloud infrastructure to reduce costs and improve performance. Custom silicon development represents a key competitive advantage against Google Cloud and Azure in price-performance benchmarks. The AI workload optimization suggests AWS is positioning Graviton for inference and data preprocessing tasks alongside GPU clusters. Infrastructure teams should evaluate Graviton5 for cost optimization in supporting workloads around GPU-intensive AI training.",
+    url: "https://cryptobriefing.com/aws-graviton5-cpu-performance-ai/"
   },
   {
     id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Claude Fable 5 Now Available on AWS Bedrock with Mythos-Class Capabilities",
-    summary: "AWS announced Claude Fable 5 availability on Amazon Bedrock with advanced autonomous agent capabilities and built-in safeguards. The model delivers Anthropics latest frontier capabilities to AWS customers.",
-    source: "AWS News Blog", age: "today",
-    detail: "This release maintains AWS competitive position in the model marketplace by offering cutting-edge Anthropic models alongside proprietary options. The emphasis on safeguards reflects enterprise concerns about deploying powerful AI agents in production. For Google this represents continued competitive pressure as AWS expands its AI model portfolio. The availability reinforces the multi-cloud model access trend where customers can access similar foundation models across different cloud providers.",
-    url: "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/"
-  },
-  {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "Microsoft Foundry Launches Claude Fable 5 for Autonomous Agent Development",
-    summary: "Azure announced Claude Fable 5 availability in Microsoft Foundry powering agents in GitHub Copilot and Foundry Agent Service. The integration enables enterprise customers to build autonomous AI agents.",
+    title: "Microsoft Foundry Adds Claude Fable 5 Powering Autonomous Agents in GitHub Copilot",
+    summary: "Anthropics Claude Fable 5 model is now available in Microsoft Foundry powering agents in GitHub Copilot and Foundry Agent Service. The integration enables next-generation autonomous agent capabilities on Azure infrastructure.",
     source: "Azure Blog", age: "today",
-    detail: "Microsofts rapid adoption of Anthropics latest model demonstrates the competitive dynamics in cloud AI platforms. The integration with GitHub Copilot extends the models reach into developer workflows where Microsoft has significant market presence. This multi-cloud availability of frontier models continues to commoditize model access while differentiating on platform integration and enterprise features. Google must compete not just on model capabilities but on the surrounding ecosystem and developer experience.",
-    url: "https://azure.microsoft.com/en-us/blog/claude-fable-5-is-now-available-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/"
+    detail: "Microsofts rapid adoption of Anthropic models demonstrates the multi-model strategy becoming standard across hyperscalers. This positions Azure as a flexible platform for enterprises wanting model choice rather than vendor lock-in. The agentic AI focus aligns with NVIDIAs benchmark results showing infrastructure demand shifting toward agent workloads. Google Cloud must ensure competitive model availability and agent infrastructure to maintain enterprise relationships.",
+    url: "https://azure.microsoft.com/en-us/blog/claude-fable-5-available-today-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Cloud Lightning Engine Delivers 4.9x Faster Apache Spark Performance",
-    summary: "Google Cloud detailed how Lightning Engine achieves nearly 5x performance improvement for Apache Spark workloads. The optimization addresses bottlenecks critical for agentic AI query patterns.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This performance improvement is strategically important as data processing becomes foundational to AI applications. The focus on agentic workloads that trigger thousands of concurrent queries reflects the evolving requirements of AI-native applications. Better Spark performance could attract data-intensive AI workloads to Google Cloud and differentiates the platform on infrastructure efficiency. The deep dive technical content also serves to establish Google Clouds engineering credibility with data engineering teams.",
-    url: "https://cloud.google.com/blog/products/data-analytics/lighting-engine-for-apache-spark-performance-deep-dive/"
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "SK Hynix Selects Nasdaq for US Listing as AI Chip Demand Drives Market Cap Past 1 Trillion",
+    summary: "SK Hynix has chosen Nasdaq for its US listing as AI memory chip demand propels its market capitalization beyond one trillion dollars. The listing could reshape global semiconductor investment dynamics.",
+    source: "Crypto Briefing", age: "today",
+    detail: "SK Hynixs valuation milestone reflects the critical importance of HBM and advanced memory in AI infrastructure. As a key supplier of high-bandwidth memory for NVIDIA and AMD GPUs this listing increases visibility into memory supply chain dynamics. Google Cloud infrastructure teams should monitor SK Hynix capacity expansion plans given memory constraints on GPU deployments. The trillion dollar valuation signals sustained demand expectations for AI memory through the decade.",
+    url: "https://cryptobriefing.com/sk-hynix-nasdaq-listing-ai-chips/"
   },
   {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Research Advances Robot Grasping Autonomous Driving and Agent Training at CVPR",
-    summary: "NVIDIA presented research on generalizable robot manipulation safer autonomous driving reasoning and scalable agent training methods. The work addresses key challenges in deploying AI systems in physical world applications.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "These research advances strengthen NVIDIAs position beyond just hardware into the software and algorithmic layers of AI systems. The focus on generalization and scalability reflects real deployment challenges that limit AI adoption in robotics and autonomous vehicles. For infrastructure planning this signals continued demand for NVIDIAs full-stack approach combining GPUs with development platforms. The agent training research is particularly relevant as agentic AI workloads drive new infrastructure requirements.",
-    url: "https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/"
+    id: 8, cat: "networking", impact: "medium", filler: false,
+    title: "Neocloud Growth Challenges Transport Infrastructure to Keep Pace with AI Compute Demand",
+    summary: "Demand for AI-optimized computational power is driving neocloud growth but transport infrastructure struggles to match the pace of change. Network connectivity must evolve to support specialized AI cloud deployments.",
+    source: "Techtarget.com", age: "today",
+    detail: "The neocloud phenomenon highlights infrastructure gaps that Google and competitors must address for AI workload distribution. Networking teams face pressure to deliver higher bandwidth and lower latency between AI accelerator clusters. This trend validates investments in custom network fabrics and optical interconnects for AI data centers. Partnerships with Arista Cisco and custom NIC development from Broadcom and Marvell become increasingly strategic.",
+    url: "https://www.techtarget.com/searchnetworking/tip/How-neocloud-is-influencing-network-connectivity"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Manufacturers Strike Record 1 Billion Dollar Deals to Expand AI Data Center Capacity",
+    summary: "Manufacturing companies are signing record billion dollar deals to boost AI infrastructure capacity. The investment wave signals transformation in technology infrastructure deployment.",
+    source: "Crypto Briefing", age: "today",
+    detail: "The scale of infrastructure investment validates continued strong demand for AI compute capacity. These deals likely involve GPU clusters networking equipment and power infrastructure from multiple vendors. Google must compete aggressively for manufacturing capacity and skilled deployment resources. The investment magnitude suggests infrastructure constraints will persist requiring careful capacity planning and vendor relationship management.",
+    url: "https://cryptobriefing.com/manufacturers-record-deals-boost-ai-capacity/"
   },
   {
     id: 10, cat: "networking", impact: "low", filler: true,
-    title: "AWS Details VPC Resource Gateway Patterns for Complex Networking Use Cases",
-    summary: "AWS published implementation guidance for VPC resource gateways addressing scenarios where PrivateLink and peering fall short. The patterns help solve overlapping IP space challenges in multi-VPC environments.",
+    title: "AWS Best Practices for Securing IPv6 Infrastructure Using VPC Block Public Access",
+    summary: "AWS published guidance on securing private IPv6 resources while maintaining connectivity flexibility. The practices address common challenges organizations face when deploying IPv6 network infrastructure.",
     source: "AWS Networking", age: "today",
-    detail: "This guidance addresses practical enterprise networking challenges that arise in complex cloud deployments. The focus on overlapping IP spaces reflects real-world migration and multi-tenant scenarios. While not directly AI-focused these networking capabilities underpin the connectivity requirements for distributed AI workloads across VPCs.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/vpc-resource-gateways-implementation-patterns-and-use-cases/"
+    detail: "IPv6 security considerations apply across all hyperscalers as enterprises modernize network infrastructure. These best practices inform competitive feature development for Google Cloud VPC security controls. Understanding AWS approaches helps identify gaps or opportunities in Google networking security offerings.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/best-practices-for-securing-your-ipv6-infrastructure-on-aws-using-vpc-block-public-access/"
   },
   {
     id: 11, cat: "networking", impact: "low", filler: true,
-    title: "AWS Guide Details SD-WAN Segmentation Extension into Cloud WAN Part 2",
-    summary: "AWS continued its series on extending SD-WAN network segmentation into AWS Cloud WAN using GRE-based connectivity. The guidance addresses compliance and security requirements for multi-tenant environments.",
+    title: "AWS Verified Access and Network Firewall Enable Zero Trust Security Architecture",
+    summary: "AWS demonstrates zero trust security combining Verified Access with Network Firewall for identity-based application access. The solution addresses VPN limitations with granular traffic inspection.",
     source: "AWS Networking", age: "today",
-    detail: "Network segmentation is critical for enterprises running regulated workloads including AI applications handling sensitive data. The GRE-based approach provides flexibility for organizations with existing SD-WAN investments looking to extend controls into AWS. This operational guidance supports hybrid infrastructure strategies common in enterprise AI deployments.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-sd-wan-segmentation-into-aws-cloud-wan-part-2/"
+    detail: "Zero trust architectures are becoming standard for enterprise cloud deployments across all major providers. This AWS approach represents competitive intelligence for Google Cloud networking security roadmap planning. The combination of identity verification and traffic inspection reflects emerging enterprise security requirements.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/securing-zero-trust-access-with-aws-verified-access-and-aws-network-firewall/"
   },
   {
     id: 12, cat: "storage", impact: "low", filler: true,
-    title: "AWS FSx for NetApp ONTAP Adds CIFS Share-Level Access Controls for Secure Storage",
-    summary: "Amazon FSx for NetApp ONTAP now supports CIFS share-level access controls with qtrees for per-team access boundaries. The feature simplifies access management through Active Directory group membership.",
+    title: "Diskless Kafka Achieves Sub-10ms Latency with 94 Percent Cost Savings on AWS Storage",
+    summary: "AutoMQ demonstrates diskless Kafka architecture delivering millisecond latency while reducing costs 94 percent using FSx for NetApp ONTAP. The solution balances object storage economics with performance requirements.",
     source: "AWS Storage", age: "today",
-    detail: "Enhanced access controls support enterprise requirements for data governance in shared storage environments. As AI workloads require access to large datasets proper access management becomes critical for compliance and security. This feature enhancement makes FSx more attractive for enterprise AI data storage needs.",
-    url: "https://aws.amazon.com/blogs/storage/secure-shared-storage-with-cifs-share-level-access-controls-on-amazon-fsx-for-netapp-ontap/"
+    detail: "Storage architecture innovations for streaming workloads inform Google Cloud Pub Sub and related service optimization opportunities. The cost-performance tradeoffs in tiered storage approaches apply across hyperscaler storage portfolios. Understanding competitive storage solutions helps position Google Cloud offerings effectively.",
+    url: "https://aws.amazon.com/blogs/storage/achieving-sub-10ms-latency-and-94-cost-savings-with-diskless-kafka-using-automq-and-amazon-fsx-for-netapp-ontap/"
   },
   {
-    id: 13, cat: "storage", impact: "low", filler: true,
-    title: "Zilliz Launches Vector Lakebase Unifying Vector Database with Data Lake Architecture",
-    summary: "Zilliz announced Vector Lakebase combining production vector search with lake-native storage and on-demand compute. The platform unifies real-time serving discovery and batch analytics for AI workloads.",
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "CIQ Launches Fuzzball 4.0 with Multi-Cloud HPC Support Across Major Hyperscalers",
+    summary: "CIQ released Fuzzball 4.0 featuring native storage integration and multi-cloud support across all major hyperscalers. The platform democratizes HPC access for researchers with built-in object cache and container registry.",
     source: "PRNewswire", age: "1 day ago",
-    detail: "Vector databases are critical infrastructure for AI applications particularly those using retrieval-augmented generation. The convergence of vector search with data lake architecture reflects the maturation of AI data infrastructure. This product direction could influence how enterprises architect their AI data platforms and storage strategies.",
-    url: "https://www.prnewswire.com/news-releases/zilliz-launches-vector-lakebase-extending-the-worlds-most-adopted-vector-database-into-a-unified-data-platform-for-ai-302796419.html"
+    detail: "Multi-cloud HPC platforms represent both competition and partnership opportunities for Google Cloud. Understanding how third-party platforms abstract hyperscaler differences informs infrastructure API and feature development. HPC workload portability trends affect long-term customer retention strategies.",
+    url: "https://www.prnewswire.com/news-releases/ciq-redefines-advanced-computing-with-fuzzball-4-0--democratizing-access-to-hpc-for-researchers-302797898.html"
   },
   {
     id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Synology Extends ActiveProtect Data Protection to AWS Azure and Nutanix Platforms",
-    summary: "Synology announced ActiveProtect Manager 2.0 with expanded support for AWS Azure Proxmox and Nutanix environments. The updates focus on AI integration and hybrid cloud data governance.",
-    source: "Storagereview.com", age: "2 days ago",
-    detail: "Data protection across hybrid and multi-cloud environments is essential for enterprise AI deployments. Synologys expanded platform support reflects customer demand for unified backup and recovery across diverse infrastructure. The AI integration focus suggests data protection vendors are adapting to new workload patterns driven by AI adoption.",
-    url: "https://www.storagereview.com/news/synology-extends-activeprotect-to-aws-azure-proxmox-and-nutanix-with-apm-2-0-at-computex-2026"
+    title: "Google Cloud Introduces Open Knowledge Format to Improve Data Sharing for AI Models",
+    summary: "Google Cloud announced Open Knowledge Format an open standard designed to improve data sharing and context for foundation models. The format addresses limitations that restrict agentic AI system capabilities.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Data format standardization supports broader AI ecosystem development and reduces integration friction. OKF adoption could influence how enterprises structure data for AI applications across cloud providers. The initiative aligns with Googles strategy to shape AI development standards and practices.",
+    url: "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The Anthropic infrastructure backstop deal worth up to $35 billion directly impacts your roadmap as it commits Google to supplying massive TPU and potentially GPU compute capacity, making networking bandwidth between accelerators and storage throughput for training data critical delivery dependencies over the next several years. Arista announcing 1.6T Ethernet combined with Canonical positioning RoCE as InfiniBand alternative signals the ecosystem is converging on Ethernet-based RDMA for AI clusters, which validates Google networking investments but also lowers switching costs for customers evaluating multi-cloud AI infrastructure. Both AWS and Microsoft Azure now offer Claude Fable 5 with autonomous agent capabilities, meaning Google Cloud faces pressure to match frontier model availability while the Anthropic partnership simultaneously requires prioritizing infrastructure delivery for a direct competitor to Googles own Gemini models.";
+const STATIC_BRIEF = "The neocloud transport infrastructure challenge directly impacts your networking roadmap as specialized AI cloud deployments expose gaps in connectivity that your team must address to maintain Googles position as the preferred platform for high-density GPU and TPU workloads. The Anthropic chip deal backstopped by Google at 45 billion dollars signals massive compute procurement scale that will stress both networking fabrics and storage systems across your infrastructure, while Microsofts integration of Claude into Foundry and AWS Graviton5 launch demonstrate competitors aggressively building differentiated AI infrastructure stacks. SK Hynix reaching trillion dollar valuation on AI memory demand confirms HBM supply remains a strategic chokepoint, and the TPU order split across MediaTek Marvell and Broadcom gives your team leverage on networking silicon but adds integration complexity across the storage and interconnect stack.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

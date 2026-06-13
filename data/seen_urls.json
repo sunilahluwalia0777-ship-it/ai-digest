@@ -744,5 +744,19 @@
   "https://aws.amazon.com/blogs/networking-and-content-delivery/extending-sd-wan-segmentation-into-aws-cloud-wan-part-2/": "2026-06-11",
   "https://aws.amazon.com/blogs/storage/secure-shared-storage-with-cifs-share-level-access-controls-on-amazon-fsx-for-netapp-ontap/": "2026-06-11",
   "https://www.prnewswire.com/news-releases/zilliz-launches-vector-lakebase-extending-the-worlds-most-adopted-vector-database-into-a-unified-data-platform-for-ai-302796419.html": "2026-06-11",
-  "https://www.storagereview.com/news/synology-extends-activeprotect-to-aws-azure-proxmox-and-nutanix-with-apm-2-0-at-computex-2026": "2026-06-11"
+  "https://www.storagereview.com/news/synology-extends-activeprotect-to-aws-azure-proxmox-and-nutanix-with-apm-2-0-at-computex-2026": "2026-06-11",
+  "https://www.digitimes.com/news/a20260612PD200/google-tpu-broadcom-mediatek-marvell.html": "2026-06-13",
+  "https://cloud.google.com/blog/products/identity-security/powering-the-next-era-of-confidential-ai/": "2026-06-13",
+  "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/": "2026-06-13",
+  "https://www.straitstimes.com/business/googles-backstops-underpin-45-billion-chip-deal-for-anthropic": "2026-06-13",
+  "https://cryptobriefing.com/aws-graviton5-cpu-performance-ai/": "2026-06-13",
+  "https://azure.microsoft.com/en-us/blog/claude-fable-5-available-today-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/": "2026-06-13",
+  "https://cryptobriefing.com/sk-hynix-nasdaq-listing-ai-chips/": "2026-06-13",
+  "https://www.techtarget.com/searchnetworking/tip/How-neocloud-is-influencing-network-connectivity": "2026-06-13",
+  "https://cryptobriefing.com/manufacturers-record-deals-boost-ai-capacity/": "2026-06-13",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/best-practices-for-securing-your-ipv6-infrastructure-on-aws-using-vpc-block-public-access/": "2026-06-13",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/securing-zero-trust-access-with-aws-verified-access-and-aws-network-firewall/": "2026-06-13",
+  "https://aws.amazon.com/blogs/storage/achieving-sub-10ms-latency-and-94-cost-savings-with-diskless-kafka-using-automq-and-amazon-fsx-for-netapp-ontap/": "2026-06-13",
+  "https://www.prnewswire.com/news-releases/ciq-redefines-advanced-computing-with-fuzzball-4-0--democratizing-access-to-hpc-for-researchers-302797898.html": "2026-06-13",
+  "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/": "2026-06-13"
 }
