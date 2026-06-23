@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Europe Deploys Record 35 NVIDIA AI Supercomputers for Continental Research Infrastructure",
-    summary: "NVIDIA announced 35 new AI HPC supercomputers under development across Europe to serve over 3 million researchers. The deployment represents unprecedented continental-scale AI infrastructure investment for science and industrial innovation.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This massive European buildout signals a coordinated continental strategy to establish AI compute sovereignty and reduce dependence on US hyperscaler infrastructure. The scale of 35 systems serving 3 million researchers creates substantial demand for NVIDIA accelerators networking and storage systems. For Google this represents both competitive pressure in the European market and potential partnership opportunities for cloud-adjacent services. The investment validates continued strong demand for GPU infrastructure beyond US hyperscalers.",
-    url: "https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers"
+    title: "NVIDIA Dominates HPC as Grace CPU Adoption Accelerates Across TOP500 Supercomputers",
+    summary: "NVIDIA technology now powers 81 percent of the TOP500 supercomputers and 90 percent of new systems on the list. The Grace CPU saw adoption grow to 26 systems while NVIDIA GPUs dominate the Green500 efficiency rankings.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This reinforces NVIDIAs stranglehold on high-performance computing infrastructure which directly feeds into AI training workloads. The Grace CPU momentum is particularly significant as it represents NVIDIAs push into the CPU market traditionally dominated by Intel and AMD. For Google the continued NVIDIA dominance in supercomputing validates the strategic importance of TPU differentiation. The Green500 efficiency leadership also pressures competitors to match power efficiency metrics in their own AI infrastructure offerings.",
+    url: "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/"
   },
   {
-    id: 2, cat: "competition", impact: "high", filler: false,
-    title: "AWS Summit NY Unveils Agentic AI Stack with Grok 4.3 in Bedrock and Price Cuts",
-    summary: "AWS announced major AI launches at Summit New York including Grok 4.3 integration in Bedrock and price reductions. Dr Swami Sivasubramanian unveiled a comprehensive agentic AI strategy focused on compounding value.",
-    source: "AWS News Blog", age: "today",
-    detail: "AWS adding Grok 4.3 to Bedrock demonstrates aggressive model marketplace expansion competing directly with Google Vertex AI model garden. The agentic AI thesis aligns with industry direction but AWS price reductions signal intensifying competition for AI workloads. New Local Zone in Hanoi expands AWS edge presence in Southeast Asia where Google also competes. The combination of model diversity and price cuts pressures Google to respond with competitive offerings and pricing across its AI platform.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Invests 3.2 Billion Dollars in Lake Mariner Data Center to Challenge NVIDIA with TPUs",
+    summary: "Google has provided a 3.2 billion dollar financial guarantee for the Lake Mariner AI data center cluster in western New York near Niagara Falls. The investment signals Googles aggressive push to position TPU chips as a credible alternative to NVIDIA hardware.",
+    source: "TechSpot", age: "1 day ago",
+    detail: "This massive infrastructure investment demonstrates Googles commitment to vertical integration in AI compute. The Lake Mariner location offers strategic advantages including proximity to hydroelectric power from Niagara Falls which addresses growing concerns about AI energy consumption. This directly challenges NVIDIA by creating captive demand for TPU infrastructure. The scale of investment also signals to enterprise customers that Google is committed to long-term TPU development and availability.",
+    url: "https://www.techspot.com/news/112835-google-spending-billions-turn-tpu-chips-real-challenger.html"
   },
   {
-    id: 3, cat: "silicon", impact: "high", filler: false,
-    title: "NVIDIA Vera Rubin Platform Targets Scientific HPC with Native FP64 Performance",
-    summary: "NVIDIA announced Vera Rubin platform combining Vera CPUs with full CUDA-X libraries for scientific computing workloads. The platform emphasizes native double-precision performance for traditional HPC applications.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "Vera Rubin represents NVIDIAs push to capture scientific HPC workloads that require FP64 precision not just AI training. This directly competes with Google TPU positioning for research and scientific applications at national labs. The combination of CPU and accelerator in an integrated platform challenges the traditional approach of pairing third-party CPUs with NVIDIA GPUs. For Google infrastructure strategy this signals NVIDIA intends to own more of the compute stack potentially reducing integration opportunities.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-delivers-world-class-supercomputers-for-science"
+    id: 3, cat: "vendor", impact: "high", filler: false,
+    title: "Upscale AI Raises 190 Million to Challenge Cisco in AI Networking Infrastructure",
+    summary: "AI networking startup Upscale AI has raised another 190 million dollars bringing total funding to 500 million in under 18 months. Investors are betting the company could become the next major infrastructure giant in AI chip connectivity.",
+    source: "Fortune", age: "1 day ago",
+    detail: "This funding round signals strong investor confidence that AI networking represents a massive greenfield opportunity separate from traditional enterprise networking. For incumbents like Cisco Arista and Broadcom this represents a credible competitive threat from a well-funded pure-play AI networking startup. The Cisco comparison is notable as it suggests Upscale is targeting the foundational infrastructure layer rather than point solutions. Google and other hyperscalers should evaluate whether Upscale technology could complement or compete with their internal networking development.",
+    url: "https://fortune.com/2026/06/22/nvidia-upscale-ai-next-ciscoand-seligman-ventures-premji/"
   },
   {
-    id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Google Deploys NVIDIA-Style Circular Financing to Build TPU Customer Base",
-    summary: "A Wall Street Journal investigation reveals Google is using financial guarantees and circular financing tactics to compete against NVIDIA in AI chips. The strategy mirrors approaches that helped establish NVIDIA market dominance.",
-    source: "The Next Web", age: "3 days ago",
-    detail: "This report exposes Googles aggressive commercial strategy to build TPU adoption through financial engineering rather than purely technical differentiation. Circular financing arrangements where Google provides capital to customers who then purchase TPU capacity creates lock-in and market share but also carries financial risk. The tactic acknowledges that competing with NVIDIA requires more than superior silicon given NVIDIAs entrenched software ecosystem. This approach could accelerate TPU adoption but may face scrutiny if it distorts market pricing.",
-    url: "https://thenextweb.com/news/google-nvidia-playbook-tpu-circular-financing-anthropic/"
+    id: 4, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Launches Agent Toolkit to Help Enterprises Build Trusted Specialized AI Systems",
+    summary: "NVIDIA announced new tools for building enterprise AI agents including open models specialized tools and secure runtime environments. The toolkit addresses enterprise concerns about building specialized AI that integrates with existing workflows.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This release positions NVIDIA as a full-stack AI platform provider beyond just hardware. The emphasis on trust and security directly addresses enterprise adoption barriers that have slowed AI deployment. For Google Cloud this represents competitive pressure in the enterprise AI tooling space where Vertex AI competes. The open models approach also creates an interesting dynamic as enterprises may prefer NVIDIA tools even when running on non-NVIDIA infrastructure.",
+    url: "https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/"
   },
   {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "Amazon Explores Selling Trainium Chips to Third-Party Data Centers",
-    summary: "Amazon is negotiating to sell its custom Trainium AI chips for use in external data centers according to Bloomberg. The move would expand AWS silicon business beyond its own cloud infrastructure.",
-    source: "Naturalnews.com", age: "1 day ago",
-    detail: "Amazon selling Trainium externally represents a significant shift in hyperscaler silicon strategy moving from captive use to merchant market competition. This directly challenges NVIDIA in the data center chip market and creates a new competitive dynamic for Google TPU strategy. If successful Amazon could generate silicon revenue while expanding Trainium software ecosystem through broader deployment. Google must evaluate whether similar external TPU sales could strengthen its competitive position or dilute cloud differentiation.",
-    url: "https://www.naturalnews.com/2026-06-21-amazon-in-talks-sell-trainium-ai-chips.html"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Cloud Expands Confidential Computing for AI Workloads With New Hardware TEE Options",
+    summary: "Google Cloud announced new Confidential Computing innovations that cryptographically protect AI data in hardware-based Trusted Execution Environments. The expansion covers the full hardware ecosystem to provide verifiable data integrity for sensitive AI workloads.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Confidential Computing is becoming a critical differentiator for enterprise AI adoption particularly in regulated industries like healthcare and finance. This positions Google Cloud favorably against AWS and Azure in security-conscious enterprise segments. The hardware ecosystem expansion suggests partnerships with silicon vendors to embed TEE capabilities across compute offerings. For customers running AI inference on sensitive data this addresses a key barrier to cloud adoption.",
+    url: "https://cloud.google.com/blog/products/identity-security/verifiable-trust-in-the-ai-era-whats-new-in-confidential-computing/"
   },
   {
     id: 6, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Announces 45C Liquid Cooling for AI Servers Improving Energy Efficiency",
-    summary: "NVIDIA AI servers can now operate cooling liquid at 45 degrees Celsius enabling more energy efficient data center operations. The higher temperature limit reduces cooling infrastructure requirements and power consumption.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "Higher inlet temperatures for liquid cooling significantly reduce data center cooling overhead which is critical as AI clusters scale to megawatt power levels. This thermal innovation affects infrastructure design for GPU deployments including facility requirements and total cost of ownership calculations. For Google infrastructure planning this sets new benchmarks for cooling efficiency that TPU-based systems must match. The 45C capability could enable deployments in locations with less cooling infrastructure investment.",
-    url: "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/"
+    title: "NVIDIA Announces Halos Full-Stack Safety System for Robotics and Physical AI",
+    summary: "NVIDIA unveiled Halos for Robotics as the industrys first comprehensive safety system that unifies AI compute and safety for physical AI applications. The system addresses safety requirements for robotics deployment in real-world environments.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "This announcement extends NVIDIAs reach beyond data center AI into edge robotics and autonomous systems. Safety certification is a major barrier to robotics deployment in industrial and consumer applications. By providing a reference safety architecture NVIDIA creates another layer of platform lock-in for robotics developers. This also positions NVIDIA infrastructure as the default choice for emerging physical AI workloads that will eventually require significant compute resources.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai"
   },
   {
-    id: 7, cat: "networking", impact: "medium", filler: false,
-    title: "JUPITER Exascale Supercomputer Showcases NVIDIA Quantum-X800 InfiniBand at ISC",
-    summary: "Europes first exascale supercomputer JUPITER runs on NVIDIA Grace Hopper Superchips with Quantum-X800 InfiniBand networking. Four scientific projects demonstrate exascale capabilities including human brain mapping.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "JUPITER validates the Grace Hopper plus InfiniBand architecture at true exascale providing a reference design for future deployments. The Quantum-X800 networking demonstrates continued NVIDIA investment in high-bandwidth interconnect competing with emerging alternatives. Scientific workloads like brain mapping require both compute density and network bandwidth that stress infrastructure capabilities. This deployment provides performance data that influences procurement decisions across research institutions globally.",
-    url: "https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science/"
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA Releases BioNeMo Agent Toolkit for Life Sciences AI Discovery Applications",
+    summary: "NVIDIA announced the BioNeMo Agent Toolkit providing domain-specific tools and skills for agentic AI in life sciences research. The toolkit targets acceleration of scientific discovery in drug development and biological research.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "Life sciences represents a high-value vertical for AI infrastructure with significant compute requirements for molecular simulation and protein prediction. This specialized toolkit creates switching costs for pharmaceutical and biotech customers already invested in NVIDIA platforms. For Google Cloud which also targets life sciences customers this represents competitive pressure to develop equivalent domain-specific tooling. The agentic framing aligns with broader industry trends toward autonomous AI systems.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-launches-bionemo-agent-toolkit-giving-ai-agents-the-tools-to-accelerate-scientific-discovery"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Los Alamos National Lab Selects NVIDIA Vera Rubin for Next-Generation Supercomputers",
-    summary: "Los Alamos National Laboratory announced Mission Vision and Veritas supercomputers using HPE Cray architecture with NVIDIA Vera Rubin platform. The systems will enable agentic AI for scientific discovery.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "LANL selecting Vera Rubin for national security workloads validates NVIDIAs HPC strategy and creates a major reference customer. The agentic AI emphasis signals evolution in how national labs approach scientific computing beyond traditional simulation. HPE partnership for the Cray Supercomputing GX5000 architecture reinforces the NVIDIA ecosystem integration in large-scale deployments. This procurement influences future government and research purchases across the DOE complex.",
-    url: "https://blogs.nvidia.com/blog/nvidia-vera-cpu-los-alamos-national-laboratory/"
+    id: 8, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Launches Lambda MicroVMs With Full Lifecycle Control for Isolated AI Sandboxes",
+    summary: "AWS introduced Lambda MicroVMs offering VM-level isolated sandboxes with no shared kernel between sessions and state preservation up to 8 hours. The new compute primitive provides rapid launch and resume with full lifecycle control.",
+    source: "AWS News Blog", age: "today",
+    detail: "This represents AWS expanding its serverless compute options specifically for workloads requiring stronger isolation than containers provide. The 8-hour state preservation is notable for AI inference workloads that benefit from warm model state. For Google Cloud this pressures Cloud Functions and Cloud Run to offer similar isolation guarantees. The MicroVM approach also addresses security concerns for multi-tenant AI inference where model isolation is critical.",
+    url: "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/"
   },
   {
     id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "Azure VMware Solution AV36 Node Retirement Extended to September 2028 Aligned with Broadcom",
-    summary: "Microsoft extended AV36 node retirement to September 30 2028 to align with Broadcoms vSphere 8 support timeline. The AV36 SKU is not compatible with newer VMware versions requiring customer migration.",
-    source: "Azure Updates", age: "today",
-    detail: "This retirement timeline coordination between Microsoft and Broadcom highlights the complexity of VMware transitions in cloud environments. Customers running VMware workloads on Azure must plan migrations to newer node types before the deadline. The Broadcom VMware relationship continues to create uncertainty for enterprise virtualization strategies. This affects competitive positioning between Azure and Google Cloud VMware Engine offerings.",
-    url: "https://azure.microsoft.com/updates?id=503883"
+    title: "NVIDIA Unveils New AI for Science Software Including DAQIRI and ALCHEMI at ISC Conference",
+    summary: "NVIDIA announced new software tools at ISC including the DAQIRI library and ALCHEMI NIM microservices for scientific computing. The releases target materials simulation chemistry discovery and experimental astronomy applications.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "Scientific computing remains a strategic market for AI infrastructure vendors due to its extreme compute requirements. These domain-specific libraries reduce barriers to NVIDIA adoption in research institutions and national labs. The NIM microservices approach aligns with NVIDIAs strategy to provide turnkey AI solutions rather than just hardware. For Google competing in HPC markets this demonstrates NVIDIAs advantage in building comprehensive software ecosystems around its hardware.",
+    url: "https://blogs.nvidia.com/blog/ai-for-science-software-cuda/"
   },
   {
     id: 10, cat: "networking", impact: "medium", filler: false,
-    title: "Cisco Demonstrates Wi-Fi 7 and 6 GHz Standard Power at BottleRock Festival",
-    summary: "Cisco deployed Wi-Fi 7 with 6 GHz standard power at BottleRock Napa Valley proving high-density real-world performance. The event showcased Cisco and Splunk integration for resilient network operations.",
+    title: "Cisco Shares Best Practices for Hybrid Network Operations With Global Overview Dashboard",
+    summary: "Cisco published guidance on managing hybrid networks that span Meraki dashboard and Catalyst Center environments. The tips focus on unified visibility across cloud and on-premises networking infrastructure.",
     source: "Cisco Networking Blog", age: "today",
-    detail: "BottleRock deployment validates Wi-Fi 7 readiness for extreme density scenarios relevant to enterprise and venue deployments. The 6 GHz standard power approval enables full utilization of new spectrum for capacity-demanding applications. Cisco Splunk integration demonstrates the operational intelligence stack for network management. This real-world validation influences enterprise wireless infrastructure decisions and competitive positioning against Arista and other vendors.",
-    url: "https://blogs.cisco.com/networking/the-less-obvious-headliner-at-bottlerock-2026/"
+    detail: "Hybrid network management is increasingly relevant as enterprises maintain both legacy data center networks and cloud-native infrastructure. For Google Cloud customers this guidance helps with integration between on-premises Cisco infrastructure and GCP networking. The Global Overview dashboard suggests Cisco is responding to customer demand for unified management across its fragmented product portfolio. This also reflects the reality that most enterprises will operate hybrid environments for years during cloud transitions.",
+    url: "https://blogs.cisco.com/networking/ask-the-experts-5-tips-for-hybrid-network-operations-with-global-overview/"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Launches Python UDFs in BigQuery for Complex Data Processing",
-    summary: "BigQuery now supports managed Python user-defined functions in general availability enabling complex procedural logic and ML workflows. The feature addresses limitations of pure SQL for scientific computations and advanced analytics.",
+    title: "Google Cloud Rebrands Log Analytics to Observability Analytics With SQL Query Support",
+    summary: "Google Cloud renamed Log Analytics to Observability Analytics and added the ability to query both logs and traces using SQL. The update aims to provide developers and SREs with better context for troubleshooting applications.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Python UDF support expands BigQuery capabilities for data science workloads that previously required external processing. This enhancement competes with similar capabilities in AWS Redshift and Snowflake for analytics platform differentiation. The managed approach reduces infrastructure overhead for customers implementing custom data transformations.",
-    url: "https://cloud.google.com/blog/products/data-analytics/python-udf-in-bigquery-now-generally-available/"
+    detail: "This is an incremental improvement to Google Clouds observability tooling rather than a fundamental capability change. SQL query support lowers the barrier for teams already familiar with database querying. The rebranding to Observability Analytics signals Googles intent to compete more directly with Datadog and Splunk in the broader observability market.",
+    url: "https://cloud.google.com/blog/products/management-tools/query-logs-and-traces-with-sql-in-observability-analytics/"
   },
   {
-    id: 12, cat: "storage", impact: "low", filler: true,
-    title: "Atlas Scales Hundreds of Restaurant Databases Using Cloud SQL Enterprise Plus",
-    summary: "Restaurant operating system Atlas uses Cloud SQL Enterprise Plus to scale hundreds of merchant databases across Southeast Asia. The deployment supports brands including SaladStop Haidilao and Raffles Hotel.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This customer case study demonstrates Cloud SQL scalability for multi-tenant SaaS applications in the food service vertical. Enterprise Plus edition features enable the performance and reliability required for production restaurant operations. The deployment validates Google Cloud database services against AWS RDS and Azure SQL competition.",
-    url: "https://cloud.google.com/blog/products/databases/how-atlas-scales-hundreds-of-cloud-sql-databases/"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Announces Log Analytics Summary Rules Experience for Improved Query Performance",
+    summary: "Azure released a new portal experience for Summary Rules in Log Analytics that enables aggregation of high-volume log data. The feature stores summarized data in separate tables for improved query performance and reporting.",
+    source: "Azure Updates", age: "today",
+    detail: "This is a standard operational improvement for Azure monitoring services addressing common customer pain points with log query performance. The capability mirrors similar features available in competing observability platforms. For multi-cloud customers this brings Azure closer to parity with Google Cloud observability offerings.",
+    url: "https://azure.microsoft.com/updates?id=562027"
   },
   {
     id: 13, cat: "competition", impact: "low", filler: true,
-    title: "AWS DevOps Agent Adds Release Management for Autonomous Code Assessment",
-    summary: "AWS DevOps Agent now offers release management capabilities in preview reviewing code changes and running autonomous release testing. The feature helps teams ship code to production safely with AI-assisted validation.",
-    source: "AWS News Blog", age: "today",
-    detail: "This DevOps automation enhancement reflects AWS investment in AI-powered software development tooling. The autonomous release testing capability competes with Google Cloud Build and similar CI/CD platforms. AI-assisted code review addresses developer productivity which is a growing competitive dimension.",
-    url: "https://aws.amazon.com/blogs/aws/aws-devops-agent-adds-release-management-capabilities-to-assess-code-changes-before-production-preview/"
+    title: "Azure Migrate Integrates With GitHub Copilot for At-Scale Code Modernization Assessments",
+    summary: "Azure Migrate now integrates with GitHub Copilot Modernization in public preview to deliver code insights at portfolio scale. The integration combines Azure discovery capabilities with Copilots context-aware code analysis.",
+    source: "Azure Updates", age: "today",
+    detail: "This integration leverages Microsofts GitHub acquisition to create differentiated migration tooling. The combination of infrastructure discovery and AI-powered code analysis could accelerate enterprise cloud migrations. For Google Cloud this represents competitive pressure to develop similar AI-assisted migration capabilities.",
+    url: "https://azure.microsoft.com/updates?id=566145"
   },
   {
-    id: 14, cat: "vendor", impact: "low", filler: true,
-    title: "Meta Adopts AV1 Codec for Real-Time Communication Across Video Calling",
-    summary: "Meta deployed AV1 codec for real-time communication addressing rate control device eligibility and error resilience challenges. The multi-year effort spans technical and operational aspects of video calling at scale.",
-    source: "Meta Engineering", age: "today",
-    detail: "AV1 adoption for RTC demonstrates continued codec evolution for bandwidth-efficient video delivery. The technical challenges Meta solved provide insights applicable to other large-scale video infrastructure deployments. This investment affects content delivery network and video processing infrastructure decisions.",
-    url: "https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/"
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "NAIRR Science Program Leverages NVIDIA AI Infrastructure for 700 Research Projects",
+    summary: "The National AI Research Resource pilot program has supported over 700 research projects across protein prediction and disease outbreak management. NVIDIA contributed cloud-based resources giving researchers dedicated access to AI infrastructure.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This public-private partnership demonstrates the importance of accessible AI compute for academic research. The program validates NVIDIA infrastructure as the default choice for federally-funded AI research. For Google this represents an opportunity to expand TPU access for similar research initiatives.",
+    url: "https://blogs.nvidia.com/blog/nairr-scientific-research-ai-infrastructure/"
   },
   {
-    id: 15, cat: "competition", impact: "low", filler: true,
-    title: "Databricks Launches AI Agent Coworker at Data Plus AI Conference",
-    summary: "Databricks announced AI agent coworker capabilities at its annual conference positioning agents as central to enterprise AI strategy. The company continues to defer IPO while expanding its AI platform offerings.",
-    source: "SiliconANGLE News", age: "3 days ago",
-    detail: "Databricks agent strategy competes with Google Vertex AI agent builder and AWS Bedrock agent capabilities. The enterprise data platform positioning creates overlap with BigQuery and cloud data warehouse competition. Continued private status allows aggressive investment without public market scrutiny.",
-    url: "https://siliconangle.com/2026/06/19/trump-kneecaps-anthropic-spacex-bags-cursor-databricks-debuts-ai-agent-coworker/"
+    id: 15, cat: "storage", impact: "low", filler: true,
+    title: "Apple Warns of Device Price Increases Due to AI-Driven Memory Chip Cost Surge",
+    summary: "Apple is planning price increases on devices as memory chip costs surge driven by AI demand across the industry. The increases highlight broader supply chain pressures affecting consumer electronics.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Rising memory costs reflect the massive demand for DRAM and NAND from AI infrastructure buildout. This supply-demand imbalance affects not just consumer devices but also cloud infrastructure costs. For hyperscalers including Google this validates concerns about component availability and pricing for AI server builds.",
+    url: "https://cryptobriefing.com/apple-price-increases-memory-chip-costs/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The JUPITER exascale supercomputer deployment showcases NVIDIA Quantum-X800 InfiniBand as the networking backbone for Europes first exascale system, establishing a competitive benchmark that Googles networking solutions must address as TPU clusters scale toward exascale configurations. Amazons exploration of selling Trainium chips to third-party data centers combined with Googles own circular financing tactics for TPU adoption signals intensifying hyperscaler competition where custom silicon distribution strategies are becoming as critical as chip performance itself. NVIDIAs 45C liquid cooling announcement for AI servers reduces thermal infrastructure requirements and could influence storage system thermal envelopes in high-density GPU deployments, warranting monitoring for implications on co-located storage architecture decisions.";
+const STATIC_BRIEF = "The 3.2 billion dollar Lake Mariner investment represents a major commitment to TPU infrastructure that will require substantial networking and storage architecture decisions for the western New York cluster, positioning Google to compete directly with NVIDIA which now powers 81 percent of TOP500 supercomputers and dominates efficiency rankings. Upscale AI raising 190 million to challenge Cisco in AI networking creates both competitive pressure and potential partnership opportunity as the startup targets AI chip connectivity infrastructure that could complement or compete with Google Cloud networking offerings. AWS Lambda MicroVMs with 8-hour state preservation and VM-level isolation signal hyperscaler focus on specialized AI compute primitives that may influence how Google architects sandboxed AI workloads across its own infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
