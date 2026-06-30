@@ -918,5 +918,20 @@
   "https://azure.microsoft.com/updates?id=564772": "2026-06-29",
   "https://blogs.nvidia.com/blog/firefly-aerospace-nvidia-jetson-lunar-orbit/": "2026-06-29",
   "https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/": "2026-06-29",
-  "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-cloud-security-uses-ai-internally/": "2026-06-29"
+  "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-cloud-security-uses-ai-internally/": "2026-06-29",
+  "https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/": "2026-06-30",
+  "https://blogs.nvidia.com/blog/anthropic-nvidia-gb300-blackwell-ultra-microsoft-azure/": "2026-06-30",
+  "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/": "2026-06-30",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/phased-aws-transit-gateway-to-aws-cloud-wan-migration-with-terraform-and-network-mcp-server/": "2026-06-30",
+  "https://aws.amazon.com/blogs/storage/integrating-amazon-fsx-for-netapp-ontap-and-amazon-fsx-for-windows-file-server-with-microsoft-entra-id/": "2026-06-30",
+  "https://financialpost.com/pmn/business-wire-news-releases-pmn/zilliz-launches-loon-a-lake-native-storage-engine-that-lets-one-copy-of-vector-data-serve-every-ai-workload": "2026-06-30",
+  "https://www.phantafield.com/whitepaper": "2026-06-30",
+  "https://cryptobriefing.com/spacex-ai-customers-28-billion-revenue/": "2026-06-30",
+  "https://www.globenewswire.com/news-release/2026/06/29/3318722/0/en/Data-Center-as-a-Service-Market-Size-to-Reach-1-400-6-Billion-by-2035-as-AI-Infrastructure-and-Cloud-Adoption-Accelerate-Worldwide-Report-by-SNS-Insider.html": "2026-06-30",
+  "https://blogs.cisco.com/datacenter/protecting-against-rising-cybersecurity-risks-in-data-centers/": "2026-06-30",
+  "https://azure.microsoft.com/en-us/blog/accelerate-modern-linux-workloads-with-azure-files/": "2026-06-30",
+  "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-agentic-cx-designer-for-amazon-connect-customer-ec2-ami-watermarks-open-governance-for-mysql-and-more-june-29-2026/": "2026-06-30",
+  "https://aws.amazon.com/blogs/storage/simplify-workforce-data-access-with-aws-transfer-family-web-apps-and-terraform/": "2026-06-30",
+  "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/": "2026-06-30",
+  "https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/": "2026-06-30"
 }
