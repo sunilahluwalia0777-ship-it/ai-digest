@@ -933,5 +933,20 @@
   "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-agentic-cx-designer-for-amazon-connect-customer-ec2-ami-watermarks-open-governance-for-mysql-and-more-june-29-2026/": "2026-06-30",
   "https://aws.amazon.com/blogs/storage/simplify-workforce-data-access-with-aws-transfer-family-web-apps-and-terraform/": "2026-06-30",
   "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/": "2026-06-30",
-  "https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/": "2026-06-30"
+  "https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/": "2026-06-30",
+  "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/": "2026-07-01",
+  "https://cloud.google.com/blog/topics/developers-practitioners/scaling-llm-inference-multi-node-kv-cache-offloading-with-gke-managed-lustre/": "2026-07-01",
+  "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/": "2026-07-01",
+  "https://cryptobriefing.com/helix-data-center-acquisition-ai-infrastructure/": "2026-07-01",
+  "https://cryptobriefing.com/anthropic-claude-nvidia-gb300-azure/": "2026-07-01",
+  "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/": "2026-07-01",
+  "https://cloud.google.com/blog/products/databases/the-power-of-multi-model-spanner-for-the-agentic-era/": "2026-07-01",
+  "https://www.globenewswire.com/news-release/2026/06/30/3319936/28124/en/Global-Hyperscale-Data-Center-GPU-Market-to-Reach-USD-81-95-Billion-by-2031-Driven-by-AI-and-ML-Workloads.html": "2026-07-01",
+  "https://blogs.cisco.com/networking/embedded-network-security-the-ultimate-defense-against-ai-driven-threats/": "2026-07-01",
+  "https://www.businessinsider.com/ai-data-centers-making-memory-shortage-worse-2026-6#article": "2026-07-01",
+  "https://cloud.google.com/blog/topics/developers-practitioners/announcing-claude-apps-gateway-for-google-cloud/": "2026-07-01",
+  "https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/": "2026-07-01",
+  "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/": "2026-07-01",
+  "https://aws.amazon.com/blogs/networking-and-content-delivery/intelligent-vpn-observability-decoding-aws-site-to-site-vpn-logs/": "2026-07-01",
+  "https://www.digitalcommerce360.com/2026/06/29/td-synnex-revenue-ai-q2fy26/": "2026-07-01"
 }
