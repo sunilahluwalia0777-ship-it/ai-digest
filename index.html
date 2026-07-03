@@ -648,123 +648,115 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "competition", impact: "high", filler: false,
-    title: "Meta Plans Cloud Infrastructure Business to Compete with AWS Azure and Google Cloud",
-    summary: "Meta is developing plans to sell AI models and computing capacity through a new cloud infrastructure business according to Bloomberg reports. The stock jumped more than 10 percent on the news as investors responded positively to the diversification strategy.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "Meta entering the cloud infrastructure market represents a significant competitive threat to Google Cloud and other hyperscalers. The company has invested heavily in AI data centers and GPU capacity which it could now monetize externally rather than using solely for internal workloads. This move would transform Meta from a customer of cloud services into a direct competitor leveraging its massive infrastructure investments. For Google Cloud the timing is notable as it comes during intense competition for AI workloads where capacity availability is a key differentiator.",
-    url: "https://cryptobriefing.com/meta-cloud-infrastructure-aws-azure-competition/"
+    title: "Meta Plans Cloud Computing Business to Compete Directly with AWS and Azure",
+    summary: "Meta is developing a cloud infrastructure business called Meta Compute that would sell AI computing power and model access to external developers. The move would put Meta in direct competition with established hyperscalers and could reshape the competitive landscape.",
+    source: "TechRadar", age: "1 day ago",
+    detail: "This represents a significant strategic pivot for Meta from pure consumer services into enterprise cloud infrastructure. The company is reportedly considering two models: hosted AI model access or raw compute capacity sales. For Google Cloud this creates a new well-capitalized competitor with massive existing GPU infrastructure built for internal AI workloads. Metas aggressive AI capex spending suddenly has a potential revenue offset beyond advertising. The timing suggests Meta sees structural overcapacity in its AI buildout or believes the cloud market opportunity justifies the expansion.",
+    url: "https://www.techradar.com/pro/meta-reportedly-wants-to-start-a-cloud-computing-business-to-compete-with-aws-azure-and-others"
   },
   {
-    id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Unlocks AI Compute at Scale Inviting Capital Partners to Power Infrastructure Buildout",
-    summary: "NVIDIA announced initiatives to enable large scale multi tenant accelerated computing that can come online quickly and support token scale AI services. The program targets emerging AI companies that historically struggled to access production grade inference infrastructure.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This announcement signals NVIDIAs strategic pivot toward infrastructure economics as AI moves from model development to production inference at scale. The focus on multi tenant accelerated computing directly addresses the capacity constraints facing AI companies trying to scale inference workloads. For Google Cloud this creates both partnership opportunities and competitive pressure as NVIDIA builds alternative paths to GPU access. The emphasis on token scale AI services reflects the industrys recognition that inference rather than training will drive long term compute demand.",
-    url: "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/"
+    id: 2, cat: "networking", impact: "high", filler: false,
+    title: "Cisco Launches Nexus One Architecture Supporting ACI NX-OS and SONiC for AI Data Centers",
+    summary: "Cisco unveiled Nexus One a next-generation data center networking architecture designed to standardize networks across multi-fabric environments. The platform supports ACI NX-OS and the open-source SONiC operating system to accelerate AI infrastructure deployment.",
+    source: "Cisco.com", age: "1 day ago",
+    detail: "Ciscos embrace of SONiC alongside proprietary ACI signals recognition that hyperscalers and large enterprises want optionality in network operating systems. This architecture directly addresses the challenge of managing heterogeneous fabrics as AI workloads scale. For Google the SONiC support is notable given Googles role in developing and deploying SONiC in its own infrastructure. The multi-fabric flexibility could ease integration challenges when connecting Cisco-based enterprise networks to cloud backends. This positions Cisco to compete more effectively against Arista in AI data center deployments.",
+    url: "https://blogs.cisco.com/?p=494419"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "Cisco Nexus One Launches Next Generation Data Center Networking Architecture",
-    summary: "Cisco announced Nexus One as its next evolution in data center networking featuring an open flexible architecture supporting ACI NX-OS and SONiC. The platform is designed to power critical AI workloads with build your way flexibility.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "Ciscos Nexus One represents a direct response to the AI networking requirements driving data center modernization. The multi-OS support including SONiC reflects customer demand for flexibility and avoidance of vendor lock-in particularly as AI clusters require specialized network configurations. For Google as a hyperscaler this is relevant for partnerships and competitive positioning in enterprise hybrid deployments. The explicit AI workload focus confirms that networking vendors are aligning product strategies around GPU cluster connectivity requirements.",
-    url: "https://blogs.cisco.com/datacenter/cisco-nexus-one-next-generation-data-center-networking-architecture/"
+    id: 3, cat: "silicon", impact: "high", filler: false,
+    title: "D-Matrix Corsair Inference Chip Enters Production Claiming 10x Faster Token Generation",
+    summary: "D-Matrix announced its Corsair AI inference accelerator is in full production and shipping this month claiming 10x faster token generation than GPUs. The chip targets inference workloads with a fundamentally different architecture than traditional GPU approaches.",
+    source: "Bitrebels.com", age: "1 day ago",
+    detail: "Corsairs production milestone matters because inference compute demand is exploding as enterprises deploy AI at scale. The 10x token generation claim if validated could significantly reduce cost-per-token for large language model serving. This creates potential competitive pressure on NVIDIA for inference-specific workloads though training remains GPU-dominated. For Google managing TPU and GPU infrastructure the emergence of specialized inference silicon adds complexity to hardware procurement decisions. The timing aligns with growing customer demand for more cost-efficient inference endpoints.",
+    url: "https://bitrebels.com/technology/d-matrix-corsair-ai-inference-chip-claims-10x-faster-token-generation-than-gpus/"
   },
   {
-    id: 4, cat: "vendor", impact: "medium", filler: false,
-    title: "Marvell Technology vs Broadcom Analysis Shows Divergent AI Infrastructure Positioning",
-    summary: "Analysis comparing Marvell and Broadcom Q1 FY2027 results highlights different strategic positions in the AI infrastructure market. Both companies reported AI heavy quarters but with distinct approaches to custom silicon and networking.",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "This competitive analysis is directly relevant to Google given its relationships with both Broadcom for custom TPU silicon and Marvell for networking components. The divergent strategies between these vendors affect supply chain planning and negotiating leverage for hyperscalers. Understanding which vendor is better positioned helps inform procurement decisions and partnership strategies. The AI heavy quarter results from both companies confirm sustained demand for custom silicon and networking infrastructure supporting AI deployments.",
-    url: "https://247wallst.com/investing/2026/07/01/marvell-technology-vs-broadcom-one-stock-is-better-positioned-for-the-ai-boom/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Citi Issues Warning on Semiconductor and Hyperscaler Stock Valuations",
+    summary: "Citi analysts warned that semiconductor stocks have become the most crowded trade in 2026 with memory margins at record levels. The warning signals potential valuation risk across the AI infrastructure supply chain including hyperscalers.",
+    source: "TheStreet", age: "1 day ago",
+    detail: "This analyst warning reflects growing concern that AI infrastructure spending may face near-term headwinds despite strong underlying demand. Record memory margins suggest pricing power that may not be sustainable as capacity expands. For Google and other hyperscalers this creates tension between aggressive AI buildout plans and investor pressure on capital efficiency. The crowded trade dynamic means any demand slowdown signals could trigger amplified stock reactions across the ecosystem. Infrastructure planning teams should monitor whether this sentiment shifts procurement leverage.",
+    url: "https://www.thestreet.com/investing/stocks/citi-sends-warning-on-semiconductor-and-hyperscaler-stocks"
   },
   {
-    id: 5, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Storage Mover Now Supports Migration from Google Cloud Storage to Azure Blob",
-    summary: "Microsoft announced public preview of Azure Storage Mover support for migrating data from Google Cloud Storage to Azure Blob Storage. The feature uses S3 compatible interfaces to enable cloud to cloud data migration.",
-    source: "Azure Updates", age: "today",
-    detail: "This direct competitor feature targeting Google Cloud Storage customers represents an aggressive play by Azure to capture cloud migration workloads. The use of S3 compatible interfaces demonstrates the importance of API standardization in enabling cloud portability. For Google Cloud this creates defensive pressure to ensure customer retention and potentially develop reciprocal migration tools. The feature also highlights how storage remains a key battleground for hyperscaler competition with data gravity being a primary factor in cloud lock-in.",
-    url: "https://azure.microsoft.com/updates?id=566948"
+    id: 5, cat: "silicon", impact: "medium", filler: false,
+    title: "AI Chip Demand Strong but Component Shortages Emerge as Critical Challenge Says Nomura",
+    summary: "Nomura reports that AI infrastructure buildout now faces critical component shortages beyond just chip availability. Supply constraints across the AI hardware stack are emerging as the next major challenge for hyperscaler expansion.",
+    source: "The Times of India", age: "1 day ago",
+    detail: "This analysis highlights that the AI infrastructure bottleneck is shifting from chip supply to broader component availability. Shortages in power delivery networking components and cooling systems can constrain data center deployment velocity regardless of GPU or TPU availability. For Google infrastructure planning this means procurement strategies must address the full bill of materials not just accelerators. The report suggests 2026-2027 capacity expansion timelines may face delays from unexpected component constraints. This reinforces the strategic value of vertical integration and supply chain diversification.",
+    url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-chip-demand-stays-strong-but-component-shortages-emerge-as-next-challenge-nomura/articleshow/132137866.cms"
   },
   {
-    id: 6, cat: "storage", impact: "medium", filler: false,
-    title: "AWS Introduces Zero Downtime S3 Versioning for Mission Critical Workloads",
-    summary: "AWS published architectural patterns for implementing Amazon S3 versioning without downtime for organizations operating global scale distributed edge networks. The guidance addresses cache TTL configurations and origin fallback scenarios.",
-    source: "AWS Storage", age: "today",
-    detail: "This AWS storage guidance reflects the operational maturity required for mission critical AI and content delivery workloads. The focus on aggressive TTL configurations and cache miss handling is directly relevant to AI inference serving architectures where latency is critical. For Google Cloud Storage teams this sets a benchmark for enterprise storage capabilities and documentation quality. The patterns described are applicable to any hyperscaler operating large scale object storage with stringent availability requirements.",
-    url: "https://aws.amazon.com/blogs/storage/zero-downtime-amazon-s3-versioning-architectural-patterns-for-mission-critical-workloads/"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Fortune Questions US AI Data Center Strategy as Middle East Offers Cheaper Power",
+    summary: "Industry executives question whether US data center investments will age well given dramatically cheaper power costs available in regions like Saudi Arabia. The analysis suggests AI infrastructure geography could shift significantly within two years.",
+    source: "Fortune", age: "1 day ago",
+    detail: "This perspective challenges the assumption that US-centric AI infrastructure buildout is optimal long-term. Energy costs represent an increasingly significant portion of AI compute total cost of ownership as model sizes and inference volumes grow. For hyperscalers with global footprints the calculus around data center location is evolving beyond latency and regulatory considerations to raw power economics. Googles existing Middle East infrastructure could provide competitive advantage if power arbitrage becomes more important. The two-year timeline mentioned suggests near-term strategic decisions have long-term geographic implications.",
+    url: "https://fortune.com/2026/07/02/meta-cloud-computing-detour-not-strategy-for-attention/"
   },
   {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Blob Storage Adds Client Side Data Integrity with CRC64 NVME SDK Integration",
-    summary: "Azure announced general availability of CRC64 NVME integration in Azure Blob Storage SDKs for .NET C++ and JavaScript. The feature builds on data integrity validation capabilities first introduced in 2019.",
-    source: "Azure Updates", age: "today",
-    detail: "Client side data integrity protections are increasingly important as AI training and inference workloads require guaranteed data consistency across distributed storage systems. The CRC64 NVME standard offers better performance characteristics than MD5 for modern NVMe storage architectures. For Google Cloud Storage this represents feature parity pressure requiring similar SDK level integrity guarantees. The multi language SDK support reflects enterprise requirements for consistent data validation across heterogeneous application environments.",
-    url: "https://azure.microsoft.com/updates?id=566895"
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Launches ACME Protocol Support for Automated Public TLS Certificate Management",
+    summary: "AWS Certificate Manager now supports the ACME protocol enabling automated certificate issuance and renewal through any ACMEv2 compatible client. The feature adds centralized governance and IAM-based access controls for certificate lifecycle management.",
+    source: "AWS News Blog", age: "today",
+    detail: "This enhancement reduces operational friction for customers managing TLS certificates at scale across hybrid environments. ACME protocol support means customers can use existing tooling rather than AWS-specific APIs for certificate automation. For competitive positioning this brings AWS closer to feature parity with solutions like Lets Encrypt while adding enterprise governance capabilities. The timing matters as certificate lifetimes continue shrinking requiring more automation. Google Cloud certificate management offerings should be evaluated for similar protocol flexibility.",
+    url: "https://aws.amazon.com/blogs/aws/automate-public-tls-certificate-issuance-with-acme-support-in-aws-certificate-manager/"
   },
   {
     id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "South Korea Chipmakers Samsung and SK Hynix to Invest 590 Billion in New Factories",
-    summary: "Samsung and SK Hynix announced plans to invest approximately 590 billion dollars in new chip factories to address the components crisis affecting consumer electronics and AI infrastructure. The investment aims to relieve memory supply constraints.",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "This massive investment by Korean memory manufacturers directly impacts AI infrastructure given the critical role of HBM and other memory technologies in GPU and TPU systems. The scale of investment reflects the sustained demand outlook for AI accelerator memory. For Google Cloud this affects both TPU memory supply chains and the broader economics of AI infrastructure buildout. The framing around ending component shortages suggests memory supply has been a binding constraint on AI infrastructure deployment velocity.",
-    url: "https://finance.yahoo.com/technology/articles/south-korea-rescue-worlds-biggest-113500553.html"
+    title: "SK Hynix IPO Triggers Launch of Long and Short ETFs for Memory Chip Trading",
+    summary: "Themes ETFs launched both bullish and bearish SK Hynix ETFs coinciding with the memory makers highly anticipated US public offering. The products give traders instant exposure to one of AIs most critical component suppliers.",
+    source: "PRNewswire", age: "1 day ago",
+    detail: "SK Hynix public listing creates new dynamics for the AI memory supply chain with increased financial transparency and market scrutiny. The simultaneous launch of long and short ETFs reflects high investor interest and uncertainty about memory pricing sustainability. For Google and other hyperscalers SK Hynix is a critical HBM supplier making its financial health and capacity expansion plans directly relevant to infrastructure roadmaps. The IPO timing during peak AI spending suggests confidence in sustained demand. Procurement teams should monitor how public market pressures affect SK Hynix pricing and allocation strategies.",
+    url: "https://www.prnewswire.com/news-releases/themes-etfs-strikes-first-again-long-and-short-sk-hynix-etfs-launch-alongside-one-of-ais-most-anticipated-ipos-302816367.html"
   },
   {
     id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "OXMIQ Raises 35 Million to Scale OxCore GPU Architecture Founded by Raja Koduri",
-    summary: "OXMIQ Labs founded by former Intel graphics chief Raja Koduri closed a 35 million Series A bringing total funding to 60 million. The capital will scale OxCore the companys licensable unified GPU and AI architecture.",
-    source: "Financial Post", age: "1 day ago",
-    detail: "Raja Koduris new venture represents potential disruption to the GPU silicon landscape currently dominated by NVIDIA. A licensable GPU and AI architecture could enable hyperscalers including Google to develop custom accelerators with less dependence on incumbent vendors. The 60 million total funding indicates serious investor confidence in alternative GPU architectures. For Google Cloud this creates optionality in long term silicon strategy beyond current TPU and NVIDIA GPU approaches.",
-    url: "https://financialpost.com/pmn/business-wire-news-releases-pmn/oxmiq-raises-35-million-to-scale-oxcore-architecture"
+    title: "Alphabet Dow Jones Entry Highlights Googles Unusual AI Position",
+    summary: "Alphabets addition to the Dow Jones Industrial Average spotlights the companys unique position in the AI race. Analysts note Google faces distinct challenges compared to other hyperscalers in monetizing AI investments.",
+    source: "TheStreet", age: "2 days ago",
+    detail: "Dow inclusion brings increased institutional ownership requirements and index fund flows to Alphabet stock. The unusual AI problem framing suggests analysts see Googles AI monetization path as less clear than competitors despite strong technical capabilities. This perception gap between AI research leadership and commercial execution creates both risk and opportunity. For the infrastructure organization demonstrating clear ROI on GPU and TPU investments becomes increasingly important for corporate narrative. The stock rally indicates market confidence but also raises expectations for AI revenue materialization.",
+    url: "https://www.thestreet.com/investing/alphabet-stock-rally-exposes-googles-unusual-ai-problem"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "low", filler: false,
-    title: "Cisco Deploying AI Agents to All 90000 Employees Including CFO",
-    summary: "Cisco CFO Mark Patterson is helping lead the companys rollout of AI agents to every one of its 90000 employees. The initiative demonstrates enterprise scale AI deployment including specialized agents for finance functions.",
-    source: "Fortune", age: "1 day ago",
-    detail: "Ciscos internal AI agent deployment at scale provides a reference case for enterprise AI adoption patterns that hyperscalers support. The CFO involvement signals AI agents moving beyond IT into core business functions. For Google Cloud this represents both a customer use case template and competitive intelligence on how major enterprises are structuring AI deployments. The 90000 employee scale demonstrates the infrastructure requirements for enterprise wide agent platforms.",
-    url: "https://fortune.com/2026/07/01/cisco-cfo-ai-agents-finance-employees-mark-patterson/"
+    id: 10, cat: "storage", impact: "low", filler: true,
+    title: "AWS Introduces Step Functions Workflow for Cross-Region S3 Bucket Configuration Replication",
+    summary: "AWS released a Step Functions based solution to replicate S3 bucket configurations across regions addressing years of accumulated manual settings. The tool helps organizations standardize storage configurations that were created through various methods over time.",
+    source: "AWS Storage", age: "today",
+    detail: "This addresses a real operational pain point for enterprises with organically grown S3 deployments across multiple regions. Configuration drift between buckets creates compliance and security risks that are difficult to audit manually. The Step Functions approach provides a serverless automation pattern that could inform similar GCP storage management tooling. For multi-cloud customers this capability gap analysis matters when evaluating storage platform choices.",
+    url: "https://aws.amazon.com/blogs/storage/replicate-amazon-s3-bucket-configurations-across-aws-regions-with-aws-step-functions/"
   },
   {
     id: 11, cat: "storage", impact: "low", filler: true,
-    title: "AlloyDB AI Functions Deliver Performance Boosts and Cost Savings for AI Workloads",
-    summary: "Google Cloud announced enhanced AlloyDB AI functions with performance improvements and cost reductions for AI native database workloads. Features include vector and hybrid search plus natural language to SQL capabilities.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "AlloyDB enhancements strengthen Google Clouds position in AI native database workloads particularly for agentic applications requiring embedded AI capabilities. The vector search and natural language SQL features address growing demand for AI integrated data platforms. These capabilities differentiate Google Cloud storage offerings from competitors focused primarily on traditional database workloads.",
-    url: "https://cloud.google.com/blog/products/databases/boost-performance-and-lower-costs-with-alloydb-ai-functions/"
+    title: "AWS Enables Instant S3 Access Log Queries via CloudWatch and S3 Tables Integration",
+    summary: "AWS now allows instant querying of S3 access logs through CloudWatch and S3 Tables integration eliminating traditional log processing delays. The feature supports security investigations compliance audits and performance troubleshooting use cases.",
+    source: "AWS Storage", age: "today",
+    detail: "Real-time access log analysis addresses a gap that previously required custom ETL pipelines or delayed batch processing. Security teams can now investigate suspicious access patterns without waiting for log aggregation cycles. This enhancement makes AWS storage auditing more competitive with enterprise expectations for observability. The architecture pattern of treating logs as queryable tables rather than files reflects broader industry movement toward unified data platforms.",
+    url: "https://aws.amazon.com/blogs/storage/query-amazon-s3-access-logs-instantly-with-cloudwatch-and-s3-tables/"
   },
   {
     id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Introduces Kubernetes Version Rollbacks for Amazon EKS Cluster Upgrades",
-    summary: "AWS announced Kubernetes version rollbacks for Amazon EKS enabling customers to reverse cluster upgrades within seven days without rebuilding. The feature provides a safety net for upgrade failures reducing operational risk.",
-    source: "AWS News Blog", age: "today",
-    detail: "EKS rollback capabilities address a common pain point in Kubernetes operations where failed upgrades previously required cluster rebuilds. This improves operational resilience for containerized AI workloads running on AWS. For Google Cloud GKE teams this establishes competitive feature expectations for Kubernetes management tooling.",
-    url: "https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/"
+    title: "Azure Databricks Now Offers Anthropic Claude Sonnet 5 Through AI Model Serving",
+    summary: "Azure Databricks added support for Anthropic Claude Sonnet 5 delivering near-Opus intelligence at Sonnet cost and speed levels. The model is described as Anthropics most agentic Sonnet release to date.",
+    source: "Azure Updates", age: "today",
+    detail: "This expansion of third-party model availability on Azure reflects the multi-model strategy hyperscalers are adopting. Customers increasingly want choice in foundation models rather than lock-in to provider-specific options. The agentic capabilities emphasis suggests enterprise demand for models that can execute complex multi-step workflows. For Google Cloud competitive positioning requires similar breadth of model partnerships alongside Gemini offerings.",
+    url: "https://azure.microsoft.com/updates?id=567194"
   },
   {
     id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Asia Pacific Leads Green Data Center Expansion with Over 30 Percent Annual Growth",
-    summary: "The Asia Pacific region is experiencing the fastest green data center expansion globally exceeding 30 percent annual growth. Investment spans hyperscale edge and renewable energy models across IT telecom and government sectors.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "Green data center growth in Asia Pacific reflects both regulatory pressure and sustainability commitments from hyperscalers operating in the region. The 30 percent growth rate indicates significant infrastructure investment opportunities. For Google Cloud this affects regional capacity planning and sustainability reporting requirements.",
-    url: "https://www.globenewswire.com/news-release/2026/07/01/3320426/28124/en/Asia-Pacific-Leads-Green-Data-Center-Expansion-Fastest-Growth-Over-30-Annually-Surpassing-North-America-and-Europe.html"
+    title: "Azure Introduces Instant Access for VM Restore Points Reducing Recovery Time",
+    summary: "Azure launched Instant Access for VM Restore Points enabling immediate disk restoration without waiting for background data replication. The feature significantly reduces recovery time objectives for enterprise disaster recovery scenarios.",
+    source: "Azure Updates", age: "today",
+    detail: "Faster recovery capabilities address a persistent enterprise concern about cloud-based backup and disaster recovery. Eliminating the replication wait time removes a traditional tradeoff between backup frequency and recovery speed. This enhancement makes Azure more competitive for mission-critical workloads where RTO requirements are stringent. Storage and backup architecture decisions increasingly influence overall cloud platform selection for regulated industries.",
+    url: "https://azure.microsoft.com/updates?id=565758"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Organized Crime Targets AI Data Center Supply Chains with 1.3 Million in Recovered Theft",
-    summary: "Law enforcement recovered 1.3 million in stolen copper servers and storage drives as organized crime rings increasingly target AI data center supply chains. Copper and compute equipment are now top targets exposing infrastructure vulnerabilities.",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "Supply chain theft targeting AI infrastructure components represents an emerging operational security concern for data center operators. The focus on copper and storage drives reflects the high value of these components in AI buildouts. For Google Cloud this highlights physical security requirements for supply chain and construction sites during the infrastructure expansion phase.",
-    url: "https://finance.yahoo.com/technology/ai/articles/1-3m-stolen-copper-gear-100000256.html"
-  },
-  {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Physical AI Market Projected to Exceed 430 Billion by 2030 Across Nine Sectors",
-    summary: "The Physical AI market is forecast to surpass 430 billion dollars by 2030 spanning industrial automation autonomous vehicles robots and smart infrastructure. Opportunities include fleet scale orchestration and safety certification.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "Physical AI market projections indicate substantial growth in robotics and autonomous systems requiring edge and cloud infrastructure. The nine sector breakdown helps identify where AI compute demand will emerge beyond current software focused workloads. For Google Cloud this informs product roadmap priorities for edge computing and robotics platforms.",
-    url: "https://www.globenewswire.com/news-release/2026/07/01/3320809/28124/en/Physical-AI-Market-Set-to-Surpass-430-Billion-by-2030-Driven-by-Nine-Key-Vertical-Sectors.html"
+    id: 14, cat: "silicon", impact: "low", filler: true,
+    title: "Intel Stock Surges 160 Percent in 2026 on AI Momentum and Foundry Progress",
+    summary: "Intel shares have risen dramatically in 2026 driven by AI initiatives and manufacturing advancements under new leadership. The turnaround positions Intel as a potential key player in AI infrastructure despite recent pullbacks.",
+    source: "Ibtimes.com.au", age: "1 day ago",
+    detail: "Intels recovery matters for the broader AI infrastructure ecosystem as a potential alternative to NVIDIA and AMD for certain workloads. The foundry progress is particularly relevant for customers seeking supply chain diversification away from TSMC concentration. For Google the Intel trajectory affects both chip procurement options and potential custom silicon manufacturing partnerships. The stock performance suggests market belief that Intel can execute on its ambitious roadmap though execution risk remains significant.",
+    url: "https://www.ibtimes.com.au/intel-2026-turnaround-ai-manufacturing-stock-surge-1871712"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Meta entering cloud infrastructure represents a significant competitive threat as another hyperscaler with massive AI workloads could leverage its internal expertise to compete directly with Google Cloud on AI model hosting and compute capacity. The Samsung and SK Hynix 590 billion dollar investment signals long-term memory supply relief that could ease HBM constraints currently limiting GPU and TPU scaling across all hyperscalers. Cisco Nexus One launching with SONiC support validates open networking momentum and creates both partnership opportunities and competitive pressure for Google Cloud networking offerings.";
+const STATIC_BRIEF = "Cisco Nexus One architecture supporting both ACI NX-OS and open-source SONiC signals enterprise customers now expect flexible multi-fabric networking options for AI data centers, which directly impacts how Google Cloud should position its networking stack against hybrid deployment demands. Meta Compute entering the cloud infrastructure market creates a new hyperscaler competitor with massive AI model assets and existing developer relationships, intensifying pressure on Google Cloud to differentiate its GPU and TPU offerings beyond raw compute availability. Nomura warning on component shortages beyond chips suggests networking and storage components may face supply constraints that could bottleneck AI infrastructure expansion even when accelerators are available.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
