@@ -647,116 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Meta Enters AI Cloud Market Selling Compute Capacity to Challenge AWS Azure and Google",
-    summary: "Meta is building a cloud infrastructure business to sell AI compute capacity externally as a hedge against its massive capital expenditures. This positions Meta as a direct competitor to established hyperscalers in the AI infrastructure market.",
-    source: "24/7 Wall St.", age: "2 days ago",
-    detail: "Metas move into commercial AI cloud services represents a significant shift in competitive dynamics for GPU and TPU infrastructure. The company has invested heavily in custom silicon and large-scale data centers for internal AI workloads. Monetizing excess capacity creates a new revenue stream while intensifying price competition among hyperscalers. For Google this means another well-capitalized competitor with deep AI expertise entering the market. The implications for networking and storage vendors supplying Meta infrastructure could be substantial as commercial SLAs differ from internal requirements.",
-    url: "https://biztoc.com/x/ebc3e5b335dbf025"
+    id: 1, cat: "networking", impact: "high", filler: false,
+    title: "Arista Unveils R4 Platform Family with 3.2 Tbps Port Speeds for AI Data Centers",
+    summary: "Arista Networks announced next-generation R4 product family featuring port speeds up to 3.2 Tbps to meet growing AI and cloud infrastructure demands. The new platforms anchor on EOS operating system and target hyperscale data center deployments.",
+    source: "Arista Blog", age: "today",
+    detail: "Aristas R4 family represents a significant leap in data center networking capacity specifically designed for AI workloads. The 3.2 Tbps port speeds address the bandwidth requirements of large-scale GPU clusters where network bottlenecks can severely impact training performance. This positions Arista competitively against Cisco and other vendors pursuing the lucrative AI networking market. For Google Cloud infrastructure teams the announcement signals continued industry momentum toward higher-speed fabrics that will influence procurement and architecture decisions.",
+    url: "https://blogs.arista.com/blog/arista-extends-dc-ai-leadership-with-new-platforms-higher-speed"
   },
   {
-    id: 2, cat: "storage", impact: "high", filler: false,
-    title: "Data Center Memory Demand to Reach 1.4 Trillion Dollars by 2030 as AI Creates Supply Bottleneck",
-    summary: "AI-driven memory demand is projected to reach 1.4 trillion dollars by 2030 with AI racks creating significant supply constraints. The surge could reshape global supply chains and intensify market volatility for HBM DRAM and storage components.",
-    source: "Crypto Briefing", age: "today",
-    detail: "This projection underscores the critical role of memory and storage in AI infrastructure buildouts. HBM demand for GPU and TPU accelerators is a primary driver creating allocation challenges for hyperscalers. The supply bottleneck directly impacts Googles ability to scale AI infrastructure competitively against AWS and Azure. Micron SK Hynix and Samsung are racing to expand capacity but lead times remain extended. Storage vendors must navigate this constrained environment while meeting hyperscaler requirements for performance and density.",
-    url: "https://cryptobriefing.com/data-center-memory-demand-ai-bottleneck-2030/"
+    id: 2, cat: "networking", impact: "high", filler: false,
+    title: "Arista Positions 7800 Chassis as Universal AI Spine for Large Scale GPU Clusters",
+    summary: "Arista is marketing its flagship 7800 chassis as the Universal AI Spine optimized for AI centers with massive scale and lossless fabric capabilities. The architecture builds on leaf-spine designs pioneered for cloud deployments since 2008.",
+    source: "Arista Blog", age: "today",
+    detail: "The positioning of the 7800 as an AI Spine reflects how networking vendors are differentiating products for AI infrastructure requirements versus traditional enterprise workloads. Lossless fabric and ultra-low latency are critical for distributed training where collective operations require tight synchronization across thousands of GPUs. This directly competes with NVIDIAs Spectrum-X and Ciscos efforts in the AI networking space. Google infrastructure teams should evaluate how these spine solutions compare to internal networking approaches and potential integration with TPU pod architectures.",
+    url: "https://blogs.arista.com/blog/powering-ai-centers-with-ai-spines"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "Anthropic Claude to Help Micron Design Better HBM DRAM and SSD for AI Workloads",
-    summary: "Anthropic has partnered with Micron to use Claude AI for designing improved HBM DRAM and SSD products optimized for AI infrastructure. The collaboration focuses on memory and storage solutions tailored for AI-designated consumption.",
-    source: "TechRadar", age: "2 days ago",
-    detail: "This partnership signals a new approach to semiconductor design using AI to accelerate development cycles for AI-optimized components. For Google and other hyperscalers Micron remains a critical supplier of HBM for TPU and GPU deployments. Improved memory designs could enhance performance per watt and density metrics that directly impact data center economics. The collaboration also highlights the growing interdependence between AI model providers and hardware vendors. Storage optimization for AI workloads addresses a persistent bottleneck in training and inference pipelines.",
-    url: "https://www.techradar.com/pro/anthropics-claude-to-help-micron-design-better-hbm-dram-and-ssd-for-ai-even-as-both-companies-refuse-to-address-computational-storage-directly"
+    id: 3, cat: "networking", impact: "medium", filler: false,
+    title: "AI Datacenter Growth Reshaping Optical Transceiver Industry and OSFP Standards",
+    summary: "Arista highlights how AI datacenter requirements are driving fundamental changes in the optical networking industry including OSFP specifications. The shift reflects growing bandwidth demands from GPU cluster interconnects.",
+    source: "Arista Blog", age: "today",
+    detail: "Optical transceivers are becoming a critical bottleneck and cost driver in AI infrastructure as clusters scale beyond single racks. The OSFP form factor evolution shows how AI workloads are pushing industry standards faster than traditional enterprise refresh cycles. Vendors like Broadcom and Marvell who supply optical components stand to benefit significantly from this trend. Infrastructure planning must account for optics availability and pricing volatility as the entire industry races to meet AI datacenter demand.",
+    url: "https://blogs.arista.com/blog/ai-datacenters-are-reshaping-the-optics-industry"
   },
   {
-    id: 4, cat: "vendor", impact: "high", filler: false,
-    title: "Anthropic in Early Talks with Samsung to Manufacture Custom AI Chip",
-    summary: "Anthropic is reportedly in early discussions with Samsung Electronics to produce a custom AI chip though specifications and use cases remain undetermined. The move could reduce Anthropics dependence on NVIDIA for inference and training hardware.",
-    source: "The Information via SiliconANGLE", age: "1 day ago",
-    detail: "This development signals growing vertical integration ambitions among foundation model companies seeking to control their silicon supply chain. Samsung offers advanced foundry capabilities that could compete with TSMC for AI chip manufacturing. For NVIDIA this represents potential demand erosion from a major AI company exploring custom silicon alternatives. The competitive implications extend to Google whose TPU program demonstrates the value of custom AI accelerators. If successful Anthropic would join the ranks of hyperscalers with proprietary AI silicon reducing reliance on merchant vendors.",
-    url: "https://siliconangle.com/2026/07/02/anthropic-reportedly-talks-samsung-manufacture-custom-ai-chip/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Microsoft Reveals Brain AI System Powering Azure Reliability Through Digital Twin",
+    summary: "Microsoft disclosed details about Brain an AI system that creates a digital twin of Azure Service Health to improve reliability operations. The system represents a new approach to managing hyperscale infrastructure complexity.",
+    source: "Azure Blog", age: "today",
+    detail: "Microsofts Brain system demonstrates how hyperscalers are applying AI to manage their own infrastructure at scale. Creating a digital twin of service health enables predictive maintenance and faster incident response which are critical competitive differentiators. This approach could influence how Google Cloud evolves its own reliability engineering practices. The disclosure also highlights the growing complexity of hyperscale operations where traditional monitoring approaches are insufficient.",
+    url: "https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Hyperscalers and Sovereign AI Initiatives Driving Global Data Center Expansion",
-    summary: "AI-optimized data centers are seeing rapid growth driven by hyperscaler investments and sovereign AI initiatives with rising demand for liquid cooling infrastructure. Competitive advantages will stem from power access and cooling innovation.",
-    source: "GlobeNewswire", age: "1 day ago",
-    detail: "The expansion wave reflects sustained capital deployment from AWS Azure Google and regional sovereign cloud initiatives. Liquid cooling adoption is accelerating as GPU and TPU thermal densities exceed air cooling capabilities. Power availability has become the primary constraint in site selection decisions. For networking vendors like Cisco Arista and Broadcom this translates to sustained demand for high-bandwidth low-latency infrastructure. Storage vendors also benefit as AI workloads require massive data pipelines for training datasets and checkpoint storage.",
-    url: "https://www.globenewswire.com/news-release/2026/07/03/3321812/28124/en/Hyperscalers-and-Sovereign-Initiatives-Driving-Forces-Behind-AI-Data-Center-Expansion.html"
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "Claude Models Reach GA on Microsoft Foundry But European Customers Cannot Deploy",
+    summary: "Anthropics Claude models are now generally available on Microsoft Foundry with Azure billing integration but lack European data residency options. Documentation confirms data residency guarantees only apply to AWS Bedrock and Google Vertex AI.",
+    source: "InfoQ.com", age: "1 day ago",
+    detail: "This gap in European availability creates a competitive opening for Google Cloud where Claude is available through Vertex AI with proper data residency. European enterprises with sovereignty requirements will need to choose between Foundry convenience and compliance needs. The situation highlights how multi-cloud AI model availability varies significantly by region and provider. Google PM teams should consider emphasizing Vertex AI data residency capabilities when competing against Azure Foundry in European markets.",
+    url: "https://www.infoq.com/news/2026/07/claude-foundry-ga-europe/"
   },
   {
-    id: 6, cat: "silicon", impact: "medium", filler: false,
-    title: "Northeast Asia Semiconductor Dominance Reshaping Global Tech Supply Chains",
-    summary: "Northeast Asias semiconductor manufacturing dominance continues to reshape global technology supply chains and geopolitical strategies. The concentration of advanced chip production creates dependencies for AI infrastructure deployments.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Taiwan Korea and Japan collectively control critical nodes in the semiconductor supply chain from leading-edge logic to memory and packaging. This geographic concentration creates supply chain risks for hyperscalers dependent on these regions for GPUs TPUs and memory components. Geopolitical tensions add uncertainty to long-term infrastructure planning decisions. For Google diversifying silicon sourcing and investing in domestic capacity become strategic priorities. The implications extend to networking silicon from Broadcom and Marvell which also rely on Asian foundries.",
-    url: "https://cryptobriefing.com/northeast-asia-semiconductor-dominance-crypto-impact/"
+    id: 6, cat: "storage", impact: "medium", filler: false,
+    title: "Samsung Plans Memory Chip Price Increases as AI Server Demand Strains Supply",
+    summary: "Samsung is reportedly preparing contract price increases for memory chips as production cannot keep pace with AI server demand. The supply constraints are expected to persist creating ongoing cost pressures for infrastructure buyers.",
+    source: "Notebookcheck.net", age: "2 days ago",
+    detail: "Memory pricing directly impacts total cost of ownership for AI infrastructure where HBM and high-capacity DRAM represent significant portions of server costs. Samsungs move suggests the memory supply chain remains tight despite capacity investments by all major vendors. Google infrastructure teams should factor sustained memory cost inflation into capacity planning and potentially explore longer-term purchase agreements. This also validates continued investment in memory-efficient model architectures and inference optimization.",
+    url: "https://www.notebookcheck.net/Memory-chip-prices-set-to-jump-again-as-Samsung-moves-to-raise-contract-rates.1334980.0.html"
   },
   {
-    id: 7, cat: "silicon", impact: "medium", filler: false,
-    title: "Full Stack Co-Design Delivering 100X Performance Gains for AI Infrastructure",
-    summary: "SemiAnalysis analysis highlights how full stack co-design across silicon software and systems is delivering up to 100X performance improvements for AI workloads. The approach validates substantial AI infrastructure spending as economically justified.",
-    source: "Next Big Future", age: "2 days ago",
-    detail: "This analysis from a leading semiconductor research firm reinforces the value of integrated hardware-software optimization that Google pursues with TPUs. The 100X gains demonstrate why hyperscalers invest in custom silicon rather than relying solely on merchant GPUs. For NVIDIA this validates their CUDA ecosystem lock-in but also highlights vulnerability to competitors with tighter vertical integration. Networking and storage must co-evolve with compute to capture these gains avoiding bottlenecks in data movement. The findings support continued aggressive capital expenditure on AI infrastructure.",
-    url: "https://www.nextbigfuture.com/2026/07/100x-gains-from-full-stack-co-design-ai-value-justifies-big-spend-ai-boom-is-real.html"
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "AI Server Demand Expected to Strain Component Supply Chains Through 2027",
+    summary: "Industry analysts project AI server demand will remain robust through 2027 driven by aggressive hyperscaler investments from Amazon Google and Microsoft. The challenge has shifted from chip availability to broader component supply constraints.",
+    source: "4sysops.com", age: "2 days ago",
+    detail: "The forecast through 2027 indicates AI infrastructure buildout is entering a sustained multi-year phase rather than a short-term spike. Component constraints beyond GPUs including power supplies cooling systems and networking gear will require supply chain diversification. Google infrastructure teams should consider longer planning horizons and strategic supplier relationships to secure capacity. Competition for AI server components among hyperscalers may intensify procurement complexity and costs.",
+    url: "https://4sysops.com/archives/ai-server-demand-to-strain-supply-chains-and-components-through-2027/"
   },
   {
     id: 8, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco Forecast Beats Expectations as AI Infrastructure Drives Networking Demand",
-    summary: "Cisco Systems has exceeded analyst forecasts with strong performance driven by AI infrastructure demand despite bearish retail sentiment. The company is positioning as a compelling AI infrastructure play in the networking market.",
-    source: "24/7 Wall St.", age: "2 days ago",
-    detail: "Ciscos results indicate sustained enterprise and hyperscaler spending on network infrastructure to support AI workloads. This performance validates demand signals for high-bandwidth switching and routing equipment in AI data centers. For Google Ciscos strength suggests continued vendor competition with Arista in the data center networking segment. The results also indicate that AI infrastructure buildouts are translating into real revenue across the networking supply chain. Cisco competes directly with Arista for hyperscaler fabric designs making their relative performance a key indicator.",
-    url: "https://247wallst.com/investing/2026/07/02/ciscos-forecast-beats-the-bearish-retail-crowd-heres-the-target/"
+    title: "NVIDIA Highlights Open Model Adoption Driving AI Research at ICML 2026",
+    summary: "NVIDIA reported 74 papers accepted at ICML 2026 with significant research built on open frontier models and open AI infrastructure. The trend shows academic and industry researchers increasingly relying on accessible model ecosystems.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The prominence of open models in academic research has implications for how cloud providers position their AI platforms. NVIDIAs investment in both proprietary and open ecosystems allows them to capture value regardless of which model approach dominates. For Google Cloud this validates continued support for open models on Vertex AI while maintaining differentiation through proprietary offerings like Gemini. The research community momentum toward open models could influence enterprise adoption patterns.",
+    url: "https://blogs.nvidia.com/blog/open-models-icml-2026/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google and Amazon Report Sharp Emissions Increases Driven by AI Data Center Growth",
-    summary: "Google and Amazon reported significant greenhouse gas emissions increases in 2025 driven by AI data center expansion. The growth challenges both companies climate commitments and sustainability pledges.",
-    source: "DW", age: "today",
-    detail: "The emissions trajectory highlights the environmental cost of AI infrastructure scaling that hyperscalers must address. Power consumption from GPU and TPU clusters is a primary driver as AI workloads require substantially more energy than traditional compute. For Google this creates tension between AI ambitions and carbon neutrality goals requiring accelerated renewable energy procurement. Cooling infrastructure advances including liquid cooling become essential for efficiency improvements. Competitors face similar pressures making sustainability a potential differentiator in enterprise sales.",
-    url: "https://www.dw.com/en/google-amazon-emissions-rise-sharply-driven-by-ai-boom/a-77821598"
+    id: 9, cat: "vendor", impact: "medium", filler: false,
+    title: "MinebeaMitsumi Invests 360 Million in Precision Bearings for AI Data Centers",
+    summary: "Japanese component manufacturer MinebeaMitsumi announced a 360 million dollar investment to expand bearing production for AI data center cooling systems. The investment highlights critical roles of precision mechanical components in AI infrastructure.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "Cooling infrastructure is becoming a significant constraint for high-density AI deployments where GPU thermal management is critical. This investment by a tier-two supplier indicates the AI infrastructure buildout is creating opportunities across the entire manufacturing supply chain. Data center operators should monitor cooling component availability as potential bottlenecks. The investment also signals confidence in sustained AI infrastructure demand from component suppliers perspective.",
+    url: "https://cryptobriefing.com/minebeamitsumi-bearings-ai-data-centers/"
   },
   {
     id: 10, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Schrodinger Achieves 4X Faster Molecular Discovery Using Google AlphaEvolve on Cloud",
-    summary: "Schrodinger accelerated molecular discovery by 4X using Googles AlphaEvolve for machine-learned force fields in computational chemistry. The partnership demonstrates TPU infrastructure advantages for scientific computing workloads.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This use case showcases Google Cloud TPU infrastructure performance for specialized scientific computing applications. Machine-learned force fields represent an emerging workload category that benefits from accelerator optimization. The 4X speedup demonstrates competitive differentiation against AWS and Azure for research-intensive customers. Such partnerships help justify TPU development investments beyond core AI training and inference. The scientific computing segment represents a growing opportunity for hyperscaler AI infrastructure.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/schrodinger-alphaevolve-molecular-discovery-accelerates-4x/"
+    title: "AWS Weekly Roundup Features Claude Sonnet 5 and WorkSpaces for AI Agents",
+    summary: "AWS published its weekly update highlighting Claude Sonnet 5 availability and new Amazon WorkSpaces capabilities designed for AI agent workloads. The roundup covers various service availability updates across the AWS platform.",
+    source: "AWS News Blog", age: "today",
+    detail: "The inclusion of AI agent focused WorkSpaces indicates AWS is expanding infrastructure offerings for agentic AI deployment scenarios. Claude Sonnet 5 availability on AWS through Bedrock provides another competitive option against Google Vertex AI model offerings. These incremental updates show continued platform evolution across all major hyperscalers in the AI space.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/"
   },
   {
-    id: 11, cat: "storage", impact: "low", filler: true,
-    title: "AlloyDB Omni Targets Financial Services with Hybrid Database Modernization",
-    summary: "Google launched AlloyDB Omni for financial services offering hybrid deployment flexibility with AI capabilities for database modernization. The solution addresses regulatory compliance and low-latency requirements in finance.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "AlloyDB Omni positions Google to compete with Oracle and legacy database vendors in regulated industries. Hybrid deployment options address data sovereignty and compliance requirements that limit public cloud adoption. The financial services focus aligns with enterprise AI adoption trends requiring performant database infrastructure. This expands Googles storage portfolio beyond pure cloud offerings to capture modernization spending.",
-    url: "https://cloud.google.com/blog/products/databases/alloydb-omni-secure-hybrid-database-modernization-for-finance/"
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Publishes Guide on Designing Cloud Infrastructure for Long-Term Cost Efficiency",
+    summary: "Microsoft Azure released guidance on designing building and optimizing IaaS infrastructure for sustained cost efficiency. The documentation addresses modernization migration and AI workload scaling considerations.",
+    source: "Azure Blog", age: "today",
+    detail: "Cost optimization guidance from competitors provides insight into how they are positioning infrastructure value propositions. The focus on long-term efficiency rather than initial deployment costs reflects maturing enterprise cloud adoption. Google Cloud teams can use competitor documentation to identify messaging gaps or differentiation opportunities.",
+    url: "https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Conversational Analytics in BigQuery Reaches General Availability",
-    summary: "Google Cloud announced general availability of Conversational Analytics in BigQuery enabling natural language queries and multi-step analysis. The feature brings agentic reasoning capabilities to business and technical teams.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This release demonstrates Googles integration of AI capabilities into core data infrastructure products. Natural language interfaces lower barriers to data access potentially increasing BigQuery adoption and usage. The feature competes with similar capabilities from Azure and AWS analytics services. For enterprise customers this represents incremental value from existing Google Cloud infrastructure investments.",
-    url: "https://cloud.google.com/blog/products/data-analytics/conversational-analytics-in-bigquery-now-ga/"
+    id: 12, cat: "storage", impact: "low", filler: true,
+    title: "Azure Site Recovery Now Supports 5x Higher Churn Rates for Disaster Recovery",
+    summary: "Azure Site Recovery expanded support to handle up to 500 MB per second churn per VM enabling disaster recovery for high IOPS workloads. The enhancement targets database and demanding application protection scenarios.",
+    source: "Azure Updates", age: "today",
+    detail: "Higher churn support addresses a common limitation when protecting storage-intensive workloads with continuous replication. Database workloads particularly those supporting AI training pipelines often generate high write volumes. This capability improvement shows ongoing investment in storage resilience features across hyperscalers.",
+    url: "https://azure.microsoft.com/updates?id=566966"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Mexico Green Data Center Market Projected to Reach 1.3 Billion with Hyperscaler Investment",
-    summary: "Mexicos green data center market is expected to reach 1.3 billion dollars by 2030 driven by hyperscaler growth and renewable energy mandates. The expansion reflects nearshoring trends and regional infrastructure development.",
-    source: "GlobeNewswire", age: "today",
-    detail: "Mexico represents an emerging market for hyperscaler data center expansion driven by proximity to US markets and renewable energy availability. Google AWS and Azure are evaluating Latin American expansion to serve regional demand and reduce latency. Green data center requirements align with sustainability commitments while addressing power availability constraints. The market growth indicates geographic diversification of AI infrastructure beyond traditional North American and European hubs.",
-    url: "https://www.globenewswire.com/news-release/2026/07/03/3321690/28124/en/Mexico-s-Green-Data-Center-Market-Poised-for-1-3-Billion-Milestone-with-21-CAGR-by-2030.html"
+    id: 13, cat: "competition", impact: "low", filler: true,
+    title: "India CG Semi Begins Commercial Chip Production at 870 Million Dollar Gujarat Facility",
+    summary: "Prime Minister Modi inaugurated commercial production at CG Semi chip assembly facility in Gujarat targeting 200 million chips annually. The plant plans to scale to 500 million chips as part of Indias semiconductor manufacturing push.",
+    source: "The Next Web", age: "2 days ago",
+    detail: "Indias domestic semiconductor capacity expansion represents long-term shifts in global chip supply chain geography. While initially focused on assembly and testing the facility signals growing capability outside traditional manufacturing centers. Infrastructure teams should monitor how regional semiconductor investments affect component sourcing options.",
+    url: "https://thenextweb.com/news/india-cg-semi-chip-production-gujarat/"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "Virtual Machine Market Projected to Hit 53 Billion by 2035 with AI and Cloud Growth",
-    summary: "The global virtual machine market is forecast to reach 53.52 billion dollars by 2035 driven by AI workloads hybrid cloud adoption and enterprise virtualization. The US and European markets lead growth projections.",
-    source: "GlobeNewswire", age: "today",
-    detail: "Virtualization infrastructure remains foundational for cloud computing even as containerization and AI workloads evolve deployment models. The market growth reflects continued enterprise IT modernization and hybrid cloud strategies. For hyperscalers this indicates sustained demand for underlying compute infrastructure. VM technology continues to coexist with newer paradigms in enterprise environments supporting diverse workload requirements.",
-    url: "https://www.globenewswire.com/news-release/2026/07/03/3321746/0/en/Virtual-Machine-Market-Projected-to-Hit-USD-53-52-Billion-by-2035-as-AI-Cloud-Computing-and-Hybrid-IT-Infrastructure-Drive-Adoption-SNS-Insider.html"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "Snowflake Stock Rebounds 54 Percent as Early Investor Sees Continued AI Upside",
+    summary: "Snowflake shares reached 260 dollars representing a 54 percent increase from recent lows as investors bet on AI-driven data platform growth. Early investors view the rebound as potentially just the beginning of recovery.",
+    source: "24/7 Wall St.", age: "3 days ago",
+    detail: "Snowflakes performance reflects broader market confidence in data infrastructure companies benefiting from AI adoption. As a partner and competitor in the data analytics space Snowflakes trajectory influences enterprise data platform decisions. The stock movement indicates sustained investor appetite for AI-adjacent infrastructure plays.",
+    url: "https://247wallst.com/ai-portfolio/2026/07/03/early-snowflake-investor-nails-a-50-rebound-that-may-only-be-warming-up/"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Meta entering the AI cloud market represents a direct competitive threat that could pressure Google Cloud pricing and customer acquisition, requiring your networking and storage teams to accelerate differentiation through TPU integration and proprietary interconnect advantages. The Anthropic-Micron partnership signals that frontier AI labs are now actively co-designing memory and storage hardware for their specific workloads, a trend Google should monitor given its own TPU memory requirements and potential opportunities for similar vendor collaborations. The projected 1.4 trillion dollar memory demand by 2030 combined with Northeast Asia semiconductor concentration creates significant supply chain risk for HBM and storage components critical to GPU and TPU infrastructure scaling.";
+const STATIC_BRIEF = "Arista is aggressively positioning its R4 platform family and 7800 chassis as the definitive AI datacenter networking solution with 3.2 Tbps port speeds and Universal AI Spine architecture, directly targeting the hyperscale GPU cluster market where Google competes for infrastructure leadership. Anthropic Claude reaching general availability on Microsoft Foundry but lacking European data residency creates a competitive opening since Google Vertex AI explicitly guarantees data residency, though this also signals Microsofts expanding AI model marketplace ambitions. Samsung memory price increases and analyst projections of component supply constraints through 2027 signal persistent cost pressures for storage and memory procurement that will affect TPU and GPU server build planning.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
