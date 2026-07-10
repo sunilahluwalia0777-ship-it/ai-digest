@@ -647,124 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Cloud C4N VMs Now GA Delivering Highest Per-vCPU Network and Storage IO for x86",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "C4N represents Googles answer to the growing bottleneck between compute efficiency and data transfer demands in modern AI workloads. These network and storage optimized VMs directly compete with AWS and Azures high-performance instance families. For AI inference specifically the high per-vCPU IO performance addresses a critical pain point where standard VMs struggle to feed data to accelerators fast enough. This GA release positions Google Cloud more competitively for enterprises running demanding database and analytics workloads alongside AI inference.",
-    url: "https://cloud.google.com/blog/products/compute/c4n-network-and-storage-optimized-vms/"
+    id: 1, cat: "vendor", impact: "high", filler: false,
+    title: "Micron Boosts US Investment to $250B Through 2035 Amid AI Memory Surge",
+    summary: "Micron announced it is accelerating US fab investments to over $250 billion through 2035 driven by surging AI memory demand. The company poured first concrete at its New York facility which will become the largest semiconductor manufacturing site in US history.",
+    source: "GlobeNewswire", age: "today",
+    detail: "This massive capital commitment signals the critical importance of memory in AI infrastructure buildout. For Google Cloud the expansion strengthens domestic supply chains for HBM and other high-bandwidth memory essential to TPU and GPU clusters. The New York fab represents a strategic hedge against geopolitical risks in Asian memory supply. Micron timing suggests confidence that hyperscaler demand will sustain premium pricing for AI-optimized memory products through the decade.",
+    url: "https://www.globenewswire.com/news-release/2026/07/09/3324807/14450/en/Micron-Accelerates-U-S-Investments-Pours-First-Concrete-at-New-York-Fab.html"
   },
   {
     id: 2, cat: "networking", impact: "high", filler: false,
-    title: "GKE Managed DRANET for Autopilot Clusters Enables Simplified GPU and TPU Networking",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "DRANET managed networking removes significant operational complexity from deploying GPU and TPU workloads on GKE. Autopilot clusters with DRANET support mean customers can leverage Googles managed infrastructure expertise for the most demanding AI training and inference networking requirements. This directly addresses the networking complexity that has historically been a barrier to Kubernetes adoption for large-scale AI workloads. The feature strengthens Googles competitive position against AWS EKS and Azure AKS for AI-native deployments.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/autopilot-clusters-with-gke-managed-dranet-gpus-and-tpus/"
+    title: "Musk Gets FTC Approval to Acquire Mesh Optical as Interconnects Become AI Bottleneck",
+    summary: "The FTC cleared Elon Musk to acquire Mesh Optical positioning him to control a critical layer between chips and satellites. The deal highlights interconnects emerging as the tightest bottleneck in AI infrastructure scaling.",
+    source: "Toms Hardware UK", age: "today",
+    detail: "This acquisition underscores how optical interconnects have become as strategically valuable as compute silicon in AI deployments. For Google Cloud the move intensifies competition for optical networking talent and technology as xAI vertically integrates. The deal validates industry concerns that network fabric not GPU count increasingly determines cluster performance. Google PM teams should monitor whether this triggers consolidation among remaining independent optical interconnect vendors.",
+    url: "https://www.tomshardware.com/tech-industry/big-tech/elon-musk-receives-ftc-greenlight-to-buy-mesh-optical-as-interconnects-emerge-as-ais-tightest-bottleneck-the-move-will-expand-musks-growing-stack-of-critical-ai-infrastructure"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Kyber NVL144 AI Server Rack Delayed to 2028 Due to PCB Manufacturing Issues",
-    summary: "",
-    source: "4sysops.com", age: "1 day ago",
-    detail: "This delay has major implications for hyperscaler infrastructure roadmaps that were planning around NVIDIAs next-generation rack-scale systems. The PCB complexity required for NVL144 highlights how advanced packaging and board manufacturing are becoming critical bottlenecks in AI infrastructure scaling. Google and other hyperscalers may need to extend current-generation deployments longer than planned or accelerate alternative architectures like TPU. The delay also creates opportunity for competitors like AMD and custom silicon efforts to close capability gaps.",
-    url: "https://4sysops.com/archives/nvidia-kyber-ai-server-rack-delayed-to-2028-due-to-manufacturing-hurdles/"
+    id: 3, cat: "silicon", impact: "high", filler: false,
+    title: "NVIDIA Rubin System Delayed to 2028 Due to Circuit Board Issues per SemiAna",
+    summary: "Research firm SemiAna reports printed circuit board problems have pushed NVIDIAs next-generation AI system to 2028. Chip stocks across the sector reacted negatively to the delay announcement.",
+    source: "24/7 Wall St", age: "3 days ago",
+    detail: "A Rubin delay creates both risks and opportunities for Google Cloud infrastructure planning. Extended Blackwell availability could benefit Google by allowing more TPU v6 deployments before customers migrate to next-gen NVIDIA silicon. However the delay also signals PCB complexity issues that could affect all high-power AI accelerators including custom Google designs. The news reinforces the importance of packaging and substrate technology as limiting factors beyond chip design itself.",
+    url: "https://247wallst.com/investing/2026/07/07/a-circuit-board-problem-just-delayed-nvidias-next-ai-system-to-2028-and-chip-stocks-are-already-feeling-the-fallout/"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Cloud CEO Kurian Confirms Multi-Year AI Data Center Expansion Plan for India",
-    summary: "",
-    source: "Livemint", age: "1 day ago",
-    detail: "This expansion signals Googles aggressive push to capture the rapidly growing Indian enterprise AI market before competitors can establish dominance. Local AI data center presence addresses critical data sovereignty requirements that have limited cloud AI adoption in regulated industries. The multi-year commitment suggests Google sees India as a strategic battleground against AWS Azure and emerging regional providers. For Googles networking and storage infrastructure teams this means planning for significant new capacity with India-specific requirements.",
-    url: "https://www.livemint.com/companies/news/google-will-set-up-more-ai-data-centres-in-india-as-demand-grows-says-cloud-business-ceo-thomas-kurian-11783422758078.html"
+    id: 4, cat: "competition", impact: "high", filler: false,
+    title: "AMD Targets $300B AI Opportunity With 6GW Meta GPU Deployment",
+    summary: "AMD disclosed it will deploy six gigawatts of Instinct GPU capacity for Meta under an expanded partnership. The scale of the deal signals AMDs aggressive push to challenge NVIDIA in hyperscaler AI infrastructure.",
+    source: "24/7 Wall St", age: "today",
+    detail: "Six gigawatts represents an enormous deployment that validates AMD as a credible alternative to NVIDIA at hyperscale. For Google Cloud this intensifies competitive pressure as Meta gains differentiated AI compute capacity outside the major cloud providers. The partnership demonstrates hyperscalers willingness to commit to AMD silicon at scale which could influence Google negotiations with both AMD and NVIDIA. This deal structure may also pressure Google to accelerate TPU capacity expansion to maintain AI training leadership.",
+    url: "https://247wallst.com/investing/2026/07/09/amds-300-billion-ambition-is-putting-pressure-on-rivals/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Cloud AlphaEvolve Now Available for AI Model and Infrastructure Optimization",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "AlphaEvolve represents Googles productization of AI-for-AI-infrastructure optimization capabilities. The tool can explore algorithm variations that traditional methods cannot practically evaluate making it valuable for optimizing data center operations and AI training pipelines. For infrastructure teams this could accelerate optimization of networking configurations storage layouts and workload placement. The availability signals Googles strategy to differentiate through AI-native infrastructure tools rather than just raw compute capacity.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/alphaevolve-is-available-for-everyone/"
+    id: 5, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco Cloud Control Unifies Data Center Management Across Nexus and Intersight",
+    summary: "Cisco launched Cloud Control to consolidate management of Nexus One Intersight and other platforms into a single pane. The platform adds AI-powered operations for cross-domain visibility and faster troubleshooting.",
+    source: "Cisco.com", age: "today",
+    detail: "Unified management platforms reduce operational overhead for enterprises running hybrid Cisco deployments alongside cloud infrastructure. For Google Cloud this represents both competitive positioning and partnership opportunity as customers seek consistent operations across on-premises and cloud networking. The AI-powered operations capability aligns with industry trends toward autonomous network management. Google networking teams should evaluate interoperability with Cloud Control for hybrid customer deployments.",
+    url: "https://blogs.cisco.com/?p=494621"
   },
   {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Azure Resiliency Architecture Evolution Detailed Amid Growing Cloud Reliability Demands",
-    summary: "",
-    source: "Azure Blog", age: "today",
-    detail: "Azures public discussion of resiliency evolution comes as enterprise customers increasingly scrutinize cloud reliability for mission-critical AI workloads. The emphasis on hybrid ecosystems spanning private clouds public clouds and colocation reflects the reality of enterprise AI deployments. For Google this represents competitive pressure to demonstrate similar or superior resilience capabilities. Understanding Azures approach helps identify potential differentiation opportunities in Googles networking and storage reliability features.",
-    url: "https://azure.microsoft.com/en-us/blog/built-to-bounce-back-how-azure-resiliency-evolved/"
+    id: 6, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Cerebras Plans 200MW European AI Infrastructure Expansion by 2027",
+    summary: "Cerebras announced plans to expand European AI infrastructure to 200MW by 2027 emphasizing renewable energy and regional data sovereignty. The expansion signals growing demand for non-US AI compute capacity.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Cerebras European push directly competes with Google Cloud for AI workloads from enterprises with data residency requirements. The 200MW target represents significant wafer-scale compute capacity that could attract training workloads currently running on hyperscaler infrastructure. The renewable energy focus aligns with European regulatory trends and sustainability mandates. Google should monitor whether Cerebras secures strategic partnerships with European enterprises seeking alternatives to US cloud providers.",
+    url: "https://cryptobriefing.com/cerebras-european-ai-infrastructure-expansion/"
   },
   {
-    id: 7, cat: "networking", impact: "medium", filler: false,
-    title: "Arista and Palo Alto Networks Expand Partnership for AI Data Center Security",
-    summary: "",
-    source: "Arista Blog", age: "today",
-    detail: "This vendor partnership directly impacts the ecosystem Google relies on for customer network infrastructure. As AI workloads drive more complex east-west traffic patterns within data centers the security integration between switching and firewall vendors becomes critical. Arista remains a key networking partner for hyperscale deployments and their security strategy influences enterprise purchasing decisions. Google Cloud customers deploying hybrid architectures will benefit from tighter integration between their on-premises Arista infrastructure and cloud workloads.",
-    url: "https://blogs.arista.com/blog/arista-and-palo-alto-networks-strengthen-partnership-in-the-new-age-of-ai-security"
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "JPMorgan Deploys On-Premise AI Hardware With SambaNova for Data Control",
+    summary: "JPMorgan partnered with SambaNova to deploy on-premise AI hardware prioritizing data control and security over cloud alternatives. The deal highlights enterprise demand for sovereign AI infrastructure in regulated industries.",
+    source: "Crypto Briefing", age: "1 day ago",
+    detail: "Financial services enterprises choosing on-premise AI over cloud represents a significant competitive challenge for Google Cloud. JPMorgans decision suggests that even the most sophisticated cloud security offerings may not satisfy certain regulatory and risk management requirements. The SambaNova partnership validates demand for AI accelerators outside the NVIDIA ecosystem. Google should evaluate whether enhanced confidential computing or sovereign cloud offerings could address similar enterprise concerns.",
+    url: "https://cryptobriefing.com/jpmorgan-sambanova-on-premise-ai-hardware/"
   },
   {
-    id: 8, cat: "networking", impact: "medium", filler: false,
-    title: "United Airlines Solves IP Exhaustion with AWS Private NAT Gateway at Scale",
-    summary: "",
-    source: "AWS Networking", age: "today",
-    detail: "This AWS customer win highlights a common networking challenge that affects all hyperscalers as enterprises scale their cloud footprints. IP exhaustion becomes acute when applications must scale rapidly during events like weather disruptions requiring flexible NAT solutions. The case study demonstrates AWS networking capabilities that Google Cloud must match or exceed. For Googles networking team this represents both competitive intelligence on AWS solutions and insight into enterprise requirements for dynamic IP management at scale.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-united-airlines-solved-ip-exhaustion-with-private-nat-gateway/"
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "$130B in AI Data Center Projects Blocked or Delayed in 2026",
+    summary: "Over $130 billion in AI data center projects have been blocked or delayed in 2026 including Googles Franklin Township withdrawal. Community opposition and infrastructure constraints continue to limit hyperscaler expansion.",
+    source: "Associated Press", age: "today",
+    detail: "Permitting delays and community pushback represent structural constraints on AI infrastructure growth that affect all hyperscalers. The Franklin Township cancellation highlights risks in Googles data center expansion strategy. These delays could shift competitive dynamics toward regions with more accommodating policies or toward providers with existing permitted capacity. Google infrastructure teams should factor permitting timelines into long-term capacity planning and consider alternative site development strategies.",
+    url: "https://apnews.com/press-release/pr-newswire/press-release-22fc5cd906f5c8882cfc767955ecc564"
   },
   {
-    id: 9, cat: "storage", impact: "medium", filler: false,
-    title: "Azure Blob Storage SFTP Now Supports Microsoft Entra ID Authentication in GA",
-    summary: "",
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "xAI Meta and Anthropic Expand Aggressively Into Adjacent AI Domains",
+    summary: "xAI Meta and Anthropic are each expanding into domains previously dominated by competitors in a massive AI land grab. The aggressive expansion could reshape tech economics and challenge existing cloud giants.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Vertical integration by AI-native companies threatens the traditional hyperscaler model of providing horizontal infrastructure services. Metas potential cloud debut and xAIs infrastructure buildout create new competitive vectors for Google Cloud. Anthropics expansion particularly matters given Googles investment position and the competitive dynamics with AWS-backed alternatives. This convergence suggests AI companies may increasingly bypass cloud providers for critical infrastructure.",
+    url: "https://cryptobriefing.com/xai-meta-anthropic-expand-ai-businesses/"
+  },
+  {
+    id: 10, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Launches GPT-5.6 on Databricks With Foundry Integration",
+    summary: "OpenAI GPT-5.6 is now generally available on Azure Databricks through Microsoft Foundry integration. The deployment enables secure model serving endpoints within the Databricks environment.",
     source: "Azure Updates", age: "today",
-    detail: "This Azure storage enhancement addresses a common enterprise pain point around legacy SFTP workflows that need cloud storage backends. The integration with Entra ID including guest user support via External Identities simplifies identity management for data transfer scenarios. Google Cloud Storage customers frequently request similar identity federation for SFTP access patterns. This GA release increases competitive pressure on Googles storage team to deliver comparable enterprise identity integration for legacy protocols.",
-    url: "https://azure.microsoft.com/updates?id=567085"
-  },
-  {
-    id: 10, cat: "silicon", impact: "medium", filler: false,
-    title: "Advanced Chip Packaging Emerges as Critical Bottleneck in US Semiconductor Strategy",
-    summary: "",
-    source: "Businessnewsthisweek.com", age: "today",
-    detail: "Advanced packaging is essential for modern AI accelerators including NVIDIAs GPUs and Googles TPUs which rely on chiplet architectures and high-bandwidth memory integration. The US dependence on Taiwanese packaging capacity creates supply chain risk that affects all hyperscaler infrastructure plans. For Google this reinforces the importance of supply chain diversification and potentially domestic packaging partnerships. The packaging bottleneck may also influence decisions about custom silicon development versus merchant silicon procurement.",
-    url: "https://businessnewsthisweek.com/business/the-missing-link-in-americas-semiconductor-revival-is-advanced-chip-packaging/"
+    detail: "Microsofts continued integration of OpenAI models into Azure services strengthens their competitive position in enterprise AI. The Databricks partnership specifically targets data engineering teams already using Spark-based workflows. For Google Cloud this underscores the importance of Gemini model availability and BigQuery integration as competitive differentiators.",
+    url: "https://azure.microsoft.com/updates?id=567431"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Run Sandboxes Enter Public Preview for Safe AI-Generated Code Execution",
-    summary: "",
-    source: "Google Cloud Blog", age: "today",
-    detail: "As AI code generation becomes more prevalent enterprises need secure execution environments that prevent AI-written code from accessing sensitive resources. Cloud Run sandboxes address this emerging requirement without requiring customers to build complex isolation infrastructure. While not directly infrastructure-focused this capability supports the broader AI development ecosystem on Google Cloud.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-run-sandboxes-are-in-public-preview/"
+    title: "Meta Potential Cloud Entry Intensifies Ambani-Adani Data Center Competition in India",
+    summary: "Metas potential cloud services debut is heating up competition between Reliance and Adani in Indias data center market. One is partnering with Google while the other aligns with Meta creating fierce regional competition.",
+    source: "Livemint", age: "1 day ago",
+    detail: "Indias rapidly growing AI and cloud market represents a strategic battleground for hyperscalers seeking emerging market growth. The Google-Reliance alignment creates both partnership opportunities and competitive complexities as Meta potentially enters the market. This regional dynamic could influence infrastructure investment priorities for Google Cloud in South Asia.",
+    url: "https://www.livemint.com/opinion/online-views/meta-cloud-services-ambani-adani-rivalry-data-centres-ai-artificial-intelligence-google-11783413725843.html"
   },
   {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "Goldman Sachs Adjusts AMD Stock Target Highlighting Server CPU Growth Potential",
-    summary: "",
-    source: "TheStreet", age: "1 day ago",
-    detail: "AMDs server CPU gains against Intel affect the broader infrastructure ecosystem that hyperscalers operate within. While Google designs custom processors AMD EPYC adoption by enterprise customers influences the competitive landscape for cloud services. Analyst sentiment on AMD reflects broader market views on AI infrastructure investment trajectories.",
-    url: "https://www.thestreet.com/investing/stocks/amd-advanced-micro-devices-inc-stock-price-target-goldman-sachs-july-2026"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure External Key Management for Managed HSM Enters Public Preview",
+    summary: "Azure Key Vault Managed HSM now supports external key management in public preview for enhanced sovereignty. Keys are generated in FIPS 140-3 Level 3 HSMs with customer-only access to key material.",
+    source: "Azure Blog", age: "today",
+    detail: "Enhanced key management capabilities address enterprise concerns about data sovereignty and regulatory compliance. This feature directly competes with Google Clouds External Key Manager and similar offerings. The preview signals continued investment in confidential computing as a competitive differentiator among hyperscalers.",
+    url: "https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/"
   },
   {
-    id: 13, cat: "networking", impact: "low", filler: true,
-    title: "Cisco Cloud Control Unifies Nexus One and Intersight for Cross-Domain Data Center Operations",
-    summary: "",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "Ciscos unified management approach addresses the operational complexity of managing heterogeneous data center infrastructure. For enterprises with significant Cisco investments this simplifies operations but also increases vendor lock-in. Google Cloud customers with hybrid deployments may benefit from improved Cisco management capabilities in their on-premises environments.",
-    url: "https://blogs.cisco.com/datacenter/unifying-operations-with-cisco-cloud-control/"
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "Computacenter Joins FTSE 100 as AI Infrastructure Demand Drives Growth",
+    summary: "IT services provider Computacenter entered the FTSE 100 index with shares rising on AI-driven infrastructure demand. The company has capitalized on enterprise AI deployment requirements.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Computacenters growth reflects strong enterprise demand for AI infrastructure integration services. As a systems integrator the company often influences hardware and cloud vendor selection for large deployments. Google Cloud channel teams should monitor Computacenter partnerships and competitive positioning in European enterprise accounts.",
+    url: "https://cryptobriefing.com/computacenter-ftse-100-ai-boom/"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "IAG Insurance Accelerates Microservices Communication with Amazon VPC Lattice",
-    summary: "",
-    source: "AWS Networking", age: "today",
-    detail: "VPC Lattice adoption by major enterprises demonstrates AWS networking service maturity for microservices architectures. IAGs deployment provides a reference for how large financial services organizations approach cloud-native networking. This represents competitive intelligence on AWS networking adoption patterns in regulated industries.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-iag-accelerated-service-to-service-communication-with-amazon-vpc-lattice/"
-  },
-  {
-    id: 15, cat: "vendor", impact: "low", filler: true,
-    title: "NVIDIA Expands GeForce NOW with RTX 5080 Powered Toronto Server Location",
-    summary: "",
-    source: "NVIDIA Blog", age: "today",
-    detail: "While focused on gaming NVIDIAs cloud infrastructure expansion demonstrates their continued investment in distributed GPU deployment capabilities. The RTX 5080 server deployment provides insight into NVIDIAs operational experience with next-generation GPU infrastructure at scale. Cloud gaming infrastructure shares some characteristics with AI inference deployment patterns.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-toronto-expansion/"
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Multi-Cloud Security Market Projected to Reach $104B by 2035",
+    summary: "The multi-cloud security market is projected to reach $104 billion by 2035 driven by zero trust strategies and compliance requirements. The US market alone is expected to hit $9 billion while Europe reaches $13 billion.",
+    source: "GlobeNewswire", age: "today",
+    detail: "Growing multi-cloud adoption creates opportunities for security solutions that span AWS Azure and Google Cloud environments. The market projection validates continued investment in cross-cloud security tooling and partnerships. Google Cloud security offerings must address customer requirements for unified visibility across heterogeneous cloud deployments.",
+    url: "https://www.globenewswire.com/news-release/2026/07/09/3324899/0/en/Multi-Cloud-Security-Market-Projected-to-Reach-104-04-Billion-by-2035-SNS-Insider.html"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "**Executive Brief: AI Infrastructure Week in Review**  Google Cloud C4N VMs reaching GA represents a major milestone for your portfolio, delivering 200 Gbps networking and 100 Gbps storage throughput per VM while GKE Managed DRANET simplifies GPU and TPU networking for Autopilot clusters, directly addressing customer demand for high-performance AI workloads. Azure is intensifying focus on resiliency architecture improvements amid growing enterprise reliability concerns, signaling competitive pressure on uptime guarantees that may influence customer procurement decisions for mission-critical AI deployments. NVIDIAs Kyber NVL144 rack delay to 2028 due to PCB manufacturing constraints and broader chip packaging bottlenecks warrant close monitoring as these supply chain issues could impact future GPU availability and infrastructure planning timelines.";
+const STATIC_BRIEF = "The $130B in blocked or delayed data center projects including Googles Franklin Township withdrawal directly threatens your ability to deploy networking and storage infrastructure at the scale AI workloads demand, making site acquisition and community relations as critical as technical roadmaps. AMDs 6GW Meta deployment represents a significant competitive shift that could reduce Googles leverage with NVIDIA while potentially fragmenting the networking ecosystem you must support across multiple GPU architectures. The NVIDIA Rubin delay to 2028 due to PCB issues creates extended planning certainty for current-generation networking and storage designs but watch Microns $250B US fab expansion as HBM supply dynamics will shape memory-intensive TPU roadmaps through the decade.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
