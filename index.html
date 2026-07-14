@@ -647,116 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high", filler: false,
-    title: "Meta Stock Surges 15 Percent in Best Week Since 2024 After AI Cloud Revenue Clarity",
-    summary: "Meta shares posted their strongest weekly performance in over two years after the company detailed monetization plans for its AI infrastructure investments. The stock rose approximately 15 percent across the week following investor clarity on cloud compute revenue streams.",
-    source: "The Next Web", age: "1 day ago",
-    detail: "After a year of market punishment for aggressive AI spending while the Nasdaq-100 climbed 18 percent Meta finally provided investors with concrete details on how it plans to recoup infrastructure investments. This signals a potential shift in how Wall Street evaluates hyperscaler AI capex with monetization timelines becoming critical valuation factors. For Google the message is clear as investors will increasingly demand similar visibility into AI infrastructure ROI. Metas cloud compute narrative could pressure all hyperscalers to articulate clearer paths from capex to revenue.",
-    url: "https://thenextweb.com/news/meta-stock-best-week-ai-cloud-compute/"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "NVIDIA Explains Why Performance per Watt Is the Ultimate AI Infrastructure Metric",
+    summary: "NVIDIA positions performance per watt as the foundational metric for AI factory economics arguing it directly determines token generation capacity and profitability. The company frames power as the inescapable constraint for AI infrastructure as agentic AI drives increasing token demand.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "This thought leadership piece from NVIDIA establishes the competitive framework around power efficiency that will shape infrastructure procurement decisions. For Google Cloud the implications are significant as TPU and GPU deployments must demonstrate superior performance per watt to win workloads. The focus on agentic AI token demand signals NVIDIAs view that inference workloads will dominate future capacity planning. Competitors evaluating Blackwell versus Hopper versus custom silicon like TPUs will increasingly benchmark on this metric.",
+    url: "https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/"
   },
   {
-    id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "Cisco Launches Enterprise AI Infrastructure Platform for Edge Computing Workloads",
-    summary: "Cisco introduced a new hardware platform designed to bring AI workloads to edge environments addressing a gap in existing infrastructure. The solution aims to extend AI capabilities beyond centralized data centers to distributed enterprise locations.",
-    source: "SiliconANGLE News", age: "3 days ago",
-    detail: "This represents Ciscos strategic move into the AI infrastructure market directly relevant to Googles networking partnerships and competitive positioning. Most existing edge infrastructure was not built for AI workloads creating an addressable market opportunity. For Google Cloud this intensifies competition at the edge where latency-sensitive AI applications require local compute. Ciscos enterprise relationships and networking dominance give them a strong position to capture AI edge deployments potentially diverting workloads from centralized cloud providers.",
-    url: "https://siliconangle.com/2026/07/10/cisco-edge-computing-hardware-platform-ai-thecube-ciscoaward/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Alphabet Unveils Massive $40B Stock Sale Program to Fund AI Capital Expansion",
+    summary: "Google parent Alphabet announced a 40 billion dollar equity issuance program to fund ongoing AI infrastructure investments. The move signals intensifying capital expenditure competition among hyperscalers for AI dominance.",
+    source: "Crypto Briefing", age: "today",
+    detail: "This financing mechanism provides Google Cloud significant runway for data center expansion GPU and TPU procurement and network infrastructure buildout. The scale of the program suggests Alphabet anticipates sustained multi-year capital intensity to compete with Microsoft Azure and AWS AI investments. For vendors like NVIDIA Broadcom and Arista this represents secured demand signals. The stock sale approach rather than debt financing indicates confidence in long-term AI revenue generation to justify dilution.",
+    url: "https://cryptobriefing.com/alphabet-unveils-40b-stock-sale-program-amid-ai-capital-boom/"
   },
   {
     id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "SK Hynix Record 26.5 Billion Dollar ADR Listing Signals HBM Memory Market Dominance",
-    summary: "SK Hynix completed a landmark ADR listing valued at 26.5 billion dollars reinforcing its position as a critical AI memory supplier. The listing provides substantial capital for expanding HBM production capacity essential for AI accelerators.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "SK Hynix is the primary HBM supplier for NVIDIA GPUs making this listing directly relevant to AI infrastructure capacity planning. The massive capital infusion positions SK Hynix to accelerate HBM production addressing persistent supply constraints that have limited AI deployment scale. For Google this could ease memory bottlenecks for TPU and GPU procurement though it also strengthens a key NVIDIA supplier relationship. The listing signals continued memory industry consolidation around AI workloads with implications for pricing and allocation priorities across hyperscalers.",
-    url: "https://cryptobriefing.com/sk-hynix-adr-listing-south-korea-fx-market/"
+    title: "TSMC Posts Record $39B Quarter as AI Chip Demand Drives Historic 68 Percent Growth",
+    summary: "TSMC reported a blowout quarter with 68 percent year-over-year revenue growth driven by AI accelerator demand from customers including NVIDIA and Apple. The results raise questions about sustainability of AI infrastructure spending levels.",
+    source: "TechSpot", age: "today",
+    detail: "TSMCs results provide crucial supply chain visibility for AI infrastructure planning as the company manufactures advanced chips for all major accelerator vendors. The historic growth rate validates continued AI capex intensity from hyperscalers including Google Cloud. However sustainability concerns could affect procurement strategies and vendor negotiations. For Google the TSMC capacity allocation competition with NVIDIA AMD and other customers remains a strategic constraint. Strong TSMC results also benefit Broadcom and Marvell who rely on TSMC for networking and custom silicon.",
+    url: "https://www.techspot.com/news/113089-tsmc-posts-396-billion-quarter-ai-boom-drives.html"
   },
   {
-    id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Microsoft Foundry Launches Frontier Models and Production Agents for Agentic AI Era",
-    summary: "Microsoft announced general availability of OpenAI frontier models and agent capabilities within Microsoft Foundry along with a new Asia Pacific Data Zone. The release positions Azure as a comprehensive platform for building and deploying production AI agents.",
-    source: "Azure Blog", age: "today",
-    detail: "Microsofts Foundry platform directly competes with Google Clouds Vertex AI and agent development capabilities. The Asia Pacific Data Zone expansion addresses data sovereignty requirements that are increasingly important for enterprise AI adoption in the region. Production agent capabilities signal the market is moving beyond model inference toward orchestrated AI systems requiring more sophisticated infrastructure. Google must respond with comparable agent platform maturity or risk losing enterprise AI workloads to Azures integrated offering.",
-    url: "https://azure.microsoft.com/en-us/blog/frontier-models-and-production-agents-advancing-microsoft-foundry-for-the-agentic-era/"
+    id: 4, cat: "competition", impact: "medium", filler: false,
+    title: "Investment Analysis Identifies AI Infrastructure Suppliers as Top Gold Rush Winners",
+    summary: "Financial analysis suggests AI infrastructure component suppliers are outperforming hyperscalers themselves as the spending boom continues. The assessment highlights companies supplying chips networking and cooling equipment as primary beneficiaries.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "This market perspective validates the strategic importance of vendor relationships for Google Cloud infrastructure. Companies like Broadcom for networking silicon Arista for switches and NVIDIA for GPUs are capturing significant value from hyperscaler capex. The analysis suggests negotiating leverage may be shifting toward suppliers during peak demand periods. For Google PM strategy this reinforces the importance of long-term supply agreements and potential vertical integration through custom silicon development like TPUs.",
+    url: "https://247wallst.com/investing/2026/07/13/forget-hyperscalers-here-are-the-ai-gold-rush-winners-to-buy-now/"
   },
   {
-    id: 5, cat: "competition", impact: "medium", filler: false,
-    title: "NVIDIA Investors Eye July 16 China Expo for Sovereign AI Strategy Signals",
-    summary: "NVIDIA is scheduled to present at a China technology expo on July 16 with investors watching for signals on navigating export restrictions. The event highlights the growing importance of sovereign AI initiatives and regional compute strategies.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "NVIDIAs China engagement amid export restrictions has direct implications for Google Cloud competitive dynamics in the region. Sovereign AI requirements are reshaping how AI infrastructure is deployed globally with nations demanding local compute capabilities. This could fragment the AI infrastructure market creating opportunities for compliant solutions while limiting hyperscaler reach. Google must monitor how NVIDIA positions export-compliant products as these will define available accelerator options for regional deployments.",
-    url: "https://cryptobriefing.com/nvidia-july-16-china-expo-ai-crypto/"
+    id: 5, cat: "vendor", impact: "medium", filler: false,
+    title: "Bosch Secures $225M US Government Funding for $2B Silicon Carbide Chip Facility",
+    summary: "Bosch announced a 225 million dollar direct funding agreement with the US Department of Commerce for its 2 billion dollar silicon carbide semiconductor investment in Roseville California. Sample production of SiC semiconductors is already underway at the facility.",
+    source: "GlobeNewswire", age: "today",
+    detail: "While primarily targeting automotive and industrial applications this domestic semiconductor manufacturing expansion has broader implications for US chip supply chain resilience. Silicon carbide technology is increasingly relevant for power electronics in data center infrastructure and high-efficiency power delivery systems. The CHIPS Act funding demonstrates continued government commitment to onshore semiconductor production. For data center operators diversified domestic supply chains reduce geopolitical risk exposure.",
+    url: "https://www.globenewswire.com/news-release/2026/07/13/3326344/0/en/Bosch-announces-225-million-direct-funding-agreement-with-the-U-S-Department-of-Commerce-as-part-of-a-2-billion-investment-in-Roseville-Calif.html"
   },
   {
-    id: 6, cat: "vendor", impact: "medium", filler: false,
-    title: "AMD Stock Surges 160 Percent in 2026 as Analysts Maintain Bullish Outlook",
-    summary: "Advanced Micro Devices shares have risen 160 percent year to date with analysts continuing to recommend the stock. The performance reflects growing confidence in AMDs AI accelerator and data center market position.",
-    source: "Barchart.com", age: "2 days ago",
-    detail: "AMDs strong market performance indicates Wall Street believes the company is successfully capturing AI infrastructure market share from NVIDIA. For Google this validates the multi-vendor accelerator strategy as AMD MI series GPUs become viable alternatives for certain workloads. Continued AMD momentum could improve Googles negotiating leverage with NVIDIA while providing supply diversification options. The analyst consensus suggests AMD will remain a significant force in AI silicon through 2026 and beyond.",
-    url: "https://www.barchart.com/story/news/3238946/amd-stock-is-up-160-in-2026-and-analysts-still-love-it"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Taiwan AI Infrastructure Suppliers Accelerate US Manufacturing Expansion Plans",
+    summary: "Taiwanese specialty automation robotics and semiconductor product companies are expanding US manufacturing presence driven by AI infrastructure buildout demand. The trend reflects downstream supply chain localization beyond primary chip manufacturing.",
+    source: "GlobeNewswire", age: "today",
+    detail: "This supply chain shift has implications for AI infrastructure procurement timelines and costs as equipment suppliers localize production. For Google Cloud data center construction and expansion projects domestic supplier presence could reduce lead times and logistics complexity. The movement also reflects tariff and geopolitical risk mitigation strategies across the semiconductor ecosystem. Networking equipment and server manufacturing supply chains may see similar localization pressure.",
+    url: "https://www.globenewswire.com/news-release/2026/07/13/3326183/0/en/AI-Infrastructure-Boom-Drives-Taiwan-Suppliers-Toward-U-S-Manufacturing-Expansion.html"
   },
   {
-    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Microsoft Carbon Emissions Jump 25 Percent as AI Data Center Expansion Outpaces Sustainability",
-    summary: "Microsofts fiscal year 2025 carbon emissions increased 25 percent driven by AI data center expansion despite progress in other sustainability metrics. The company maintains its 2030 carbon negative target remains achievable.",
-    source: "Tom's Hardware UK", age: "2 days ago",
-    detail: "This highlights the tension between aggressive AI infrastructure buildout and environmental commitments facing all hyperscalers. The 25 percent emissions increase demonstrates that AI workload growth is outpacing efficiency gains and renewable energy procurement. Google faces similar sustainability pressures and investors will increasingly compare hyperscaler environmental performance alongside financial metrics. Power consumption for AI infrastructure is becoming a strategic constraint that could influence data center location decisions and capacity planning.",
-    url: "https://www.tomshardware.com/tech-industry/big-tech/microsoft-struggles-to-fulfill-its-2030-sustainability-promise-amid-carbon-heavy-ai-expansions-the-companys-chief-sustainability-officer-claims-the-target-is-still-feasible"
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA Automotive Head Reveals Internal Compute Allocation Battles Amid AI Demand",
+    summary: "NVIDIAs head of automotive disclosed that even internal divisions compete for GPU compute allocation as AI demand strains capacity. The interview highlights the pervasive GPU scarcity affecting all market segments.",
+    source: "The Verge", age: "today",
+    detail: "This candid admission from NVIDIA leadership confirms that GPU supply constraints extend beyond hyperscaler customers to internal business units. For Google Cloud this validates continued investment in custom TPU development as a strategic hedge against NVIDIA allocation limitations. The automotive AI segment represents additional competition for the same silicon capacity Google needs for cloud infrastructure. Understanding NVIDIAs internal prioritization helps inform procurement strategy and relationship management.",
+    url: "https://www.theverge.com/podcast/964614/nvidia-auto-xinzhou-wu-ev-ai-hyperion-autonomy-cars-tesla"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Meta Deploys Open Source Kernel Scheduler to Cut Ads Latency at Machine Scale",
-    summary: "Meta implemented sched_ext an upstream BPF-based extensible scheduling framework to build custom kernel scheduling for its ads serving fleet. The optimization addresses millisecond-level latency impacts that significantly affect ads performance at scale.",
-    source: "Meta Engineering", age: "today",
-    detail: "This demonstrates the level of infrastructure optimization hyperscalers pursue to maintain competitive advantage in latency-sensitive workloads. Metas willingness to contribute kernel-level scheduling improvements to open source creates potential benefits for the broader industry including Google. The ads serving use case shows how AI inference workloads demand specialized system-level tuning beyond standard cloud configurations. Google should evaluate whether similar kernel scheduling optimizations could benefit TPU and GPU cluster performance.",
-    url: "https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/"
+    id: 8, cat: "networking", impact: "medium", filler: false,
+    title: "AWS Launches Automated VPC CIDR Expansion to Prevent IP Exhaustion Downtime",
+    summary: "AWS released a serverless automation solution for monitoring VPC IP utilization and automatically expanding CIDR capacity using Lambda Step Functions and IPAM. The solution deploys via a single SAM command with three operating modes for different IPAM configurations.",
+    source: "AWS Networking", age: "today",
+    detail: "This AWS networking enhancement addresses a common pain point in large-scale cloud deployments that Google Cloud also faces. Automated IP address management becomes critical as AI workloads drive rapid infrastructure scaling. The solution architecture using serverless components represents best practices for infrastructure automation that Google networking teams should evaluate. Competitive feature parity in network management tooling affects enterprise cloud selection decisions.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/automating-cidr-expansion-reducing-ip-exhaustion-downtime/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Sovereign AI Analysis Identifies Four Dimensions That Will Determine AI Race Winners",
-    summary: "A new analysis framework identifies data sovereignty compute sovereignty model sovereignty and operational sovereignty as critical factors in AI competition. The piece argues open source architecture is essential infrastructure rather than preference.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "This framework is useful for understanding how geopolitical factors increasingly shape AI infrastructure decisions. Data residency requirements compute localization mandates and model ownership concerns are driving enterprise and government procurement criteria. Google Cloud must address all four sovereignty dimensions to compete effectively in regulated markets and government contracts. The emphasis on open source as architectural necessity aligns with Googles investments in Kubernetes and other open platforms.",
-    url: "https://siliconangle.com/2026/07/11/sovereign-ai-will-decide-winners-losers-ai-race/"
+    id: 9, cat: "hyperscaler", impact: "low", filler: false,
+    title: "Google Cloud Launches AI-Defined Vehicle Platform with Android and Nexus SDV",
+    summary: "Google Cloud announced integration between Android Automotive and cloud services for software-defined vehicle architectures using Bigtable for agentic vehicle applications. The platform positions vehicles as intelligent connected nodes within AI-native ecosystems.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "While primarily an automotive announcement this initiative demonstrates Google Clouds expansion of AI infrastructure into edge computing domains. The Bigtable integration for vehicle data represents new storage workload patterns at the edge-cloud boundary. For infrastructure planning this signals growing demand for distributed AI compute and low-latency networking to support autonomous and connected vehicle use cases.",
+    url: "https://cloud.google.com/blog/products/databases/nexus-sdv-uses-bigtable-android-automotive-for-agentic-vehicles/"
   },
   {
     id: 10, cat: "storage", impact: "low", filler: true,
-    title: "AI Data Centers Driving Interest in Orbital Computing to Access Continuous Solar Power",
-    summary: "Companies are exploring space-based data centers where near-continuous sunlight could eliminate electricity costs for AI workloads. A typical AI data center consumes electricity equivalent to 100000 homes driving the search for alternative power solutions.",
-    source: "Space Daily", age: "2 days ago",
-    detail: "While orbital computing remains speculative this highlights the extreme power demands of AI infrastructure driving unconventional solutions. The comparison to 100000 homes of electricity consumption illustrates the scale challenge facing terrestrial data center operators. Near-term this reinforces the importance of power procurement strategy and renewable energy access for data center site selection. Google should monitor these developments though practical orbital computing remains years away from viability.",
-    url: "https://spacedaily.com/t-a-typical-ai-focused-data-centre-consumes-as-much-electricity-as-100000-homes-that-demand-has-helped-trigger-a-race-to-put-computing-clusters-into-orbit-where-companies-argue-that-near-continuous-s/"
+    title: "AWS S3 Metadata Enables Vanderbilt University Digital Archive Discovery at Scale",
+    summary: "Vanderbilt University Library deployed Amazon S3 Metadata to improve discoverability of extensive digital archives including the Television News Archive. The solution demonstrates S3 metadata capabilities for managing large unstructured content collections.",
+    source: "AWS Storage", age: "today",
+    detail: "This storage use case highlights competitive S3 features for metadata-rich workloads that Google Cloud Storage must match. While not directly AI infrastructure related the pattern of metadata-driven discovery applies to AI training data management and model artifact organization. Enterprise customers evaluating cloud storage often benchmark on metadata and search capabilities.",
+    url: "https://aws.amazon.com/blogs/storage/how-vanderbilt-university-scales-digital-archive-discovery-with-s3-metadata/"
   },
   {
     id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Introduces k8s-aibom Tool for Automated AI Supply Chain Security on GKE",
-    summary: "Google Cloud open sourced k8s-aibom a lightweight tool for generating AI bills of materials to address shadow AI workloads on Kubernetes. The tool helps security teams inventory AI deployments without requiring privileged access or kernel-level changes.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Shadow AI workloads deployed without formal registration pose security and compliance risks that traditional scanners miss. This tool addresses the operational challenge of maintaining visibility into AI infrastructure without disrupting developer workflows. For Google Cloud customers this improves security posture for AI deployments on GKE. The open source approach encourages ecosystem adoption and positions Google as a leader in AI infrastructure security practices.",
-    url: "https://cloud.google.com/blog/products/identity-security/introducing-k8s-aibom-on-gke-for-automated-ai-bills-of-materials/"
+    title: "Azure Databricks SQL Serverless Now Generally Available in UK West Region",
+    summary: "Microsoft Azure expanded Databricks SQL Serverless availability to the UK West region offering instant compute and automated scaling for analytics workloads. The launch provides additional regional options for UK-based enterprise customers.",
+    source: "Azure Updates", age: "today",
+    detail: "Regional expansion of managed analytics services reflects ongoing Azure infrastructure buildout competing with Google BigQuery and AWS Redshift. UK data residency requirements drive demand for local deployment options across all major cloud providers. The serverless model reduces infrastructure management overhead attractive to enterprises modernizing analytics platforms.",
+    url: "https://azure.microsoft.com/updates?id=567444"
   },
   {
     id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Google Cloud Publishes Guide for Publishing AI Agents to Marketplace and Gemini Platform",
-    summary: "Google Cloud released developer guidance for publishing AI agents to Gemini Enterprise Agent Platform and Cloud Marketplace. The documentation addresses the evolution from SaaS to Agents-as-a-Service using protocols like Agent2Agent.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This signals Googles investment in building an agent ecosystem that could drive platform stickiness and marketplace revenue. The A2A protocol standardization suggests Google is positioning for an interoperable agent future rather than closed ecosystems. For infrastructure planning agent workloads will have different compute and networking requirements than traditional inference. The marketplace approach creates potential for third-party agent monetization on Google Cloud infrastructure.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/publish-agents-in-gemini-enterprise-and-google-cloud-marketplace/"
+    title: "Azure Red Hat OpenShift Expands to Chile Central in First South American Azure Region",
+    summary: "Azure Red Hat OpenShift achieved general availability in Microsofts new Chile Central region marking the first Azure region in Chile. The expansion supports OpenShift container deployments across South America.",
+    source: "Azure Updates", age: "today",
+    detail: "Hyperscaler regional expansion in South America intensifies competition for enterprise container workloads. Google Clouds GKE and AWS EKS compete directly with ARO for Kubernetes deployments in emerging markets. Regional presence becomes increasingly important as data sovereignty regulations expand globally.",
+    url: "https://azure.microsoft.com/updates?id=566732"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Builder Center Celebrates One Year With Full Workshop and Sandbox Ecosystem",
-    summary: "AWS Builder Center marked its first anniversary having evolved from a community hub to a full platform with sandbox environments and workshops. The platform now includes Spaces and a Builders Library alongside the original Wishlist voting features.",
-    source: "AWS News Blog", age: "today",
-    detail: "AWS continues investing in developer experience and community building to maintain cloud market leadership. The sandbox environments and workshops lower barriers to AWS adoption potentially influencing enterprise cloud decisions. Google Cloud competes for developer mindshare through similar programs and should monitor AWS Builder Center traction. Developer ecosystem strength increasingly influences enterprise platform selection for AI workloads.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/"
+    id: 13, cat: "competition", impact: "low", filler: true,
+    title: "SK Hynix Nasdaq Debut Sparks Chip Rally as Dow Climbs 149 Points",
+    summary: "SK Hynix successful Nasdaq listing drove broader semiconductor stock gains as AI chip enthusiasm continues. The memory chip maker represents growing investor appetite for AI infrastructure supply chain exposure.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "SK Hynix HBM memory production is critical for AI accelerator performance making this listing significant for the AI infrastructure ecosystem. The company supplies high bandwidth memory to NVIDIA and other GPU manufacturers serving hyperscaler customers. Market reception indicates sustained investor confidence in AI infrastructure capital cycles.",
+    url: "https://www.ibtimes.com.au/dow-jones-ai-stocks-sk-hynix-nasdaq-debut-1872212"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "Analyst Compares NVIDIA and SK Hynix Investment Cases for AI Chip Exposure",
-    summary: "Investment analysts published comparative analysis of NVIDIA and SK Hynix as pathways to AI chip market exposure. Each company offers distinct risk and reward profiles based on market position and cycle sensitivity.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "The comparison frames AI infrastructure investment as a choice between accelerator and memory market exposure. SK Hynix HBM dominance provides more diversified AI exposure than pure-play accelerator bets. For infrastructure planning this reinforces that AI compute depends on the full supply chain from silicon to memory. Understanding investor sentiment toward these suppliers helps anticipate capacity investment and pricing trends.",
-    url: "https://www.ibtimes.com.au/nvidia-vs-sk-hynix-ai-investment-1872168"
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Cloud Microservices Market Projected to Reach $17.5B by 2035 on Kubernetes Adoption",
+    summary: "Industry research forecasts the cloud microservices market reaching 17.52 billion dollars by 2035 driven by Kubernetes adoption DevOps automation and hybrid cloud deployments. The US market alone is projected at 4.33 billion dollars.",
+    source: "GlobeNewswire", age: "today",
+    detail: "Market sizing projections validate continued infrastructure investment in container orchestration and cloud-native platforms. Google Clouds GKE and Anthos compete directly in this growing market segment. The hybrid cloud emphasis suggests ongoing demand for consistent infrastructure across on-premises and cloud deployments.",
+    url: "https://www.globenewswire.com/news-release/2026/07/13/3326243/0/en/Cloud-Microservices-Market-Size-to-Surpass-17-52-Billion-by-2035-as-Cloud-Native-Application-Development-Accelerates-Worldwide-Research-by-SNS-Insider.html"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The SK Hynix 26.5 billion dollar ADR listing directly strengthens your HBM supply chain position as this capital injection will expand production capacity critical for both TPU and GPU memory requirements, warranting immediate engagement with their capacity allocation teams. Microsoft Foundry reaching general availability with frontier models and production agents represents the most significant competitive development this week, as their new Asia Pacific Data Zone combined with agentic AI capabilities creates a comprehensive platform play that directly challenges Googles enterprise AI positioning. AMD stock surging 160 percent year to date signals sustained market confidence in alternative accelerator vendors, which could influence your multi-vendor networking and storage strategy as customers increasingly evaluate non-NVIDIA options for AI workloads.";
+const STATIC_BRIEF = "Alphabets $40B equity issuance program signals corporate commitment to sustained AI infrastructure investment, directly supporting expanded capital allocation for networking and storage buildouts that your roadmap depends on. NVIDIAs framing of performance per watt as the definitive AI infrastructure metric creates competitive pressure to demonstrate TPU power efficiency advantages, while their internal GPU allocation battles confirm persistent compute scarcity that strengthens Googles case for custom silicon self-sufficiency. Taiwanese AI infrastructure suppliers accelerating US manufacturing expansion alongside TSMCs record 68% growth indicates the supply chain is scaling to meet demand, though concentration risk in advanced packaging and specialty components remains a monitoring priority for infrastructure procurement planning.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
