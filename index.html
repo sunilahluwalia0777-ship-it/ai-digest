@@ -648,123 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Japan and NVIDIA Launch Worlds First National AI Infrastructure with Vera Rubin",
-    summary: "NVIDIA announced a partnership with Noetra Corp to deploy an AI factory featuring 13750 Vera CPUs and 27500 Rubin GPUs for Japans national physical AI initiatives. This represents the first country-scale deployment of NVIDIAs next-generation Rubin architecture.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This landmark deployment signals the start of Rubin architecture production availability and establishes a new model for sovereign AI infrastructure investment. The scale of 27500 Rubin GPUs in a single national project dwarfs typical enterprise deployments and will generate substantial learnings for datacenter networking at unprecedented density. For Google Cloud this creates both competitive pressure in the Japanese market and potential collaboration opportunities around TPU-based sovereign cloud offerings. The Vera CPU integration suggests NVIDIA is pushing hard on full-stack control which challenges Googles TPU plus commodity CPU approach.",
-    url: "https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure"
-  },
-  {
-    id: 2, cat: "networking silicon", impact: "high", filler: false,
-    title: "Silicon Photonics Market to Surge Through 2036 Driven by AI Accelerator and Datacenter Demand",
-    summary: "New market research projects significant growth in silicon photonics and photonic ICs through 2036 driven by AI accelerator shipments and datacenter networking needs. The report highlights cost-per-gigabit trends as a key driver for adoption.",
-    source: "GlobeNewswire", age: "today",
-    detail: "Silicon photonics represents a critical technology for scaling AI cluster interconnects beyond current electrical limitations. As GPU and TPU clusters grow the bandwidth density requirements are pushing adoption of optical solutions closer to the compute package. This trend directly impacts Googles TPU networking strategy and relationships with vendors like Broadcom and Marvell who are investing heavily in co-packaged optics. The cost-per-gigabit economics will determine whether optical interconnects become standard at the rack level or remain confined to spine-level deployments.",
-    url: "https://www.globenewswire.com/news-release/2026/07/15/3327890/28124/en/The-Global-Silicon-Photonics-and-Photonics-ICs-Market-2026-2036-AI-Accelerator-Shipments-Data-Centre-Networking-Requirements-and-Cost-Per-Gigabit-Trends.html"
-  },
-  {
-    id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Reportedly Selects Intel EMIB-T Over TSMC CoWoS for 9th Gen TPU Humufish",
-    summary: "Reports indicate Google has chosen Intels EMIB-T advanced packaging technology over TSMCs CoWoS-L for its next-generation TPU codenamed Humufish. The decision highlights Intels growing attractiveness as an alternative amid TSMC capacity constraints.",
-    source: "Tom's Hardware UK", age: "today",
-    detail: "This is a strategically significant development for Google TPU infrastructure as it diversifies packaging supply away from TSMC which has faced CoWoS capacity bottlenecks. Intels EMIB-T offers competitive interconnect density while potentially providing better supply security and pricing leverage. The move could accelerate TPU roadmap execution if TSMC constraints were previously gating availability. For the competitive landscape this signals that hyperscalers are increasingly willing to fragment their semiconductor supply chains to avoid single-vendor dependencies a trend that benefits Intel Foundry Services ambitions.",
-    url: "https://www.tomshardware.com/tech-industry/semiconductors/intels-emib-packaging-gains-traction-as-chip-designers-look-to-skirt-tsmcs-cowos-constraints-googles-reported-decision-for-9th-gen-tpus-highlights-intels-attractive-alternative"
-  },
-  {
-    id: 4, cat: "networking", impact: "high", filler: false,
-    title: "IDC Survey Reveals Networking Infrastructure Critical Bottleneck for Agentic AI Deployment",
-    summary: "IDC research sponsored by Google Cloud shows enterprises moving quickly on AI pilots but struggling to scale to production due to networking infrastructure limitations. The survey highlights that agentic AI workloads place unique demands on network architecture.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This IDC research validates Googles strategic focus on networking as a differentiator for AI workloads particularly agentic systems that require low-latency multi-hop communication patterns. The pilot-to-production gap indicates enterprises are hitting network bottlenecks when scaling which creates opportunity for Google Cloud to position its networking capabilities. The findings likely inform product roadmap priorities around Cross-Cloud Network and private service connectivity features. Understanding where enterprises struggle helps prioritize investments in network fabric automation and observability tools.",
-    url: "https://cloud.google.com/blog/products/networking/idc-on-the-right-networking-approach-for-agentic-ai/"
-  },
-  {
-    id: 5, cat: "vendor", impact: "high", filler: false,
-    title: "Arista Networks Launches 1.6T AI Networking Platforms Signaling Infrastructure Buildout",
-    summary: "Arista Networks has strengthened its AI networking portfolio with new 1.6 terabit platforms designed for AI infrastructure deployments. The announcement signals continued massive investment in high-bandwidth datacenter networking.",
+    title: "TSMC Posts Record Quarter With 77 Percent Profit Surge on Sustained AI Compute Demand",
+    summary: "TSMC reported a 77 percent profit increase driven by AI chip demand and raised capital expenditure guidance for coming years. The company also announced an additional 100 billion dollar investment in Arizona facilities.",
     source: "Crypto Briefing", age: "today",
-    detail: "Aristas 1.6T platform launch directly competes with Ciscos AI networking offerings and represents the current frontier for merchant silicon-based switching. For Google this validates the bandwidth trajectory that TPU networking must accommodate and provides benchmarking for custom fabric development decisions. The timing suggests Arista is positioning for the next wave of AI cluster buildouts expected in 2027. Google must evaluate whether to continue expanding relationships with Arista for non-TPU networking or push harder on fully custom solutions to maintain performance advantages.",
-    url: "https://cryptobriefing.com/arista-networks-ai-networking-1-6t-platforms/"
+    detail: "TSMCs record financial performance validates the sustained demand trajectory for advanced AI silicon that underpins GPU and TPU production. The additional Arizona investment signals continued geographic diversification of leading-edge capacity which directly affects supply chain planning for hyperscaler customers including Google. Capital expenditure increases suggest TSMC expects AI training and inference workloads to remain capacity-constrained through the forecast period. This has direct implications for Googles TPU roadmap and competitive positioning against NVIDIA-based infrastructure at AWS and Azure.",
+    url: "https://cryptobriefing.com/tsmc-profits-surge-ai-demand/"
+  },
+  {
+    id: 2, cat: "silicon", impact: "high", filler: false,
+    title: "Samsung May Handle Back-End Design for Googles 2nm TPU Chip",
+    summary: "Samsung is reportedly in discussions to handle back-end design work for Googles next-generation 2nm TPU silicon. This potential partnership could reshape semiconductor supply chain dynamics and intensify competition with TSMC.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "Googles potential engagement of Samsung for 2nm TPU back-end design represents a strategic diversification away from sole reliance on TSMC for advanced packaging. Back-end design encompasses critical interconnect and packaging decisions that directly impact thermal performance and die-to-die bandwidth essential for TPU cluster performance. This move could provide Google negotiating leverage while building redundancy into the TPU supply chain. The 2nm node transition is critical for maintaining compute density advantages against NVIDIAs Blackwell and Vera Rubin generations.",
+    url: "https://cryptobriefing.com/google-tpu-samsung-design-outsourcing/"
+  },
+  {
+    id: 3, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Vera Rubin Positioned as Cost-Per-Token Leader for Agentic AI Workloads",
+    summary: "NVIDIA claims Vera Rubin architecture maximizes intelligence per dollar for post-training workloads through extreme hardware-software codesign. The company positions this metric as critical for emerging agentic AI applications.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "NVIDIAs framing of Vera Rubin around cost-per-token economics signals a competitive pivot toward total cost of ownership messaging that directly challenges TPU value propositions. The emphasis on post-training workloads including inference and fine-tuning reflects the shift in AI compute demand patterns as foundation models mature. For Google PM teams the intelligence-per-dollar metric becomes a key benchmark for TPU competitiveness. This messaging also indicates NVIDIA expects agentic AI workloads to drive the next infrastructure investment cycle.",
+    url: "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/"
+  },
+  {
+    id: 4, cat: "vendor", impact: "medium", filler: false,
+    title: "Huang Confirms Vera Rubin On Track But Sidesteps Kyber NVL144 Delay Questions",
+    summary: "NVIDIA CEO Jensen Huang stated the company will deliver giant amounts of Vera Rubin systems and that the roadmap remains intact. However he did not address rumors of Kyber NVL144 rack delays from 2027 to 2028.",
+    source: "Toms Hardware UK", age: "2 days ago",
+    detail: "Huangs selective confirmation raises questions about NVIDIAs next-generation rack-scale systems which directly compete with Googles TPU pod architecture. A potential one-year slip in NVL144 availability would create a window where TPU infrastructure could capture enterprise workloads otherwise waiting for NVIDIA solutions. The lack of explicit denial regarding Kyber delays suggests supply chain or thermal challenges may be affecting rack-scale packaging timelines. Competitive intelligence teams should monitor for further signals on NVL144 production schedules.",
+    url: "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-huang-vows-to-deliver-giant-amounts-of-vera-rubin-company-says-that-our-roadmap-is-intact"
+  },
+  {
+    id: 5, cat: "silicon", impact: "medium", filler: false,
+    title: "Google Unveils Gemma 4 E2B Optimized for On-Device TPU Inference on Pixel",
+    summary: "Google announced Gemma 4 with E2B optimization enabling offline AI experiences on Pixel devices through on-device TPU inference. The approach keeps user data local while delivering faster application performance.",
+    source: "Android Authority", age: "3 days ago",
+    detail: "Gemma 4 E2B demonstrates Googles vertical integration strategy extending TPU benefits from cloud to edge devices. On-device inference reduces round-trip latency and cloud infrastructure load while addressing privacy concerns that enterprise and consumer segments increasingly prioritize. This positions Google uniquely among hyperscalers with silicon spanning mobile through datacenter. The offline capability also reduces dependency on network infrastructure for AI workloads creating differentiation against cloud-only competitors.",
+    url: "https://www.androidauthority.com/google-gemma-4-e2b-for-tpu-unveiled-3687531/"
   },
   {
     id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Meta Expands AI Infrastructure with Custom Chips and Computing Capacity Growth",
-    summary: "Meta Platforms is strengthening its AI infrastructure through custom chip development and significant expansion of computing capacity. The investment challenges major cloud providers positioning in the AI infrastructure market.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Metas continued investment in custom silicon and infrastructure expansion reinforces the trend of large technology companies building proprietary AI compute rather than relying on cloud providers. This creates both competitive pressure on Google Cloud and potential partnership opportunities if Meta seeks multi-cloud flexibility. The custom chip development specifically challenges NVIDIAs dominance and validates Googles early investment in TPU architecture. Understanding Metas infrastructure direction helps inform where Google Cloud can differentiate versus compete directly.",
-    url: "https://cryptobriefing.com/meta-ai-chips-compute-expansion-crypto/"
+    title: "Azure Launches Multi-Agent Orchestration SDK With Magentic Pattern at General Availability",
+    summary: "Microsoft Agent Framework reached general availability for multi-agent orchestration patterns including the Magentic pattern that scored 38 percent on GAIA benchmarks. The SDK consolidates patterns from AutoGen and Semantic Kernel into unified abstractions.",
+    source: "Azure Updates", age: "today",
+    detail: "Microsofts agent framework GA represents significant competitive investment in the agentic AI infrastructure layer that will drive next-generation cloud workloads. The Magentic pattern benchmark performance provides enterprises quantifiable comparison points when evaluating cloud platforms for agent deployments. Googles response in the agent orchestration tooling space will influence which hyperscaler captures emerging agentic workloads. The consolidation of AutoGen and Semantic Kernel suggests Microsoft is simplifying developer experience to accelerate adoption.",
+    url: "https://azure.microsoft.com/updates?id=563571"
   },
   {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Introduces Jetson Thor T3000 and T2000 for Mass Market Robotics and Edge AI",
-    summary: "NVIDIA announced new Jetson Thor modules T3000 and T2000 designed to enable mass-market robotics and edge AI applications requiring foundation model capabilities. The modules target compact power-efficient deployment of AI at the edge.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The Jetson Thor expansion addresses a different market segment than datacenter GPUs but signals NVIDIAs ambition to capture AI workloads across the compute spectrum. For Google this creates competitive considerations around edge TPU roadmap and Coral product line positioning. The emphasis on foundation model support at the edge suggests inference workloads are shifting closer to data sources which has implications for cloud-edge architecture patterns. Google may need to accelerate edge inference offerings to prevent NVIDIA from establishing dominance in distributed AI deployments.",
-    url: "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/"
+    id: 7, cat: "networking", impact: "medium", filler: false,
+    title: "AWS Introduces Private AI Agent Architecture With WebSocket Streaming Over CloudFront VPC Origins",
+    summary: "AWS published reference architecture for private AI agents using WebSocket streaming through CloudFront VPC origins combined with next-generation OpenSearch Serverless. The pattern addresses secure knowledge retrieval for enterprise agent deployments.",
+    source: "AWS Networking", age: "today",
+    detail: "This AWS architecture directly addresses enterprise requirements for private AI agent infrastructure with data sovereignty constraints. The WebSocket streaming approach enables real-time agent responses while maintaining VPC isolation which competes with Google Cloud networking capabilities for sensitive workloads. Integration with OpenSearch Serverless for knowledge retrieval establishes a reference pattern enterprises will evaluate against Googles Vertex AI and Cloud networking options. This represents AWS investment in agentic AI infrastructure patterns.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/private-ai-agent-with-websocket-streaming-over-cloudfront-vpc-origins-and-the-next-generation-of-opensearch-serverless-for-knowledge-retrieval/"
   },
   {
-    id: 8, cat: "vendor", impact: "medium", filler: false,
-    title: "ASML Raises 2026 Outlook on Strong AI Demand Plans 30 Percent Faster EUV Production",
-    summary: "ASML reported strong Q2 results driven by AI infrastructure demand and raised its 2026 revenue outlook while announcing plans to cut EUV machine production cycle time by 30 percent. The company is racing to meet semiconductor industry capacity needs.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "ASMLs capacity constraints ripple through the entire AI infrastructure supply chain affecting availability of advanced node chips from TSMC Samsung and Intel. The 30 percent cycle time improvement target indicates ASML recognizes it is a bottleneck for AI buildout. For Google this affects TPU chip availability timelines and reinforces the value of diversifying packaging and foundry relationships. The raised outlook confirms sustained AI infrastructure investment across the industry which benefits hyperscaler cloud demand but also intensifies competition for scarce manufacturing capacity.",
-    url: "https://www.ibtimes.com.au/asml-q2-results-ai-growth-semiconductor-industry-1872353"
+    id: 8, cat: "networking", impact: "medium", filler: false,
+    title: "AWS Publishes Layer 2 Networking Configuration Guide for EC2 Workloads",
+    summary: "AWS released guidance for setting up Layer 2 networking on EC2 to support workloads requiring L2 communication that VPC does not natively provide. The approach targets industrial control systems and specialized applications.",
+    source: "AWS Networking", age: "today",
+    detail: "Layer 2 networking requirements frequently arise in manufacturing and industrial IoT workloads migrating to cloud infrastructure. AWS addressing this gap explicitly positions EC2 for workloads that might otherwise require on-premises or specialized networking solutions. For Google Cloud networking teams this highlights a capability gap worth evaluating for parity. Industrial and manufacturing verticals represent growth segments where network feature completeness influences platform selection.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/setting-up-layer-2-networking-on-amazon-ec2/"
   },
   {
     id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA CEO Confirms Rubin AI Accelerators On Track for Delivery Schedule",
-    summary: "NVIDIA CEO Jensen Huang confirmed that next-generation Rubin AI accelerators remain on schedule for delivery despite industry supply chain concerns. The confirmation provides visibility into NVIDIAs competitive positioning timeline.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Rubins on-track status matters significantly for competitive planning as it determines when NVIDIA customers will have access to next-generation performance. For Google this creates urgency around TPU roadmap execution to maintain competitive positioning in cloud AI services. The confirmation also suggests NVIDIA has successfully navigated supply chain challenges that have affected other semiconductor programs. Google Cloud must factor Rubin availability into pricing and feature planning for AI platform services.",
-    url: "https://cryptobriefing.com/nvidia-rubin-ai-accelerators-on-track/"
+    title: "Japan Enterprises and Startups Adopt NVIDIA Nemotron for Industry-Specialized AI Models",
+    summary: "Leading Japanese enterprises startups and research institutions are building specialized AI with NVIDIA Nemotron open models. The adoption accelerates development of AI customized for Japanese language industries and workforce.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "NVIDIAs Nemotron traction in Japan demonstrates the vendor strategy of enabling regional customization to drive hardware adoption. Industry-specialized models require significant fine-tuning compute which translates to GPU infrastructure demand. Googles competitive position depends on offering comparable open model ecosystems with TPU optimization. The Japan market represents a key geography where hyperscaler and silicon vendor partnerships influence long-term infrastructure commitments.",
+    url: "https://nvidianews.nvidia.com/news/japans-enterprises-and-startups-build-industry-specialized-ai-with-nvidia-nemotron-open-models"
   },
   {
-    id: 10, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco and Nutanix Partner on AI-Ready Edge Platform for Real-Time Operations",
-    summary: "Cisco and Nutanix announced a partnership delivering Nutanix Cloud Platform with Cisco Unified Edge for AI and real-time operations at the edge. The solution combines compute simplicity and lifecycle management for modern edge deployments.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This partnership positions Cisco to compete in edge AI infrastructure by leveraging Nutanixs hyperconverged expertise. For Google Cloud this represents competition in hybrid and edge scenarios where customers want consistent infrastructure spanning datacenter and edge locations. The focus on lifecycle management addresses a key enterprise pain point that Google Cloud Edge solutions must also solve. Understanding Ciscos edge strategy helps inform where Google should invest in differentiated edge networking and compute offerings.",
-    url: "https://blogs.cisco.com/datacenter/the-ai-ready-edge-from-cisco-and-nutanix/"
-  },
-  {
-    id: 11, cat: "storage", impact: "low", filler: true,
-    title: "AlloyDB AI Solves PostgreSQL Multilingual Full-Text Search Limitations",
-    summary: "Google Cloud detailed how AlloyDB AI overcomes PostgreSQL indexing limitations for multilingual full-text search using AI functions. The solution enables enterprise-grade hybrid search combining text vector and keyword capabilities.",
+    id: 10, cat: "hyperscaler", impact: "low", filler: false,
+    title: "Google Named Leader in Gartner Magic Quadrant for Conversational AI Platforms",
+    summary: "Google achieved the highest positioning on Vision and Execution axes in the 2026 Gartner Magic Quadrant for Conversational AI Platforms. The company now ranks first in three of four Critical Capabilities Use Cases.",
     source: "Google Cloud Blog", age: "today",
-    detail: "AlloyDB enhancements demonstrate Googles continued investment in managed database differentiation through AI integration. While not directly related to GPU TPU infrastructure the improvements to hybrid search capabilities support AI application workloads that often require sophisticated data retrieval. This positions AlloyDB as a complement to AI inference services where applications need intelligent data access alongside model serving.",
-    url: "https://cloud.google.com/blog/products/databases/how-alloydb-overcomes-indexing-limitations-with-ai-functions/"
+    detail: "Analyst recognition validates Googles AI platform investments and influences enterprise procurement decisions. Conversational AI platform leadership creates pull-through demand for underlying compute and infrastructure services including TPU-powered inference. This positioning strengthens Googles competitive narrative against AWS and Azure in enterprise AI platform evaluations.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/google-is-a-leader-in-the-gartner-magic-quadrant-for-conversational-ai/"
   },
   {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "WhiteFiber Project Redwood Links H200 Clusters at 111.2 Tbps Over 83 Kilometers",
-    summary: "WhiteFiber disclosed R&D results for Project Redwood achieving 111.2 Tbps throughput connecting two H200 GPU clusters across 83 kilometers of dark fiber. The distributed supercluster architecture enables geographically separated datacenter operation.",
-    source: "Storagereview.com", age: "2 days ago",
-    detail: "This demonstration of high-bandwidth long-distance GPU cluster interconnection has implications for distributed training architectures that span multiple datacenter facilities. The throughput achieved suggests optical interconnect technology is maturing for production disaggregated compute scenarios. Google should monitor such developments as they could enable new competitive architectures for AI training that reduce single-site concentration risks.",
-    url: "https://www.storagereview.com/news/whitefibers-project-redwood-links-two-h200-clusters-into-one-111-2-tbps-supercluster"
+    id: 11, cat: "competition", impact: "low", filler: true,
+    title: "Azure Databricks Delivers Proven Business Value as Native Azure Service",
+    summary: "Microsoft positions Azure Databricks as delivering first-party advantage through co-engineering with Microsoft as a native Azure service. The platform integrates with existing Microsoft identity tools and governance frameworks.",
+    source: "Azure Blog", age: "today",
+    detail: "Azure Databricks integration messaging targets enterprises standardized on Microsoft tooling for data and AI workloads. The native service positioning differentiates from third-party Databricks deployments and competes with Google BigQuery and Vertex AI integration stories. Data platform choices influence downstream infrastructure decisions including compute and storage.",
+    url: "https://azure.microsoft.com/en-us/blog/azure-databricks-delivers-proven-business-value/"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Front Door Launches Edge Actions for Serverless Compute at CDN Edge",
-    summary: "Microsoft Azure announced public preview of Front Door edge actions enabling lightweight JavaScript execution during request processing at CDN edge locations. The feature allows real-time decision making closer to end users.",
-    source: "Azure Updates", age: "today",
-    detail: "Azures edge compute expansion follows industry trends toward pushing logic closer to users for latency reduction. This competes with Google Cloud CDN and Cloud Functions edge capabilities. While not directly AI infrastructure related edge compute increasingly supports AI inference use cases where milliseconds matter for user experience.",
-    url: "https://azure.microsoft.com/updates?id=567402"
+    id: 12, cat: "networking", impact: "low", filler: true,
+    title: "Arista Networks Among Five Infrastructure Stocks Addressing AI Bottlenecks",
+    summary: "Market analysts highlight Arista Networks alongside Vertiv Astera Labs Corning and Constellation Energy as addressing AI infrastructure bottlenecks. These companies tackle networking cooling and power challenges in AI deployments.",
+    source: "MarketBeat", age: "3 days ago",
+    detail: "Analyst coverage of AI infrastructure bottleneck plays indicates sustained investment interest in the ecosystem beyond silicon vendors. Arista Networks competitive positioning in datacenter switching directly affects hyperscaler networking decisions and vendor negotiations. Power and cooling constraints increasingly gate AI infrastructure deployment timelines.",
+    url: "https://www.marketbeat.com/articles/beyond-the-foundry-5-infrastructure-stocks-tackling-the-ai-bottlenecks/?utm_source=yahoofinance&utm_medium=yahoofinance"
+  },
+  {
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "Cisco and Lumen Partner on Managed Networking for Critical Environments",
+    summary: "Cisco and Lumen announced a managed networking service targeting secure reliable connectivity for critical environments like hospitals. The partnership addresses network fragmentation challenges in enterprise deployments.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "Cisco managed service partnerships extend vendor reach into enterprise accounts that may eventually scale into cloud and AI infrastructure requirements. Healthcare vertical targeting aligns with data sovereignty and compliance requirements that influence cloud platform selection. This represents Ciscos continued investment in managed service delivery models.",
+    url: "https://blogs.cisco.com/networking/cisco-powered-networking-managed-by-lumen-simple-secure-and-responsive/"
   },
   {
     id: 14, cat: "storage", impact: "low", filler: true,
-    title: "Data Center Rack Market Projects Growth to 13.5 Billion by 2033 on AI Expansion",
-    summary: "Market research projects the global data center rack market will grow from 7.5 billion in 2026 to 13.5 billion by 2033 driven by AI infrastructure expansion. The 8.8 percent CAGR reflects sustained datacenter buildout investment.",
-    source: "PRNewswire", age: "1 day ago",
-    detail: "Rack market growth serves as a proxy indicator for overall datacenter infrastructure expansion driven by AI workloads. The projection reinforces expectations for continued capital investment in physical infrastructure that supports cloud and AI services. For capacity planning this suggests sustained demand for datacenter space and supporting infrastructure through the decade.",
-    url: "https://www.prnewswire.com/news-releases/data-center-rack-market-accelerates-with-ai-infrastructure-expansion--reach-us-13-5-billion-by-2033--persistence-market-research-302825174.html"
+    title: "Micron Shares Fall as Memory Chip Stocks Extend Multi-Day Selloff",
+    summary: "Micron Technology shares dropped 3.2 percent amid increased competition from Chinese rivals and market uncertainties. Analysts maintain bullish long-term outlook despite near-term volatility.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "Memory market dynamics directly impact storage costs for AI training datasets and model checkpoints across hyperscaler infrastructure. Chinese competition in memory chips could affect pricing and supply chain strategies for HBM and datacenter storage solutions. Long-term analyst confidence suggests sustained AI memory demand despite near-term competitive pressures.",
+    url: "https://www.ibtimes.com.au/micron-technology-volatility-competition-market-uncertainty-1872420"
   },
   {
     id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Power Integrations Unveils Ultra-Slim PSU Designs for NVIDIA 800 VDC Architecture",
-    summary: "Power Integrations announced ultra-slim power supply reference designs optimized for NVIDIAs 800 VDC datacenter architecture standard. The designs aim to improve AI datacenter efficiency and reduce infrastructure footprint.",
-    source: "Crypto Briefing", age: "today",
-    detail: "The 800 VDC architecture represents an emerging standard for AI datacenter power distribution that NVIDIA is promoting. Power supply innovations at this level affect overall datacenter efficiency and density which impacts TCO for AI infrastructure deployments. Google should track power architecture evolution as it affects both facility design and competitive infrastructure economics.",
-    url: "https://cryptobriefing.com/power-integrations-nvidia-800vdc-psu-reference-designs/"
+    title: "Energy Executives Rate Solar PV and Batteries Highest for Data Center Power Sources",
+    summary: "Energy executives surveyed rated solar PV and batteries as top power sources for data center growth with natural gas close behind. Investment in data centers continues growing exponentially according to the analysis.",
+    source: "Forbes", age: "2 days ago",
+    detail: "Power source preferences among energy executives signal infrastructure planning trends that affect hyperscaler datacenter site selection and expansion. Renewable energy availability increasingly influences cloud region competitiveness and customer sustainability requirements. Natural gas backup capacity remains relevant for AI workload reliability requirements.",
+    url: "https://www.forbes.com/sites/ianpalmer/2026/07/15/energy-executives-rate-power-sources-for-data-center-revolution/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The IDC survey highlighting networking infrastructure as the critical bottleneck for agentic AI deployment validates Google Clouds positioning and creates urgency for network architecture solutions that can differentiate GCP in enterprise AI scaling conversations. Googles reported selection of Intel EMIB-T over TSMC CoWoS for the Humufish TPU represents a significant supply chain diversification move that reduces packaging dependency risk while potentially signaling capacity or cost advantages worth monitoring against competitive TPU roadmaps. ASMLs 30 percent faster EUV production timeline and raised 2026 outlook suggests semiconductor capacity constraints may ease, though Aristas 1.6T platform launch and the Japan Rubin deployment confirm that networking bandwidth demands will continue accelerating ahead of supply.";
+const STATIC_BRIEF = "The AWS private AI agent architecture using WebSocket streaming over CloudFront VPC origins establishes a reference pattern for secure enterprise agent networking that GCP must counter with comparable Networking and Storage primitives for private knowledge retrieval at scale. Microsoft Agent Framework reaching general availability with consolidated multi-agent orchestration creates immediate competitive pressure on Vertex AI agent infrastructure, particularly as Azure unifies AutoGen and Semantic Kernel into production-ready abstractions. Samsung discussions for back-end design on Googles 2nm TPU represent a strategic supply chain diversification opportunity worth monitoring closely given TSMC capacity constraints from sustained AI demand driving their 77 percent profit surge.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
