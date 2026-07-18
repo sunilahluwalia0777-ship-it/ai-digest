@@ -647,124 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "TSMC Posts Record Quarter With 77 Percent Profit Surge on Sustained AI Compute Demand",
-    summary: "TSMC reported a 77 percent profit increase driven by AI chip demand and raised capital expenditure guidance for coming years. The company also announced an additional 100 billion dollar investment in Arizona facilities.",
+    id: 1, cat: "competition", impact: "high", filler: false,
+    title: "Meta Hires AWS SVP Dave Brown to Lead AI Data Center Expansion and Cloud Ambitions",
+    summary: "",
     source: "Crypto Briefing", age: "today",
-    detail: "TSMCs record financial performance validates the sustained demand trajectory for advanced AI silicon that underpins GPU and TPU production. The additional Arizona investment signals continued geographic diversification of leading-edge capacity which directly affects supply chain planning for hyperscaler customers including Google. Capital expenditure increases suggest TSMC expects AI training and inference workloads to remain capacity-constrained through the forecast period. This has direct implications for Googles TPU roadmap and competitive positioning against NVIDIA-based infrastructure at AWS and Azure.",
-    url: "https://cryptobriefing.com/tsmc-profits-surge-ai-demand/"
+    detail: "This hiring represents a significant competitive threat to Google Cloud as Meta enters the cloud computing market with substantial capital backing of up to $145 billion in AI infrastructure. Dave Browns deep AWS experience in running EC2 and related compute services gives Meta immediate operational credibility. The creation of Meta Compute suggests Meta may monetize its massive AI infrastructure investments by offering external cloud services, directly challenging GCP AWS and Azure in the hyperscaler market.",
+    url: "https://cryptobriefing.com/meta-hires-aws-dave-brown-ai-data-centers/"
   },
   {
-    id: 2, cat: "silicon", impact: "high", filler: false,
-    title: "Samsung May Handle Back-End Design for Googles 2nm TPU Chip",
-    summary: "Samsung is reportedly in discussions to handle back-end design work for Googles next-generation 2nm TPU silicon. This potential partnership could reshape semiconductor supply chain dynamics and intensify competition with TSMC.",
-    source: "Crypto Briefing", age: "2 days ago",
-    detail: "Googles potential engagement of Samsung for 2nm TPU back-end design represents a strategic diversification away from sole reliance on TSMC for advanced packaging. Back-end design encompasses critical interconnect and packaging decisions that directly impact thermal performance and die-to-die bandwidth essential for TPU cluster performance. This move could provide Google negotiating leverage while building redundancy into the TPU supply chain. The 2nm node transition is critical for maintaining compute density advantages against NVIDIAs Blackwell and Vera Rubin generations.",
-    url: "https://cryptobriefing.com/google-tpu-samsung-design-outsourcing/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "AWS Posts Fastest Growth in Four Years as AI Spending Reshapes Cloud Wars",
+    summary: "",
+    source: "Crypto Briefing", age: "1 day ago",
+    detail: "AWS growth acceleration directly impacts Google Clouds competitive positioning and market share dynamics. The fastest growth in four years suggests AWS is successfully capturing a disproportionate share of enterprise AI workload spending which is the primary battleground for cloud revenue growth. Google Cloud leadership needs to evaluate whether TPU and networking differentiation is sufficient to compete against AWS momentum in AI infrastructure services.",
+    url: "https://cryptobriefing.com/aws-ai-growth-decentralized-compute/"
   },
   {
     id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Vera Rubin Positioned as Cost-Per-Token Leader for Agentic AI Workloads",
-    summary: "NVIDIA claims Vera Rubin architecture maximizes intelligence per dollar for post-training workloads through extreme hardware-software codesign. The company positions this metric as critical for emerging agentic AI applications.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "NVIDIAs framing of Vera Rubin around cost-per-token economics signals a competitive pivot toward total cost of ownership messaging that directly challenges TPU value propositions. The emphasis on post-training workloads including inference and fine-tuning reflects the shift in AI compute demand patterns as foundation models mature. For Google PM teams the intelligence-per-dollar metric becomes a key benchmark for TPU competitiveness. This messaging also indicates NVIDIA expects agentic AI workloads to drive the next infrastructure investment cycle.",
-    url: "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/"
+    title: "NVIDIA CEO Confirms Vera Rubin On Track and Unveils Japans First AI Factory With 27500 GPUs",
+    summary: "",
+    source: "Wccftech", age: "today",
+    detail: "NVIDIAs confirmation that Vera Rubin is on track is critical for Google Cloud infrastructure planning as these next-generation GPUs will define competitive AI compute capabilities through 2027. The 27500 GPU deployment in Japan demonstrates the scale of national AI infrastructure investments that Google must match. This deployment pattern suggests hyperscalers and sovereign cloud providers are racing to secure NVIDIA capacity which could create supply allocation challenges for Google Cloud expansion.",
+    url: "https://wccftech.com/nvidia-ceo-rips-apart-chip-delay-narrative-says-giant-amounts-of-vera-rubin-coming/"
   },
   {
     id: 4, cat: "vendor", impact: "medium", filler: false,
-    title: "Huang Confirms Vera Rubin On Track But Sidesteps Kyber NVL144 Delay Questions",
-    summary: "NVIDIA CEO Jensen Huang stated the company will deliver giant amounts of Vera Rubin systems and that the roadmap remains intact. However he did not address rumors of Kyber NVL144 rack delays from 2027 to 2028.",
-    source: "Toms Hardware UK", age: "2 days ago",
-    detail: "Huangs selective confirmation raises questions about NVIDIAs next-generation rack-scale systems which directly compete with Googles TPU pod architecture. A potential one-year slip in NVL144 availability would create a window where TPU infrastructure could capture enterprise workloads otherwise waiting for NVIDIA solutions. The lack of explicit denial regarding Kyber delays suggests supply chain or thermal challenges may be affecting rack-scale packaging timelines. Competitive intelligence teams should monitor for further signals on NVL144 production schedules.",
-    url: "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-huang-vows-to-deliver-giant-amounts-of-vera-rubin-company-says-that-our-roadmap-is-intact"
-  },
-  {
-    id: 5, cat: "silicon", impact: "medium", filler: false,
-    title: "Google Unveils Gemma 4 E2B Optimized for On-Device TPU Inference on Pixel",
-    summary: "Google announced Gemma 4 with E2B optimization enabling offline AI experiences on Pixel devices through on-device TPU inference. The approach keeps user data local while delivering faster application performance.",
-    source: "Android Authority", age: "3 days ago",
-    detail: "Gemma 4 E2B demonstrates Googles vertical integration strategy extending TPU benefits from cloud to edge devices. On-device inference reduces round-trip latency and cloud infrastructure load while addressing privacy concerns that enterprise and consumer segments increasingly prioritize. This positions Google uniquely among hyperscalers with silicon spanning mobile through datacenter. The offline capability also reduces dependency on network infrastructure for AI workloads creating differentiation against cloud-only competitors.",
-    url: "https://www.androidauthority.com/google-gemma-4-e2b-for-tpu-unveiled-3687531/"
-  },
-  {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Azure Launches Multi-Agent Orchestration SDK With Magentic Pattern at General Availability",
-    summary: "Microsoft Agent Framework reached general availability for multi-agent orchestration patterns including the Magentic pattern that scored 38 percent on GAIA benchmarks. The SDK consolidates patterns from AutoGen and Semantic Kernel into unified abstractions.",
-    source: "Azure Updates", age: "today",
-    detail: "Microsofts agent framework GA represents significant competitive investment in the agentic AI infrastructure layer that will drive next-generation cloud workloads. The Magentic pattern benchmark performance provides enterprises quantifiable comparison points when evaluating cloud platforms for agent deployments. Googles response in the agent orchestration tooling space will influence which hyperscaler captures emerging agentic workloads. The consolidation of AutoGen and Semantic Kernel suggests Microsoft is simplifying developer experience to accelerate adoption.",
-    url: "https://azure.microsoft.com/updates?id=563571"
-  },
-  {
-    id: 7, cat: "networking", impact: "medium", filler: false,
-    title: "AWS Introduces Private AI Agent Architecture With WebSocket Streaming Over CloudFront VPC Origins",
-    summary: "AWS published reference architecture for private AI agents using WebSocket streaming through CloudFront VPC origins combined with next-generation OpenSearch Serverless. The pattern addresses secure knowledge retrieval for enterprise agent deployments.",
-    source: "AWS Networking", age: "today",
-    detail: "This AWS architecture directly addresses enterprise requirements for private AI agent infrastructure with data sovereignty constraints. The WebSocket streaming approach enables real-time agent responses while maintaining VPC isolation which competes with Google Cloud networking capabilities for sensitive workloads. Integration with OpenSearch Serverless for knowledge retrieval establishes a reference pattern enterprises will evaluate against Googles Vertex AI and Cloud networking options. This represents AWS investment in agentic AI infrastructure patterns.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/private-ai-agent-with-websocket-streaming-over-cloudfront-vpc-origins-and-the-next-generation-of-opensearch-serverless-for-knowledge-retrieval/"
-  },
-  {
-    id: 8, cat: "networking", impact: "medium", filler: false,
-    title: "AWS Publishes Layer 2 Networking Configuration Guide for EC2 Workloads",
-    summary: "AWS released guidance for setting up Layer 2 networking on EC2 to support workloads requiring L2 communication that VPC does not natively provide. The approach targets industrial control systems and specialized applications.",
-    source: "AWS Networking", age: "today",
-    detail: "Layer 2 networking requirements frequently arise in manufacturing and industrial IoT workloads migrating to cloud infrastructure. AWS addressing this gap explicitly positions EC2 for workloads that might otherwise require on-premises or specialized networking solutions. For Google Cloud networking teams this highlights a capability gap worth evaluating for parity. Industrial and manufacturing verticals represent growth segments where network feature completeness influences platform selection.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/setting-up-layer-2-networking-on-amazon-ec2/"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "Japan Enterprises and Startups Adopt NVIDIA Nemotron for Industry-Specialized AI Models",
-    summary: "Leading Japanese enterprises startups and research institutions are building specialized AI with NVIDIA Nemotron open models. The adoption accelerates development of AI customized for Japanese language industries and workforce.",
+    title: "Japan Robotics Leaders Build on NVIDIA Cosmos Isaac and Jetson for Physical AI",
+    summary: "",
     source: "NVIDIA Newsroom", age: "today",
-    detail: "NVIDIAs Nemotron traction in Japan demonstrates the vendor strategy of enabling regional customization to drive hardware adoption. Industry-specialized models require significant fine-tuning compute which translates to GPU infrastructure demand. Googles competitive position depends on offering comparable open model ecosystems with TPU optimization. The Japan market represents a key geography where hyperscaler and silicon vendor partnerships influence long-term infrastructure commitments.",
-    url: "https://nvidianews.nvidia.com/news/japans-enterprises-and-startups-build-industry-specialized-ai-with-nvidia-nemotron-open-models"
+    detail: "NVIDIAs expansion into physical AI and edge computing through Japanese manufacturing partners creates new competitive dimensions beyond data center GPUs. The Cosmos and Isaac platforms represent NVIDIAs strategy to capture AI inference workloads at the edge which could reduce demand for cloud-based AI infrastructure. Google Cloud must consider how physical AI and edge deployments affect long-term demand patterns for centralized GPU and TPU compute services.",
+    url: "https://nvidianews.nvidia.com/news/japans-robotics-and-manufacturing-leaders-build-on-nvidia-cosmos-to-advance-physical-ai-frontier"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "low", filler: false,
-    title: "Google Named Leader in Gartner Magic Quadrant for Conversational AI Platforms",
-    summary: "Google achieved the highest positioning on Vision and Execution axes in the 2026 Gartner Magic Quadrant for Conversational AI Platforms. The company now ranks first in three of four Critical Capabilities Use Cases.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Analyst recognition validates Googles AI platform investments and influences enterprise procurement decisions. Conversational AI platform leadership creates pull-through demand for underlying compute and infrastructure services including TPU-powered inference. This positioning strengthens Googles competitive narrative against AWS and Azure in enterprise AI platform evaluations.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/google-is-a-leader-in-the-gartner-magic-quadrant-for-conversational-ai/"
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "China and Russia Launch 29-Nation WAICO AI Alliance to Rival Western Tech Control",
+    summary: "",
+    source: "Naturalnews.com", age: "today",
+    detail: "The formation of a 29-nation AI bloc creates geopolitical fragmentation in cloud and AI infrastructure markets that will affect Google Cloud international expansion strategies. Countries joining WAICO may face pressure to reduce dependency on US hyperscalers including Google Cloud for sovereign AI workloads. This bifurcation could accelerate regional cloud infrastructure buildouts and create export control complications for networking and storage equipment from US-based vendors like Broadcom and Cisco.",
+    url: "https://www.naturalnews.com/2026-07-17-china-russia-ai-alliance-western-control-technology.html"
   },
   {
-    id: 11, cat: "competition", impact: "low", filler: true,
-    title: "Azure Databricks Delivers Proven Business Value as Native Azure Service",
-    summary: "Microsoft positions Azure Databricks as delivering first-party advantage through co-engineering with Microsoft as a native Azure service. The platform integrates with existing Microsoft identity tools and governance frameworks.",
-    source: "Azure Blog", age: "today",
-    detail: "Azure Databricks integration messaging targets enterprises standardized on Microsoft tooling for data and AI workloads. The native service positioning differentiates from third-party Databricks deployments and competes with Google BigQuery and Vertex AI integration stories. Data platform choices influence downstream infrastructure decisions including compute and storage.",
-    url: "https://azure.microsoft.com/en-us/blog/azure-databricks-delivers-proven-business-value/"
+    id: 6, cat: "silicon", impact: "medium", filler: false,
+    title: "US Lawmakers Push to Ban Chinese Memory Chips Citing National and Supply Chain Security",
+    summary: "",
+    source: "Toms Hardware UK", age: "today",
+    detail: "A ban on Chinese memory chips would significantly impact storage infrastructure costs and supply chain planning for Google Cloud data centers. Memory represents a substantial portion of server BOM costs and restricting supply sources could create shortages and price increases. Google Cloud infrastructure teams must evaluate alternative memory suppliers and potential inventory strategies if China-origin DRAM and NAND become restricted in US and allied markets.",
+    url: "https://www.tomshardware.com/pc-components/dram/lawmakers-want-us-government-to-ban-memory-chips-from-china-even-in-allied-supply-chains-citing-unacceptable-risk-to-national-economic-and-supply-chain-security"
   },
   {
-    id: 12, cat: "networking", impact: "low", filler: true,
-    title: "Arista Networks Among Five Infrastructure Stocks Addressing AI Bottlenecks",
-    summary: "Market analysts highlight Arista Networks alongside Vertiv Astera Labs Corning and Constellation Energy as addressing AI infrastructure bottlenecks. These companies tackle networking cooling and power challenges in AI deployments.",
-    source: "MarketBeat", age: "3 days ago",
-    detail: "Analyst coverage of AI infrastructure bottleneck plays indicates sustained investment interest in the ecosystem beyond silicon vendors. Arista Networks competitive positioning in datacenter switching directly affects hyperscaler networking decisions and vendor negotiations. Power and cooling constraints increasingly gate AI infrastructure deployment timelines.",
-    url: "https://www.marketbeat.com/articles/beyond-the-foundry-5-infrastructure-stocks-tackling-the-ai-bottlenecks/?utm_source=yahoofinance&utm_medium=yahoofinance"
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Fed Vice Chair Warns AI Investment Boom Could Fuel Inflation Before Productivity Gains",
+    summary: "",
+    source: "Crypto Briefing", age: "1 day ago",
+    detail: "This macroeconomic warning has direct implications for hyperscaler capital allocation strategies including Google Clouds $50 billion plus annual infrastructure spending. Higher interest rates for longer increase the cost of capital for data center buildouts and may pressure margins on AI infrastructure investments. The Fed perspective suggests that the current AI investment cycle is creating measurable demand-side inflation which could affect vendor pricing from Broadcom NVIDIA and networking equipment suppliers.",
+    url: "https://cryptobriefing.com/fed-jefferson-ai-inflation-supply-demand/"
   },
   {
-    id: 13, cat: "vendor", impact: "low", filler: true,
-    title: "Cisco and Lumen Partner on Managed Networking for Critical Environments",
-    summary: "Cisco and Lumen announced a managed networking service targeting secure reliable connectivity for critical environments like hospitals. The partnership addresses network fragmentation challenges in enterprise deployments.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Cisco managed service partnerships extend vendor reach into enterprise accounts that may eventually scale into cloud and AI infrastructure requirements. Healthcare vertical targeting aligns with data sovereignty and compliance requirements that influence cloud platform selection. This represents Ciscos continued investment in managed service delivery models.",
-    url: "https://blogs.cisco.com/networking/cisco-powered-networking-managed-by-lumen-simple-secure-and-responsive/"
+    id: 8, cat: "competition", impact: "medium", filler: false,
+    title: "Europe Chip Ambitions Cannot Break US Cloud and Software Dependency Says Forrester",
+    summary: "",
+    source: "Theregister.com", age: "today",
+    detail: "This assessment reinforces Google Clouds strong competitive position in European markets despite regulatory headwinds and sovereignty concerns. European enterprises will continue relying on US hyperscalers for AI infrastructure even as governments invest in domestic chip manufacturing. The analysis suggests that networking and storage software stacks from US vendors like Cisco Arista and Broadcom will maintain their European market positions regardless of local silicon production capacity.",
+    url: "https://www.theregister.com/paas-and-iaas/2026/07/17/europes-chip-ambitions-wont-break-dependence-on-us-cloud-and-software-says-forrester/5274086"
   },
   {
-    id: 14, cat: "storage", impact: "low", filler: true,
-    title: "Micron Shares Fall as Memory Chip Stocks Extend Multi-Day Selloff",
-    summary: "Micron Technology shares dropped 3.2 percent amid increased competition from Chinese rivals and market uncertainties. Analysts maintain bullish long-term outlook despite near-term volatility.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "Memory market dynamics directly impact storage costs for AI training datasets and model checkpoints across hyperscaler infrastructure. Chinese competition in memory chips could affect pricing and supply chain strategies for HBM and datacenter storage solutions. Long-term analyst confidence suggests sustained AI memory demand despite near-term competitive pressures.",
-    url: "https://www.ibtimes.com.au/micron-technology-volatility-competition-market-uncertainty-1872420"
+    id: 9, cat: "silicon", impact: "low", filler: false,
+    title: "Edge AI Hardware Market Forecast Shows Growth in Low-Power Chips for Industry Verticals",
+    summary: "",
+    source: "GlobeNewswire", age: "today",
+    detail: "Edge AI growth represents both opportunity and threat for Google Cloud centralized infrastructure strategy. As more AI inference moves to edge devices demand for cloud-based GPU and TPU compute may face headwinds in certain use cases. However edge deployments often require cloud connectivity for model training and updates creating hybrid infrastructure opportunities that Google Cloud can address through networking and storage integration.",
+    url: "https://www.globenewswire.com/news-release/2026/07/17/3328937/28124/en/Edge-AI-Hardware-Market-Global-Forecast-2026-2032-Now-Available-Segments-by-Component-Device-Type-Power-Consumption-Industry-Vertical-and-15-Countries.html"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Energy Executives Rate Solar PV and Batteries Highest for Data Center Power Sources",
-    summary: "Energy executives surveyed rated solar PV and batteries as top power sources for data center growth with natural gas close behind. Investment in data centers continues growing exponentially according to the analysis.",
-    source: "Forbes", age: "2 days ago",
-    detail: "Power source preferences among energy executives signal infrastructure planning trends that affect hyperscaler datacenter site selection and expansion. Renewable energy availability increasingly influences cloud region competitiveness and customer sustainability requirements. Natural gas backup capacity remains relevant for AI workload reliability requirements.",
-    url: "https://www.forbes.com/sites/ianpalmer/2026/07/15/energy-executives-rate-power-sources-for-data-center-revolution/"
+    id: 10, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Functions Adds Python 3.14 and PowerShell 7.6 Support for Serverless Workloads",
+    summary: "",
+    source: "Azure Updates", age: "today",
+    detail: "These Azure serverless updates represent incremental competitive moves in the cloud platform wars. While not directly related to AI infrastructure they demonstrate Microsofts continued investment in developer experience and language runtime support. Google Cloud Functions competes directly in this space and must maintain runtime parity to avoid losing developer mindshare.",
+    url: "https://azure.microsoft.com/updates?id=567646"
+  },
+  {
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Azure Kubernetes Service Adds Encryption in Transit for NFS Storage Volumes",
+    summary: "",
+    source: "Azure Updates", age: "today",
+    detail: "Storage encryption capabilities are table stakes for enterprise cloud adoption and this Azure feature closes a gap in their Kubernetes storage offering. Google Cloud GKE already supports similar encryption options but must continuously monitor competitive feature parity. NFS storage performance and security remain important for AI training workloads that require shared file systems across GPU nodes.",
+    url: "https://azure.microsoft.com/updates?id=567787"
+  },
+  {
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Microsoft Agent Framework Reaches GA With Multi-Agent Orchestration SDK for AI Developers",
+    summary: "",
+    source: "Azure Updates", age: "today",
+    detail: "Microsofts agent framework investments position Azure as the enterprise platform for agentic AI workloads. While not directly infrastructure related agent frameworks drive compute and storage consumption patterns that affect cloud infrastructure demand. Google Clouds Gemini Enterprise Agent Platform competes directly and both platforms are racing to establish developer ecosystem lock-in.",
+    url: "https://azure.microsoft.com/updates?id=564312"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "AWS VPN Route Enforcement Prevents Traffic Leaks for Remote Cloud Connectivity",
+    summary: "",
+    source: "AWS Networking", age: "today",
+    detail: "VPN security enhancements are incremental networking improvements that matter for enterprise compliance requirements. Google Cloud VPN services must maintain competitive feature parity in secure connectivity options. While not transformative these networking security features affect enterprise procurement decisions for regulated workloads.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/prevent-vpn-traffic-leaks-with-client-vpn-route-enforcement-in-aws-client-vpn/"
+  },
+  {
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Porting Nanochat to TPU Reveals JAX Migration Challenges From PyTorch Training",
+    summary: "",
+    source: "Github.com", age: "2 days ago",
+    detail: "This open source TPU porting effort provides useful insights into the developer experience challenges of migrating between GPU and TPU ecosystems. The documented friction points can inform Google Cloud TPU product development and developer tooling priorities. Understanding where PyTorch to JAX migrations break helps identify opportunities to improve TPU adoption barriers.",
+    url: "https://github.com/tucan9389/nanochat-jax/discussions/1"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The AWS private AI agent architecture using WebSocket streaming over CloudFront VPC origins establishes a reference pattern for secure enterprise agent networking that GCP must counter with comparable Networking and Storage primitives for private knowledge retrieval at scale. Microsoft Agent Framework reaching general availability with consolidated multi-agent orchestration creates immediate competitive pressure on Vertex AI agent infrastructure, particularly as Azure unifies AutoGen and Semantic Kernel into production-ready abstractions. Samsung discussions for back-end design on Googles 2nm TPU represent a strategic supply chain diversification opportunity worth monitoring closely given TSMC capacity constraints from sustained AI demand driving their 77 percent profit surge.";
+const STATIC_BRIEF = "AWS posting fastest growth in four years signals intensifying competition for AI workloads, and Meta hiring AWS infrastructure leadership to accelerate their data center buildout creates a formidable new competitor for hyperscale AI capacity. NVIDIAs confirmation that Vera Rubin remains on track while deploying 27500 GPUs in Japans first AI factory demonstrates continued execution on next-gen silicon and strengthens their position as the dominant training accelerator vendor. US lawmakers pushing to ban Chinese memory chips introduces potential DRAM and NAND supply constraints that could impact storage costs and availability for GPU cluster deployments across all hyperscalers.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
