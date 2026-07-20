@@ -647,116 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high", filler: false,
-    title: "Meta Hires AWS SVP Dave Brown to Lead AI Data Center Expansion and Cloud Ambitions",
-    summary: "",
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Goldman Sachs Warns Hyperscaler AI Debt Tsunami May Overwhelm Credit Markets",
+    summary: "Goldman Sachs is raising alarms as major cloud providers accumulate debt at rates credit markets struggle to absorb. The investment bank warns AI companies face a narrowing window to demonstrate returns on massive infrastructure investments.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "This warning from Goldman Sachs signals potential financial stress across the hyperscaler ecosystem that could impact infrastructure buildout timelines. For Google Cloud the concern is twofold - competitors may face capital constraints that slow their AI infrastructure expansion while Google must also demonstrate ROI on its own massive GPU and TPU investments. The debt dynamics could reshape competitive positioning if some players are forced to moderate spending while others maintain aggressive buildout schedules. Infrastructure vendors like NVIDIA Broadcom and networking suppliers should monitor credit conditions closely as hyperscaler purchasing decisions may become more conservative.",
+    url: "https://247wallst.com/investing/2026/07/19/goldman-sachs-warns-on-ais-debt-tsunami-is-the-ai-boom/"
+  },
+  {
+    id: 2, cat: "competition", impact: "high", filler: false,
+    title: "Meta Recruits Senior Amazon Cloud Executive to Lead Meta Compute Initiative",
+    summary: "Meta is actively recruiting a senior Amazon cloud executive as it accelerates Meta Compute backed by up to 145 billion dollars in AI infrastructure investment. The move signals Metas serious intent to compete directly in cloud services.",
+    source: "Crypto Briefing", age: "3 days ago",
+    detail: "Metas aggressive entry into cloud computing represents a significant competitive threat to established hyperscalers including Google Cloud. The 145 billion dollar infrastructure commitment combined with executive talent acquisition from AWS indicates Meta is building enterprise-grade capabilities rather than just internal AI infrastructure. This creates new dynamics in the vendor ecosystem as Meta will need networking silicon storage and compute components at massive scale. Google must consider how Metas cloud ambitions could fragment the market and potentially compete for the same AI workloads Google Cloud targets with its TPU and GPU offerings.",
+    url: "https://cryptobriefing.com/meta-amazon-executive-cloud-expansion/"
+  },
+  {
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "Oracle Faces Multibillion Dollar Cost Overruns at AI Megacampus Data Centers",
+    summary: "Oracle is encountering loan syndication difficulties and soaring capital expenditures at its AI megacampus projects resulting in a 19 percent stock decline. The cost surprises highlight execution risks in large-scale AI infrastructure deployment.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "Oracles struggles with AI megacampus economics provide important competitive intelligence for Google Cloud infrastructure planning. The loan syndication challenges suggest capital markets are becoming more selective about funding massive AI infrastructure projects which could constrain competitors ability to match Googles buildout pace. However these same dynamics could affect Googles own expansion if credit conditions tighten further. The 19 percent stock drop indicates investor concern about the economics of hyperscale AI infrastructure which may force more disciplined capacity planning across the industry. Google should evaluate whether Oracles challenges create opportunities to capture enterprise AI workloads from customers concerned about OCI stability.",
+    url: "https://cryptobriefing.com/oracle-multibillion-cost-surprises-ai-megacampuses/"
+  },
+  {
+    id: 4, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Secures First Customer Position for SK Hynix HBM4 Memory Production",
+    summary: "NVIDIA has locked in as the first customer for HBM4 memory with SK Hynix capturing 70 percent of orders for the next-generation high bandwidth memory. This secures NVIDIAs supply chain advantage for future GPU generations.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "NVIDIAs priority access to HBM4 reinforces its dominant position in AI accelerator supply chains and has direct implications for Google Cloud infrastructure planning. With SK Hynix commanding 70 percent of HBM4 orders the memory supply chain remains concentrated creating potential allocation challenges for TPU development and GPU procurement. Google must ensure its own HBM4 supply agreements are competitive to avoid constraints on next-generation TPU production. The memory bandwidth improvements in HBM4 will be critical for training larger models and Googles ability to match NVIDIA performance trajectories depends on securing adequate supply.",
+    url: "https://cryptobriefing.com/nvidia-hbm4-memory-sk-hynix-crypto/"
+  },
+  {
+    id: 5, cat: "vendor", impact: "high", filler: false,
+    title: "SK Hynix Surpasses Samsung as South Koreas Most Valuable Company at 1.35 Trillion",
+    summary: "SK Hynix has overtaken Samsung as South Koreas most valuable company with a 1.35 trillion dollar market cap driven by AI chip demand. The shift reflects the massive value creation in AI memory semiconductors.",
     source: "Crypto Briefing", age: "today",
-    detail: "This hiring represents a significant competitive threat to Google Cloud as Meta enters the cloud computing market with substantial capital backing of up to $145 billion in AI infrastructure. Dave Browns deep AWS experience in running EC2 and related compute services gives Meta immediate operational credibility. The creation of Meta Compute suggests Meta may monetize its massive AI infrastructure investments by offering external cloud services, directly challenging GCP AWS and Azure in the hyperscaler market.",
-    url: "https://cryptobriefing.com/meta-hires-aws-dave-brown-ai-data-centers/"
+    detail: "SK Hynixs ascendance over Samsung underscores the strategic importance of HBM suppliers in the AI infrastructure stack. For Google Cloud this concentration of value in a single memory supplier creates both opportunity and risk - strong financial performance enables SK Hynix to invest in capacity expansion but also increases pricing power in negotiations. The KOSPI volatility tied to AI chip demand indicates how sensitive these suppliers are to hyperscaler purchasing patterns. Google should consider diversifying HBM sourcing relationships while the market remains competitive and evaluate strategic partnerships that could provide supply security for TPU roadmaps.",
+    url: "https://cryptobriefing.com/south-korea-stock-market-ai-samsung-sk-hynix/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "AWS Posts Fastest Growth in Four Years as AI Spending Reshapes Cloud Wars",
-    summary: "",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "AWS growth acceleration directly impacts Google Clouds competitive positioning and market share dynamics. The fastest growth in four years suggests AWS is successfully capturing a disproportionate share of enterprise AI workload spending which is the primary battleground for cloud revenue growth. Google Cloud leadership needs to evaluate whether TPU and networking differentiation is sufficient to compete against AWS momentum in AI infrastructure services.",
-    url: "https://cryptobriefing.com/aws-ai-growth-decentralized-compute/"
+    id: 6, cat: "vendor", impact: "medium", filler: false,
+    title: "Bristol Myers Squibb Deploys Second NVIDIA DGX SuperPOD on Vera Rubin Platform",
+    summary: "Bristol Myers Squibb announced deployment of its second NVIDIA DGX SuperPOD built on Vera Rubin architecture representing one of the largest AI clusters in life sciences. The pharmaceutical giant is doubling its AI compute capacity for drug discovery.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "BMSs continued investment in on-premises NVIDIA infrastructure rather than cloud AI services represents a competitive signal for Google Cloud. Life sciences represents a major vertical opportunity but enterprises with significant resources are choosing owned infrastructure over cloud consumption models. This suggests Google Cloud needs stronger differentiation in regulated industries where data sovereignty and specialized AI workflows matter. The Vera Rubin platform deployment also indicates NVIDIAs enterprise penetration continues to deepen providing reference customers that validate on-premises alternatives to cloud AI services.",
+    url: "https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA CEO Confirms Vera Rubin On Track and Unveils Japans First AI Factory With 27500 GPUs",
-    summary: "",
-    source: "Wccftech", age: "today",
-    detail: "NVIDIAs confirmation that Vera Rubin is on track is critical for Google Cloud infrastructure planning as these next-generation GPUs will define competitive AI compute capabilities through 2027. The 27500 GPU deployment in Japan demonstrates the scale of national AI infrastructure investments that Google must match. This deployment pattern suggests hyperscalers and sovereign cloud providers are racing to secure NVIDIA capacity which could create supply allocation challenges for Google Cloud expansion.",
-    url: "https://wccftech.com/nvidia-ceo-rips-apart-chip-delay-narrative-says-giant-amounts-of-vera-rubin-coming/"
-  },
-  {
-    id: 4, cat: "vendor", impact: "medium", filler: false,
-    title: "Japan Robotics Leaders Build on NVIDIA Cosmos Isaac and Jetson for Physical AI",
-    summary: "",
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA Announces Major Graphics and Physical AI Advances at SIGGRAPH 2026",
+    summary: "NVIDIA unveiled advances in graphics simulation and agentic AI at SIGGRAPH spanning open models to real-time simulation capabilities. The announcements target media content creation and robotics applications.",
     source: "NVIDIA Newsroom", age: "today",
-    detail: "NVIDIAs expansion into physical AI and edge computing through Japanese manufacturing partners creates new competitive dimensions beyond data center GPUs. The Cosmos and Isaac platforms represent NVIDIAs strategy to capture AI inference workloads at the edge which could reduce demand for cloud-based AI infrastructure. Google Cloud must consider how physical AI and edge deployments affect long-term demand patterns for centralized GPU and TPU compute services.",
-    url: "https://nvidianews.nvidia.com/news/japans-robotics-and-manufacturing-leaders-build-on-nvidia-cosmos-to-advance-physical-ai-frontier"
+    detail: "NVIDIAs SIGGRAPH announcements extend its platform beyond traditional AI training into graphics simulation and robotics workloads. For Google Cloud this expansion means NVIDIA is building ecosystem lock-in across multiple compute domains not just LLM training. The emphasis on agentic and physical AI aligns with emerging workload patterns that will require tight integration between AI inference and simulation capabilities. Google should assess whether TPU architectures can address these adjacent markets or if NVIDIA will capture these workloads exclusively through CUDA ecosystem advantages.",
+    url: "https://blogs.nvidia.com/blog/siggraph-news-2026/"
   },
   {
-    id: 5, cat: "competition", impact: "medium", filler: false,
-    title: "China and Russia Launch 29-Nation WAICO AI Alliance to Rival Western Tech Control",
-    summary: "",
-    source: "Naturalnews.com", age: "today",
-    detail: "The formation of a 29-nation AI bloc creates geopolitical fragmentation in cloud and AI infrastructure markets that will affect Google Cloud international expansion strategies. Countries joining WAICO may face pressure to reduce dependency on US hyperscalers including Google Cloud for sovereign AI workloads. This bifurcation could accelerate regional cloud infrastructure buildouts and create export control complications for networking and storage equipment from US-based vendors like Broadcom and Cisco.",
-    url: "https://www.naturalnews.com/2026-07-17-china-russia-ai-alliance-western-control-technology.html"
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Intel and Google Cloud Expand AI Partnership for Chip Design Automation",
+    summary: "Intel and Google Cloud announced an expanded partnership deploying Gemini Enterprise across Intels workforce for chip design applications. The collaboration deepens AI integration into semiconductor development workflows.",
+    source: "TheStreet", age: "2 days ago",
+    detail: "This partnership positions Google Cloud as a strategic technology provider to a major semiconductor manufacturer which could yield insights beneficial to Googles own chip design efforts. Deploying Gemini Enterprise at Intel scale validates the platforms capability for complex engineering workflows. The collaboration may also strengthen Googles relationship with Intel as a potential alternative or complement to NVIDIA for certain infrastructure components. However Google must manage the partnership carefully given Intels competitive position in data center processors and potential conflicts with Googles custom silicon strategy.",
+    url: "https://www.thestreet.com/technology/intel-google-cloud-ai-partnership"
   },
   {
-    id: 6, cat: "silicon", impact: "medium", filler: false,
-    title: "US Lawmakers Push to Ban Chinese Memory Chips Citing National and Supply Chain Security",
-    summary: "",
-    source: "Toms Hardware UK", age: "today",
-    detail: "A ban on Chinese memory chips would significantly impact storage infrastructure costs and supply chain planning for Google Cloud data centers. Memory represents a substantial portion of server BOM costs and restricting supply sources could create shortages and price increases. Google Cloud infrastructure teams must evaluate alternative memory suppliers and potential inventory strategies if China-origin DRAM and NAND become restricted in US and allied markets.",
-    url: "https://www.tomshardware.com/pc-components/dram/lawmakers-want-us-government-to-ban-memory-chips-from-china-even-in-allied-supply-chains-citing-unacceptable-risk-to-national-economic-and-supply-chain-security"
-  },
-  {
-    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Fed Vice Chair Warns AI Investment Boom Could Fuel Inflation Before Productivity Gains",
-    summary: "",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "This macroeconomic warning has direct implications for hyperscaler capital allocation strategies including Google Clouds $50 billion plus annual infrastructure spending. Higher interest rates for longer increase the cost of capital for data center buildouts and may pressure margins on AI infrastructure investments. The Fed perspective suggests that the current AI investment cycle is creating measurable demand-side inflation which could affect vendor pricing from Broadcom NVIDIA and networking equipment suppliers.",
-    url: "https://cryptobriefing.com/fed-jefferson-ai-inflation-supply-demand/"
-  },
-  {
-    id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "Europe Chip Ambitions Cannot Break US Cloud and Software Dependency Says Forrester",
-    summary: "",
-    source: "Theregister.com", age: "today",
-    detail: "This assessment reinforces Google Clouds strong competitive position in European markets despite regulatory headwinds and sovereignty concerns. European enterprises will continue relying on US hyperscalers for AI infrastructure even as governments invest in domestic chip manufacturing. The analysis suggests that networking and storage software stacks from US vendors like Cisco Arista and Broadcom will maintain their European market positions regardless of local silicon production capacity.",
-    url: "https://www.theregister.com/paas-and-iaas/2026/07/17/europes-chip-ambitions-wont-break-dependence-on-us-cloud-and-software-says-forrester/5274086"
-  },
-  {
-    id: 9, cat: "silicon", impact: "low", filler: false,
-    title: "Edge AI Hardware Market Forecast Shows Growth in Low-Power Chips for Industry Verticals",
-    summary: "",
-    source: "GlobeNewswire", age: "today",
-    detail: "Edge AI growth represents both opportunity and threat for Google Cloud centralized infrastructure strategy. As more AI inference moves to edge devices demand for cloud-based GPU and TPU compute may face headwinds in certain use cases. However edge deployments often require cloud connectivity for model training and updates creating hybrid infrastructure opportunities that Google Cloud can address through networking and storage integration.",
-    url: "https://www.globenewswire.com/news-release/2026/07/17/3328937/28124/en/Edge-AI-Hardware-Market-Global-Forecast-2026-2032-Now-Available-Segments-by-Component-Device-Type-Power-Consumption-Industry-Vertical-and-15-Countries.html"
-  },
-  {
-    id: 10, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Azure Functions Adds Python 3.14 and PowerShell 7.6 Support for Serverless Workloads",
-    summary: "",
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "Microsoft Agent Framework Reaches GA With GitHub Copilot and Claude Code Connectors",
+    summary: "Microsoft Agent Framework now ships generally available connectors for GitHub Copilot and Claude Code enabling developers to build agents that delegate coding tasks to either system. The framework provides production runtime capabilities through Agent Harness.",
     source: "Azure Updates", age: "today",
-    detail: "These Azure serverless updates represent incremental competitive moves in the cloud platform wars. While not directly related to AI infrastructure they demonstrate Microsofts continued investment in developer experience and language runtime support. Google Cloud Functions competes directly in this space and must maintain runtime parity to avoid losing developer mindshare.",
-    url: "https://azure.microsoft.com/updates?id=567646"
+    detail: "Microsofts Agent Framework GA represents significant competition for Google Clouds agentic AI offerings. The integration of both GitHub Copilot and Claude Code connectors demonstrates Microsofts strategy of being platform-agnostic at the framework level while driving Azure consumption. This contrasts with Googles more vertically integrated approach around Gemini. The Agent Harness production runtime and episodic procedural memory features show Microsoft is building enterprise-grade agent infrastructure that could capture developer mindshare before Google Cloud equivalents mature.",
+    url: "https://azure.microsoft.com/updates?id=563701"
   },
   {
-    id: 11, cat: "storage", impact: "low", filler: true,
-    title: "Azure Kubernetes Service Adds Encryption in Transit for NFS Storage Volumes",
-    summary: "",
-    source: "Azure Updates", age: "today",
-    detail: "Storage encryption capabilities are table stakes for enterprise cloud adoption and this Azure feature closes a gap in their Kubernetes storage offering. Google Cloud GKE already supports similar encryption options but must continuously monitor competitive feature parity. NFS storage performance and security remain important for AI training workloads that require shared file systems across GPU nodes.",
-    url: "https://azure.microsoft.com/updates?id=567787"
+    id: 10, cat: "hyperscaler", impact: "low", filler: false,
+    title: "Global AI Spending Projected to Surpass 2.5 Trillion Dollars in 2026",
+    summary: "AI investment is set to exceed 2.5 trillion dollars in 2026 with NVIDIA Microsoft and OpenAI driving innovation across infrastructure software and frontier labs. The spending spans cloud hyperscalers semiconductor vendors and AI research organizations.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "The 2.5 trillion dollar AI spending projection validates the strategic importance of infrastructure investments Google Cloud is making. This spending level suggests sustained demand for GPU TPU and networking infrastructure through at least the medium term. However the concentration of value capture among a few players like NVIDIA raises questions about margin distribution across the ecosystem. Google Cloud must position to capture meaningful share of this spending while managing infrastructure costs to maintain competitive unit economics.",
+    url: "https://www.ibtimes.com.au/ai-investment-surpass-2-5-trillion-2026-key-companies-1872540"
+  },
+  {
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Google Cloud Publishes GKE Blueprint for Securing AI Workloads at Enterprise Scale",
+    summary: "Google Cloud released a blueprint for securing AI workloads on Google Kubernetes Engine addressing model weight protection prompt injection defense and regulatory compliance. The guidance targets CISOs and platform engineering teams deploying production AI.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This security blueprint demonstrates Google Clouds focus on enterprise AI governance requirements which differentiates cloud-hosted AI from on-premises alternatives. The emphasis on protecting model weights and defending against prompt injection reflects maturing threat models for production AI systems. For infrastructure teams this guidance influences how networking and storage architectures must integrate with security controls.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/securing-ai-at-enterprise-scale-the-google-kubernetes-engine-blueprint/"
   },
   {
     id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Microsoft Agent Framework Reaches GA With Multi-Agent Orchestration SDK for AI Developers",
-    summary: "",
-    source: "Azure Updates", age: "today",
-    detail: "Microsofts agent framework investments position Azure as the enterprise platform for agentic AI workloads. While not directly infrastructure related agent frameworks drive compute and storage consumption patterns that affect cloud infrastructure demand. Google Clouds Gemini Enterprise Agent Platform competes directly and both platforms are racing to establish developer ecosystem lock-in.",
-    url: "https://azure.microsoft.com/updates?id=564312"
+    title: "Google Cloud Shares Lessons on Accelerating Foundation Model Migration Workflows",
+    summary: "Google Cloud published guidance on accelerating foundation model upgrades addressing the testing and quality validation challenges teams face when migrating between model versions. The lessons apply to both new model adoption and checkpoint updates within model families.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Model migration complexity affects infrastructure utilization patterns as teams must maintain multiple model versions during transition periods. This guidance helps customers optimize their compute and storage consumption during upgrades which improves Google Clouds capacity planning. The emphasis on Gemini version migrations also drives ecosystem lock-in as customers invest in Google-specific tooling.",
+    url: "https://cloud.google.com/blog/products/compute/lessons-in-accelerating-foundation-model-upgrades/"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS VPN Route Enforcement Prevents Traffic Leaks for Remote Cloud Connectivity",
-    summary: "",
+    id: 13, cat: "storage", impact: "low", filler: true,
+    title: "AWS Releases Guidance on Optimizing EBS Volume Performance for Variable Workloads",
+    summary: "AWS published guidance on matching EBS storage performance to shifting workload demands without overspending on provisioned capacity. The optimization strategies address time-varying performance requirements common in business applications.",
+    source: "AWS Storage", age: "today",
+    detail: "AWSs storage optimization guidance highlights the competitive focus on cost efficiency in cloud storage services. For Google Cloud this signals customer sensitivity to storage costs that must be addressed in Cloud Storage and Persistent Disk pricing and performance tiers. The emphasis on right-sizing indicates enterprises are scrutinizing infrastructure spend more carefully.",
+    url: "https://aws.amazon.com/blogs/storage/optimize-amazon-ebs-volume-performance-the-right-amount-at-the-right-time/"
+  },
+  {
+    id: 14, cat: "networking", impact: "low", filler: true,
+    title: "AWS Publishes Extranet Architecture Pattern for Secure Partner Connectivity",
+    summary: "AWS published a reference architecture for building secure scalable extranet connections between external partners and AWS infrastructure. The pattern addresses overlapping IP ranges and communication consistency challenges in partner integrations.",
     source: "AWS Networking", age: "today",
-    detail: "VPN security enhancements are incremental networking improvements that matter for enterprise compliance requirements. Google Cloud VPN services must maintain competitive feature parity in secure connectivity options. While not transformative these networking security features affect enterprise procurement decisions for regulated workloads.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/prevent-vpn-traffic-leaks-with-client-vpn-route-enforcement-in-aws-client-vpn/"
+    detail: "This networking architecture guidance reflects enterprise requirements for hybrid connectivity that Google Cloud must also address with Cloud Interconnect and partner peering solutions. The focus on secure partner connectivity indicates growing demand for network architectures that span organizational boundaries which affects how Google designs its networking product roadmap.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/building-extranet-on-aws-secure-scalable-partner-connectivity/"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Porting Nanochat to TPU Reveals JAX Migration Challenges From PyTorch Training",
-    summary: "",
-    source: "Github.com", age: "2 days ago",
-    detail: "This open source TPU porting effort provides useful insights into the developer experience challenges of migrating between GPU and TPU ecosystems. The documented friction points can inform Google Cloud TPU product development and developer tooling priorities. Understanding where PyTorch to JAX migrations break helps identify opportunities to improve TPU adoption barriers.",
-    url: "https://github.com/tucan9389/nanochat-jax/discussions/1"
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "NVIDIA Agent Toolkit Adds Omniverse Libraries for Physical AI Simulation Workflows",
+    summary: "NVIDIA announced Agent Toolkit now includes Omniverse libraries giving AI agents tools to add physical AI capabilities and prepare 3D content for simulation. The expansion targets robotics and digital twin applications.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "NVIDIAs Omniverse integration into agent workflows extends its platform deeper into simulation and robotics markets. This creates additional ecosystem stickiness as developers build agents that depend on NVIDIA-specific simulation capabilities. Google Cloud should evaluate whether similar physical AI tooling is needed to compete for robotics and industrial AI workloads.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-agent-toolkit-expands-with-new-omniverse-libraries-putting-ai-agents-to-work-building-simulation-ready-worlds"
   },
 ];
 // ARTICLES_END
@@ -904,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AWS posting fastest growth in four years signals intensifying competition for AI workloads, and Meta hiring AWS infrastructure leadership to accelerate their data center buildout creates a formidable new competitor for hyperscale AI capacity. NVIDIAs confirmation that Vera Rubin remains on track while deploying 27500 GPUs in Japans first AI factory demonstrates continued execution on next-gen silicon and strengthens their position as the dominant training accelerator vendor. US lawmakers pushing to ban Chinese memory chips introduces potential DRAM and NAND supply constraints that could impact storage costs and availability for GPU cluster deployments across all hyperscalers.";
+const STATIC_BRIEF = "The Goldman Sachs warning on hyperscaler debt sustainability creates board-level pressure to demonstrate clear ROI on AI infrastructure investments, making your networking and storage efficiency metrics critical proof points for continued capital allocation. Metas aggressive 145 billion dollar infrastructure buildout with senior Amazon talent recruitment signals a serious new competitor entering cloud services that will compete directly for enterprise AI workloads. NVIDIAs lock on 70 percent of SK Hynix HBM4 production reinforces their supply chain dominance and confirms continued vendor dependency for next-generation GPU memory that will flow through your storage and networking infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
