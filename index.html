@@ -648,115 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Google Developing Frozen v2 Chip With Gemini Architecture Etched Into Silicon",
-    summary: "Google is building a custom server chip codenamed Frozen v2 that embeds parts of Gemini model architecture directly into silicon. Engineers project 6 to 10 times more tokens per watt compared to current TPUs.",
-    source: "Toms Hardware UK", age: "1 day ago",
-    detail: "This represents a significant shift in Googles AI silicon strategy moving from general-purpose TPUs toward model-specific accelerators. Baking Gemini architecture into hardware could dramatically reduce inference costs and latency while creating a competitive moat against NVIDIA and AMD solutions. The 6-10x efficiency gain would be transformative for large-scale inference workloads if validated in production. This approach mirrors trends seen with custom ASICs but takes it further by optimizing for a specific model family rather than general transformer operations.",
-    url: "https://www.tomshardware.com/tech-industry/google-reportedly-developing-frozen-v2-chip-with-geminis-architecture-etched-into-the-silicon"
+    title: "Google Developing Frozen v2 AI Chip Optimized for Gemini Models With 2028 Target",
+    summary: "Google is building a custom processor codenamed Frozen v2 specifically designed to run its Gemini AI models more efficiently. The chip is expected to go live by 2028 and could reduce Googles reliance on external silicon vendors.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "This development signals Googles continued vertical integration strategy for AI infrastructure following its TPU lineage. A chip optimized specifically for Gemini inference could deliver significant cost and latency advantages over general-purpose accelerators. The 2028 timeline suggests this is a ground-up design rather than an iteration on existing TPU architecture. For competitors like NVIDIA and Broadcom this represents another hyperscaler potentially reducing dependence on merchant silicon for inference workloads.",
+    url: "https://siliconangle.com/2026/07/20/google-reportedly-developing-frozen-v2-ai-chip-optimized-gemini-models/"
   },
   {
-    id: 2, cat: "networking", impact: "high", filler: false,
-    title: "NVIDIA Spectrum-6 Ethernet Switch Arrives for Gigascale AI Factories",
-    summary: "NVIDIA launched its Spectrum-6 Ethernet switch delivering 102.4 Tb/s switching capacity targeting gigascale AI factory deployments. Meta Oracle Cisco and Nebius are among early adopters of the new networking silicon.",
+    id: 2, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA Vera Rubin Platform Positions Agentic AI Factory as Full Stack System",
+    summary: "NVIDIAs Vera Rubin launch represents a complete platform redesign targeting agentic AI workloads with integrated CPU GPU and networking. The architecture rewrites the CPU playbook by tightly coupling compute elements for agent-native infrastructure.",
+    source: "SiliconANGLE News", age: "1 day ago",
+    detail: "Vera Rubin marks NVIDIAs response to the shift from training-centric to inference and agentic workloads requiring different compute patterns. The full-stack approach including custom CPU silicon challenges traditional data center architectures where components are sourced separately. This platform could compress the competitive window for alternative accelerator vendors as NVIDIA locks in more of the infrastructure stack. Hyperscalers evaluating build versus buy decisions now face an even more integrated NVIDIA offering.",
+    url: "https://siliconangle.com/2026/07/21/nvidia-vera-rubin-inside-agentic-ai-factory-rewrites-cpu-playbook/"
+  },
+  {
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "OpenAI Raises Cloud Spending Projection to $750B Through 2030 Intensifying Infrastructure Race",
+    summary: "OpenAI has increased its projected cloud infrastructure spending to $750 billion through 2030 reflecting expanded deals with Oracle Amazon and Microsoft. This projection includes the companys first direct data center investments.",
     source: "Crypto Briefing", age: "today",
-    detail: "The Spectrum-6 represents NVIDIAs aggressive push into high-bandwidth AI networking competing directly with Broadcom and traditional switching vendors. The 102.4 Tb/s capacity addresses the bandwidth bottlenecks emerging in large GPU cluster deployments. Cisco appearing as a customer rather than competitor signals potential partnership dynamics in the AI networking space. This launch strengthens NVIDIAs position as a full-stack AI infrastructure vendor beyond just compute accelerators.",
-    url: "https://cryptobriefing.com/nvidia-spectrum-6-ethernet-ai-factories/"
+    detail: "This massive capital commitment underscores the infrastructure demands of frontier AI development and the strategic importance of compute capacity. The multi-cloud approach spanning Oracle Amazon and Microsoft suggests OpenAI is hedging supplier risk while maximizing available capacity. Direct data center investments signal a potential shift toward more vertical integration similar to hyperscaler strategies. This spending trajectory will drive significant demand across networking storage and accelerator supply chains through the decade.",
+    url: "https://cryptobriefing.com/openai-750b-cloud-spending-2030/"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Doubles Down on AI Factories With Vera Rubin Performance Benchmarks",
-    summary: "NVIDIA revealed new performance benchmarks and architectural milestones for its next-generation Vera Rubin platform as global availability approaches. The company is positioning the platform as central to its AI factory vision.",
-    source: "SiliconANGLE News", age: "today",
-    detail: "Vera Rubin benchmarks provide critical competitive intelligence for understanding NVIDIAs roadmap against Googles TPU and custom silicon efforts. The AI factory framing signals NVIDIAs strategy to sell complete infrastructure solutions rather than discrete components. These performance numbers will influence hyperscaler purchasing decisions and capacity planning for 2027 and beyond. The timing suggests NVIDIA is trying to lock in customer commitments ahead of competitors next-generation announcements.",
-    url: "https://siliconangle.com/2026/07/21/nvidia-doubles-ai-factories-showcases-massive-vera-rubin-performance-gains/"
+    id: 4, cat: "vendor", impact: "high", filler: false,
+    title: "Wistron Opens $700M Texas Factory Building NVIDIA Grace Blackwell GB300 Superchips",
+    summary: "Taiwanese manufacturer Wistron has opened a $700 million factory in Fort Worth Texas already assembling NVIDIAs GB300 Grace Blackwell Ultra superchips. This represents Wistrons first manufacturing facility on American soil.",
+    source: "The Next Web", age: "today",
+    detail: "The Texas factory addresses supply chain resilience concerns and positions Wistron to serve US hyperscaler demand without cross-Pacific shipping delays. GB300 assembly in the US could provide preferential access for domestic cloud providers under potential future trade restrictions. This investment validates the scale of expected Blackwell demand and the strategic importance of North American manufacturing capacity. The facility likely benefits from state and federal incentives tied to semiconductor reshoring initiatives.",
+    url: "https://thenextweb.com/news/wistron-texas-ai-factory-nvidia-gb300/"
   },
   {
-    id: 4, cat: "vendor", impact: "medium", filler: false,
-    title: "Wistron Opens US Manufacturing Facility in Texas for NVIDIA AI Systems",
-    summary: "Wistron opened a 324000 square foot manufacturing facility in Fort Worth Texas to produce AI systems using NVIDIA superchips. The greenfield plant represents significant reshoring of AI infrastructure manufacturing.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This facility addresses supply chain concerns and tariff considerations for US-based AI infrastructure deployment. Having domestic manufacturing capacity for NVIDIA systems could accelerate delivery timelines for hyperscalers and enterprise customers. The Texas location aligns with broader semiconductor reshoring initiatives and proximity to major data center markets. This investment signals confidence in sustained demand for NVIDIA-based AI infrastructure over the coming years.",
-    url: "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/"
-  },
-  {
-    id: 5, cat: "storage", impact: "medium", filler: false,
-    title: "AlloyDB Delivers 4x Faster HNSW Vector Search Performance for AI Workloads",
-    summary: "Google announced AlloyDB enhancements providing 4x faster HNSW vector search compared to standard pgvector implementations. The improvements target AI applications requiring high-performance vector similarity search.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Vector database performance is becoming critical infrastructure for RAG-based AI applications and embedding search workloads. The 4x improvement positions AlloyDB competitively against specialized vector databases like Pinecone and Weaviate. This enhancement reflects Googles strategy to consolidate AI workloads within its managed database offerings rather than losing them to specialized vendors. PostgreSQL compatibility lowers migration barriers for enterprises already invested in the Postgres ecosystem.",
-    url: "https://cloud.google.com/blog/products/databases/supercharge-pgvector-4x-faster-hnsw-with-alloydb/"
-  },
-  {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Cloud Run Enhances Multi-Region High Availability for Mission Critical Services",
-    summary: "Google Cloud introduced enhanced multi-region capabilities for Cloud Run services enabling easier deployment of regionally resilient workloads. The update simplifies automatic failover and incident recovery configurations.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Multi-region availability is essential for AI inference services requiring low latency and high uptime guarantees. Simplified configuration reduces operational overhead for teams deploying globally distributed AI applications. This competes directly with AWS and Azure multi-region capabilities and could influence workload placement decisions. The enhancement addresses a common pain point in achieving enterprise-grade reliability for serverless AI deployments.",
-    url: "https://cloud.google.com/blog/products/serverless/cloud-run-multi-region-services-enhanced-for-high-availability/"
-  },
-  {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "Microsoft and Mistral Expand AI Infrastructure in Europe Amid Sovereign Computing Push",
-    summary: "Microsoft and Mistral AI are expanding European AI infrastructure with billions in data center investments targeting sovereign computing requirements. The partnership reshapes compute markets as European regulations tighten.",
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "SpaceX and xAI Building 11M Square Foot Texas Factory for Orbital AI Computing",
+    summary: "SpaceX and xAI are constructing an 11 million square foot Gigasat factory in Bastrop Texas targeting 1 gigawatt of orbital AI compute capacity by end of 2027. The facility will manufacture satellites designed to move AI computing into orbit.",
     source: "Crypto Briefing", age: "today",
-    detail: "European data sovereignty requirements are creating distinct infrastructure markets that hyperscalers must address with localized investments. Mistrals partnership with Microsoft positions them as the European alternative to US-centric AI providers. This expansion could fragment the global AI infrastructure market along regulatory boundaries affecting capacity planning and pricing. Google faces pressure to match these investments or risk losing European enterprise workloads to Microsoft-Mistral offerings.",
-    url: "https://cryptobriefing.com/microsoft-mistral-ai-infrastructure-europe/"
+    detail: "This represents a fundamentally different approach to AI infrastructure that could bypass terrestrial power and cooling constraints. Orbital compute would face unique networking challenges requiring novel approaches to data movement and latency management. If successful this could create an entirely new category of AI infrastructure competing with traditional cloud providers. The 2027 timeline is aggressive but xAIs willingness to pursue unconventional strategies makes this worth monitoring.",
+    url: "https://cryptobriefing.com/spacex-xai-gigasat-texas-orbital-data-centers/"
+  },
+  {
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Intel Cuts 40 Percent of Data Center Workforce and Halts German Factory Ahead of Q2 Earnings",
+    summary: "Intel is cutting 40 percent of its global workforce in the data center and AI business while halting factory construction in Germany. The moves come ahead of Q2 2026 earnings as the company continues restructuring its AI strategy.",
+    source: "TheStreet", age: "1 day ago",
+    detail: "These cuts signal Intels continued struggles to compete in AI accelerators against NVIDIA and custom silicon from hyperscalers. The German factory halt suggests capital is being redirected away from advanced manufacturing expansion. For Google and other hyperscalers this reduces optionality in the merchant silicon market for future AI infrastructure. Intel earnings will serve as a stress test for whether the broader AI semiconductor rally has structural weaknesses.",
+    url: "https://www.thestreet.com/investing/stocks/intc-intel-stock-layoffs-data-center-ai-ahead-of-q2-2026-earnings"
+  },
+  {
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "Broadcom Lands Standard Chartered VMware Deal Expanding Enterprise Cloud Footprint",
+    summary: "Broadcom has secured Standard Chartered as a VMware customer representing expansion into financial services enterprise cloud infrastructure. The deal demonstrates continued enterprise adoption of VMware under Broadcom ownership.",
+    source: "TheStreet", age: "1 day ago",
+    detail: "This win validates Broadcoms post-acquisition VMware strategy despite industry concerns about pricing and support changes. Financial services customers typically demand high reliability and security making this a reference account for similar enterprises. The deal strengthens Broadcoms position as a strategic vendor for private cloud infrastructure that complements hyperscaler offerings. For Google Cloud this represents competition in hybrid and multi-cloud enterprise deployments.",
+    url: "https://www.thestreet.com/investing/stocks/broadcom-avgo-standard-chartered-vmware-deal"
   },
   {
     id: 8, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA NVLink Positioned as Scale-Up Network Foundation for AI Factories",
-    summary: "NVIDIA detailed its NVLink technology as the foundational scale-up network for AI factory architectures addressing increasing model complexity. The technology addresses bandwidth demands as workloads grow larger and more compute intensive.",
-    source: "Nvidia.com", age: "1 day ago",
-    detail: "NVLink remains critical for GPU-to-GPU communication in training clusters where Ethernet latency is prohibitive. The AI factory messaging reinforces NVIDIAs integrated approach combining compute and networking. Understanding NVLink evolution is essential for evaluating competitive TPU interconnect technologies and custom ASIC designs. This positioning also signals NVIDIAs view that scale-up networking will remain distinct from scale-out Ethernet solutions like Spectrum-6.",
-    url: "https://developer.nvidia.com/blog/nvidia-nvlink-the-scale-up-network-for-ai-factories/"
+    title: "NVIDIA DGX GB300 AI Supercomputer Goes Online at Naval Postgraduate School",
+    summary: "NVIDIA CEO Jensen Huang commissioned a DGX GB300 system at the Naval Postgraduate School bringing one of the most powerful AI platforms to the US military graduate university. The system will serve students researchers and faculty.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "Military AI research deployments signal government validation of NVIDIAs platform for sensitive workloads. The Naval Postgraduate School installation provides a reference architecture for defense and intelligence community AI infrastructure. This positions NVIDIA favorably for larger government AI modernization contracts. The commissioning ceremony with Huang personally attending underscores the strategic importance of defense sector relationships.",
+    url: "https://blogs.nvidia.com/blog/naval-postgraduate-school-dgx-ai-supercomputer/"
   },
   {
     id: 9, cat: "networking", impact: "medium", filler: false,
-    title: "Cisco Explores AI Network Modernization as Agent Workloads Transform Requirements",
-    summary: "Cisco published guidance on modernizing campus and branch WiFi networks to support AI agent workloads moving beyond reactive ticket-based management. The vendor positions network upgrades as essential for AI-driven business growth.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "AI agent deployments are creating new network traffic patterns that traditional enterprise architectures may not handle efficiently. Ciscos messaging suggests opportunity to sell network upgrades tied to AI adoption initiatives. This framing competes with cloud-native networking approaches from hyperscalers and pure-play SD-WAN vendors. Understanding enterprise network modernization trends helps forecast Cisco Arista and hyperscaler market dynamics.",
-    url: "https://blogs.cisco.com/networking/the-workforce-has-ai-agents-the-wi-fi-network-hastickets/"
-  },
-  {
-    id: 10, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Announces Listener Rules for Network Load Balancer Dual-Stack Architectures",
-    summary: "AWS launched listener rules for Network Load Balancer enabling routing based on source IP address type for dual-stack deployments. The feature eliminates protocol translation while preserving source IP for both IPv4 and IPv6 traffic.",
+    title: "AWS Publishes Decision Framework for Private Connectivity Options Including Interconnect",
+    summary: "AWS has released a decision framework to help customers choose between Direct Connect SiteLink and the newer AWS Interconnect options for private connectivity. The guidance addresses over-provisioning and deployment complexity challenges.",
     source: "AWS Networking", age: "today",
-    detail: "Dual-stack networking capabilities are foundational for enterprises transitioning to IPv6 while maintaining IPv4 compatibility. This feature simplifies network architecture for customers running mixed address family environments. While not directly AI-focused it supports the networking complexity inherent in large-scale cloud deployments including AI workloads.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/consolidate-dual-stack-architectures-with-listener-rules-for-network-load-balancer/"
+    detail: "The framework acknowledges growing complexity in AWS private networking as options have expanded beyond traditional Direct Connect. AWS Interconnect for multicloud scenarios is particularly relevant as enterprises deploy workloads across multiple hyperscalers. This guidance will influence how enterprises architect hybrid connectivity to AWS which impacts competitive positioning against Google Cloud and Azure. Network architects should evaluate whether current connectivity strategies align with this updated framework.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/selecting-the-right-aws-private-connectivity-options-a-decision-framework/"
   },
   {
-    id: 11, cat: "competition", impact: "low", filler: true,
-    title: "SK Hynix Stock Surges on AI Memory Demand and Landmark Nasdaq Listing",
-    summary: "SK Hynix shares rose significantly as the company capitalized on AI demand and celebrated its Nasdaq listing enhancing global visibility. The company strengthened its market position in high-bandwidth memory products.",
-    source: "IBTimes", age: "today",
-    detail: "HBM demand from AI accelerators drives SK Hynix revenue growth and market valuation. The Nasdaq listing improves access to US capital markets and investor visibility. Memory pricing and supply dynamics directly impact GPU and TPU system costs making SK Hynix performance relevant to infrastructure economics.",
-    url: "https://www.ibtimes.com.au/sk-hynix-ai-demand-nasdaq-debut-1872713"
+    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Microsoft Invests $60M in DOE Genesis Mission AI Discovery Platform Alongside NVIDIA and Google",
+    summary: "Microsoft has committed $60 million to the Department of Energys Genesis Mission AI platform joining NVIDIA OpenAI and Google in the scientific discovery initiative. The mission aims to double US scientific output using frontier AI.",
+    source: "Crypto Briefing", age: "today",
+    detail: "This public-private partnership pools resources from major AI infrastructure providers for national science priorities. The collaboration model could influence how government AI infrastructure procurement evolves. Microsoft joining alongside Google and NVIDIA suggests the Genesis Mission will leverage multi-vendor infrastructure rather than single-provider lock-in. The scientific computing focus may drive specialized requirements for networking and storage that differ from commercial AI workloads.",
+    url: "https://cryptobriefing.com/microsoft-60m-doe-genesis-mission-ai/"
+  },
+  {
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Google Publishes GKE Security Blueprint for AI Workload Protection in Production",
+    summary: "Google Cloud has released a security blueprint for organizations running AI workloads on Google Kubernetes Engine. The guidance argues that AI production deployments have outpaced traditional security models.",
+    source: "InfoQ.com", age: "today",
+    detail: "The blueprint provides prescriptive security controls for containerized AI inference and training workloads. This documentation helps enterprise security teams evaluate GKE against competing managed Kubernetes offerings from AWS and Azure. The focus on AI-specific security patterns acknowledges unique risks from model serving and data pipelines. Publication of this blueprint may influence enterprise decisions about where to deploy production AI systems.",
+    url: "https://www.infoq.com/news/2026/07/google-gke-ai-security-blueprint/"
   },
   {
     id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Magnite Builds Dynamic Hybrid Cloud Routing With AWS VPC Route Server and BGP",
-    summary: "Magnite deployed AWS VPC Route Server with BGP to enable dynamic hybrid cloud routing across AWS and private data centers. The ad-tech company processes over a trillion requests daily requiring deterministic traffic steering.",
-    source: "AWS Networking", age: "today",
-    detail: "Hybrid cloud networking patterns demonstrate enterprise requirements for flexible workload placement across cloud and on-premises infrastructure. BGP-based routing provides the dynamic failover capabilities essential for latency-sensitive applications. This use case illustrates AWS networking capabilities for high-throughput hybrid deployments.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-magnite-uses-amazon-vpc-route-server-and-border-gateway-protocol-bgp-to-build-dynamic-hybrid-cloud-routing/"
+    title: "Azure Previews Standard Service Endpoint for Scalable IaaS to PaaS Connectivity",
+    summary: "Microsoft Azure has launched a public preview of Standard service endpoint providing a new way to connect IaaS workloads to PaaS services under the Private Link family. The capability addresses scale and management limitations of existing endpoints.",
+    source: "Azure Updates", age: "today",
+    detail: "This networking enhancement improves how Azure virtual machines connect to managed services without traversing the public internet. The Private Link integration aligns with enterprise requirements for data sovereignty and security compliance. Improved IaaS to PaaS connectivity could influence workload placement decisions for customers evaluating Azure against Google Cloud. The preview status means production deployments should wait for general availability.",
+    url: "https://azure.microsoft.com/updates?id=561475"
   },
   {
-    id: 13, cat: "storage", impact: "low", filler: true,
-    title: "Zilliz Enhances Milvus Vector Database With Native Data Lake Access",
-    summary: "Zilliz released updates to its Milvus vector database featuring native data lake access and a new retrieval engine. The vendor competes for market share in the crowded vector database space serving AI applications.",
-    source: "TechTarget", age: "1 day ago",
-    detail: "Vector database competition intensifies as AI workloads require efficient similarity search at scale. Native data lake integration addresses enterprise data architecture requirements for unified analytics and AI workloads. Milvus improvements compete with cloud-native vector offerings from hyperscalers and specialized vendors like Pinecone.",
-    url: "https://www.techtarget.com/searchdatamanagement/news/366646015/Zilliz-ups-vector-search-results-with-Milvus-database-update"
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Application Insights Adds GenAI Content Table for Sensitive AI Telemetry Protection",
+    summary: "Azure Monitor Application Insights now stores generative AI content in a dedicated GenAIContent table enabling granular access controls for sensitive AI telemetry. The feature addresses compliance requirements for AI application monitoring.",
+    source: "Azure Updates", age: "today",
+    detail: "Separating AI-generated content into a dedicated table allows organizations to apply different retention and access policies than standard application telemetry. This addresses regulatory concerns about logging prompts and completions that may contain sensitive information. The feature positions Azure favorably for enterprises with strict data governance requirements around AI deployments. Similar capabilities from Google Cloud and AWS would be expected to maintain competitive parity.",
+    url: "https://azure.microsoft.com/updates?id=567594"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "NVIDIA Maintains 80 Percent Grip on Data Center GPU Market as Chips Ship",
-    summary: "NVIDIA continues shipping its latest AI chips to customers while holding 80 to 81 percent of the data center GPU market. Bitcoin miners are pivoting toward AI workloads on NVIDIA hardware.",
-    source: "Crypto Briefing", age: "today",
-    detail: "NVIDIAs dominant market position creates pricing power and influences infrastructure economics across the industry. The cryptocurrency-to-AI pivot demonstrates flexible demand for GPU compute capacity. Market share metrics help benchmark competitive positioning of alternative accelerators including TPUs and custom ASICs.",
-    url: "https://cryptobriefing.com/nvidia-chips-shipping-ai-gpu-market/"
+    id: 14, cat: "networking", impact: "low", filler: true,
+    title: "Ethernet Controller Market Projected to Reach $25B by 2035 on AI and Cloud Growth",
+    summary: "The global Ethernet controller market is projected to reach $25.44 billion by 2035 driven by AI infrastructure and cloud computing expansion. The forecast reflects increasing network bandwidth requirements for data center workloads.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "Market growth projections validate continued investment in high-speed networking silicon for AI clusters. Vendors like Broadcom Marvell and Mellanox stand to benefit from expanding Ethernet adoption in AI infrastructure. The shift toward higher speed standards like 800G and eventually 1.6T Ethernet will drive controller upgrade cycles. This market trajectory supports infrastructure planning assumptions for networking capacity growth.",
+    url: "https://www.globenewswire.com/news-release/2026/07/21/3330216/0/en/Ethernet-Controller-Market-Size-to-Worth-USD-25-44-Billion-by-2035-Research-by-SNS-Insider.html"
+  },
+  {
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "Dell Pro Max GB10 Tested for Local AI Clustering With Dual NVIDIA Grace Blackwell Setup",
+    summary: "Testing of paired Dell Pro Max GB10 systems demonstrates local AI clustering capabilities using NVIDIAs Grace Blackwell silicon. At over $6000 each the systems offer desk-friendly AI compute scaling for smaller deployments.",
+    source: "Toms Hardware UK", age: "1 day ago",
+    detail: "The ability to cluster desktop-class AI systems opens options for edge and departmental AI workloads outside traditional data centers. Dell and NVIDIAs collaboration on this form factor addresses a market segment between cloud instances and full rack deployments. The networking requirements for clustering these systems could inform edge infrastructure planning. Cost per unit remains high but represents a new price point for local AI compute capacity.",
+    url: "https://www.tomshardware.com/pc-components/gpus/local-ai-clustering-with-dells-pro-max-gb10-connecting-two-nvidia-grace-blackwell-to-scale-out-ai-compute-at-home"
   },
 ];
 // ARTICLES_END
@@ -904,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AlloyDB delivering 4x faster HNSW vector search performance directly strengthens your storage portfolio positioning for AI workloads and warrants immediate integration messaging with TPU and GPU infrastructure offerings. NVIDIAs simultaneous push of Spectrum-6 Ethernet at 102.4 Tb/s and NVLink as the scale-up network foundation signals aggressive moves to own the full AI factory networking stack, creating competitive pressure on Google Cloud networking differentiation. Wistrons new Texas manufacturing facility for NVIDIA AI systems represents meaningful US supply chain reshoring that could advantage NVIDIA customers on lead times and tariff exposure relative to Asia-sourced infrastructure.";
+const STATIC_BRIEF = "The AWS decision framework for private connectivity options signals customer confusion around cloud interconnect choices that Google Cloud networking products must address with clearer positioning and simplified deployment paths. OpenAI projecting $750B in cloud spending through 2030 combined with SpaceX and xAI building orbital compute infrastructure indicates the competitive landscape is expanding beyond traditional hyperscalers into novel deployment models that could reshape long-term infrastructure economics. The Wistron Texas factory producing NVIDIA GB300 superchips represents US-based supply chain diversification that may improve lead times for Grace Blackwell systems but also signals NVIDIA is prioritizing domestic manufacturing relationships that Google should monitor for allocation implications.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
