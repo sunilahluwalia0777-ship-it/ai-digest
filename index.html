@@ -647,124 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "SK Group and NVIDIA Announce 500 Billion Dollar Partnership for AI Factories and Memory",
-    summary: "SK Group and NVIDIA signed letters of intent for a comprehensive partnership spanning AI factory construction and next-generation memory supply. The deal addresses surging global compute demand with integrated infrastructure and HBM memory commitments.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This massive partnership directly impacts AI infrastructure at scale by securing both compute buildout and critical memory supply chains. SK Hynix as the leading HBM supplier combined with NVIDIA infrastructure creates a vertically integrated AI factory model. The deal signals continued acceleration in sovereign AI infrastructure investment and validates the AI factory concept as the dominant deployment paradigm. Google Cloud must monitor how such exclusive arrangements affect memory allocation and infrastructure costs across hyperscalers.",
-    url: "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory"
+    id: 1, cat: "vendor", impact: "high", filler: false,
+    title: "Samsung Wins $200 Billion Broadcom Contract For 2nm AI Chips Through 2030",
+    summary: "Samsung Electronics and Broadcom have signed a landmark $200 billion agreement through 2030 covering memory supply, 2nm foundry manufacturing, and advanced packaging for AI infrastructure. The deal positions Samsung as a critical supplier for Broadcoms AI chip designs competing against NVIDIA.",
+    source: "Hot Hardware", age: "today",
+    detail: "This massive multi-year contract represents one of the largest semiconductor deals in history and directly impacts the AI infrastructure supply chain. Broadcom is a key networking silicon vendor for hyperscaler data centers and this deal secures advanced manufacturing capacity for next-generation AI chips. The inclusion of memory supply and advanced packaging indicates a comprehensive approach to AI chip production that could challenge NVIDIAs dominance. For Google, this strengthens Broadcoms position as a viable alternative supplier for custom silicon and networking ASICs. The 2nm node commitment signals serious competition for TSMC in advanced AI chip manufacturing.",
+    url: "https://hothardware.com/news/samsung-wins-200-billion-broadcom-contract-for-2nm-ai-chips"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "NAVER NVIDIA and Brookfield Triple Korea AI Factory Buildout to 200 Megawatts",
-    summary: "The consortium announced plans to expand Koreas sovereign AI factory infrastructure from 55 megawatts to 200 megawatts. NAVER intends to ultimately scale its NVIDIA AI infrastructure deployment to 1 gigawatt.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This expansion demonstrates the rapid scaling trajectory of national AI infrastructure investments particularly in Asia Pacific markets. The NVIDIA DSX AI factory model is becoming the template for sovereign compute buildouts with major implications for regional cloud competition. Brookfield involvement signals infrastructure investors see AI factories as core digital infrastructure assets. Google Cloud faces intensifying competition from nationally-backed AI infrastructure projects that may prioritize local providers.",
-    url: "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout"
+    id: 2, cat: "networking", impact: "high", filler: false,
+    title: "Cisco Advocates Scale-Across Architecture for Distributed AI Fabric Beyond Single Data Centers",
+    summary: "Cisco argues that AI workloads are outgrowing standalone data centers and proposes a scale-across Ethernet fabric to unify distributed clusters. The approach is backed by benchmarking from Ciscos Zeus AI Lab showing performance optimization across any distance.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "This represents Ciscos strategic positioning against NVIDIA and Arista in the AI networking space by emphasizing distributed architectures over dense single-site deployments. The scale-across concept addresses a real constraint facing hyperscalers who are running out of power and cooling capacity at individual sites. For Google, this aligns with the need to connect TPU clusters across multiple facilities while maintaining training performance. Ciscos Zeus AI Lab benchmarking provides competitive validation data that could influence procurement decisions. The Ethernet-centric approach positions Cisco against InfiniBand-dominated architectures.",
+    url: "https://blogs.cisco.com/datacenter/scale-across-why-the-future-of-distributed-ai-isnt-in-one-data-center/"
   },
   {
-    id: 3, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Partners with Safe Superintelligence for Long-Term Strategic AI Infrastructure",
-    summary: "Ilya Sutskevers Safe Superintelligence Inc announced a long-term partnership with NVIDIA to accelerate the startups strategic growth. The collaboration focuses on rapidly scaling SSIs AI infrastructure capabilities.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This partnership represents NVIDIAs strategic positioning in the frontier AI development space beyond hyperscaler relationships. SSI founded by former OpenAI chief scientist carries significant credibility in the AI safety and capabilities research community. The deal suggests NVIDIA is building direct relationships with potential future large-scale AI compute consumers. For Google Cloud this signals continued fragmentation of AI compute demand across diverse customers beyond traditional enterprise and hyperscaler segments.",
-    url: "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership"
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "Chinese Memory Chipmaker CXMT Surges 466% in IPO Becoming Chinas Most Valuable Company",
+    summary: "CXMT Corp shares exploded 466% on their Shanghai debut closing at 49 yuan and instantly becoming Chinas most valuable listed company. The historic IPO reflects massive investor confidence in Chinas domestic semiconductor self-sufficiency efforts.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "This IPO signals the maturing of Chinas domestic memory industry which has significant implications for global AI infrastructure supply chains. CXMT produces DRAM which is critical for AI training and inference workloads across all hyperscalers. The valuation surge indicates Chinese capital markets are heavily backing semiconductor self-sufficiency amid ongoing US export restrictions. For Google and other hyperscalers, this creates a potential alternative memory supplier outside of Samsung and SK Hynix though geopolitical considerations may limit adoption. The scale of this debut suggests China is building serious capacity in memory production.",
+    url: "https://www.ibtimes.com.au/chinas-cxmt-stock-soars-466-historic-shanghai-debut-becoming-nations-most-valuable-listed-1873080"
   },
   {
-    id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Azure Launches GPT-5.6 in Microsoft Foundry with Asia Pacific Data Zone",
-    summary: "Microsoft announced general availability of OpenAIs latest GPT-5.6 frontier model series in Microsoft Foundry along with product agent capabilities. The release includes a new Asia Pacific Data Zone for regional compliance requirements.",
-    source: "Azure Blog", age: "today",
-    detail: "This launch maintains Microsofts lead in providing cutting-edge OpenAI models through Azure infrastructure creating competitive pressure on Google Cloud Gemini offerings. The Asia Pacific Data Zone addresses data sovereignty concerns that increasingly influence enterprise cloud selection in the region. Product agent capabilities signal Microsofts focus on agentic AI workloads which drive sustained inference demand. Google must accelerate Gemini model releases and regional deployment options to maintain competitive positioning.",
-    url: "https://azure.microsoft.com/en-us/blog/gpt-5-6-now-available-in-microsoft-foundry/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Amazon and Microsoft Face Investor Scrutiny Over $400 Billion AI Infrastructure Spending",
+    summary: "Following Alphabets stock punishment for AI spending, Amazon and Microsoft face pressure to justify their combined $400 billion AI infrastructure investments. Wall Street patience is wearing thin as cloud giants compete for AI dominance.",
+    source: "Fortune", age: "today",
+    detail: "This investor sentiment shift represents a critical inflection point for all hyperscaler infrastructure strategies including Google. The scrutiny suggests capital markets want clearer ROI timelines on massive AI buildouts which could influence procurement decisions and vendor negotiations. Both AWS and Azure are direct competitors to Google Cloud and their spending constraints could create opportunities or force industry-wide discipline. The comparison to Alphabets recent treatment indicates this is a sector-wide concern not company-specific. Infrastructure teams should monitor how this affects competitor capacity expansion timelines.",
+    url: "https://fortune.com/2026/07/27/amazon-microsoft-alphabet-google-stock-cloud-ai-spending-billions/"
   },
   {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "AT&T Processes Trillion Tokens on Azure Foundry with AMD and NVIDIA Infrastructure",
-    summary: "AT&T developed its OTel2.0 system processing approximately one trillion tokens using Microsoft Foundry Managed Compute with AMD and NVIDIA GPU infrastructure. The deployment demonstrates production-scale telecom AI using flexible model choice.",
-    source: "Azure Blog", age: "today",
-    detail: "This case study validates Azure Foundry as a production platform for massive-scale enterprise AI workloads in regulated industries. The trillion-token scale represents significant sustained inference demand that tests infrastructure economics at scale. AT&T choosing Azure over competitors for this flagship AI initiative represents a major enterprise win for Microsoft. The use of both AMD and NVIDIA infrastructure suggests enterprises are actively pursuing multi-vendor GPU strategies for cost optimization and supply resilience.",
-    url: "https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/"
+    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Azure Opens Fourth India Data Center Region in Hyderabad With AI-Ready Infrastructure",
+    summary: "Microsoft launched India South Central region with campuses in Hyderabad marking Azures fourth datacenter region in India. The region is designed with AI readiness as a core infrastructure principle.",
+    source: "Azure Updates", age: "today",
+    detail: "Microsofts continued India expansion intensifies competition with Google Cloud in a critical growth market. The AI-ready designation suggests pre-provisioned GPU and accelerator capacity which raises the bar for regional infrastructure offerings. Four Azure regions in India compared to Googles presence creates competitive pressure for matching capacity. The Hyderabad location serves the significant tech talent and enterprise customer base in that region. Google infrastructure teams should assess whether additional India region investments are needed to maintain competitive positioning.",
+    url: "https://azure.microsoft.com/updates?id=568013"
   },
   {
-    id: 6, cat: "networking", impact: "high", filler: false,
-    title: "AWS CloudFront Delivered Over 117 Tbps During FIFA World Cup 2026 Final",
-    summary: "Amazon CloudFront handled peak traffic exceeding 117 terabits per second during the FIFA World Cup Final when Spain scored in extra time. The surge tested replay requests and second-screen experiences simultaneously.",
-    source: "AWS Networking", age: "today",
-    detail: "This benchmark establishes a new reference point for global CDN capacity and demonstrates AWS networking infrastructure at unprecedented scale. The 117 Tbps figure far exceeds previously reported CDN peaks and validates continued investment in edge networking infrastructure. For Google Cloud this sets expectations for major event delivery capabilities and network edge investment requirements. The ability to handle correlated global traffic spikes is increasingly important as AI-generated content and real-time applications proliferate.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-amazon-cloudfront-delivered-traffic-for-the-fifa-world-cup-2026/"
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Azure Launches AI Gateway Tier in API Management Optimized for AI Workloads",
+    summary: "Azure API Management now offers a dedicated AI Gateway tier in public preview optimized specifically for AI workloads. The tier builds on existing AI gateway capabilities with a purpose-built experience for managing AI traffic.",
+    source: "Azure Updates", age: "today",
+    detail: "This product move indicates Azure is productizing AI infrastructure management layers which could influence enterprise procurement patterns. A dedicated AI gateway tier suggests Azure sees AI traffic management as distinct enough from traditional API management to warrant specialized tooling. For Google Cloud, this raises questions about whether similar purpose-built AI gateway offerings are needed to compete. The preview timing allows Azure to gather enterprise feedback before GA which could accelerate their AI platform maturity. Infrastructure teams should evaluate how this affects customer decisions around AI deployment architectures.",
+    url: "https://azure.microsoft.com/updates?id=568184"
   },
   {
-    id: 7, cat: "silicon", impact: "medium", filler: false,
-    title: "AMD Advancing AI Keynote Positions Company as Full-Stack AI Infrastructure Vendor",
-    summary: "Lisa Sus keynote at AMD Advancing AI 2026 repositioned the company from a GPU alternative to a comprehensive AI infrastructure provider. The event featured new GPU CPU and accelerator announcements targeting enterprise AI workloads.",
-    source: "SiliconANGLE News", age: "3 days ago",
-    detail: "AMDs push to become a full-stack vendor challenges NVIDIAs dominance and provides Google Cloud with additional leverage in infrastructure negotiations. The AT&T Azure deployment using AMD infrastructure demonstrates enterprise willingness to adopt AMD for production AI workloads. Continued AMD competitiveness benefits hyperscalers through improved pricing and supply diversification options. Google should evaluate AMD roadmap alignment with TPU strategy and potential hybrid deployment scenarios.",
-    url: "https://siliconangle.com/2026/07/24/five-thoughts-lisa-sus-keynote-amd-advancing-ai/"
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "AMD On Track to Hit $100 Billion Revenue Two Years Ahead of Lisa Sus 2030 Target",
+    summary: "Wall Street analysts now project AMD will reach $100 billion annual revenue by 2028 rather than the 2030 target CEO Lisa Su set. The accelerated timeline reflects stronger than expected AI chip demand.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "AMDs accelerated growth trajectory confirms the AI silicon market is expanding faster than even bullish projections anticipated. As a competitor to NVIDIA in GPU accelerators, AMDs success validates the multi-vendor approach hyperscalers including Google are pursuing. Faster AMD growth means more viable alternatives to NVIDIA for training and inference workloads which improves negotiating leverage. The revenue acceleration likely stems from MI300 and successor products gaining data center traction. Google infrastructure teams should monitor whether AMD capacity and roadmap can support increased procurement.",
+    url: "https://247wallst.com/investing/2026/07/27/amd-is-on-track-to-beat-lisa-sus-100-billion-revenue-prediction-by-2-years/"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Google Cloud Wins NOAA Contract for High Performance Weather Computing Infrastructure",
-    summary: "Google Cloud was selected as primary provider of high-performance computing infrastructure for NOAAs Weather and Climate Operational Supercomputing System. The collaboration will modernize weather forecasting capabilities using Google Cloud HPC resources.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This federal contract win demonstrates Google Cloud competitiveness for specialized HPC workloads against traditional supercomputing vendors and AWS GovCloud. Weather modeling represents a compute-intensive scientific workload that exercises networking and storage infrastructure at scale. The win validates Google Cloud investment in HPC capabilities and positions the company for additional federal scientific computing opportunities. Success here could inform AI infrastructure design as weather modeling increasingly incorporates machine learning techniques.",
-    url: "https://cloud.google.com/blog/topics/public-sector/modernizing-the-skies-noaa-google-cloud-collaborate-advance-weather-forecasting/"
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "NVIDIA Debt Protection Costs Surge Amid $750 Billion AI Infrastructure Spending Wave",
+    summary: "Credit markets are repricing NVIDIA debt protection as AI infrastructure spending reaches $750 billion affecting bond yields and capital allocation. The surge reflects broader concerns about the scale and sustainability of AI buildout financing.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Rising debt protection costs for NVIDIA signal credit market concerns about the sustainability of current AI infrastructure spending levels. This has implications for all vendors in the AI supply chain as financing costs affect pricing and investment decisions. For hyperscalers, vendor financial stability matters for long-term supply agreements and roadmap commitments. The $750 billion spending figure provides a useful benchmark for total industry AI infrastructure investment. Google should monitor whether rising capital costs affect NVIDIA or other vendor pricing and capacity commitments.",
+    url: "https://cryptobriefing.com/nvidia-debt-protection-costs-surge-ai-infrastructure/"
   },
   {
     id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Uses Vera CPU Internally to Accelerate Next-Generation Chip Design",
-    summary: "NVIDIA announced it is deploying its Vera CPU across internal infrastructure to speed electronic design automation workflows for future CPUs and GPUs. The company is collaborating with Cadence and Synopsys to optimize EDA applications for Vera.",
+    title: "NVIDIA and Korea Announce AI Partnership Advances at San Francisco Summit",
+    summary: "South Korean President and business leaders met with NVIDIA at the AI Summit in San Francisco to advance bilateral AI initiatives. The discussions build on Jensen Huangs recent Korea visit focusing on national AI infrastructure development.",
     source: "NVIDIA Blog", age: "today",
-    detail: "NVIDIAs internal adoption of Vera CPU validates its ARM-based server processor ambitions and signals intent to compete in data center CPU markets. EDA workloads are compute-intensive and represent a credible initial use case for demonstrating Vera capabilities. Partnership with Cadence and Synopsys ensures ecosystem support critical for enterprise EDA adoption. This move pressures Intel and AMD in data center CPU markets while potentially affecting hyperscaler custom silicon strategies.",
-    url: "https://blogs.nvidia.com/blog/vera-cpu-eda/"
+    detail: "This government-level engagement highlights how AI infrastructure has become a matter of national industrial policy not just enterprise procurement. Koreas involvement brings Samsung and SK Hynix into closer alignment with NVIDIA ecosystem development. For Google, Korean partnerships could affect memory and component supply dynamics as well as regional cloud competition. The summit format suggests NVIDIA is building country-level relationships that extend beyond individual customer deals. These strategic alignments may influence where AI infrastructure capacity gets built globally.",
+    url: "https://blogs.nvidia.com/blog/ai-summit-korea-partners-and-nvidia/"
   },
   {
-    id: 10, cat: "silicon", impact: "medium", filler: false,
-    title: "Hyperscalers Building Custom AI Chips Challenge NVIDIA Dominance Across Tech Stack",
-    summary: "Major cloud providers are developing custom AI accelerators to reduce dependence on NVIDIA while infrastructure vendors further down the stack benefit regardless of chip winner. Analysis suggests smart AI investments may lie in enabling technologies rather than chip makers.",
-    source: "Barchart.com", age: "3 days ago",
-    detail: "This analysis captures the strategic tension between hyperscaler custom silicon programs and NVIDIA platform dominance. Google TPU AWS Trainium and Azure Maia represent significant investments in vertical integration that could reshape AI infrastructure economics. The observation that infrastructure enablers benefit regardless of chip winner highlights opportunities in networking storage and related technologies. For Google Cloud the custom silicon strategy must balance TPU differentiation against ecosystem compatibility requirements.",
-    url: "https://www.barchart.com/story/news/3453083/nvidias-rivals-are-coming-for-its-crown-but-the-smartest-ai-bet-sits-further-down-the-tech-stack"
+    id: 10, cat: "storage", impact: "low", filler: true,
+    title: "Optical Switches Market Projected to Reach $20.6 Billion by 2035",
+    summary: "The global optical switches market is forecast to hit $20.6 billion by 2035 driven by data center and networking demand. Growth spans multiple technology segments including MEMS and switching architectures.",
+    source: "GlobeNewswire", age: "today",
+    detail: "Optical switching technology is increasingly relevant for high-bandwidth AI cluster interconnects as electrical switching faces scaling limits. The market growth projection indicates sustained investment in optical networking infrastructure through the next decade. For hyperscaler data centers, optical switches enable higher bandwidth density and lower power consumption at scale. This forecast suggests continued innovation in the optical networking space that infrastructure teams should track for future architecture decisions.",
+    url: "https://www.globenewswire.com/news-release/2026/07/27/3333397/0/en/Optical-Switches-Market-Size-to-Hit-USD-20-60-Billion-by-2035-SNS-Insider.html"
   },
   {
-    id: 11, cat: "networking", impact: "low", filler: true,
-    title: "AWS Introduces Centralized VPC Inspection with Route Server and Transit Gateway",
-    summary: "AWS published guidance for routing traffic from multiple VPCs through shared firewall appliances using VPC Route Server and Transit Gateway. The architecture enables centralized security inspection for spoke VPC traffic.",
-    source: "AWS Networking", age: "today",
-    detail: "This networking pattern addresses enterprise requirements for consistent security policy enforcement across distributed cloud environments. The integration of Route Server with Transit Gateway simplifies what was previously a complex custom routing configuration. While not directly AI-related this architecture supports secure connectivity for distributed AI training and inference workloads. Google Cloud should ensure comparable centralized inspection patterns are well documented for enterprise migration scenarios.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/centralized-vpc-inspection-with-amazon-vpc-route-server-and-aws-transit-gateway/"
+    id: 11, cat: "vendor", impact: "low", filler: true,
+    title: "Industry Leaders Form Open Secure AI Alliance for AI Safety and Security Standards",
+    summary: "A coalition of industry leaders has established the Open Secure AI Alliance to develop open source approaches to AI safety and security. The initiative builds on existing open source cybersecurity foundations.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "Open source security frameworks for AI systems could influence how hyperscalers approach AI infrastructure security requirements. Industry-wide security standards may affect vendor selection criteria and compliance obligations. For Google, participation in or alignment with such alliances affects competitive positioning in enterprise AI markets.",
+    url: "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
   },
   {
-    id: 12, cat: "vendor", impact: "low", filler: true,
-    title: "NVIDIA Expands Agent Toolkit with PhysicsNeMo and CUDA-X Libraries for Engineering",
-    summary: "NVIDIA announced expansion of its Agent Toolkit for engineering applications adding PhysicsNeMo and CUDA-X libraries as agent-ready tools. The release targets transformation of product design and development workflows.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This toolkit expansion positions NVIDIA software as essential infrastructure for AI-augmented engineering beyond raw compute. PhysicsNeMo integration enables physics-informed neural networks for simulation-heavy design workflows. The agent-ready framing aligns with broader industry movement toward agentic AI applications in enterprise settings. For infrastructure planning these engineering agents will drive sustained GPU utilization for simulation and design optimization workloads.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "AWS Weekly Roundup Highlights Local Zone Expansion and Lambda Durable Execution",
+    summary: "AWS announced new Athens Local Zone availability along with Lambda durable execution for .NET and Claude Opus 5 availability. The updates reflect continued AWS infrastructure and AI model expansion.",
+    source: "AWS News Blog", age: "today",
+    detail: "AWS Local Zone expansion extends edge computing options that compete with Google Cloud edge offerings. Lambda durable execution improvements affect serverless AI inference workload capabilities. Claude Opus 5 availability on AWS indicates Anthropic is maintaining multi-cloud distribution strategy.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/"
   },
   {
-    id: 13, cat: "competition", impact: "low", filler: true,
-    title: "Agentic AI Inference Surge Makes Tokenomics Key Enterprise Budget Constraint",
-    summary: "The transition from chatbots to autonomous agents is reshaping AI demand patterns as tokenomics emerges as the defining budget constraint. Round-the-clock inference from agentic systems replaces intermittent usage patterns.",
-    source: "SiliconANGLE News", age: "3 days ago",
-    detail: "This analysis highlights the economic implications of always-on agentic AI systems for infrastructure planning and pricing models. Sustained inference demand changes capacity planning assumptions from peak-based to continuous utilization models. Token consumption economics will increasingly influence enterprise architecture decisions and cloud provider selection. Google Cloud pricing and capacity strategies must account for this shift in demand patterns as agentic workloads proliferate.",
-    url: "https://siliconangle.com/2026/07/24/tokenomics-defines-agentic-ai-economics-amdadvancingai/"
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Rigetti Partners with HPE and Pittsburgh Supercomputing Center for Hybrid Quantum System",
+    summary: "Rigetti will deliver a 9-qubit Novera quantum computing system to Pittsburgh Supercomputing Center funded by an NSF grant. The deployment advances hybrid quantum-classical computing research infrastructure.",
+    source: "GlobeNewswire", age: "today",
+    detail: "Quantum computing partnerships with HPC centers indicate continued investment in next-generation computing architectures. While current qubit counts remain limited, these testbeds build ecosystem expertise relevant to future AI and optimization workloads. HPE involvement suggests traditional infrastructure vendors are positioning for quantum integration.",
+    url: "https://www.globenewswire.com/news-release/2026/07/27/3333556/0/en/Rigetti-Expands-Collaboration-with-HPE-and-Pittsburgh-Supercomputing-Center-to-Build-New-Hybrid-Quantum-Classical-Supercomputer.html"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Microsoft Foundry Adds Tracing for Agent Framework in Python and .NET",
-    summary: "Microsoft announced public preview of tracing capabilities for the Microsoft Agent Framework supporting both Python and .NET developers. The feature helps developers observe agent reasoning tool calls and model interactions during execution.",
-    source: "Azure Updates", age: "today",
-    detail: "Observability tooling for agentic AI systems addresses a critical gap in production deployment and debugging capabilities. Tracing agent reasoning chains is essential for enterprise compliance and debugging complex multi-step workflows. This release demonstrates Microsofts focus on production-ready agentic infrastructure beyond model access. Google Cloud Vertex AI agent offerings should ensure comparable observability features for competitive positioning.",
-    url: "https://azure.microsoft.com/updates?id=564071"
-  },
-  {
-    id: 15, cat: "storage", impact: "low", filler: true,
-    title: "Samsung and SK Group 950 Billion Dollar AI Deals Raise Questions on Actual Impact",
-    summary: "South Koreas announced 950 billion dollar AI chip deals with Samsung and SK Group draw scrutiny over transparency and true economic impact. Analysts question the methodology behind the headline investment figures.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "This skeptical analysis of announced AI investment figures highlights the challenge of evaluating competitive infrastructure commitments. Large headline numbers may aggregate multi-year estimates existing commitments and conditional investments. For competitive intelligence purposes Google Cloud should apply similar scrutiny to competitor infrastructure announcements. Understanding the actual near-term capacity implications versus long-term aspirational figures is critical for strategic planning.",
-    url: "https://www.ibtimes.com.au/south-korea-950-billion-ai-chip-deal-1872967"
+    id: 14, cat: "competition", impact: "low", filler: true,
+    title: "Japanese Nikkei 225 Rally Continues Driven by AI Demand and Corporate Reforms",
+    summary: "Japans Nikkei 225 index reached record highs in 2026 driven by corporate reforms and AI-related demand despite market volatility. Analysts highlight key Japanese companies benefiting from global AI infrastructure buildout.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "Japanese semiconductor and electronics companies are key suppliers in the AI infrastructure supply chain. Market performance reflects investor confidence in Japanese component makers serving hyperscaler demand. For Google, Japanese supplier health affects procurement options for specialized components and materials.",
+    url: "https://www.ibtimes.com.au/japan-nikkei-225-record-breaking-year-2026-1872993"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The NOAA high-performance computing win validates Google Cloud infrastructure for mission-critical government workloads, creating reference architecture opportunities for networking and storage teams to showcase low-latency data pipelines in scientific computing environments. Microsoft Foundry momentum continues with GPT-5.6 general availability and the AT&T trillion-token deployment demonstrating Azure can deliver production-scale AI infrastructure with flexible GPU vendor choice across AMD and NVIDIA, signaling competitive pressure on Google Cloud AI platform positioning. The SK-NVIDIA 500 billion dollar partnership and NAVER expansion to 1 gigawatt of AI factory capacity represent massive HBM and networking infrastructure commitments in Asia Pacific, while NVIDIAs internal Vera CPU deployment for chip design suggests tighter vertical integration that could reshape future accelerator supply dynamics.";
+const STATIC_BRIEF = "The Cisco scale-across architecture proposal for distributed AI fabric represents a direct competitive challenge to Googles networking approach, as Ciscos Zeus AI Lab benchmarks aim to validate Ethernet-based multi-datacenter AI workloads that could influence enterprise customer expectations for cloud interconnect capabilities. The Samsung-Broadcom $200 billion partnership through 2030 creates a vertically integrated AI chip supply chain outside of TSMC that strengthens Broadcoms position as an alternative to NVIDIA custom silicon, which has implications for Googles TPU competitive positioning and potential supply diversification strategies. Wall Street scrutiny of the combined $400 billion AI infrastructure spend from Amazon and Microsoft signals that investor patience for capex-heavy AI buildouts is thinning, creating both risk and opportunity as Google navigates its own infrastructure investment narrative.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
