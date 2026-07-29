@@ -647,116 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "vendor", impact: "high", filler: false,
-    title: "Samsung Wins $200 Billion Broadcom Contract For 2nm AI Chips Through 2030",
-    summary: "Samsung Electronics and Broadcom have signed a landmark $200 billion agreement through 2030 covering memory supply, 2nm foundry manufacturing, and advanced packaging for AI infrastructure. The deal positions Samsung as a critical supplier for Broadcoms AI chip designs competing against NVIDIA.",
-    source: "Hot Hardware", age: "today",
-    detail: "This massive multi-year contract represents one of the largest semiconductor deals in history and directly impacts the AI infrastructure supply chain. Broadcom is a key networking silicon vendor for hyperscaler data centers and this deal secures advanced manufacturing capacity for next-generation AI chips. The inclusion of memory supply and advanced packaging indicates a comprehensive approach to AI chip production that could challenge NVIDIAs dominance. For Google, this strengthens Broadcoms position as a viable alternative supplier for custom silicon and networking ASICs. The 2nm node commitment signals serious competition for TSMC in advanced AI chip manufacturing.",
-    url: "https://hothardware.com/news/samsung-wins-200-billion-broadcom-contract-for-2nm-ai-chips"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Goes Cash Flow Negative as AI Data Center Capex Hits $44.9 Billion in Single Quarter",
+    summary: "Alphabet reported negative free cash flow for the first time as AI infrastructure spending doubled to $44.9 billion in Q2. The company raised 2026 spending guidance to $205 billion and quadrupled inventory to $10 billion with CFO warning capex will increase further in 2027.",
+    source: "Tom's Hardware UK", age: "1 day ago",
+    detail: "This is a watershed moment for Google Cloud infrastructure strategy as the company bets aggressively on TPU capacity expansion. The $205 billion annual guidance represents an unprecedented commitment to AI compute buildout that dwarfs competitor spending. Quadrupling inventory to $10 billion signals massive procurement of networking equipment storage and silicon. The negative cash flow situation creates pressure to demonstrate AI revenue returns quickly. For vendors like Broadcom and networking suppliers this validates sustained demand but raises questions about payment terms and project timelines.",
+    url: "https://www.tomshardware.com/tech-industry/big-tech/alphabet-goes-cash-flow-negative-for-the-first-time-as-ai-capex-doubles-to-44-9-billion-in-a-single-quarter"
   },
   {
-    id: 2, cat: "networking", impact: "high", filler: false,
-    title: "Cisco Advocates Scale-Across Architecture for Distributed AI Fabric Beyond Single Data Centers",
-    summary: "Cisco argues that AI workloads are outgrowing standalone data centers and proposes a scale-across Ethernet fabric to unify distributed clusters. The approach is backed by benchmarking from Ciscos Zeus AI Lab showing performance optimization across any distance.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This represents Ciscos strategic positioning against NVIDIA and Arista in the AI networking space by emphasizing distributed architectures over dense single-site deployments. The scale-across concept addresses a real constraint facing hyperscalers who are running out of power and cooling capacity at individual sites. For Google, this aligns with the need to connect TPU clusters across multiple facilities while maintaining training performance. Ciscos Zeus AI Lab benchmarking provides competitive validation data that could influence procurement decisions. The Ethernet-centric approach positions Cisco against InfiniBand-dominated architectures.",
-    url: "https://blogs.cisco.com/datacenter/scale-across-why-the-future-of-distributed-ai-isnt-in-one-data-center/"
+    id: 2, cat: "competition", impact: "high", filler: false,
+    title: "Amazon Meta and Microsoft Face Investor Scrutiny After Google Capex Report Sparks Sell-Off",
+    summary: "Hyperscalers face heightened investor skepticism heading into earnings as Alphabets negative free cash flow and elevated capex guidance triggered a market sell-off. Slower-growing cloud rivals must now justify their own AI infrastructure investments.",
+    source: "CNBC", age: "1 day ago",
+    detail: "This sets up a critical week for competitive positioning as AWS Azure and Meta report earnings under intense scrutiny of AI ROI narratives. Investors are clearly signaling concerns about the sustainability of massive infrastructure buildouts without proportional revenue growth. For Google Cloud the pressure intensifies to demonstrate that TPU and networking investments translate to customer wins versus AWS and Azure. The sell-off creates potential headwinds for infrastructure vendor stocks as market questions whether hyperscaler spending can continue at current trajectories.",
+    url: "https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html"
   },
   {
-    id: 3, cat: "competition", impact: "high", filler: false,
-    title: "Chinese Memory Chipmaker CXMT Surges 466% in IPO Becoming Chinas Most Valuable Company",
-    summary: "CXMT Corp shares exploded 466% on their Shanghai debut closing at 49 yuan and instantly becoming Chinas most valuable listed company. The historic IPO reflects massive investor confidence in Chinas domestic semiconductor self-sufficiency efforts.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "This IPO signals the maturing of Chinas domestic memory industry which has significant implications for global AI infrastructure supply chains. CXMT produces DRAM which is critical for AI training and inference workloads across all hyperscalers. The valuation surge indicates Chinese capital markets are heavily backing semiconductor self-sufficiency amid ongoing US export restrictions. For Google and other hyperscalers, this creates a potential alternative memory supplier outside of Samsung and SK Hynix though geopolitical considerations may limit adoption. The scale of this debut suggests China is building serious capacity in memory production.",
-    url: "https://www.ibtimes.com.au/chinas-cxmt-stock-soars-466-historic-shanghai-debut-becoming-nations-most-valuable-listed-1873080"
+    id: 3, cat: "networking", impact: "high", filler: false,
+    title: "Cisco Unveils Scale-Across Ethernet Fabric for Distributed AI Clusters Across Data Centers",
+    summary: "Cisco published benchmarking from its Zeus AI Lab demonstrating how scale-across Ethernet fabric enables distributed AI workloads across geographically separated data centers. The approach addresses AI workloads outgrowing single data center capacity constraints.",
+    source: "Cisco.com", age: "1 day ago",
+    detail: "This directly challenges the assumption that AI training requires co-located infrastructure and positions Cisco against InfiniBand-centric architectures from NVIDIA. The Zeus AI Lab benchmarking provides crucial performance data for enterprises evaluating distributed training topologies. For Google the scale-across approach could enable more flexible TPU deployment strategies and better utilization of regional capacity. This also validates Ethernet as the fabric of choice for inference workloads where latency requirements differ from training. Arista and other Ethernet vendors benefit from this narrative shift.",
+    url: "https://blogs.cisco.com/?p=495232"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Amazon and Microsoft Face Investor Scrutiny Over $400 Billion AI Infrastructure Spending",
-    summary: "Following Alphabets stock punishment for AI spending, Amazon and Microsoft face pressure to justify their combined $400 billion AI infrastructure investments. Wall Street patience is wearing thin as cloud giants compete for AI dominance.",
-    source: "Fortune", age: "today",
-    detail: "This investor sentiment shift represents a critical inflection point for all hyperscaler infrastructure strategies including Google. The scrutiny suggests capital markets want clearer ROI timelines on massive AI buildouts which could influence procurement decisions and vendor negotiations. Both AWS and Azure are direct competitors to Google Cloud and their spending constraints could create opportunities or force industry-wide discipline. The comparison to Alphabets recent treatment indicates this is a sector-wide concern not company-specific. Infrastructure teams should monitor how this affects competitor capacity expansion timelines.",
-    url: "https://fortune.com/2026/07/27/amazon-microsoft-alphabet-google-stock-cloud-ai-spending-billions/"
+    id: 4, cat: "silicon", impact: "high", filler: false,
+    title: "Data Center Semiconductor Market to Reach $265.8 Billion by 2029 at 25.1% CAGR",
+    summary: "MarketsandMarkets projects the data center semiconductor market will grow from $86.8 billion in 2024 to $265.8 billion by 2029. The 25.1% compound annual growth rate is driven by AI compute demand.",
+    source: "GlobeNewswire", age: "1 day ago",
+    detail: "This market sizing validates the enormous opportunity for silicon vendors supplying GPU TPU and custom ASIC solutions. The three-fold growth projection supports continued aggressive investment in AI accelerator development by NVIDIA Broadcom AMD and custom silicon efforts at hyperscalers. For Google this confirms the strategic importance of TPU development and the competitive advantage of vertical integration. The forecast also implies sustained demand for networking silicon and storage controllers that Marvell and Broadcom supply to data center customers.",
+    url: "https://www.globenewswire.com/news-release/2026/07/28/3334463/0/en/Data-Center-Semiconductor-Market-to-Reach-USD-265-8-Billion-by-2029-Growing-at-25-1-CAGR-Says-MarketsandMarkets.html"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Azure Opens Fourth India Data Center Region in Hyderabad With AI-Ready Infrastructure",
-    summary: "Microsoft launched India South Central region with campuses in Hyderabad marking Azures fourth datacenter region in India. The region is designed with AI readiness as a core infrastructure principle.",
+    id: 5, cat: "silicon", impact: "medium", filler: false,
+    title: "Rebellions CEO Says Training and Inference Need Different Physics and Different Chips",
+    summary: "Korean AI chip startup Rebellions argues that training and inference workloads require fundamentally different silicon architectures. The CEO sees emergence of a distinct inference chip market segment.",
+    source: "TechRadar", age: "1 day ago",
+    detail: "This perspective challenges NVIDIAs dominance narrative and supports the case for specialized inference accelerators like Googles TPU inference configurations. The physics argument around power efficiency and latency optimization for inference versus throughput for training validates differentiated silicon strategies. For hyperscalers this reinforces the value of custom silicon development rather than relying solely on general-purpose GPUs. The emergence of inference-specific vendors creates both partnership opportunities and competitive threats to established players.",
+    url: "https://www.techradar.com/pro/those-two-jobs-need-different-physics-rebellions-ceo-says-training-and-inference-need-different-chips"
+  },
+  {
+    id: 6, cat: "silicon", impact: "medium", filler: false,
+    title: "Arm Holdings Earnings Preview as AI CPU Strategy Faces Critical Growth Test",
+    summary: "Arm Holdings upcoming Q1 earnings will reveal whether the companys AI CPU strategy is becoming a major growth engine. Investors are closely watching AI-related licensing and royalty momentum.",
+    source: "Barchart.com", age: "2 days ago",
+    detail: "Arms architecture underpins custom silicon efforts at hyperscalers including Googles Axion processors and AWS Graviton. Strong AI-related growth would validate the shift toward Arm-based data center compute that threatens traditional x86 dominance. For networking and storage infrastructure Arm cores increasingly appear in SmartNICs DPUs and storage controllers from Marvell and Broadcom. The earnings will signal the pace of Arm adoption in AI infrastructure beyond the mobile stronghold.",
+    url: "https://www.barchart.com/story/news/3482286/arm-holdings-earnings-preview-ai-optimism-faces-its-next-big-test"
+  },
+  {
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "Chinese State-Backed Company Making DUV Lithography Machines Spooks Tech Stocks",
+    summary: "Semiconductor stocks sank Monday after reports that a Chinese state-backed company is manufacturing deep ultraviolet lithography machines. The development raises concerns about Chinas progress in domestic chip manufacturing capability.",
+    source: "Digital Journal", age: "1 day ago",
+    detail: "This has significant implications for the AI chip supply chain and export control effectiveness. If China can produce advanced lithography domestically it reduces leverage of US and allied restrictions on semiconductor equipment. For hyperscalers this could accelerate supply chain diversification efforts and increase geopolitical risk in infrastructure planning. The market reaction signals investor concern about competitive dynamics in AI silicon as China pursues self-sufficiency in critical technologies.",
+    url: "https://www.digitaljournal.com/article/why-are-tech-stocks-tanking/"
+  },
+  {
+    id: 8, cat: "competition", impact: "medium", filler: false,
+    title: "Anthropic CEO Calls for China Chip Controls and Mandatory AI Safety Testing",
+    summary: "Anthropic CEO Dario Amodei advocated for keeping lower-risk open-weight AI accessible while implementing stricter safeguards around frontier systems. He called for limits on Chinas access to advanced computing and mandatory model testing.",
+    source: "Computerworld", age: "1 day ago",
+    detail: "This policy position from a major AI lab directly impacts infrastructure strategy as it supports continued export controls on advanced GPUs and accelerators to China. For Google Cloud the regulatory environment around AI deployment affects customer acquisition and competitive positioning versus Chinese cloud providers. The mandatory testing framework could create compliance requirements that favor hyperscalers with sophisticated evaluation infrastructure over smaller competitors. Amodeis stance also signals continued AI industry support for compute restrictions as a safety mechanism.",
+    url: "https://www.computerworld.com/article/4202178/anthropic-rejects-open-weight-ai-bans-calls-for-china-chip-controls-and-safety-tests.html"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Orange and Morrison Launch 3 Billion Euro French Data Center Joint Venture",
+    summary: "Orange and Morrison announced a joint venture to create a data center company in France backed by 3 billion euros in investment targeting 400 megawatts of capacity. The venture combines Orange assets with Morrison equity and debt financing.",
+    source: "The Next Web", age: "2 days ago",
+    detail: "This European data center expansion represents growing regional competition for hyperscaler infrastructure services. The 400 megawatt target indicates significant AI-capable capacity that could host GPU clusters for European customers with data sovereignty requirements. For Google Cloud this adds competitive pressure in the European market where regulatory constraints favor local infrastructure providers. The debt-financed model also shows alternative capital structures for AI infrastructure buildout beyond hyperscaler balance sheets.",
+    url: "https://thenextweb.com/news/orange-morrison-french-data-centre-joint-venture-sovereignty/"
+  },
+  {
+    id: 10, cat: "networking", impact: "low", filler: true,
+    title: "Azure NAT Gateway Now Generally Available with NAT64 for IPv6 Workload Translation",
+    summary: "Azure StandardV2 NAT Gateway now supports NAT64 enabling IPv6 workloads to communicate with IPv4-only internet destinations. The feature translates synthesized outbound IPv6 traffic using DNS64-capable resolvers.",
     source: "Azure Updates", age: "today",
-    detail: "Microsofts continued India expansion intensifies competition with Google Cloud in a critical growth market. The AI-ready designation suggests pre-provisioned GPU and accelerator capacity which raises the bar for regional infrastructure offerings. Four Azure regions in India compared to Googles presence creates competitive pressure for matching capacity. The Hyderabad location serves the significant tech talent and enterprise customer base in that region. Google infrastructure teams should assess whether additional India region investments are needed to maintain competitive positioning.",
-    url: "https://azure.microsoft.com/updates?id=568013"
+    detail: "This networking enhancement addresses the ongoing IPv6 transition challenge in cloud environments. For enterprises running AI workloads the simplified IPv6 connectivity reduces networking complexity when integrating with legacy systems. The feature brings Azure closer to feature parity with other hyperscalers on dual-stack networking capabilities. While not AI-specific this type of networking modernization is essential infrastructure for large-scale distributed systems.",
+    url: "https://azure.microsoft.com/updates?id=568409"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Azure Launches AI Gateway Tier in API Management Optimized for AI Workloads",
-    summary: "Azure API Management now offers a dedicated AI Gateway tier in public preview optimized specifically for AI workloads. The tier builds on existing AI gateway capabilities with a purpose-built experience for managing AI traffic.",
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Azure Kubernetes Fleet Manager Resource Placement Now Generally Available",
+    summary: "Resource placement in Azure Kubernetes Fleet Manager enables platform teams to manage Kubernetes resources across multiple clusters with reduced manual effort. The GA release supports consistent configuration deployment at scale.",
     source: "Azure Updates", age: "today",
-    detail: "This product move indicates Azure is productizing AI infrastructure management layers which could influence enterprise procurement patterns. A dedicated AI gateway tier suggests Azure sees AI traffic management as distinct enough from traditional API management to warrant specialized tooling. For Google Cloud, this raises questions about whether similar purpose-built AI gateway offerings are needed to compete. The preview timing allows Azure to gather enterprise feedback before GA which could accelerate their AI platform maturity. Infrastructure teams should evaluate how this affects customer decisions around AI deployment architectures.",
-    url: "https://azure.microsoft.com/updates?id=568184"
-  },
-  {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "AMD On Track to Hit $100 Billion Revenue Two Years Ahead of Lisa Sus 2030 Target",
-    summary: "Wall Street analysts now project AMD will reach $100 billion annual revenue by 2028 rather than the 2030 target CEO Lisa Su set. The accelerated timeline reflects stronger than expected AI chip demand.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "AMDs accelerated growth trajectory confirms the AI silicon market is expanding faster than even bullish projections anticipated. As a competitor to NVIDIA in GPU accelerators, AMDs success validates the multi-vendor approach hyperscalers including Google are pursuing. Faster AMD growth means more viable alternatives to NVIDIA for training and inference workloads which improves negotiating leverage. The revenue acceleration likely stems from MI300 and successor products gaining data center traction. Google infrastructure teams should monitor whether AMD capacity and roadmap can support increased procurement.",
-    url: "https://247wallst.com/investing/2026/07/27/amd-is-on-track-to-beat-lisa-sus-100-billion-revenue-prediction-by-2-years/"
-  },
-  {
-    id: 8, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA Debt Protection Costs Surge Amid $750 Billion AI Infrastructure Spending Wave",
-    summary: "Credit markets are repricing NVIDIA debt protection as AI infrastructure spending reaches $750 billion affecting bond yields and capital allocation. The surge reflects broader concerns about the scale and sustainability of AI buildout financing.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Rising debt protection costs for NVIDIA signal credit market concerns about the sustainability of current AI infrastructure spending levels. This has implications for all vendors in the AI supply chain as financing costs affect pricing and investment decisions. For hyperscalers, vendor financial stability matters for long-term supply agreements and roadmap commitments. The $750 billion spending figure provides a useful benchmark for total industry AI infrastructure investment. Google should monitor whether rising capital costs affect NVIDIA or other vendor pricing and capacity commitments.",
-    url: "https://cryptobriefing.com/nvidia-debt-protection-costs-surge-ai-infrastructure/"
-  },
-  {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "NVIDIA and Korea Announce AI Partnership Advances at San Francisco Summit",
-    summary: "South Korean President and business leaders met with NVIDIA at the AI Summit in San Francisco to advance bilateral AI initiatives. The discussions build on Jensen Huangs recent Korea visit focusing on national AI infrastructure development.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This government-level engagement highlights how AI infrastructure has become a matter of national industrial policy not just enterprise procurement. Koreas involvement brings Samsung and SK Hynix into closer alignment with NVIDIA ecosystem development. For Google, Korean partnerships could affect memory and component supply dynamics as well as regional cloud competition. The summit format suggests NVIDIA is building country-level relationships that extend beyond individual customer deals. These strategic alignments may influence where AI infrastructure capacity gets built globally.",
-    url: "https://blogs.nvidia.com/blog/ai-summit-korea-partners-and-nvidia/"
-  },
-  {
-    id: 10, cat: "storage", impact: "low", filler: true,
-    title: "Optical Switches Market Projected to Reach $20.6 Billion by 2035",
-    summary: "The global optical switches market is forecast to hit $20.6 billion by 2035 driven by data center and networking demand. Growth spans multiple technology segments including MEMS and switching architectures.",
-    source: "GlobeNewswire", age: "today",
-    detail: "Optical switching technology is increasingly relevant for high-bandwidth AI cluster interconnects as electrical switching faces scaling limits. The market growth projection indicates sustained investment in optical networking infrastructure through the next decade. For hyperscaler data centers, optical switches enable higher bandwidth density and lower power consumption at scale. This forecast suggests continued innovation in the optical networking space that infrastructure teams should track for future architecture decisions.",
-    url: "https://www.globenewswire.com/news-release/2026/07/27/3333397/0/en/Optical-Switches-Market-Size-to-Hit-USD-20-60-Billion-by-2035-SNS-Insider.html"
-  },
-  {
-    id: 11, cat: "vendor", impact: "low", filler: true,
-    title: "Industry Leaders Form Open Secure AI Alliance for AI Safety and Security Standards",
-    summary: "A coalition of industry leaders has established the Open Secure AI Alliance to develop open source approaches to AI safety and security. The initiative builds on existing open source cybersecurity foundations.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "Open source security frameworks for AI systems could influence how hyperscalers approach AI infrastructure security requirements. Industry-wide security standards may affect vendor selection criteria and compliance obligations. For Google, participation in or alignment with such alliances affects competitive positioning in enterprise AI markets.",
-    url: "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+    detail: "Multi-cluster Kubernetes management is increasingly important for distributed AI inference deployments. The Fleet Manager capability helps enterprises maintain consistency across edge and cloud Kubernetes clusters running AI workloads. For Google Cloud this represents competitive pressure in the Kubernetes management space where GKE Enterprise competes. The feature reduces operational burden for teams managing heterogeneous AI infrastructure.",
+    url: "https://azure.microsoft.com/updates?id=567931"
   },
   {
     id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Weekly Roundup Highlights Local Zone Expansion and Lambda Durable Execution",
-    summary: "AWS announced new Athens Local Zone availability along with Lambda durable execution for .NET and Claude Opus 5 availability. The updates reflect continued AWS infrastructure and AI model expansion.",
-    source: "AWS News Blog", age: "today",
-    detail: "AWS Local Zone expansion extends edge computing options that compete with Google Cloud edge offerings. Lambda durable execution improvements affect serverless AI inference workload capabilities. Claude Opus 5 availability on AWS indicates Anthropic is maintaining multi-cloud distribution strategy.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/"
+    title: "Azure Prepared Image Specification Preview Targets Faster AI and GPU Node Startup",
+    summary: "Azure previewed Prepared Image Specification to reduce node startup times for AI GPU and Windows workloads on AKS. The feature pre-downloads container images to eliminate repeated initialization delays.",
+    source: "Azure Updates", age: "today",
+    detail: "Node startup latency is a meaningful operational concern for GPU-intensive AI workloads where container images can be large. The optimization addresses a common pain point in scaling AI inference clusters where new nodes historically faced cold start penalties. This competitive feature pressure may influence Google Clouds GKE roadmap for similar optimizations. Faster node provisioning improves infrastructure utilization and cost efficiency for burst AI workloads.",
+    url: "https://azure.microsoft.com/updates?id=567949"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Rigetti Partners with HPE and Pittsburgh Supercomputing Center for Hybrid Quantum System",
-    summary: "Rigetti will deliver a 9-qubit Novera quantum computing system to Pittsburgh Supercomputing Center funded by an NSF grant. The deployment advances hybrid quantum-classical computing research infrastructure.",
-    source: "GlobeNewswire", age: "today",
-    detail: "Quantum computing partnerships with HPC centers indicate continued investment in next-generation computing architectures. While current qubit counts remain limited, these testbeds build ecosystem expertise relevant to future AI and optimization workloads. HPE involvement suggests traditional infrastructure vendors are positioning for quantum integration.",
-    url: "https://www.globenewswire.com/news-release/2026/07/27/3333556/0/en/Rigetti-Expands-Collaboration-with-HPE-and-Pittsburgh-Supercomputing-Center-to-Build-New-Hybrid-Quantum-Classical-Supercomputer.html"
+    id: 13, cat: "storage", impact: "low", filler: true,
+    title: "Google Cloud Launches Conversational Analytics for Enterprise Data Ecosystem Integration",
+    summary: "Google Cloud expanded Conversational Analytics capabilities requiring strict governance and enterprise semantic grounding for business-critical database interactions. The feature moves beyond generic chatbot implementations.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Natural language interfaces to enterprise data represent a growing use case for AI infrastructure. The emphasis on governance and trust signals enterprise readiness requirements that differentiate from consumer AI experiences. For storage and data infrastructure teams this creates new access patterns that must be secured and optimized. The semantic grounding requirement suggests tight integration with BigQuery and other Google data services.",
+    url: "https://cloud.google.com/blog/products/data-analytics/conversational-analytics-in-google-data-cloud-in-q326/"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "Japanese Nikkei 225 Rally Continues Driven by AI Demand and Corporate Reforms",
-    summary: "Japans Nikkei 225 index reached record highs in 2026 driven by corporate reforms and AI-related demand despite market volatility. Analysts highlight key Japanese companies benefiting from global AI infrastructure buildout.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "Japanese semiconductor and electronics companies are key suppliers in the AI infrastructure supply chain. Market performance reflects investor confidence in Japanese component makers serving hyperscaler demand. For Google, Japanese supplier health affects procurement options for specialized components and materials.",
-    url: "https://www.ibtimes.com.au/japan-nikkei-225-record-breaking-year-2026-1872993"
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Claude Opus 5 Now Generally Available on Azure Databricks for Advanced AI Workflows",
+    summary: "Azure Databricks now supports Anthropic Claude Opus 5 through AI Model Serving for advanced reasoning coding and agentic workflows. The model targets complex professional knowledge work tasks.",
+    source: "Azure Updates", age: "today",
+    detail: "Multi-model availability on hyperscaler platforms reflects the competitive landscape where customers demand choice beyond proprietary offerings. Anthropics presence on Azure creates competitive dynamics with Google Clouds own model partnerships. For infrastructure planning the variety of foundation models increases complexity in capacity planning and optimization. The agentic workflow emphasis signals growing inference compute demand for autonomous AI systems.",
+    url: "https://azure.microsoft.com/updates?id=568316"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The Cisco scale-across architecture proposal for distributed AI fabric represents a direct competitive challenge to Googles networking approach, as Ciscos Zeus AI Lab benchmarks aim to validate Ethernet-based multi-datacenter AI workloads that could influence enterprise customer expectations for cloud interconnect capabilities. The Samsung-Broadcom $200 billion partnership through 2030 creates a vertically integrated AI chip supply chain outside of TSMC that strengthens Broadcoms position as an alternative to NVIDIA custom silicon, which has implications for Googles TPU competitive positioning and potential supply diversification strategies. Wall Street scrutiny of the combined $400 billion AI infrastructure spend from Amazon and Microsoft signals that investor patience for capex-heavy AI buildouts is thinning, creating both risk and opportunity as Google navigates its own infrastructure investment narrative.";
+const STATIC_BRIEF = "Google going cash flow negative with $44.9 billion quarterly capex and $205 billion 2026 guidance signals massive networking and storage infrastructure buildout ahead, requiring your teams to prepare for unprecedented scale demands across GPU and TPU clusters. Cisco demonstrating scale-across Ethernet fabric for distributed AI workloads across data centers represents a competitive architecture approach you should evaluate against Google internal networking solutions as training clusters exceed single-facility capacity. The data center semiconductor market projection to $265.8 billion by 2029 combined with Rebellions thesis on specialized inference chips suggests potential supply chain diversification opportunities beyond current GPU and TPU dependencies.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
