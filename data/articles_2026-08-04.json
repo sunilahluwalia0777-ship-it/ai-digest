@@ -1,0 +1,173 @@
+{
+  "date": "2026-08-04",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Cortex Framework v7 is GA: Build agentic workflows without disrupting SAP operations",
+      "summary": "Google announces the general availability of Cortex Framework v7, enabling businesses to deploy AI agents without disrupting mission-critical ERP systems.",
+      "detail": "The framework provides interoperable data products that act as a single, reusable source of truth, turning cryptic source system records into clear business terms.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/sap-google-cloud/cortex-framework-v7-power-ai-agents-with-sap-data-faster/"
+    },
+    {
+      "id": 2,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Behind the scenes: How we build, test, and scale Google Agent Skills",
+      "summary": "Google shares insights into building, testing, and scaling Google Agent Skills, encoding domain knowledge into structured instructions.",
+      "detail": "The goal is to make AI coding agents smarter, safer, and more accurate.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills/"
+    },
+    {
+      "id": 3,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Automate data monitoring and root-cause analysis with Looker Agentic Workflows",
+      "summary": "Google introduces Looker Agentic Workflows in preview, automating metric monitoring and root-cause analysis using intelligent background agents.",
+      "detail": "The capability extends Conversational Analytics in Looker, enabling teams to explore insights without manual hunting through dashboards.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/business-intelligence/looker-adds-agentic-workflows-for-data-monitoring-and-insights/"
+    },
+    {
+      "id": 4,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Automate your agent development lifecycle using any coding agent",
+      "summary": "Google provides a practical walkthrough on building real-world agents using Gemini Enterprise Agent Platform.",
+      "detail": "The platform enables unified embeddings that connect users' inferred interests with the breadth of what advertisers offer in their deep funnel ads.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/automate-agent-development-lifecycles-with-gemini-enterprise/"
+    },
+    {
+      "id": 5,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "What's new in Gemini Enterprise Agent Platform",
+      "summary": "Google updates Gemini Enterprise Agent Platform with new features and enhancements.",
+      "detail": "The innovations aim to strengthen AI cybersecurity as the annual Black Hat conference begins in Las Vegas.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/whats-new-in-gemini-enterprise-agent-platform/"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)",
+      "summary": "AWS announces a price reduction of GPT models in Bedrock and introduces CloudWatch managed collectors for Prometheus metrics.",
+      "detail": "The updates aim to enhance AI capabilities on the AWS cloud platform.",
+      "source": "AWS News Blog",
+      "age": "1 day ago",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "[Launched] Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance",
+      "summary": "Azure announces the general availability of immutability for the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance.",
+      "detail": "The capability enhances backup protection by automatically applying immutability to the most recent seven days of backups.",
+      "source": "Azure Updates",
+      "age": "1 day ago",
+      "url": "https://azure.microsoft.com/updates?id=568339"
+    },
+    {
+      "id": 8,
+      "cat": "ai infrastructure",
+      "impact": "medium",
+      "filler": false,
+      "title": "[In preview] Public Preview: Azure SQL updates for late-July",
+      "summary": "Azure introduces a new update and enhancement to Azure SQL in late-July 2026.",
+      "detail": "The update includes regex-based dynamic data masking (DDM) extending the built-in DDM feature with pattern-based masking to hide sensitive data.",
+      "source": "Azure Updates",
+      "age": "1 day ago",
+      "url": "https://azure.microsoft.com/updates?id=568139"
+    },
+    {
+      "id": 9,
+      "cat": "ai infrastructure",
+      "impact": "medium",
+      "filler": false,
+      "title": "Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization",
+      "summary": "Meta explores hierarchical interest representation to connect users' inferred interests with the breadth of what advertisers offer in their deep funnel ads.",
+      "detail": "The innovations aim to strengthen AI cybersecurity as the annual Black Hat conference begins in Las Vegas.",
+      "source": "Meta Engineering",
+      "age": "1 day ago",
+      "url": "https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/"
+    },
+    {
+      "id": 10,
+      "cat": "vendor",
+      "impact": "low",
+      "filler": true,
+      "title": "Wireless isn't magic\u2014it's just better when you stop micromanaging your network",
+      "summary": "Cisco shares a story about Room & Board ditching cables and embracing AI for network management.",
+      "detail": "The company found peace by letting their network manage itself.",
+      "source": "Cisco Networking Blog",
+      "age": "1 day ago",
+      "url": "https://blogs.cisco.com/networking/wireless-isnt-magic-its-just-better-when-you-stop-micromanaging-your-network/"
+    },
+    {
+      "id": 11,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "KIOXIA's new GP1 Series PCIe 6.0 SSDs unlock 10 million random read IOPS",
+      "summary": "KIOXIA announces its new GP1 Series PCIe 6.0 NVMe SSDs with impressive performance.",
+      "detail": "The drives deliver an impressive 10 million random read IOPS performance.",
+      "source": "TweakTown",
+      "age": "1 day ago",
+      "url": "https://www.tweaktown.com/news/112972/kioxias-new-gp1-series-pcie-6-0-ssds-unlock-10-million-random-read-iops/index.html"
+    },
+    {
+      "id": 12,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "Morgan Stanley forecasts cloud spending to reach $1.2T by 2027, and crypto miners are paying attention",
+      "summary": "Morgan Stanley predicts significant growth in cloud spending, with crypto miners taking notice.",
+      "detail": "The surge in cloud spending could reshape tech industries and alter investment strategies globally.",
+      "source": "Crypto Briefing",
+      "age": "1 day ago",
+      "url": "https://cryptobriefing.com/morgan-stanley-cloud-spending-1-2t-2027/"
+    },
+    {
+      "id": 13,
+      "cat": "vendor",
+      "impact": "low",
+      "filler": true,
+      "title": "CXMT Eyes Second Beijing Memory Fab After Record IPO, Circling the Gap Samsung and Micron Left Behind",
+      "summary": "CXMT considers building a second memory chip plant in Beijing after its record-setting IPO.",
+      "detail": "The company is regularly discussed as a Chinese chip firm that might be able to compete on the global stage due to the ongoing turmoil between major players.",
+      "source": "Wccftech",
+      "age": "1 day ago",
+      "url": "https://wccftech.com/cxmt-eyes-second-beijing-memory-fab-after-record-ipo-circling-the-gap-samsung-and-micron-left-behind/"
+    },
+    {
+      "id": 14,
+      "cat": "vendor",
+      "impact": "low",
+      "filler": true,
+      "title": "To power AI, Khosla and a16z bet this startup can reinvent mining",
+      "summary": "Mariana Minerals is valued at $1.5 billion after securing funding from investors including Khosla and a16z.",
+      "detail": "The startup aims to revolutionize the mining industry with AI-powered technology.",
+      "source": "Fortune",
+      "age": "1 day ago",
+      "url": "https://fortune.com/2026/08/03/power-ai-khosla-a16z-bet-startup-reinvent-mining-mariana-minerals/"
+    }
+  ]
+}

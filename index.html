@@ -647,124 +647,116 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "cloud", impact: "high", filler: false,
-    title: "Real-world mainframe modernization with AI: A safe, scalable path from mainframe to cloud",
-    summary: "Google Cloud proposes a modernization strategy that leverages AI for mainframe migration.",
+    id: 1, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Cortex Framework v7 is GA: Build agentic workflows without disrupting SAP operations",
+    summary: "Google announces the general availability of Cortex Framework v7, enabling businesses to deploy AI agents without disrupting mission-critical ERP systems.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses the challenges of mainframe modernization and how Google Cloud's approach uses AI to ensure a safe and scalable transition.",
-    url: "https://cloud.google.com/blog/products/infrastructure-modernization/mainframe-migration-and-modernization-with-ai/"
+    detail: "The framework provides interoperable data products that act as a single, reusable source of truth, turning cryptic source system records into clear business terms.",
+    url: "https://cloud.google.com/blog/products/sap-google-cloud/cortex-framework-v7-power-ai-agents-with-sap-data-faster/"
   },
   {
-    id: 2, cat: "ai", impact: "high", filler: false,
-    title: "What Google Cloud announced in AI this month",
-    summary: "Google Cloud announces new AI features and updates, including the Gemini Enterprise Agent Platform.",
+    id: 2, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Behind the scenes: How we build, test, and scale Google Agent Skills",
+    summary: "Google shares insights into building, testing, and scaling Google Agent Skills, encoding domain knowledge into structured instructions.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article highlights the latest AI developments from Google Cloud, focusing on the Gemini Enterprise Agent Platform and its capabilities.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month/"
+    detail: "The goal is to make AI coding agents smarter, safer, and more accurate.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills/"
   },
   {
-    id: 3, cat: "cloud", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Trusted Launch as Default",
-    summary: "Azure announces the general availability of Trusted Launch as Default for new Azure Gen2 virtual machines and scale sets.",
-    source: "Azure Updates", age: "today",
-    detail: "The article explains the security benefits of Trusted Launch as Default, which enables Secure Boot and vTPM by default.",
-    url: "https://azure.microsoft.com/updates?id=568600"
+    id: 3, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Automate data monitoring and root-cause analysis with Looker Agentic Workflows",
+    summary: "Google introduces Looker Agentic Workflows in preview, automating metric monitoring and root-cause analysis using intelligent background agents.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The capability extends Conversational Analytics in Looker, enabling teams to explore insights without manual hunting through dashboards.",
+    url: "https://cloud.google.com/blog/products/business-intelligence/looker-adds-agentic-workflows-for-data-monitoring-and-insights/"
   },
   {
-    id: 4, cat: "ai", impact: "high", filler: false,
-    title: "GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model",
-    summary: "Meta shares its experience in scaling its ads foundation model to LLM scale, achieving a 2x efficiency gain.",
-    source: "Meta Engineering", age: "today",
-    detail: "The article provides insights into Meta's approach to training large language models and the resulting improvements in efficiency.",
-    url: "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/"
+    id: 4, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Automate your agent development lifecycle using any coding agent",
+    summary: "Google provides a practical walkthrough on building real-world agents using Gemini Enterprise Agent Platform.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The platform enables unified embeddings that connect users' inferred interests with the breadth of what advertisers offer in their deep funnel ads.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/automate-agent-development-lifecycles-with-gemini-enterprise/"
   },
   {
-    id: 5, cat: "cloud", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Azure Database for PostgreSQL flexible server in India South Central",
-    summary: "Azure announces the general availability of its Database for PostgreSQL flexible server in the India South Central region.",
-    source: "Azure Updates", age: "today",
-    detail: "The article highlights the expanded availability of Azure's PostgreSQL database service, enabling more customers to benefit from its features.",
-    url: "https://azure.microsoft.com/updates?id=568334"
+    id: 5, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "What's new in Gemini Enterprise Agent Platform",
+    summary: "Google updates Gemini Enterprise Agent Platform with new features and enhancements.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The innovations aim to strengthen AI cybersecurity as the annual Black Hat conference begins in Las Vegas.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/whats-new-in-gemini-enterprise-agent-platform/"
   },
   {
-    id: 6, cat: "ai", impact: "high", filler: false,
-    title: "NVIDIA Open Sources First GPU-Accelerated Medical Physics Simulation Framework",
-    summary: "NVIDIA open-sources its medical physics simulation framework, enabling developers to create more realistic simulations.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The article explains the benefits of NVIDIA's open-source framework, which leverages GPU acceleration for medical physics simulations.",
-    url: "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/"
+    id: 6, cat: "hyperscaler", impact: "high", filler: false,
+    title: "AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)",
+    summary: "AWS announces a price reduction of GPT models in Bedrock and introduces CloudWatch managed collectors for Prometheus metrics.",
+    source: "AWS News Blog", age: "1 day ago",
+    detail: "The updates aim to enhance AI capabilities on the AWS cloud platform.",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/"
   },
   {
-    id: 7, cat: "cloud", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Single-click purchase for public SaaS offers",
-    summary: "Azure introduces a simplified purchase experience for public SaaS offers, enabling customers to easily buy and deploy solutions.",
-    source: "Azure Updates", age: "today",
-    detail: "The article highlights the benefits of Azure's single-click purchase feature, which streamlines the buying process for public SaaS offers.",
-    url: "https://azure.microsoft.com/updates?id=568591"
+    id: 7, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance",
+    summary: "Azure announces the general availability of immutability for the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance.",
+    source: "Azure Updates", age: "1 day ago",
+    detail: "The capability enhances backup protection by automatically applying immutability to the most recent seven days of backups.",
+    url: "https://azure.microsoft.com/updates?id=568339"
   },
   {
-    id: 8, cat: "ai", impact: "high", filler: false,
-    title: "Big Tech’s $2 trillion AI shakeout just changed everything",
-    summary: "The article discusses the impact of Big Tech's AI investments on the industry and the economy.",
-    source: "TheStreet", age: "today",
-    detail: "The article provides an analysis of the effects of Big Tech's massive AI investments, highlighting the potential consequences for the market and society.",
-    url: "https://www.thestreet.com/investing/big-techs-2-trillion-ai-shakeout-just-changed-everything"
+    id: 8, cat: "ai infrastructure", impact: "medium", filler: false,
+    title: "[In preview] Public Preview: Azure SQL updates for late-July",
+    summary: "Azure introduces a new update and enhancement to Azure SQL in late-July 2026.",
+    source: "Azure Updates", age: "1 day ago",
+    detail: "The update includes regex-based dynamic data masking (DDM) extending the built-in DDM feature with pattern-based masking to hide sensitive data.",
+    url: "https://azure.microsoft.com/updates?id=568139"
   },
   {
-    id: 9, cat: "cloud", impact: "high", filler: false,
-    title: "[In preview] Public Preview: Azure Enclave",
-    summary: "Azure announces the public preview of its enclave service, enabling customers to create isolated cloud environments.",
-    source: "Azure Updates", age: "today",
-    detail: "The article explains the benefits and features of Azure's enclave service, which provides a secure and isolated environment for sensitive workloads.",
-    url: "https://azure.microsoft.com/updates?id=568377"
+    id: 9, cat: "ai infrastructure", impact: "medium", filler: false,
+    title: "Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization",
+    summary: "Meta explores hierarchical interest representation to connect users' inferred interests with the breadth of what advertisers offer in their deep funnel ads.",
+    source: "Meta Engineering", age: "1 day ago",
+    detail: "The innovations aim to strengthen AI cybersecurity as the annual Black Hat conference begins in Las Vegas.",
+    url: "https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/"
   },
   {
-    id: 10, cat: "ai", impact: "high", filler: false,
-    title: "Analyst sends strong signal on SpaceX stock before earnings",
-    summary: "An analyst provides insights into SpaceX's upcoming earnings report, highlighting the company's AI-driven growth potential.",
-    source: "TheStreet", age: "today",
-    detail: "The article discusses the analyst's positive outlook on SpaceX's stock performance, driven by its investments in AI and satellite technology.",
-    url: "https://www.thestreet.com/investing/spacex-stock-cantor-earnings-outlook"
+    id: 10, cat: "vendor", impact: "low", filler: true,
+    title: "Wireless isn't magic—it's just better when you stop micromanaging your network",
+    summary: "Cisco shares a story about Room & Board ditching cables and embracing AI for network management.",
+    source: "Cisco Networking Blog", age: "1 day ago",
+    detail: "The company found peace by letting their network manage itself.",
+    url: "https://blogs.cisco.com/networking/wireless-isnt-magic-its-just-better-when-you-stop-micromanaging-your-network/"
   },
   {
-    id: 11, cat: "cloud", impact: "low", filler: true,
-    title: "[In preview] Public Preview: Symmetric keys on Azure Key Vault Premium",
-    summary: "Azure announces the public preview of symmetric keys on its Key Vault Premium service.",
-    source: "Azure Updates", age: "today",
-    detail: "The article highlights the features and benefits of Azure's symmetric key management capabilities.",
-    url: "https://azure.microsoft.com/updates?id=566746"
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "KIOXIA's new GP1 Series PCIe 6.0 SSDs unlock 10 million random read IOPS",
+    summary: "KIOXIA announces its new GP1 Series PCIe 6.0 NVMe SSDs with impressive performance.",
+    source: "TweakTown", age: "1 day ago",
+    detail: "The drives deliver an impressive 10 million random read IOPS performance.",
+    url: "https://www.tweaktown.com/news/112972/kioxias-new-gp1-series-pcie-6-0-ssds-unlock-10-million-random-read-iops/index.html"
   },
   {
-    id: 12, cat: "cloud", impact: "low", filler: true,
-    title: "[Launched] Generally Available: Reservation exchanges for Azure services supported by savings plans will no longer be available starting February 1, 2027",
-    summary: "Azure announces the upcoming removal of reservation exchanges for certain services.",
-    source: "Azure Updates", age: "today",
-    detail: "The article explains the implications and timeline for the change in Azure's reservation exchange policy.",
-    url: "https://azure.microsoft.com/updates?id=568514"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Morgan Stanley forecasts cloud spending to reach $1.2T by 2027, and crypto miners are paying attention",
+    summary: "Morgan Stanley predicts significant growth in cloud spending, with crypto miners taking notice.",
+    source: "Crypto Briefing", age: "1 day ago",
+    detail: "The surge in cloud spending could reshape tech industries and alter investment strategies globally.",
+    url: "https://cryptobriefing.com/morgan-stanley-cloud-spending-1-2t-2027/"
   },
   {
-    id: 13, cat: "cloud", impact: "low", filler: true,
-    title: "[Launched] Generally Available: Azure Automation supports PowerShell 7.6 runbooks and Runtime environment",
-    summary: "Azure announces the general availability of its automation service with support for PowerShell 7.6.",
-    source: "Azure Updates", age: "today",
-    detail: "The article highlights the benefits and features of Azure's automation service, including support for the latest PowerShell version.",
-    url: "https://azure.microsoft.com/updates?id=568102"
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "CXMT Eyes Second Beijing Memory Fab After Record IPO, Circling the Gap Samsung and Micron Left Behind",
+    summary: "CXMT considers building a second memory chip plant in Beijing after its record-setting IPO.",
+    source: "Wccftech", age: "1 day ago",
+    detail: "The company is regularly discussed as a Chinese chip firm that might be able to compete on the global stage due to the ongoing turmoil between major players.",
+    url: "https://wccftech.com/cxmt-eyes-second-beijing-memory-fab-after-record-ipo-circling-the-gap-samsung-and-micron-left-behind/"
   },
   {
-    id: 14, cat: "cloud", impact: "low", filler: true,
-    title: "[Launched] Generally Available: Azure Sphere OS version 26.09 is now available for evaluation",
-    summary: "Azure announces the general availability of its Sphere OS version 26.09 for evaluation.",
-    source: "Azure Updates", age: "today",
-    detail: "The article explains the features and benefits of Azure's Sphere OS, a secure operating system for IoT devices.",
-    url: "https://azure.microsoft.com/updates?id=568466"
-  },
-  {
-    id: 15, cat: "ai", impact: "low", filler: true,
-    title: "Powerful Compute So Compact, It’s Clutch — Build AI Anywhere With NVIDIA Jetson",
-    summary: "NVIDIA highlights the capabilities and compact design of its Jetson platform for edge AI development.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The article showcases the features and benefits of NVIDIA's Jetson platform, enabling developers to build AI applications at the edge.",
-    url: "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "To power AI, Khosla and a16z bet this startup can reinvent mining",
+    summary: "Mariana Minerals is valued at $1.5 billion after securing funding from investors including Khosla and a16z.",
+    source: "Fortune", age: "1 day ago",
+    detail: "The startup aims to revolutionize the mining industry with AI-powered technology.",
+    url: "https://fortune.com/2026/08/03/power-ai-khosla-a16z-bet-startup-reinvent-mining-mariana-minerals/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud proposes a modernization strategy that leverages AI for mainframe migration providing a safe and scalable path to the cloud which is critical for our Networking and Storage infrastructure planning. Meanwhile Azure is gaining ground with several general availability announcements including Trusted Launch as Default and single-click purchase for public SaaS offers. As we continue to scale our GPU/TPU infrastructure it's essential to monitor the supply chain impact of NVIDIA open-sourcing its medical physics simulation framework which could lead to increased demand for accelerated computing resources.";
+const STATIC_BRIEF = "Google announces the general availability of Cortex Framework v7 enabling businesses to deploy AI agents without disrupting mission-critical ERP systems and introduces Looker Agentic Workflows in preview automating metric monitoring and root-cause analysis using intelligent background agents. Meanwhile Azure announces the general availability of immutability for the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance posing a competitive threat to Google's offerings. As AI infrastructure continues to evolve supply chain leaders must stay vigilant monitoring developments in AI agent skills and workflows to optimize their operations and remain competitive.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
