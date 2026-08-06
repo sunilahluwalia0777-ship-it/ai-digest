@@ -647,124 +647,108 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Unlocking the future of shared storage Filestore on Colossus",
-    summary: "Google Cloud's Filestore now incorporates a cloud-native backend storage layer built directly on Colossus.",
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Mirendil taps AI Hypercomputer TPUs and GPUs for pre- and post-training applications",
+    summary: "Google Cloud infrastructure is chosen by Mirendil, a frontier AI lab, for training of models, inference for agents, and new frontier research.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Filestore, Google Cloud's first-party, secure, scalable NFS file service, can service a wide-range of enterprise use cases as well as cutting-edge AI and agent workflows. Today, we're sharing a major enhancement: Filestore now incorporates a cloud-native backend storage layer built directly on Colossus.",
-    url: "https://cloud.google.com/blog/products/storage-data-transfer/filestore-file-service-runs-on-colossus/"
+    detail: "This highlights Google Cloud's dominance in the AI infrastructure market, with nearly every major AI lab using its platform. This news can have significant implications for competitors like AWS and Azure.",
+    url: "https://cloud.google.com/blog/topics/startups/mirendil-selects-ai-hypercomputer/"
   },
   {
-    id: 2, cat: "competition", impact: "high", filler: false,
-    title: "Google assembles $44 billion financing machine to challenge Nvidia's AI chip dominance",
-    summary: "Google's $44B financing strategy could reshape AI chip markets, prompting rivals to adopt similar models, intensifying custom silicon competition.",
-    source: "Crypto Briefing", age: "today",
-    detail: "The post Google assembles $44 billion financing machine to challenge Nvidia's AI chip dominance appeared first on Crypto Briefing. Google's financing strategy could reshape AI chip markets, prompting rivals to adopt similar models, intensifying custom silicon competition.",
-    url: "https://cryptobriefing.com/google-44-billion-ai-chip-funding/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Scaling agentic AI: How UiPath built its high-performance GPU platform on AI Hypercomputer",
+    summary: "UiPath, a market leader in enterprise agentic automation, is deploying autonomous agents to actively reason, make decisions, and execute complex business processes.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This showcases the capabilities of Google Cloud's AI Hypercomputer and UiPath's innovative use of AI. This can have significant implications for the future of work and automation.",
+    url: "https://cloud.google.com/blog/topics/customers/how-uipath-built-its-high-performance-gpu-platform/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Cloud giants pour nearly $600B into capex as AI demand surges",
-    summary: "Revenue is soaring, yet hyperscalers say they still cannot build capacity fast enough",
-    source: "Theregister.com", age: "today",
-    detail: "Hyperscalers are pouring almost $600 billion into capital expenditure this year to meet the surging demand for cloud computing and artificial intelligence services.",
-    url: "https://www.theregister.com/off-prem/2026/08/04/cloud-giants-pour-nearly-600b-into-capex-as-ai-demand-surges/5282679"
-  },
-  {
-    id: 4, cat: "storage", impact: "medium", filler: false,
-    title: "Multiple result sets How Database Migration Service automates SQL server to PostgreSQL translation",
-    summary: "In the Medium blog post, \" From MARS to SETOF REFCURSOR: Migrating Multi-Result Stored Procedures to PostgreSQL ,\" we explored the fundamental architectural differences between SQL Server and PostgreSQL regarding multiple result sets.",
+    title: "Solving the \"Noisy Neighbor\": How Sharded Architecture Protects Multi-Tenant Platforms",
+    summary: "Google Cloud is addressing the 'noisy neighbor' problem in multi-tenant SaaS platforms with sharded architecture.",
     source: "Google Cloud Blog", age: "today",
-    detail: "We looked at how SQL Server natively streams multiple tabular streams from a single execution, whereas PostgreSQL requires a more deliberate strategy using explicit cursors. In this blog post, we'll delve into how Database Migration Service automates this translation for you.",
-    url: "https://cloud.google.com/blog/products/databases/automating-postgres-translations-with-database-migration-service/"
+    detail: "This innovation can have significant implications for the scalability and reliability of cloud-based services, and showcases Google Cloud's commitment to solving complex technical problems.",
+    url: "https://cloud.google.com/blog/products/data-analytics/solving-the-noisy-neighbor-with-sharded-architecture/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Future Mode Part 2 The foundation for securing agentic browsing",
-    summary: "Editor's Note: Our Future Mode series will give businesses insight into how Chrome Enterprise is approaching AI in the browser.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Stay tuned for more blogs in this series. Future Mode Part 2: The foundation for securing agentic browsing Today, autonomous AI agents aren't just drafting emails. They're navigating SaaS applications, synthesizing data across multiple tabs, and completing multi-step tasks.",
-    url: "https://cloud.google.com/blog/products/chrome-enterprise/future-mode-part-2-the-foundation-for-securing-agentic-browsing/"
+    id: 4, cat: "competition", impact: "high", filler: false,
+    title: "Amazon DynamoDB now supports real-time vector search at any scale",
+    summary: "DynamoDB now supports native vector search with single-digit millisecond latency at 99%+ recall.",
+    source: "AWS News Blog", age: "today",
+    detail: "This is a significant innovation that can have implications for the AI and machine learning ecosystem, and showcases Amazon's commitment to advancing its cloud services.",
+    url: "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/"
   },
   {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Bezos sells $4B in Amazon stock as company hits $3T valuation",
-    summary: "Bezos's stock sale amid Amazon's $3T valuation highlights potential market volatility and strategic shifts in tech investment landscapes.",
-    source: "Crypto Briefing", age: "today",
-    detail: "The post Bezos sells $4B in Amazon stock as company hits $3T valuation appeared first on Crypto Briefing. Bezos's stock sale amid Amazon's $3T valuation highlights potential market volatility and strategic shifts in tech investment landscapes.",
-    url: "https://cryptobriefing.com/bezos-sells-4b-amazon-stock-3t-valuation/"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: SharePoint Connector for Azure Databricks",
+    summary: "The SharePoint connector for Azure Databricks is now generally available, enabling organizations to ingest files from SharePoint into Azure Databricks.",
+    source: "Azure Updates", age: "today",
+    detail: "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular productivity tools like SharePoint.",
+    url: "https://azure.microsoft.com/updates?id=568905"
   },
   {
-    id: 7, cat: "silicon", impact: "medium", filler: false,
-    title: "NVIDIA GeForce NOW Sets Sail With ‘Path of Exile: Curse of the Allflame’ Joining the Cloud",
-    summary: "Lock in and load up the cloud. GFN Thursday brings fresh updates and new adventures, all ready to play without waiting for downloads.",
+    id: 6, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Unity AI Gateway on Azure Databricks",
+    summary: "Unity AI Gateway is now generally available on Azure Databricks, providing centralized governance for AI models and tools.",
+    source: "Azure Updates", age: "today",
+    detail: "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular AI tools like Unity.",
+    url: "https://azure.microsoft.com/updates?id=568910"
+  },
+  {
+    id: 7, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Explicit proxy in Azure Firewall",
+    summary: "Azure Firewall explicit proxy is now generally available, enabling customers to configure applications and browsers to send HTTP and HTTPS traffic directly to Azure Firewall.",
+    source: "Azure Updates", age: "today",
+    detail: "This showcases Microsoft's commitment to advancing its cloud services and improving security and performance for customers.",
+    url: "https://azure.microsoft.com/updates?id=568825"
+  },
+  {
+    id: 8, cat: "competition", impact: "high", filler: false,
+    title: "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
+    summary: "Meta has developed a new multi-stage architecture for ads ranking that models user behavior and preferences.",
+    source: "Meta Engineering", age: "today",
+    detail: "This showcases Meta's commitment to advancing its AI capabilities and improving ad targeting and personalization.",
+    url: "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/"
+  },
+  {
+    id: 11, cat: "silicon", impact: "medium", filler: true,
+    title: "GeForce NOW Shakes Up August With 26 New Games",
+    summary: "NVIDIA's GeForce NOW is adding 26 new games to its library, including World of Warships: Legends and more.",
     source: "NVIDIA Blog", age: "today",
-    detail: "Set sail in Path of Exile: Curse of the Allflame and charge in Battlefield 6 Season 4 both launching major content for members this week. Then revisit Capcom legends like Breath of Fire II.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-path-of-exile-allflame/"
+    detail: "This showcases NVIDIA's commitment to advancing its cloud gaming capabilities and expanding its game library.",
+    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-august-2026-games-list/"
   },
   {
-    id: 8, cat: "silicon", impact: "medium", filler: false,
-    title: "Data Center Semiconductor Market Size to Hit $1,047.27 Billion by 2035 | SNS Insider",
-    summary: "Data Center Semiconductor Market Size, Share & Segment by Processor Type, Memory Type, Connectivity & Infrastructure, Application and Forecast 2026-2035...",
-    source: "GlobeNewswire", age: "today",
-    detail: "The data center semiconductor market is expected to grow at a CAGR of 10.3% from 2026 to 2035.",
-    url: "https://www.globenewswire.com/news-release/2026/08/04/3338181/0/en/Data-Center-Semiconductor-Market-Size-to-Hit-1-047-27-Billion-by-2035-SNS-Insider.html"
+    id: 12, cat: "silicon", impact: "medium", filler: true,
+    title: "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
+    summary: "NVIDIA is advancing its physical AI capabilities with open world models that simulate complex environments.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "This showcases NVIDIA's commitment to pushing the boundaries of AI research and innovation.",
+    url: "https://blogs.nvidia.com/blog/open-world-models-physical-ai/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "low", filler: false,
-    title: "Reintroducing Network Firewall Proxy for Secure Egress Connectivity",
-    summary: "At re:Invent 2025 we launched AWS Network Firewall proxy in preview to gather feedback from customers before making it generally available.",
-    source: "AWS Networking", age: "1 day ago",
-    detail: "That feedback was clear and consistent: customers want the flexibility to use their Network Firewall, with all its existing capabilities, as an explicit proxy. Rather than managing a separate proxy product with its own security policy model, customers told us they want the option of using the same security policies across both their AWS resources and on-premises infrastructure.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/reintroducing-network-firewall-proxy-for-secure-egress-connectivity/"
+    id: 13, cat: "storage", impact: "medium", filler: true,
+    title: "All Nippon Airways Builds Cloud Network Hub with Equinix",
+    summary: "All Nippon Airways is building a cloud network hub with Equinix to improve its data center infrastructure and prepare for AI-driven growth.",
+    source: "PRNewswire", age: "today",
+    detail: "This showcases the growing importance of cloud infrastructure and data centers in supporting AI innovation.",
+    url: "https://www.prnewswire.com/news-releases/all-nippon-airways-builds-cloud-network-hub-with-equinix-302843573.html"
   },
   {
-    id: 10, cat: "storage", impact: "low", filler: false,
-    title: "Retirement Nested confidential (cc_v5) VMs will be retired on September 1, 2026",
-    summary: "On September 1, 2026, the cc_v5 confidential VM series will be retired and will no longer be available for use or purchase.",
-    source: "Azure Updates", age: "1 day ago",
-    detail: "Any affected VM that has not been resized before that date will deallocated. The impacted VM sizes that will be retired are: DCas_c4, DCas_c4d, DCas_d4, DCas_d4d, DCas_e4, and DCas_e4d.",
-    url: "https://azure.microsoft.com/updates?id=568661"
+    id: 14, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms",
+    summary: "Red Hat has been recognized as a Leader in the Gartner Magic Quadrant for Cloud-Native Application Platforms.",
+    source: "Redhat.com", age: "today",
+    detail: "This showcases Red Hat's commitment to advancing its cloud services and supporting AI innovation.",
+    url: "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartner-magic-quadrant-cloud-native"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[In preview] Public Preview Perimeter link feature in network security perimeter",
-    summary: "Perimeter link (cross-perimeter connectivity) is a network security perimeter capability that allows trusted resources in two different network security perimeters to securely communicate with each other using Managed Identity (MSI), without requiring add",
-    source: "Azure Updates", age: "1 day ago",
-    detail: "It provides secure connectivity between resources across multiple network security perimeters, reducing the need for complex networking configurations and improving overall security posture.",
-    url: "https://azure.microsoft.com/updates?id=568837"
-  },
-  {
-    id: 12, cat: "silicon", impact: "low", filler: true,
-    title: "Micron (MU) vs. ASML (ASML) Which AI Chip Giant Offers the Better Risk-Reward?",
-    summary: "Micron Technology (NASDAQ:MU) has had one of the wildest rides in the market this year. The stock is still up roughly 190% in 2026, but it has also fallen mo...",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "Micron Technology (NASDAQ:MU) has had one of the wildest rides in the market this year. The stock is still up roughly 190% in 2026, but it has also fallen more than 20% from its peak earlier this year.",
-    url: "https://finance.yahoo.com/markets/stocks/articles/micron-mu-vs-asml-asml-120820932.html"
-  },
-  {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[In preview] Public Preview Azure DNS enables DNS-based load balancing through Traffic Manager integration",
-    summary: "Azure DNS now offers a seamless way to integrate with Azure Traffic Manager for DNS-based traffic routing.",
-    source: "Azure Updates", age: "1 day ago",
-    detail: "Customers can now directly associate Azure DNS record set with Traffic Manager profiles without creating CNAME record for trafficmanager.net domain.",
-    url: "https://azure.microsoft.com/updates?id=565214"
-  },
-  {
-    id: 14, cat: "silicon", impact: "low", filler: true,
-    title: "Databricks joins the Open Secure AI Alliance to advance AI safety and security",
-    summary: "* Databricks is an inaugural member of the Open Secure AI Alliance, a coalition of industry leaders committed to advancing AI safety and security through open research: open models, open harnesses, open tooling, and shared learnings.",
-    source: "Databricks.com", age: "1 day ago",
-    detail: "We bring open code and collaborative approaches to ensure secure and responsible AI practices, empowering data teams to focus on innovation and value creation.",
-    url: "https://www.databricks.com/blog/databricks-joins-open-secure-ai-alliance-advance-ai-safety-and-security"
-  },
-  {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "What's new in Red Hat OpenShift confidential computing and sandboxing",
-    summary: "Red Hat is announcing Red Hat OpenShift sandboxed containers 1.13 and Red Hat build of Trustee 1.2, alongside the debut of Red Hat build of Agent Sandbox, now available as a Technology Preview.",
-    source: "Redhat.com", age: "1 day ago",
-    detail: "This release advances confidential computing on 2 fronts: First, c…",
-    url: "https://www.redhat.com/en/blog/whats-new-red-hat-openshift-confidential-computing-and-sandboxing"
+    id: 15, cat: "competition", impact: "medium", filler: true,
+    title: "Google surpasses Apple to become second largest company globally",
+    summary: "Alphabet's AI advancements have helped Google surpass Apple as the second-largest company globally.",
+    source: "Crypto Briefing", age: "today",
+    detail: "This showcases the growing importance of AI innovation in driving business growth and success.",
+    url: "https://cryptobriefing.com/google-surpasses-apple-second-largest-company/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +896,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud's Filestore now incorporates a cloud-native backend storage layer built directly on Colossus, unlocking the future of shared storage and enhancing its competitiveness in the market. Meanwhile, Google's $44 billion financing strategy to challenge Nvidia's AI chip dominance is reshaping the AI chip market, prompting rivals to adopt similar models and intensifying custom silicon competition. As hyperscalers pour nearly $600 billion into capex to meet surging AI demand, it is essential for Google to maintain its pace in building capacity to stay ahead in the game.";
+const STATIC_BRIEF = "Google Cloud's infrastructure is being leveraged by innovative AI labs such as Mirendil and UiPath to power their high-performance GPU platforms for pre- and post-training applications and autonomous agents respectively. Meanwhile Amazon DynamoDB has introduced native vector search with single-digit millisecond latency at 99%+ recall, a competitive signal that Google should monitor closely. In other developments Unity AI Gateway on Azure Databricks is now generally available providing centralized governance for AI models and tools a supply chain watch for Google's ecosystem.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

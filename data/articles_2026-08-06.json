@@ -1,0 +1,160 @@
+{
+  "date": "2026-08-06",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Mirendil taps AI Hypercomputer TPUs and GPUs for pre- and post-training applications",
+      "summary": "Google Cloud infrastructure is chosen by Mirendil, a frontier AI lab, for training of models, inference for agents, and new frontier research.",
+      "detail": "This highlights Google Cloud's dominance in the AI infrastructure market, with nearly every major AI lab using its platform. This news can have significant implications for competitors like AWS and Azure.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/startups/mirendil-selects-ai-hypercomputer/"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Scaling agentic AI: How UiPath built its high-performance GPU platform on AI Hypercomputer",
+      "summary": "UiPath, a market leader in enterprise agentic automation, is deploying autonomous agents to actively reason, make decisions, and execute complex business processes.",
+      "detail": "This showcases the capabilities of Google Cloud's AI Hypercomputer and UiPath's innovative use of AI. This can have significant implications for the future of work and automation.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/customers/how-uipath-built-its-high-performance-gpu-platform/"
+    },
+    {
+      "id": 3,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Solving the \"Noisy Neighbor\": How Sharded Architecture Protects Multi-Tenant Platforms",
+      "summary": "Google Cloud is addressing the 'noisy neighbor' problem in multi-tenant SaaS platforms with sharded architecture.",
+      "detail": "This innovation can have significant implications for the scalability and reliability of cloud-based services, and showcases Google Cloud's commitment to solving complex technical problems.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/data-analytics/solving-the-noisy-neighbor-with-sharded-architecture/"
+    },
+    {
+      "id": 4,
+      "cat": "competition",
+      "impact": "high",
+      "filler": false,
+      "title": "Amazon DynamoDB now supports real-time vector search at any scale",
+      "summary": "DynamoDB now supports native vector search with single-digit millisecond latency at 99%+ recall.",
+      "detail": "This is a significant innovation that can have implications for the AI and machine learning ecosystem, and showcases Amazon's commitment to advancing its cloud services.",
+      "source": "AWS News Blog",
+      "age": "today",
+      "url": "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/"
+    },
+    {
+      "id": 5,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "[Launched] Generally Available: SharePoint Connector for Azure Databricks",
+      "summary": "The SharePoint connector for Azure Databricks is now generally available, enabling organizations to ingest files from SharePoint into Azure Databricks.",
+      "detail": "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular productivity tools like SharePoint.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=568905"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "[Launched] Generally Available: Unity AI Gateway on Azure Databricks",
+      "summary": "Unity AI Gateway is now generally available on Azure Databricks, providing centralized governance for AI models and tools.",
+      "detail": "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular AI tools like Unity.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=568910"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "[Launched] Generally Available: Explicit proxy in Azure Firewall",
+      "summary": "Azure Firewall explicit proxy is now generally available, enabling customers to configure applications and browsers to send HTTP and HTTPS traffic directly to Azure Firewall.",
+      "detail": "This showcases Microsoft's commitment to advancing its cloud services and improving security and performance for customers.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=568825"
+    },
+    {
+      "id": 8,
+      "cat": "competition",
+      "impact": "high",
+      "filler": false,
+      "title": "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta\u2019s Ads Ranking",
+      "summary": "Meta has developed a new multi-stage architecture for ads ranking that models user behavior and preferences.",
+      "detail": "This showcases Meta's commitment to advancing its AI capabilities and improving ad targeting and personalization.",
+      "source": "Meta Engineering",
+      "age": "today",
+      "url": "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/"
+    },
+    {
+      "id": 11,
+      "cat": "silicon",
+      "impact": "medium",
+      "filler": true,
+      "title": "GeForce NOW Shakes Up August With 26 New Games",
+      "summary": "NVIDIA's GeForce NOW is adding 26 new games to its library, including World of Warships: Legends and more.",
+      "detail": "This showcases NVIDIA's commitment to advancing its cloud gaming capabilities and expanding its game library.",
+      "source": "NVIDIA Blog",
+      "age": "today",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-august-2026-games-list/"
+    },
+    {
+      "id": 12,
+      "cat": "silicon",
+      "impact": "medium",
+      "filler": true,
+      "title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
+      "summary": "NVIDIA is advancing its physical AI capabilities with open world models that simulate complex environments.",
+      "detail": "This showcases NVIDIA's commitment to pushing the boundaries of AI research and innovation.",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai/"
+    },
+    {
+      "id": 13,
+      "cat": "storage",
+      "impact": "medium",
+      "filler": true,
+      "title": "All Nippon Airways Builds Cloud Network Hub with Equinix",
+      "summary": "All Nippon Airways is building a cloud network hub with Equinix to improve its data center infrastructure and prepare for AI-driven growth.",
+      "detail": "This showcases the growing importance of cloud infrastructure and data centers in supporting AI innovation.",
+      "source": "PRNewswire",
+      "age": "today",
+      "url": "https://www.prnewswire.com/news-releases/all-nippon-airways-builds-cloud-network-hub-with-equinix-302843573.html"
+    },
+    {
+      "id": 14,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": true,
+      "title": "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms",
+      "summary": "Red Hat has been recognized as a Leader in the Gartner Magic Quadrant for Cloud-Native Application Platforms.",
+      "detail": "This showcases Red Hat's commitment to advancing its cloud services and supporting AI innovation.",
+      "source": "Redhat.com",
+      "age": "today",
+      "url": "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartner-magic-quadrant-cloud-native"
+    },
+    {
+      "id": 15,
+      "cat": "competition",
+      "impact": "medium",
+      "filler": true,
+      "title": "Google surpasses Apple to become second largest company globally",
+      "summary": "Alphabet's AI advancements have helped Google surpass Apple as the second-largest company globally.",
+      "detail": "This showcases the growing importance of AI innovation in driving business growth and success.",
+      "source": "Crypto Briefing",
+      "age": "today",
+      "url": "https://cryptobriefing.com/google-surpasses-apple-second-largest-company/"
+    }
+  ]
+}
