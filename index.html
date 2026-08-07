@@ -648,107 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Mirendil taps AI Hypercomputer TPUs and GPUs for pre- and post-training applications",
-    summary: "Google Cloud infrastructure is chosen by Mirendil, a frontier AI lab, for training of models, inference for agents, and new frontier research.",
+    title: "Agentic Future Ready With BigQuery Continually Improving Price-Performance, Zero Effort",
+    summary: "Google Cloud announces improvements to BigQuery for better price-performance and zero effort.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This highlights Google Cloud's dominance in the AI infrastructure market, with nearly every major AI lab using its platform. This news can have significant implications for competitors like AWS and Azure.",
-    url: "https://cloud.google.com/blog/topics/startups/mirendil-selects-ai-hypercomputer/"
+    detail: "BigQuery optimization is crucial for agentic workloads. This update will benefit developers and DBAs alike.",
+    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-performance-optimizations/"
   },
   {
     id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Scaling agentic AI: How UiPath built its high-performance GPU platform on AI Hypercomputer",
-    summary: "UiPath, a market leader in enterprise agentic automation, is deploying autonomous agents to actively reason, make decisions, and execute complex business processes.",
+    title: "Advancing brain tumor research with privacy-first AI",
+    summary: "Google Cloud introduces a new approach to medical AI research, prioritizing patient privacy.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This showcases the capabilities of Google Cloud's AI Hypercomputer and UiPath's innovative use of AI. This can have significant implications for the future of work and automation.",
-    url: "https://cloud.google.com/blog/topics/customers/how-uipath-built-its-high-performance-gpu-platform/"
+    detail: "This innovation combines Confidential Computing and strategic collaboration for robust medical AI tools.",
+    url: "https://cloud.google.com/blog/products/identity-security/privacy-first-medical-ai-with-medperf-and-google-cloud/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Solving the \"Noisy Neighbor\": How Sharded Architecture Protects Multi-Tenant Platforms",
-    summary: "Google Cloud is addressing the 'noisy neighbor' problem in multi-tenant SaaS platforms with sharded architecture.",
+    title: "Your agentic summer: No-cost lessons from Google experts to build and scale agents",
+    summary: "Google Cloud offers free training on building and scaling agents with expert guidance.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This innovation can have significant implications for the scalability and reliability of cloud-based services, and showcases Google Cloud's commitment to solving complex technical problems.",
-    url: "https://cloud.google.com/blog/products/data-analytics/solving-the-noisy-neighbor-with-sharded-architecture/"
+    detail: "This opportunity provides hands-on experience designing systems for agent interactions and security guardrails.",
+    url: "https://cloud.google.com/blog/topics/training-certifications/free-gemini-enterrprise-training/"
   },
   {
-    id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Amazon DynamoDB now supports real-time vector search at any scale",
-    summary: "DynamoDB now supports native vector search with single-digit millisecond latency at 99%+ recall.",
-    source: "AWS News Blog", age: "today",
-    detail: "This is a significant innovation that can have implications for the AI and machine learning ecosystem, and showcases Amazon's commitment to advancing its cloud services.",
-    url: "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Digital sovereignty in the age of AI: You don’t have to choose between control and innovation",
+    summary: "Google Cloud highlights the importance of digital sovereignty for enterprises and governments.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This report emphasizes the need for local data handling, intellectual property protection, and jurisdictional risk management.",
+    url: "https://cloud.google.com/blog/topics/hybrid-cloud/state-of-ai-infrastructure-report-on-hybrid-cloud-and-gdc/"
   },
   {
     id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: SharePoint Connector for Azure Databricks",
-    summary: "The SharePoint connector for Azure Databricks is now generally available, enabling organizations to ingest files from SharePoint into Azure Databricks.",
+    title: "UNC6671 Rebrands: Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments",
+    summary: "Google Threat Intelligence Group tracks UNC6671's evolution, highlighting the need for robust security measures.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "This report reveals the group's new tactics, including data theft and extortion in financial services and cloud environments.",
+    url: "https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/"
+  },
+  {
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
+    summary: "AWS announces runtime instances in Amazon Bedrock AgentCore, enabling persistent compute for AI agents.",
+    source: "AWS News Blog", age: "today",
+    detail: "This feature offers multi-agent collaboration, GPU support, and long-running sessions for production AI workloads.",
+    url: "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/"
+  },
+  {
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "Access Amazon S3 backup data directly using S3 Access Points in AWS Backup",
+    summary: "AWS introduces direct access to S3 backup data through Amazon S3 Access Points in AWS Backup.",
+    source: "AWS Storage", age: "today",
+    detail: "This feature enables reading backup data using standard S3 APIs, simplifying data recovery and management.",
+    url: "https://aws.amazon.com/blogs/storage/access-amazon-s3-backup-data-directly-using-s3-access-points-in-aws-backup/"
+  },
+  {
+    id: 8, cat: "storage", impact: "medium", filler: false,
+    title: "Track healthcare data lineage in real time with Amazon S3 annotations",
+    summary: "AWS introduces real-time tracking of healthcare data lineage using Amazon S3 annotations.",
+    source: "AWS Storage", age: "today",
+    detail: "This feature enables organizations to produce accurate records of data transformations, meeting regulatory requirements.",
+    url: "https://aws.amazon.com/blogs/storage/track-healthcare-data-lineage-in-real-time-with-amazon-s3-annotations/"
+  },
+  {
+    id: 9, cat: "storage", impact: "medium", filler: false,
+    title: "Analyze Amazon S3 annotations at scale with materialized views",
+    summary: "AWS introduces large-scale analysis of Amazon S3 annotations using materialized views.",
+    source: "AWS Storage", age: "today",
+    detail: "This feature enables customers to attach rich business context to objects and analyze them efficiently.",
+    url: "https://aws.amazon.com/blogs/storage/analyze-amazon-s3-annotations-at-scale-with-materialized-views/"
+  },
+  {
+    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Announcing: Azure Databricks Genie One and Genie Agents Free Usage Extended Through January 31, 2027",
+    summary: "Azure extends free usage of Genie One and Genie Agents in Azure Databricks through January 31, 2027.",
     source: "Azure Updates", age: "today",
-    detail: "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular productivity tools like SharePoint.",
-    url: "https://azure.microsoft.com/updates?id=568905"
+    detail: "This promotion covers usage by developers, IT leaders, and builders, with no budget controls applying during this period.",
+    url: "https://azure.microsoft.com/updates?id=568964"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Unity AI Gateway on Azure Databricks",
-    summary: "Unity AI Gateway is now generally available on Azure Databricks, providing centralized governance for AI models and tools.",
-    source: "Azure Updates", age: "today",
-    detail: "This showcases Microsoft's commitment to advancing its cloud services and integrating them with popular AI tools like Unity.",
-    url: "https://azure.microsoft.com/updates?id=568910"
+    id: 11, cat: "silicon", impact: "low", filler: true,
+    title: "The AI Demand Bubble",
+    summary: "Analysis of NVIDIA, Anthropic and OpenAI's AI infrastructure roadmap.",
+    source: "Wheresyoured.at", age: "2 days ago",
+    detail: "This piece examines the strategies of leading AI players and their potential impact on the market.",
+    url: "https://www.wheresyoured.at/the-ai-demand-bubble/"
   },
   {
-    id: 7, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Explicit proxy in Azure Firewall",
-    summary: "Azure Firewall explicit proxy is now generally available, enabling customers to configure applications and browsers to send HTTP and HTTPS traffic directly to Azure Firewall.",
-    source: "Azure Updates", age: "today",
-    detail: "This showcases Microsoft's commitment to advancing its cloud services and improving security and performance for customers.",
-    url: "https://azure.microsoft.com/updates?id=568825"
+    id: 12, cat: "silicon", impact: "low", filler: true,
+    title: "Anthropic Reportedly Wants to Make Its Own AI Chips for Claude",
+    summary: "Anthropic is building a new team to design custom AI chips, following in the footsteps of other tech giants.",
+    source: "PCMag.com", age: "2 days ago",
+    detail: "This move highlights the company's focus on developing its AI model, Claude.",
+    url: "https://me.pcmag.com/en/processors/37806/anthropic-reportedly-wants-to-make-its-own-ai-chips-for-claude"
   },
   {
-    id: 8, cat: "competition", impact: "high", filler: false,
-    title: "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
-    summary: "Meta has developed a new multi-stage architecture for ads ranking that models user behavior and preferences.",
-    source: "Meta Engineering", age: "today",
-    detail: "This showcases Meta's commitment to advancing its AI capabilities and improving ad targeting and personalization.",
-    url: "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/"
+    id: 13, cat: "silicon", impact: "low", filler: true,
+    title: "MediaTek Wants 20% of Custom AI Chips. Alphabet (GOOGL) Could Win Before Broadcom (AVGO) Loses",
+    summary: "MediaTek aims to capture a significant share of the custom AI chip market, with implications for competitors.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "This move could reshape the AI landscape and impact companies like NVIDIA and AMD.",
+    url: "https://finance.yahoo.com/technology/ai/articles/mediatek-wants-20-custom-ai-182411966.html"
   },
   {
-    id: 11, cat: "silicon", impact: "medium", filler: true,
-    title: "GeForce NOW Shakes Up August With 26 New Games",
-    summary: "NVIDIA's GeForce NOW is adding 26 new games to its library, including World of Warships: Legends and more.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This showcases NVIDIA's commitment to advancing its cloud gaming capabilities and expanding its game library.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-august-2026-games-list/"
+    id: 14, cat: "silicon", impact: "low", filler: true,
+    title: "High Beta Runners Up: Why AMD and Marvell Technology Now Command Attention",
+    summary: "AMD and Marvell have outperformed NVIDIA and Broadcom in year-to-date returns, highlighting their AI strategies.",
+    source: "24/7 Wall St.", age: "2 days ago",
+    detail: "This analysis explores the implications of these companies' focus on AI infrastructure and data centers.",
+    url: "https://247wallst.com/investing/2026/08/06/high-beta-runners-up-why-amd-and-marvell-technology-now-command-attention/"
   },
   {
-    id: 12, cat: "silicon", impact: "medium", filler: true,
-    title: "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
-    summary: "NVIDIA is advancing its physical AI capabilities with open world models that simulate complex environments.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This showcases NVIDIA's commitment to pushing the boundaries of AI research and innovation.",
-    url: "https://blogs.nvidia.com/blog/open-world-models-physical-ai/"
-  },
-  {
-    id: 13, cat: "storage", impact: "medium", filler: true,
-    title: "All Nippon Airways Builds Cloud Network Hub with Equinix",
-    summary: "All Nippon Airways is building a cloud network hub with Equinix to improve its data center infrastructure and prepare for AI-driven growth.",
-    source: "PRNewswire", age: "today",
-    detail: "This showcases the growing importance of cloud infrastructure and data centers in supporting AI innovation.",
-    url: "https://www.prnewswire.com/news-releases/all-nippon-airways-builds-cloud-network-hub-with-equinix-302843573.html"
-  },
-  {
-    id: 14, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms",
-    summary: "Red Hat has been recognized as a Leader in the Gartner Magic Quadrant for Cloud-Native Application Platforms.",
-    source: "Redhat.com", age: "today",
-    detail: "This showcases Red Hat's commitment to advancing its cloud services and supporting AI innovation.",
-    url: "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartner-magic-quadrant-cloud-native"
-  },
-  {
-    id: 15, cat: "competition", impact: "medium", filler: true,
-    title: "Google surpasses Apple to become second largest company globally",
-    summary: "Alphabet's AI advancements have helped Google surpass Apple as the second-largest company globally.",
-    source: "Crypto Briefing", age: "today",
-    detail: "This showcases the growing importance of AI innovation in driving business growth and success.",
-    url: "https://cryptobriefing.com/google-surpasses-apple-second-largest-company/"
+    id: 15, cat: "silicon", impact: "low", filler: true,
+    title: "AMD’s AI Strategy Is Shifting From Chips To Systems",
+    summary: "AMD's Advancing AI event highlights its shift from chip-focused to system-level AI strategy.",
+    source: "Forrester.com", age: "2 days ago",
+    detail: "This move emphasizes the company's comprehensive hybrid application platform and processors.",
+    url: "https://www.forrester.com/blogs/amds-ai-strategy-is-shifting-from-chips-to-systems/"
   },
 ];
 // ARTICLES_END
@@ -896,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud's infrastructure is being leveraged by innovative AI labs such as Mirendil and UiPath to power their high-performance GPU platforms for pre- and post-training applications and autonomous agents respectively. Meanwhile Amazon DynamoDB has introduced native vector search with single-digit millisecond latency at 99%+ recall, a competitive signal that Google should monitor closely. In other developments Unity AI Gateway on Azure Databricks is now generally available providing centralized governance for AI models and tools a supply chain watch for Google's ecosystem.";
+const STATIC_BRIEF = "Google Cloud announces improvements to BigQuery for better price-performance and zero effort, advancing its position in the market. Meanwhile, AWS introduces new features in Amazon S3, including direct access to backup data and real-time tracking of healthcare data lineage, signaling a competitive push in storage capabilities. Amidst these advancements, Google Threat Intelligence Group's tracking of UNC6671's evolution highlights the need for robust security measures to protect cloud environments from evolving threats.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
