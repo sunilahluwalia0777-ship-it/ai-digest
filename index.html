@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Agentic Future Ready With BigQuery Continually Improving Price-Performance, Zero Effort",
-    summary: "Google Cloud announces improvements to BigQuery for better price-performance and zero effort.",
+    id: 1, cat: "storage", impact: "high", filler: false,
+    title: "Zero-code, low-cost data ingestion: New BigQuery DTS capabilities",
+    summary: "Google Cloud's BigQuery Data Transfer Service eliminates engineering burden with new capabilities. Trusted by thousands of customers every single day.",
     source: "Google Cloud Blog", age: "today",
-    detail: "BigQuery optimization is crucial for agentic workloads. This update will benefit developers and DBAs alike.",
-    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-performance-optimizations/"
+    detail: "BigQuery Data Transfer Service (DTS) is a fully managed service that enables zero-code, low-cost data ingestion from various sources into BigQuery. With DTS, users can eliminate the engineering burden and focus on analyzing their data.",
+    url: "https://cloud.google.com/blog/products/data-analytics/new-bigquery-data-transfer-service-capabilities/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Advancing brain tumor research with privacy-first AI",
-    summary: "Google Cloud introduces a new approach to medical AI research, prioritizing patient privacy.",
+    id: 2, cat: "security", impact: "high", filler: false,
+    title: "How Google Cloud detects, contains, and protects against emerging threats",
+    summary: "Google Cloud's security model is designed to detect, contain, and protect against emerging threats. The company continuously works to proactively identify and mitigate potential threats.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This innovation combines Confidential Computing and strategic collaboration for robust medical AI tools.",
-    url: "https://cloud.google.com/blog/products/identity-security/privacy-first-medical-ai-with-medperf-and-google-cloud/"
+    detail: "Google Cloud's security approach is based on a shared fate model, where the company empowers customers with tools, governance, and infrastructure needed to securely deploy workloads and maintain long-term trust.",
+    url: "https://cloud.google.com/blog/products/identity-security/how-google-cloud-detects-contains-and-protects-against-emerging-threats/"
   },
   {
-    id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Your agentic summer: No-cost lessons from Google experts to build and scale agents",
-    summary: "Google Cloud offers free training on building and scaling agents with expert guidance.",
+    id: 3, cat: "storage", impact: "high", filler: false,
+    title: "Unifying Structured and Unstructured Data Insights with BQ Search Innovations",
+    summary: "Google Cloud's BigQuery introduces new search innovations to unlock insights from unstructured data, enabling customers to manage and extract value from their data.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This opportunity provides hands-on experience designing systems for agent interactions and security guardrails.",
-    url: "https://cloud.google.com/blog/topics/training-certifications/free-gemini-enterrprise-training/"
+    detail: "BigQuery's search capabilities enable users to extract insights from unstructured data such as PDFs, audio files, images, and unstructured text, without requiring complex pipelines or disparate search infrastructure.",
+    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-search-innovations-unify-structured-unstructured-data/"
   },
   {
     id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Digital sovereignty in the age of AI: You don’t have to choose between control and innovation",
-    summary: "Google Cloud highlights the importance of digital sovereignty for enterprises and governments.",
+    title: "GOL! How TelevisaUnivision streamed the FIFA World Cup to millions with Google Cloud",
+    summary: "TelevisaUnivision successfully streamed the FIFA World Cup to millions of viewers using Google Cloud's infrastructure, showcasing the power of cloud-based live sports broadcasting.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This report emphasizes the need for local data handling, intellectual property protection, and jurisdictional risk management.",
-    url: "https://cloud.google.com/blog/topics/hybrid-cloud/state-of-ai-infrastructure-report-on-hybrid-cloud-and-gdc/"
+    detail: "Google Cloud enabled TelevisaUnivision to handle high volumes of concurrent streams and deliver low-latency video to a massive audience during the 2026 FIFA World Cup.",
+    url: "https://cloud.google.com/blog/products/networking/streaming-the-fifa-world-cup-with-televisaunivision/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "UNC6671 Rebrands: Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments",
-    summary: "Google Threat Intelligence Group tracks UNC6671's evolution, highlighting the need for robust security measures.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This report reveals the group's new tactics, including data theft and extortion in financial services and cloud environments.",
-    url: "https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/"
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "Microsoft vs. Broadcom: Two AI Powerhouses, One Better Investment",
+    summary: "Microsoft and Broadcom are both winning in the AI trade, but they are winning it in completely different ways, and betting on the wrong one right now carries significant risks.",
+    source: "24/7 Wall St.", age: "2 days ago",
+    detail: "The article compares Microsoft and Broadcom's approaches to AI and their investment potential, highlighting the differences between the two companies' strategies.",
+    url: "https://247wallst.com/investing/2026/08/06/microsoft-vs-broadcom-two-ai-powerhouses-one-better-investment/"
   },
   {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
-    summary: "AWS announces runtime instances in Amazon Bedrock AgentCore, enabling persistent compute for AI agents.",
-    source: "AWS News Blog", age: "today",
-    detail: "This feature offers multi-agent collaboration, GPU support, and long-running sessions for production AI workloads.",
-    url: "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/"
+    id: 6, cat: "silicon", impact: "medium", filler: false,
+    title: "Firebird Launches CIS Region's Largest AI Factory in Armenia",
+    summary: "Firebird launches the largest AI factory in the CIS region, powered by NVIDIA accelerated computing and Dell Technologies high-performance AI infrastructure.",
+    source: "NVIDIA Blog", age: "2 days ago",
+    detail: "The new AI factory will provide a significant boost to the region's AI computing capabilities, leveraging Firebird's expertise in custom AI chip design and manufacturing.",
+    url: "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/"
   },
   {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Access Amazon S3 backup data directly using S3 Access Points in AWS Backup",
-    summary: "AWS introduces direct access to S3 backup data through Amazon S3 Access Points in AWS Backup.",
-    source: "AWS Storage", age: "today",
-    detail: "This feature enables reading backup data using standard S3 APIs, simplifying data recovery and management.",
-    url: "https://aws.amazon.com/blogs/storage/access-amazon-s3-backup-data-directly-using-s3-access-points-in-aws-backup/"
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Scaling the future: Why Ethernet is the backbone of AI Supercomputing",
+    summary: "AI infrastructure is shifting to Ethernet, and Cisco's programmable Silicon One enables the flexibility and scale required for next-gen AI networking.",
+    source: "Cisco Data Center Blog", age: "2 days ago",
+    detail: "Ethernet is becoming the backbone of AI supercomputing due to its ability to provide high-speed connectivity and low latency, making it an essential component of modern AI infrastructure.",
+    url: "https://blogs.cisco.com/datacenter/scaling-the-future-why-ethernet-is-the-backbone-of-ai-supercomputing/"
   },
   {
-    id: 8, cat: "storage", impact: "medium", filler: false,
-    title: "Track healthcare data lineage in real time with Amazon S3 annotations",
-    summary: "AWS introduces real-time tracking of healthcare data lineage using Amazon S3 annotations.",
-    source: "AWS Storage", age: "today",
-    detail: "This feature enables organizations to produce accurate records of data transformations, meeting regulatory requirements.",
-    url: "https://aws.amazon.com/blogs/storage/track-healthcare-data-lineage-in-real-time-with-amazon-s3-annotations/"
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "SK hynix Invests 54 Trillion Won in Yongin Y2 and Cheongju M17 to Secure Mid-to-Long-Term Production Base for AI Memory Demand",
+    summary: "SK Hynix invests 54 trillion won in its Yongin and Cheongju fabs to expand production capacity for both DRAM and NAND flash memory, securing a mid-to-long-term supply base for AI memory demand.",
+    source: "PRNewswire", age: "2 days ago",
+    detail: "The investment will enable SK Hynix to meet growing demand for AI memory and maintain its competitiveness in the market.",
+    url: "https://www.prnewswire.com/news-releases/sk-hynix-invests-54-trillion-won-in-yongin-y2-and-cheongju-m17-to-secure-mid-to-long-term-production-base-for-ai-memory-demand-302845931.html"
   },
   {
-    id: 9, cat: "storage", impact: "medium", filler: false,
-    title: "Analyze Amazon S3 annotations at scale with materialized views",
-    summary: "AWS introduces large-scale analysis of Amazon S3 annotations using materialized views.",
-    source: "AWS Storage", age: "today",
-    detail: "This feature enables customers to attach rich business context to objects and analyze them efficiently.",
-    url: "https://aws.amazon.com/blogs/storage/analyze-amazon-s3-annotations-at-scale-with-materialized-views/"
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "Amazon's AI Story Is Bigger Than You Think. Here Are 3 Reasons Why.",
+    summary: "Artificial intelligence is driving growth in more than one corner of Amazon's sprawling business, and the company's AI ambitions are bigger than many think.",
+    source: "Barchart.com", age: "2 days ago",
+    detail: "The article highlights three reasons why Amazon's AI story is larger than expected, including its impact on e-commerce, cloud computing, and advertising.",
+    url: "https://www.barchart.com/story/news/3675334/amazons-ai-story-is-bigger-than-you-think-here-are-3-reasons-why"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Announcing: Azure Databricks Genie One and Genie Agents Free Usage Extended Through January 31, 2027",
-    summary: "Azure extends free usage of Genie One and Genie Agents in Azure Databricks through January 31, 2027.",
-    source: "Azure Updates", age: "today",
-    detail: "This promotion covers usage by developers, IT leaders, and builders, with no budget controls applying during this period.",
-    url: "https://azure.microsoft.com/updates?id=568964"
+    id: 10, cat: "vendor", impact: "medium", filler: false,
+    title: "Red Hat Positioned as a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms",
+    summary: "Red Hat has been named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms, recognizing its comprehensive hybrid application platform.",
+    source: "Redhat.com", age: "2 days ago",
+    detail: "The recognition highlights Red Hat's commitment to providing a robust and flexible platform for cloud-native applications, enabling customers to build and deploy modern workloads.",
+    url: "https://www.redhat.com/en/about/press-releases/red-hat-positioned-leader-2026-gartner-magic-quadranttm-cloud-native-application-platforms"
   },
   {
-    id: 11, cat: "silicon", impact: "low", filler: true,
-    title: "The AI Demand Bubble",
-    summary: "Analysis of NVIDIA, Anthropic and OpenAI's AI infrastructure roadmap.",
-    source: "Wheresyoured.at", age: "2 days ago",
-    detail: "This piece examines the strategies of leading AI players and their potential impact on the market.",
-    url: "https://www.wheresyoured.at/the-ai-demand-bubble/"
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Microsoft pours $21B into India's largest data center as cloud infrastructure race heats up",
+    summary: "Microsoft invests $21 billion in India's largest data center, intensifying competition and emphasizing data sovereignty in Asia.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "The investment will enable Microsoft to expand its cloud computing capabilities in the region and meet growing demand for digital services.",
+    url: "https://cryptobriefing.com/microsoft-21b-india-data-center-azure/"
   },
   {
     id: 12, cat: "silicon", impact: "low", filler: true,
-    title: "Anthropic Reportedly Wants to Make Its Own AI Chips for Claude",
-    summary: "Anthropic is building a new team to design custom AI chips, following in the footsteps of other tech giants.",
-    source: "PCMag.com", age: "2 days ago",
-    detail: "This move highlights the company's focus on developing its AI model, Claude.",
-    url: "https://me.pcmag.com/en/processors/37806/anthropic-reportedly-wants-to-make-its-own-ai-chips-for-claude"
+    title: "Anthropic Builds a Chip Team as AI Demand Surges",
+    summary: "Anthropic confirms it's building a custom chip team to develop bespoke silicon for Claude AI models, joining competitors like Google, OpenAI, and Meta in the race for cost-efficient AI infrastructure.",
+    source: "Fstoppers", age: "2 days ago",
+    detail: "The new team will focus on designing custom AI chips that can efficiently handle large AI workloads, reducing costs and increasing performance.",
+    url: "https://fstoppers.com/artificial-intelligence/anthropic-builds-chip-team-ai-demand-surges-903912"
   },
   {
-    id: 13, cat: "silicon", impact: "low", filler: true,
-    title: "MediaTek Wants 20% of Custom AI Chips. Alphabet (GOOGL) Could Win Before Broadcom (AVGO) Loses",
-    summary: "MediaTek aims to capture a significant share of the custom AI chip market, with implications for competitors.",
-    source: "Yahoo Entertainment", age: "2 days ago",
-    detail: "This move could reshape the AI landscape and impact companies like NVIDIA and AMD.",
-    url: "https://finance.yahoo.com/technology/ai/articles/mediatek-wants-20-custom-ai-182411966.html"
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "Corning Shares Pop on Proposed Solar Tariffs. What This Means for GLW Stock.",
+    summary: "The move is expected to benefit Corning's joint venture with Japan's Shin-Etsu Handotai, boosting the company's shares and prospects.",
+    source: "Barchart.com", age: "2 days ago",
+    detail: "The proposed solar tariffs will likely increase demand for Corning's products, driving growth and profitability for the company.",
+    url: "https://www.barchart.com/story/news/3701573/corning-shares-pop-on-proposed-solar-tariffs-what-this-means-for-glw-stock"
   },
   {
-    id: 14, cat: "silicon", impact: "low", filler: true,
-    title: "High Beta Runners Up: Why AMD and Marvell Technology Now Command Attention",
-    summary: "AMD and Marvell have outperformed NVIDIA and Broadcom in year-to-date returns, highlighting their AI strategies.",
-    source: "24/7 Wall St.", age: "2 days ago",
-    detail: "This analysis explores the implications of these companies' focus on AI infrastructure and data centers.",
-    url: "https://247wallst.com/investing/2026/08/06/high-beta-runners-up-why-amd-and-marvell-technology-now-command-attention/"
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "What Are Hyperscalers? The Companies Driving The AI Infrastructure Boom",
+    summary: "Discover what a hyperscaler is, which companies dominate the market, and why these cloud giants are investing billions in AI and data centers.",
+    source: "Forbes", age: "2 days ago",
+    detail: "Hyperscalers are cloud computing companies that provide infrastructure and services for building and deploying large-scale AI applications, driving growth and innovation in the industry.",
+    url: "https://www.forbes.com/sites/technology/article/what-is-a-hyperscaler/"
   },
   {
-    id: 15, cat: "silicon", impact: "low", filler: true,
-    title: "AMD’s AI Strategy Is Shifting From Chips To Systems",
-    summary: "AMD's Advancing AI event highlights its shift from chip-focused to system-level AI strategy.",
-    source: "Forrester.com", age: "2 days ago",
-    detail: "This move emphasizes the company's comprehensive hybrid application platform and processors.",
-    url: "https://www.forrester.com/blogs/amds-ai-strategy-is-shifting-from-chips-to-systems/"
+    id: 15, cat: "storage", impact: "low", filler: true,
+    title: "iPhone 18 Pro Release Might Be Delayed Due to Memory Shortage",
+    summary: "Apple faces a memory bottleneck, leaving $1 billion in TSMC chips waiting for RAM ahead of the iPhone 18 Pro and foldable iPhone Ultra release.",
+    source: "iPhone in Canada", age: "2 days ago",
+    detail: "The memory shortage is expected to delay the release of Apple's new iPhones, highlighting the importance of securing reliable supply chains for critical components.",
+    url: "https://www.iphoneincanada.ca/2026/08/06/iphone-18-pro-release-might-be-delayed-due-to-memory-shortage/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud announces improvements to BigQuery for better price-performance and zero effort, advancing its position in the market. Meanwhile, AWS introduces new features in Amazon S3, including direct access to backup data and real-time tracking of healthcare data lineage, signaling a competitive push in storage capabilities. Amidst these advancements, Google Threat Intelligence Group's tracking of UNC6671's evolution highlights the need for robust security measures to protect cloud environments from evolving threats.";
+const STATIC_BRIEF = "Google Cloud's BigQuery introduces new search innovations to unlock insights from unstructured data enabling customers to manage and extract value from their data. Meanwhile Microsoft is winning in the AI trade in a different way than Google Cloud but betting on the wrong one now carries significant risks. SK Hynix invests 54 trillion won in its Yongin and Cheongju fabs to expand production capacity for both DRAM and NAND flash memory securing a mid-to-long-term supply base for AI memory demand.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
