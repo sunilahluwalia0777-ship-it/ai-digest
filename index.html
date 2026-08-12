@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Expanding connectivity in the Americas Introducing Alisios Canoa and OlaLuz subsea cables",
-    summary: "Google announces three new subsea cable systems to expand its global network infrastructure in the Americas.",
+    id: 1, cat: "storage", impact: "high", filler: false,
+    title: "PQC in Plaintext Google Clouds post-quantum cryptography roadmap",
+    summary: "Securing infrastructure and services against a future cryptographically-relevant quantum computer has been a goal for Google.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The new cables will improve connectivity and resilience across the region, supporting everything from daily internet use to telehealth and scientific research breakthroughs.",
-    url: "https://cloud.google.com/blog/products/infrastructure/introducing-americas-connect/"
+    detail: "Google Cloud is rolling out post-quantum cryptography (PQC) in its infrastructure for internal and customer-facing services, advancing open standards that can benefit everyone.",
+    url: "https://cloud.google.com/blog/products/identity-security/pqc-in-plaintext-google-clouds-post-quantum-cryptography-roadmap/"
   },
   {
-    id: 2, cat: "storage", impact: "medium", filler: false,
-    title: "ClusterNetworkPolicy in GKE Balancing control and autonomy for your microservices",
-    summary: "Google introduces ClusterNetworkPolicy in GKE to balance network security with developer needs.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The new policy provides a flexible way to manage network security while giving developers the autonomy they need to innovate.",
-    url: "https://cloud.google.com/blog/products/networking/new-clusternetworkpolicy-in-gke/"
+    id: 2, cat: "competition", impact: "high", filler: false,
+    title: "[Launched] Generally Available 22X IDPS performance optimization in Azure Firewall",
+    summary: "Azure Firewall Premium now delivers up to 22 Gbps throughput with TLS inspection and IDPS in Deny mode.",
+    source: "Azure Updates", age: "today",
+    detail: "Azure Firewall Premium has increased its throughput by 120% to 22 Gbps, doubling the previous capacity.",
+    url: "https://azure.microsoft.com/updates?id=569256"
   },
   {
-    id: 3, cat: "competition", impact: "high", filler: false,
-    title: "Google named a Leader in The Forrester Wave AI Platforms Q3 2026",
-    summary: "Google is recognized as a leader in the Forrester Wave for AI platforms, Q3 2026.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The recognition highlights Google's commitment to providing a unified platform for building and operationalizing complex AI workflows.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/google-named-a-leader-in-the-forrester-wave-ai-platforms/"
-  },
-  {
-    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AWS Weekly Roundup AWS Heroes Summit Web Search on Amazon Bedrock Dogwood Kiro Crew and more August 10 2026",
-    summary: "AWS announces its Heroes Summit, a gathering of experts in AI, serverless, and containers.",
-    source: "AWS News Blog", age: "1 day ago",
-    detail: "The event brings together global experts to collaborate and celebrate the builders who go above and beyond for the AWS community.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-heroes-summit-web-search-on-amazon-bedrock-dogwood-kiro-crew-and-more-august-10-2026/"
-  },
-  {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Building real-time applications with WebSocket using Amazon VPC Lattice",
-    summary: "AWS introduces a new architecture pattern for implementing WebSocket connectivity through VPC Lattice services.",
-    source: "AWS Networking", age: "1 day ago",
-    detail: "The pattern provides a flexible way to manage network security and traffic flows for real-time applications.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/building-real-time-applications-with-websocket-using-amazon-vpc-lattice/"
-  },
-  {
-    id: 6, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA and Local AI Community Fuel Open Source Models and Intelligent Agents",
-    summary: "NVIDIA celebrates the open source ecosystem's progress in local AI, including models, applications, and tools.",
+    id: 3, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA AI Factory Compute Is Becoming an Investable Asset Class",
+    summary: "NVIDIA announced partnerships to establish independent financing platforms for AI infrastructure.",
     source: "NVIDIA Blog", age: "today",
-    detail: "The company highlights its own contributions to the ecosystem, including open models and software.",
-    url: "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron/"
+    detail: "The partnerships aim to mobilize over $500 billion of third-party capital to support the buildout of AI infrastructure.",
+    url: "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/"
   },
   {
-    id: 7, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Partners With Apollo BlackRock Blackstone Brookfield Goldman Sachs and KKR to Establish AI Compute Infrastructure Financing Platforms",
-    summary: "NVIDIA partners with major financial institutions to establish financing platforms for AI compute infrastructure.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "The partnerships aim to mobilize over $500 billion of third-party capital to fuel the growth of AI infrastructure.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms/"
+    id: 4, cat: "storage", impact: "high", filler: false,
+    title: "Optimize your self-managed PostgreSQL data warehouse with Amazon FSx for OpenZFS",
+    summary: "Amazon FSx for OpenZFS enables enterprises to optimize their self-managed PostgreSQL data warehouses.",
+    source: "AWS Storage", age: "today",
+    detail: "The solution offers higher rack density and more efficient power distribution, reducing operational complexity.",
+    url: "https://aws.amazon.com/blogs/storage/optimize-your-self-managed-postgresql-data-warehouse-with-amazon-fsx-for-openzfs/"
   },
   {
-    id: 8, cat: "storage", impact: "medium", filler: false,
-    title: "Vulnerability Summary for the Week of August 3 2026",
-    summary: "CISA publishes a vulnerability summary for the week of August 3, 2026.",
-    source: "Cisa.gov", age: "1 day ago",
-    detail: "The summary highlights high-vulnerability issues in various products and services.",
-    url: "https://www.cisa.gov/news-events/bulletins/sb26-222"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "How WPP operationalizes platform and data engineering for AI marketing",
+    summary: "WPP is replacing human intuition with an AI-powered view of shifting market dynamics.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The company is using predictive certainty to give brands confidence in their investments while moving at the speed of culture.",
+    url: "https://cloud.google.com/blog/products/media-entertainment/how-wpp-operationalizes-platform-and-data-engineering-for-ai-marketing/"
   },
   {
-    id: 9, cat: "competition", impact: "low", filler: true,
-    title: "A Snapdragon-powered Pixel might sound amazing Here’s why it’s a terrible idea",
-    summary: "An article argues that Google switching to Snapdragon chips for its Pixel phones is not the best idea.",
-    source: "Android Authority", age: "1 day ago",
-    detail: "The author cites various reasons, including potential conflicts with Tensor chips and the need for customized hardware.",
-    url: "https://www.androidauthority.com/google-pixel-not-better-snapdragon-3691461/"
+    id: 6, cat: "storage", impact: "medium", filler: false,
+    title: "Accelerate PostgreSQL migrations using Gemini in Database Migration Service",
+    summary: "Gemini in Database Migration Service enables faster PostgreSQL migrations.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The solution accelerates the migration process, reducing project timelines and complexity.",
+    url: "https://cloud.google.com/blog/products/databases/accelerate-postgresql-migrations-with-gemini-in-dms/"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "low", filler: true,
-    title: "48% of Google Cloud Revenue Next Year Could Come From Just 2 Companies That Have Still Never Turned a Profit",
-    summary: "An article suggests that two companies could account for nearly half of Google Cloud's revenue next year.",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "The author analyzes the revenue growth powering Google Cloud, AWS, and Azure.",
-    url: "https://247wallst.com/investing/2026/08/10/48-of-google-cloud-revenue-next-year-could-come-from-just-2-companies-that-have-still-never-turned-a-profit/"
+    id: 7, cat: "silicon", impact: "medium", filler: false,
+    title: "Why Scaling AI Compute Performance Requires a New Power Architecture",
+    summary: "The bottleneck in scaling AI compute performance is not just wattage, but how power gets from the grid to the GPU.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "NVIDIA is highlighting the need for a new power architecture to support increasing AI compute demands.",
+    url: "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
   },
   {
-    id: 11, cat: "competition", impact: "low", filler: true,
-    title: "The Illusion of Enterprise AI Governance Why Tech Giants Are Selling a Black-Box Fantasy—And the Only Real Solution",
-    summary: "An article argues that tech giants are selling an illusion of enterprise AI governance.",
-    source: "C-sharpcorner.com", age: "1 day ago",
-    detail: "The author suggests that true accountability can only be achieved through transparency and open systems.",
-    url: "https://www.c-sharpcorner.com/article/the-illusion-of-enterprise-ai-governance-why-tech-giants-are-selling-a-black-bo/"
+    id: 8, cat: "silicon", impact: "medium", filler: false,
+    title: "NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard Deliver Faster, Smarter, More Efficient Agentic AI",
+    summary: "NVIDIA is expanding its Nemotron 3 model family with Nemotron 3.5 Lightning.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The new model delivers the highest efficiency in its class for long-running agentic AI workloads.",
+    url: "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
   },
   {
-    id: 12, cat: "vendor", impact: "low", filler: true,
-    title: "Nvidia invests up to US$3B in Lancium as energy becomes new AI bottleneck",
-    summary: "Nvidia reportedly invests $2 billion in energy technology and infrastructure developer Lancium.",
-    source: "Digitimes", age: "1 day ago",
-    detail: "The deal highlights the growing importance of energy efficiency in AI infrastructure.",
-    url: "https://www.digitimes.com/news/a20260810VL207/nvidia-infrastructure-texas-data-center-electricity.html"
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Introducing the Developer Device Platform for agentic mobile app development",
+    summary: "The Developer Device Platform enables building and testing applications across a wide variety of devices.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The platform is critical for any enterprise launch that requires a strong customer experience.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/announcing-developer-device-platform-on-google-cloud/"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Anthropic Locks In $10B European Compute Bet With a Seven-Month-Old Startup",
-    summary: "Anthropic establishes its first dedicated European AI compute footprint with a seven-month-old startup.",
+    id: 10, cat: "competition", impact: "medium", filler: false,
+    title: "Google’s August 12 Event Could Show Whether Gemini Is Ready to Run Your Whole Home",
+    summary: "Google's event may showcase the capabilities of its Gemini AI agent.",
     source: "Forkast.news", age: "1 day ago",
-    detail: "The deal marks a significant geographic expansion in the race for sovereign-grade processing power.",
-    url: "https://forkast.news/anthropic-locks-in-10b-european-compute-bet-with-a-seven-month-old-startup/"
+    detail: "The event could highlight the potential for Gemini to control and manage entire homes.",
+    url: "https://forkast.news/googles-august-12-event-could-show-whether-gemini-is-ready-to-run-your-whole-home-3/"
   },
   {
-    id: 14, cat: "competition", impact: "low", filler: true,
-    title: "You can’t regulate your way to AI sovereignty",
-    summary: "An article argues that regulating AI is not enough to achieve sovereignty.",
-    source: "The Next Web", age: "1 day ago",
-    detail: "The author suggests that building a sovereign AI ecosystem requires more than just laws and regulations.",
-    url: "https://thenextweb.com/news/you-cant-regulate-your-way-to-ai-sovereignty"
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Arista’s (ANET) Record Quarter Reignites The AI Networking Debate",
+    summary: "Arista Networks posted its first $3 billion-plus quarter.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "The company's success has reignited the debate around AI networking and infrastructure.",
+    url: "https://finance.yahoo.com/technology/ai/articles/arista-anet-record-quarter-reignites-181302566.html"
   },
   {
-    id: 15, cat: "vendor", impact: "low", filler: true,
-    title: "Arm Stock Is Off 39% From Its High Why This Could Be the Best Time to Buy",
-    summary: "An article suggests that Arm Holdings' stock is undervalued and could be a good buy.",
-    source: "Barchart.com", age: "1 day ago",
-    detail: "The author cites the company's benefits from accelerating AI adoption and growing demand for its chip architecture.",
-    url: "https://www.barchart.com/story/news/3744923/arm-stock-is-off-39-from-its-high-why-this-could-be-the-best-time-to-buy"
+    id: 12, cat: "storage", impact: "low", filler: true,
+    title: "Lumilens Exits Stealth With $700M and AI Optics Already Shipping to a Hyperscaler",
+    summary: "Lumilens has emerged from stealth with a portfolio of optical interconnect products.",
+    source: "Storagereview.com", age: "2 days ago",
+    detail: "The company's products target two networking constraints in large AI clusters: scale-out connectivity between racks and scale-up connectivity among GPUs within a compute domain.",
+    url: "https://www.storagereview.com/news/lumilens-exits-stealth-with-700m-and-ai-optics-already-shipping-to-a-hyperscaler"
+  },
+  {
+    id: 13, cat: "competition", impact: "low", filler: true,
+    title: "Amazon, Microsoft emerge as cloud computing winners, Alphabet falters despite record cloud growth",
+    summary: "Amazon and Microsoft's strategic AI investments have highlighted the importance of balanced growth.",
+    source: "Crypto Briefing", age: "2 days ago",
+    detail: "The companies' success has impacted market perceptions and highlighted the need for a balanced approach to growth.",
+    url: "https://cryptobriefing.com/amazon-microsoft-cloud-winners-alphabet-falters/"
+  },
+  {
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "How nOps shipped FinOps agents 75% faster with Amazon Bedrock AgentCore",
+    summary: "nOps rebuilt its Clara FinOps AI agent on Amazon Bedrock AgentCore.",
+    source: "Amazon.com", age: "2 days ago",
+    detail: "The move cut time-to-production by 75%, improved response quality, and reduced operational complexity.",
+    url: "https://aws.amazon.com/blogs/machine-learning/how-nops-shipped-finops-agents-75-faster-with-amazon-bedrock-agentcore/"
+  },
+  {
+    id: 15, cat: "hyperscaler", impact: "low", filler: true,
+    title: "CNCF Reveals KubeCon + CloudNativeCon North America 2026 Schedule, Adds New AI Inference + Agentic Track",
+    summary: "The event will feature sessions on production AI, platform engineering, and cloud native security.",
+    source: "PRNewswire", age: "2 days ago",
+    detail: "The schedule includes a new track focused on AI inference and agentic AI.",
+    url: "https://www.prnewswire.com/news-releases/cncf-reveals-kubecon--cloudnativecon-north-america-2026-schedule-adds-new-ai-inference--agentic-track-302846486.html"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google announces three new subsea cable systems to expand its global network infrastructure in the Americas, enhancing connectivity and reinforcing its commitment to building a robust networking foundation. Meanwhile, AWS introduces a new architecture pattern for implementing WebSocket connectivity through VPC Lattice services, signaling ongoing competition in the hyperscaler space. NVIDIA's partnerships with major financial institutions to establish financing platforms for AI compute infrastructure underscores the need for strategic supply chain planning to support growing demand for AI workloads.";
+const STATIC_BRIEF = "Google is advancing post-quantum cryptography in its cloud infrastructure to secure services against future quantum computers, a critical move to maintain trust and security in its ecosystem. Meanwhile, Azure Firewall Premium has launched with 22 Gbps throughput, potentially outperforming Google's networking capabilities and giving it a competitive edge. NVIDIA's partnerships to establish independent financing platforms for AI infrastructure may impact supply chain dynamics and influence the way Google acquires and deploys AI computing resources.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
