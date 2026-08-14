@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA Partners With Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to Establish AI Compute Infrastructure Financing Platforms to Mobilize Over $500 Billion of Third-Party Capital",
-    summary: "NVIDIA partners with several companies to establish financing platforms for AI compute infrastructure, mobilizing over $500 billion in capital.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This partnership aims to provide financing solutions for businesses building AI infrastructure, enabling them to access the necessary resources to drive innovation and growth.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Using BigQuery Graphs with measures for trusted agentic workloads",
+    summary: "BigQuery Graph helps organizations move beyond flat, static tables to represent enterprises exactly how they exist in the physical world.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "BigQuery Graph helps organizations move beyond flat, static tables to represent enterprises exactly how they exist in the physical world. Agents are prone to inaccurate insights when working with directly raw tables.",
+    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-graphs-with-measures-for-trusted-agentic-workloads/"
   },
   {
-    id: 2, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Broadcom Wins If AI Wins So I Keep Buying",
-    summary: "The article discusses the importance of Broadcom in the AI landscape, highlighting its crucial role in enabling AI applications.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "As AI continues to grow, Broadcom's infrastructure and semiconductors will be essential components, making it a valuable investment opportunity.",
-    url: "https://247wallst.com/investing/2026/08/12/broadcom-wins-if-ai-wins-so-i-keep-buying/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Looker’s semantic layer governs Gemini Enterprise data for user trust",
+    summary: "For organizations deploying AI agents at scale, there's often a critical divide between structured and unstructured data.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "While large language models excel at parsing text documents, emails, and PDFs, they can struggle when presented with raw enterprise databases. Meanwhile, standard natural-language-to-SQL (NL2SQL) models often guess how database schemas fit together, which can lead to unp",
+    url: "https://cloud.google.com/blog/products/business-intelligence/integrating-looker-and-gemini-enterprise/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Microsoft named a Leader in the 2026 Gartner Magic Quadrant for AI-Augmented Code Modernization Tools",
-    summary: "Microsoft is recognized as a leader in the 2026 Gartner Magic Quadrant for AI-augmented code modernization tools.",
-    source: "Azure Blog", age: "today",
-    detail: "This recognition highlights Microsoft's capabilities in providing innovative solutions for code modernization, leveraging AI to drive business success.",
-    url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/"
+    title: "Introducing the next-generation AWS VPN Client with CLI support and admin controls",
+    summary: "Today, we’re announcing the next-generation AWS VPN Client.",
+    source: "AWS Networking", age: "today",
+    detail: "With the new client, you get full backward compatibility with existing AWS Client VPN endpoints while delivering the automation capabilities and security posture that enterprises need.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-the-next-generation-aws-vpn-client-with-cli-support-and-admin-controls/"
   },
   {
-    id: 4, cat: "storage", impact: "high", filler: false,
-    title: "Securing backup data against modern threats with AWS Backup",
-    summary: "AWS introduces new features to secure backup data, protecting against ransomware attacks and other modern threats.",
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Deployment models for AWS Network Firewall: Transit Gateway attachment and multiple VPC endpoints",
+    summary: "Customers adopting AWS Network Firewall at scale have shared two consistent pieces of feedback.",
+    source: "AWS Networking", age: "today",
+    detail: "Managing inspection for centralized deployments adds operational complexity. Deploying separate firewalls for each VPC in distributed deployments becomes costly and difficult to manage as the number of VPCs increases.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/deployment-models-for-aws-network-firewall-transit-gateway-attachment-and-multiple-vpc-endpoints/"
+  },
+  {
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Orchestrating multi-agent AI architectures with Amazon S3 Files",
+    summary: "Organizations are moving beyond single-model AI toward multi-agent architectures.",
     source: "AWS Storage", age: "today",
-    detail: "These enhancements provide an additional layer of security for businesses storing critical data in the cloud, ensuring its recoverability and integrity.",
-    url: "https://aws.amazon.com/blogs/storage/securing-backup-data-against-modern-threats-with-aws-backup/"
-  },
-  {
-    id: 5, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "The Many Facets of AI Fabrics",
-    summary: "The article discusses the importance of networking in AI performance, highlighting the role of AI fabrics in improving computational resources.",
-    source: "Arista Blog", age: "today",
-    detail: "As AI models continue to grow in size and complexity, efficient networking becomes crucial for optimal performance, making AI fabrics a critical component.",
-    url: "https://blogs.arista.com/blog/the-many-facets-of-ai-fabrics"
+    detail: "In these systems, agents offload intermediate results to files rather than carrying everything in the prompt, because a large prompt inflates cost and degrades quality. A model’s context window is finite, so files become working memory that persists after a session ends.",
+    url: "https://aws.amazon.com/blogs/storage/orchestrating-multi-agent-ai-architectures-with-amazon-s3-files/"
   },
   {
     id: 6, cat: "hyperscaler", impact: "high", filler: false,
-    title: "How Malachyte solves retail's cold-start problem with managed real-time AI",
-    summary: "Malachyte uses AI to solve the cold-start problem in retail, providing personalized recommendations for customers.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This solution leverages Google Cloud's capabilities to enable businesses to deliver tailored experiences, driving customer engagement and loyalty.",
-    url: "https://cloud.google.com/blog/products/data-analytics/solving-retails-cold-start-problem-malachytes-recommendation-reinvention/"
+    title: "[Launched] Generally Available: Control plane metrics collection for AKS with Managed Prometheus",
+    summary: "Control plane metrics collection for Azure Kubernetes Service (AKS), powered by Azure Monitor Managed Service for Prometheus, is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "This capability gives AKS customers native observability into key managed control plane components, in addition to the application and workload insights provided by Prometheus.",
+    url: "https://azure.microsoft.com/updates?id=568830"
   },
   {
-    id: 7, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Class Is in Session: GeForce NOW Levels Up Linux, Chromebooks and More",
-    summary: "NVIDIA's GeForce NOW cloud gaming platform receives updates, including native Linux app support.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "These enhancements expand the reach of GeForce NOW, enabling more users to access high-quality gaming experiences on various devices.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-linux-native-app/"
+    id: 7, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Live Resize for Shared Premium SSD v2 and Ultra Data Disks",
+    summary: "We’re excited to announce the GA of Live Resize for shared Premium SSD v2 (Pv2) and Ultra data disks.",
+    source: "Azure Updates", age: "today",
+    detail: "This feature allows you to dynamically expand the storage capacity of your disks without any disruption, so you can respond quickly to changing business needs.",
+    url: "https://azure.microsoft.com/updates?id=568830"
   },
   {
-    id: 8, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA CEO Tops Glassdoor's 2026 List of Best CEOs",
-    summary: "Jensen Huang, NVIDIA's CEO, is ranked as one of the best CEOs in 2026 by Glassdoor.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This recognition highlights Huang's leadership and vision, driving NVIDIA's growth and innovation in AI computing infrastructure.",
-    url: "https://blogs.nvidia.com/blog/nvidia-life-glassdoor-best-ceo-2026/"
+    id: 8, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Batch support for Ultra Disk Storage",
+    summary: "We’re excited to announce the GA of Batch support for Ultra Disk Storage.",
+    source: "Azure Updates", age: "today",
+    detail: "Batch is a fully managed service that allows you to run large-scale parallel and high-performance computing (HPC) workloads in Azure.",
+    url: "https://azure.microsoft.com/updates?id=568830"
   },
   {
-    id: 9, cat: "storage", impact: "high", filler: false,
-    title: "Hybrid ML inferencing on Amazon EKS with Amazon FSx for NetApp ONTAP and on-premises NetApp",
-    summary: "AWS introduces hybrid ML inferencing capabilities, combining Amazon EKS with Amazon FSx for NetApp ONTAP and on-premises NetApp.",
-    source: "AWS Storage", age: "today",
-    detail: "This solution enables businesses to deploy machine learning models across multiple environments, streamlining data processing and inference tasks.",
-    url: "https://aws.amazon.com/blogs/storage/hybrid-ml-inferencing-on-amazon-eks-with-amazon-fsx-for-netapp-ontap-and-on-premises-netapp/"
+    id: 9, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Cisco CEO expects multiple AI design wins in next 6 months as hyperscaler orders hit $9 billion run-rate",
+    summary: "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications.",
+    source: "Nvidia.com", age: "today",
+    detail: "When performance degrades, identifying the root cause can be a challenge. The solution lies in full-stack observability that combines metrics, logs, and traces.",
+    url: "https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/"
   },
   {
-    id: 10, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Jim Cramer Highlights Arista Networks (ANET) Following Q2 Beat and 50% Rally",
-    summary: "Arista Networks' strong quarterly performance is highlighted by Jim Cramer, with the company's stock price surging 50%.",
-    source: "Yahoo Entertainment", age: "today",
-    detail: "This growth demonstrates Arista's success in providing AI infrastructure solutions, driving demand for its products and services.",
-    url: "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-highlights-arista-networks-180524380.html"
+    id: 10, cat: "hyperscaler", impact: "high", filler: false,
+    title: "CoreWeave revenue doubles as debt pile reaches $35.6B",
+    summary: "CoreWeave’s reliance on Nvidia highlights the risks of single-supplier dependency, potentially impacting future adaptability and competitiveness.",
+    source: "Crypto Briefing", age: "today",
+    detail: "While CoreWeave’s sales have surged, so has its debt, which now stands at $35.6 billion. The company is betting big on its AI ambitions.",
+    url: "https://cryptobriefing.com/coreweave-nvidia-chip-dependency-warning/"
   },
   {
-    id: 11, cat: "cloud", impact: "medium", filler: true,
-    title: "If Cloud Computing Stocks Get a Second Wind, This ETF Is Primed to Float Higher",
-    summary: "The article discusses the potential for cloud computing stocks to rebound and the implications for an ETF tracking this sector.",
-    source: "Barchart.com", age: "today",
-    detail: "As AI adoption grows, cloud infrastructure providers may benefit from increased demand, driving their stock prices higher.",
-    url: "https://www.barchart.com/story/news/3787644/if-cloud-computing-stocks-get-a-second-wind-this-etf-is-primed-to-float-higher"
+    id: 11, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Apple to build Mac mini plant in Texas as part of $600B US investment push",
+    summary: "Apple’s investment in Texas signifies a strategic shift towards bolstering US manufacturing capabilities and workforce development.",
+    source: "Crypto Briefing", age: "today",
+    detail: "The tech giant is set to invest $600 billion in the US over the next five years, with a significant portion going towards building a Mac mini plant in Texas.",
+    url: "https://cryptobriefing.com/apple-mac-mini-plant-texas/"
   },
   {
-    id: 12, cat: "networking", impact: "medium", filler: true,
-    title: "UK puts £14B cloud framework in place with SMEs promised a bigger slice",
-    summary: "The UK government announces a new cloud framework, aiming to provide more opportunities for small and medium-sized enterprises (SMEs).",
-    source: "Theregister.com", age: "today",
-    detail: "This framework may lead to increased adoption of cloud services, driving growth in the sector and benefiting AI infrastructure providers.",
-    url: "https://www.theregister.com/public-sector/2026/08/12/uk-puts-14b-cloud-framework-in-place-with-smes-promised-a-bigger-slice/5286204"
+    id: 12, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Everything’s bigger in Texas: Musk’s planned $16.8 billion chip factory is five times bigger than the world’s current largest building",
+    summary: "Elon Musk is betting that the next phase of his sprawling technology empire will require a building on a scale that has never existed before.",
+    source: "Freerepublic.com", age: "today",
+    detail: "The proposed factory in Texas would be massive, covering an area of over 100 million square feet and costing $16.8 billion to build.",
+    url: "https://freerepublic.com/focus/f-news/4391578/posts"
   },
   {
-    id: 13, cat: "ai infrastructure", impact: "medium", filler: true,
-    title: "Rackspace Technology Q2 Earnings Call Highlights",
-    summary: "Rackspace Technology reports its quarterly earnings, highlighting growth in cloud services and AI infrastructure demand.",
-    source: "MarketBeat", age: "today",
-    detail: "This growth demonstrates the increasing importance of cloud and AI infrastructure for businesses, driving innovation and expansion in these areas.",
-    url: "https://www.marketbeat.com/instant-alerts/rackspace-technology-q2-earnings-call-highlights-2026-08-11/?utm_source=yahoofinance&utm_medium=yahoofinance"
+    id: 13, cat: "storage", impact: "medium", filler: true,
+    title: "IT infrastructure shortages are real and lasting. Here’s how to cope",
+    summary: "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications.",
+    source: "Nvidia.com", age: "today",
+    detail: "When performance degrades, identifying the root cause can be a challenge. The solution lies in full-stack observability that combines metrics, logs, and traces.",
+    url: "https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/"
   },
   {
     id: 14, cat: "storage", impact: "medium", filler: true,
-    title: "Micron Warns Customers Who Skip Long-Term Chip Contracts Risk Losing Future Memory Supply Access",
-    summary: "Micron Technology introduces binding long-term supply contracts to stabilize memory chip supply amid rising AI demand.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "This move may impact the availability and pricing of memory chips, affecting businesses relying on these components for their AI infrastructure.",
-    url: "https://www.ibtimes.com.au/micron-technology-memory-chip-supply-contracts-1873984"
+    title: "Analysis of actors’ attitudes towards the application of the legal institutional framework for sand mining in two local government areas of Ghana",
+    summary: "Sand is illegally mined in Ghana, despite the existence of legal frameworks governing the industry.",
+    source: "Plos.org", age: "today",
+    detail: "The paper analyses actors’ attitudes toward the application of the legal institutional framework for sand mining, using the Ga South and Gomoa East local government areas as case studies.",
+    url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0355691"
   },
   {
-    id: 15, cat: "ai infrastructure", impact: "medium", filler: true,
-    title: "Foxconn now makes more money from AI servers than from everything else combined",
-    summary: "Foxconn's revenue from AI servers surpasses its revenue from other products, highlighting the growing demand for AI infrastructure.",
-    source: "The Next Web", age: "today",
-    detail: "This shift demonstrates the increasing importance of AI infrastructure for businesses, driving innovation and expansion in this area.",
-    url: "https://thenextweb.com/news/foxconn-q2-2026-ai-servers-half-revenue-hon-hai"
+    id: 15, cat: "storage", impact: "medium", filler: true,
+    title: "Competing Interests, Common Narrative: How Industry Shapes the AI Race",
+    summary: "The proposed factory in Texas would be massive, covering an area of over 100 million square feet and costing $16.8 billion to build.",
+    source: "Freerepublic.com", age: "today",
+    detail: "SpaceX and Tesla are building Terafab, a 100-million-square-foot semiconductor manufacturing facility in Grimes County, Texas.",
+    url: "https://freerepublic.com/focus/f-news/4391578/posts"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "As a Google PM owning Networking and Storage for GPU/TPU, it is crucial to note that NVIDIA's emphasis on AI fabrics highlights the importance of high-performance networking in AI infrastructure, which can impact our own storage and networking strategies. Meanwhile, Broadcom's significance in the AI landscape underscores its potential as a competitor in the AI compute infrastructure space. Furthermore, the establishment of financing platforms for AI compute infrastructure by NVIDIA and its partners may lead to increased demand for our own GPU/TPU offerings, warranting close monitoring of this development.";
+const STATIC_BRIEF = "Google's focus on Networking and Storage for GPU/TPU is crucial as organizations move towards multi-agent AI architectures requiring scalable infrastructure such as Amazon S3 Files and Azure Ultra Disk Storage. Cisco's expected multiple AI design wins in the next 6 months with hyperscaler orders hitting a $9 billion run-rate signals intense competition in the AI infrastructure space. Meanwhile, Apple's investment in Texas and Elon Musk's planned massive chip factory highlight the need for Google to monitor supply chain developments and adapt its manufacturing strategies accordingly.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
