@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Using BigQuery Graphs with measures for trusted agentic workloads",
-    summary: "BigQuery Graph helps organizations move beyond flat, static tables to represent enterprises exactly how they exist in the physical world.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "BigQuery Graph helps organizations move beyond flat, static tables to represent enterprises exactly how they exist in the physical world. Agents are prone to inaccurate insights when working with directly raw tables.",
-    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-graphs-with-measures-for-trusted-agentic-workloads/"
-  },
-  {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Looker’s semantic layer governs Gemini Enterprise data for user trust",
-    summary: "For organizations deploying AI agents at scale, there's often a critical divide between structured and unstructured data.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "While large language models excel at parsing text documents, emails, and PDFs, they can struggle when presented with raw enterprise databases. Meanwhile, standard natural-language-to-SQL (NL2SQL) models often guess how database schemas fit together, which can lead to unp",
-    url: "https://cloud.google.com/blog/products/business-intelligence/integrating-looker-and-gemini-enterprise/"
-  },
-  {
-    id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Introducing the next-generation AWS VPN Client with CLI support and admin controls",
-    summary: "Today, we’re announcing the next-generation AWS VPN Client.",
+    id: 1, cat: "competition", impact: "high", filler: false,
+    title: "Zero-trust networking for agentic AI with Amazon VPC Lattice",
+    summary: "Amazon VPC Lattice enables zero-trust networking for AI agents, providing secure data access and protection.",
     source: "AWS Networking", age: "today",
-    detail: "With the new client, you get full backward compatibility with existing AWS Client VPN endpoints while delivering the automation capabilities and security posture that enterprises need.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-the-next-generation-aws-vpn-client-with-cli-support-and-admin-controls/"
+    detail: "Amazon VPC Lattice is a new service that provides zero-trust networking for AI agents, allowing them to securely access data without compromising security. This service is designed to protect sensitive data from unauthorized access.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/zero-trust-networking-for-agentic-ai-with-amazon-vpc-lattice/"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Deployment models for AWS Network Firewall: Transit Gateway attachment and multiple VPC endpoints",
-    summary: "Customers adopting AWS Network Firewall at scale have shared two consistent pieces of feedback.",
-    source: "AWS Networking", age: "today",
-    detail: "Managing inspection for centralized deployments adds operational complexity. Deploying separate firewalls for each VPC in distributed deployments becomes costly and difficult to manage as the number of VPCs increases.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/deployment-models-for-aws-network-firewall-transit-gateway-attachment-and-multiple-vpc-endpoints/"
-  },
-  {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Orchestrating multi-agent AI architectures with Amazon S3 Files",
-    summary: "Organizations are moving beyond single-model AI toward multi-agent architectures.",
+    id: 2, cat: "storage", impact: "medium", filler: false,
+    title: "How WeatherBug reduced storage costs by 80% using Amazon S3 Storage Lens and Kiro CLI",
+    summary: "WeatherBug reduced its storage costs by 80% using Amazon S3 Storage Lens and Kiro CLI, optimizing data management.",
     source: "AWS Storage", age: "today",
-    detail: "In these systems, agents offload intermediate results to files rather than carrying everything in the prompt, because a large prompt inflates cost and degrades quality. A model’s context window is finite, so files become working memory that persists after a session ends.",
-    url: "https://aws.amazon.com/blogs/storage/orchestrating-multi-agent-ai-architectures-with-amazon-s3-files/"
+    detail: "WeatherBug was able to significantly reduce its storage costs by leveraging Amazon S3 Storage Lens and Kiro CLI. This optimization enabled the company to better manage its data and reduce expenses.",
+    url: "https://aws.amazon.com/blogs/storage/how-weatherbug-reduced-storage-costs-by-80-using-amazon-s3-storage-lens-and-kiro-cli/"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Control plane metrics collection for AKS with Managed Prometheus",
-    summary: "Control plane metrics collection for Azure Kubernetes Service (AKS), powered by Azure Monitor Managed Service for Prometheus, is now generally available.",
-    source: "Azure Updates", age: "today",
-    detail: "This capability gives AKS customers native observability into key managed control plane components, in addition to the application and workload insights provided by Prometheus.",
-    url: "https://azure.microsoft.com/updates?id=568830"
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "The Economics of Agent Optimization: From pilots to measurable returns",
+    summary: "Microsoft Azure provides a framework for optimizing AI agent costs, enabling businesses to achieve measurable returns.",
+    source: "Azure Blog", age: "today",
+    detail: "Microsoft Azure's economics of agent optimization framework helps businesses move from pilot projects to measurable ROI. This approach enables companies to optimize their AI investments and achieve tangible results.",
+    url: "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/"
   },
   {
-    id: 7, cat: "hyperscaler", impact: "high", filler: false,
+    id: 4, cat: "storage", impact: "medium", filler: false,
     title: "[Launched] Generally Available: Live Resize for Shared Premium SSD v2 and Ultra Data Disks",
-    summary: "We’re excited to announce the GA of Live Resize for shared Premium SSD v2 (Pv2) and Ultra data disks.",
+    summary: "Azure introduces live resize capability for shared premium SSD v2 and ultra data disks, enhancing storage flexibility.",
     source: "Azure Updates", age: "today",
-    detail: "This feature allows you to dynamically expand the storage capacity of your disks without any disruption, so you can respond quickly to changing business needs.",
-    url: "https://azure.microsoft.com/updates?id=568830"
+    detail: "Azure's new live resize feature enables customers to dynamically expand their storage capacity without disrupting applications. This enhancement provides greater flexibility in managing storage resources.",
+    url: "https://azure.microsoft.com/updates?id=569281"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Batch support for Ultra Disk Storage",
-    summary: "We’re excited to announce the GA of Batch support for Ultra Disk Storage.",
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Pre-upgrade validation checks for Azure Database for PostgreSQL Flexible Server",
+    summary: "Azure introduces pre-upgrade validation checks for PostgreSQL flexible servers, ensuring seamless database upgrades.",
     source: "Azure Updates", age: "today",
-    detail: "Batch is a fully managed service that allows you to run large-scale parallel and high-performance computing (HPC) workloads in Azure.",
-    url: "https://azure.microsoft.com/updates?id=568830"
+    detail: "Azure's new pre-upgrade validation checks enable customers to proactively validate major version upgrade readiness for their PostgreSQL flexible servers. This feature ensures a smooth upgrade process and minimizes downtime.",
+    url: "https://azure.microsoft.com/updates?id=568419"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Cisco CEO expects multiple AI design wins in next 6 months as hyperscaler orders hit $9 billion run-rate",
-    summary: "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications.",
-    source: "Nvidia.com", age: "today",
-    detail: "When performance degrades, identifying the root cause can be a challenge. The solution lies in full-stack observability that combines metrics, logs, and traces.",
-    url: "https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/"
+    id: 6, cat: "silicon", impact: "medium", filler: false,
+    title: "Universitas Gadjah Mada, Indosat and NVIDIA Open Indonesia's First University AI Center to Develop Local AI Talent",
+    summary: "NVIDIA partners with Universitas Gadjah Mada and Indosat to establish Indonesia's first university-based AI center.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The partnership aims to develop local AI talent in Indonesia through the establishment of a university-based AI center. This initiative will drive AI innovation and adoption in the region.",
+    url: "https://blogs.nvidia.com/blog/ugm-indosat-nvidia-ai-technology-center/"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "high", filler: false,
-    title: "CoreWeave revenue doubles as debt pile reaches $35.6B",
-    summary: "CoreWeave’s reliance on Nvidia highlights the risks of single-supplier dependency, potentially impacting future adaptability and competitiveness.",
+    id: 7, cat: "networking", impact: "medium", filler: false,
+    title: "Monitoring beyond SNMP: Turning your network into a sensor",
+    summary: "Cisco introduces advanced monitoring capabilities, enabling networks to become sensors for AI-driven insights.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "Cisco's new monitoring features go beyond traditional SNMP-based monitoring. This advancement enables networks to become sensors, providing rich telemetry data that can be leveraged for AI-driven insights and optimization.",
+    url: "https://blogs.cisco.com/networking/monitoring-beyond-snmp-turning-your-network-into-a-sensor/"
+  },
+  {
+    id: 8, cat: "competition", impact: "high", filler: false,
+    title: "Alphabet's stock slips as Nvidia unveils $500B financing deal that threatens Google's custom chip business",
+    summary: "NVIDIA's massive financing deal poses a threat to Google's custom chip business, causing Alphabet's stock to slip.",
+    source: "Yahoo Entertainment", age: "today",
+    detail: "The large-scale financing deal announced by NVIDIA has significant implications for the AI chip market. This development could potentially disrupt Google's custom chip business and impact its competitive positioning.",
+    url: "https://finance.yahoo.com/news/alphabet-stock-slips-nvidia-unveils-102000373.html"
+  },
+  {
+    id: 9, cat: "storage", impact: "medium", filler: false,
+    title: "Ryanair signs five-year Google Cloud AI partnership",
+    summary: "Ryanair partners with Google Cloud to leverage AI capabilities and enhance its customer experience.",
+    source: "CNBC", age: "today",
+    detail: "The five-year partnership will enable Ryanair to tap into Google Cloud's AI expertise, driving innovation and improvement in its customer-facing services.",
+    url: "https://www.cnbc.com/2026/08/14/china-tech-global-appeal-apple-ford-catl-deepseek.html"
+  },
+  {
+    id: 10, cat: "silicon", impact: "medium", filler: false,
+    title: "Lam Research announces plans to invest more than $3B to expand global lab network, increase innovation velocity in the AI era",
+    summary: "Lam Research commits to investing over $3 billion to expand its global research and development lab network, driving AI innovation.",
+    source: "PRNewswire", age: "today",
+    detail: "The significant investment will enable Lam Research to accelerate its R&D efforts, focusing on emerging technologies like AI. This expansion will position the company for long-term growth and innovation leadership.",
+    url: "https://www.prnewswire.com/news-releases/lam-research-announces-plans-to-invest-more-than-3b-to-expand-global-lab-network-increase-innovation-velocity-in-the-ai-era-302851309.html"
+  },
+  {
+    id: 11, cat: "competition", impact: "low", filler: true,
+    title: "From Apple to Ford: How Chinese tech is becoming harder for global companies to ignore",
+    summary: "Chinese tech advancements are gaining recognition, potentially reshaping global tech dynamics.",
     source: "Crypto Briefing", age: "today",
-    detail: "While CoreWeave’s sales have surged, so has its debt, which now stands at $35.6 billion. The company is betting big on its AI ambitions.",
-    url: "https://cryptobriefing.com/coreweave-nvidia-chip-dependency-warning/"
+    detail: "The increasing prominence of Chinese tech could lead to a shift in the global tech landscape, as investors and businesses take notice of the country's innovation capabilities.",
+    url: "https://cryptobriefing.com/europe-ai-stocks-boost-indices/"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Apple to build Mac mini plant in Texas as part of $600B US investment push",
-    summary: "Apple’s investment in Texas signifies a strategic shift towards bolstering US manufacturing capabilities and workforce development.",
+    id: 12, cat: "networking", impact: "low", filler: true,
+    title: "Investors recognize Europe's AI advancements, boosting local indices to record highs",
+    summary: "European AI stocks surge as investors acknowledge the region's growing innovation capabilities.",
     source: "Crypto Briefing", age: "today",
-    detail: "The tech giant is set to invest $600 billion in the US over the next five years, with a significant portion going towards building a Mac mini plant in Texas.",
-    url: "https://cryptobriefing.com/apple-mac-mini-plant-texas/"
+    detail: "The growth in European AI stocks reflects the increasing recognition of the region's technological advancements and its potential for long-term growth.",
+    url: "https://cryptobriefing.com/europe-ai-stocks-boost-indices/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Everything’s bigger in Texas: Musk’s planned $16.8 billion chip factory is five times bigger than the world’s current largest building",
-    summary: "Elon Musk is betting that the next phase of his sprawling technology empire will require a building on a scale that has never existed before.",
-    source: "Freerepublic.com", age: "today",
-    detail: "The proposed factory in Texas would be massive, covering an area of over 100 million square feet and costing $16.8 billion to build.",
-    url: "https://freerepublic.com/focus/f-news/4391578/posts"
+    id: 13, cat: "silicon", impact: "low", filler: true,
+    title: "Applied Materials Q3 Earnings Call Highlights",
+    summary: "Applied Materials reports record fiscal third-quarter 2026 results, driven by strong demand for its semiconductor materials.",
+    source: "MarketBeat", age: "today",
+    detail: "The company's earnings call highlights the ongoing demand for its products in the semiconductor industry, which is driving growth and innovation.",
+    url: "https://www.marketbeat.com/instant-alerts/applied-materials-q3-earnings-call-highlights-2026-08-13/?utm_source=yahoofinance&utm_medium=yahoofinance"
   },
   {
-    id: 13, cat: "storage", impact: "medium", filler: true,
-    title: "IT infrastructure shortages are real and lasting. Here’s how to cope",
-    summary: "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications.",
-    source: "Nvidia.com", age: "today",
-    detail: "When performance degrades, identifying the root cause can be a challenge. The solution lies in full-stack observability that combines metrics, logs, and traces.",
-    url: "https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/"
+    id: 14, cat: "storage", impact: "low", filler: true,
+    title: "Canva Cuts 2026 Growth by a Third, Jeff Dean Walks Out of Google, and Elon Builds His Own Fab: 20VC x SaaStr",
+    summary: "Industry leaders discuss the latest developments in AI, including Canva's growth reduction and Jeff Dean's departure from Google.",
+    source: "Saastr.com", age: "today",
+    detail: "The conversation touches on various aspects of AI innovation, including the challenges faced by companies like Canva and the implications of leadership changes at organizations like Google.",
+    url: "https://www.saastr.com/canva-cuts-2026-growth-by-a-third-jeff-dean-walks-out-of-google-and-elon-builds-his-own-fab-20vc-x-saastr/"
   },
   {
-    id: 14, cat: "storage", impact: "medium", filler: true,
-    title: "Analysis of actors’ attitudes towards the application of the legal institutional framework for sand mining in two local government areas of Ghana",
-    summary: "Sand is illegally mined in Ghana, despite the existence of legal frameworks governing the industry.",
-    source: "Plos.org", age: "today",
-    detail: "The paper analyses actors’ attitudes toward the application of the legal institutional framework for sand mining, using the Ga South and Gomoa East local government areas as case studies.",
-    url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0355691"
-  },
-  {
-    id: 15, cat: "storage", impact: "medium", filler: true,
-    title: "Competing Interests, Common Narrative: How Industry Shapes the AI Race",
-    summary: "The proposed factory in Texas would be massive, covering an area of over 100 million square feet and costing $16.8 billion to build.",
-    source: "Freerepublic.com", age: "today",
-    detail: "SpaceX and Tesla are building Terafab, a 100-million-square-foot semiconductor manufacturing facility in Grimes County, Texas.",
-    url: "https://freerepublic.com/focus/f-news/4391578/posts"
+    id: 15, cat: "competition", impact: "low", filler: true,
+    title: "Jefferies Chris Wood spots hidden risk in global companies ignoring Chinese tech advancements",
+    summary: "Chris Wood, a Jefferies analyst, highlights the risks of global companies underestimating Chinese tech innovation.",
+    source: "CNBC", age: "today",
+    detail: "The analyst's comments emphasize the potential consequences for businesses that fail to recognize and adapt to China's growing technological capabilities.",
+    url: "https://www.cnbc.com/2026/08/14/china-tech-global-appeal-apple-ford-catl-deepseek.html"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google's focus on Networking and Storage for GPU/TPU is crucial as organizations move towards multi-agent AI architectures requiring scalable infrastructure such as Amazon S3 Files and Azure Ultra Disk Storage. Cisco's expected multiple AI design wins in the next 6 months with hyperscaler orders hitting a $9 billion run-rate signals intense competition in the AI infrastructure space. Meanwhile, Apple's investment in Texas and Elon Musk's planned massive chip factory highlight the need for Google to monitor supply chain developments and adapt its manufacturing strategies accordingly.";
+const STATIC_BRIEF = "Ryanair has signed a five-year partnership with Google Cloud to leverage AI capabilities and enhance customer experience which is crucial for our Networking and Storage strategy as it directly impacts our business. Meanwhile Alphabet's stock slipped due to NVIDIA's massive financing deal threatening Google's custom chip business which is a significant competitive signal we need to monitor closely. Additionally Lam Research's plans to invest over 3 billion dollars to expand its global lab network will likely drive innovation velocity in the AI era and is an important supply chain watch for us.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
