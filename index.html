@@ -647,124 +647,100 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high", filler: false,
-    title: "AWS Weekly Roundup EC2 application status checks IAM role manager OpenAI Daybreak on Bedrock and more August 17 2026",
-    summary: "Last week AWS contributors joined the OpenSearch and Valkey communities at Open Source Summit Korea 2026 and MCP DevSummit Seoul 2026. At the four-day event community leaders and users of these Linux Foundation open source projects gathered to share knowledge collaborate on solutions and push the projects forward.",
-    source: "AWS News Blog", age: "today",
-    detail: "This article highlights AWS's involvement in open-source communities, demonstrating its commitment to collaboration and innovation. The event brought together experts to share knowledge and work on solutions, showcasing AWS's efforts to advance AI capabilities.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ec2-application-status-checks-iam-role-manager-openai-daybreak-on-bedrock-and-more-august-17-2026/"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Governance on autopilot, minus the turbulence",
+    summary: "Google Cloud automates data governance with lineage, reducing daily tax and compliance failures.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud introduces automated data governance to reduce the cost of manual processes, ensuring compliance and reducing errors. This innovation enables organizations to focus on high-value tasks rather than mundane data management.",
+    url: "https://cloud.google.com/blog/products/data-analytics/governance-on-autopilot-automate-data-governance-with-lineage/"
   },
   {
     id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Nvidia may have just built its own hyperscaler without owning a single data center",
-    summary: "Nvidia has secured land power and shell capacity through a partnership with SB Energy at the PORTS-Pike Technology Campus in Pike County Ohio to host Nvidia compute.",
-    source: "TechSpot", age: "today",
-    detail: "This article suggests that Nvidia is building its own hyperscaler infrastructure, which could revolutionize AI computing. The partnership with SB Energy enables Nvidia to expand its compute capabilities without owning data centers.",
-    url: "https://www.techspot.com/news/113502-nvidia-may-have-built-own-hyperscaler-without-owning.html"
+    title: "Building cost-effective, high-throughput gen AI workflows in Google Dataflow",
+    summary: "Google Cloud enables real-time streaming pipelines with generative AI agents for adaptive execution.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud introduces a new approach to real-time data processing by integrating generative AI agents into streaming pipelines. This innovation allows for adaptive execution, moving beyond static logic and fixed processing paths.",
+    url: "https://cloud.google.com/blog/products/data-analytics/cost-effective-genai-workflows-in-google-dataflow/"
   },
   {
-    id: 3, cat: "silicon", impact: "high", filler: false,
-    title: "AI data center optical interconnect market to hit $144 billion by 2030 an over ten-fold increase from 2024 figures according to new projections silicon photonics expected to account for nearly two-thirds of revenue driven by co-packaged optics",
-    summary: "A new CIC forecast projects that the data center optical interconnect market will grow from $13.7 billion in 2024 to $144.4 billion by 2030 with silicon photonics accounting for 63.7% of revenue.",
-    source: "Tom's Hardware UK", age: "today",
-    detail: "This article highlights the rapid growth of the AI data center optical interconnect market, driven by the increasing demand for high-speed data transmission. Silicon photonics is expected to dominate the market, driven by co-packaged optics.",
-    url: "https://www.tomshardware.com/tech-industry/photonics/ai-data-center-optical-interconnect-market-to-hit-usd144-billion-by-2030-an-over-ten-fold-increase-from-2024-figures-according-to-new-projections-silicon-photonics-expected-to-account-for-nearly-two-thirds-of-revenue-driven-by-co-packaged-optics"
+    id: 3, cat: "hyperscaler", impact: "high", filler: false,
+    title: "How Box is unlocking multimodal enterprise agents with Gemini Embeddings 2",
+    summary: "Box leverages Gemini Embeddings 2 to enable multimodal enterprise AI agents for search and retrieval.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Box partners with Google Cloud to unlock the potential of multimodal AI agents, enabling augmented generation capabilities and transforming enterprise content management.",
+    url: "https://cloud.google.com/blog/topics/partners/box-ai-agents-gemini-embeddings-multimodal-enterprise-ai/"
   },
   {
-    id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Amazon Crossed $3 Trillion Here's What Comes Next",
-    summary: "Amazon briefly touched $3 trillion before pulling back and a $4 billion insider sale spooked the market just as AWS posted its fastest growth in 18 quarters...",
-    source: "24/7 Wall St.", age: "today",
-    detail: "This article highlights Amazon's market valuation, which has reached $3 trillion. The company's cloud computing arm, AWS, is driving growth, with its fastest quarterly expansion in 18 quarters.",
-    url: "https://247wallst.com/investing/2026/08/17/amazon-crossed-3-trillion-heres-what-comes-next/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Staying Ahead of Adversarial AI Through Agentic Source Code Review",
+    summary: "Google Cloud introduces structured analysis process to identify and patch vulnerabilities in source code.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud addresses the growing threat of adversarial AI by introducing a systematic approach to identifying and mitigating vulnerabilities in source code, ensuring the security of cloud-based applications.",
+    url: "https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/"
   },
   {
-    id: 5, cat: "competition", impact: "high", filler: false,
-    title: "I Keep Buying Oracle Because It Will Become a Tier-1 Hyperscaler",
-    summary: "The market keeps pricing Oracle like a legacy database company but the numbers underneath tell a completely different story about where enterprise AI infrastructure is headed...",
-    source: "24/7 Wall St.", age: "today",
-    detail: "This article suggests that Oracle is undervalued, as it is transforming into a hyperscaler with its enterprise AI infrastructure. The company's growth potential is significant, making it an attractive investment opportunity.",
-    url: "https://247wallst.com/investing/2026/08/17/i-keep-buying-oracle-because-it-will-become-a-tier-1-hyperscaler/"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Building operational resilience with agentic AI in financial services",
+    summary: "Google Cloud enables financial institutions to build operational resilience with agentic AI.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud partners with financial institutions to implement agentic AI, enhancing operational resilience and meeting stringent regulatory requirements. This innovation ensures the security and reliability of critical financial systems.",
+    url: "https://cloud.google.com/blog/topics/financial-services/building-operational-resilience-with-agentic-ai-in-financial-services/"
   },
   {
-    id: 6, cat: "storage", impact: "medium", filler: false,
-    title: "Securing the Infrastructure of Intelligence",
-    summary: "AI factories are the defining infrastructure of the AI era where compute transforms energy and data into intelligence that powers every business industry and country.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "This article highlights the importance of securing AI infrastructure, which is critical to powering businesses and industries. The growth of AI depends on reliable and efficient infrastructure.",
-    url: "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/"
-  },
-  {
-    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "NVIDIA Guarantees SB Energy's PORTS-Pike Technology Campus in Ohio to Exclusively Host NVIDIA AI Compute",
-    summary: "NVIDIA announced that it has secured land power and shell capacity through a partnership with SB Energy at the PORTS-Pike Technology Campus in Pike County Ohio to host NVIDIA compute...",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This article highlights NVIDIA's expansion into hyperscale computing, securing land and power capacity for its AI infrastructure. The partnership with SB Energy enables NVIDIA to grow its compute capabilities.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"
-  },
-  {
-    id: 8, cat: "silicon", impact: "medium", filler: false,
-    title: "Nvidia H100 GPU rental costs surge 50% in six months as AI demand outpaces supply",
-    summary: "The surge in GPU rental costs highlights the growing strain on AI infrastructure potentially reshaping market dynamics and competitive strategies.",
-    source: "Crypto Briefing", age: "today",
-    detail: "This article highlights the increasing demand for AI computing, driving up the cost of NVIDIA H100 GPU rentals. The shortage is affecting market dynamics and competitive strategies.",
-    url: "https://cryptobriefing.com/nvidia-h100-gpu-rental-costs-surge/"
-  },
-  {
-    id: 9, cat: "competition", impact: "medium", filler: false,
-    title: "[In preview] Public Preview Zone redundancy for Azure SQL Managed Instance Next-gen General Purpose",
-    summary: "You can now benefit from enhanced resilience with the public preview of zone redundancy for Azure SQL Managed Instance Next-gen General Purpose.",
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Managed Instance on Azure App Service",
+    summary: "Azure introduces managed instances for web applications, enabling easy migration to cloud.",
     source: "Azure Updates", age: "today",
-    detail: "This article highlights Microsoft's expansion into cloud computing, introducing zone redundancy for its Azure SQL Managed Instance. The feature enhances resilience and improves business continuity.",
-    url: "https://azure.microsoft.com/updates?id=568344"
+    detail: "Microsoft announces the general availability of managed instances on Azure App Service, simplifying the migration of web applications to the cloud and enhancing overall application management.",
+    url: "https://azure.microsoft.com/updates?id=568952"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "[Launched] Generally Available Dragon Copilot Physician Apps and Agents on Microsoft Marketplace",
-    summary: "This release adds Microsoft Marketplace as a new discovery and procurement channel for Dragon Copilot AI apps and agents.",
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "How Cisco and Auvik simplify network modernization for AI",
+    summary: "Cisco partners with Auvik to provide IT teams with AI-ready infrastructure insights.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "Cisco collaborates with Auvik to offer a comprehensive solution for network modernization, enabling organizations to prepare their infrastructure for AI adoption and ensuring seamless operations.",
+    url: "https://blogs.cisco.com/networking/how-cisco-and-auvik-simplify-network-modernization-for-ai/"
+  },
+  {
+    id: 8, cat: "vendor", impact: "medium", filler: false,
+    title: "Meet The Data Center Lens video series: Clear answers for modernizing and scaling for AI",
+    summary: "Cisco introduces a video series providing guidance on infrastructure modernization and scaling for AI.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "Cisco launches The Data Center Lens video series, offering practical advice and insights on modernizing infrastructure to support AI adoption and ensuring seamless operations at scale.",
+    url: "https://blogs.cisco.com/datacenter/meet-the-data-center-lens-video-series-clear-answers-for-modernizing-and-scaling-for-ai/"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "low", filler: true,
+    title: "[In preview] Public Preview: Ipv6 support in Azure Firewall",
+    summary: "Azure announces public preview of IPv6 support in Azure Firewall.",
     source: "Azure Updates", age: "today",
-    detail: "This article highlights Microsoft's expansion into hyperscale computing, launching Dragon Copilot AI apps and agents on its marketplace. The move enables easier discovery and procurement of AI solutions.",
-    url: "https://azure.microsoft.com/updates?id=557775"
+    detail: "Microsoft introduces a public preview of IPv6 support in Azure Firewall, enabling customers to configure and manage firewall rules for both IPv4 and IPv6 traffic.",
+    url: "https://azure.microsoft.com/updates?id=569520"
   },
   {
-    id: 11, cat: "storage", impact: "low", filler: true,
-    title: "[In preview] Public Preview Azure Linux on WSL",
-    summary: "Azure Linux on WSL is now available in Public Preview (Beta). Extending Azure Linux to the developer workstation means that teams can now:Validate behavior using production-aligned configurationsReproduce issues more reliablyReduce time spent debugging c...",
-    source: "Azure Updates", age: "today",
-    detail: "This article highlights Microsoft's expansion into cloud computing, introducing a public preview of Azure Linux on WSL. The feature enables developers to validate behavior and reproduce issues more reliably.",
-    url: "https://azure.microsoft.com/updates?id=569376"
+    id: 10, cat: "vendor", impact: "low", filler: true,
+    title: "AI Networking Stocks Are Rallying on Monday. Marvell Up 8%, Credo Up 8%, Ciena Joins the Move",
+    summary: "AI networking stocks surge as investors respond to a research note on chip ramp.",
+    source: "24/7 Wall St.", age: "1 day ago",
+    detail: "A research note on AI chip demand drives up stock prices for companies like Marvell, Credo, and Ciena, highlighting investor optimism in the sector.",
+    url: "https://247wallst.com/investing/2026/08/17/ai-networking-stocks-are-rallying-on-monday-marvell-up-8-credo-up-8-ciena-joins-the-move/"
   },
   {
-    id: 12, cat: "competition", impact: "low", filler: true,
-    title: "[Retirement] Containerized data connector agent for the Microsoft Sentinel solution for SAP applications",
-    summary: "On September 14, 2026 we will retire the containerized data connector agent for the Microsoft Sentinel solution for SAP applications.",
-    source: "Azure Updates", age: "today",
-    detail: "This article highlights Microsoft's retirement of its containerized data connector agent for SAP applications. The move may impact users of the solution.",
-    url: "https://azure.microsoft.com/updates?id=568457"
+    id: 11, cat: "vendor", impact: "low", filler: true,
+    title: "Nvidia's AI moat is shifting from chips to capital",
+    summary: "Nvidia diversifies its AI business, moving beyond chip manufacturing and into areas like capital investments, further solidifying its market position.",
+    source: "CNBC", age: "1 day ago",
+    detail: "Nvidia's strategy shift towards capital investments demonstrates its commitment to expanding its AI ecosystem and maintaining a competitive edge.",
+    url: "https://www.cnbc.com/2026/08/18/nvidias-ai-moat-is-shifting-from-chips-to-capital.html"
   },
   {
-    id: 13, cat: "silicon", impact: "low", filler: true,
-    title: "How We're Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees",
-    summary: "WhatsApp is committed to helping people stay safe while protecting the privacy of their messages.",
-    source: "Meta Engineering", age: "today",
-    detail: "This article highlights Meta's efforts to build a scam alert system on WhatsApp, focusing on end-to-end encryption and verifiability guarantees. The feature aims to protect users' privacy and safety.",
-    url: "https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/"
-  },
-  {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "JPMorgan Raises S&P 500 Target to 8,000 as Earnings and AI Growth Strengthen Outlook",
-    summary: "JPMorgan has increased its 2026 S&P 500 price target to 8,000 from 7,800 pointing to an exceptionally strong second-quarter earnings season and growing evid...",
-    source: "Advfn.com", age: "today",
-    detail: "This article highlights JPMorgan's raised S&P 500 target, driven by strong earnings and AI growth. The outlook suggests a positive market trend.",
-    url: "https://investorshub.advfn.com/market-news/article/34287/jpmorgan-raises-sp-500-target-to-8000-as-earnings-and-ai-growth-strengthen-outlook"
-  },
-  {
-    id: 15, cat: "competition", impact: "low", filler: true,
-    title: "South Korea's KOSPI Surges to Three-Week High as Chip Stocks Rally and Wall Street Hits Fresh Record",
-    summary: "South Korea's KOSPI index surged to a three-week high driven by semiconductor gains and easing inflation concerns reflecting a dramatic market rebound amid AI-driven volatility.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "This article highlights South Korea's KOSPI surge, driven by chip stocks and easing inflation concerns. The market rebound suggests a positive trend amidst AI-driven volatility.",
-    url: "https://www.ibtimes.com.au/kospi-surges-three-week-high-semiconductor-rally-1874143"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "[In preview] Public Preview: Azure VMware Solution License-included service will be retired August 30, 2027",
+    summary: "Azure announces the retirement of its license-included Azure VMware Solution service.",
+    source: "Azure Updates", age: "1 day ago",
+    detail: "Microsoft sets a retirement date for its Azure VMware Solution license-included service, citing changes in VMware licensing policies and encouraging customers to migrate to alternative offerings.",
+    url: "https://azure.microsoft.com/updates?id=569535"
   },
 ];
 // ARTICLES_END
@@ -912,7 +888,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "The data center optical interconnect market is projected to grow from $13.7 billion in 2024 to $144.4 billion by 2030 with silicon photonics accounting for nearly two-thirds of revenue driven by co-packaged optics. Meanwhile Oracle's enterprise AI infrastructure growth is being underpriced by the market making it an attractive competitor in the hyperscaler space. Nvidia's GPU rental costs have surged 50% in six months as AI demand outpaces supply highlighting a potential strain on AI infrastructure and competitive strategies.";
+const STATIC_BRIEF = "Google Cloud is automating data governance with lineage reducing daily tax and compliance failures and enabling real-time streaming pipelines with generative AI agents for adaptive execution in Dataflow. Meanwhile Azure has launched managed instances for web applications on App Service making it easier to migrate to cloud. Cisco is partnering with Auvik to provide IT teams with AI-ready infrastructure insights and introducing a video series offering guidance on modernizing and scaling infrastructure for AI.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
