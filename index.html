@@ -648,99 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Governance on autopilot, minus the turbulence",
-    summary: "Google Cloud automates data governance with lineage, reducing daily tax and compliance failures.",
+    title: "Serverless Apache Spark on Google Cloud: Architecture Choices & AI Troubleshooting",
+    summary: "Google Cloud addresses operational overhead via its Managed Service, enabling resilient data pipelines.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Google Cloud introduces automated data governance to reduce the cost of manual processes, ensuring compliance and reducing errors. This innovation enables organizations to focus on high-value tasks rather than mundane data management.",
-    url: "https://cloud.google.com/blog/products/data-analytics/governance-on-autopilot-automate-data-governance-with-lineage/"
+    detail: "The article discusses how Google Cloud's serverless Apache Spark enables enterprises to process massive datasets at scale without managing infrastructure.",
+    url: "https://cloud.google.com/blog/products/data-analytics/serverless-apache-spark-on-google-cloud-architecture-ai-troubleshooting/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Building cost-effective, high-throughput gen AI workflows in Google Dataflow",
-    summary: "Google Cloud enables real-time streaming pipelines with generative AI agents for adaptive execution.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Google Cloud introduces a new approach to real-time data processing by integrating generative AI agents into streaming pipelines. This innovation allows for adaptive execution, moving beyond static logic and fixed processing paths.",
-    url: "https://cloud.google.com/blog/products/data-analytics/cost-effective-genai-workflows-in-google-dataflow/"
+    id: 2, cat: "storage", impact: "high", filler: false,
+    title: "Transfer Amazon S3 data from commercial AWS Regions to AWS European Sovereign Cloud using AWS DataSync Enhanced mode",
+    summary: "AWS introduces DataSync Enhanced mode for secure and efficient data transfer between regions.",
+    source: "AWS Storage", age: "today",
+    detail: "The article highlights the benefits of using AWS DataSync Enhanced mode for transferring data from commercial AWS Regions to AWS European Sovereign Cloud.",
+    url: "https://aws.amazon.com/blogs/storage/transfer-amazon-s3-data-from-aws-commercial-regions-to-aws-european-sovereign-cloud-using-aws-datasync-enhanced-mode/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "How Box is unlocking multimodal enterprise agents with Gemini Embeddings 2",
-    summary: "Box leverages Gemini Embeddings 2 to enable multimodal enterprise AI agents for search and retrieval.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Box partners with Google Cloud to unlock the potential of multimodal AI agents, enabling augmented generation capabilities and transforming enterprise content management.",
-    url: "https://cloud.google.com/blog/topics/partners/box-ai-agents-gemini-embeddings-multimodal-enterprise-ai/"
-  },
-  {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Staying Ahead of Adversarial AI Through Agentic Source Code Review",
-    summary: "Google Cloud introduces structured analysis process to identify and patch vulnerabilities in source code.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Google Cloud addresses the growing threat of adversarial AI by introducing a systematic approach to identifying and mitigating vulnerabilities in source code, ensuring the security of cloud-based applications.",
-    url: "https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/"
-  },
-  {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Building operational resilience with agentic AI in financial services",
-    summary: "Google Cloud enables financial institutions to build operational resilience with agentic AI.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "Google Cloud partners with financial institutions to implement agentic AI, enhancing operational resilience and meeting stringent regulatory requirements. This innovation ensures the security and reliability of critical financial systems.",
-    url: "https://cloud.google.com/blog/topics/financial-services/building-operational-resilience-with-agentic-ai-in-financial-services/"
-  },
-  {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "[Launched] Generally Available: Managed Instance on Azure App Service",
-    summary: "Azure introduces managed instances for web applications, enabling easy migration to cloud.",
+    title: "[Launched] Generally Available: Azure Databricks Lakebase in four additional regions",
+    summary: "Azure expands Lakebase availability to four new regions, providing customers with more deployment options.",
     source: "Azure Updates", age: "today",
-    detail: "Microsoft announces the general availability of managed instances on Azure App Service, simplifying the migration of web applications to the cloud and enhancing overall application management.",
-    url: "https://azure.microsoft.com/updates?id=568952"
+    detail: "The article announces the general availability of Azure Databricks Lakebase in four additional regions, enhancing regional deployment options for customers.",
+    url: "https://azure.microsoft.com/updates?id=569684"
   },
   {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "How Cisco and Auvik simplify network modernization for AI",
-    summary: "Cisco partners with Auvik to provide IT teams with AI-ready infrastructure insights.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "Cisco collaborates with Auvik to offer a comprehensive solution for network modernization, enabling organizations to prepare their infrastructure for AI adoption and ensuring seamless operations.",
-    url: "https://blogs.cisco.com/networking/how-cisco-and-auvik-simplify-network-modernization-for-ai/"
+    id: 4, cat: "storage", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure SQL updates for mid-August 2026",
+    summary: "Azure introduces enhancements to Azure SQL, including customizable keyboard shortcuts and query editor improvements.",
+    source: "Azure Updates", age: "today",
+    detail: "The article highlights the new features and enhancements available in Azure SQL, focusing on usability and development efficiency.",
+    url: "https://azure.microsoft.com/updates?id=569145"
   },
   {
-    id: 8, cat: "vendor", impact: "medium", filler: false,
-    title: "Meet The Data Center Lens video series: Clear answers for modernizing and scaling for AI",
-    summary: "Cisco introduces a video series providing guidance on infrastructure modernization and scaling for AI.",
+    id: 5, cat: "vendor", impact: "high", filler: false,
+    title: "Bring the Fire: Play Games on GeForce NOW With New Firefox Browser Support",
+    summary: "NVIDIA expands GeForce NOW to support Firefox browsers, enabling high-performance PC gaming.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The article announces NVIDIA's expansion of GeForce NOW to support Firefox browsers, providing users with an additional way to access high-performance PC gaming.",
+    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-firefox/"
+  },
+  {
+    id: 6, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Threat Intelligence Group (GTIG) is tracking three distinct suspected Russian cyber espionage threat clusters",
+    summary: "Google's GTIG tracks suspected Russian cyber espionage threat clusters targeting individuals and organizations.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses the findings of Google's Threat Intelligence Group, which has identified three suspected Russian cyber espionage threat clusters.",
+    url: "https://cloud.google.com/blog/topics/threat-intelligence/distinct-clusters-target-individuals-of-interest-to-russia/"
+  },
+  {
+    id: 7, cat: "vendor", impact: "high", filler: false,
+    title: "Cisco Recognized as a Leader in the 2026 Forrester Wave: Data Center Network Solutions",
+    summary: "Forrester names Cisco a Leader in data center network solutions, validating its cohesive Nexus One approach.",
     source: "Cisco Data Center Blog", age: "today",
-    detail: "Cisco launches The Data Center Lens video series, offering practical advice and insights on modernizing infrastructure to support AI adoption and ensuring seamless operations at scale.",
-    url: "https://blogs.cisco.com/datacenter/meet-the-data-center-lens-video-series-clear-answers-for-modernizing-and-scaling-for-ai/"
+    detail: "The article highlights Cisco's recognition as a Leader in the 2026 Forrester Wave for data center network solutions, emphasizing its Nexus One strategy.",
+    url: "https://blogs.cisco.com/datacenter/cisco-recognized-as-leader-in-the-2026-forrester-wave-data-center-network-solutions/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[In preview] Public Preview: Ipv6 support in Azure Firewall",
-    summary: "Azure announces public preview of IPv6 support in Azure Firewall.",
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: vCore Customization: Disable Multithreading and Configurable Constrained Cores",
+    summary: "Azure introduces vCore customization features, enabling better control over VM performance.",
     source: "Azure Updates", age: "today",
-    detail: "Microsoft introduces a public preview of IPv6 support in Azure Firewall, enabling customers to configure and manage firewall rules for both IPv4 and IPv6 traffic.",
-    url: "https://azure.microsoft.com/updates?id=569520"
+    detail: "The article announces the general availability of Azure's vCore customization features, including disablement of multithreading and configurable constrained cores.",
+    url: "https://azure.microsoft.com/updates?id=569051"
   },
   {
-    id: 10, cat: "vendor", impact: "low", filler: true,
-    title: "AI Networking Stocks Are Rallying on Monday. Marvell Up 8%, Credo Up 8%, Ciena Joins the Move",
-    summary: "AI networking stocks surge as investors respond to a research note on chip ramp.",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "A research note on AI chip demand drives up stock prices for companies like Marvell, Credo, and Ciena, highlighting investor optimism in the sector.",
-    url: "https://247wallst.com/investing/2026/08/17/ai-networking-stocks-are-rallying-on-monday-marvell-up-8-credo-up-8-ciena-joins-the-move/"
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: BYON (Bring Your Own NIC) in Azure Site Recovery",
+    summary: "Azure introduces BYON support in Azure Site Recovery, preserving networking configurations.",
+    source: "Azure Updates", age: "today",
+    detail: "The article announces the general availability of Azure's BYON support in Azure Site Recovery, enabling customers to preserve their existing networking configurations.",
+    url: "https://azure.microsoft.com/updates?id=569515"
   },
   {
-    id: 11, cat: "vendor", impact: "low", filler: true,
-    title: "Nvidia's AI moat is shifting from chips to capital",
-    summary: "Nvidia diversifies its AI business, moving beyond chip manufacturing and into areas like capital investments, further solidifying its market position.",
-    source: "CNBC", age: "1 day ago",
-    detail: "Nvidia's strategy shift towards capital investments demonstrates its commitment to expanding its AI ecosystem and maintaining a competitive edge.",
-    url: "https://www.cnbc.com/2026/08/18/nvidias-ai-moat-is-shifting-from-chips-to-capital.html"
+    id: 10, cat: "vendor", impact: "medium", filler: false,
+    title: "Marvell issues warrant to Google for 58.97 million shares at $206.58, tied to custom chip revenue",
+    summary: "Marvell strengthens its position in the custom silicon market with a warrant agreement with Google.",
+    source: "Crypto Briefing", age: "today",
+    detail: "The article discusses Marvell's warrant agreement with Google, which could enhance its influence among tech giants and bolster its custom silicon business.",
+    url: "https://cryptobriefing.com/marvell-google-warrant-custom-chips/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[In preview] Public Preview: Azure VMware Solution License-included service will be retired August 30, 2027",
-    summary: "Azure announces the retirement of its license-included Azure VMware Solution service.",
-    source: "Azure Updates", age: "1 day ago",
-    detail: "Microsoft sets a retirement date for its Azure VMware Solution license-included service, citing changes in VMware licensing policies and encouraging customers to migrate to alternative offerings.",
-    url: "https://azure.microsoft.com/updates?id=569535"
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Fabrinet Q4 Earnings Call Highlights",
+    summary: "Fabrinet reports record fourth-quarter results, with revenue rising 45% year over year.",
+    source: "MarketBeat", age: "2 days ago",
+    detail: "The article summarizes Fabrinet's Q4 earnings call, highlighting its record revenue growth and strong performance in the storage sector.",
+    url: "https://www.marketbeat.com/instant-alerts/fabrinet-q4-earnings-call-highlights-2026-08-17/?utm_source=yahoofinance&utm_medium=yahoofinance"
+  },
+  {
+    id: 12, cat: "cloud", impact: "low", filler: true,
+    title: "Microsoft Corporation's (MSFT) Rich Innovation Legacy Anchors Platform Growth",
+    summary: "Eagle Capital Management discusses Microsoft's innovation legacy and its impact on platform growth.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "The article summarizes Eagle Capital Management's investor letter, which highlights Microsoft's rich innovation legacy and its role in driving platform growth.",
+    url: "https://finance.yahoo.com/markets/stocks/articles/microsoft-corporation-msft-rich-innovation-130805109.html"
+  },
+  {
+    id: 13, cat: "AI", impact: "low", filler: true,
+    title: "Show HN: LLM-Shield-Proxy Zero-Egress PII Streaming Proxy (55MB RAM)",
+    summary: "A developer shares an open-source project for a zero-egress PII streaming proxy with low resource requirements.",
+    source: "Github.com", age: "1 day ago",
+    detail: "The article highlights a GitHub project, LLM-Shield-Proxy, which provides a zero-egress PII streaming proxy with minimal resource requirements.",
+    url: "https://github.com/ninadphalak/LLM-Shield-Proxy"
+  },
+  {
+    id: 14, cat: "AI", impact: "low", filler: true,
+    title: "Why crypto's best infrastructure companies stopped looking like crypto?",
+    summary: "An article explores the evolution of crypto infrastructure companies and their shifting focus.",
+    source: "Konstantintkachuk.com", age: "1 day ago",
+    detail: "The article discusses how top crypto infrastructure companies have adapted to changing market conditions, leading them to diverge from traditional crypto industry characteristics.",
+    url: "https://konstantintkachuk.com/writing/depin-is-dead-long-live-infrastructure-as-a-service/"
+  },
+  {
+    id: 15, cat: "AI", impact: "low", filler: true,
+    title: "Show HN: Vyral – Portable contracts for data, retrieval, durable work, and MCP",
+    summary: "A developer shares an open-source project for portable contracts and local-first runtimes.",
+    source: "Github.com", age: "1 day ago",
+    detail: "The article highlights a GitHub project, Vyral, which provides portable contracts and local-first runtimes for canonical data, retrieval, and durable execution.",
+    url: "https://github.com/Univeracity/vyral"
   },
 ];
 // ARTICLES_END
@@ -888,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud is automating data governance with lineage reducing daily tax and compliance failures and enabling real-time streaming pipelines with generative AI agents for adaptive execution in Dataflow. Meanwhile Azure has launched managed instances for web applications on App Service making it easier to migrate to cloud. Cisco is partnering with Auvik to provide IT teams with AI-ready infrastructure insights and introducing a video series offering guidance on modernizing and scaling infrastructure for AI.";
+const STATIC_BRIEF = "Google Cloud's managed service enables resilient data pipelines by addressing operational overhead making it an attractive option for customers Marvell's warrant agreement with Google strengthens its position in the custom silicon market which could impact Google's GPU/TPU offerings Azure introduces BYON support in Azure Site Recovery and vCore customization features enhancing its competitiveness in the hyperscaler space.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
