@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Cloud CISO Perspectives: Sticking to security fundamentals in the AI era",
-    summary: "Google Cloud blog post on security fundamentals in AI era.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The article highlights the importance of sticking to security fundamentals in the AI era, as explained by Chris Betz.",
-    url: "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-sticking-to-security-fundamentals-in-the-ai-era/"
+    id: 1, cat: "storage", impact: "high", filler: false,
+    title: "Gain visibility into client-side network failures with NEL",
+    summary: "NEL provides visibility into client-side network failures on shared infrastructure like CDNs.",
+    source: "AWS Networking", age: "today",
+    detail: "This article discusses how NEL helps in identifying client-side network failures that are difficult to attribute to a specific origin. It is an important development for companies relying on CDNs.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/gain-visibility-into-client-side-network-failures-with-nel/"
   },
   {
-    id: 2, cat: "AI chip", impact: "high", filler: false,
-    title: "Broadcom reportedly seeking up to $100B in debt financing for AI chip deal",
-    summary: "Broadcom seeks $100B debt financing for AI chip deal.",
-    source: "SiliconANGLE News", age: "2 days ago",
-    detail: "The article reports that Broadcom is seeking up to $100 billion in debt financing to support its AI chip deal.",
-    url: "https://siliconangle.com/2026/08/20/broadcom-reportedly-seeking-up-to-100b-in-debt-financing-for-ai-chip-deal/"
+    id: 2, cat: "vendor", impact: "high", filler: false,
+    title: "Marvell investors must carefully consider latest Google deal",
+    summary: "The terms of Marvell's deal with Google decide whether it helps or hurts the stock.",
+    source: "TheStreet", age: "2 days ago",
+    detail: "This article analyzes the implications of Marvell's custom chip deal with Google on its stock performance. It is a significant development for Marvell investors.",
+    url: "https://www.thestreet.com/investing/stocks/mrvl-marvell-google-custom-chip-deal-warrant"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "AWS Glue 6.0 now available with 30% lower price and full Apache Iceberg v3 support",
-    summary: "AWS Glue 6.0 is available with 30% lower pricing.",
-    source: "AWS News Blog", age: "today",
-    detail: "The article announces the availability of AWS Glue 6.0, which offers 30% lower pricing and full Apache Iceberg v3 support.",
-    url: "https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/"
+    title: "Hyperscalers blindsided by anti-data center movement as $64B in projects stall",
+    summary: "The anti-data center movement highlights growing tension between tech expansion and community concerns.",
+    source: "Crypto Briefing", age: "3 days ago",
+    detail: "This article discusses the implications of the anti-data center movement on hyperscalers' infrastructure strategies. It is a significant development for the industry.",
+    url: "https://cryptobriefing.com/hyperscalers-anti-data-center-movement/"
   },
   {
-    id: 4, cat: "AI infrastructure", impact: "high", filler: false,
-    title: "SpaceX spent $15.8 billion building AI compute infrastructure in just three months",
-    summary: "SpaceX spent $15.8B on AI compute infrastructure.",
-    source: "Space Daily", age: "2 days ago",
-    detail: "The article reports that SpaceX spent $15.8 billion on AI compute infrastructure in just three months, highlighting the massive scale of its AI ambitions.",
-    url: "https://spacedaily.com/t-spacex-ai-compute-15-8-billion-capex-chip-demand/"
-  },
-  {
-    id: 5, cat: "AI chip", impact: "high", filler: false,
-    title: "Marvell hands Google a $12.2bn share option in a custom-chip deal",
-    summary: "Marvell gives Google a $12.2B share option.",
-    source: "The Next Web", age: "2 days ago",
-    detail: "The article reports that Marvell has given Google a $12.2 billion share option as part of a custom-chip deal.",
-    url: "https://thenextweb.com/news/marvell-google-12-2bn-warrant-custom-chip-deal"
-  },
-  {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Microsoft named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms",
-    summary: "Microsoft is a leader in Gartner's Magic Quadrant.",
-    source: "Azure Blog", age: "today",
-    detail: "The article reports that Microsoft has been named a leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms.",
-    url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-cloud-native-application-platforms/"
-  },
-  {
-    id: 7, cat: "AI infrastructure", impact: "medium", filler: false,
-    title: "North Launches North v3 to Help Companies Manage and Optimize Cloud, AI, and Data Spend in One Platform",
-    summary: "North launches v3 to help manage cloud, AI, and data spend.",
-    source: "PRNewswire", age: "today",
-    detail: "The article announces the launch of North v3, a platform that helps companies manage and optimize their cloud, AI, and data spend.",
-    url: "https://www.prnewswire.com/news-releases/north-launches-north-v3-to-help-companies-manage-and-optimize-cloud-ai-and-data-spend-in-one-platform-302856560.html"
-  },
-  {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AWS Builder Lofts in Berlin, Hyderabad, and São Paulo",
-    summary: "AWS opens builder lofts in three cities.",
-    source: "AWS News Blog", age: "today",
-    detail: "The article announces the opening of AWS Builder Lofts in Berlin, Hyderabad, and São Paulo, offering free workshops and event hosting for developers.",
-    url: "https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/"
-  },
-  {
-    id: 9, cat: "AI infrastructure", impact: "medium", filler: false,
-    title: "VyOS: Your Network Shouldn't Wait in Line Behind an AI Data Center",
-    summary: "VyOS argues against waiting for AI data centers.",
-    source: "Vyos.io", age: "2 days ago",
-    detail: "The article argues that networks shouldn't wait for AI data centers, highlighting the need for efficient networking solutions.",
-    url: "https://blog.vyos.io/your-network-shouldnt-wait-in-line-behind-an-ai-data-center"
-  },
-  {
-    id: 10, cat: "AI chip", impact: "medium", filler: false,
-    title: "Nvidia’s new financial strategy does not compute",
-    summary: "The article argues that Nvidia's new financial strategy doesn't add up, highlighting potential issues with its approach.",
-    source: "The Verge", age: "3 days ago",
-    detail: "The article provides a critical analysis of Nvidia's new financial strategy, questioning its viability and impact on the company's future.",
-    url: "https://www.theverge.com/ai-artificial-intelligence/981668/nvidias-goldman-blackrock-gpu-compute-asset"
-  },
-  {
-    id: 11, cat: "AI infrastructure", impact: "low", filler: true,
-    title: "Coatue Management invests nearly 23% of portfolio in 3 AI stocks",
-    summary: "Coatue invests in AI stocks.",
-    source: "Crypto Briefing", age: "2 days ago",
-    detail: "The article reports that Coatue Management has invested nearly 23% of its portfolio in three AI-related stocks, highlighting the growing interest in AI investments.",
-    url: "https://cryptobriefing.com/coatue-management-ai-stocks-portfolio/"
-  },
-  {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Meta becomes one of Microsoft’s largest AI customers",
-    summary: "Meta partners with Microsoft for AI.",
-    source: "Crypto Briefing", age: "2 days ago",
-    detail: "The article reports that Meta has become one of Microsoft's largest AI customers, highlighting the growing partnership between the two companies.",
-    url: "https://cryptobriefing.com/meta-microsoft-largest-ai-customer/"
-  },
-  {
-    id: 13, cat: "AI chip", impact: "low", filler: true,
-    title: "Anthropic Develops Custom AI Chips to Cut NVIDIA Reliance",
-    summary: "Anthropic develops custom AI chips.",
-    source: "Geeky Gadgets", age: "2 days ago",
-    detail: "The article reports that Anthropic has developed custom AI chips, aiming to reduce its reliance on NVIDIA and highlighting the growing trend of custom silicon development.",
-    url: "https://www.geeky-gadgets.com/anthropic-custom-ai-chips/"
-  },
-  {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Amazon Just Gave Investors a Big Reason to Be Bullish",
-    summary: "AWS posts strong growth.",
+    id: 4, cat: "competition", impact: "medium", filler: false,
+    title: "This Stock Is Quietly Becoming an AI Powerhouse in 2026",
+    summary: "Cisco's stock has surged over 60% in a year as it becomes an AI powerhouse.",
     source: "24/7 Wall St.", age: "2 days ago",
-    detail: "The article reports that AWS has posted strong growth, highlighting the growing demand for cloud services and the potential for further expansion.",
-    url: "https://247wallst.com/investing/2026/08/19/amazon-just-gave-investors-a-big-reason-to-be-bullish/"
+    detail: "This article discusses Cisco's transformation into an AI powerhouse and its implications for the industry. It is a significant development for AI investors.",
+    url: "https://247wallst.com/investing/2026/08/22/this-stock-is-quietly-becoming-an-ai-powerhouse-in-2026/"
   },
   {
-    id: 15, cat: "AI infrastructure", impact: "low", filler: true,
-    title: "Agentic AI Market worth $205.88 billion by 2033 - Report by MarketsandMarkets™",
-    summary: "Agentic AI market to reach $205.88B.",
-    source: "PRNewswire", age: "2 days ago",
-    detail: "The article reports that the Agentic AI market is expected to reach $205.88 billion by 2033, highlighting the growing potential of AI-driven infrastructure.",
-    url: "https://www.prnewswire.com/news-releases/agentic-ai-market-worth-205-88-billion-by-2033--report-by-marketsandmarkets-302856175.html"
+    id: 5, cat: "silicon", impact: "high", filler: false,
+    title: "Anthropic hires Google chip veteran to advance hardware efforts",
+    summary: "Anthropic's custom chip development could shift AI industry dynamics.",
+    source: "Crypto Briefing", age: "3 days ago",
+    detail: "This article discusses Anthropic's hiring of a Google chip veteran and its implications for the AI industry. It is a significant development for companies relying on traditional cloud partners.",
+    url: "https://cryptobriefing.com/anthropic-hires-google-chip-veteran-silicon-team/"
+  },
+  {
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Starcloud raises $250M to build AI data centers in orbit",
+    summary: "Starcloud raises funding to build AI data centers in orbit.",
+    source: "SiliconANGLE News", age: "3 days ago",
+    detail: "This article discusses Starcloud's fundraising efforts to build AI data centers in orbit. It is a significant development for the AI industry.",
+    url: "https://siliconangle.com/2026/08/21/starcloud-raises-250m-to-build-ai-data-centers-in-orbit/"
+  },
+  {
+    id: 7, cat: "storage", impact: "high", filler: false,
+    title: "How Nearmap built continental-scale aerial search using Amazon S3 Vectors",
+    summary: "Nearmap uses Amazon S3 Vectors to build continental-scale aerial search.",
+    source: "AWS Storage", age: "today",
+    detail: "This article discusses Nearmap's use of Amazon S3 Vectors to build a continental-scale aerial search capability. It is a significant development for companies relying on cloud storage.",
+    url: "https://aws.amazon.com/blogs/storage/how-nearmap-built-continental-scale-aerial-search-using-amazon-s3-vectors/"
+  },
+  {
+    id: 8, cat: "silicon", impact: "high", filler: false,
+    title: "AI Chip Architectures",
+    summary: "A look at AI chip architectures from NVIDIA, AMD, TPUs, and more.",
+    source: "Jepeake.com", age: "1 day ago",
+    detail: "This article provides an overview of various AI chip architectures. It is a significant development for companies relying on AI chips.",
+    url: "https://www.jepeake.com/ai-chip-architectures"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Week in review: Records allegedly stolen from Azure tenants",
+    summary: "A week in review of interesting news and articles on cloud security.",
+    source: "Help Net Security", age: "1 day ago",
+    detail: "This article provides a weekly review of interesting news and articles on cloud security. It is a significant development for hyperscalers.",
+    url: "https://www.helpnetsecurity.com/2026/08/23/week-in-review-records-allegedly-stolen-from-azure-tenants-medusa-ransomware-hits-500-orgs/"
+  },
+  {
+    id: 10, cat: "competition", impact: "medium", filler: false,
+    title: "David Tepper dumps SanDisk after 591% rally, pivots Appaloosa into AI chip stocks",
+    summary: "Tepper's pivot to AI and infrastructure stocks highlights a strategic shift.",
+    source: "Crypto Briefing", age: "1 day ago",
+    detail: "This article discusses David Tepper's pivot to AI and infrastructure stocks and its implications for the industry. It is a significant development for AI investors.",
+    url: "https://cryptobriefing.com/tepper-sells-sandisk-ai-chip-stocks/"
+  },
+  {
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "The AI boom is lifting economies across Asia. But for Southeast Asia, it might just be a ‘short-term blip’",
+    summary: "Economists studying the region are worried that AI’s gains won’t be evenly shared.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "This article discusses the implications of the AI boom on Asian economies. It provides some context to the industry developments.",
+    url: "https://finance.yahoo.com/economy/articles/ai-boom-lifting-economies-across-210000747.html"
+  },
+  {
+    id: 12, cat: "silicon", impact: "low", filler: true,
+    title: "Taiwan Semiconductor (TSM) Sales Just Jumped 45%. Why is the Chip Sector Still Selling Off?",
+    summary: "Taiwan Semiconductor reports strong sales growth amidst a sell-off in the chip sector.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "This article discusses Taiwan Semiconductor's sales growth and its implications for the chip sector. It provides some context to the industry developments.",
+    url: "https://finance.yahoo.com/technology/ai/articles/taiwan-semiconductor-tsm-sales-just-205844477.html"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "low", filler: true,
+    title: "From tokenmaxxing to sovereign alpha: Who controls your AI economics?",
+    summary: "The artificial intelligence industry wants enterprises to measure progress in tokens.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "This article discusses the implications of measuring AI progress in tokens and its impact on enterprise value. It provides some context to the industry developments.",
+    url: "https://siliconangle.com/2026/08/22/from-tokenmaxxing-to-sovereign-alpha-who-controls-your-ai-economics/"
+  },
+  {
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "The veteran Fortune 500 CEO who turned an 80-year-old AC company into an AI darling",
+    summary: "A veteran CEO transformed Honeywell and then invested in a little-known company called Vertiv.",
+    source: "Fortune", age: "2 days ago",
+    detail: "This article discusses the transformation of Honeywell and its implications for the industry. It provides some context to the industry developments.",
+    url: "https://fortune.com/article/dave-cote-vertiv-stock-performance-ai-boom/"
+  },
+  {
+    id: 15, cat: "competition", impact: "low", filler: true,
+    title: "AI infrastructure boom reshapes industrial materials procurement",
+    summary: "The AI infrastructure boom is changing the way companies procure industrial materials.",
+    source: "Digital Journal", age: "2 days ago",
+    detail: "This article discusses the implications of the AI infrastructure boom on industrial materials procurement. It provides some context to the industry developments.",
+    url: "https://www.digitaljournal.com/article/ai-infrastructure-boom-reshapes-industrial-materials-procurement/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Marvell has handed Google a $12.2 billion share option in a custom-chip deal, giving Google significant leverage in its AI infrastructure development. Meanwhile, Microsoft has been named a Leader in the 2026 Gartner Magic Quadrant for Cloud-Native Application Platforms, posing a competitive threat to Google's cloud services. Additionally, Broadcom is reportedly seeking up to $100 billion in debt financing for an AI chip deal, highlighting the intense investment and competition in the AI chip market that will impact supply chains and infrastructure development.";
+const STATIC_BRIEF = "Gain visibility into client-side network failures on shared infrastructure like CDNs with NEL providing critical insights to optimize Google's networking and storage capabilities. Cisco is quietly becoming an AI powerhouse with its stock surging over 60% in a year, posing a competitive threat to Google's AI ambitions. Marvell investors are carefully considering the terms of their deal with Google, which could impact the supply chain for Google's GPU/TPU infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
