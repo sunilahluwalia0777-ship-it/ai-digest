@@ -648,123 +648,115 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Now introducing Gemini Enterprise for Legal",
-    summary: "Gemini Enterprise for Legal provides secure and compliant infrastructure for legal professionals, enabling them to work efficiently with sensitive data.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This new offering from Google Cloud is designed specifically for the legal industry, providing a secure and compliant environment for legal professionals to work with sensitive client data. Gemini Enterprise for Legal offers robust security features, nuanced permission controls, and integrations with popular legal tools.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal/"
+    title: "Infrastructure for the AI era Dynamic capacity management for agents",
+    summary: "Google Cloud announced new FinOps controls for Gemini Enterprise to help organizations manage project-level AI spend and eliminate token shock.",
+    source: "Google Cloud Blog", age: "",
+    detail: "The internet connected billions of people and mobile devices, putting computers in every hand. Now, we’re in the middle of the next big technology shift, deploying millions of autonomous AI agents to work alongside employees and end users.",
+    url: "https://cloud.google.com/blog/topics/ai-infrastructure/best-practices-for-dynamic-capacity-management/"
   },
   {
-    id: 2, cat: "storage", impact: "high", filler: false,
-    title: "Now introducing Gemini Enterprise for Financial Services",
-    summary: "Gemini Enterprise for Financial Services provides a secure and compliant infrastructure for financial institutions, enabling them to work efficiently with sensitive data.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This new offering from Google Cloud is designed specifically for the financial services industry, providing a secure and compliant environment for financial professionals to work with sensitive client data. Gemini Enterprise for Financial Services offers robust security features, nuanced permission controls, and integrations with popular financial tools.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "FinOps for the AI era New flexible billing and cost controls for agents",
+    summary: "Google Cloud announced new FinOps controls to help organizations manage project-level AI spend and eliminate token shock.",
+    source: "Google Cloud Blog", age: "",
+    detail: "To get a real return on AI, financial operations (FinOps) and cost management must evolve alongside technology, giving you clear visibility, proactive cost controls, and flexible payment models that fit your needs.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/flexible-billing-and-cost-controls-for-agents-on-google-cloud/"
   },
   {
     id: 3, cat: "storage", impact: "high", filler: false,
-    title: "New AI-powered quick assessments in Migration Center turbocharge modernization",
-    summary: "Google Cloud's Migration Center now offers AI-powered quick assessments, enabling faster and more accurate infrastructure modernization.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "This new capability from Google Cloud uses machine learning to quickly assess an organization's infrastructure, providing a clear path to modernization. The AI-powered quick assessments in Migration Center enable organizations to rapidly identify areas for improvement, estimate costs, and prioritize their modernization efforts.",
-    url: "https://cloud.google.com/blog/products/infrastructure-modernization/ai-powered-quick-assessments-in-migration-center/"
+    title: "Bringing gVisor sandboxes to distributed Ray clusters",
+    summary: "Google Cloud announced support for new games, anti-cheat technologies and increased visual quality on Ray clusters.",
+    source: "Google Cloud Blog", age: "",
+    detail: "The reinforcement learning (RL) ecosystem is rapidly adopting Ray as the unified compute runtime for complex post-training workflows. Across Google Cloud, we see customers using Ray for workloads ranging from multimodal data pipelines to frontier RL.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/gvisor-sandboxes-for-ray-clusters-on-gke/"
   },
   {
-    id: 4, cat: "storage", impact: "high", filler: false,
-    title: "Empowering autonomous agents with advanced security governance",
-    summary: "Google Cloud's new State of AI Infrastructure report highlights the importance of security governance for autonomous agents.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "As autonomous agents become more prevalent, securing them becomes a top priority. Google Cloud's report emphasizes the need for robust security governance to ensure these agents operate safely and efficiently. The report provides guidance on implementing effective security controls and managing risk in AI-infrastructure environments.",
-    url: "https://cloud.google.com/blog/topics/ai-infrastructure/state-of-ai-infrastructure-report-agent-governance-and-security/"
+    id: 4, cat: "competition", impact: "medium", filler: false,
+    title: "Happy 20th Birthday, Amazon EC2",
+    summary: "AWS recognized how it has continued to push the boundaries of what cloud computing can deliver.",
+    source: "AWS News Blog", age: "",
+    detail: "On the 20th Anniversary, we recognize how AWS has continued to push the boundaries of what cloud computing can deliver, building custom silicon for general-purpose and AI workloads and expanding EC2 into new form factors and deployment models that our customers in 2006 could not have imagined.",
+    url: "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/"
   },
   {
-    id: 5, cat: "storage", impact: "high", filler: false,
-    title: "How agents can delegate better",
-    summary: "Google Cloud provides guidance on effective delegation strategies for autonomous agents, enabling more efficient AI-infrastructure operations.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "As autonomous agents become more prevalent, delegating tasks effectively becomes crucial. Google Cloud's guidance outlines best practices for designing and implementing delegation strategies that enable agents to operate efficiently and securely, while minimizing the risk of errors or security breaches.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/how-agents-can-delegate-better/"
+    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Announcing: Aspire 13.5 has shipped",
+    summary: "Azure announced the availability of Aspire 13.5, which refreshes the dashboard and aspire.dev.",
+    source: "Azure Updates", age: "",
+    detail: "Aspire 13.5 refreshes the dashboard and aspire.dev, expands the Interaction Service, adds cross-scope Azure references and persistent Kubernetes volumes, and brings live terminals into the apphost.",
+    url: "https://azure.microsoft.com/updates?id=569910"
   },
   {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet",
-    summary: "Meta introduces MetaRoCE, a new RDMA transport protocol designed for high-performance AI workloads on commodity Ethernet.",
-    source: "Meta Engineering", age: "today",
-    detail: "MetaRoCE is a custom-built RDMA transport protocol optimized for AI-scale Ethernet environments. It provides fast and reliable data transfer between GPUs, enabling efficient training and inference of large AI models.",
-    url: "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/"
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs",
+    summary: "Azure announced the general availability of new VM sizes powered by Intel Xeon processors.",
+    source: "Azure Updates", age: "",
+    detail: "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel Xeon processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute performance than prior-generation Intel-based v6 VMs.",
+    url: "https://azure.microsoft.com/updates?id=569546"
   },
   {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "MTIA 300: Meta's First Training Chip with Built-in NICs and Communication-Offloading Engines",
-    summary: "Meta introduces MTIA 300, its first training chip designed for AI workloads, featuring built-in NICs and communication-offloading engines.",
-    source: "Meta Engineering", age: "today",
-    detail: "MTIA 300 is a custom-built training chip optimized for AI workloads. It integrates high-performance NICs and communication-offloading engines, enabling efficient data transfer and processing of large AI models.",
-    url: "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/"
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server",
+    summary: "Azure announced extended support for Azure Database for PostgreSQL Flexible Server.",
+    source: "Azure Updates", age: "",
+    detail: "Extended Support for Azure Database for PostgreSQL Flexible Server helps you maintain secure, supported workloads while transitioning to newer PostgreSQL versions. With access to critical security updates, critical bug fixes, and technical support for eligible PostgreSQL versions, yo",
+    url: "https://azure.microsoft.com/updates?id=569526"
   },
   {
     id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "NVIDIA Groq 3 LPX Now in Full Production With World-Class Speed for Agentic AI",
-    summary: "NVIDIA announces the full production of its Groq 3 LPX accelerator, designed for high-performance agentic AI applications.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "Groq 3 LPX is a custom-built accelerator optimized for agentic AI workloads. It provides fast and efficient processing of large AI models, enabling rapid development and deployment of AI-powered applications.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai"
+    title: "Retirement: Support for Node 22 LTS ends on April 30, 2027",
+    summary: "Azure announced the end of support for Node 22 LTS.",
+    source: "Azure Updates", age: "",
+    detail: "On April 30 2027, support for Node 22 LTS will end. Your apps that are hosted on App Service will continue to run, but security updates will no longer be available, and we’ll no longer provide customer service for Node 22 LTS.",
+    url: "https://azure.microsoft.com/updates?id=567334"
   },
   {
-    id: 9, cat: "competition", impact: "medium", filler: false,
-    title: "SpaceXAI Adopts NVIDIA Vera CPU to Accelerate Agentic AI at Massive Scale",
-    summary: "SpaceXAI selects NVIDIA's Vera CPU to accelerate its agentic AI applications, enabling large-scale deployment of AI-powered services.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "NVIDIA's Vera CPU is a custom-built processor optimized for agentic AI workloads. Its adoption by SpaceXAI will enable the development and deployment of large-scale AI-powered applications, driving innovation in various industries.",
-    url: "https://nvidianews.nvidia.com/news/spacexai-adopts-nvidia-vera-cpu-to-accelerate-agentic-ai-at-massive-scale"
+    id: 9, cat: "vendor", impact: "high", filler: false,
+    title: "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
+    summary: "NVIDIA announced support for new games, anti-cheat technologies and increased visual quality on RTX Spark.",
+    source: "NVIDIA Blog", age: "",
+    detail: "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and developers bringing their blockbuster titles to NVIDIA RTX Spark ahead of its launch.",
+    url: "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/"
   },
   {
-    id: 10, cat: "competition", impact: "medium", filler: false,
-    title: "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-    summary: "NVIDIA's Vera Rubin NVL72 processor achieves up to 30x more work per watt, setting a new efficiency standard for AI agents.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "Vera Rubin NVL72 is a custom-built processor optimized for AI agent workloads. Its exceptional energy efficiency enables the development of sustainable and scalable AI-powered applications.",
-    url: "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+    id: 10, cat: "vendor", impact: "high", filler: false,
+    title: "How XPUs Meet a World-Class AI Factory",
+    summary: "NVIDIA announced its vision for building custom XPUs and full factory solutions for AI.",
+    source: "NVIDIA Blog", age: "",
+    detail: "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, tokens per watt, cost per token, utilization and uptime. That requires AI infrastructure designed and built as a full factory, not a collection of individual accelerators.",
+    url: "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Weekly Roundup: Student Rewards on AWS Builder Center, Local Zone in Las Vegas, and more (August 24, 2026)",
-    summary: "AWS announces student rewards on AWS Builder Center, a new local zone in Las Vegas, and other updates.",
-    source: "AWS News Blog", age: "today",
-    detail: "This weekly roundup from AWS covers various announcements, including student rewards on AWS Builder Center, the launch of a new local zone in Las Vegas, and more.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-student-rewards-on-aws-builder-center-local-zone-in-las-vegas-and-more-august-24-2026/"
+    id: 11, cat: "vendor", impact: "medium", filler: true,
+    title: "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    summary: "NVIDIA announced the production of its Groq 3 LPX chip and extended its Vera Rubin inference capabilities.",
+    source: "NVIDIA Blog", age: "",
+    detail: "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together.",
+    url: "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "CloudFront Functions Unified Logging",
-    summary: "AWS announces unified logging for CloudFront Functions, enabling easier monitoring and troubleshooting of edge functions.",
-    source: "AWS Networking", age: "today",
-    detail: "Unified logging for CloudFront Functions provides a single, consolidated view of log data, making it easier to monitor and troubleshoot edge functions.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/cloudfront-functions-unified-logging/"
+    id: 12, cat: "vendor", impact: "medium", filler: true,
+    title: "NVIDIA Announces Jetson Orin Nano 2 Robotics Computer to Redefine Entry-Level Edge AI",
+    summary: "NVIDIA announced its new robotics computer for edge AI.",
+    source: "NVIDIA Newsroom", age: "",
+    detail: "NVIDIA today announced NVIDIA Jetson Orin Nano 2, a new robotics computer set to redefine entry-level edge AI — putting frontier-class generative AI performance in the hands of millions of developers.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai"
   },
   {
     id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Shared DNS views for multi-account environments with Amazon Route 53 Global Resolver",
-    summary: "AWS introduces shared DNS views for multi-account environments, enabling centralized management of DNS resolution.",
-    source: "AWS Networking", age: "today",
-    detail: "Amazon Route 53 Global Resolver's shared DNS views enable organizations to centrally manage DNS resolution across multiple accounts, simplifying domain name system administration.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/shared-dns-views-for-multi-account-environments-with-amazon-route-53-global-resolver/"
+    title: "The Cognitive Campus Center Journey",
+    summary: "Arista Networks announced its vision for building a unified architecture for AI.",
+    source: "Arista Blog", age: "",
+    detail: "For decades, the industry had accepted a status quo plagued by fragile, overly complex, disparate operating systems, rigid hardware controllers, fragmented visibility, and archaic management of siloed three-tier (Access Aggregation Core) designs. We knew there was a better way.",
+    url: "https://blogs.arista.com/blog/the-cognitive-campus-center-journey"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[Launched] Generally Available: eBPF host routing in Advanced Container Networking Services for AKS",
-    summary: "Azure announces the general availability of eBPF host routing in Advanced Container Networking Services for Azure Kubernetes Service (AKS).",
-    source: "Azure Updates", age: "today",
-    detail: "eBPF host routing improves Kubernetes networking performance by moving packet forwarding and routing decisions directly into the Linux kernel.",
-    url: "https://azure.microsoft.com/updates?id=569873"
-  },
-  {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "[Launched] Generally Available: Custom block response code and body for Application Gateway WAF",
-    summary: "Azure announces the general availability of custom block response codes and bodies for Web Application Firewall (WAF) integrated with Application Gateway.",
-    source: "Azure Updates", age: "today",
-    detail: "Customizable response codes and bodies enable organizations to tailor their security responses to specific threat scenarios, improving web application security.",
-    url: "https://azure.microsoft.com/updates?id=569504"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "Cisco and Nvidia take AI factories from rack to runtime",
+    summary: "Cisco and NVIDIA announced their partnership to integrate AI compute systems into Cisco's Secure AI Factory.",
+    source: "SiliconANGLE News", age: "",
+    detail: "AI factories are moving from ambitious plans toward production, but the path from graphics processing unit acquisition to usable systems remains a race against time. Neoclouds already have customers waiting for capacity, enterprises are looking to bring infer…",
+    url: "https://siliconangle.com/2026/08/25/cisco-and-nvidia-take-ai-factories-from-rack-to-runtime-cisconvidiaaifactory/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud's Migration Center now offers AI-powered quick assessments enabling faster and more accurate infrastructure modernization which is critical for our GPU/TPU customers who require efficient and secure data processing and storage solutions. Meanwhile Meta and NVIDIA are aggressively pushing the boundaries of AI-scale Ethernet and training chips with built-in NICs and communication-offloading engines posing a competitive threat to Google's networking and storage offerings. Additionally supply chain disruptions could impact our ability to meet customer demand for GPU/TPU hardware and infrastructure components.";
+const STATIC_BRIEF = "Google Cloud has announced new FinOps controls for Gemini Enterprise and HyperScaler to help organizations manage project-level AI spend and eliminate token shock, providing a more efficient and cost-effective infrastructure for AI workloads. Meanwhile, Azure is continuing to push the boundaries of cloud computing with its recent announcements on VM sizes and database support, signaling a competitive threat in the market. NVIDIA's focus on building custom XPUs and full factory solutions for AI underscores the importance of monitoring supply chain developments that can impact Google Cloud's ability to deliver high-performance AI infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

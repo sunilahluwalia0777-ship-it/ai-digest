@@ -1,0 +1,173 @@
+{
+  "date": "2026-08-26",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "storage",
+      "impact": "high",
+      "filler": false,
+      "title": "Infrastructure for the AI era Dynamic capacity management for agents",
+      "summary": "Google Cloud announced new FinOps controls for Gemini Enterprise to help organizations manage project-level AI spend and eliminate token shock.",
+      "detail": "The internet connected billions of people and mobile devices, putting computers in every hand. Now, we\u2019re in the middle of the next big technology shift, deploying millions of autonomous AI agents to work alongside employees and end users.",
+      "source": "Google Cloud Blog",
+      "age": "",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/best-practices-for-dynamic-capacity-management/"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "FinOps for the AI era New flexible billing and cost controls for agents",
+      "summary": "Google Cloud announced new FinOps controls to help organizations manage project-level AI spend and eliminate token shock.",
+      "detail": "To get a real return on AI, financial operations (FinOps) and cost management must evolve alongside technology, giving you clear visibility, proactive cost controls, and flexible payment models that fit your needs.",
+      "source": "Google Cloud Blog",
+      "age": "",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/flexible-billing-and-cost-controls-for-agents-on-google-cloud/"
+    },
+    {
+      "id": 3,
+      "cat": "storage",
+      "impact": "high",
+      "filler": false,
+      "title": "Bringing gVisor sandboxes to distributed Ray clusters",
+      "summary": "Google Cloud announced support for new games, anti-cheat technologies and increased visual quality on Ray clusters.",
+      "detail": "The reinforcement learning (RL) ecosystem is rapidly adopting Ray as the unified compute runtime for complex post-training workflows. Across Google Cloud, we see customers using Ray for workloads ranging from multimodal data pipelines to frontier RL.",
+      "source": "Google Cloud Blog",
+      "age": "",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/gvisor-sandboxes-for-ray-clusters-on-gke/"
+    },
+    {
+      "id": 4,
+      "cat": "competition",
+      "impact": "medium",
+      "filler": false,
+      "title": "Happy 20th Birthday, Amazon EC2",
+      "summary": "AWS recognized how it has continued to push the boundaries of what cloud computing can deliver.",
+      "detail": "On the 20th Anniversary, we recognize how AWS has continued to push the boundaries of what cloud computing can deliver, building custom silicon for general-purpose and AI workloads and expanding EC2 into new form factors and deployment models that our customers in 2006 could not have imagined.",
+      "source": "AWS News Blog",
+      "age": "",
+      "url": "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/"
+    },
+    {
+      "id": 5,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Announcing: Aspire 13.5 has shipped",
+      "summary": "Azure announced the availability of Aspire 13.5, which refreshes the dashboard and aspire.dev.",
+      "detail": "Aspire 13.5 refreshes the dashboard and aspire.dev, expands the Interaction Service, adds cross-scope Azure references and persistent Kubernetes volumes, and brings live terminals into the apphost.",
+      "source": "Azure Updates",
+      "age": "",
+      "url": "https://azure.microsoft.com/updates?id=569910"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[Launched] Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs",
+      "summary": "Azure announced the general availability of new VM sizes powered by Intel Xeon processors.",
+      "detail": "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel Xeon processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute performance than prior-generation Intel-based v6 VMs.",
+      "source": "Azure Updates",
+      "age": "",
+      "url": "https://azure.microsoft.com/updates?id=569546"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server",
+      "summary": "Azure announced extended support for Azure Database for PostgreSQL Flexible Server.",
+      "detail": "Extended Support for Azure Database for PostgreSQL Flexible Server helps you maintain secure, supported workloads while transitioning to newer PostgreSQL versions. With access to critical security updates, critical bug fixes, and technical support for eligible PostgreSQL versions, yo",
+      "source": "Azure Updates",
+      "age": "",
+      "url": "https://azure.microsoft.com/updates?id=569526"
+    },
+    {
+      "id": 8,
+      "cat": "competition",
+      "impact": "medium",
+      "filler": false,
+      "title": "Retirement: Support for Node 22 LTS ends on April 30, 2027",
+      "summary": "Azure announced the end of support for Node 22 LTS.",
+      "detail": "On April 30 2027, support for Node 22 LTS will end. Your apps that are hosted on App Service will continue to run, but security updates will no longer be available, and we\u2019ll no longer provide customer service for Node 22 LTS.",
+      "source": "Azure Updates",
+      "age": "",
+      "url": "https://azure.microsoft.com/updates?id=567334"
+    },
+    {
+      "id": 9,
+      "cat": "vendor",
+      "impact": "high",
+      "filler": false,
+      "title": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
+      "summary": "NVIDIA announced support for new games, anti-cheat technologies and increased visual quality on RTX Spark.",
+      "detail": "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and developers bringing their blockbuster titles to NVIDIA RTX Spark ahead of its launch.",
+      "source": "NVIDIA Blog",
+      "age": "",
+      "url": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/"
+    },
+    {
+      "id": 10,
+      "cat": "vendor",
+      "impact": "high",
+      "filler": false,
+      "title": "How XPUs Meet a World-Class AI Factory",
+      "summary": "NVIDIA announced its vision for building custom XPUs and full factory solutions for AI.",
+      "detail": "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, tokens per watt, cost per token, utilization and uptime. That requires AI infrastructure designed and built as a full factory, not a collection of individual accelerators.",
+      "source": "NVIDIA Blog",
+      "age": "",
+      "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+    },
+    {
+      "id": 11,
+      "cat": "vendor",
+      "impact": "medium",
+      "filler": true,
+      "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+      "summary": "NVIDIA announced the production of its Groq 3 LPX chip and extended its Vera Rubin inference capabilities.",
+      "detail": "The next era of AI inference won\u2019t be defined by a single breakthrough chip, network or system. It\u2019ll be defined by how every layer of the AI factory works together.",
+      "source": "NVIDIA Blog",
+      "age": "",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+    },
+    {
+      "id": 12,
+      "cat": "vendor",
+      "impact": "medium",
+      "filler": true,
+      "title": "NVIDIA Announces Jetson Orin Nano 2 Robotics Computer to Redefine Entry-Level Edge AI",
+      "summary": "NVIDIA announced its new robotics computer for edge AI.",
+      "detail": "NVIDIA today announced NVIDIA Jetson Orin Nano 2, a new robotics computer set to redefine entry-level edge AI \u2014 putting frontier-class generative AI performance in the hands of millions of developers.",
+      "source": "NVIDIA Newsroom",
+      "age": "",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai"
+    },
+    {
+      "id": 13,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "The Cognitive Campus Center Journey",
+      "summary": "Arista Networks announced its vision for building a unified architecture for AI.",
+      "detail": "For decades, the industry had accepted a status quo plagued by fragile, overly complex, disparate operating systems, rigid hardware controllers, fragmented visibility, and archaic management of siloed three-tier (Access Aggregation Core) designs. We knew there was a better way.",
+      "source": "Arista Blog",
+      "age": "",
+      "url": "https://blogs.arista.com/blog/the-cognitive-campus-center-journey"
+    },
+    {
+      "id": 14,
+      "cat": "vendor",
+      "impact": "low",
+      "filler": true,
+      "title": "Cisco and Nvidia take AI factories from rack to runtime",
+      "summary": "Cisco and NVIDIA announced their partnership to integrate AI compute systems into Cisco's Secure AI Factory.",
+      "detail": "AI factories are moving from ambitious plans toward production, but the path from graphics processing unit acquisition to usable systems remains a race against time. Neoclouds already have customers waiting for capacity, enterprises are looking to bring infer\u2026",
+      "source": "SiliconANGLE News",
+      "age": "",
+      "url": "https://siliconangle.com/2026/08/25/cisco-and-nvidia-take-ai-factories-from-rack-to-runtime-cisconvidiaaifactory/"
+    }
+  ]
+}
