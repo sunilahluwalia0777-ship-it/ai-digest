@@ -1,0 +1,125 @@
+{
+  "date": "2026-08-27",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "networking",
+      "impact": "high",
+      "filler": false,
+      "title": "How Uber improves network reliability while unblocking cloud migration",
+      "summary": "Uber has a lot in common with the cities it serves. Both are always changing and growing, both must carefully manage the resulting traffic to prevent congestion and sprawl.",
+      "detail": "Uber has continuously evolved its technical strategies to manage its expanding network, and this careful planning and constant evolution helps ensure that application traffic across its entire platform runs smoothly.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/networking/uber-de-risks-hybrid-ai-with-cloud-interconnect/",
+      "age": "today"
+    },
+    {
+      "id": 2,
+      "cat": "storage",
+      "impact": "medium",
+      "filler": false,
+      "title": "Automate root cause analysis for AWS Backup failures with AWS DevOps Agent",
+      "summary": "AWS Backup centralizes data protection in your organization across hundreds of accounts and AWS Regions for more than 20 AWS services.",
+      "detail": "Most failures trace back to something small, such as a role missing permission, an encryption key policy blocking the backup.",
+      "source": "AWS Storage",
+      "url": "https://aws.amazon.com/blogs/storage/automate-root-cause-analysis-for-aws-backup-failures-with-aws-devops-agent/",
+      "age": "today"
+    },
+    {
+      "id": 3,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "AWS and NVIDIA to Deliver 2 Million Additional GPUs and Next-Generation Infrastructure for Agentic and Physical AI",
+      "summary": "Amazon Web Services (AWS), an Amazon.com, Inc. company (NASDAQ: AMZN), and NVIDIA (NASDAQ: NVDA) today announced a major expansion of their strategic collaboration.",
+      "detail": "The next phase will be defined by what happens after those GPUs arrive.",
+      "source": "Yahoo Entertainment",
+      "url": "https://finance.yahoo.com/news/aws-nvidia-deliver-2-million-140000642.html",
+      "age": "today"
+    },
+    {
+      "id": 4,
+      "cat": "AI",
+      "impact": "high",
+      "filler": false,
+      "title": "The network becomes the computer as Cisco and NVIDIA push rack-scale systems into production",
+      "summary": "The artificial intelligence infrastructure market is crossing an important threshold.",
+      "detail": "Cisco partners with Supermicro to integrate NVIDIA-based AI compute systems into its Secure AI Factory, with pre-validated systems available.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/cisco-supermicro-ai-factory-partnership/",
+      "age": "today"
+    },
+    {
+      "id": 5,
+      "cat": "AI",
+      "impact": "medium",
+      "filler": false,
+      "title": "Democratizing the AI data center: How Cisco and NVIDIA are bringing rack-scale power to the enterprise",
+      "summary": "When a new industry erupts, the early leaders rarely become the final winners.",
+      "detail": "The headline number is 20 petaFLOPS of FP4 compute, delivered by a single Blackwell Ultra node beside your desk.",
+      "source": "Benzinga",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61408350/nvidia-earnings-ai-bottlenecks?utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI",
+      "age": "today"
+    },
+    {
+      "id": 6,
+      "cat": "networking",
+      "impact": "medium",
+      "filler": false,
+      "title": "Cisco expands rack-scale secure AI factory stack with Supermicro partnership",
+      "summary": "The launch of this ETN highlights growing investor interest in AI, but also underscores the risks of leveraged products and market volatility.",
+      "detail": "Humans need to act, as AI agents scheme in the digital shadows.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/cisco-supermicro-ai-factory-partnership/",
+      "age": "today"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Nvidia bets on 6G AI as Nokia China exit deepens telecom split - Asia Times",
+      "summary": "Nokia is walking away from mainland China after two decades of building out its networks there, closing nearly every site by year-end.",
+      "detail": "The company's multiyear purchase commitments have nearly tripled in a year while its view of customer demand still reaches only two quarters out.",
+      "source": "Asia Times",
+      "url": "https://asiatimes.com/2026/08/nokia-china-exit-deepens-telecom-split-as-nvidia-bets-on-6g-ai/",
+      "age": "today"
+    },
+    {
+      "id": 8,
+      "cat": "AI",
+      "impact": "medium",
+      "filler": false,
+      "title": "Forget Nvidia. Cisco Could Be a Hidden Winner From the AI Boom.",
+      "summary": "The early leaders rarely become the final winners, and top investors say the same pattern is playing out across AI right now.",
+      "detail": "Berkshire Hathaway's Q2 filing shows an 83% boost in its Alphabet stake to $37.8 billion, added to Lennar, and cut Capital One, Nucor, Kroger, and Constellation Brands.",
+      "source": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/event-salesforce-ceo-benioff-says-enterprise-ai-adoption-is-still-just-beginning/2026-08-24",
+      "age": "today"
+    },
+    {
+      "id": 9,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "REX launches 3x MaNGoS+ ex Private Companies ETN tomorrow on NYSE Arca",
+      "summary": "While autos and steel have taken centre stage in the Canada-U.S. trade war, experts say prices rising tariffs could rise prices for electronics.",
+      "detail": "Nothing is driving more new U.S. economic investment or political volatility than data centers.",
+      "source": "CBC News",
+      "url": "https://www.cbc.ca/news/business/trump-tariff-ai-9.7318970",
+      "age": "today"
+    },
+    {
+      "id": 10,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "It\u2019s Time to Rein in Lethal AI Drones",
+      "summary": "Nokia is walking away from mainland China after two decades of building out its networks there, closing nearly every site by year-end.",
+      "detail": "Arista Networks Is Buying Further Ahead Than It Can See.",
+      "source": "Asia Times",
+      "url": "https://asiatimes.com/2026/08/nokia-china-exit-deepens-telecom-split-as-nvidia-bets-on-6g-ai/",
+      "age": "today"
+    }
+  ]
+}
