@@ -1,0 +1,115 @@
+{
+  "date": "2026-08-28",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Reimagining work: How Pythian's internal AI playbook delivers customer ROI",
+      "summary": "Pythian rolled out Google Cloud's Gemini Enterprise across its 500-person company in 27 countries to discover how enterprise AI actually delivers ROI.",
+      "source": "Google Cloud",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/reimagining-work-how-pythians-internal-ai-playbook-delivers-customer-roi",
+      "publishedAt": "2026-08-26T14:00:00Z"
+    },
+    {
+      "id": 2,
+      "cat": "gpu",
+      "impact": "medium",
+      "filler": false,
+      "title": "Google TPU volume could triple to 9 million by 2027, challenging NVIDIA's AI dominance",
+      "summary": "Google is reportedly planning to buy Hugging Face at a price that exceeds its revenue by over 80 times.",
+      "source": "Tom's Hardware UK",
+      "url": "https://www.tomshardware.com/news/google-tpu-volume-triple-nvidia-ai-dominance,133537971.html",
+      "publishedAt": "2026-08-26T10:35:42Z"
+    },
+    {
+      "id": 3,
+      "cat": "storage",
+      "impact": "high",
+      "filler": false,
+      "title": "Cisco expands rack-scale secure AI factory infrastructure for neocloud and sovereign clouds",
+      "summary": "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
+      "source": "The Times of India",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/cisco-expands-rack-scale-secure-ai-factory-infrastructure-for-neocloud-and-sovereign-clouds/articleshow/133534766.cms",
+      "publishedAt": "2026-08-26T08:22:41Z"
+    },
+    {
+      "id": 4,
+      "cat": "gpu",
+      "impact": "high",
+      "filler": false,
+      "title": "Nvidia CFO says non-hyperscale cloud already accounts for roughly half of data-center revenue",
+      "summary": "NVIDIA's data center business is growing rapidly, with non-hyperscale cloud providers accounting for around half of its revenue.",
+      "source": "The Times of India",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-at-heart-of-data-centre-revolution-says-bnp-paribas-sees-36-upside/articleshow/133570354.cms",
+      "publishedAt": "2026-08-27T13:48:36Z"
+    },
+    {
+      "id": 5,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Washington probes Singapore freight firm over suspected NVIDIA server shipments to China",
+      "summary": "The US is investigating a Singapore-based freight company over suspected shipments of NVIDIA servers to China.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/washington-probes-freight-firm-nvidia-shipments/",
+      "publishedAt": "2026-08-27T12:14:31Z"
+    },
+    {
+      "id": 6,
+      "cat": "ai",
+      "impact": "high",
+      "filler": false,
+      "title": "Without local languages, 'AI is essentially useless': Hong Kong's Votee AI is taking on English and Mandarin's AI dominance with a Cantonese model",
+      "summary": "Votee AI is developing an AI model in Cantonese to tackle the neglect of low-resource languages in the industry.",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/08/27/votee-ai-hong-kong-cantonese-llm-pak-sun-ting-ceo/",
+      "publishedAt": "2026-08-27T06:30:00Z"
+    },
+    {
+      "id": 7,
+      "cat": "storage",
+      "impact": "medium",
+      "filler": false,
+      "title": "Democratizing the AI data center: How Cisco and NVIDIA are pushing rack-scale systems into production",
+      "summary": "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
+      "source": "The Times of India",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/democratizing-the-ai-data-centre-how-cisco-and-nvidia-are-pushing-rack-scale-systems-into-production/articleshow/133570354.cms",
+      "publishedAt": "2026-08-27T13:48:36Z"
+    },
+    {
+      "id": 8,
+      "cat": "gpu",
+      "impact": "high",
+      "filler": false,
+      "title": "NVIDIA at heart of data center revolution, says BNP Paribas; sees 36% upside",
+      "summary": "BNP Paribas has issued an outperform rating on NVIDIA with a target price of $285, implying a 36% upside.",
+      "source": "The Times of India",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-at-heart-of-data-centre-revolution-says-bnp-paribas-sees-36-upside/articleshow/133570354.cms",
+      "publishedAt": "2026-08-27T13:48:36Z"
+    },
+    {
+      "id": 9,
+      "cat": "ai",
+      "impact": "medium",
+      "filler": false,
+      "title": "AI factories enter the execution era: Governance becomes the operating system",
+      "summary": "The electronics manufacturing industry is undergoing profound transformation, with Asia accounting for more than half of global production.",
+      "source": "Europa.eu",
+      "url": "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg260827~f06c21fd54.en.html",
+      "publishedAt": "2026-08-27T11:30:00Z"
+    },
+    {
+      "id": 10,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Nikkei slips as NVIDIA rally fades into profit-taking",
+      "summary": "Tokyo stocks slipped on August 27, with the Nikkei 225 closing at 66,131.98, down 130.18 points.",
+      "source": "Newsonjapan.com",
+      "url": "https://newsonjapan.com/article/150530.php",
+      "publishedAt": "2026-08-27T09:31:09Z"
+    }
+  ]
+}
