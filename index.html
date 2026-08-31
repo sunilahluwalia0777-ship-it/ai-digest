@@ -648,83 +648,163 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Reimagining work: How Pythian's internal AI playbook delivers customer ROI",
-    summary: "Pythian rolled out Google Cloud's Gemini Enterprise across its 500-person company in 27 countries to discover how enterprise AI actually delivers ROI.",
-    source: "Google Cloud", age: "today",
-    detail: "Pythian rolled out Google Cloud's Gemini Enterprise across its 500-person company in 27 countries to discover how enterprise AI actually delivers ROI.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/reimagining-work-how-pythians-internal-ai-playbook-delivers-customer-roi"
+    title: "Reimagining work: How Pythians internal AI playbook delivers customer ROI",
+    summary: "Pythian uses Google Clouds Gemini Enterprise to discover how enterprise AI delivers ROI.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Pythian rolled out Google Clouds Gemini Enterprise across their 500-person company in 27 countries, discovering how enterprise AI actually delivers ROI.",
+    url: "https://cloud.google.com/blog/topics/startups/how-pythians-internal-ai-playbook-delivers-customer-roi/"
   },
   {
-    id: 2, cat: "gpu", impact: "medium", filler: false,
-    title: "Google TPU volume could triple to 9 million by 2027, challenging NVIDIA's AI dominance",
-    summary: "Google is reportedly planning to buy Hugging Face at a price that exceeds its revenue by over 80 times.",
-    source: "Tom's Hardware UK", age: "today",
-    detail: "Google is reportedly planning to buy Hugging Face at a price that exceeds its revenue by over 80 times.",
-    url: "https://www.tomshardware.com/news/google-tpu-volume-triple-nvidia-ai-dominance,133537971.html"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Deploy personal AI agents with Cloud Run instances",
+    summary: "Google introduces Cloud Run instances for low-cost, high-performance way to run long-lived, stateful workloads such as AI agents.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Cloud Run instances let users do just that. Consider AI agents such as OpenClaw or Hermes , which are intended for individual developers or personal use.",
+    url: "https://cloud.google.com/blog/products/serverless/introducing-cloud-run-instances/"
   },
   {
-    id: 3, cat: "storage", impact: "high", filler: false,
-    title: "Cisco expands rack-scale secure AI factory infrastructure for neocloud and sovereign clouds",
-    summary: "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
-    source: "The Times of India", age: "today",
-    detail: "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
-    url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/cisco-expands-rack-scale-secure-ai-factory-infrastructure-for-neocloud-and-sovereign-clouds/articleshow/133534766.cms"
+    id: 3, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Simplify your resilience testing strategy with Fault Injection Testing",
+    summary: "Google introduces Fault Injection Testing to help maintain availability and reliability during adverse events.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Fault Injection Testing is designed to guarantee high availability has become increasingly difficult because of the complexity of modern distributed systems.",
+    url: "https://cloud.google.com/blog/products/networking/introducing-google-cloud-fault-injection-testing-in-preview/"
   },
   {
-    id: 4, cat: "gpu", impact: "high", filler: false,
-    title: "Nvidia CFO says non-hyperscale cloud already accounts for roughly half of data-center revenue",
-    summary: "NVIDIA's data center business is growing rapidly, with non-hyperscale cloud providers accounting for around half of its revenue.",
-    source: "The Times of India", age: "today",
-    detail: "NVIDIA's data center business is growing rapidly, with non-hyperscale cloud providers accounting for around half of its revenue.",
-    url: "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-at-heart-of-data-centre-revolution-says-bnp-paribas-sees-36-upside/articleshow/133570354.cms"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Using OKF with Knowledge Catalog to serve context for agents",
+    summary: "Google iterates on the Open Knowledge Format (OKF), an open specification that formalizes the LLM-wiki pattern into a portable, interoperable format.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "OKF v0.1 established a portable format for the context agents need: markdown files with YAML frontmatter, one required field, and five con",
+    url: "https://cloud.google.com/blog/products/data-analytics/scale-okf-bundles-across-an-organization-with-knowledge-catalog/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Washington probes Singapore freight firm over suspected NVIDIA server shipments to China",
-    summary: "The US is investigating a Singapore-based freight company over suspected shipments of NVIDIA servers to China.",
-    source: "Crypto Briefing", age: "today",
-    detail: "The US is investigating a Singapore-based freight company over suspected shipments of NVIDIA servers to China.",
-    url: "https://cryptobriefing.com/washington-probes-freight-firm-nvidia-shipments/"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Your chance to start building AI agents from the absolute basics",
+    summary: "Google introduces Agent Valley , a free, 5-week live learning series designed to take users from scratch to building their very own hands-on agent.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The best way to learn is by doing, which is why we built Agent Valley .",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/your-chance-to-start-building-ai-agents-from-the-absolute-basics/"
   },
   {
-    id: 6, cat: "ai", impact: "high", filler: false,
-    title: "Without local languages, 'AI is essentially useless': Hong Kong's Votee AI is taking on English and Mandarin's AI dominance with a Cantonese model",
-    summary: "Votee AI is developing an AI model in Cantonese to tackle the neglect of low-resource languages in the industry.",
-    source: "Fortune", age: "today",
-    detail: "Votee AI is developing an AI model in Cantonese to tackle the neglect of low-resource languages in the industry.",
-    url: "https://fortune.com/2026/08/27/votee-ai-hong-kong-cantonese-llm-pak-sun-ting-ceo/"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Building Multi-Region Active-Active Architectures with CloudFront VPC origins and Advanced Routing",
+    summary: "AWS introduces Amazon CloudFront VPC origins, which provides direct connectivity to private origins.",
+    source: "AWS Networking", age: "today",
+    detail: "Building a multi-region active-active architecture with Amazon CloudFront requires careful coordination of traffic routing to address performance, traffic management, and session consistency requirements, along with automated failover to maintain availability during regional events.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/building-multi-region-active-active-architectures-with-cloudfront-vpc-origins-and-advanced-routing/"
   },
   {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "Democratizing the AI data center: How Cisco and NVIDIA are pushing rack-scale systems into production",
-    summary: "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
-    source: "The Times of India", age: "today",
-    detail: "Cisco Systems Inc. is expanding its rack-scale secure AI factory infrastructure to support non-hyperscale cloud markets.",
-    url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/democratizing-the-ai-data-centre-how-cisco-and-nvidia-are-pushing-rack-scale-systems-into-production/articleshow/133570354.cms"
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "Detect stalled Amazon S3 live replication to prevent unexpected storage costs",
+    summary: "AWS introduces a way to detect when replication stalls, because without early warning, unreplicated objects accumulate silently and drive unexpected storage costs.",
+    source: "AWS Storage", age: "today",
+    detail: "Most teams rely on automated retention policies to clean up the source copy after a defined period, but when replication breaks […]",
+    url: "https://aws.amazon.com/blogs/storage/detect-stalled-amazon-s3-live-replication-to-prevent-unexpected-storage-costs/"
   },
   {
-    id: 8, cat: "gpu", impact: "high", filler: false,
-    title: "NVIDIA at heart of data center revolution, says BNP Paribas; sees 36% upside",
-    summary: "BNP Paribas has issued an outperform rating on NVIDIA with a target price of $285, implying a 36% upside.",
-    source: "The Times of India", age: "today",
-    detail: "BNP Paribas has issued an outperform rating on NVIDIA with a target price of $285, implying a 36% upside.",
-    url: "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-at-heart-of-data-centre-revolution-says-bnp-paribas-sees-36-upside/articleshow/133570354.cms"
+    id: 8, cat: "competition", impact: "medium", filler: false,
+    title: "Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs",
+    summary: "Microsoft compares managed PostgreSQL vs. self-hosted PostgreSQL across cost, control, security, resilience, scalability, and operational effort.",
+    source: "Azure Blog", age: "today",
+    detail: "The post Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs appeared first on Microsoft Azure Blog .",
+    url: "https://azure.microsoft.com/en-us/blog/managed-postgresql-vs-self-hosted-postgresql-key-benefits-and-trade-offs/"
   },
   {
-    id: 9, cat: "ai", impact: "medium", filler: false,
-    title: "AI factories enter the execution era: Governance becomes the operating system",
-    summary: "The electronics manufacturing industry is undergoing profound transformation, with Asia accounting for more than half of global production.",
-    source: "Europa.eu", age: "today",
-    detail: "The electronics manufacturing industry is undergoing profound transformation, with Asia accounting for more than half of global production.",
-    url: "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg260827~f06c21fd54.en.html"
+    id: 9, cat: "competition", impact: "medium", filler: false,
+    title: "The Economics of Agent Optimization: Four ways to lower the cost",
+    summary: "Microsoft Foundry gives four levers that act on every request, before a single line of agent logic changes.",
+    source: "Azure Blog", age: "today",
+    detail: "The post The Economics of Agent Optimization: Four ways to lower the cost appeared first on Microsoft Azure Blog .",
+    url: "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Nikkei slips as NVIDIA rally fades into profit-taking",
-    summary: "Tokyo stocks slipped on August 27, with the Nikkei 225 closing at 66,131.98, down 130.18 points.",
-    source: "Newsonjapan.com", age: "today",
-    detail: "Tokyo stocks slipped on August 27, with the Nikkei 225 closing at 66,131.98, down 130.18 points.",
-    url: "https://newsonjapan.com/article/150530.php"
+    id: 10, cat: "competition", impact: "medium", filler: false,
+    title: "The patch window is collapsing: Why security needs a new control plane",
+    summary: "Microsoft introduces Live Reports for Azure SRE Agent, helping operations teams create dynamic operational views directly from SRE Agent conversations.",
+    source: "Azure Blog", age: "today",
+    detail: "Organizations need protection that operates in the gap between discovery and remediation. The post The patch window is collapsing: Why security needs a new control plane appeared first on Microsoft Azure Blog .",
+    url: "https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane/"
+  },
+  {
+    id: 11, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure",
+    summary: "Azure SRE Agent VNet Integration is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), private DNS, and firewall policies, etc. With VNet support, t",
+    url: "https://azure.microsoft.com/updates?id=569695"
+  },
+  {
+    id: 12, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Azure SRE Agent 30-Day Trial",
+    summary: "New customers can now get started with Azure SRE Agent through a 30-day trial experience.",
+    source: "Azure Updates", age: "today",
+    detail: "During the trial, customers can create SRE Agents and connect them to your operational tools and data sources, and explore capabilities at their own pace without bas",
+    url: "https://azure.microsoft.com/updates?id=569760"
+  },
+  {
+    id: 13, cat: "vendor", impact: "medium", filler: true,
+    title: "[In preview] Public Preview: Introducing Live Reports for Azure SRE Agent",
+    summary: "Azure introduces Live Reports, now in Public Preview for Azure SRE Agent.",
+    source: "Azure Updates", age: "today",
+    detail: "Help operations teams create dynamic operational views directly from SRE Agent conversations and keep them continuously up to date with the latest data from co",
+    url: "https://azure.microsoft.com/updates?id=569690"
+  },
+  {
+    id: 14, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Azure Bastion shareable link expiration",
+    summary: "Azure Bastion shareable link expiration is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "When creating a shareable link, administrators can specify the date and time when the link should expire. After the configured expiration time, the link can no longer be used to connect t",
+    url: "https://azure.microsoft.com/updates?id=570020"
+  },
+  {
+    id: 15, cat: "vendor", impact: "medium", filler: true,
+    title: "[In preview] Public Preview: IPv6 dual-stack support for Azure Bastion",
+    summary: "Azure Bastion support for IPv4 and IPv6 dual-stack configurations is now available in public preview.",
+    source: "Azure Updates", age: "today",
+    detail: "Customers can configure a newly created Bastion deployment with both IPv4 and IPv6 public IP addresses. IPv6 is supported for connections between the use",
+    url: "https://azure.microsoft.com/updates?id=570025"
+  },
+  {
+    id: 16, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Connect to AKS clusters using Azure Bastion",
+    summary: "Azure Bastion integration with Azure Kubernetes Service is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "Customers can establish a secure tunnel from their local machine through Azure Bastion to an AKS cluster API server. The integration enables customers to use standard Kube",
+    url: "https://azure.microsoft.com/updates?id=570030"
+  },
+  {
+    id: 17, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Azure SRE Agent VNet Integration",
+    summary: "Azure SRE Agent VNet Integration is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), private DNS, and firewall policies, etc. With VNet support, t",
+    url: "https://azure.microsoft.com/updates?id=569695"
+  },
+  {
+    id: 18, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Azure SRE Agent 30-Day Trial",
+    summary: "New customers can now get started with Azure SRE Agent through a 30-day trial experience.",
+    source: "Azure Updates", age: "today",
+    detail: "During the trial, customers can create SRE Agents and connect them to your operational tools and data sources, and explore capabilities at their own pace without bas",
+    url: "https://azure.microsoft.com/updates?id=569760"
+  },
+  {
+    id: 19, cat: "vendor", impact: "medium", filler: true,
+    title: "[In preview] Public Preview: Introducing Live Reports for Azure SRE Agent",
+    summary: "Azure introduces Live Reports, now in Public Preview for Azure SRE Agent.",
+    source: "Azure Updates", age: "today",
+    detail: "Help operations teams create dynamic operational views directly from SRE Agent conversations and keep them continuously up to date with the latest data from co",
+    url: "https://azure.microsoft.com/updates?id=569690"
+  },
+  {
+    id: 20, cat: "vendor", impact: "medium", filler: true,
+    title: "[Launched] Generally Available: Azure Bastion shareable link expiration",
+    summary: "Azure Bastion shareable link expiration is now generally available.",
+    source: "Azure Updates", age: "today",
+    detail: "When creating a shareable link, administrators can specify the date and time when the link should expire. After the configured expiration time, the link can no longer be used to connect t",
+    url: "https://azure.microsoft.com/updates?id=570020"
   },
 ];
 // ARTICLES_END
@@ -872,7 +952,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud's Gemini Enterprise is being adopted by companies like Pythian to deliver customer ROI through AI, highlighting the importance of robust networking and storage infrastructure for successful AI deployments. Meanwhile, NVIDIA is expanding its dominance in the data center business, with non-hyperscale cloud providers accounting for roughly half of its revenue, posing a competitive challenge to Google's TPU offerings. Additionally, US investigations into suspected shipments of NVIDIA servers to China serve as a reminder to closely monitor supply chain risks and ensure compliance with regulations.";
+const STATIC_BRIEF = "Google Cloud is enhancing its AI infrastructure capabilities with the introduction of Cloud Run instances for low-cost high-performance workloads such as AI agents and Fault Injection Testing for maintaining availability and reliability during adverse events. Meanwhile, competitors like AWS and Microsoft are making moves to bolster their own offerings, including Amazon CloudFront VPC origins for direct connectivity to private origins and Managed PostgreSQL vs self-hosted PostgreSQL comparisons. As the AI landscape continues to evolve, supply chain resilience will become increasingly critical, and Google's networking and storage infrastructure must be prepared to support the demands of large-scale AI workloads.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
