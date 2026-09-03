@@ -648,123 +648,115 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "How Blackline simplifies perimeter policy intelligence with VPC Service Controls",
-    summary: "Google Cloud shares new policy intelligence capabilities in VPC-SC to drive operational simplicity.",
+    title: "Getting started with Mantis, our open-source bug finding-and-fixing harness",
+    summary: "Google's open-source framework for automated vulnerability discovery and patching.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The new release of the VPC-SC violation dashboard helps organizations protect their cloud environments against data exfiltration, compromised accounts, and insider threats.",
-    url: "https://cloud.google.com/blog/topics/customers/how-blackline-prevents-data-exfiltration-with-vpc-service-controls/"
+    detail: "Mantis is a new open-source tool that automates the process of finding and fixing software vulnerabilities. It can help defenders gain an advantage over attackers by discovering vulnerabilities before they do.",
+    url: "https://cloud.google.com/blog/products/identity-security/getting-started-with-the-mantis-harness-to-find-and-fix-bugs/"
   },
   {
-    id: 2, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA and MediaTek deepen long-standing partnership to build AI edge to cloud computing platforms",
-    summary: "NVIDIA and MediaTek collaborate to build next-generation AI computing platforms spanning AI infrastructure, local AI computing, and automotive.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "The partnership aims to accelerate the development of AI computing platforms across various industries.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms"
+    id: 2, cat: "storage", impact: "high", filler: false,
+    title: "Simplify pipelines with new BigQuery identity columns",
+    summary: "BigQuery now supports auto-generated sequential IDs, simplifying data ingestion and management.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The new feature allows users to define columns that automatically generate sequential 64-bit integer values, making it easier to manage unique identifiers within tables.",
+    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-identity-columns-to-auto-generate-sequential-integers/"
   },
   {
-    id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "AWS and Microsoft Azure collaborate to expand multicloud networking",
-    summary: "AWS and Azure partner to simplify private connectivity between clouds, enabling seamless workload migration.",
+    id: 3, cat: "ai", impact: "high", filler: false,
+    title: "Introducing TabFM in BigQuery: Predictive analytics reimagined",
+    summary: "BigQuery now offers a new predictive analytics feature that simplifies the process of building and deploying models.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "TabFM is a new feature that allows users to build predictive models without requiring extensive machine learning expertise. It can help speed up the deployment of AI-powered applications.",
+    url: "https://cloud.google.com/blog/products/data-analytics/tabfm-adds-predictive-ml-to-bigquery/"
+  },
+  {
+    id: 4, cat: "security", impact: "high", filler: false,
+    title: "Financially Motivated Threat Actor BREEZE COMET Targets Brazil",
+    summary: "Google's Threat Intelligence Group has identified a new threat actor targeting financial institutions in Brazil.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "BREEZE COMET is a financially motivated threat actor that specializes in manipulating payment systems and banking software in Brazil. The group has been active since 2024.",
+    url: "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/"
+  },
+  {
+    id: 5, cat: "networking", impact: "high", filler: false,
+    title: "Reduce Traffic Interruptions with Gateway Load Balancer TCP Reset",
+    summary: "AWS has introduced a new feature that reduces traffic interruptions caused by firewall or security appliance failures.",
     source: "AWS Networking", age: "today",
-    detail: "The collaboration aims to provide customers with a more streamlined experience across multiple cloud providers.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/aws-and-microsoft-azure-collaborate-to-expand-multicloud-networking/"
+    detail: "The Gateway Load Balancer TCP Reset feature helps to minimize the impact of failures on mission-critical applications by quickly resetting TCP connections.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/reduce-traffic-interruptions-with-gateway-load-balancer-tcp-reset/"
   },
   {
-    id: 4, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
-    summary: "NVIDIA expands its NVLink Fusion technology with custom high-bandwidth memory to support next-generation AI workloads.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The technology aims to provide a unified system for AI infrastructure, enabling faster and more efficient processing of large datasets.",
-    url: "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/"
-  },
-  {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)",
-    summary: "Microsoft announces the general availability of its Defender for Cloud support for Azure Container Apps.",
-    source: "Azure Updates", age: "today",
-    detail: "The feature enables customers to extend posture management across more of their container estate from a single workflow.",
-    url: "https://azure.microsoft.com/updates?id=570282"
-  },
-  {
-    id: 6, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Confidential VMs for Azure Linux",
-    summary: "Microsoft announces the general availability of Confidential Virtual Machines (CVM) for Azure Linux in AKS.",
-    source: "Azure Updates", age: "today",
-    detail: "The feature enables customers to migrate highly sensitive container workloads to AKS without compromising security and confidentiality.",
-    url: "https://azure.microsoft.com/updates?id=570100"
+    id: 6, cat: "networking", impact: "high", filler: false,
+    title: "Implementing encryption in transit across connectivity patterns with VPC Encryption Controls",
+    summary: "AWS has introduced a new feature that enables customers to enforce encryption in transit across all network paths.",
+    source: "AWS Networking", age: "today",
+    detail: "VPC Encryption Controls provide a centralized way to manage encryption policies across multiple accounts and regions, helping to improve security and compliance.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/implementing-encryption-in-transit-across-connectivity-patterns-with-vpc-encryption-controls/"
   },
   {
     id: 7, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Azure Copilot Observability Agent supports Basic and Auxiliary table plans",
-    summary: "Microsoft announces the general availability of its Azure Copilot Observability Agent support for Basic and Auxiliary table plans.",
+    title: "[In preview] Public Preview: Azure Front Door profile and route level WAF policies",
+    summary: "Azure Front Door now supports profile and route level WAF policy associations in public preview.",
     source: "Azure Updates", age: "today",
-    detail: "The feature enables customers to extend posture management across more of their container estate from a single workflow.",
-    url: "https://azure.microsoft.com/updates?id=570250"
+    detail: "The new feature provides more flexibility to apply broad baseline protection across an Azure Front Door profile while using targeted policies for specific routes.",
+    url: "https://azure.microsoft.com/updates?id=569804"
   },
   {
-    id: 8, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Azure Monitor Auxiliary Logs Plan support for Azure tables and plan switching",
-    summary: "Microsoft announces the general availability of its Azure Monitor Auxiliary Logs Plan support for Azure tables and plan switching.",
+    id: 8, cat: "hyperscaler", impact: "high", filler: false,
+    title: "[Launched] Generally Available: Windows Server 2025 on AKS",
+    summary: "AKS now offers GA support for Windows Server 2025, helping customers modernize their workloads.",
     source: "Azure Updates", age: "today",
-    detail: "The feature enables customers to extend posture management across more of their container estate from a single workflow.",
-    url: "https://azure.microsoft.com/updates?id=569904"
+    detail: "The new feature provides a more secure and reliable platform for running Windows-based workloads on Azure Kubernetes Service (AKS).",
+    url: "https://azure.microsoft.com/updates?id=570090"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Per-disk resiliency for Azure VMs",
-    summary: "Microsoft announces the general availability of its per-disk resiliency feature for Azure VMs.",
-    source: "Azure Updates", age: "today",
-    detail: "The feature enables customers to recover from disk failures without downtime or data loss.",
-    url: "https://azure.microsoft.com/updates?id=569711"
+    id: 9, cat: "ai", impact: "high", filler: false,
+    title: "An Organizational Second Brain: Building an AI That Learns From Experts",
+    summary: "Meta has developed a new AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available.",
+    source: "Meta Engineering", age: "today",
+    detail: "The AI agent integrates two layers: a structured, auditable knowledge architecture and a machine learning model. It can help preserve and share expertise across an organization.",
+    url: "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
   },
   {
-    id: 10, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027",
-    summary: "NVIDIA reports revenue of $96.2 billion for the second quarter ended July 26, 2026.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "The company's financial results reflect strong demand for its AI computing platforms and graphics processing units.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    id: 10, cat: "vendor", impact: "high", filler: false,
+    title: "NVIDIA to Acquire Hugging Face",
+    summary: "NVIDIA has agreed to acquire Hugging Face, a leading AI platform for natural language processing and computer vision.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The acquisition will help scale Hugging Face's platform and expand access to AI for developers and institutions worldwide.",
+    url: "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
   },
   {
-    id: 11, cat: "vendor", impact: "medium", filler: true,
-    title: "Broadcom Has Floundered For Several Months: A Respected Wall Street Team Expects 80% Returns Ahead",
-    summary: "A Wall Street firm expects Broadcom's stock to surge 80% due to its strong AI infrastructure portfolio.",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "The company's custom chip business is expected to drive growth in the AI market.",
-    url: "https://247wallst.com/investing/2026/09/01/broadcom-has-floundered-for-several-months-a-respected-wall-street-team-expects-80-returns-ahead/"
+    id: 11, cat: "networking", impact: "medium", filler: true,
+    title: "Racing Against Machine-Speed Threats: How Arista Is Using AI",
+    summary: "Arista is using AI to improve product security and respond to machine-speed threats.",
+    source: "Arista Blog", age: "today",
+    detail: "The company is integrating AI into its products to provide better threat detection and response capabilities.",
+    url: "https://blogs.arista.com/blog/racing-against-machine-speed-threats"
   },
   {
-    id: 12, cat: "ai infrastructure", impact: "medium", filler: true,
-    title: "3 AI Infrastructure Stocks to Watch Beyond NVIDIA",
-    summary: "Broadcom, Arista Networks, and Vertiv are highlighted as key players in the AI infrastructure market beyond NVIDIA.",
-    source: "MarketBeat", age: "1 day ago",
-    detail: "Each company addresses a different bottleneck in AI infrastructure development.",
-    url: "https://www.marketbeat.com/articles/3-ai-infrastructure-stocks-to-watch-beyond-nvidia/?utm_source=yahoofinance&utm_medium=yahoofinance"
+    id: 12, cat: "vendor", impact: "medium", filler: true,
+    title: "Broadcom Earnings Prediction Market Preview: Will Hock Tan Talk ‘Competition’?",
+    summary: "Broadcom is set to report earnings, with analysts predicting a strong quarter.",
+    source: "Benzinga", age: "today",
+    detail: "The company's performance will be closely watched by investors and industry observers.",
+    url: "https://www.benzinga.com/markets/prediction-markets/26/09/61574528/broadcom-earnings-hock-tan-competition?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral"
   },
   {
-    id: 13, cat: "vendor", impact: "medium", filler: true,
-    title: "I Keep Buying Marvell Technology Because Its Type Historically Wins",
-    summary: "Marvell Technology's custom chip business is expected to drive growth in the AI market.",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "The company's historical performance has driven investor confidence in its ability to deliver on AI infrastructure demand.",
-    url: "https://247wallst.com/investing/2026/09/01/i-keep-buying-marvell-technology-because-its-type-historically-wins/"
+    id: 13, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "Amazon Stock Could Surprise Investors Over the Next 12 Months",
+    summary: "AWS has posted its fastest growth in 18 quarters, driving Amazon's stock performance.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "The company's investments in AI and infrastructure are expected to continue driving growth.",
+    url: "https://247wallst.com/investing/2026/09/02/amazon-stock-could-surprise-investors-over-the-next-12-months/"
   },
   {
-    id: 14, cat: "cloud", impact: "medium", filler: true,
-    title: "AWS plans to launch Saudi Arabia region in 2026 with over $5.3B investment",
-    summary: "AWS plans to launch a new region in Saudi Arabia with an investment of over $5.3 billion.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "The investment is expected to accelerate regional digital transformation and enhance local tech skills.",
-    url: "https://cryptobriefing.com/aws-saudi-arabia-region-december-2026/"
-  },
-  {
-    id: 15, cat: "ai infrastructure", impact: "medium", filler: true,
-    title: "Corning vs. Applied Materials: One Stock Beat the Other by 75 Percentage Points. The Better AI Infrastructure Play Is Clear.",
-    summary: "Corning and Applied Materials are compared as AI infrastructure plays, with one stock outperforming the other by 75 percentage points.",
-    source: "Barchart.com", age: "1 day ago",
-    detail: "The companies' chip supply chain positions influence their ability to deliver on AI demand.",
-    url: "https://www.barchart.com/story/news/4355448/corning-vs-applied-materials-one-stock-beat-the-other-by-75-percentage-points-the-better-ai-infrastructure-play-is-clear"
+    id: 14, cat: "ai", impact: "medium", filler: true,
+    title: "Developing Enterprise Frontier Safeguards with our customers",
+    summary: "Anthropic has launched a new solution that combines privacy and safeguards for detecting misuse.",
+    source: "Anthropic.com", age: "today",
+    detail: "The Enterprise Frontier Safeguards solution uses zero data retention and state-of-the-art safeguards to protect customer data.",
+    url: "https://www.anthropic.com/news/enterprise-frontier-safeguards"
   },
 ];
 // ARTICLES_END
@@ -912,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "NVIDIA expands its NVLink Fusion technology with custom high-bandwidth memory to support next-generation AI workloads, enhancing its AI infrastructure capabilities and potentially impacting Google's market share in the GPU/TPU space. Meanwhile, AWS and Microsoft Azure are collaborating to expand multicloud networking, simplifying private connectivity between clouds and enabling seamless workload migration, a competitive signal that may require Google Cloud to respond with similar offerings. In supply chain news, NVIDIA and MediaTek are deepening their partnership to build AI edge-to-cloud computing platforms, highlighting the importance of strategic partnerships in the development of AI infrastructure.";
+const STATIC_BRIEF = "Simplify data ingestion and management with BigQuery's new auto-generated sequential IDs in identity columns, reducing complexity in pipelines. Meanwhile, AWS has introduced features to reduce traffic interruptions and enforce encryption in transit, signaling a competitive push in networking capabilities. Google's Threat Intelligence Group has identified a financially motivated threat actor targeting financial institutions in Brazil, highlighting the need for vigilance in supply chain security.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
