@@ -1,0 +1,173 @@
+{
+  "date": "2026-09-04",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Announcing the Google Gen AI SDK for Kotlin 10 Idiomatic multiplatform access to Gemini",
+      "summary": "Integrating modern generative AI capabilities into Kotlin applications shouldn't require juggling raw HTTP clients or bridging disparate Java libraries.",
+      "detail": "The Google Gen AI SDK for Kotlin provides idiomatic multi-platform access to Gemini, allowing developers to easily integrate AI capabilities into their applications.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/announcing-the-google-gen-ai-sdk-for-kotlin-10-idiomatic-multiplatform-access-to-gemini/"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Google named a Leader in 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services",
+      "summary": "Gartner has named Google a Leader in the Gartner Magic Quadrant for Strategic Cloud Platform Services, positioned furthest for Completeness of Vision.",
+      "detail": "This recognition reflects Google's longstanding dedication to helping customers build and scale their most demanding workloads reliably and securely on Google Cloud.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/products/compute/google-named-a-leader-in-2026-gartner-magic-quadrant-for-scps/"
+    },
+    {
+      "id": 3,
+      "cat": "storage",
+      "impact": "medium",
+      "filler": false,
+      "title": "Run Spark 31% faster and optimize compute costs with Amazon S3 Express One Zone on Amazon EMR",
+      "summary": "Accelerate your containerized workloads on Azure Kubernetes Service using Azure Container Registry with Artifact streaming.",
+      "detail": "Artifact streaming allows you to scale your workloads without having to fully wait for images to be pulled, reducing the time it takes to deploy and run applications.",
+      "source": "AWS Storage",
+      "age": "today",
+      "url": "https://aws.amazon.com/blogs/storage/run-spark-31-faster-and-optimize-compute-costs-with-amazon-s3-express-one-zone-on-amazon-emr/"
+    },
+    {
+      "id": 4,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[Launched] Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions",
+      "summary": "Azure Virtual Network Manager IP address management is now generally available in additional regions, including US Gov Virginia and China North 3.",
+      "detail": "This expansion enables customers to manage IP addresses more effectively across multiple regions and environments.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=570557"
+    },
+    {
+      "id": 5,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[In preview] Public Preview: Reader Endpoint for Azure Database for MySQL",
+      "summary": "The public preview of reader endpoint support simplifies connection management when using multiple replicas in Azure Database for MySQL - Flexible Server.",
+      "detail": "A reader endpoint enables automatic load balancing of read-only connections, improving the performance and scalability of applications.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=569653"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[Launched] Generally Available: Artifact Streaming on AKS",
+      "summary": "Artifact streaming accelerates containerized workloads on Azure Kubernetes Service using Azure Container Registry.",
+      "detail": "Artifact streaming allows you to scale your workloads without having to fully wait for images to be pulled, reducing the time it takes to deploy and run applications.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=570095"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[Launched] Generally Available: Azure Firewall auto-learn SNAT routes",
+      "summary": "Azure Firewall's auto-learn SNAT routes is now generally available, automatically learning registered and private destination prefixes periodically.",
+      "detail": "This feature simplifies SNAT management and preserves original source IPs in Azure Firewall configurations.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=570474"
+    },
+    {
+      "id": 8,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "[Launched] Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions",
+      "summary": "The Auxiliary table plan in Azure Monitor Logs is now generally available in the sovereign clouds: Azure Government and China.",
+      "detail": "This cost-effective option for ingesting and retaining high-volume, verbose logs enables compliance and auditing use cases.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=569899"
+    },
+    {
+      "id": 9,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "ZGateway: Learnings from Putting a Proxy in Front of ZippyDB",
+      "summary": "Meta introduces ZGateway, a proxy for unifying traffic through ZippyDB, its most widely-used key-value store.",
+      "detail": "ZGateway enables admission control, load balancing, cross-region resilience, and richer operations on top of ZippyDB.",
+      "source": "Meta Engineering",
+      "age": "today",
+      "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/"
+    },
+    {
+      "id": 10,
+      "cat": "silicon",
+      "impact": "high",
+      "filler": false,
+      "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+      "summary": "NVIDIA announces faster inference and new tools for setting up and running local AI agents on its hardware.",
+      "detail": "New compact NVIDIA RTX Spark Windows PCs are coming in October to give AI enthusiasts, developers, and creators more options for local AI development.",
+      "source": "NVIDIA Blog",
+      "age": "today",
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
+    },
+    {
+      "id": 11,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "Migrate VMware Storage to Amazon FSx for NetApp ONTAP using AWS Transform",
+      "summary": "Enterprise storage underpins every critical workload in a VMware environment.",
+      "detail": "AWS Transform helps migrate VMware storage to Amazon FSx for NetApp ONTAP, delivering automatic failover, instant snapshots, and inline deduplication.",
+      "source": "AWS Storage",
+      "age": "today",
+      "url": "https://aws.amazon.com/blogs/storage/migrate-vmware-storage-to-amazon-fsx-for-netapp-ontap-using-aws-transform/"
+    },
+    {
+      "id": 12,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "[Launched] Generally Available: Purchase order mapping available in Microsoft Marketplace",
+      "summary": "Align Microsoft Marketplace purchases to your business's accounting needs.",
+      "detail": "Purchase order mapping helps allocate your Microsoft invoice, including Marketplace purchases, making it easier to reconcile your organization's cloud and AI spend.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=569700"
+    },
+    {
+      "id": 13,
+      "cat": "silicon",
+      "impact": "low",
+      "filler": true,
+      "title": "Broadcom Q3 Earnings Call Highlights",
+      "summary": "Broadcom reported record third-quarter fiscal 2026 revenue, operating income and free cash flow.",
+      "detail": "The company's results were driven by sharply higher demand for artificial intelligence capabilities.",
+      "source": "MarketBeat",
+      "age": "today",
+      "url": "https://www.marketbeat.com/instant-alerts/transcript-broadcom-q3-earnings-call-highlights-2026-09-02/?utm_source=yahoofinance&utm_medium=yahoofinance"
+    },
+    {
+      "id": 14,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "The AI Infrastructure Stock Nobody Talks About Enough",
+      "summary": "Cisco is posting hyperscaler AI order numbers that would make pure-play networking rivals jealous.",
+      "detail": "Cisco's valuation still reflects a company selling switches and routers, but its AI infrastructure business is growing rapidly.",
+      "source": "24/7 Wall St.",
+      "age": "today",
+      "url": "https://247wallst.com/investing/2026/09/02/the-ai-infrastructure-stock-nobody-talks-about-enough/"
+    }
+  ]
+}

@@ -648,115 +648,115 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Getting started with Mantis, our open-source bug finding-and-fixing harness",
-    summary: "Google's open-source framework for automated vulnerability discovery and patching.",
+    title: "Announcing the Google Gen AI SDK for Kotlin 10 Idiomatic multiplatform access to Gemini",
+    summary: "Integrating modern generative AI capabilities into Kotlin applications shouldn't require juggling raw HTTP clients or bridging disparate Java libraries.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Mantis is a new open-source tool that automates the process of finding and fixing software vulnerabilities. It can help defenders gain an advantage over attackers by discovering vulnerabilities before they do.",
-    url: "https://cloud.google.com/blog/products/identity-security/getting-started-with-the-mantis-harness-to-find-and-fix-bugs/"
+    detail: "The Google Gen AI SDK for Kotlin provides idiomatic multi-platform access to Gemini, allowing developers to easily integrate AI capabilities into their applications.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/announcing-the-google-gen-ai-sdk-for-kotlin-10-idiomatic-multiplatform-access-to-gemini/"
   },
   {
-    id: 2, cat: "storage", impact: "high", filler: false,
-    title: "Simplify pipelines with new BigQuery identity columns",
-    summary: "BigQuery now supports auto-generated sequential IDs, simplifying data ingestion and management.",
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google named a Leader in 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services",
+    summary: "Gartner has named Google a Leader in the Gartner Magic Quadrant for Strategic Cloud Platform Services, positioned furthest for Completeness of Vision.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The new feature allows users to define columns that automatically generate sequential 64-bit integer values, making it easier to manage unique identifiers within tables.",
-    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-identity-columns-to-auto-generate-sequential-integers/"
+    detail: "This recognition reflects Google's longstanding dedication to helping customers build and scale their most demanding workloads reliably and securely on Google Cloud.",
+    url: "https://cloud.google.com/blog/products/compute/google-named-a-leader-in-2026-gartner-magic-quadrant-for-scps/"
   },
   {
-    id: 3, cat: "ai", impact: "high", filler: false,
-    title: "Introducing TabFM in BigQuery: Predictive analytics reimagined",
-    summary: "BigQuery now offers a new predictive analytics feature that simplifies the process of building and deploying models.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "TabFM is a new feature that allows users to build predictive models without requiring extensive machine learning expertise. It can help speed up the deployment of AI-powered applications.",
-    url: "https://cloud.google.com/blog/products/data-analytics/tabfm-adds-predictive-ml-to-bigquery/"
+    id: 3, cat: "storage", impact: "medium", filler: false,
+    title: "Run Spark 31% faster and optimize compute costs with Amazon S3 Express One Zone on Amazon EMR",
+    summary: "Accelerate your containerized workloads on Azure Kubernetes Service using Azure Container Registry with Artifact streaming.",
+    source: "AWS Storage", age: "today",
+    detail: "Artifact streaming allows you to scale your workloads without having to fully wait for images to be pulled, reducing the time it takes to deploy and run applications.",
+    url: "https://aws.amazon.com/blogs/storage/run-spark-31-faster-and-optimize-compute-costs-with-amazon-s3-express-one-zone-on-amazon-emr/"
   },
   {
-    id: 4, cat: "security", impact: "high", filler: false,
-    title: "Financially Motivated Threat Actor BREEZE COMET Targets Brazil",
-    summary: "Google's Threat Intelligence Group has identified a new threat actor targeting financial institutions in Brazil.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "BREEZE COMET is a financially motivated threat actor that specializes in manipulating payment systems and banking software in Brazil. The group has been active since 2024.",
-    url: "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/"
-  },
-  {
-    id: 5, cat: "networking", impact: "high", filler: false,
-    title: "Reduce Traffic Interruptions with Gateway Load Balancer TCP Reset",
-    summary: "AWS has introduced a new feature that reduces traffic interruptions caused by firewall or security appliance failures.",
-    source: "AWS Networking", age: "today",
-    detail: "The Gateway Load Balancer TCP Reset feature helps to minimize the impact of failures on mission-critical applications by quickly resetting TCP connections.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/reduce-traffic-interruptions-with-gateway-load-balancer-tcp-reset/"
-  },
-  {
-    id: 6, cat: "networking", impact: "high", filler: false,
-    title: "Implementing encryption in transit across connectivity patterns with VPC Encryption Controls",
-    summary: "AWS has introduced a new feature that enables customers to enforce encryption in transit across all network paths.",
-    source: "AWS Networking", age: "today",
-    detail: "VPC Encryption Controls provide a centralized way to manage encryption policies across multiple accounts and regions, helping to improve security and compliance.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/implementing-encryption-in-transit-across-connectivity-patterns-with-vpc-encryption-controls/"
-  },
-  {
-    id: 7, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[In preview] Public Preview: Azure Front Door profile and route level WAF policies",
-    summary: "Azure Front Door now supports profile and route level WAF policy associations in public preview.",
+    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions",
+    summary: "Azure Virtual Network Manager IP address management is now generally available in additional regions, including US Gov Virginia and China North 3.",
     source: "Azure Updates", age: "today",
-    detail: "The new feature provides more flexibility to apply broad baseline protection across an Azure Front Door profile while using targeted policies for specific routes.",
-    url: "https://azure.microsoft.com/updates?id=569804"
+    detail: "This expansion enables customers to manage IP addresses more effectively across multiple regions and environments.",
+    url: "https://azure.microsoft.com/updates?id=570557"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Windows Server 2025 on AKS",
-    summary: "AKS now offers GA support for Windows Server 2025, helping customers modernize their workloads.",
+    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[In preview] Public Preview: Reader Endpoint for Azure Database for MySQL",
+    summary: "The public preview of reader endpoint support simplifies connection management when using multiple replicas in Azure Database for MySQL - Flexible Server.",
     source: "Azure Updates", age: "today",
-    detail: "The new feature provides a more secure and reliable platform for running Windows-based workloads on Azure Kubernetes Service (AKS).",
-    url: "https://azure.microsoft.com/updates?id=570090"
+    detail: "A reader endpoint enables automatic load balancing of read-only connections, improving the performance and scalability of applications.",
+    url: "https://azure.microsoft.com/updates?id=569653"
   },
   {
-    id: 9, cat: "ai", impact: "high", filler: false,
-    title: "An Organizational Second Brain: Building an AI That Learns From Experts",
-    summary: "Meta has developed a new AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available.",
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Artifact Streaming on AKS",
+    summary: "Artifact streaming accelerates containerized workloads on Azure Kubernetes Service using Azure Container Registry.",
+    source: "Azure Updates", age: "today",
+    detail: "Artifact streaming allows you to scale your workloads without having to fully wait for images to be pulled, reducing the time it takes to deploy and run applications.",
+    url: "https://azure.microsoft.com/updates?id=570095"
+  },
+  {
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure Firewall auto-learn SNAT routes",
+    summary: "Azure Firewall's auto-learn SNAT routes is now generally available, automatically learning registered and private destination prefixes periodically.",
+    source: "Azure Updates", age: "today",
+    detail: "This feature simplifies SNAT management and preserves original source IPs in Azure Firewall configurations.",
+    url: "https://azure.microsoft.com/updates?id=570474"
+  },
+  {
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions",
+    summary: "The Auxiliary table plan in Azure Monitor Logs is now generally available in the sovereign clouds: Azure Government and China.",
+    source: "Azure Updates", age: "today",
+    detail: "This cost-effective option for ingesting and retaining high-volume, verbose logs enables compliance and auditing use cases.",
+    url: "https://azure.microsoft.com/updates?id=569899"
+  },
+  {
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "ZGateway: Learnings from Putting a Proxy in Front of ZippyDB",
+    summary: "Meta introduces ZGateway, a proxy for unifying traffic through ZippyDB, its most widely-used key-value store.",
     source: "Meta Engineering", age: "today",
-    detail: "The AI agent integrates two layers: a structured, auditable knowledge architecture and a machine learning model. It can help preserve and share expertise across an organization.",
-    url: "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
+    detail: "ZGateway enables admission control, load balancing, cross-region resilience, and richer operations on top of ZippyDB.",
+    url: "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/"
   },
   {
-    id: 10, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA to Acquire Hugging Face",
-    summary: "NVIDIA has agreed to acquire Hugging Face, a leading AI platform for natural language processing and computer vision.",
+    id: 10, cat: "silicon", impact: "high", filler: false,
+    title: "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+    summary: "NVIDIA announces faster inference and new tools for setting up and running local AI agents on its hardware.",
     source: "NVIDIA Blog", age: "today",
-    detail: "The acquisition will help scale Hugging Face's platform and expand access to AI for developers and institutions worldwide.",
-    url: "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+    detail: "New compact NVIDIA RTX Spark Windows PCs are coming in October to give AI enthusiasts, developers, and creators more options for local AI development.",
+    url: "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
   },
   {
-    id: 11, cat: "networking", impact: "medium", filler: true,
-    title: "Racing Against Machine-Speed Threats: How Arista Is Using AI",
-    summary: "Arista is using AI to improve product security and respond to machine-speed threats.",
-    source: "Arista Blog", age: "today",
-    detail: "The company is integrating AI into its products to provide better threat detection and response capabilities.",
-    url: "https://blogs.arista.com/blog/racing-against-machine-speed-threats"
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Migrate VMware Storage to Amazon FSx for NetApp ONTAP using AWS Transform",
+    summary: "Enterprise storage underpins every critical workload in a VMware environment.",
+    source: "AWS Storage", age: "today",
+    detail: "AWS Transform helps migrate VMware storage to Amazon FSx for NetApp ONTAP, delivering automatic failover, instant snapshots, and inline deduplication.",
+    url: "https://aws.amazon.com/blogs/storage/migrate-vmware-storage-to-amazon-fsx-for-netapp-ontap-using-aws-transform/"
   },
   {
-    id: 12, cat: "vendor", impact: "medium", filler: true,
-    title: "Broadcom Earnings Prediction Market Preview: Will Hock Tan Talk ‘Competition’?",
-    summary: "Broadcom is set to report earnings, with analysts predicting a strong quarter.",
-    source: "Benzinga", age: "today",
-    detail: "The company's performance will be closely watched by investors and industry observers.",
-    url: "https://www.benzinga.com/markets/prediction-markets/26/09/61574528/broadcom-earnings-hock-tan-competition?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "[Launched] Generally Available: Purchase order mapping available in Microsoft Marketplace",
+    summary: "Align Microsoft Marketplace purchases to your business's accounting needs.",
+    source: "Azure Updates", age: "today",
+    detail: "Purchase order mapping helps allocate your Microsoft invoice, including Marketplace purchases, making it easier to reconcile your organization's cloud and AI spend.",
+    url: "https://azure.microsoft.com/updates?id=569700"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "Amazon Stock Could Surprise Investors Over the Next 12 Months",
-    summary: "AWS has posted its fastest growth in 18 quarters, driving Amazon's stock performance.",
+    id: 13, cat: "silicon", impact: "low", filler: true,
+    title: "Broadcom Q3 Earnings Call Highlights",
+    summary: "Broadcom reported record third-quarter fiscal 2026 revenue, operating income and free cash flow.",
+    source: "MarketBeat", age: "today",
+    detail: "The company's results were driven by sharply higher demand for artificial intelligence capabilities.",
+    url: "https://www.marketbeat.com/instant-alerts/transcript-broadcom-q3-earnings-call-highlights-2026-09-02/?utm_source=yahoofinance&utm_medium=yahoofinance"
+  },
+  {
+    id: 14, cat: "hyperscaler", impact: "low", filler: true,
+    title: "The AI Infrastructure Stock Nobody Talks About Enough",
+    summary: "Cisco is posting hyperscaler AI order numbers that would make pure-play networking rivals jealous.",
     source: "24/7 Wall St.", age: "today",
-    detail: "The company's investments in AI and infrastructure are expected to continue driving growth.",
-    url: "https://247wallst.com/investing/2026/09/02/amazon-stock-could-surprise-investors-over-the-next-12-months/"
-  },
-  {
-    id: 14, cat: "ai", impact: "medium", filler: true,
-    title: "Developing Enterprise Frontier Safeguards with our customers",
-    summary: "Anthropic has launched a new solution that combines privacy and safeguards for detecting misuse.",
-    source: "Anthropic.com", age: "today",
-    detail: "The Enterprise Frontier Safeguards solution uses zero data retention and state-of-the-art safeguards to protect customer data.",
-    url: "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+    detail: "Cisco's valuation still reflects a company selling switches and routers, but its AI infrastructure business is growing rapidly.",
+    url: "https://247wallst.com/investing/2026/09/02/the-ai-infrastructure-stock-nobody-talks-about-enough/"
   },
 ];
 // ARTICLES_END
@@ -904,7 +904,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Simplify data ingestion and management with BigQuery's new auto-generated sequential IDs in identity columns, reducing complexity in pipelines. Meanwhile, AWS has introduced features to reduce traffic interruptions and enforce encryption in transit, signaling a competitive push in networking capabilities. Google's Threat Intelligence Group has identified a financially motivated threat actor targeting financial institutions in Brazil, highlighting the need for vigilance in supply chain security.";
+const STATIC_BRIEF = "Google has been named a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services, positioned furthest for Completeness of Vision, solidifying its position as a top cloud provider. Meanwhile, Azure is rapidly expanding its capabilities with multiple launches and previews, including Artifact Streaming on AKS, Azure Firewall auto-learn SNAT routes, and Public Preview of Reader Endpoint for Azure Database for MySQL. On the supply chain front, NVIDIA is accelerating local AI with faster inference and new tools, while Meta introduces ZGateway, a proxy for unifying traffic through its key-value store, highlighting the ongoing innovation in the industry.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
