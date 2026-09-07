@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-07",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Spanner migrations Automating dual-write with Antigravity CLI for minimal disruption",
+      "summary": "Google's Finance Engineering team used Spanner to modernize their legacy data layer, automating dual-write database migration with minimal disruption.",
+      "detail": "The team chose Spanner for its globally distributed and strongly consistent multi-model database capabilities, ensuring high availability. Antigravity CLI streamlined the migration process, reducing manual effort and minimizing production service downtime.",
+      "source": "Google Cloud Blog",
+      "age": "today",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/using-antigravity-cli-to-streamline-dual-write-database-migration/"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "When and how to centralize AWS PrivateLink Interface endpoints with Amazon VPC Lattice",
+      "summary": "AWS PrivateLink interface endpoints can be centralized using Amazon VPC Lattice, reducing endpoint costs and operational overhead in large multi-account environments.",
+      "detail": "Centralizing endpoints helps teams provision the same endpoints separately in each Amazon Virtual Private Cloud (Amazon VPC), leading to added costs, inconsistent policies, and operational burdens. Amazon VPC Lattice offers a solution for centralized management.",
+      "source": "AWS Networking",
+      "age": "today",
+      "url": "https://aws.amazon.com/blogs/networking-and-content-delivery/when-and-how-to-centralize-aws-privatelink-interface-endpoints-with-amazon-vpc-lattice/"
+    },
+    {
+      "id": 3,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "GPT-6 Astra Frontier intelligence for work now generally available in Microsoft Foundry",
+      "summary": "Microsoft's GPT-6 Astra model is now available through the Microsoft Foundry Limited Access Program, expanding its reach into open AI models and developer tools.",
+      "detail": "The rollout of GPT-6 Astra marks a significant milestone for Microsoft, as it expands its presence in the AI ecosystem. The model's availability will have a ripple effect on the industry, driving innovation and adoption.",
+      "source": "Azure Blog",
+      "age": "today",
+      "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-frontier-intelligence-for-work-now-available-in-microsoft-foundry/"
+    },
+    {
+      "id": 4,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "How Microsoft's Physical Security Engineering Team scaled hybrid operations with Azure Arc and Azure Virtual Desktop",
+      "summary": "Microsoft used Azure Arc and Azure Virtual Desktop to simplify its physical security engineering team's hybrid operations, improving visibility and scaling globally.",
+      "detail": "The team leveraged the cloud-based solutions to streamline security operations, enhancing efficiency and reducing complexity. The success story highlights Microsoft's commitment to driving digital transformation in-house.",
+      "source": "Azure Blog",
+      "age": "today",
+      "url": "https://azure.microsoft.com/en-us/blog/how-microsofts-physical-security-engineering-team-scaled-hybrid-operations-with-azure-arc-and-azure-virtual-desktop/"
+    },
+    {
+      "id": 5,
+      "cat": "ai",
+      "impact": "high",
+      "filler": false,
+      "title": "NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier",
+      "summary": "NVIDIA and CrowdStrike partnered to develop CrowdStrike SafeMind, an agentic cybersecurity system built on NVIDIA's AI capabilities.",
+      "detail": "The collaboration marks a significant milestone in the development of AI-powered cybersecurity solutions. The joint effort will help defense systems keep pace with increasingly automated attacks.",
+      "source": "NVIDIA Blog",
+      "age": "2 days ago",
+      "url": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/"
+    },
+    {
+      "id": 6,
+      "cat": "vendor",
+      "impact": "high",
+      "filler": false,
+      "title": "Nvidia's $12.9 billion Hugging Face bet is about more than AI models",
+      "summary": "NVIDIA acquired Hugging Face for $12.93 billion, expanding its reach into open AI models and developer tools.",
+      "detail": "The acquisition marks a significant strategic move for NVIDIA, as it broadens its presence in the AI ecosystem. The deal will have far-reaching implications for the industry, driving innovation and adoption.",
+      "source": "Business Standard",
+      "age": "2 days ago",
+      "url": "https://www.business-standard.com/technology/tech-news/nvidia-s-12-9-billion-hugging-face-bet-is-about-more-than-ai-models-126090400883_1.html"
+    },
+    {
+      "id": 7,
+      "cat": "vendor",
+      "impact": "medium",
+      "filler": false,
+      "title": "Cisco remakes the edge for AI's data-heavy future",
+      "summary": "Cisco revamped its edge computing platform to support AI workloads, enabling faster processing and reduced latency.",
+      "detail": "The modernized edge platform is designed to handle the massive amounts of data generated by AI applications. Cisco's move reflects the growing importance of edge computing in the AI era.",
+      "source": "SiliconANGLE News",
+      "age": "2 days ago",
+      "url": "https://siliconangle.com/2026/09/04/cisco-delivers-edge-computing-ai-ciscoaward/"
+    },
+    {
+      "id": 8,
+      "cat": "competition",
+      "impact": "medium",
+      "filler": false,
+      "title": "Microsoft drops $101.9 billion surprise as AI reshapes company",
+      "summary": "Microsoft disclosed a $101.9 billion investment in AI, highlighting the technology's growing importance to the company's future.",
+      "detail": "The massive investment underscores Microsoft's commitment to becoming an AI leader. The move will have significant implications for the industry, driving competition and innovation.",
+      "source": "TheStreet",
+      "age": "2 days ago",
+      "url": "https://www.thestreet.com/investing/microsoft-drops-101-9-billion-surprise-as-ai-reshapes-company"
+    },
+    {
+      "id": 9,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": true,
+      "title": "[Launched] Generally Available Azure Site Recovery support for Linux Azure VMs with NVMe disk controllers",
+      "summary": "Azure Site Recovery now supports replication and disaster recovery for Linux Azure Virtual Machines running on NVMe-enabled Generation 2 VM families.",
+      "detail": "The expanded support enhances the resilience of Linux-based workloads in Azure, providing customers with more options for disaster recovery and business continuity planning.",
+      "source": "Azure Updates",
+      "age": "today",
+      "url": "https://azure.microsoft.com/updates?id=565103"
+    },
+    {
+      "id": 10,
+      "cat": "ai",
+      "impact": "low",
+      "filler": true,
+      "title": "OpenAI Declares 'AGI Era' With Astra Launch. Anthropic's Fable 5.1 More Than Doubled Its Predecessor's Science Score.",
+      "summary": "OpenAI launched GPT-6 Astra, marking a significant milestone in the development of artificial general intelligence (AGI).",
+      "detail": "The launch is seen as a major step forward for AGI research, with implications for various industries and applications. Anthropic's Fable 5.1 model also showed impressive gains in science score.",
+      "source": "Yahoo Entertainment",
+      "age": "2 days ago",
+      "url": "https://finance.yahoo.com/technology/ai/articles/openai-declares-agi-era-astra-041130711.html"
+    },
+    {
+      "id": 11,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "Commvault (CVLT) Triples Its Cloud Safety Net While Wall Street Cools",
+      "summary": "Commvault expanded its Cloud Rewind platform, tripling the number of Microsoft Azure resource types it can protect and recover.",
+      "detail": "The move enhances Commvault's cloud-based data protection capabilities, providing customers with more comprehensive disaster recovery and business continuity solutions.",
+      "source": "Yahoo Entertainment",
+      "age": "2 days ago",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/commvault-cvlt-triples-cloud-safety-173309595.html"
+    },
+    {
+      "id": 12,
+      "cat": "ai",
+      "impact": "low",
+      "filler": true,
+      "title": "Price Target Upgrades Why Analysts Are Bullish on Snowflake Stock",
+      "summary": "Analysts upgraded their price targets on Snowflake stock, citing its 'killer AI ability' as a key driver.",
+      "detail": "The upgrades reflect growing optimism about Snowflake's prospects in the AI-powered data analytics market. The company's AI capabilities are seen as a major differentiator.",
+      "source": "Barchart.com",
+      "age": "2 days ago",
+      "url": "https://www.barchart.com/story/news/4445470/price-target-upgrades-why-analysts-are-bullish-on-snowflake-stock"
+    }
+  ]
+}
