@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high", filler: false,
-    title: "GTIG AI Threat Tracker From Prompting to Autonomy",
-    summary: "Google Threat Intelligence Group tracks adversarial AI evolution, from basic prompting to autonomous workflows.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The report highlights the transition of adversaries from simple AI misuse to more complex AI-enabled automation, reducing human latency. This development poses significant threats to security and requires immediate attention.",
-    url: "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai/"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Power agent hubs or custom harnesses with the Antigravity SDK in one toolkit",
+    summary: "Enterprise agent adoption isn't one-size-fits-all. Developers choose to build their own lightweight agent hubs.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Google Cloud Blog discusses how developers can use Antigravity SDK for building centralized agent hubs or custom harnesses.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/power-agent-hubs-or-custom-harnesses-with-the-antigravity-sdk/"
   },
   {
-    id: 2, cat: "vendor", impact: "high", filler: false,
-    title: "AWS Claude Fable 51 on AWS",
-    summary: "Claude Fable 5.1 is now available on AWS, delivering frontier intelligence for ambitious tasks.",
-    source: "AWS News Blog", age: "today",
-    detail: "This AI model can own more of a software project, running for hours and spanning many applications. Its availability on AWS expands the cloud provider's AI capabilities.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/"
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Agentic analytics with the Data Agent Kit",
+    summary: "Imagine your director sends you a chat message Monday morning: Our average order value dropped 7% in January, but total revenue stayed flat.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Google Cloud Blog discusses how to use Data Agent Kit for agentic analytics and identifying root causes of business problems.",
+    url: "https://cloud.google.com/blog/products/data-analytics/agentic-analytics-with-the-data-agent-kit/"
   },
   {
     id: 3, cat: "hyperscaler", impact: "high", filler: false,
-    title: "The Economics of Agent Optimization Context Engineering for Enterprise AI Agents",
-    summary: "Microsoft Foundry's context engineering helps lower AI costs by improving knowledge retrieval, tool selection, memory, and agent performance.",
-    source: "Azure Blog", age: "today",
-    detail: "This approach enables enterprises to optimize their AI agents, reducing costs and improving efficiency. It's a critical development in the hyperscaler space.",
-    url: "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/"
+    title: "How KDDI built Buffmee, a faster, reliable consumer RAG app",
+    summary: "KDDI developed Buffmee, their consumer Retrieval-Augmented Generation (RAG) app.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Google Cloud Blog discusses how KDDI used Agent Development Kit to build a fast and reliable consumer RAG app.",
+    url: "https://cloud.google.com/blog/topics/customers/how-kddi-optimized-rag-performance-with-agent-development-kit/"
   },
   {
-    id: 4, cat: "vendor", impact: "high", filler: false,
-    title: "Three Genius Ideas for AI Fabrics",
-    summary: "Arista shares clever ideas for building large-scale AI fabrics with top AI companies.",
-    source: "Arista Blog", age: "today",
-    detail: "These innovative approaches can help optimize AI infrastructure, enabling faster and more efficient AI development. Arista's expertise in this area is significant.",
-    url: "https://blogs.arista.com/blog/three-genius-ideas-for-ai-fabrics"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "What's new with Google Data Cloud",
+    summary: "August 31 - September 4 Stateful processing is available in BigQuery continuous queries in Preview.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Google Cloud Blog discusses the latest updates to Google Data Cloud, including stateful processing in BigQuery continuous queries.",
+    url: "https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud/"
   },
   {
-    id: 5, cat: "competition", impact: "medium", filler: false,
-    title: "Oracle Is Putting HPE Juniper Gear Into Its AI Data Centers",
-    summary: "Oracle deploys HPE's Juniper networking equipment in its data centers, potentially resolving the GPU networking bottleneck.",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "This development could have significant implications for Oracle's AI capabilities and competitiveness in the hyperscaler space. The partnership with HPE is noteworthy.",
-    url: "https://finance.yahoo.com/technology/ai/articles/oracle-putting-hpe-juniper-gear-083309249.html"
+    id: 5, cat: "competition", impact: "high", filler: false,
+    title: "How AWS unified its routing control plane to improve network availability and performance",
+    summary: "AWS unified its routing control plane to improve network availability and performance.",
+    source: "AWS Networking", age: "",
+    detail: "AWS discusses how it improved network availability and performance by unifying its routing control plane.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/how-aws-unified-its-routing-control-plane-to-improve-network-availability-and-performance/"
   },
   {
-    id: 6, cat: "storage", impact: "medium", filler: false,
-    title: "IQE CEO Warns of Indium Phosphide Supply Risks Amid China Export Controls",
-    summary: "China's indium phosphide export controls threaten global semiconductor supply chains, potentially delaying AI infrastructure expansion.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "This development highlights the critical importance of supply chain resilience in the AI infrastructure space. IQE's warning is a significant concern for hyperscalers and vendors alike.",
-    url: "https://cryptobriefing.com/iqe-indium-phosphide-supply-risks-china/"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "Flexibly control Amazon S3 Object Lock retention based on real business events",
+    summary: "Immutability is a foundational data protection control, protecting data in place against unintended changes and deletions.",
+    source: "AWS Storage", age: "",
+    detail: "AWS discusses how to flexibly control Amazon S3 Object Lock retention based on real business events.",
+    url: "https://aws.amazon.com/blogs/storage/flexibly-control-amazon-s3-object-lock-retention-based-on-real-business-events/"
   },
   {
-    id: 7, cat: "vendor", impact: "medium", filler: false,
-    title: "Nvidia CFO Forecasts 70 Revenue Growth in Fiscal 2028",
-    summary: "Nvidia's CFO predicts significant revenue growth, driven by AI adoption and data center expansion.",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "This forecast underscores Nvidia's dominant position in the AI chip market. The company's growth is closely tied to the expansion of AI infrastructure.",
-    url: "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-first-ever-ahead-223147950.html"
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North",
+    summary: "Playwright Workspaces in Azure App Testing is now generally available in three regions.",
+    source: "Azure Updates", age: "",
+    detail: "Azure announces the general availability of Playwright Workspaces in three regions for end-to-end testing.",
+    url: "https://azure.microsoft.com/updates?id=570919"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "US Hyperscalers Race to Build Multibillion-Dollar AI Data Centers, but China Controls Critical Parts",
-    summary: "US hyperscalers face challenges in building AI data centers due to reliance on Chinese components.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "This development highlights the complexity of global supply chains and the need for hyperscalers to develop more resilient and diversified sourcing strategies.",
-    url: "https://cryptobriefing.com/us-hyperscalers-ai-data-centers-china-supply-chain/"
+    id: 8, cat: "competition", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Azure Developer CLI (azd) Extension Framework",
+    summary: "The Azure Developer CLI (azd) Extension Framework is now generally available.",
+    source: "Azure Updates", age: "",
+    detail: "Azure announces the general availability of the Azure Developer CLI (azd) Extension Framework for extending Azure Developer CLI capabilities.",
+    url: "https://azure.microsoft.com/updates?id=570881"
   },
   {
-    id: 9, cat: "storage", impact: "medium", filler: false,
-    title: "Malaysia Considers Huawei's AI Chips for Sovereign AI Initiatives",
-    summary: "Malaysia explores using Huawei's AI chips to achieve digital sovereignty and boost its semiconductor role.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "This development highlights the growing importance of AI chip development in achieving national digital sovereignty goals. Malaysia's strategy is noteworthy in this context.",
-    url: "https://cryptobriefing.com/malaysia-huawei-ai-chips-sovereign-ai/"
+    id: 9, cat: "vendor", impact: "medium", filler: false,
+    title: "Manage Cisco rugged switches right from your Meraki dashboard",
+    summary: "Cisco now extends full Meraki dashboard management to the IE3500 Rugged Series.",
+    source: "Cisco Networking Blog", age: "",
+    detail: "Cisco announces that users can manage its rugged switches directly from their Meraki dashboard.",
+    url: "https://blogs.cisco.com/networking/manage-cisco-rugged-switches-right-from-cisco-cloud-control/"
   },
   {
-    id: 10, cat: "competition", impact: "medium", filler: false,
-    title: "The Pentagon Doubled Down on Its Anthropic Blacklist Why Amazon and Alphabet Investors Should Care",
-    summary: "The Pentagon still considers Anthropic a supply-chain risk, despite comments suggesting otherwise.",
-    source: "Yahoo Entertainment", age: "1 day ago",
-    detail: "This development has significant implications for investors in Amazon and Alphabet, as well as the broader AI ecosystem. The Pentagon's stance is a critical consideration for hyperscalers and vendors alike.",
-    url: "https://finance.yahoo.com/technology/ai/articles/pentagon-doubled-down-anthropic-blacklist-034421098.html"
+    id: 10, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Nvidia Is No Longer Just a Chip Company. It's the Infrastructure Platform for All of AI",
+    summary: "Every AI story eventually collapses back to one question: who makes the silicon?",
+    source: "24/7 Wall St", age: "",
+    detail: "24/7 Wall St discusses how Nvidia is becoming an infrastructure platform for all of AI.",
+    url: "https://247wallst.com/investing/2026/09/07/nvidia-is-no-longer-just-a-chip-company-its-the-infrastructure-platform-for-all-of-ai/"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "AWS Weekly Roundup Claude Fable 51 on AWS, Amazon Linux 2027 Preview, and More",
-    summary: "AWS announces new AI capabilities, including Claude Fable 5.1 and Amazon Linux 2027 preview.",
-    source: "AWS News Blog", age: "today",
-    detail: "This weekly roundup highlights AWS's ongoing efforts to expand its AI offerings and improve its cloud infrastructure. The company's innovations are significant in the hyperscaler space.",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/"
+    id: 11, cat: "storage", impact: "low", filler: true,
+    title: "Vulnerability Summary for the Week of August 31, 2026",
+    summary: "",
+    source: "Cisa.gov", age: "",
+    detail: "",
+    url: "https://www.cisa.gov/news-events/bulletins/sb26-250"
   },
   {
-    id: 12, cat: "storage", impact: "low", filler: true,
-    title: "Top Wall Street Analysts Like These 3 Stocks for the Long Haul",
-    summary: "Wall Street analysts recommend three stocks, including one AI-related company, for long-term investment.",
-    source: "CNBC", age: "1 day ago",
-    detail: "This article highlights the growing importance of AI in driving long-term growth and profitability. The recommended stock is significant in this context.",
-    url: "https://www.cnbc.com/2026/09/07/top-wall-street-analysts-like-these-3-stocks-for-the-long-haul.html"
+    id: 12, cat: "competition", impact: "low", filler: true,
+    title: "Why Oracle's Low-Cost Cloud Changes Everything",
+    summary: "",
+    source: "24/7 Wall St", age: "",
+    detail: "",
+    url: "https://247wallst.com/investing/2026/09/08/why-oracles-low-cost-cloud-changes-everything/"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "The US Went All in on AI Investment Is It Driving Up Consumer Prices",
-    summary: "The United States leads in AI investment, but Americans question who will benefit most and how it will affect their wallets.",
-    source: "USA Today", age: "1 day ago",
-    detail: "This article highlights the growing concern about the impact of AI investment on consumer prices. The development is significant in the hyperscaler space, where cost efficiency is critical.",
-    url: "https://www.usatoday.com/story/money/economy/2026/09/06/ai-investment-prices-electricity-inflation-impact/91580055007/"
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "AMD unveils personal supercomputer for AI-driven computing",
+    summary: "",
+    source: "Crypto Briefing", age: "",
+    detail: "",
+    url: "https://cryptobriefing.com/amd-threadripper-halo-station-personal-supercomputer/"
   },
   {
     id: 14, cat: "vendor", impact: "low", filler: true,
-    title: "Claude-Skills-Governance-Risk-and-Compliance v190",
-    summary: "Installable Claude Skills provide expert-level compliance guidance for 30+ frameworks, including ISO 27001 and GDPR.",
-    source: "Kitploit.com", age: "2 days ago",
-    detail: "This development highlights the growing importance of AI governance and risk management. The availability of these skills is significant in this context.",
-    url: "https://kitploit.com/en/posts/github-sushegaad-claude-skills-governance-risk-and-compliance-v190"
+    title: "log-horizon v0.9.0",
+    summary: "",
+    source: "Kitploit.com", age: "",
+    detail: "",
+    url: "https://kitploit.com/en/posts/github-lnfernux-log-horizon-v090"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "US Hyperscalers Face Challenges in Building AI Data Centers Due to China Export Controls",
-    summary: "US hyperscalers struggle to build AI data centers due to reliance on Chinese components and export controls.",
-    source: "Crypto Briefing", age: "2 days ago",
-    detail: "This development highlights the complexity of global supply chains and the need for hyperscalers to develop more resilient and diversified sourcing strategies. The challenges are significant in this context.",
-    url: "https://cryptobriefing.com/us-hyperscalers-ai-data-centers-china-supply-chain/"
+    id: 15, cat: "competition", impact: "low", filler: true,
+    title: "EU regulators send early warning to Oracle ahead of earnings",
+    summary: "",
+    source: "TheStreet", age: "",
+    detail: "",
+    url: "https://www.thestreet.com/investing/stocks/eu-regulators-warn-oracle-antitrust-ahead-of-earnings"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Oracle's deployment of HPE's Juniper networking equipment in its data centers may resolve the GPU networking bottleneck, a crucial development for Google to consider in its own AI infrastructure expansion. Meanwhile, Nvidia's CFO is forecasting 70% revenue growth in fiscal 2028, driven by AI adoption and data center expansion, highlighting the competitive imperative for Google to maintain its leadership position. Amidst these developments, IQE CEO's warning about indium phosphide supply risks due to China's export controls serves as a reminder to monitor global semiconductor supply chains closely.";
+const STATIC_BRIEF = "Google's HyperScaler platform is driving innovation in AI infrastructure, with developments like Agentic analytics and Stateful processing in BigQuery continuous queries, poised to revolutionize data processing and analytics. Meanwhile, competitors like AWS are making strides in network availability and performance, highlighting the need for Google to stay ahead of the curve. In the supply chain, Cisco's extension of Meraki dashboard management to its rugged switches signals a potential opportunity for Google to strengthen its partnerships and offerings in this space.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
