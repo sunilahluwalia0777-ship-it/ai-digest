@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Enterprise-grade PostgreSQL with AlloyDB Omni RPM Orchestrator is generally available",
-    summary: "AlloyDB Omni RPM orchestrator brings production-ready security, resiliency, and low-downtime operations to PostgreSQL workloads.",
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Introducing the Google Cloud Developer Plugin for AI Coding Agents",
+    summary: "Agent skills reduce context window usage and are straightforward to install. Managing individual skills can be unwieldy, or some skills act alongside other skills.",
     source: "Google Cloud Blog", age: "today",
-    detail: "This GA milestone builds on the foundation laid during our preview release and launches alongside AlloyDB Omni version 18.3.0 to bring cloud-like database automation capabilities to enterprise environments.",
-    url: "https://cloud.google.com/blog/products/databases/alloydb-omni-rpm-orchestrator-is-generally-available/"
+    detail: "The plugin enables developers to create custom coding agents that integrate with Google Cloud's AI capabilities. This allows for more efficient development and deployment of AI models.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/introducing-the-google-cloud-developer-plugin-for-ai-coding-agents/"
   },
   {
-    id: 2, cat: "competition", impact: "high", filler: false,
-    title: "Google is a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Assistants",
-    summary: "Gartner has named Google a Leader in its inaugural 2026 Magic Quadrant for Enterprise AI Assistants.",
+    id: 2, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Beyond DMS: Accelerating Migrations SQL Server Logins and Users to Cloud SQL",
+    summary: "Google Cloud's Database Migration Service (DMS) helps migrate databases from on-premises or cloud systems to fully managed Cloud SQL instances.",
     source: "Google Cloud Blog", age: "today",
-    detail: "In this comprehensive evaluation of top enterprise AI assistant vendors, Gartner placed Google in the Leaders quadrant for its evaluation across both Completeness of Vision and Ability to Execute.",
-    url: "https://cloud.google.com/blog/products/ai-machine-learning/google-is-a-leader-in-2026-gartner-magic-quadrant-for-enterprise-ai-assistants/"
+    detail: "The article provides guidance on replicating SQL Server logins and passwords to Cloud SQL, ensuring a smooth migration process.",
+    url: "https://cloud.google.com/blog/products/databases/how-to-replicate-sql-server-logins-and-passwords-to-cloud-sql/"
   },
   {
-    id: 3, cat: "storage", impact: "high", filler: false,
-    title: "[Launched] Generally Available: User-bound user delegation SAS for Azure Storage",
-    summary: "Announcing the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID.",
-    source: "Azure Updates", age: "today",
-    detail: "User-bound user delegation SAS is now generally available for new virtual machines and Virtual Machine Scale Sets.",
-    url: "https://azure.microsoft.com/updates?id=569241"
+    id: 3, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Spanner: Removing cumulative mutation limits for DML transactions",
+    summary: "Google Cloud's Spanner is a no-compromise operational database that provides horizontal scale and always-on availability.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The update removes cumulative mutation limits for DML transactions, enabling more efficient and scalable database operations.",
+    url: "https://cloud.google.com/blog/products/databases/spanner-removes-dml-mutation-limits/"
   },
   {
     id: 4, cat: "competition", impact: "high", filler: false,
-    title: "Meta Rises 6% as Muse AI Agent Arrives With Paid Subscription Tiers; Alphabet Falls 2%",
-    summary: "Meta just attached a price tag to its AI ambitions, and traders are now asking whether a consumer subscription can justify one of the biggest capital budgets in tech history.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "Oracle has shed a third of its value while booking a backlog that no software company has ever matched, and the reason that gap exists is exactly what divides investors on the future of enterprise AI adoption.",
-    url: "https://247wallst.com/investing/2026/09/09/meta-rises-6-as-muse-ai-agent-arrives-with-paid-subscription-tiers-alphabet-falls-2/"
+    title: "Introducing Amazon EBS Volume Clones across AWS accounts",
+    summary: "AWS introduces Amazon EBS Volume Clones with cross-account copy, enabling the creation of copies of EBS volumes into other AWS accounts.",
+    source: "AWS News Blog", age: "today",
+    detail: "This feature allows for more flexibility and control over data management and storage across multiple AWS accounts.",
+    url: "https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/"
   },
   {
-    id: 5, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
-    summary: "At the IBC conference, NVIDIA is showcasing its real-time AI capabilities for broadcast, sports, and global streaming.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "More than 44,000 attendees from 170+ countries are gathering to explore 1,300+ exhibitions in 14+ halls and outdoor spaces, with over 600 speakers sharing their expertise on the future of media and entertainment.",
-    url: "https://blogs.nvidia.com/blog/ibc-news-2026/"
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption",
+    summary: "Azure Functions Flex Consumption now supports TLS/SSL certificates, enabling more secure and encrypted data processing.",
+    source: "Azure Updates", age: "today",
+    detail: "This feature provides a new site-scoped certificate model, allowing up to 3 private (.pfx) and 3 public (.cer) certificates uploaded directly or imported from Azure Key Vault.",
+    url: "https://azure.microsoft.com/updates?id=570940"
   },
   {
     id: 6, cat: "vendor", impact: "high", filler: false,
-    title: "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
-    summary: "AI inference chipmaker d-Matrix will use NVIDIA NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform.",
+    title: "NVIDIA Expands AI Infrastructure Capacity in Partnership With Australia’s Data Center Ecosystem",
+    summary: "NVIDIA collaborates with Australian data center partners to expand land, power, and shell capacity for AI compute infrastructure.",
     source: "NVIDIA Newsroom", age: "today",
-    detail: "By connecting Raptor to NVIDIA NVLink scale-up and Spectrum-X scale-out networking, the NVIDIA MGX rack architecture and the broader NVIDIA AI platform, NVLink Fusion enables a new class of AI workloads.",
-    url: "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/"
+    detail: "This partnership aims to support the nation's growing demand for AI computing, with a planned buildout of up to 2-gigawatts by 2027.",
+    url: "https://nvidianews.nvidia.com/news/nvidia-expands-ai-infrastructure-capacity-in-partnership-with-australias-data-center-ecosystem"
   },
   {
-    id: 7, cat: "storage", impact: "high", filler: false,
-    title: "[Launched] Generally Available: Azure Ephemeral OS Disk with full caching for VM/VMSS",
-    summary: "Azure Ephemeral OS Disk with full caching is now generally available for new virtual machines and Virtual Machine Scale Sets.",
-    source: "Azure Updates", age: "today",
-    detail: "The capability caches the complete OS image on a VM’s local storage, eliminating remote-storage reads after caching finishes.",
-    url: "https://azure.microsoft.com/updates?id=570551"
+    id: 7, cat: "vendor", impact: "medium", filler: false,
+    title: "Cisco and Axis Communications: Greater visibility, scalability, and incident management",
+    summary: "Cisco and Axis Communications integrate their technologies to provide centralized visibility and simplified operations for physical security.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "This integration enables the management of Axis devices directly via the Meraki dashboard, unifying IT and physical security operations.",
+    url: "https://blogs.cisco.com/networking/cisco-and-axis-communications-greater-visibility-scalability-and-incident-management"
   },
   {
-    id: 8, cat: "competition", impact: "high", filler: false,
-    title: "Will Direct TPU Sales Re-Rate Google Stock?",
-    summary: "Quietly, a merchant silicon business is emerging inside the world’s largest advertising platform.",
-    source: "Trefis", age: "1 day ago",
-    detail: "The company has now started delivering its custom TPU systems directly to customers, potentially re-rating its stock price.",
-    url: "https://www.trefis.com/articles/614509/will-direct-tpu-sales-re-rate-google-stock/2026-09-08"
+    id: 8, cat: "storage", impact: "medium", filler: false,
+    title: "Now generally available: See how Stack Automation by Quali cuts deployment time",
+    summary: "Stack Automation by Quali, co-developed with Cisco, automates infrastructure deployment and reduces manual effort.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "This solution enables faster deployment times and streamlined operations for data center infrastructure.",
+    url: "https://blogs.cisco.com/datacenter/now-generally-available-see-how-stack-automation-by-quali-cuts-deployment-time"
   },
   {
-    id: 9, cat: "vendor", impact: "high", filler: false,
-    title: "Broadcom’s AI revenue is set to double again next year, and the numbers are staggering",
-    summary: "Broadcom's AI revenue surge highlights a transformative shift in the semiconductor industry.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "The company has shed light on its AI revenue growth, driving significant upstream investments and competition.",
-    url: "https://cryptobriefing.com/broadcom-ai-revenue-doubling-2027/"
+    id: 9, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Google Cloud grows 82% last quarter, putting Amazon and Microsoft investors on notice",
+    summary: "Google Cloud revenue surges 82%, outpacing AWS and Azure, reshaping the cloud infrastructure landscape.",
+    source: "Crypto Briefing", age: "today",
+    detail: "This growth signals Google Cloud's increasing competitiveness in the market and its focus on AI-fueled growth.",
+    url: "https://cryptobriefing.com/google-cloud-82-percent-growth-aws-azure/"
   },
   {
-    id: 10, cat: "competition", impact: "high", filler: false,
-    title: "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?",
-    summary: "Oracle has shed a third of its value while booking a backlog that no software company has ever matched.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "The reason that gap exists is exactly what divides investors on the future of enterprise AI adoption, and whether Oracle can disrupt the cloud market with its AI-powered solutions.",
-    url: "https://247wallst.com/investing/2026/09/09/oracle-is-the-disruptive-cloud-wildcard-do-you-buy-it/"
+    id: 10, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Microsoft CFO Touts AI Stack, Azure Efficiency and Agent Growth at Goldman Conference",
+    summary: "Microsoft's CFO highlights the company's broad technology stack, enterprise relationships, and focus on trust.",
+    source: "MarketBeat", age: "today",
+    detail: "The article emphasizes Microsoft's position in the market, with its Azure cloud platform and AI capabilities driving growth.",
+    url: "https://www.marketbeat.com/instant-alerts/event-microsoft-cfo-touts-ai-stack-azure-efficiency-and-agent-growth-at-goldman-conference-2026-09-09/?utm_source=yahoofinance&utm_medium=yahoofinance"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Airtel delivered its flawless Indian Premiere League 2026 cricket broadcasts",
-    summary: "For the millions of fervent fans of the Indian Premiere League, being able to count on a flawless live streaming cricket experience is never up for debate.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "During the IPL 2026 season, Airtel partnered with Google Cloud to manage this diabolical traffic, eliminating dropped packets and buffering from the equation.",
-    url: "https://cloud.google.com/blog/products/media-entertainment/how-airtel-delivered-its-flawless-indian-premiere-league-2026-cricket-broadcasts/"
+    id: 11, cat: "vendor", impact: "low", filler: true,
+    title: "3 AI Optical Networking Stocks Positioned for the Data Center Buildout",
+    summary: "Ciena beats Q3 earnings estimates, and demand tied to artificial intelligence, infrastructure modernization, and security supports the company's growth.",
+    source: "MarketBeat", age: "2 days ago",
+    detail: "The article discusses the growth potential of Ciena, Lumentum, and Coherent in the AI optical networking space.",
+    url: "https://www.marketbeat.com/instant-alerts/event-ciena-beats-q3-estimates/?utm_source=yahoofinance&utm_medium=yahoofinance"
   },
   {
-    id: 12, cat: "storage", impact: "low", filler: true,
-    title: "Secure team file sharing on Amazon WorkSpaces with Amazon EFS",
-    summary: "As more organizations move to remote and distributed work, builders and development teams face growing challenges in sharing files securely.",
-    source: "AWS Storage", age: "today",
-    detail: "Central IT becomes a bottleneck when handling every permission change, yet granting full access permissions poses significant security risks from scattered storage locations.",
-    url: "https://aws.amazon.com/blogs/storage/secure-team-file-sharing-on-amazon-workspaces-with-amazon-efs/"
+    id: 12, cat: "vendor", impact: "low", filler: true,
+    title: "Celero raises $275m to bring coherent optics inside AI data centres",
+    summary: "Celero Communications, a chip startup, raises funding to develop processors for pushing data down fibre optic cables between AI chips and racks.",
+    source: "The Next Web", age: "2 days ago",
+    detail: "The company's technology aims to support the growing demand for AI computing in data centers.",
+    url: "https://thenextweb.com/news/celero-275m-series-c-coherent-optics-ai-data-centres"
   },
   {
     id: 13, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Two zones or three? A design framework for zone-resilient Azure workloads",
-    summary: "Zone resiliency isn’t a single number you apply to a whole workload.",
-    source: "Azure Blog", age: "today",
-    detail: "Decide zone patterns component by component, use service-managed zone redundancy wherever it fits, and reserve three-zone designs for the components that genuinely require a third failure domain.",
-    url: "https://azure.microsoft.com/en-us/blog/two-zones-or-three-a-design-framework-for-zone-resilient-azure-workloads/"
+    title: "Three insights you may have missed from theCUBE’s coverage of VMware Explore",
+    summary: "Private cloud modernization shifts from a virtualization refresh to an operating foundation for production artificial intelligence.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "The article discusses key takeaways from VMware Explore, highlighting the growing importance of AI in private cloud infrastructure.",
+    url: "https://siliconangle.com/2026/09/09/private-cloud-modernization-three-insights-vmwareexplore/"
   },
   {
     id: 14, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Beyond the benchmark: How an adaptive approach drives scientific discovery",
-    summary: "For research and development (R&D) organizations, the promise of agentic AI is not a better one-time answer.",
-    source: "Azure Blog", age: "today",
-    detail: "It is a new way to explore complex scientific and engineering problems: pursuing multiple hypotheses, validating them against evidence, learning from what does not work, and adapting their approach as new information becomes available.",
-    url: "https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/"
+    title: "What to expect during ‘The AI ROI in Contact Center Summit’: Join theCUBE Sept. 11",
+    summary: "Contact center automation now requires measurable results, and enterprises are asking how deployments affect operating costs and service quality.",
+    source: "SiliconANGLE News", age: "2 days ago",
+    detail: "The article previews the upcoming summit, highlighting the growing importance of measuring AI's impact on contact centers.",
+    url: "https://siliconangle.com/2026/09/09/contact-center-automation-summit-contactcentersummit/"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Boots on the Ground: ‘WARDOGS’ Goes All Out on GeForce NOW at Early-Access Launch",
-    summary: "Gear up: The latest PC games and major updates are ready to play on GeForce NOW this week.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "WARDOGS drops onto the cloud at early-access launch, alongside the Valheim 1.0 Deep North update and Bus Simulator 27 — part of nine new titles joining the cloud.",
-    url: "https://blogs.nvidia.com/blog/geforce-now-thursday-wardogs/"
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "Could Advanced Micro Devices (AMD)’s Partnership With Cisco Systems (CSCO) Unlock a Massive Middle East AI Opportunity?",
+    summary: "Advanced Micro Devices and Cisco Systems partner to build an AI infrastructure in the Middle East.",
+    source: "Yahoo Entertainment", age: "2 days ago",
+    detail: "The article discusses the potential for this partnership to drive growth in the region's AI market.",
+    url: "https://finance.yahoo.com/technology/ai/articles/could-advanced-micro-devices-amd-partnership-cisco-systems-csco-unlock-massive-middle-east-ai-opportunity.html"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "AlloyDB Omni RPM orchestrator is now generally available, bringing production-ready security and low-downtime operations to PostgreSQL workloads, enhancing Google's storage offerings. Meanwhile, Google has been named a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Assistants, solidifying its position in the competitive AI landscape. NVIDIA is making significant advancements in real-time AI capabilities and partnering with AI inference chipmakers, underscoring the importance of monitoring the vendor ecosystem for opportunities and potential disruptions to Google's networking and storage infrastructure.";
+const STATIC_BRIEF = "Google Cloud grows 82% last quarter, outpacing AWS and Azure, reshaping the cloud infrastructure landscape, which presents opportunities for Google's Networking and Storage teams to further optimize their offerings for GPU/TPU workloads. Meanwhile, Amazon introduces Amazon EBS Volume Clones with cross-account copy, a feature that could potentially challenge Google Cloud's storage capabilities. NVIDIA expands AI infrastructure capacity in partnership with Australia's data center ecosystem, underscoring the importance of strategic partnerships in meeting growing demands for AI compute infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
