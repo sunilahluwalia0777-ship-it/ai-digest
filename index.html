@@ -647,124 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "competition", impact: "high", filler: false,
-    title: "Microsoft named a Leader in the 2026 Gartner Magic Quadrant for Container Management",
-    summary: "Microsoft was named a Leader in the 2026 Gartner Magic Quadrant for Container Management, helping organizations run AI and hybrid workloads at scale.",
-    source: "Azure Blog", age: "today",
-    detail: "This recognition is a testament to Microsoft's commitment to providing innovative solutions for container management. With AKS, Azure Arc, and Azure Container Apps, organizations can run AI and hybrid workloads efficiently and securely.",
-    url: "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/"
+    id: 1, cat: "storage", impact: "high", filler: false,
+    title: "Agent-ready analytics: Unlocking insights with BigQuery augmented analytics",
+    summary: "BigQuery now features a suite of augmented analytics Table-Valued Functions (TVFs) designed to automate complex data analysis at scale.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Augmented analytics combines AI, ML and statistical methods to automate insight discovery and pattern explanation. These functions allow you to diagnose why metrics changed, uncover underlying trends and relationships across the data, and even isolate the true imp",
+    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-augmented-analytics-tvfs/"
   },
   {
     id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI",
-    summary: "Microsoft Foundry shares strategies for optimizing AI agent costs and proving ROI, highlighting the importance of governance in AI investments.",
-    source: "Azure Blog", age: "today",
-    detail: "This blog post provides valuable insights into the economics of AI agent optimization, emphasizing the need for effective governance to control costs and demonstrate ROI. Microsoft Foundry's expertise in this area can help organizations make informed decisions about their AI investments.",
-    url: "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/"
+    title: "Announcing Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU support in Dataflow",
+    summary: "Dataflow is a critical component of Google Cloud's AI stack. It enables our customers to create batch and streaming pipelines that support a variety of analytics and AI use cases.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Today, we're delivering several new features in Dataflow to support large-scale AI workloads. These include Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU support.",
+    url: "https://cloud.google.com/blog/products/data-analytics/new-dataflow-features-to-enable-large-scale-ai-workloads/"
   },
   {
-    id: 3, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "The future of infrastructure resiliency starts with modernization",
-    summary: "Microsoft emphasizes the importance of modernizing infrastructure to ensure resiliency and support critical operations.",
-    source: "Azure Blog", age: "today",
-    detail: "This post highlights the need for organizations to prioritize infrastructure modernization to ensure they can withstand disruptions and continue supporting critical operations. Microsoft's expertise in this area can help organizations achieve greater resiliency.",
-    url: "https://azure.microsoft.com/en-us/blog/the-future-of-infrastructure-resiliency-starts-with-modernization/"
+    id: 3, cat: "competition", impact: "high", filler: false,
+    title: "Google is a leader in The Forrester Wave: Public Cloud Platforms, Q3 2026",
+    summary: "We are excited to share that Google Cloud was named a Leader and received the highest score in the 'current offering' category in the Forrester Wave: Public Cloud Platforms, Q3 2026 report.",
+    source: "Google Cloud Blog", age: "",
+    detail: "Google also received the highest possible score in 23 out of 30 evaluation criteria, including, but not limited t",
+    url: "https://cloud.google.com/blog/products/compute/forrester-wave-public-cloud-platforms-q3-2026-report/"
   },
   {
-    id: 4, cat: "vendor", impact: "high", filler: false,
-    title: "NVIDIA Expands Open Source CUDA-Q Platform for Fault-Tolerant Quantum Computing",
-    summary: "NVIDIA announces an expansion of its open source CUDA-Q platform, providing a programmable approach to developing applications for fault-tolerant quantum computers.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "This development has significant implications for the advancement of quantum computing, enabling organizations to develop practical applications with greater ease. NVIDIA's leadership in this area will likely drive further innovation in the field.",
-    url: "https://nvidianews.nvidia.com/news/nvidia-expands-open-source-cuda-q-platform-for-fault-tolerant-quantum-computing"
+    id: 4, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)",
+    summary: "There's a particular energy to mid-September in New York. Pumpkin spice lattes are flowing, temperatures are dropping, and it's nearly sweater weather.",
+    source: "AWS News Blog", age: "",
+    detail: "The city is back at full speed, and so is the AWS launch calendar. This week that energy showed up in a new frontier model on Amazon Bedrock, a desktop app for Amazon [",
+    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/"
   },
   {
-    id: 5, cat: "vendor", impact: "medium", filler: false,
-    title: "Cisco and Axis Communications: Greater visibility, scalability, and incident management",
-    summary: "Cisco and Axis Communications integrate their solutions, providing centralized visibility and simplified operations for IT and physical security.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "This integration has significant implications for organizations seeking to improve their security posture. By combining Cisco's networking expertise with Axis Communications' surveillance capabilities, organizations can achieve greater visibility and scalability in their security operations.",
-    url: "https://blogs.cisco.com/networking/cisco-and-axis-communications-greater-visibility-scalability-and-incident-management/"
+    id: 5, cat: "storage", impact: "medium", filler: false,
+    title: "Connect workloads to Amazon S3 Files across VPCs and accounts",
+    summary: "Organizations store vast amounts of data in Amazon S3 for machine learning, data analytics, media processing, and generative AI workloads.",
+    source: "AWS Storage", age: "",
+    detail: "Many of the applications, agents, and teams that work with that data are file-based: they read and write on a mounted path using the file and directory operations and POSIX tools they already depend on.",
+    url: "https://aws.amazon.com/blogs/storage/connect-workloads-to-amazon-s3-files-across-vpcs-and-accounts/"
   },
   {
-    id: 6, cat: "vendor", impact: "medium", filler: false,
-    title: "Now generally available: See how Stack Automation by Quali cuts deployment time",
-    summary: "Cisco and Quali announce the general availability of Stack Automation, which automates infrastructure deployment and reduces manual effort.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "This solution has significant implications for organizations seeking to accelerate their infrastructure deployments. By automating the process, organizations can reduce manual effort and achieve greater efficiency in their operations.",
-    url: "https://blogs.cisco.com/datacenter/now-generally-available-see-how-stack-automation-by-quali-cuts-deployment-time/"
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop",
+    summary: "Beginning in early October 2026, Windows App will begin using three new wildcard fully qualified domain names (FQDNs) for client-side service traffic to Azure Virtual Desktop.",
+    source: "Azure Updates", age: "",
+    detail: "These domains are already included in the cloud-side connectivity requirements.",
+    url: "https://azure.microsoft.com/updates?id=571360"
   },
   {
-    id: 7, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Show HN: Bypassing Transformer Softmax via Static Contraction",
-    summary: "A JAX XLA-powered PoC demonstrates a novel approach to bypassing transformer softmax operations, leveraging branchless mathematical primitives.",
-    source: "Github.com", age: "2 days ago",
-    detail: "This development has significant implications for the advancement of AI infrastructure, enabling organizations to optimize their transformer models and achieve greater efficiency in their AI workloads.",
-    url: "https://github.com/PJHkorea/jax-softmax-bypass"
+    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[In preview] Public Preview: HTTP/3 over QUIC support in Azure Application Gateway",
+    summary: "Announcing public preview support for HTTP/3 over QUIC on Azure Application Gateway.",
+    source: "Azure Updates", age: "",
+    detail: "HTTP/3 is the next evolution of HTTP and uses QUIC to improve connection setup time, reduce latency, and provide better resiliency for modern web applications and APIs.",
+    url: "https://azure.microsoft.com/updates?id=571123"
   },
   {
-    id: 8, cat: "competition", impact: "medium", filler: false,
-    title: "Jim Cramer Doubles Down on This $252B AI Stock: “You Have to Buy” Every Dip",
-    summary: "Jim Cramer recommends investing in Arista Networks, citing the company's strong leadership and potential for growth.",
-    source: "24/7 Wall St.", age: "2 days ago",
-    detail: "This endorsement has significant implications for Arista Networks' stock performance, as Jim Cramer's recommendations often influence investor sentiment. The company's AI capabilities are likely to drive further innovation and growth.",
-    url: "https://247wallst.com/investing/2026/09/12/jim-cramer-doubles-down-on-this-252b-ai-stock-you-have-to-buy-every-dip/"
+    id: 8, cat: "silicon", impact: "medium", filler: false,
+    title: "Heart of the Matter: How a Major Children's Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+    summary: "Heart of the Matter: How a Major Children's Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+    source: "NVIDIA Blog", age: "",
+    detail: "",
+    url: "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/"
   },
   {
-    id: 9, cat: "storage", impact: "low", filler: true,
-    title: "Oracle increases job cuts amid cash crunch from AI data centers",
-    summary: "Oracle's workforce reduction highlights the industry shift towards AI, pressuring traditional IT roles and reshaping tech employment.",
-    source: "Crypto Briefing", age: "2 days ago",
-    detail: "This development has significant implications for the tech industry, as Oracle's job cuts may be a sign of broader restructuring efforts. The shift towards AI is likely to continue, driving changes in the way organizations operate.",
-    url: "https://cryptobriefing.com/oracle-job-cuts-ai-data-center-cash-crunch/"
+    id: 9, cat: "silicon", impact: "medium", filler: false,
+    title: "Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX",
+    summary: "As local models become more capable, AI agents can handle more work directly on a PC while keeping sensitive information on the device.",
+    source: "NVIDIA Blog", age: "",
+    detail: "Portable Computer is a local version of the agent Perplexity Computer that plans and carries out multistep tasks. Accelerated by NVIDIA GPUs, it uses local models to analyze data, bring together information [",
+    url: "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Dell Technologies (DELL) Raises its AI Server Forecast for the Second Time This Year",
-    summary: "Dell Technologies raises its fiscal 2027 profit and revenue outlook, driven by strong demand for its AI servers.",
-    source: "Yahoo Entertainment", age: "2 days ago",
-    detail: "This development has significant implications for Dell Technologies' stock performance, as the company's raised forecast may drive investor confidence. The growth of AI adoption is likely to continue, driving further innovation in the server market.",
-    url: "https://finance.yahoo.com/technology/ai/articles/dell-technologies-dell-raises-ai-233909317.html"
+    id: 10, cat: "silicon", impact: "medium", filler: false,
+    title: "Closing the Resilience Gap with Native Splunk in Cisco Nexus One",
+    summary: "See how Native Splunk and Cisco Nexus One bring analytics closer to network data, strengthen resilience, and connect teams across operational domains.",
+    source: "Cisco Data Center Blog", age: "",
+    detail: "",
+    url: "https://blogs.cisco.com/datacenter/closing-the-resilience-gap-with-native-splunk-in-cisco-nexus-one/"
   },
   {
-    id: 11, cat: "competition", impact: "medium", filler: true,
-    title: "Faced with less compute and fewer tokens, Chinese AI labs are tightening the gap with the U.S. by just being more efficient",
-    summary: "Chinese AI companies are accused of training on American models, but analysts say efficiency is a key factor in their growth.",
-    source: "Fortune", age: "1 day ago",
-    detail: "This development has significant implications for the global AI landscape, as Chinese companies are rapidly catching up to their US counterparts. Efficiency and innovation will be critical factors in determining which companies emerge as leaders in the field.",
-    url: "https://fortune.com/2026/09/13/china-us-ai-models-efficient/"
-  },
-  {
-    id: 12, cat: "storage", impact: "low", filler: true,
-    title: "Guangdong Goworld denies Nvidia certification rumors after share price moves",
-    summary: "Market speculation driven by AI hype and export restrictions leads to volatile stock movements, highlighting the need for cautious investment.",
+    id: 11, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Blackstone plans to invest tens of billions in Google AI chips",
+    summary: "Blackstone's massive investment in AI chips could reshape the AI infrastructure landscape, intensifying competition and accelerating innovation.",
     source: "Crypto Briefing", age: "1 day ago",
-    detail: "This development has significant implications for investors, as market speculation can drive significant fluctuations in stock prices. Caution is warranted when investing in companies involved in AI and related technologies.",
-    url: "https://cryptobriefing.com/guangdong-goworld-denies-nvidia-certification-rumors/"
+    detail: "",
+    url: "https://cryptobriefing.com/blackstone-tens-billions-google-ai-chips/"
   },
   {
-    id: 13, cat: "ai infrastructure", impact: "low", filler: true,
-    title: "Remembrance, Resilience, and 911 Advances in Public Safety",
-    summary: "The anniversary of September 11, 2001, serves as a reminder of the importance of public safety and resilience.",
-    source: "Bradenkelley.com", age: "2 days ago",
-    detail: "This article highlights the significance of public safety and resilience in the face of crises. The advancements made in this area have critical implications for protecting human life and ensuring continued operations during emergencies.",
-    url: "https://bradenkelley.com/2026/09/911-25th-anniversary-remembrance-public-safety-advances/"
+    id: 12, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Anthropic Locks Down $517 Billion in Compute Ahead of IPO — and It's Still Not Enough",
+    summary: "Anthropic just signed a compute bill so large it reshapes the math behind every NVIDIA forecast on Wall Street, and the number arriving ahead of the company'...",
+    source: "24/7 Wall St.", age: "1 day ago",
+    detail: "",
+    url: "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/"
   },
   {
-    id: 14, cat: "vendor", impact: "low", filler: true,
-    title: "Dataiku Ships Standalone Agent Governance With a Bet That Cross-Platform Beats Native",
-    summary: "Dataiku announces standalone AI agent governance, betting that cross-platform solutions will outperform native ones.",
-    source: "Forkast.news", age: "1 day ago",
-    detail: "This development has significant implications for the advancement of AI infrastructure, as Dataiku's solution provides organizations with greater control over their AI agents. The company's bet on cross-platform solutions may drive further innovation in this area.",
-    url: "https://forkast.news/dataiku-ships-standalone-agent-governance-with-a-bet-that-cross-platform-beats-native/"
+    id: 13, cat: "silicon", impact: "low", filler: true,
+    title: "Cornelis Networks raises $205M and scales up and out with its new Active Compute Fabric",
+    summary: "Data center infrastructure startup Cornelis Networks Inc. is taking a major leap forward with the launch of a new Active Compute Fabric architecture to support scale-up and scale-out networks for artificial intelligence workloads.",
+    source: "SiliconANGLE News", age: "1 day ago",
+    detail: "",
+    url: "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/"
   },
   {
-    id: 15, cat: "ai infrastructure", impact: "low", filler: true,
-    title: "The Agent Governance Stack Is Forming: Four Products, Two Weeks, One Pattern",
-    summary: "Four enterprise software vendors ship standalone AI agent governance products within a two-week period, revealing a pattern in the industry.",
-    source: "Forkast.news", age: "1 day ago",
-    detail: "This development has significant implications for the advancement of AI infrastructure, as multiple companies are recognizing the importance of agent governance. The pattern emerging in this area may drive further innovation and standardization.",
-    url: "https://forkast.news/the-agent-governance-stack-is-forming-four-products-two-weeks-one-pattern/"
+    id: 14, cat: "storage", impact: "low", filler: true,
+    title: "Vulnerability Summary for the Week of September 7, 2026",
+    summary: "High Vulnerabilities  <table>  <tr> <th>PrimaryVendor -- Product</th> <th>Description</th> <th>Published</th> <th>CVSS Score</th> <th>Source Info</th> </tr>    <tr> <td>100plugins--Open User Map</td> <td>Unauthenticated Cross Site Scripting (XSS) in Open Us…",
+    source: "Cisa.gov", age: "1 day ago",
+    detail: "",
+    url: "https://www.cisa.gov/news-events/bulletins/sb26-257"
+  },
+  {
+    id: 15, cat: "hyperscaler", impact: "low", filler: true,
+    title: "Amazon Stock Trades at Rare Discount as Andy Jassy Bets $220 Billion on AWS to Fuel Next Trillion-Dollar Leg",
+    summary: "Amazon is lifting 2026 capital expenditure to about $220 billion as AWS growth accelerates, placing Andy Jassy's AI infrastructure strategy at the centre of the company's next growth test.",
+    source: "Ibtimes.com.au", age: "1 day ago",
+    detail: "",
+    url: "https://www.ibtimes.com.au/amazon-220-billion-ai-spending-aws-growth-1875482"
   },
 ];
 // ARTICLES_END
@@ -912,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "NVIDIA expands its open source CUDA-Q platform for fault-tolerant quantum computing providing a programmable approach to developing applications. Arista Networks receives strong investment recommendation from Jim Cramer citing the company's leadership and growth potential posing competitive pressure. Meanwhile Cisco announces general availability of Stack Automation by Quali which automates infrastructure deployment reducing manual effort and is an important supply chain development for Google's networking and storage strategy.";
+const STATIC_BRIEF = "Google Cloud's Dataflow now supports Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU, enhancing batch and streaming pipelines for analytics and AI use cases. Meanwhile, Amazon is expanding its storage capabilities with cross-VPC and account access to S3 Files, a move that underscores the importance of robust networking and storage infrastructure in the cloud wars. On the silicon front, NVIDIA's RTX technology is being leveraged in innovative applications such as portable computers and cardiac care, highlighting the need for Google to stay ahead in the GPU/TPU space.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
