@@ -647,124 +647,164 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Agent-ready analytics: Unlocking insights with BigQuery augmented analytics",
-    summary: "BigQuery now features a suite of augmented analytics Table-Valued Functions (TVFs) designed to automate complex data analysis at scale.",
-    source: "Google Cloud Blog", age: "",
-    detail: "Augmented analytics combines AI, ML and statistical methods to automate insight discovery and pattern explanation. These functions allow you to diagnose why metrics changed, uncover underlying trends and relationships across the data, and even isolate the true imp",
-    url: "https://cloud.google.com/blog/products/data-analytics/bigquery-augmented-analytics-tvfs/"
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Introducing new session management tools with native, granular controls",
+    summary: "Google Cloud introduces new session management tools with native, granular controls to improve security posture and mitigate credential theft and account takeover risks.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses the new features of Google Cloud's session management tools, which provide flexible options for setting up session controls based on an organization's security policy needs.",
+    url: "https://cloud.google.com/blog/products/identity-security/introducing-new-session-management-tools-with-native-granular-controls/"
   },
   {
     id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Announcing Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU support in Dataflow",
-    summary: "Dataflow is a critical component of Google Cloud's AI stack. It enables our customers to create batch and streaming pipelines that support a variety of analytics and AI use cases.",
-    source: "Google Cloud Blog", age: "",
-    detail: "Today, we're delivering several new features in Dataflow to support large-scale AI workloads. These include Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU support.",
-    url: "https://cloud.google.com/blog/products/data-analytics/new-dataflow-features-to-enable-large-scale-ai-workloads/"
+    title: "Best practices for handling cloud reliability incidents",
+    summary: "Google Cloud provides a structured workflow to resolve cloud outages, including verifying, investigating, reporting, resolving, and reviewing.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article outlines best practices for handling cloud reliability incidents on Google Cloud Platform, emphasizing the importance of preparation and having a plan in place before an outage occurs.",
+    url: "https://cloud.google.com/blog/topics/developers-practitioners/cloud-reliability-incident-handling-best-practices/"
   },
   {
-    id: 3, cat: "competition", impact: "high", filler: false,
-    title: "Google is a leader in The Forrester Wave: Public Cloud Platforms, Q3 2026",
-    summary: "We are excited to share that Google Cloud was named a Leader and received the highest score in the 'current offering' category in the Forrester Wave: Public Cloud Platforms, Q3 2026 report.",
-    source: "Google Cloud Blog", age: "",
-    detail: "Google also received the highest possible score in 23 out of 30 evaluation criteria, including, but not limited t",
-    url: "https://cloud.google.com/blog/products/compute/forrester-wave-public-cloud-platforms-q3-2026-report/"
+    id: 3, cat: "silicon", impact: "high", filler: false,
+    title: "Scaling Telco Autonomy: Leveraging GNNs with Distributed GraphFlow",
+    summary: "Google Cloud announces the introduction of Distributed GraphFlow, a new capability that enables running large-scale graph neural networks (GNNs) at scale.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses the benefits of using Distributed GraphFlow to automate network operations in the telecommunications industry, enabling autonomous network operations and improving scalability.",
+    url: "https://cloud.google.com/blog/products/databases/run-gnns-at-scale-with-ease-introducing-distributed-graphflow/"
   },
   {
-    id: 4, cat: "competition", impact: "medium", filler: false,
-    title: "AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)",
-    summary: "There's a particular energy to mid-September in New York. Pumpkin spice lattes are flowing, temperatures are dropping, and it's nearly sweater weather.",
-    source: "AWS News Blog", age: "",
-    detail: "The city is back at full speed, and so is the AWS launch calendar. This week that energy showed up in a new frontier model on Amazon Bedrock, a desktop app for Amazon [",
-    url: "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/"
+    id: 4, cat: "storage", impact: "high", filler: false,
+    title: "Introducing Filestore agent volumes: fully managed storage for agent workspaces",
+    summary: "Google Cloud introduces Filestore agent volumes, a fully managed storage solution designed to address the storage requirements of agent workspaces.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses the benefits of using Filestore agent volumes, which provide a simple and scalable way to manage storage for agent workspaces on Google Cloud.",
+    url: "https://cloud.google.com/blog/products/storage-data-transfer/filestore-agent-volumes/"
   },
   {
-    id: 5, cat: "storage", impact: "medium", filler: false,
-    title: "Connect workloads to Amazon S3 Files across VPCs and accounts",
-    summary: "Organizations store vast amounts of data in Amazon S3 for machine learning, data analytics, media processing, and generative AI workloads.",
-    source: "AWS Storage", age: "",
-    detail: "Many of the applications, agents, and teams that work with that data are file-based: they read and write on a mounted path using the file and directory operations and POSIX tools they already depend on.",
-    url: "https://aws.amazon.com/blogs/storage/connect-workloads-to-amazon-s3-files-across-vpcs-and-accounts/"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Agent Substrate brings high-density, scalable, trusted infrastructure to GKE",
+    summary: "Google Cloud announces the availability of Agent Substrate on Google Kubernetes Engine (GKE), providing a secure-by-default agent execution runtime.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses the benefits of using Agent Substrate on GKE, which enables running millions of sandboxes with 10x higher density and sub-500ms resume operations at over 500 suspend/resume activities per second.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke/"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop",
-    summary: "Beginning in early October 2026, Windows App will begin using three new wildcard fully qualified domain names (FQDNs) for client-side service traffic to Azure Virtual Desktop.",
-    source: "Azure Updates", age: "",
-    detail: "These domains are already included in the cloud-side connectivity requirements.",
-    url: "https://azure.microsoft.com/updates?id=571360"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "How Precisely transforms user experience with AI agents using Amazon S3 Vectors",
+    summary: "Precisely uses Amazon S3 Vectors to power its Data Integrity Suite, enabling users to interact with the platform more naturally and intuitively through conversational interfaces.",
+    source: "AWS Storage", age: "today",
+    detail: "The article discusses how Precisely leverages Amazon S3 Vectors to improve user experience with AI agents, highlighting the benefits of using vector-based search and retrieval capabilities.",
+    url: "https://aws.amazon.com/blogs/storage/how-precisely-transforms-user-experience-with-ai-agents-using-amazon-s3-vectors/"
   },
   {
-    id: 7, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "[In preview] Public Preview: HTTP/3 over QUIC support in Azure Application Gateway",
-    summary: "Announcing public preview support for HTTP/3 over QUIC on Azure Application Gateway.",
-    source: "Azure Updates", age: "",
-    detail: "HTTP/3 is the next evolution of HTTP and uses QUIC to improve connection setup time, reduce latency, and provide better resiliency for modern web applications and APIs.",
-    url: "https://azure.microsoft.com/updates?id=571123"
+    id: 7, cat: "vendor", impact: "high", filler: false,
+    title: "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
+    summary: "The University of Manchester uses NVIDIA Earth-2 to forecast air pollution across the UK, leveraging AI and GPU-accelerated computing.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The article discusses how the university uses NVIDIA Earth-2 to improve air quality forecasting, highlighting the benefits of using AI and GPU-accelerated computing for complex simulations.",
+    url: "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/"
   },
   {
-    id: 8, cat: "silicon", impact: "medium", filler: false,
-    title: "Heart of the Matter: How a Major Children's Hospital Uses Open Source NVIDIA AI for Cardiac Care",
-    summary: "Heart of the Matter: How a Major Children's Hospital Uses Open Source NVIDIA AI for Cardiac Care",
-    source: "NVIDIA Blog", age: "",
-    detail: "",
-    url: "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/"
+    id: 8, cat: "vendor", impact: "high", filler: false,
+    title: "'Now We Can Know Everything and Do Anything,' Jensen Huang Says at Dreamforce",
+    summary: "NVIDIA CEO Jensen Huang discusses the potential of AI and custom AI chip spending at Salesforce's Dreamforce event.",
+    source: "NVIDIA Blog", age: "today",
+    detail: "The article highlights Huang's comments on the future of AI, emphasizing its potential to transform industries and create new opportunities.",
+    url: "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/"
   },
   {
-    id: 9, cat: "silicon", impact: "medium", filler: false,
-    title: "Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX",
-    summary: "As local models become more capable, AI agents can handle more work directly on a PC while keeping sensitive information on the device.",
-    source: "NVIDIA Blog", age: "",
-    detail: "Portable Computer is a local version of the agent Perplexity Computer that plans and carries out multistep tasks. Accelerated by NVIDIA GPUs, it uses local models to analyze data, bring together information [",
-    url: "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/"
+    id: 9, cat: "vendor", impact: "medium", filler: false,
+    title: "Broadcom Stock Falls 4.45% as AI Slowdown Fears Deepen Chipmaker's Margin Compression Worries Monday",
+    summary: "Broadcom's stock price falls amid concerns over margin compression and the impact of an AI slowdown on custom AI chip spending.",
+    source: "Ibtimes.com.au", age: "today",
+    detail: "The article discusses the market reaction to Broadcom's stock price fall, highlighting investor concerns about the company's margins and exposure to AI-related revenue streams.",
+    url: "https://www.ibtimes.com.au/broadcom-shares-fall-ai-safety-margin-concerns-1875506"
   },
   {
-    id: 10, cat: "silicon", impact: "medium", filler: false,
-    title: "Closing the Resilience Gap with Native Splunk in Cisco Nexus One",
-    summary: "See how Native Splunk and Cisco Nexus One bring analytics closer to network data, strengthen resilience, and connect teams across operational domains.",
-    source: "Cisco Data Center Blog", age: "",
-    detail: "",
-    url: "https://blogs.cisco.com/datacenter/closing-the-resilience-gap-with-native-splunk-in-cisco-nexus-one/"
+    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Meet Adapt, Westpac's Azure-based enterprise data platform",
+    summary: "Westpac announces its new Azure-based enterprise data platform, called Adapt, designed to improve data management and analytics capabilities.",
+    source: "iTnews", age: "today",
+    detail: "The article discusses the features and benefits of Westpac's Adapt platform, highlighting its ability to provide a unified view of customer data and enable more informed decision-making.",
+    url: "https://www.itnews.com.au/news/meet-adapt-westpacs-azure-based-enterprise-data-platform-628927"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Blackstone plans to invest tens of billions in Google AI chips",
-    summary: "Blackstone's massive investment in AI chips could reshape the AI infrastructure landscape, intensifying competition and accelerating innovation.",
-    source: "Crypto Briefing", age: "1 day ago",
-    detail: "",
-    url: "https://cryptobriefing.com/blackstone-tens-billions-google-ai-chips/"
+    id: 11, cat: "vendor", impact: "low", filler: true,
+    title: "Cisco UCS Manager: Celebrating the legacy, shaping the future with Cisco Intersight",
+    summary: "Cisco announces the end-of-life for its UCS Manager platform and introduces Cisco Intersight as a centralized management solution.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "The article discusses the features and benefits of Cisco Intersight, highlighting its ability to provide centralized visibility, automation, and scale for infrastructure management.",
+    url: "https://blogs.cisco.com/datacenter/cisco-ucs-manager-celebrating-the-legacy-shaping-the-future-with-cisco-intersight/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Anthropic Locks Down $517 Billion in Compute Ahead of IPO — and It's Still Not Enough",
-    summary: "Anthropic just signed a compute bill so large it reshapes the math behind every NVIDIA forecast on Wall Street, and the number arriving ahead of the company'...",
-    source: "24/7 Wall St.", age: "1 day ago",
-    detail: "",
-    url: "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/"
+    id: 12, cat: "vendor", impact: "low", filler: true,
+    title: "Emerald AI, Google and NVIDIA Launch Alliance to Advance Flexible AI Data Centers",
+    summary: "Emerald AI, Google, and NVIDIA announce an alliance to advance flexible AI data centers, enabling more efficient and responsible AI development.",
+    source: "NVIDIA Newsroom", age: "today",
+    detail: "The article discusses the goals and benefits of the alliance, highlighting its potential to drive innovation in AI infrastructure and promote sustainability.",
+    url: "https://blogs.nvidia.com/blog/ai-energy-management-alliance/"
   },
   {
-    id: 13, cat: "silicon", impact: "low", filler: true,
-    title: "Cornelis Networks raises $205M and scales up and out with its new Active Compute Fabric",
-    summary: "Data center infrastructure startup Cornelis Networks Inc. is taking a major leap forward with the launch of a new Active Compute Fabric architecture to support scale-up and scale-out networks for artificial intelligence workloads.",
-    source: "SiliconANGLE News", age: "1 day ago",
-    detail: "",
-    url: "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/"
+    id: 13, cat: "vendor", impact: "low", filler: true,
+    title: "Contact center AI ROI shifts toward resolution quality and governed execution",
+    summary: "The contact center AI ROI is shifting from handling interactions to resolving customer issues, with a focus on governance and responsible AI deployment.",
+    source: "SiliconANGLE News", age: "today",
+    detail: "The article discusses the evolving role of AI in contact centers, highlighting the need for more effective issue resolution and governance frameworks.",
+    url: "https://siliconangle.com/2026/09/14/contact-center-ai-resolution-contactcentersummit/"
   },
   {
-    id: 14, cat: "storage", impact: "low", filler: true,
-    title: "Vulnerability Summary for the Week of September 7, 2026",
-    summary: "High Vulnerabilities  <table>  <tr> <th>PrimaryVendor -- Product</th> <th>Description</th> <th>Published</th> <th>CVSS Score</th> <th>Source Info</th> </tr>    <tr> <td>100plugins--Open User Map</td> <td>Unauthenticated Cross Site Scripting (XSS) in Open Us…",
-    source: "Cisa.gov", age: "1 day ago",
-    detail: "",
-    url: "https://www.cisa.gov/news-events/bulletins/sb26-257"
+    id: 14, cat: "vendor", impact: "low", filler: true,
+    title: "Was The HPE Stock Surge Visible In Its Orders?",
+    summary: "Hewlett Packard Enterprise (HPE) stock has surged over the past year, but its orders may not fully reflect this growth.",
+    source: "Trefis", age: "today",
+    detail: "The article analyzes HPE's order trends and revenue growth, highlighting potential disparities between its stock performance and underlying business fundamentals.",
+    url: "https://www.trefis.com/articles/615233/was-the-hpe-stock-surge-visible-in-its-orders/2026-09-14"
   },
   {
-    id: 15, cat: "hyperscaler", impact: "low", filler: true,
-    title: "Amazon Stock Trades at Rare Discount as Andy Jassy Bets $220 Billion on AWS to Fuel Next Trillion-Dollar Leg",
-    summary: "Amazon is lifting 2026 capital expenditure to about $220 billion as AWS growth accelerates, placing Andy Jassy's AI infrastructure strategy at the centre of the company's next growth test.",
-    source: "Ibtimes.com.au", age: "1 day ago",
-    detail: "",
-    url: "https://www.ibtimes.com.au/amazon-220-billion-ai-spending-aws-growth-1875482"
+    id: 15, cat: "vendor", impact: "low", filler: true,
+    title: "(BBC, 9/15) DeepL AI predicts 2024 election results...",
+    summary: "DeepL AI is used to predict the outcome of the 2024 US presidential election.",
+    source: "Ryukoku.ac.jp", age: "today",
+    detail: "The article discusses the use of DeepL AI in predicting election outcomes, highlighting its potential applications in political forecasting and analysis.",
+    url: "http://www.st.ryukoku.ac.jp/~kjm/security/memo/2026/09.html#20260915__killersat"
+  },
+  {
+    id: 16, cat: "vendor", impact: "low", filler: true,
+    title: "Cybersecurity jobs available right now: September 15, 2026",
+    summary: "A list of cybersecurity job openings is provided, including AI and security architect positions.",
+    source: "Help Net Security", age: "today",
+    detail: "The article presents a curated list of cybersecurity job openings, highlighting the demand for skilled professionals in the industry.",
+    url: "https://www.helpnetsecurity.com/2026/09/15/cybersecurity-jobs-available-right-now-september-15-2026/"
+  },
+  {
+    id: 17, cat: "vendor", impact: "low", filler: true,
+    title: "TriSuElla-AIDLCA-Framework",
+    summary: "The OWASP TriSuElla-AIDLCA Framework is a secure software development life cycle and autonomous agent governance framework.",
+    source: "Kitploit.com", age: "today",
+    detail: "The article discusses the features and benefits of the TriSuElla-AIDLCA Framework, highlighting its ability to provide policy-governed security and resilience in software development.",
+    url: "https://kitploit.com/en/tools/github/owasp/trisuella-aidlca-framework/"
+  },
+  {
+    id: 18, cat: "vendor", impact: "low", filler: true,
+    title: "Distributing Massive AI Models With Network-Layer Multicast",
+    summary: "A solution for distributing massive AI models using network-layer multicast is discussed.",
+    source: "Dzone.com", age: "today",
+    detail: "The article presents a technical approach to scaling AI model distribution, highlighting the benefits of using multicast techniques in high-performance computing environments.",
+    url: "https://dzone.com/articles/massive-ai-models-multicast"
+  },
+  {
+    id: 19, cat: "vendor", impact: "low", filler: true,
+    title: "Open Channels FM: Open Stacks, Federation, and the Changing Landscape of Software",
+    summary: "A discussion on open stacks, federation, and the evolving software landscape is presented.",
+    source: "Openchannels.fm", age: "today",
+    detail: "The article explores the intersection of open source, cloud computing, and AI, highlighting the potential for more flexible and decentralized software development ecosystems.",
+    url: "https://openchannels.fm/open-stacks-federation-and-the-changing-landscape-of-software/"
+  },
+  {
+    id: 20, cat: "vendor", impact: "low", filler: true,
+    title: "Amazon Partners with Wiwynn to Expand U.S. AI Infrastructure Capacity",
+    summary: "Amazon partners with Wiwynn to expand its AI infrastructure capacity in the US, leveraging Wiwynn's advanced manufacturing capabilities.",
+    source: "Yahoo Entertainment", age: "today",
+    detail: "The article discusses the partnership between Amazon and Wiwynn, highlighting their joint efforts to drive growth in AI infrastructure and support increasing demand for cloud-based services.",
+    url: "https://finance.yahoo.com/technology/ai/articles/amazon-partners-wiwynn-expand-u-012223093.html"
   },
 ];
 // ARTICLES_END
@@ -912,7 +952,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud's Dataflow now supports Pause/Resume and NVIDIA RTX PRO 6000 Blackwell GPU, enhancing batch and streaming pipelines for analytics and AI use cases. Meanwhile, Amazon is expanding its storage capabilities with cross-VPC and account access to S3 Files, a move that underscores the importance of robust networking and storage infrastructure in the cloud wars. On the silicon front, NVIDIA's RTX technology is being leveraged in innovative applications such as portable computers and cardiac care, highlighting the need for Google to stay ahead in the GPU/TPU space.";
+const STATIC_BRIEF = "Google Cloud introduces Filestore agent volumes a fully managed storage solution designed to address the storage requirements of agent workspaces and also announces Agent Substrate on Google Kubernetes Engine providing a secure-by-default agent execution runtime. Meanwhile Precisely uses Amazon S3 Vectors to power its Data Integrity Suite enabling users to interact with the platform more naturally and intuitively through conversational interfaces highlighting competitive signals in AI-powered platforms. NVIDIA's Earth-2 is being used by the University of Manchester for air pollution forecasting and its CEO Jensen Huang discusses custom AI chip spending at Salesforce's Dreamforce event while Broadcom's stock price falls amid concerns over margin compression and AI slowdown impact on custom AI chip spending.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
