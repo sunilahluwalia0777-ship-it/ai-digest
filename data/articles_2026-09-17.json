@@ -1,0 +1,161 @@
+{
+  "date": "2026-09-17",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses",
+      "summary": "Google's Cloud CISO shares details on monitoring AI threats and using AI to stop them.",
+      "detail": "The article provides insights into Google's approach to AI security and its efforts to stay ahead of emerging threats.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses/",
+      "age": "today"
+    },
+    {
+      "id": 2,
+      "cat": "storage",
+      "impact": "high",
+      "filler": false,
+      "title": "M4N VM family, now GA: Highest per-core IOPS and throughput for I/O and memory-bound workloads",
+      "summary": "Google announces the general availability of its M4N VM family, offering high-performance storage for demanding workloads.",
+      "detail": "The article highlights the benefits of Google's M4N VM family, including improved performance and efficiency.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/compute/compute-engine-m4n-vms/",
+      "age": "today"
+    },
+    {
+      "id": 3,
+      "cat": "ai infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
+      "summary": "NVIDIA's Vera Rubin NVL72 delivers top performance in MLPerf Inference v6.1, showcasing its AI infrastructure capabilities.",
+      "detail": "The article highlights NVIDIA's leadership in AI infrastructure and its commitment to advancing the field.",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/",
+      "age": "today"
+    },
+    {
+      "id": 4,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Orange built FinOps accountability, and why agents are next",
+      "summary": "Orange shares its approach to FinOps accountability and the role of agents in enhancing financial management.",
+      "detail": "The article highlights Orange's innovative approach to FinOps and its potential applications in other industries.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/topics/telecommunications/how-orange-uses-agents-to-make-finops-everyones-responsibility/",
+      "age": "today"
+    },
+    {
+      "id": 5,
+      "cat": "storage",
+      "impact": "medium",
+      "filler": false,
+      "title": "Cisco integrates Axis devices, bringing unified management across IT environments",
+      "summary": "Cisco announces its integration with Axis devices, enhancing unified management capabilities for IT environments.",
+      "detail": "The article highlights Cisco's efforts to simplify IT management and improve security through its partnership with Axis.",
+      "source": "Cisco Networking Blog",
+      "url": "https://blogs.cisco.com/networking/cisco-integrates-axis-devices-bringing-unified-management-across-it-environments/",
+      "age": "today"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "AWS reimagines the getting started experience",
+      "summary": "AWS announces a revamped getting started experience, offering streamlined onboarding and improved user experience.",
+      "detail": "The article highlights AWS's efforts to simplify its platform and improve user adoption.",
+      "source": "AWS News Blog",
+      "url": "https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/",
+      "age": "today"
+    },
+    {
+      "id": 7,
+      "cat": "ai infrastructure",
+      "impact": "medium",
+      "filler": false,
+      "title": "From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production",
+      "summary": "NVIDIA shares its approach to maximizing AI factory production, highlighting the importance of energy efficiency.",
+      "detail": "The article provides insights into NVIDIA's efforts to optimize AI infrastructure for better performance and sustainability.",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/",
+      "age": "today"
+    },
+    {
+      "id": 8,
+      "cat": "hyperscaler",
+      "impact": "low",
+      "filler": false,
+      "title": "Native Splunk brings real-time insights to Cisco Nexus One",
+      "summary": "Cisco announces the integration of native Splunk capabilities with its Nexus One platform, offering real-time analytics.",
+      "detail": "The article highlights Cisco's efforts to enhance its Nexus One platform with advanced analytics capabilities.",
+      "source": "Cisco Data Center Blog",
+      "url": "https://blogs.cisco.com/datacenter/native-splunk-brings-real-time-insights-to-cisco-nexus-one/",
+      "age": "today"
+    },
+    {
+      "id": 9,
+      "cat": "cloud",
+      "impact": "low",
+      "filler": true,
+      "title": "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms",
+      "summary": "Red Hat announces its recognition as a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms.",
+      "detail": "The article highlights Red Hat's leadership position in server virtualization and its commitment to innovation.",
+      "source": "Redhat.com",
+      "url": "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartnerr-magic-quadranttm-server-virtualization-platforms",
+      "age": "today"
+    },
+    {
+      "id": 10,
+      "cat": "storage",
+      "impact": "low",
+      "filler": true,
+      "title": "Percona and HexaCluster: Faster, Safer Oracle Migration",
+      "summary": "Percona and HexaCluster partner to offer a faster and safer Oracle migration solution.",
+      "detail": "The article highlights the benefits of Percona's partnership with HexaCluster for database migration.",
+      "source": "Percona.com",
+      "url": "https://www.percona.com/blog/percona-and-hexacluster-faster-safer-oracle-migration/",
+      "age": "today"
+    },
+    {
+      "id": 11,
+      "cat": "networking",
+      "impact": "low",
+      "filler": true,
+      "title": "Cisco Secure Email Gateway and Secure Email / Web Manager Security Hardening Release: September 2026",
+      "summary": "Cisco announces a security hardening release for its Secure Email Gateway and Secure Email / Web Manager solutions.",
+      "detail": "The article highlights Cisco's commitment to improving the security of its email and web management solutions.",
+      "source": "Cisco Data Center Blog",
+      "url": "https://blogs.cisco.com/datacenter/cisco-secure-email-gateway-and-secure-email-web-manager-security-hardening-release-september-2026/",
+      "age": "today"
+    },
+    {
+      "id": 12,
+      "cat": "ai infrastructure",
+      "impact": "low",
+      "filler": true,
+      "title": "Trackonomy Completes Acquisition of Identiv's IoT Business, Building the Industry's Only Silicon-to-Cloud Physical AI Group",
+      "summary": "Trackonomy announces its acquisition of Identiv's IoT business, expanding its physical AI capabilities.",
+      "detail": "The article highlights Trackonomy's growth in the physical AI space through its acquisition of Identiv's IoT business.",
+      "source": "PRNewswire",
+      "url": "https://www.prnewswire.com/news-releases/trackonomy-completes-acquisition-of-identivs-iot-business-building-the-industrys-only-silicon-to-cloud-physical-ai-group-302880278.html",
+      "age": "today"
+    },
+    {
+      "id": 13,
+      "cat": "cloud",
+      "impact": "low",
+      "filler": true,
+      "title": "One Magnificent Seven Stock Could Outperform the Rest in 2026",
+      "summary": "An analysis of the potential performance of a specific stock in the cloud computing sector.",
+      "detail": "The article provides insights into the potential growth opportunities for a particular cloud computing stock.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/one-magnificent-seven-stock-could-outperform-the-rest-in-2026/",
+      "age": "today"
+    }
+  ]
+}

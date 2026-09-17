@@ -647,164 +647,108 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Introducing new session management tools with native, granular controls",
-    summary: "Google Cloud introduces new session management tools with native, granular controls to improve security posture and mitigate credential theft and account takeover risks.",
+    id: 1, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses",
+    summary: "Google's Cloud CISO shares details on monitoring AI threats and using AI to stop them.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses the new features of Google Cloud's session management tools, which provide flexible options for setting up session controls based on an organization's security policy needs.",
-    url: "https://cloud.google.com/blog/products/identity-security/introducing-new-session-management-tools-with-native-granular-controls/"
+    detail: "The article provides insights into Google's approach to AI security and its efforts to stay ahead of emerging threats.",
+    url: "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Best practices for handling cloud reliability incidents",
-    summary: "Google Cloud provides a structured workflow to resolve cloud outages, including verifying, investigating, reporting, resolving, and reviewing.",
+    id: 2, cat: "storage", impact: "high", filler: false,
+    title: "M4N VM family, now GA: Highest per-core IOPS and throughput for I/O and memory-bound workloads",
+    summary: "Google announces the general availability of its M4N VM family, offering high-performance storage for demanding workloads.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article outlines best practices for handling cloud reliability incidents on Google Cloud Platform, emphasizing the importance of preparation and having a plan in place before an outage occurs.",
-    url: "https://cloud.google.com/blog/topics/developers-practitioners/cloud-reliability-incident-handling-best-practices/"
+    detail: "The article highlights the benefits of Google's M4N VM family, including improved performance and efficiency.",
+    url: "https://cloud.google.com/blog/products/compute/compute-engine-m4n-vms/"
   },
   {
-    id: 3, cat: "silicon", impact: "high", filler: false,
-    title: "Scaling Telco Autonomy: Leveraging GNNs with Distributed GraphFlow",
-    summary: "Google Cloud announces the introduction of Distributed GraphFlow, a new capability that enables running large-scale graph neural networks (GNNs) at scale.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses the benefits of using Distributed GraphFlow to automate network operations in the telecommunications industry, enabling autonomous network operations and improving scalability.",
-    url: "https://cloud.google.com/blog/products/databases/run-gnns-at-scale-with-ease-introducing-distributed-graphflow/"
-  },
-  {
-    id: 4, cat: "storage", impact: "high", filler: false,
-    title: "Introducing Filestore agent volumes: fully managed storage for agent workspaces",
-    summary: "Google Cloud introduces Filestore agent volumes, a fully managed storage solution designed to address the storage requirements of agent workspaces.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses the benefits of using Filestore agent volumes, which provide a simple and scalable way to manage storage for agent workspaces on Google Cloud.",
-    url: "https://cloud.google.com/blog/products/storage-data-transfer/filestore-agent-volumes/"
-  },
-  {
-    id: 5, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Agent Substrate brings high-density, scalable, trusted infrastructure to GKE",
-    summary: "Google Cloud announces the availability of Agent Substrate on Google Kubernetes Engine (GKE), providing a secure-by-default agent execution runtime.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses the benefits of using Agent Substrate on GKE, which enables running millions of sandboxes with 10x higher density and sub-500ms resume operations at over 500 suspend/resume activities per second.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke/"
-  },
-  {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "How Precisely transforms user experience with AI agents using Amazon S3 Vectors",
-    summary: "Precisely uses Amazon S3 Vectors to power its Data Integrity Suite, enabling users to interact with the platform more naturally and intuitively through conversational interfaces.",
-    source: "AWS Storage", age: "today",
-    detail: "The article discusses how Precisely leverages Amazon S3 Vectors to improve user experience with AI agents, highlighting the benefits of using vector-based search and retrieval capabilities.",
-    url: "https://aws.amazon.com/blogs/storage/how-precisely-transforms-user-experience-with-ai-agents-using-amazon-s3-vectors/"
-  },
-  {
-    id: 7, cat: "vendor", impact: "high", filler: false,
-    title: "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
-    summary: "The University of Manchester uses NVIDIA Earth-2 to forecast air pollution across the UK, leveraging AI and GPU-accelerated computing.",
+    id: 3, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
+    summary: "NVIDIA's Vera Rubin NVL72 delivers top performance in MLPerf Inference v6.1, showcasing its AI infrastructure capabilities.",
     source: "NVIDIA Blog", age: "today",
-    detail: "The article discusses how the university uses NVIDIA Earth-2 to improve air quality forecasting, highlighting the benefits of using AI and GPU-accelerated computing for complex simulations.",
-    url: "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/"
+    detail: "The article highlights NVIDIA's leadership in AI infrastructure and its commitment to advancing the field.",
+    url: "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/"
   },
   {
-    id: 8, cat: "vendor", impact: "high", filler: false,
-    title: "'Now We Can Know Everything and Do Anything,' Jensen Huang Says at Dreamforce",
-    summary: "NVIDIA CEO Jensen Huang discusses the potential of AI and custom AI chip spending at Salesforce's Dreamforce event.",
+    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Orange built FinOps accountability, and why agents are next",
+    summary: "Orange shares its approach to FinOps accountability and the role of agents in enhancing financial management.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article highlights Orange's innovative approach to FinOps and its potential applications in other industries.",
+    url: "https://cloud.google.com/blog/topics/telecommunications/how-orange-uses-agents-to-make-finops-everyones-responsibility/"
+  },
+  {
+    id: 5, cat: "storage", impact: "medium", filler: false,
+    title: "Cisco integrates Axis devices, bringing unified management across IT environments",
+    summary: "Cisco announces its integration with Axis devices, enhancing unified management capabilities for IT environments.",
+    source: "Cisco Networking Blog", age: "today",
+    detail: "The article highlights Cisco's efforts to simplify IT management and improve security through its partnership with Axis.",
+    url: "https://blogs.cisco.com/networking/cisco-integrates-axis-devices-bringing-unified-management-across-it-environments/"
+  },
+  {
+    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "AWS reimagines the getting started experience",
+    summary: "AWS announces a revamped getting started experience, offering streamlined onboarding and improved user experience.",
+    source: "AWS News Blog", age: "today",
+    detail: "The article highlights AWS's efforts to simplify its platform and improve user adoption.",
+    url: "https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/"
+  },
+  {
+    id: 7, cat: "ai infrastructure", impact: "medium", filler: false,
+    title: "From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production",
+    summary: "NVIDIA shares its approach to maximizing AI factory production, highlighting the importance of energy efficiency.",
     source: "NVIDIA Blog", age: "today",
-    detail: "The article highlights Huang's comments on the future of AI, emphasizing its potential to transform industries and create new opportunities.",
-    url: "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/"
+    detail: "The article provides insights into NVIDIA's efforts to optimize AI infrastructure for better performance and sustainability.",
+    url: "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/"
   },
   {
-    id: 9, cat: "vendor", impact: "medium", filler: false,
-    title: "Broadcom Stock Falls 4.45% as AI Slowdown Fears Deepen Chipmaker's Margin Compression Worries Monday",
-    summary: "Broadcom's stock price falls amid concerns over margin compression and the impact of an AI slowdown on custom AI chip spending.",
-    source: "Ibtimes.com.au", age: "today",
-    detail: "The article discusses the market reaction to Broadcom's stock price fall, highlighting investor concerns about the company's margins and exposure to AI-related revenue streams.",
-    url: "https://www.ibtimes.com.au/broadcom-shares-fall-ai-safety-margin-concerns-1875506"
-  },
-  {
-    id: 10, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Meet Adapt, Westpac's Azure-based enterprise data platform",
-    summary: "Westpac announces its new Azure-based enterprise data platform, called Adapt, designed to improve data management and analytics capabilities.",
-    source: "iTnews", age: "today",
-    detail: "The article discusses the features and benefits of Westpac's Adapt platform, highlighting its ability to provide a unified view of customer data and enable more informed decision-making.",
-    url: "https://www.itnews.com.au/news/meet-adapt-westpacs-azure-based-enterprise-data-platform-628927"
-  },
-  {
-    id: 11, cat: "vendor", impact: "low", filler: true,
-    title: "Cisco UCS Manager: Celebrating the legacy, shaping the future with Cisco Intersight",
-    summary: "Cisco announces the end-of-life for its UCS Manager platform and introduces Cisco Intersight as a centralized management solution.",
+    id: 8, cat: "hyperscaler", impact: "low", filler: false,
+    title: "Native Splunk brings real-time insights to Cisco Nexus One",
+    summary: "Cisco announces the integration of native Splunk capabilities with its Nexus One platform, offering real-time analytics.",
     source: "Cisco Data Center Blog", age: "today",
-    detail: "The article discusses the features and benefits of Cisco Intersight, highlighting its ability to provide centralized visibility, automation, and scale for infrastructure management.",
-    url: "https://blogs.cisco.com/datacenter/cisco-ucs-manager-celebrating-the-legacy-shaping-the-future-with-cisco-intersight/"
+    detail: "The article highlights Cisco's efforts to enhance its Nexus One platform with advanced analytics capabilities.",
+    url: "https://blogs.cisco.com/datacenter/native-splunk-brings-real-time-insights-to-cisco-nexus-one/"
   },
   {
-    id: 12, cat: "vendor", impact: "low", filler: true,
-    title: "Emerald AI, Google and NVIDIA Launch Alliance to Advance Flexible AI Data Centers",
-    summary: "Emerald AI, Google, and NVIDIA announce an alliance to advance flexible AI data centers, enabling more efficient and responsible AI development.",
-    source: "NVIDIA Newsroom", age: "today",
-    detail: "The article discusses the goals and benefits of the alliance, highlighting its potential to drive innovation in AI infrastructure and promote sustainability.",
-    url: "https://blogs.nvidia.com/blog/ai-energy-management-alliance/"
+    id: 9, cat: "cloud", impact: "low", filler: true,
+    title: "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms",
+    summary: "Red Hat announces its recognition as a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms.",
+    source: "Redhat.com", age: "today",
+    detail: "The article highlights Red Hat's leadership position in server virtualization and its commitment to innovation.",
+    url: "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartnerr-magic-quadranttm-server-virtualization-platforms"
   },
   {
-    id: 13, cat: "vendor", impact: "low", filler: true,
-    title: "Contact center AI ROI shifts toward resolution quality and governed execution",
-    summary: "The contact center AI ROI is shifting from handling interactions to resolving customer issues, with a focus on governance and responsible AI deployment.",
-    source: "SiliconANGLE News", age: "today",
-    detail: "The article discusses the evolving role of AI in contact centers, highlighting the need for more effective issue resolution and governance frameworks.",
-    url: "https://siliconangle.com/2026/09/14/contact-center-ai-resolution-contactcentersummit/"
+    id: 10, cat: "storage", impact: "low", filler: true,
+    title: "Percona and HexaCluster: Faster, Safer Oracle Migration",
+    summary: "Percona and HexaCluster partner to offer a faster and safer Oracle migration solution.",
+    source: "Percona.com", age: "today",
+    detail: "The article highlights the benefits of Percona's partnership with HexaCluster for database migration.",
+    url: "https://www.percona.com/blog/percona-and-hexacluster-faster-safer-oracle-migration/"
   },
   {
-    id: 14, cat: "vendor", impact: "low", filler: true,
-    title: "Was The HPE Stock Surge Visible In Its Orders?",
-    summary: "Hewlett Packard Enterprise (HPE) stock has surged over the past year, but its orders may not fully reflect this growth.",
-    source: "Trefis", age: "today",
-    detail: "The article analyzes HPE's order trends and revenue growth, highlighting potential disparities between its stock performance and underlying business fundamentals.",
-    url: "https://www.trefis.com/articles/615233/was-the-hpe-stock-surge-visible-in-its-orders/2026-09-14"
+    id: 11, cat: "networking", impact: "low", filler: true,
+    title: "Cisco Secure Email Gateway and Secure Email / Web Manager Security Hardening Release: September 2026",
+    summary: "Cisco announces a security hardening release for its Secure Email Gateway and Secure Email / Web Manager solutions.",
+    source: "Cisco Data Center Blog", age: "today",
+    detail: "The article highlights Cisco's commitment to improving the security of its email and web management solutions.",
+    url: "https://blogs.cisco.com/datacenter/cisco-secure-email-gateway-and-secure-email-web-manager-security-hardening-release-september-2026/"
   },
   {
-    id: 15, cat: "vendor", impact: "low", filler: true,
-    title: "(BBC, 9/15) DeepL AI predicts 2024 election results...",
-    summary: "DeepL AI is used to predict the outcome of the 2024 US presidential election.",
-    source: "Ryukoku.ac.jp", age: "today",
-    detail: "The article discusses the use of DeepL AI in predicting election outcomes, highlighting its potential applications in political forecasting and analysis.",
-    url: "http://www.st.ryukoku.ac.jp/~kjm/security/memo/2026/09.html#20260915__killersat"
+    id: 12, cat: "ai infrastructure", impact: "low", filler: true,
+    title: "Trackonomy Completes Acquisition of Identiv's IoT Business, Building the Industry's Only Silicon-to-Cloud Physical AI Group",
+    summary: "Trackonomy announces its acquisition of Identiv's IoT business, expanding its physical AI capabilities.",
+    source: "PRNewswire", age: "today",
+    detail: "The article highlights Trackonomy's growth in the physical AI space through its acquisition of Identiv's IoT business.",
+    url: "https://www.prnewswire.com/news-releases/trackonomy-completes-acquisition-of-identivs-iot-business-building-the-industrys-only-silicon-to-cloud-physical-ai-group-302880278.html"
   },
   {
-    id: 16, cat: "vendor", impact: "low", filler: true,
-    title: "Cybersecurity jobs available right now: September 15, 2026",
-    summary: "A list of cybersecurity job openings is provided, including AI and security architect positions.",
-    source: "Help Net Security", age: "today",
-    detail: "The article presents a curated list of cybersecurity job openings, highlighting the demand for skilled professionals in the industry.",
-    url: "https://www.helpnetsecurity.com/2026/09/15/cybersecurity-jobs-available-right-now-september-15-2026/"
-  },
-  {
-    id: 17, cat: "vendor", impact: "low", filler: true,
-    title: "TriSuElla-AIDLCA-Framework",
-    summary: "The OWASP TriSuElla-AIDLCA Framework is a secure software development life cycle and autonomous agent governance framework.",
-    source: "Kitploit.com", age: "today",
-    detail: "The article discusses the features and benefits of the TriSuElla-AIDLCA Framework, highlighting its ability to provide policy-governed security and resilience in software development.",
-    url: "https://kitploit.com/en/tools/github/owasp/trisuella-aidlca-framework/"
-  },
-  {
-    id: 18, cat: "vendor", impact: "low", filler: true,
-    title: "Distributing Massive AI Models With Network-Layer Multicast",
-    summary: "A solution for distributing massive AI models using network-layer multicast is discussed.",
-    source: "Dzone.com", age: "today",
-    detail: "The article presents a technical approach to scaling AI model distribution, highlighting the benefits of using multicast techniques in high-performance computing environments.",
-    url: "https://dzone.com/articles/massive-ai-models-multicast"
-  },
-  {
-    id: 19, cat: "vendor", impact: "low", filler: true,
-    title: "Open Channels FM: Open Stacks, Federation, and the Changing Landscape of Software",
-    summary: "A discussion on open stacks, federation, and the evolving software landscape is presented.",
-    source: "Openchannels.fm", age: "today",
-    detail: "The article explores the intersection of open source, cloud computing, and AI, highlighting the potential for more flexible and decentralized software development ecosystems.",
-    url: "https://openchannels.fm/open-stacks-federation-and-the-changing-landscape-of-software/"
-  },
-  {
-    id: 20, cat: "vendor", impact: "low", filler: true,
-    title: "Amazon Partners with Wiwynn to Expand U.S. AI Infrastructure Capacity",
-    summary: "Amazon partners with Wiwynn to expand its AI infrastructure capacity in the US, leveraging Wiwynn's advanced manufacturing capabilities.",
-    source: "Yahoo Entertainment", age: "today",
-    detail: "The article discusses the partnership between Amazon and Wiwynn, highlighting their joint efforts to drive growth in AI infrastructure and support increasing demand for cloud-based services.",
-    url: "https://finance.yahoo.com/technology/ai/articles/amazon-partners-wiwynn-expand-u-012223093.html"
+    id: 13, cat: "cloud", impact: "low", filler: true,
+    title: "One Magnificent Seven Stock Could Outperform the Rest in 2026",
+    summary: "An analysis of the potential performance of a specific stock in the cloud computing sector.",
+    source: "Crypto Briefing", age: "today",
+    detail: "The article provides insights into the potential growth opportunities for a particular cloud computing stock.",
+    url: "https://cryptobriefing.com/one-magnificent-seven-stock-could-outperform-the-rest-in-2026/"
   },
 ];
 // ARTICLES_END
@@ -952,7 +896,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud introduces Filestore agent volumes a fully managed storage solution designed to address the storage requirements of agent workspaces and also announces Agent Substrate on Google Kubernetes Engine providing a secure-by-default agent execution runtime. Meanwhile Precisely uses Amazon S3 Vectors to power its Data Integrity Suite enabling users to interact with the platform more naturally and intuitively through conversational interfaces highlighting competitive signals in AI-powered platforms. NVIDIA's Earth-2 is being used by the University of Manchester for air pollution forecasting and its CEO Jensen Huang discusses custom AI chip spending at Salesforce's Dreamforce event while Broadcom's stock price falls amid concerns over margin compression and AI slowdown impact on custom AI chip spending.";
+const STATIC_BRIEF = "Google's M4N VM family is now generally available, offering the highest per-core IOPS and throughput for I/O and memory-bound workloads, a significant advancement in high-performance storage for demanding workloads like GPU/TPU. NVIDIA's Vera Rubin NVL72 has delivered leading performance in MLPerf Inference v6.1, demonstrating its capabilities in AI infrastructure and posing a competitive challenge to Google's offerings. Meanwhile, NVIDIA is also focusing on maximizing AI factory production with an emphasis on energy efficiency, an important consideration for supply chain management and cost control.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
