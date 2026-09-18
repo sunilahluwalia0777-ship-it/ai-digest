@@ -647,108 +647,124 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Cloud CISO Perspectives: How Google monitors AI threats and advances AI defenses",
-    summary: "Google's Cloud CISO shares details on monitoring AI threats and using AI to stop them.",
+    id: 1, cat: "storage", impact: "high", filler: false,
+    title: "Google named a Leader in the External Threat Intelligence Service Forrester Wave",
+    summary: "At Google, we see firsthand how the speed, scale, and sophistication of cyber threats continue to challenge traditional enterprise defenses.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article provides insights into Google's approach to AI security and its efforts to stay ahead of emerging threats.",
-    url: "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-monitors-ai-threats-advances-ai-defenses/"
+    detail: "Today’s defenders can’t rely on reactive triage or fragmented data feeds; you require high-fidelity intelligence, deep underground visibility, and actionable context to anticipate adversary moves before an attack unfolds.",
+    url: "https://cloud.google.com/blog/products/identity-security/google-named-a-leader-in-the-external-threat-intelligence-service-forrester-wave/"
   },
   {
-    id: 2, cat: "storage", impact: "high", filler: false,
-    title: "M4N VM family, now GA: Highest per-core IOPS and throughput for I/O and memory-bound workloads",
-    summary: "Google announces the general availability of its M4N VM family, offering high-performance storage for demanding workloads.",
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
+    title: "The future of orchestration: Pine59’s journey to Airflow 3 on Google Cloud",
+    summary: "Operating large data pipelines requires an orchestration layer that scales smoothly as workloads expand.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article highlights the benefits of Google's M4N VM family, including improved performance and efficiency.",
-    url: "https://cloud.google.com/blog/products/compute/compute-engine-m4n-vms/"
+    detail: "When your pipelines process millions of complex data points every day to feed predictive models, staying up-to-date with your technology stack is a strategic necessity.",
+    url: "https://cloud.google.com/blog/topics/supply-chain-logistics/the-future-of-orchestration-pine59s-journey-to-airflow-3-on-google-cloud/"
   },
   {
-    id: 3, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
-    summary: "NVIDIA's Vera Rubin NVL72 delivers top performance in MLPerf Inference v6.1, showcasing its AI infrastructure capabilities.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The article highlights NVIDIA's leadership in AI infrastructure and its commitment to advancing the field.",
-    url: "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/"
-  },
-  {
-    id: 4, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Orange built FinOps accountability, and why agents are next",
-    summary: "Orange shares its approach to FinOps accountability and the role of agents in enhancing financial management.",
+    id: 3, cat: "storage", impact: "high", filler: false,
+    title: "How a solo founder runs a five-continent tender platform on AlloyDB and MCP",
+    summary: "Lucius AI, a tender-intelligence startup covering markets across five continents, runs its entire data platform on AlloyDB for PostgreSQL with a single operator.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article highlights Orange's innovative approach to FinOps and its potential applications in other industries.",
-    url: "https://cloud.google.com/blog/topics/telecommunications/how-orange-uses-agents-to-make-finops-everyones-responsibility/"
+    detail: "By migrating semantic search to a ScaNN index and managing database operations through Model Context Protocol (MCP), query latency dropped by 47x while automating day-to-day administrative tasks via MCP.",
+    url: "https://cloud.google.com/blog/products/databases/solo-founder-runs-a-global-tender-platform-on-alloydb-and-mcp/"
   },
   {
-    id: 5, cat: "storage", impact: "medium", filler: false,
-    title: "Cisco integrates Axis devices, bringing unified management across IT environments",
-    summary: "Cisco announces its integration with Axis devices, enhancing unified management capabilities for IT environments.",
-    source: "Cisco Networking Blog", age: "today",
-    detail: "The article highlights Cisco's efforts to simplify IT management and improve security through its partnership with Axis.",
-    url: "https://blogs.cisco.com/networking/cisco-integrates-axis-devices-bringing-unified-management-across-it-environments/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "For SeaVerse, GKE Agent Sandbox reduces infrastructure costs by 60%",
+    summary: "SeaVerse , a gaming startup from SeaArt that is building a platform for playable AI experiences.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "To support that creative loop, SeaVerse needed infrastructure that could run dynamic, multi-tenant sandbox workloads with strong isolation, low latency, and high performance.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/seaverse-chooses-gke-agent-sandbox/"
   },
   {
-    id: 6, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AWS reimagines the getting started experience",
-    summary: "AWS announces a revamped getting started experience, offering streamlined onboarding and improved user experience.",
+    id: 5, cat: "competition", impact: "medium", filler: false,
+    title: "New low-cost burstable Amazon EC2 T8i instances are generally available",
+    summary: "AWS introduces new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids).",
     source: "AWS News Blog", age: "today",
-    detail: "The article highlights AWS's efforts to simplify its platform and improve user adoption.",
-    url: "https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/"
+    detail: "T8i instances are among the lowest-cost EC2 instances and deliver up to 30% better price performance over previous generation T3 instances.",
+    url: "https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/"
   },
   {
-    id: 7, cat: "ai infrastructure", impact: "medium", filler: false,
-    title: "From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production",
-    summary: "NVIDIA shares its approach to maximizing AI factory production, highlighting the importance of energy efficiency.",
-    source: "NVIDIA Blog", age: "today",
-    detail: "The article provides insights into NVIDIA's efforts to optimize AI infrastructure for better performance and sustainability.",
-    url: "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/"
+    id: 6, cat: "competition", impact: "medium", filler: false,
+    title: "AWS Elastic Beanstalk introduces Cluster Mode",
+    summary: "Run an application on AWS Elastic Beanstalk Cluster Mode without provisioning or operating the compute underneath it.",
+    source: "AWS News Blog", age: "today",
+    detail: "You provide a container image or source code; Elastic Beanstalk with service-operated compute creates and operates the environment that runs it.",
+    url: "https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "low", filler: false,
-    title: "Native Splunk brings real-time insights to Cisco Nexus One",
-    summary: "Cisco announces the integration of native Splunk capabilities with its Nexus One platform, offering real-time analytics.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "The article highlights Cisco's efforts to enhance its Nexus One platform with advanced analytics capabilities.",
-    url: "https://blogs.cisco.com/datacenter/native-splunk-brings-real-time-insights-to-cisco-nexus-one/"
+    id: 7, cat: "competition", impact: "medium", filler: false,
+    title: "[In-Depth Look] Choosing the Right AWS Storage Option for Your Workload",
+    summary: "AWS provides a wide range of storage options, each designed to meet specific workload requirements.",
+    source: "AWS News Blog", age: "today",
+    detail: "Understanding the strengths and limitations of each option is crucial for architecting efficient, cost-effective, and high-performance workloads on AWS.",
+    url: "https://aws.amazon.com/blogs/aws/in-depth-look-choosing-the-right-aws-storage-option-for-your-workload/"
   },
   {
-    id: 9, cat: "cloud", impact: "low", filler: true,
-    title: "Red Hat named a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms",
-    summary: "Red Hat announces its recognition as a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms.",
-    source: "Redhat.com", age: "today",
-    detail: "The article highlights Red Hat's leadership position in server virtualization and its commitment to innovation.",
-    url: "https://www.redhat.com/en/blog/red-hat-named-leader-2026-gartnerr-magic-quadranttm-server-virtualization-platforms"
+    id: 8, cat: "hyperscaler", impact: "high", filler: false,
+    title: "(Guardian, 9/1) What are the biggest AI companies and how much are they worth?",
+    summary: "As AI firms push for greater controls on the industry, Al Jazeera unpacks the value of the main companies in the sector.",
+    source: "Al Jazeera English", age: "today",
+    detail: "Red Hat, the world’s leading provider of open source solutions, today announced that it has been recognized as a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms with Red Hat OpenShift Virtualization.",
+    url: "https://www.aljazeera.com/news/2026/09/17/from-phones-to-fabs-how-india-is-building-its-semiconductor-muscle/"
   },
   {
-    id: 10, cat: "storage", impact: "low", filler: true,
-    title: "Percona and HexaCluster: Faster, Safer Oracle Migration",
-    summary: "Percona and HexaCluster partner to offer a faster and safer Oracle migration solution.",
-    source: "Percona.com", age: "today",
-    detail: "The article highlights the benefits of Percona's partnership with HexaCluster for database migration.",
-    url: "https://www.percona.com/blog/percona-and-hexacluster-faster-safer-oracle-migration/"
+    id: 9, cat: "storage", impact: "medium", filler: false,
+    title: "Coforge Q4 Earnings Call Highlights",
+    summary: "Aeluma (NASDAQ:ALMU) said fiscal 2026 established a foundation for commercializing its photonics technology for artificial intelligence data-center interconnects.",
+    source: "MarketBeat", age: "today",
+    detail: "The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
+    url: "https://thenextweb.com/news/coforge-q4-earnings-call-highlights"
   },
   {
-    id: 11, cat: "networking", impact: "low", filler: true,
-    title: "Cisco Secure Email Gateway and Secure Email / Web Manager Security Hardening Release: September 2026",
-    summary: "Cisco announces a security hardening release for its Secure Email Gateway and Secure Email / Web Manager solutions.",
-    source: "Cisco Data Center Blog", age: "today",
-    detail: "The article highlights Cisco's commitment to improving the security of its email and web management solutions.",
-    url: "https://blogs.cisco.com/datacenter/cisco-secure-email-gateway-and-secure-email-web-manager-security-hardening-release-september-2026/"
+    id: 10, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Rum Roars on $1 Billion Government Award to Accelerate Quantum Wafer Manufacturing at Anderon",
+    summary: "IBM lands a $1 billion government award to accelerate quantum wafer manufacturing at Anderon.",
+    source: "Barchart.com", age: "today",
+    detail: "Here’s what the announcement really means for IBM stock.",
+    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
   },
   {
-    id: 12, cat: "ai infrastructure", impact: "low", filler: true,
-    title: "Trackonomy Completes Acquisition of Identiv's IoT Business, Building the Industry's Only Silicon-to-Cloud Physical AI Group",
-    summary: "Trackonomy announces its acquisition of Identiv's IoT business, expanding its physical AI capabilities.",
-    source: "PRNewswire", age: "today",
-    detail: "The article highlights Trackonomy's growth in the physical AI space through its acquisition of Identiv's IoT business.",
-    url: "https://www.prnewswire.com/news-releases/trackonomy-completes-acquisition-of-identivs-iot-business-building-the-industrys-only-silicon-to-cloud-physical-ai-group-302880278.html"
+    id: 11, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "(2026.09.16) (various)",
+    summary: "Tokyo stocks rose on September 17, with the Nikkei 225 closing at 64,136, up 213.25 points.",
+    source: "Newsonjapan.com", age: "today",
+    detail: "Investors bought selected technology, pharmaceutical, insurance and consumer-related shares after the Federal Reserve’s rate hike, though gains were capped by a strong yen.",
+    url: "https://www.newsonjapan.com/2026/09/16/apple-is-reportedly-building-ai-servers-with-nvidias-help/"
   },
   {
-    id: 13, cat: "cloud", impact: "low", filler: true,
-    title: "One Magnificent Seven Stock Could Outperform the Rest in 2026",
-    summary: "An analysis of the potential performance of a specific stock in the cloud computing sector.",
-    source: "Crypto Briefing", age: "today",
-    detail: "The article provides insights into the potential growth opportunities for a particular cloud computing stock.",
-    url: "https://cryptobriefing.com/one-magnificent-seven-stock-could-outperform-the-rest-in-2026/"
+    id: 12, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "(2026.09.16) (various)",
+    summary: "Apple is reportedly developing an enterprise server built on its own M8 Ultra chips and has discussed using Nvidia’s NVLink Fusion to connect them.",
+    source: "The Next Web", age: "today",
+    detail: "Aiming at AI developers, companies and governments from around 2029, The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
+    url: "https://thenextweb.com/news/apple-server-2029-eu-sovereignty/"
+  },
+  {
+    id: 13, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "(2026.09.16) (various)",
+    summary: "IBM lands a $1 billion government award to accelerate quantum wafer manufacturing at Anderon.",
+    source: "Barchart.com", age: "today",
+    detail: "Here’s what the announcement really means for IBM stock.",
+    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
+  },
+  {
+    id: 14, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "(2026.09.16) (various)",
+    summary: "Apple is developing an enterprise server built on its own M8 Ultra chips and has discussed using Nvidia’s NVLink Fusion to connect them.",
+    source: "The Next Web", age: "today",
+    detail: "Aiming at AI developers, companies and governments from around 2029, The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
+    url: "https://thenextweb.com/news/apple-server-2029-eu-sovereignty/"
+  },
+  {
+    id: 15, cat: "hyperscaler", impact: "medium", filler: true,
+    title: "(2026.09.16) (various)",
+    summary: "Rum Roars on $1 Billion Government Award to Accelerate Quantum Wafer Manufacturing at Anderon.",
+    source: "Barchart.com", age: "today",
+    detail: "Here’s what the announcement really means for IBM stock.",
+    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
   },
 ];
 // ARTICLES_END
@@ -896,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google's M4N VM family is now generally available, offering the highest per-core IOPS and throughput for I/O and memory-bound workloads, a significant advancement in high-performance storage for demanding workloads like GPU/TPU. NVIDIA's Vera Rubin NVL72 has delivered leading performance in MLPerf Inference v6.1, demonstrating its capabilities in AI infrastructure and posing a competitive challenge to Google's offerings. Meanwhile, NVIDIA is also focusing on maximizing AI factory production with an emphasis on energy efficiency, an important consideration for supply chain management and cost control.";
+const STATIC_BRIEF = "Google has been named a Leader in the External Threat Intelligence Service Forrester Wave highlighting its capabilities in tackling cyber threats at scale and speed. Meanwhile AWS introduces new low-cost burstable Amazon EC2 T8i instances and Cluster Mode on Elastic Beanstalk signaling increased competition in the cloud infrastructure space. On the supply chain front Aeluma's photonics technology for artificial intelligence data-center interconnects gains traction setting a foundation for its commercialization.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
