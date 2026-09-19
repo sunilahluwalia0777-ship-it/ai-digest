@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-19",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "storage",
+      "impact": "high",
+      "filler": false,
+      "title": "Announcing Native BM25 Ranking in AlloyDB and Cloud SQL",
+      "summary": "Vector search is a critical component of generative AI, retrieval-augmented generation (RAG), and data agent architectures.",
+      "detail": "AlloyDB and Cloud SQL now support native BM25 ranking for efficient vector similarity searches.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/databases/native-bm25-search-in-alloydb-and-cloud-sql/",
+      "age": "today"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Reimagining service delivery in the agentic era with Google Public Sector",
+      "summary": "State and local governments need a consistent inspection architecture for compliance, threat detection, and traffic filtering.",
+      "detail": "Google Public Sector is transforming how governments deliver services using AI infrastructure.",
+      "source": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/17/reimagining-service-delivery-in-the-agentic-era-with-google-public-sector",
+      "age": "today"
+    },
+    {
+      "id": 3,
+      "cat": "gpu",
+      "impact": "high",
+      "filler": false,
+      "title": "MLPerf Inference v6.1: 5.7x Per-Accelerator Gains, a 512-GPU Run, and Vera Rubin's First Peer-Reviewed Numbers",
+      "summary": "Nvidia's investment in Anthropic's planned IPO indicates a stake of up to $10 billion in a raise that could reach $100 billion.",
+      "detail": "MLPerf Inference v6.1 sets new records for AI inference performance, with Nvidia Vera Rubin GPUs leading the way.",
+      "source": "Barchart.com",
+      "url": "https://www.barchart.com/story/news/4652778/mlperf-inference-v61-57x-per-accelerator-gains-a-512-gpu-run-and-vera-rubins-first-peer-reviewed-numbers/",
+      "age": "today"
+    },
+    {
+      "id": 4,
+      "cat": "ai",
+      "impact": "medium",
+      "filler": false,
+      "title": "What are the biggest AI companies and how much are they worth?",
+      "summary": "As AI firms push for greater controls on the industry, Al Jazeera unpacks the value of the main companies in the sector.",
+      "detail": "Al Jazeera provides an overview of the largest AI companies and their market valuations.",
+      "source": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/17/what-are-the-biggest-ai-companies-and-how-much-are-they-worth",
+      "age": "today"
+    },
+    {
+      "id": 5,
+      "cat": "infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "CoreWeave deploys multi-rack Nvidia Vera Rubin NVL72 cluster, stock jumps 14%",
+      "summary": "CoreWeave's rapid deployment of advanced AI infrastructure could reshape competitive dynamics in cloud services.",
+      "detail": "CoreWeave has deployed a large-scale Nvidia Vera Rubin NVL72 cluster, driving its stock price up 14%.",
+      "source": "Yahoo Entertainment",
+      "url": "https://finance.yahoo.com/technology/ai/articles/coreweave-nvidia-vera-rubin-nvl72-cluster-163011305.html",
+      "age": "today"
+    },
+    {
+      "id": 6,
+      "cat": "infrastructure",
+      "impact": "medium",
+      "filler": false,
+      "title": "Rum Roars on $13.7 Billion Compute Deal With Anthropic. How to Play RUM Stock Now.",
+      "summary": "Retirement savers may be affected by swings in the artificial intelligence trade, but Rum's compute deal with Anthropic could drive growth.",
+      "detail": "Rum's massive compute deal with Anthropic highlights the growing demand for AI infrastructure and could drive RUM stock higher.",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/09/18/rum-roars-on-13-7-billion-compute-deal-with-anthropic-how-to-play-rum-stock-now.html",
+      "age": "today"
+    },
+    {
+      "id": 7,
+      "cat": "gpu",
+      "impact": "high",
+      "filler": false,
+      "title": "Nvidia CEO expects chip sales to double next year driven by AI",
+      "summary": "Nvidia's projected chip sales surge highlights the growing AI demand, but supply chain constraints may limit potential growth.",
+      "detail": "Nvidia's CEO expects a significant increase in chip sales due to growing AI adoption, despite potential supply chain limitations.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/nvidia-chip-sales-double-ai-demand/",
+      "age": "today"
+    },
+    {
+      "id": 8,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "AI stock swings could affect your 401(k). Here's what retirement savers need to know",
+      "summary": "Retirement savers may be affected by swings in the artificial intelligence trade, but understanding the underlying trends can help.",
+      "detail": "The growing AI industry could impact retirement savings, and understanding the key players and trends is essential for informed investing.",
+      "source": "Yahoo Entertainment",
+      "url": "https://finance.yahoo.com/technology/ai/articles/ai-stock-swings-could-affect-your-401k-163011305.html",
+      "age": "today"
+    },
+    {
+      "id": 9,
+      "cat": "infrastructure",
+      "impact": "high",
+      "filler": false,
+      "title": "Meta Can Save $8.5 Billion in 2027 by Using Its Own MTIA Chips",
+      "summary": "Meta is betting its entire AI infrastructure strategy on custom silicon it designed in-house.",
+      "detail": "By using its own MTIA chips, Meta could save billions of dollars and gain a competitive edge in the AI infrastructure market.",
+      "source": "24/7 Wall St.",
+      "url": "https://247wallst.com/investing/2026/09/17/meta-can-save-8-5-billion-in-2027-by-using-its-own-mtia-chips/",
+      "age": "today"
+    },
+    {
+      "id": 10,
+      "cat": "gpu",
+      "impact": "medium",
+      "filler": false,
+      "title": "AI Server Stocks Rally as the Hardware Bid Broadens: Hewlett Packard Enterprise Jumps 9%, Super Micro Climbs 6%, Dell Rises 3%",
+      "summary": "A rally that started in memory chips has jumped to server makers, but the same force lifting these AI hardware stocks is quietly making their underlying business models more complex.",
+      "detail": "The growing demand for AI infrastructure is driving up stock prices for companies like Hewlett Packard Enterprise, Super Micro, and Dell.",
+      "source": "24/7 Wall St.",
+      "url": "https://247wallst.com/investing/2026/09/17/ai-server-stocks-rally-as-the-hardware-bid-broadens-hewlett-packard-enterprise-jumps-9-super-micro-climbs-6-dell-rises-3/",
+      "age": "today"
+    }
+  ]
+}

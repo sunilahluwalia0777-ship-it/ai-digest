@@ -648,123 +648,83 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Google named a Leader in the External Threat Intelligence Service Forrester Wave",
-    summary: "At Google, we see firsthand how the speed, scale, and sophistication of cyber threats continue to challenge traditional enterprise defenses.",
+    title: "Announcing Native BM25 Ranking in AlloyDB and Cloud SQL",
+    summary: "Vector search is a critical component of generative AI, retrieval-augmented generation (RAG), and data agent architectures.",
     source: "Google Cloud Blog", age: "today",
-    detail: "Today’s defenders can’t rely on reactive triage or fragmented data feeds; you require high-fidelity intelligence, deep underground visibility, and actionable context to anticipate adversary moves before an attack unfolds.",
-    url: "https://cloud.google.com/blog/products/identity-security/google-named-a-leader-in-the-external-threat-intelligence-service-forrester-wave/"
+    detail: "AlloyDB and Cloud SQL now support native BM25 ranking for efficient vector similarity searches.",
+    url: "https://cloud.google.com/blog/products/databases/native-bm25-search-in-alloydb-and-cloud-sql/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "The future of orchestration: Pine59’s journey to Airflow 3 on Google Cloud",
-    summary: "Operating large data pipelines requires an orchestration layer that scales smoothly as workloads expand.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "When your pipelines process millions of complex data points every day to feed predictive models, staying up-to-date with your technology stack is a strategic necessity.",
-    url: "https://cloud.google.com/blog/topics/supply-chain-logistics/the-future-of-orchestration-pine59s-journey-to-airflow-3-on-google-cloud/"
+    id: 2, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Reimagining service delivery in the agentic era with Google Public Sector",
+    summary: "State and local governments need a consistent inspection architecture for compliance, threat detection, and traffic filtering.",
+    source: "Al Jazeera English", age: "today",
+    detail: "Google Public Sector is transforming how governments deliver services using AI infrastructure.",
+    url: "https://www.aljazeera.com/news/2026/9/17/reimagining-service-delivery-in-the-agentic-era-with-google-public-sector"
   },
   {
-    id: 3, cat: "storage", impact: "high", filler: false,
-    title: "How a solo founder runs a five-continent tender platform on AlloyDB and MCP",
-    summary: "Lucius AI, a tender-intelligence startup covering markets across five continents, runs its entire data platform on AlloyDB for PostgreSQL with a single operator.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "By migrating semantic search to a ScaNN index and managing database operations through Model Context Protocol (MCP), query latency dropped by 47x while automating day-to-day administrative tasks via MCP.",
-    url: "https://cloud.google.com/blog/products/databases/solo-founder-runs-a-global-tender-platform-on-alloydb-and-mcp/"
+    id: 3, cat: "gpu", impact: "high", filler: false,
+    title: "MLPerf Inference v6.1: 5.7x Per-Accelerator Gains, a 512-GPU Run, and Vera Rubin's First Peer-Reviewed Numbers",
+    summary: "Nvidia's investment in Anthropic's planned IPO indicates a stake of up to $10 billion in a raise that could reach $100 billion.",
+    source: "Barchart.com", age: "today",
+    detail: "MLPerf Inference v6.1 sets new records for AI inference performance, with Nvidia Vera Rubin GPUs leading the way.",
+    url: "https://www.barchart.com/story/news/4652778/mlperf-inference-v61-57x-per-accelerator-gains-a-512-gpu-run-and-vera-rubins-first-peer-reviewed-numbers/"
   },
   {
-    id: 4, cat: "hyperscaler", impact: "high", filler: false,
-    title: "For SeaVerse, GKE Agent Sandbox reduces infrastructure costs by 60%",
-    summary: "SeaVerse , a gaming startup from SeaArt that is building a platform for playable AI experiences.",
-    source: "Google Cloud Blog", age: "today",
-    detail: "To support that creative loop, SeaVerse needed infrastructure that could run dynamic, multi-tenant sandbox workloads with strong isolation, low latency, and high performance.",
-    url: "https://cloud.google.com/blog/products/containers-kubernetes/seaverse-chooses-gke-agent-sandbox/"
-  },
-  {
-    id: 5, cat: "competition", impact: "medium", filler: false,
-    title: "New low-cost burstable Amazon EC2 T8i instances are generally available",
-    summary: "AWS introduces new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids).",
-    source: "AWS News Blog", age: "today",
-    detail: "T8i instances are among the lowest-cost EC2 instances and deliver up to 30% better price performance over previous generation T3 instances.",
-    url: "https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/"
-  },
-  {
-    id: 6, cat: "competition", impact: "medium", filler: false,
-    title: "AWS Elastic Beanstalk introduces Cluster Mode",
-    summary: "Run an application on AWS Elastic Beanstalk Cluster Mode without provisioning or operating the compute underneath it.",
-    source: "AWS News Blog", age: "today",
-    detail: "You provide a container image or source code; Elastic Beanstalk with service-operated compute creates and operates the environment that runs it.",
-    url: "https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/"
-  },
-  {
-    id: 7, cat: "competition", impact: "medium", filler: false,
-    title: "[In-Depth Look] Choosing the Right AWS Storage Option for Your Workload",
-    summary: "AWS provides a wide range of storage options, each designed to meet specific workload requirements.",
-    source: "AWS News Blog", age: "today",
-    detail: "Understanding the strengths and limitations of each option is crucial for architecting efficient, cost-effective, and high-performance workloads on AWS.",
-    url: "https://aws.amazon.com/blogs/aws/in-depth-look-choosing-the-right-aws-storage-option-for-your-workload/"
-  },
-  {
-    id: 8, cat: "hyperscaler", impact: "high", filler: false,
-    title: "(Guardian, 9/1) What are the biggest AI companies and how much are they worth?",
+    id: 4, cat: "ai", impact: "medium", filler: false,
+    title: "What are the biggest AI companies and how much are they worth?",
     summary: "As AI firms push for greater controls on the industry, Al Jazeera unpacks the value of the main companies in the sector.",
     source: "Al Jazeera English", age: "today",
-    detail: "Red Hat, the world’s leading provider of open source solutions, today announced that it has been recognized as a Leader in the 2026 Gartner Magic Quadrant for Server Virtualization Platforms with Red Hat OpenShift Virtualization.",
-    url: "https://www.aljazeera.com/news/2026/09/17/from-phones-to-fabs-how-india-is-building-its-semiconductor-muscle/"
+    detail: "Al Jazeera provides an overview of the largest AI companies and their market valuations.",
+    url: "https://www.aljazeera.com/news/2026/9/17/what-are-the-biggest-ai-companies-and-how-much-are-they-worth"
   },
   {
-    id: 9, cat: "storage", impact: "medium", filler: false,
-    title: "Coforge Q4 Earnings Call Highlights",
-    summary: "Aeluma (NASDAQ:ALMU) said fiscal 2026 established a foundation for commercializing its photonics technology for artificial intelligence data-center interconnects.",
-    source: "MarketBeat", age: "today",
-    detail: "The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
-    url: "https://thenextweb.com/news/coforge-q4-earnings-call-highlights"
+    id: 5, cat: "infrastructure", impact: "high", filler: false,
+    title: "CoreWeave deploys multi-rack Nvidia Vera Rubin NVL72 cluster, stock jumps 14%",
+    summary: "CoreWeave's rapid deployment of advanced AI infrastructure could reshape competitive dynamics in cloud services.",
+    source: "Yahoo Entertainment", age: "today",
+    detail: "CoreWeave has deployed a large-scale Nvidia Vera Rubin NVL72 cluster, driving its stock price up 14%.",
+    url: "https://finance.yahoo.com/technology/ai/articles/coreweave-nvidia-vera-rubin-nvl72-cluster-163011305.html"
   },
   {
-    id: 10, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Rum Roars on $1 Billion Government Award to Accelerate Quantum Wafer Manufacturing at Anderon",
-    summary: "IBM lands a $1 billion government award to accelerate quantum wafer manufacturing at Anderon.",
-    source: "Barchart.com", age: "today",
-    detail: "Here’s what the announcement really means for IBM stock.",
-    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
+    id: 6, cat: "infrastructure", impact: "medium", filler: false,
+    title: "Rum Roars on $13.7 Billion Compute Deal With Anthropic. How to Play RUM Stock Now.",
+    summary: "Retirement savers may be affected by swings in the artificial intelligence trade, but Rum's compute deal with Anthropic could drive growth.",
+    source: "CNBC", age: "today",
+    detail: "Rum's massive compute deal with Anthropic highlights the growing demand for AI infrastructure and could drive RUM stock higher.",
+    url: "https://www.cnbc.com/2026/09/18/rum-roars-on-13-7-billion-compute-deal-with-anthropic-how-to-play-rum-stock-now.html"
   },
   {
-    id: 11, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "(2026.09.16) (various)",
-    summary: "Tokyo stocks rose on September 17, with the Nikkei 225 closing at 64,136, up 213.25 points.",
-    source: "Newsonjapan.com", age: "today",
-    detail: "Investors bought selected technology, pharmaceutical, insurance and consumer-related shares after the Federal Reserve’s rate hike, though gains were capped by a strong yen.",
-    url: "https://www.newsonjapan.com/2026/09/16/apple-is-reportedly-building-ai-servers-with-nvidias-help/"
+    id: 7, cat: "gpu", impact: "high", filler: false,
+    title: "Nvidia CEO expects chip sales to double next year driven by AI",
+    summary: "Nvidia's projected chip sales surge highlights the growing AI demand, but supply chain constraints may limit potential growth.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Nvidia's CEO expects a significant increase in chip sales due to growing AI adoption, despite potential supply chain limitations.",
+    url: "https://cryptobriefing.com/nvidia-chip-sales-double-ai-demand/"
   },
   {
-    id: 12, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "(2026.09.16) (various)",
-    summary: "Apple is reportedly developing an enterprise server built on its own M8 Ultra chips and has discussed using Nvidia’s NVLink Fusion to connect them.",
-    source: "The Next Web", age: "today",
-    detail: "Aiming at AI developers, companies and governments from around 2029, The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
-    url: "https://thenextweb.com/news/apple-server-2029-eu-sovereignty/"
+    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "AI stock swings could affect your 401(k). Here's what retirement savers need to know",
+    summary: "Retirement savers may be affected by swings in the artificial intelligence trade, but understanding the underlying trends can help.",
+    source: "Yahoo Entertainment", age: "today",
+    detail: "The growing AI industry could impact retirement savings, and understanding the key players and trends is essential for informed investing.",
+    url: "https://finance.yahoo.com/technology/ai/articles/ai-stock-swings-could-affect-your-401k-163011305.html"
   },
   {
-    id: 13, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "(2026.09.16) (various)",
-    summary: "IBM lands a $1 billion government award to accelerate quantum wafer manufacturing at Anderon.",
-    source: "Barchart.com", age: "today",
-    detail: "Here’s what the announcement really means for IBM stock.",
-    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
+    id: 9, cat: "infrastructure", impact: "high", filler: false,
+    title: "Meta Can Save $8.5 Billion in 2027 by Using Its Own MTIA Chips",
+    summary: "Meta is betting its entire AI infrastructure strategy on custom silicon it designed in-house.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "By using its own MTIA chips, Meta could save billions of dollars and gain a competitive edge in the AI infrastructure market.",
+    url: "https://247wallst.com/investing/2026/09/17/meta-can-save-8-5-billion-in-2027-by-using-its-own-mtia-chips/"
   },
   {
-    id: 14, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "(2026.09.16) (various)",
-    summary: "Apple is developing an enterprise server built on its own M8 Ultra chips and has discussed using Nvidia’s NVLink Fusion to connect them.",
-    source: "The Next Web", age: "today",
-    detail: "Aiming at AI developers, companies and governments from around 2029, The European Commission proposes EU-wide rules on AI liability to ensure that victims of AI-related accidents can be compensated fairly and easily.",
-    url: "https://thenextweb.com/news/apple-server-2029-eu-sovereignty/"
-  },
-  {
-    id: 15, cat: "hyperscaler", impact: "medium", filler: true,
-    title: "(2026.09.16) (various)",
-    summary: "Rum Roars on $1 Billion Government Award to Accelerate Quantum Wafer Manufacturing at Anderon.",
-    source: "Barchart.com", age: "today",
-    detail: "Here’s what the announcement really means for IBM stock.",
-    url: "https://www.barchart.com/story/news/4642605/a-1-billion-reason-why-ibm-stock-is-up-today/"
+    id: 10, cat: "gpu", impact: "medium", filler: false,
+    title: "AI Server Stocks Rally as the Hardware Bid Broadens: Hewlett Packard Enterprise Jumps 9%, Super Micro Climbs 6%, Dell Rises 3%",
+    summary: "A rally that started in memory chips has jumped to server makers, but the same force lifting these AI hardware stocks is quietly making their underlying business models more complex.",
+    source: "24/7 Wall St.", age: "today",
+    detail: "The growing demand for AI infrastructure is driving up stock prices for companies like Hewlett Packard Enterprise, Super Micro, and Dell.",
+    url: "https://247wallst.com/investing/2026/09/17/ai-server-stocks-rally-as-the-hardware-bid-broadens-hewlett-packard-enterprise-jumps-9-super-micro-climbs-6-dell-rises-3/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +872,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google has been named a Leader in the External Threat Intelligence Service Forrester Wave highlighting its capabilities in tackling cyber threats at scale and speed. Meanwhile AWS introduces new low-cost burstable Amazon EC2 T8i instances and Cluster Mode on Elastic Beanstalk signaling increased competition in the cloud infrastructure space. On the supply chain front Aeluma's photonics technology for artificial intelligence data-center interconnects gains traction setting a foundation for its commercialization.";
+const STATIC_BRIEF = "Native BM25 ranking in AlloyDB and Cloud SQL enables vector search critical to generative AI and data agent architectures, a key capability for Google's AI infrastructure offerings. CoreWeave's rapid deployment of advanced AI infrastructure with Nvidia Vera Rubin NVL72 clusters could reshape competitive dynamics in cloud services, posing a potential threat to Google's market share. Meanwhile, supply chain constraints may limit the growth of chip sales driven by AI demand, underscoring the need for Google to ensure stable and efficient supply chains for its GPU and TPU-based infrastructure.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
