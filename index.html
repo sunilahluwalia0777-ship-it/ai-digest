@@ -648,83 +648,123 @@ function switchTab(tab, btn) {
 const ARTICLES = [
   {
     id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Announcing Native BM25 Ranking in AlloyDB and Cloud SQL",
-    summary: "Vector search is a critical component of generative AI, retrieval-augmented generation (RAG), and data agent architectures.",
+    title: "Accelerating the borderless Lakehouse: Announcing preview of cross-cloud caching",
+    summary: "Google Cloud announces enhancements to its borderless Lakehouse, enabling fast and unified access to an organization's complete data estate.",
     source: "Google Cloud Blog", age: "today",
-    detail: "AlloyDB and Cloud SQL now support native BM25 ranking for efficient vector similarity searches.",
-    url: "https://cloud.google.com/blog/products/databases/native-bm25-search-in-alloydb-and-cloud-sql/"
+    detail: "The update allows for querying governed data directly where it lives, joining customer records across multiple clouds and on-premises environments.",
+    url: "https://cloud.google.com/blog/products/data-analytics/borderless-lakehouse-cross-cloud-caching-and-connections/"
   },
   {
-    id: 2, cat: "hyperscaler", impact: "medium", filler: false,
+    id: 2, cat: "hyperscaler", impact: "high", filler: false,
     title: "Reimagining service delivery in the agentic era with Google Public Sector",
-    summary: "State and local governments need a consistent inspection architecture for compliance, threat detection, and traffic filtering.",
-    source: "Al Jazeera English", age: "today",
-    detail: "Google Public Sector is transforming how governments deliver services using AI infrastructure.",
-    url: "https://www.aljazeera.com/news/2026/9/17/reimagining-service-delivery-in-the-agentic-era-with-google-public-sector"
+    summary: "Google Cloud highlights its unified single-product architecture, flexibility across hyperconverged and disaggregated architectures.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The post discusses how state and local governments can achieve responsive, equitable, and accessible services using Google's technology.",
+    url: "https://cloud.google.com/blog/topics/public-sector/reimagining-service-delivery-in-the-agentic-era-with-google-public-sector/"
   },
   {
-    id: 3, cat: "gpu", impact: "high", filler: false,
-    title: "MLPerf Inference v6.1: 5.7x Per-Accelerator Gains, a 512-GPU Run, and Vera Rubin's First Peer-Reviewed Numbers",
-    summary: "Nvidia's investment in Anthropic's planned IPO indicates a stake of up to $10 billion in a raise that could reach $100 billion.",
-    source: "Barchart.com", age: "today",
-    detail: "MLPerf Inference v6.1 sets new records for AI inference performance, with Nvidia Vera Rubin GPUs leading the way.",
-    url: "https://www.barchart.com/story/news/4652778/mlperf-inference-v61-57x-per-accelerator-gains-a-512-gpu-run-and-vera-rubins-first-peer-reviewed-numbers/"
+    id: 3, cat: "ai infrastructure", impact: "high", filler: false,
+    title: "Changing the game: Using agentic AI to secure infrastructure code",
+    summary: "Google AI and Infrastructure team transforms how security is approached with new AI-native methods.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "The article discusses systematical and scalable approaches to securing infrastructure code using agentic AI.",
+    url: "https://cloud.google.com/blog/topics/systems/using-ai-agents-to-secure-google-infrastructure/"
   },
   {
-    id: 4, cat: "ai", impact: "medium", filler: false,
-    title: "What are the biggest AI companies and how much are they worth?",
-    summary: "As AI firms push for greater controls on the industry, Al Jazeera unpacks the value of the main companies in the sector.",
-    source: "Al Jazeera English", age: "today",
-    detail: "Al Jazeera provides an overview of the largest AI companies and their market valuations.",
-    url: "https://www.aljazeera.com/news/2026/9/17/what-are-the-biggest-ai-companies-and-how-much-are-they-worth"
+    id: 4, cat: "networking silicon", impact: "medium", filler: false,
+    title: "Choosing the right inspection architecture for AWS Network Firewall",
+    summary: "AWS provides guidance on selecting the right inspection architecture for its network firewall.",
+    source: "AWS Networking", age: "today",
+    detail: "The article discusses three deployment patterns available for AWS Network Firewall, including Traditional Inspection and Multiple VPC Endpoints.",
+    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/choosing-the-right-inspection-architecture-for-aws-network-firewall/"
   },
   {
-    id: 5, cat: "infrastructure", impact: "high", filler: false,
-    title: "CoreWeave deploys multi-rack Nvidia Vera Rubin NVL72 cluster, stock jumps 14%",
-    summary: "CoreWeave's rapid deployment of advanced AI infrastructure could reshape competitive dynamics in cloud services.",
-    source: "Yahoo Entertainment", age: "today",
-    detail: "CoreWeave has deployed a large-scale Nvidia Vera Rubin NVL72 cluster, driving its stock price up 14%.",
-    url: "https://finance.yahoo.com/technology/ai/articles/coreweave-nvidia-vera-rubin-nvl72-cluster-163011305.html"
+    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Microsoft recognized as a Leader in the 2026 Gartner Magic Quadrant for Distributed Hybrid Infrastructure",
+    summary: "Gartner highlights Microsoft's unified single-product architecture and flexibility across hyperconverged and disaggregated architectures.",
+    source: "Azure Blog", age: "today",
+    detail: "The post discusses Microsoft's capabilities in distributed hybrid infrastructure, including its Azure platform.",
+    url: "https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/"
   },
   {
-    id: 6, cat: "infrastructure", impact: "medium", filler: false,
-    title: "Rum Roars on $13.7 Billion Compute Deal With Anthropic. How to Play RUM Stock Now.",
-    summary: "Retirement savers may be affected by swings in the artificial intelligence trade, but Rum's compute deal with Anthropic could drive growth.",
-    source: "CNBC", age: "today",
-    detail: "Rum's massive compute deal with Anthropic highlights the growing demand for AI infrastructure and could drive RUM stock higher.",
-    url: "https://www.cnbc.com/2026/09/18/rum-roars-on-13-7-billion-compute-deal-with-anthropic-how-to-play-rum-stock-now.html"
+    id: 6, cat: "ai infrastructure", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams",
+    summary: "Microsoft announces general availability of publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables developers to make their agents operational and accessible to users across the platform.",
+    url: "https://azure.microsoft.com/updates?id=571816"
   },
   {
-    id: 7, cat: "gpu", impact: "high", filler: false,
-    title: "Nvidia CEO expects chip sales to double next year driven by AI",
-    summary: "Nvidia's projected chip sales surge highlights the growing AI demand, but supply chain constraints may limit potential growth.",
-    source: "Crypto Briefing", age: "today",
-    detail: "Nvidia's CEO expects a significant increase in chip sales due to growing AI adoption, despite potential supply chain limitations.",
-    url: "https://cryptobriefing.com/nvidia-chip-sales-double-ai-demand/"
+    id: 7, cat: "storage", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: PG18 support for Azure Database for PostgreSQL elastic clusters",
+    summary: "Azure Database for PostgreSQL elastic clusters now support PostgreSQL 18, bringing latest capabilities to distributed workloads.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables building new applications or modernizing existing ones with performance, reliability, and data protection features.",
+    url: "https://azure.microsoft.com/updates?id=571047"
   },
   {
-    id: 8, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "AI stock swings could affect your 401(k). Here's what retirement savers need to know",
-    summary: "Retirement savers may be affected by swings in the artificial intelligence trade, but understanding the underlying trends can help.",
-    source: "Yahoo Entertainment", age: "today",
-    detail: "The growing AI industry could impact retirement savings, and understanding the key players and trends is essential for informed investing.",
-    url: "https://finance.yahoo.com/technology/ai/articles/ai-stock-swings-could-affect-your-401k-163011305.html"
+    id: 8, cat: "networking silicon", impact: "medium", filler: false,
+    title: "[Launched] Generally Available: High-scale mesh in Azure Virtual Network Manager",
+    summary: "Azure Virtual Network Manager now supports high-scale mesh connectivity configurations with up to 3,000 virtual networks.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables customers to connect large numbers of virtual networks in a single mesh configuration.",
+    url: "https://azure.microsoft.com/updates?id=571572"
   },
   {
-    id: 9, cat: "infrastructure", impact: "high", filler: false,
-    title: "Meta Can Save $8.5 Billion in 2027 by Using Its Own MTIA Chips",
-    summary: "Meta is betting its entire AI infrastructure strategy on custom silicon it designed in-house.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "By using its own MTIA chips, Meta could save billions of dollars and gain a competitive edge in the AI infrastructure market.",
-    url: "https://247wallst.com/investing/2026/09/17/meta-can-save-8-5-billion-in-2027-by-using-its-own-mtia-chips/"
+    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "[In preview] Public Preview: Azure Red Hat OpenShift with hosted control planes",
+    summary: "Azure Red Hat OpenShift now offers a new deployment option with hosted control planes, running the OpenShift control plane as a fully managed service.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables customers to build and deploy applications on a managed OpenShift environment.",
+    url: "https://azure.microsoft.com/updates?id=571621"
   },
   {
-    id: 10, cat: "gpu", impact: "medium", filler: false,
-    title: "AI Server Stocks Rally as the Hardware Bid Broadens: Hewlett Packard Enterprise Jumps 9%, Super Micro Climbs 6%, Dell Rises 3%",
-    summary: "A rally that started in memory chips has jumped to server makers, but the same force lifting these AI hardware stocks is quietly making their underlying business models more complex.",
-    source: "24/7 Wall St.", age: "today",
-    detail: "The growing demand for AI infrastructure is driving up stock prices for companies like Hewlett Packard Enterprise, Super Micro, and Dell.",
-    url: "https://247wallst.com/investing/2026/09/17/ai-server-stocks-rally-as-the-hardware-bid-broadens-hewlett-packard-enterprise-jumps-9-super-micro-climbs-6-dell-rises-3/"
+    id: 10, cat: "ai infrastructure", impact: "medium", filler: false,
+    title: "[In preview] Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL",
+    summary: "Azure Database for PostgreSQL now offers a new plugin that combines expert-curated skills for PostgreSQL and Azure Data.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables AI coding assistants to provide guidance and act on a connected database, turning them into context-aware experts.",
+    url: "https://azure.microsoft.com/updates?id=569664"
+  },
+  {
+    id: 11, cat: "cloud", impact: "low", filler: true,
+    title: "[Launched] Generally Available: Logical replication slot sync status metric for Azure PostgreSQL Flexible Server",
+    summary: "Azure Database for PostgreSQL Flexible Server now provides a new metric to monitor the synchronization status of logical replication slots.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables customers to track the health and performance of their logical replication slots.",
+    url: "https://azure.microsoft.com/updates?id=568414"
+  },
+  {
+    id: 12, cat: "cloud", impact: "low", filler: true,
+    title: "[Launched] Generally Available: New and improved troubleshooting guides for Azure Database for PostgreSQL",
+    summary: "Azure Database for PostgreSQL now offers updated troubleshooting guidance to help customers diagnose issues.",
+    source: "Azure Updates", age: "today",
+    detail: "The update provides expanded documentation to identify root causes of common problems.",
+    url: "https://azure.microsoft.com/updates?id=571042"
+  },
+  {
+    id: 13, cat: "cloud", impact: "low", filler: true,
+    title: "[In preview] Public Preview: Azure SQL updates for mid-September 2026",
+    summary: "Azure SQL now offers a range of updates and enhancements, including soft delete for the Azure SQL logical server.",
+    source: "Azure Updates", age: "today",
+    detail: "The update enables customers to configure soft delete for their logical servers, among other features.",
+    url: "https://azure.microsoft.com/updates?id=571056"
+  },
+  {
+    id: 14, cat: "cloud", impact: "low", filler: true,
+    title: "Retirement Update: SAP container images removed October 14, 2026",
+    summary: "SAP container images will be removed on October 14, 2026, and are currently unsupported and unmaintained.",
+    source: "Azure Updates", age: "today",
+    detail: "Existing TLS-compliant agents may continue sending logs through the retired HTTP Data Collector API.",
+    url: "https://azure.microsoft.com/updates?id=571342"
+  },
+  {
+    id: 15, cat: "cloud", impact: "low", filler: true,
+    title: "Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable",
+    summary: "Meta announces its next-generation subsea cable, Petal, which will deliver petabit capacity at transoceanic distances.",
+    source: "Meta Engineering", age: "today",
+    detail: "The update discusses Meta's innovation in subsea cable technology and its expected benefits.",
+    url: "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/"
   },
 ];
 // ARTICLES_END
@@ -872,7 +912,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Native BM25 ranking in AlloyDB and Cloud SQL enables vector search critical to generative AI and data agent architectures, a key capability for Google's AI infrastructure offerings. CoreWeave's rapid deployment of advanced AI infrastructure with Nvidia Vera Rubin NVL72 clusters could reshape competitive dynamics in cloud services, posing a potential threat to Google's market share. Meanwhile, supply chain constraints may limit the growth of chip sales driven by AI demand, underscoring the need for Google to ensure stable and efficient supply chains for its GPU and TPU-based infrastructure.";
+const STATIC_BRIEF = "Google Cloud announces enhancements to its borderless Lakehouse, enabling fast and unified access to an organization's complete data estate through cross-cloud caching. Meanwhile, Microsoft is recognized as a Leader in the 2026 Gartner Magic Quadrant for Distributed Hybrid Infrastructure, highlighting its unified single-product architecture and flexibility across hyperconverged and disaggregated architectures. In supply chain news, Azure Database for PostgreSQL elastic clusters now support PostgreSQL 18, bringing latest capabilities to distributed workloads.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;
