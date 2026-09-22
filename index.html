@@ -647,124 +647,92 @@ function switchTab(tab, btn) {
 // ARTICLES_START
 const ARTICLES = [
   {
-    id: 1, cat: "storage", impact: "high", filler: false,
-    title: "Accelerating the borderless Lakehouse: Announcing preview of cross-cloud caching",
-    summary: "Google Cloud announces enhancements to its borderless Lakehouse, enabling fast and unified access to an organization's complete data estate.",
+    id: 1, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Global AI routing with <1% overhead on multi-cluster GKE Inference Gateway",
+    summary: "Demand for AI infrastructure is at an all-time high. Global accelerator shortages mean engineering teams can rarely get all the compute they need from just one data center.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The update allows for querying governed data directly where it lives, joining customer records across multiple clouds and on-premises environments.",
-    url: "https://cloud.google.com/blog/products/data-analytics/borderless-lakehouse-cross-cloud-caching-and-connections/"
+    detail: "Google Cloud Blog discusses global AI routing with less than 1% overhead on multi-cluster GKE Inference Gateway, addressing demand for AI infrastructure and accelerator shortages.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/gpu-and-tpu-utilization-with-multi-cluster-gke-inference-gateway/"
   },
   {
     id: 2, cat: "hyperscaler", impact: "high", filler: false,
-    title: "Reimagining service delivery in the agentic era with Google Public Sector",
-    summary: "Google Cloud highlights its unified single-product architecture, flexibility across hyperconverged and disaggregated architectures.",
+    title: "Maximizing Apache Spark availability: Mitigating compute stockouts with flexible VMs and other best practices",
+    summary: "Apache Spark faces availability constraints due to compute capacity shortages. Google Cloud Blog shares best practices to mitigate these issues.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The post discusses how state and local governments can achieve responsive, equitable, and accessible services using Google's technology.",
-    url: "https://cloud.google.com/blog/topics/public-sector/reimagining-service-delivery-in-the-agentic-era-with-google-public-sector/"
+    detail: "Google Cloud Blog discusses maximizing Apache Spark availability by mitigating compute stockouts with flexible VMs and other best practices, ensuring efficient data processing and pipelines.",
+    url: "https://cloud.google.com/blog/products/data-analytics/maximize-apache-spark-availability-with-flexible-vms/"
   },
   {
-    id: 3, cat: "ai infrastructure", impact: "high", filler: false,
-    title: "Changing the game: Using agentic AI to secure infrastructure code",
-    summary: "Google AI and Infrastructure team transforms how security is approached with new AI-native methods.",
+    id: 3, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Scale your AI workloads faster and more efficiently with GKE Pod snapshots",
+    summary: "GKE Pod snapshots enable faster and more efficient scaling of AI workloads, reducing provisioning times and costs.",
     source: "Google Cloud Blog", age: "today",
-    detail: "The article discusses systematical and scalable approaches to securing infrastructure code using agentic AI.",
-    url: "https://cloud.google.com/blog/topics/systems/using-ai-agents-to-secure-google-infrastructure/"
+    detail: "Google Cloud Blog introduces GKE Pod snapshots, allowing for faster and more efficient scaling of AI workloads, and discusses its benefits in reducing provisioning times and costs.",
+    url: "https://cloud.google.com/blog/products/containers-kubernetes/gke-pod-snapshots/"
   },
   {
-    id: 4, cat: "networking silicon", impact: "medium", filler: false,
-    title: "Choosing the right inspection architecture for AWS Network Firewall",
-    summary: "AWS provides guidance on selecting the right inspection architecture for its network firewall.",
-    source: "AWS Networking", age: "today",
-    detail: "The article discusses three deployment patterns available for AWS Network Firewall, including Traditional Inspection and Multiple VPC Endpoints.",
-    url: "https://aws.amazon.com/blogs/networking-and-content-delivery/choosing-the-right-inspection-architecture-for-aws-network-firewall/"
+    id: 4, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Strengthen your CI/CD pipeline with new Secure Source Manager capabilities",
+    summary: "Google Cloud Blog discusses strengthening CI/CD pipelines with new Secure Source Manager capabilities, enhancing software supply chain security.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud Blog introduces new Secure Source Manager capabilities to strengthen CI/CD pipelines, ensuring a secure software supply chain and protecting against attacks.",
+    url: "https://cloud.google.com/blog/products/identity-security/strengthen-your-cicd-pipeline-with-new-secure-source-manager-capabilities/"
   },
   {
-    id: 5, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "Microsoft recognized as a Leader in the 2026 Gartner Magic Quadrant for Distributed Hybrid Infrastructure",
-    summary: "Gartner highlights Microsoft's unified single-product architecture and flexibility across hyperconverged and disaggregated architectures.",
-    source: "Azure Blog", age: "today",
-    detail: "The post discusses Microsoft's capabilities in distributed hybrid infrastructure, including its Azure platform.",
-    url: "https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/"
+    id: 5, cat: "hyperscaler", impact: "high", filler: false,
+    title: "How to upskill enterprise AI builders by using the right data and tools",
+    summary: "Upskilling enterprise AI builders requires access to the right data and tools, enabling efficient model development and deployment.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud Blog discusses upskilling enterprise AI builders by providing access to the right data and tools, streamlining model development and deployment for business success.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/upskill-enterprise-ai-builders/"
   },
   {
-    id: 6, cat: "ai infrastructure", impact: "medium", filler: false,
-    title: "[Launched] Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams",
-    summary: "Microsoft announces general availability of publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables developers to make their agents operational and accessible to users across the platform.",
-    url: "https://azure.microsoft.com/updates?id=571816"
+    id: 6, cat: "hyperscaler", impact: "high", filler: false,
+    title: "Accelerating AI innovation with NVIDIA and Google Cloud",
+    summary: "NVIDIA and Google Cloud collaborate to accelerate AI innovation, providing developers with access to powerful computing resources and tools.",
+    source: "Google Cloud Blog", age: "today",
+    detail: "Google Cloud Blog announces the collaboration between NVIDIA and Google Cloud to accelerate AI innovation, enabling developers to build and deploy AI models faster and more efficiently.",
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/accelerating-ai-innovation-with-nvidia-and-google-cloud/"
   },
   {
-    id: 7, cat: "storage", impact: "medium", filler: false,
-    title: "[Launched] Generally Available: PG18 support for Azure Database for PostgreSQL elastic clusters",
-    summary: "Azure Database for PostgreSQL elastic clusters now support PostgreSQL 18, bringing latest capabilities to distributed workloads.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables building new applications or modernizing existing ones with performance, reliability, and data protection features.",
-    url: "https://azure.microsoft.com/updates?id=571047"
+    id: 7, cat: "hyperscaler", impact: "high", filler: false,
+    title: "The Agent Economy Runs on Concrete: Why $660 Billion Is Pouring Into Physical Infrastructure",
+    summary: "The agent economy requires significant investments in physical infrastructure, with $660 billion pouring into data centers and networking.",
+    source: "Yahoo Finance", age: "today",
+    detail: "Yahoo Finance discusses the massive investments in physical infrastructure required to support the growing agent economy, highlighting the importance of data centers and networking.",
+    url: "https://finance.yahoo.com/technology/ai/articles/agent-economy-runs-concrete-why-660-billion-pouring-physical-infrastructure/"
   },
   {
-    id: 8, cat: "networking silicon", impact: "medium", filler: false,
-    title: "[Launched] Generally Available: High-scale mesh in Azure Virtual Network Manager",
-    summary: "Azure Virtual Network Manager now supports high-scale mesh connectivity configurations with up to 3,000 virtual networks.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables customers to connect large numbers of virtual networks in a single mesh configuration.",
-    url: "https://azure.microsoft.com/updates?id=571572"
+    id: 8, cat: "hyperscaler", impact: "high", filler: false,
+    title: "NVIDIA Just Named AI's Next Bottleneck—And These 3 Stocks Sit Right In It",
+    summary: "NVIDIA identifies memory and silicon photonics as the next bottleneck in AI development, benefiting Micron, Coherent, and Tower Semiconductor.",
+    source: "MarketBeat", age: "today",
+    detail: "MarketBeat discusses NVIDIA's identification of memory and silicon photonics as the next bottleneck in AI development, highlighting the benefits for Micron, Coherent, and Tower Semiconductor.",
+    url: "https://www.marketbeat.com/articles/nvidia-just-named-ais-next-bottleneckand-these-3-stocks-sit-right-in-it/"
   },
   {
-    id: 9, cat: "hyperscaler", impact: "medium", filler: false,
-    title: "[In preview] Public Preview: Azure Red Hat OpenShift with hosted control planes",
-    summary: "Azure Red Hat OpenShift now offers a new deployment option with hosted control planes, running the OpenShift control plane as a fully managed service.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables customers to build and deploy applications on a managed OpenShift environment.",
-    url: "https://azure.microsoft.com/updates?id=571621"
+    id: 11, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Weekly news roundup: AI boom strains chips; Google's TPUs pay off, China eyes 3nm without EUV",
+    summary: "Crypto Briefing rounds up the latest news in AI and semiconductor development.",
+    source: "Crypto Briefing", age: "today",
+    detail: "Crypto Briefing summarizes recent developments in AI and semiconductor industries, including the impact of AI on chip demand and advancements in TPU and 3nm technology.",
+    url: "https://cryptobriefing.com/weekly-news-roundup-ai-boom-strains-chips-googles-tpus-pay-off-china-eyes-3nm-without-euv/"
   },
   {
-    id: 10, cat: "ai infrastructure", impact: "medium", filler: false,
-    title: "[In preview] Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL",
-    summary: "Azure Database for PostgreSQL now offers a new plugin that combines expert-curated skills for PostgreSQL and Azure Data.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables AI coding assistants to provide guidance and act on a connected database, turning them into context-aware experts.",
-    url: "https://azure.microsoft.com/updates?id=569664"
+    id: 12, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Sensex today | Stock Market Highlights: Sensex rises 564 pts, Nifty closes at 23,414; Rupee ends at 95.81 in subdued trade",
+    summary: "MarketBeat provides an overview of the Indian stock market, including Sensex and Nifty performances.",
+    source: "MarketBeat", age: "today",
+    detail: "MarketBeat summarizes the performance of the Indian stock market, highlighting the rise of Sensex and Nifty, as well as the Rupee's closing value.",
+    url: "https://www.marketbeat.com/instant-alerts/event-sensex-today-stock-market-highlights-sensex-rises-564-pts-nifty-closes-at-23414-rupee-ends-at-9581-in-subdued-trade/"
   },
   {
-    id: 11, cat: "cloud", impact: "low", filler: true,
-    title: "[Launched] Generally Available: Logical replication slot sync status metric for Azure PostgreSQL Flexible Server",
-    summary: "Azure Database for PostgreSQL Flexible Server now provides a new metric to monitor the synchronization status of logical replication slots.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables customers to track the health and performance of their logical replication slots.",
-    url: "https://azure.microsoft.com/updates?id=568414"
-  },
-  {
-    id: 12, cat: "cloud", impact: "low", filler: true,
-    title: "[Launched] Generally Available: New and improved troubleshooting guides for Azure Database for PostgreSQL",
-    summary: "Azure Database for PostgreSQL now offers updated troubleshooting guidance to help customers diagnose issues.",
-    source: "Azure Updates", age: "today",
-    detail: "The update provides expanded documentation to identify root causes of common problems.",
-    url: "https://azure.microsoft.com/updates?id=571042"
-  },
-  {
-    id: 13, cat: "cloud", impact: "low", filler: true,
-    title: "[In preview] Public Preview: Azure SQL updates for mid-September 2026",
-    summary: "Azure SQL now offers a range of updates and enhancements, including soft delete for the Azure SQL logical server.",
-    source: "Azure Updates", age: "today",
-    detail: "The update enables customers to configure soft delete for their logical servers, among other features.",
-    url: "https://azure.microsoft.com/updates?id=571056"
-  },
-  {
-    id: 14, cat: "cloud", impact: "low", filler: true,
-    title: "Retirement Update: SAP container images removed October 14, 2026",
-    summary: "SAP container images will be removed on October 14, 2026, and are currently unsupported and unmaintained.",
-    source: "Azure Updates", age: "today",
-    detail: "Existing TLS-compliant agents may continue sending logs through the retired HTTP Data Collector API.",
-    url: "https://azure.microsoft.com/updates?id=571342"
-  },
-  {
-    id: 15, cat: "cloud", impact: "low", filler: true,
-    title: "Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable",
-    summary: "Meta announces its next-generation subsea cable, Petal, which will deliver petabit capacity at transoceanic distances.",
-    source: "Meta Engineering", age: "today",
-    detail: "The update discusses Meta's innovation in subsea cable technology and its expected benefits.",
-    url: "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/"
+    id: 13, cat: "hyperscaler", impact: "medium", filler: false,
+    title: "Chinese memory-maker CXMT claims DRAM production breakthrough",
+    summary: "CXMT announces a breakthrough in DRAM production, potentially addressing global shortages.",
+    source: "The Register", age: "today",
+    detail: "The Register discusses CXMT's claim of a breakthrough in DRAM production, which could alleviate global shortages and impact the semiconductor industry.",
+    url: "https://www.theregister.com/systems/2026/09/21/chinese-memory-maker-cxmt-claims-dram-production-breakthrough/"
   },
 ];
 // ARTICLES_END
@@ -912,7 +880,7 @@ function renderCapexBars() {
 // AI BRIEF + ASK
 // ============================================================
 // BRIEF_START
-const STATIC_BRIEF = "Google Cloud announces enhancements to its borderless Lakehouse, enabling fast and unified access to an organization's complete data estate through cross-cloud caching. Meanwhile, Microsoft is recognized as a Leader in the 2026 Gartner Magic Quadrant for Distributed Hybrid Infrastructure, highlighting its unified single-product architecture and flexibility across hyperconverged and disaggregated architectures. In supply chain news, Azure Database for PostgreSQL elastic clusters now support PostgreSQL 18, bringing latest capabilities to distributed workloads.";
+const STATIC_BRIEF = "GKE Pod snapshots enable faster and more efficient scaling of AI workloads reducing provisioning times and costs allowing Google Cloud to strengthen its position in the AI infrastructure market. NVIDIA identifies memory and silicon photonics as the next bottleneck in AI development benefiting Micron Coherent and Tower Semiconductor a competitive signal for Google's TPU business. CXMT announces a breakthrough in DRAM production potentially addressing global shortages a supply chain watch item for Google's data center operations.";
 // BRIEF_END
 
 const SYSTEM_PROMPT = `You are a concise AI infrastructure analyst briefing a Google Product Manager who owns Networking and Storage systems for GPU/TPU infrastructure. Today: ${TODAY_DATE}. Google vendors: Broadcom, NVIDIA, Cisco, Arista. Competitors: AWS, Azure, Meta, OCI. Be specific, actionable, 2-4 sentences. Focus on Google networking and storage decisions.`;

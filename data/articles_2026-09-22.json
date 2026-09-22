@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-22",
+  "articles": [
+    {
+      "id": 1,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Global AI routing with <1% overhead on multi-cluster GKE Inference Gateway",
+      "summary": "Demand for AI infrastructure is at an all-time high. Global accelerator shortages mean engineering teams can rarely get all the compute they need from just one data center.",
+      "detail": "Google Cloud Blog discusses global AI routing with less than 1% overhead on multi-cluster GKE Inference Gateway, addressing demand for AI infrastructure and accelerator shortages.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/gpu-and-tpu-utilization-with-multi-cluster-gke-inference-gateway/",
+      "age": "today"
+    },
+    {
+      "id": 2,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Maximizing Apache Spark availability: Mitigating compute stockouts with flexible VMs and other best practices",
+      "summary": "Apache Spark faces availability constraints due to compute capacity shortages. Google Cloud Blog shares best practices to mitigate these issues.",
+      "detail": "Google Cloud Blog discusses maximizing Apache Spark availability by mitigating compute stockouts with flexible VMs and other best practices, ensuring efficient data processing and pipelines.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/data-analytics/maximize-apache-spark-availability-with-flexible-vms/",
+      "age": "today"
+    },
+    {
+      "id": 3,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Scale your AI workloads faster and more efficiently with GKE Pod snapshots",
+      "summary": "GKE Pod snapshots enable faster and more efficient scaling of AI workloads, reducing provisioning times and costs.",
+      "detail": "Google Cloud Blog introduces GKE Pod snapshots, allowing for faster and more efficient scaling of AI workloads, and discusses its benefits in reducing provisioning times and costs.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/gke-pod-snapshots/",
+      "age": "today"
+    },
+    {
+      "id": 4,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Strengthen your CI/CD pipeline with new Secure Source Manager capabilities",
+      "summary": "Google Cloud Blog discusses strengthening CI/CD pipelines with new Secure Source Manager capabilities, enhancing software supply chain security.",
+      "detail": "Google Cloud Blog introduces new Secure Source Manager capabilities to strengthen CI/CD pipelines, ensuring a secure software supply chain and protecting against attacks.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/identity-security/strengthen-your-cicd-pipeline-with-new-secure-source-manager-capabilities/",
+      "age": "today"
+    },
+    {
+      "id": 5,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "How to upskill enterprise AI builders by using the right data and tools",
+      "summary": "Upskilling enterprise AI builders requires access to the right data and tools, enabling efficient model development and deployment.",
+      "detail": "Google Cloud Blog discusses upskilling enterprise AI builders by providing access to the right data and tools, streamlining model development and deployment for business success.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/upskill-enterprise-ai-builders/",
+      "age": "today"
+    },
+    {
+      "id": 6,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "Accelerating AI innovation with NVIDIA and Google Cloud",
+      "summary": "NVIDIA and Google Cloud collaborate to accelerate AI innovation, providing developers with access to powerful computing resources and tools.",
+      "detail": "Google Cloud Blog announces the collaboration between NVIDIA and Google Cloud to accelerate AI innovation, enabling developers to build and deploy AI models faster and more efficiently.",
+      "source": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/accelerating-ai-innovation-with-nvidia-and-google-cloud/",
+      "age": "today"
+    },
+    {
+      "id": 7,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "The Agent Economy Runs on Concrete: Why $660 Billion Is Pouring Into Physical Infrastructure",
+      "summary": "The agent economy requires significant investments in physical infrastructure, with $660 billion pouring into data centers and networking.",
+      "detail": "Yahoo Finance discusses the massive investments in physical infrastructure required to support the growing agent economy, highlighting the importance of data centers and networking.",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/agent-economy-runs-concrete-why-660-billion-pouring-physical-infrastructure/",
+      "age": "today"
+    },
+    {
+      "id": 8,
+      "cat": "hyperscaler",
+      "impact": "high",
+      "filler": false,
+      "title": "NVIDIA Just Named AI's Next Bottleneck\u2014And These 3 Stocks Sit Right In It",
+      "summary": "NVIDIA identifies memory and silicon photonics as the next bottleneck in AI development, benefiting Micron, Coherent, and Tower Semiconductor.",
+      "detail": "MarketBeat discusses NVIDIA's identification of memory and silicon photonics as the next bottleneck in AI development, highlighting the benefits for Micron, Coherent, and Tower Semiconductor.",
+      "source": "MarketBeat",
+      "url": "https://www.marketbeat.com/articles/nvidia-just-named-ais-next-bottleneckand-these-3-stocks-sit-right-in-it/",
+      "age": "today"
+    },
+    {
+      "id": 11,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Weekly news roundup: AI boom strains chips; Google's TPUs pay off, China eyes 3nm without EUV",
+      "summary": "Crypto Briefing rounds up the latest news in AI and semiconductor development.",
+      "detail": "Crypto Briefing summarizes recent developments in AI and semiconductor industries, including the impact of AI on chip demand and advancements in TPU and 3nm technology.",
+      "source": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/weekly-news-roundup-ai-boom-strains-chips-googles-tpus-pay-off-china-eyes-3nm-without-euv/",
+      "age": "today"
+    },
+    {
+      "id": 12,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Sensex today | Stock Market Highlights: Sensex rises 564 pts, Nifty closes at 23,414; Rupee ends at 95.81 in subdued trade",
+      "summary": "MarketBeat provides an overview of the Indian stock market, including Sensex and Nifty performances.",
+      "detail": "MarketBeat summarizes the performance of the Indian stock market, highlighting the rise of Sensex and Nifty, as well as the Rupee's closing value.",
+      "source": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/event-sensex-today-stock-market-highlights-sensex-rises-564-pts-nifty-closes-at-23414-rupee-ends-at-9581-in-subdued-trade/",
+      "age": "today"
+    },
+    {
+      "id": 13,
+      "cat": "hyperscaler",
+      "impact": "medium",
+      "filler": false,
+      "title": "Chinese memory-maker CXMT claims DRAM production breakthrough",
+      "summary": "CXMT announces a breakthrough in DRAM production, potentially addressing global shortages.",
+      "detail": "The Register discusses CXMT's claim of a breakthrough in DRAM production, which could alleviate global shortages and impact the semiconductor industry.",
+      "source": "The Register",
+      "url": "https://www.theregister.com/systems/2026/09/21/chinese-memory-maker-cxmt-claims-dram-production-breakthrough/",
+      "age": "today"
+    }
+  ]
+}
